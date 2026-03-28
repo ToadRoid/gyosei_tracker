@@ -79,8 +79,9 @@ function SessionContent() {
   const router = useRouter();
   const [state, dispatch] = useReducer(reducer, initialState);
   const [loading, setLoading] = useState(true);
-  const lapNoRef = useRef(1);       // reducer state の lapNo を async 内で参照するための ref
-  const isAnsweringRef = useRef(false); // 二重タップ防止（async 中に再押しをブロック）
+  const [saveError, setSaveError] = useState(false); // 回答保存失敗フラグ
+  const lapNoRef = useRef(1);           // reducer state の lapNo を async 内で参照するための ref
+  const isAnsweringRef = useRef(false); // 二重タップ防止（NEXT で必ず false に戻す）
 
   useEffect(() => {
     (async () => {
@@ -125,6 +126,7 @@ function SessionContent() {
 
     // UI更新（phase → feedback）
     dispatch({ type: 'ANSWER', userAnswer });
+    setSaveError(false);
 
     // DB保存（即時）
     try {
@@ -138,9 +140,9 @@ function SessionContent() {
       });
     } catch (e) {
       console.error('回答の保存に失敗:', e);
-      // 保存失敗しても演習は継続（次の問題で再度試みる）
+      setSaveError(true); // ユーザーに通知（次の問題へは進める）
     }
-    // phase が feedback に変わりボタンが非表示になるため、ref のリセット不要
+    // ※ isAnsweringRef は NEXT ボタン押下時にリセットする
   };
 
   if (loading) {
@@ -304,8 +306,17 @@ function SessionContent() {
             </p>
           </div>
 
+          {saveError && (
+            <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+              この回答の保存に失敗しました。通信・ストレージを確認してください。
+            </div>
+          )}
+
           <button
-            onClick={() => dispatch({ type: 'NEXT' })}
+            onClick={() => {
+              isAnsweringRef.current = false; // 次の問題で回答できるようにリセット
+              dispatch({ type: 'NEXT' });
+            }}
             className="w-full rounded-xl bg-indigo-600 py-4 text-white text-lg font-bold hover:bg-indigo-700 transition-colors"
           >
             {state.currentIndex + 1 < state.questions.length
