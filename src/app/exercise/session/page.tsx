@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useReducer, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { db } from '@/lib/db';
+import { db, upsertAttempt } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
 import type { Question, ExerciseResult, ExercisePhase } from '@/types';
 
@@ -128,9 +128,9 @@ function SessionContent() {
     dispatch({ type: 'ANSWER', userAnswer });
     setSaveError(false);
 
-    // DB保存（即時）
+    // DB保存（即時・upsert: 同一lap同一問題は上書き）
     try {
-      await db.attempts.add({
+      await upsertAttempt({
         questionId: q.id!,
         lapNo: lapNoRef.current,
         answeredAt: new Date(),

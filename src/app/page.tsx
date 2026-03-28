@@ -77,19 +77,19 @@ export default function DashboardPage() {
                   ? `${Math.round(overall.accuracy * 100)}%`
                   : '-'}
               </p>
-              <p className="text-xs text-slate-500">正答率</p>
+              <p className="text-xs text-slate-500">累積正答率</p>
             </div>
             <div className="rounded-xl bg-amber-50 p-3 text-center">
               <p className="text-2xl font-black text-amber-600">
                 {overall.currentLap || '-'}
               </p>
-              <p className="text-xs text-slate-500">周回</p>
+              <p className="text-xs text-slate-500">最高周回</p>
             </div>
           </div>
 
           {overall.totalAttempts > 0 && (
             <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-3">
-              <h2 className="font-bold text-slate-800">科目別正答率</h2>
+              <h2 className="font-bold text-slate-800">科目別 累積正答率</h2>
               {subjectStats
                 .filter((s) => s.totalAttempts > 0)
                 .map((s) => (
@@ -105,7 +105,7 @@ export default function DashboardPage() {
 
           {weakChapters.length > 0 && (
             <div className="rounded-xl border border-red-100 bg-red-50 p-4 space-y-3">
-              <h2 className="font-bold text-red-700">苦手分野</h2>
+              <h2 className="font-bold text-red-700">苦手分野（累積成績ベース）</h2>
               {weakChapters.map((c) => (
                 <div
                   key={c.chapterId}

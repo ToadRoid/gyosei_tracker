@@ -12,7 +12,7 @@ class GyoseiDB extends Dexie {
   constructor() {
     super('gyosei_tracker');
 
-    // v1: subjects / chapters テーブルを誤って定義していたため v2 で削除
+    // v1: 初期スキーマ（subjects / chapters テーブルを誤って定義）
     this.version(1).stores({
       subjects: 'id, order',
       chapters: 'id, subjectId, order',
@@ -21,14 +21,48 @@ class GyoseiDB extends Dexie {
       imports: '++id, status, importedAt',
     });
 
+    // v2: subjects / chapters を削除
     this.version(2).stores({
-      subjects: null,   // 削除
-      chapters: null,   // 削除
+      subjects: null,
+      chapters: null,
       questions: '++id, subjectId, chapterId, createdAt',
       attempts: '++id, questionId, lapNo, answeredAt',
+      imports: '++id, status, importedAt',
+    });
+
+    // v3: attempts に [questionId+lapNo] 複合インデックスを追加
+    //     → upsertAttempt での重複チェックに使用
+    this.version(3).stores({
+      questions: '++id, subjectId, chapterId, createdAt',
+      attempts: '++id, questionId, lapNo, [questionId+lapNo], answeredAt',
       imports: '++id, status, importedAt',
     });
   }
 }
 
 export const db = new GyoseiDB();
+
+/**
+ * attempt の upsert（1周につき1問題1記録）
+ * questionId + lapNo が既存なら上書き、なければ追加。
+ * リロード・誤再開による重複を防ぐ。
+ */
+export async function upsertAttempt(
+  data: Omit<Attempt, 'id'>,
+): Promise<void> {
+  const existing = await db.attempts
+    .where('[questionId+lapNo]')
+    .equals([data.questionId, data.lapNo])
+    .first();
+
+  if (existing?.id !== undefined) {
+    await db.attempts.update(existing.id, {
+      userAnswer: data.userAnswer,
+      isCorrect: data.isCorrect,
+      responseTimeSec: data.responseTimeSec,
+      answeredAt: data.answeredAt,
+    });
+  } else {
+    await db.attempts.add(data);
+  }
+}
