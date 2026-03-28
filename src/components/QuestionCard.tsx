@@ -5,6 +5,7 @@ interface Props {
   question: Question;
   attemptCount?: number;
   lastCorrect?: boolean | null;
+  onEdit?: (question: Question) => void;
   onDelete?: (id: number) => void;
 }
 
@@ -12,6 +13,7 @@ export default function QuestionCard({
   question,
   attemptCount = 0,
   lastCorrect,
+  onEdit,
   onDelete,
 }: Props) {
   const subject = subjects.find((s) => s.id === question.subjectId);
@@ -28,12 +30,20 @@ export default function QuestionCard({
             {chapter?.name}
           </span>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-3 shrink-0">
           <span
             className={`text-sm font-bold ${question.answerBoolean ? 'text-green-600' : 'text-red-500'}`}
           >
             {question.answerBoolean ? '◯' : '✗'}
           </span>
+          {onEdit && (
+            <button
+              onClick={() => onEdit(question)}
+              className="text-slate-400 hover:text-indigo-500 text-xs"
+            >
+              編集
+            </button>
+          )}
           {onDelete && question.id !== undefined && (
             <button
               onClick={() => onDelete(question.id!)}

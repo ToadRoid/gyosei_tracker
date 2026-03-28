@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import NavBar from '@/components/NavBar';
 import QuestionCard from '@/components/QuestionCard';
+import EditQuestionModal from '@/components/EditQuestionModal';
 import { db } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
 import type { Question, Attempt } from '@/types';
@@ -13,6 +14,7 @@ export default function QuestionsPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [attempts, setAttempts] = useState<Map<number, Attempt[]>>(new Map());
   const [loading, setLoading] = useState(true);
+  const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -46,6 +48,11 @@ export default function QuestionsPage() {
     await db.questions.delete(id);
     await db.attempts.where('questionId').equals(id).delete();
     loadData();
+  };
+
+  const handleEditSaved = (updated: Question) => {
+    setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+    setEditingQuestion(null);
   };
 
   const filteredChapters = subjectFilter
@@ -122,6 +129,7 @@ export default function QuestionsPage() {
                 question={q}
                 attemptCount={qAttempts.length}
                 lastCorrect={lastAttempt?.isCorrect ?? null}
+                onEdit={setEditingQuestion}
                 onDelete={handleDelete}
               />
             );
@@ -130,6 +138,14 @@ export default function QuestionsPage() {
       )}
 
       <NavBar />
+
+      {editingQuestion && (
+        <EditQuestionModal
+          question={editingQuestion}
+          onSaved={handleEditSaved}
+          onCancel={() => setEditingQuestion(null)}
+        />
+      )}
     </div>
   );
 }
