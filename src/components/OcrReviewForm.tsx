@@ -1,32 +1,42 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import SubjectChapterSelect from './SubjectChapterSelect';
 import { db } from '@/lib/db';
 
 interface Props {
   ocrText: string;
   imageName: string;
-  onRegistered: () => void;
+  defaultSubjectId?: string;
+  defaultChapterId?: string;
+  onRegistered: (subjectId: string, chapterId: string) => void;
 }
 
 export default function OcrReviewForm({
   ocrText,
   imageName,
+  defaultSubjectId = '',
+  defaultChapterId = '',
   onRegistered,
 }: Props) {
   const [text, setText] = useState(ocrText);
-  const [subjectId, setSubjectId] = useState('');
-  const [chapterId, setChapterId] = useState('');
+  const [subjectId, setSubjectId] = useState(defaultSubjectId);
+  const [chapterId, setChapterId] = useState(defaultChapterId);
   const [answerBoolean, setAnswerBoolean] = useState<boolean | null>(null);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
 
-  const canSave =
-    text.trim() && subjectId && chapterId && answerBoolean !== null;
+  // 新しい画像に切り替わったとき OCR テキストをリセット、正解もリセット
+  useEffect(() => {
+    setText(ocrText);
+    setAnswerBoolean(null);
+    setSaveError(null);
+  }, [ocrText]);
 
-  const handleSave = async () => {
-    if (!canSave) return;
+  const canSave = text.trim() && subjectId && chapterId && answerBoolean !== null;
+
+  const handleSave = useCallback(async () => {
+    if (!canSave || saving) return;
     setSaving(true);
     setSaveError(null);
 
@@ -49,27 +59,39 @@ export default function OcrReviewForm({
         createdAt: new Date(),
       });
 
-      onRegistered();
+      onRegistered(subjectId, chapterId);
     } catch (e) {
       console.error('保存エラー:', e);
       setSaveError('保存に失敗しました。ストレージ容量を確認してください。');
     } finally {
       setSaving(false);
     }
-  };
+  }, [canSave, saving, imageName, ocrText, subjectId, chapterId, text, answerBoolean, onRegistered]);
+
+  // キーボードショートカット: O=◯, X=✗, Enter=登録
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      // textarea にフォーカス中は Enter 以外は素通し
+      if (e.target instanceof HTMLTextAreaElement) return;
+      if (e.key === 'o' || e.key === 'O') setAnswerBoolean(true);
+      if (e.key === 'x' || e.key === 'X') setAnswerBoolean(false);
+      if (e.key === 'Enter') handleSave();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [handleSave]);
 
   return (
     <div className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1">
-          OCR結果（編集可）
+          問題文（編集可）
         </label>
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
-          rows={6}
+          rows={5}
           className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 resize-y"
-          placeholder="OCRで取得したテキストが表示されます"
         />
       </div>
 
@@ -81,8 +103,8 @@ export default function OcrReviewForm({
       />
 
       <div>
-        <label className="block text-sm font-medium text-slate-700 mb-2">
-          この肢の正解は？
+        <label className="block text-sm font-medium text-slate-700 mb-1">
+          正解　<span className="text-xs text-slate-400 font-normal">（O キー = ◯　/ X キー = ✗）</span>
         </label>
         <div className="flex gap-3">
           <button
@@ -121,7 +143,7 @@ export default function OcrReviewForm({
         disabled={!canSave || saving}
         className="w-full rounded-xl bg-indigo-600 py-3 text-white font-bold transition-colors hover:bg-indigo-700 disabled:bg-slate-300 disabled:text-slate-500"
       >
-        {saving ? '保存中...' : '問題を登録'}
+        {saving ? '保存中...' : `登録して次へ　Enter ↵`}
       </button>
     </div>
   );
