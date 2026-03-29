@@ -50,6 +50,7 @@ BACKUP = ROOT / "tmp"
 # review_queue.csv の中でこれらの列だけ qa_draft.csv に書き戻す
 WRITABLE_COLS = {
     "question_text",
+    "answer_symbol",
     "answer_boolean",
     "explanation_text",
     "issue_flag",
@@ -66,6 +67,7 @@ VALID_VALUES = {
     "gpt_check_status":   {"pending", "done", "flagged", "skip"},
     "human_check_status": {"pending", "done", "flagged"},
     "final_status":       {"draft", "reviewed", "approved", "rejected"},
+    "answer_symbol":      {"○", "×", ""},
     "answer_boolean":     {"True", "False", "true", "false", "1", "0", ""},
     "issue_flag":         {"0", "1", ""},
 }

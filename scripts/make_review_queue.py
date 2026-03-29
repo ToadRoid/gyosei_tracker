@@ -69,7 +69,7 @@ OUTPUT_COLS = [
     "subject", "subject_middle", "section_title", "question_no",
     # ── 問題内容 ──────────────────────────────────────────────────────────
     "issue_flag", "issue_type", "issue_detail",
-    "question_text", "answer_boolean", "explanation_text",
+    "question_text", "answer_symbol", "answer_boolean", "explanation_text",
     # ── ステータス ────────────────────────────────────────────────────────
     "gpt_check_status", "gpt_check_note",
     "human_check_status", "human_check_note", "final_status",
