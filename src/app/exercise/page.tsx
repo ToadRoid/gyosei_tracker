@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 import SubjectChapterSelect from '@/components/SubjectChapterSelect';
-import { db } from '@/lib/db';
+import { db, getReadyProblems } from '@/lib/db';
 
 export default function ExerciseSetupPage() {
   const router = useRouter();
   const [subjectId, setSubjectId] = useState('');
   const [chapterId, setChapterId] = useState('');
   const [lapNo, setLapNo] = useState(1);
-  const [questionCount, setQuestionCount] = useState(0);
+  const [problemCount, setProblemCount] = useState(0);
   const [maxLap, setMaxLap] = useState(0);
 
   useEffect(() => {
@@ -27,19 +27,11 @@ export default function ExerciseSetupPage() {
 
   useEffect(() => {
     (async () => {
-      if (!subjectId) {
-        const count = await db.questions.count();
-        setQuestionCount(count);
-        return;
-      }
-      const questions = await db.questions
-        .where('subjectId')
-        .equals(subjectId)
-        .toArray();
-      const filtered = chapterId
-        ? questions.filter((q) => q.chapterId === chapterId)
-        : questions;
-      setQuestionCount(filtered.length);
+      const problems = await getReadyProblems(
+        subjectId || undefined,
+        chapterId || undefined,
+      );
+      setProblemCount(problems.length);
     })();
   }, [subjectId, chapterId]);
 
@@ -108,21 +100,21 @@ export default function ExerciseSetupPage() {
 
       <div className="text-center space-y-3">
         <p className="text-2xl font-bold text-slate-800">
-          {questionCount}
+          {problemCount}
           <span className="text-sm font-normal text-slate-500 ml-1">問</span>
         </p>
 
         <button
           onClick={handleStart}
-          disabled={questionCount === 0}
+          disabled={problemCount === 0}
           className="w-full rounded-xl bg-indigo-600 py-4 text-white text-lg font-bold transition-colors hover:bg-indigo-700 disabled:bg-slate-300"
         >
           演習を開始
         </button>
 
-        {questionCount === 0 && (
+        {problemCount === 0 && (
           <p className="text-sm text-slate-400">
-            先に問題を取り込んでください
+            整備済み（科目・章・正解が設定済み）の問題がありません
           </p>
         )}
       </div>

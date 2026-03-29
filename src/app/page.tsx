@@ -8,7 +8,8 @@ import type { SubjectStats, ChapterStats } from '@/types';
 
 export default function DashboardPage() {
   const [overall, setOverall] = useState({
-    totalQuestions: 0,
+    totalReady: 0,
+    totalDraft: 0,
     totalAttempts: 0,
     correctCount: 0,
     accuracy: 0,
@@ -40,7 +41,7 @@ export default function DashboardPage() {
     );
   }
 
-  const hasData = overall.totalQuestions > 0;
+  const hasData = overall.totalReady > 0 || overall.totalDraft > 0;
 
   return (
     <div className="px-4 pt-6 space-y-6">
@@ -64,12 +65,13 @@ export default function DashboardPage() {
         </div>
       ) : (
         <>
+          {/* 問題数サマリ */}
           <div className="grid grid-cols-3 gap-3">
             <div className="rounded-xl bg-indigo-50 p-3 text-center">
               <p className="text-2xl font-black text-indigo-600">
-                {overall.totalQuestions}
+                {overall.totalReady}
               </p>
-              <p className="text-xs text-slate-500">登録問題</p>
+              <p className="text-xs text-slate-500">整備済み</p>
             </div>
             <div className="rounded-xl bg-green-50 p-3 text-center">
               <p className="text-2xl font-black text-green-600">
@@ -86,6 +88,26 @@ export default function DashboardPage() {
               <p className="text-xs text-slate-500">最高周回</p>
             </div>
           </div>
+
+          {/* 下書きバナー */}
+          {overall.totalDraft > 0 && (
+            <div className="rounded-xl bg-amber-50 border border-amber-200 p-4 flex items-center justify-between">
+              <div>
+                <p className="text-sm font-bold text-amber-800">
+                  下書き {overall.totalDraft}件
+                </p>
+                <p className="text-xs text-amber-600 mt-0.5">
+                  AI精査で属性を設定しましょう
+                </p>
+              </div>
+              <a
+                href="/triage"
+                className="rounded-lg bg-amber-500 text-white text-sm font-bold px-4 py-2 hover:bg-amber-600"
+              >
+                AI精査
+              </a>
+            </div>
+          )}
 
           {overall.totalAttempts > 0 && (
             <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-3">

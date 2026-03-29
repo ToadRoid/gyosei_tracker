@@ -13,62 +13,82 @@ export interface Chapter {
   order: number;
 }
 
-// ── 問題 ──
+// ── 問題本文 ──
 
-export interface Question {
+export type ProblemStatus = 'draft' | 'ready' | 'discard';
+
+export interface Problem {
   id?: number;
-  subjectId: string;
-  chapterId: string;
-  sourcePage: string;
-  originalText: string;
-  normalizedText: string;
-  answerBoolean: boolean;
-  tags: string[];
+  problemId: string;            // "KB2025-p001-q01"
+  sourceBook: string;           // "KB2025"
+  sourcePage: string;           // "001" — キャプチャ画像の連番（必須）
+  sourceQuestionLabel?: string; // 問題集に印字された問題番号 e.g. "問1" "肢3"（任意）
+  sourceImageName: string;      // "0001.png"
+  importBatchId?: string;
+  rawText: string;              // OCR全文（答え・解説含む可能性あり）
+  cleanedText: string;          // 演習表示用テキスト（問題文のみ。rawTextと初期は同値）
+  // ── 問題文と解答が同一画像の場合の分離フィールド ──────────────
+  hasAnswerInImage?: boolean;   // 答え・解説が同一画像内に含まれるか
+  rawAnswerText?: string;       // OCR済み回答部分テキスト（演習時には非表示）
+  rawExplanationText?: string;  // OCR済み解説部分テキスト（将来の解説表示用）
+  status: ProblemStatus;
   createdAt: Date;
 }
 
-// ── 学習履歴 ──
+// ── 問題属性 ──
+
+export type AiTriageStatus = 'pending' | 'ready' | 'discard' | 'needs_review';
+export type AiDiscardReason = 'index' | 'cover' | 'ocr_error' | 'page_num_only';
+
+export interface ProblemAttr {
+  id?: number;
+  problemId: string;          // FK → Problem.problemId
+  subjectId: string;
+  chapterId: string;
+  answerBoolean: boolean | null;
+  importance?: 1 | 2 | 3;
+  needsReview?: boolean;
+  year?: number;
+  memo?: string;
+  // AI判定フィールド
+  aiTriageStatus?: AiTriageStatus;
+  aiDiscardReason?: AiDiscardReason;
+  aiAnswerCandidate?: boolean | null;
+  aiSubjectCandidate?: string;
+  aiChapterCandidate?: string;
+  aiCleanedText?: string;
+  aiConfidence?: number;
+}
+
+// ── 学習ログ ──
 
 export interface Attempt {
   id?: number;
-  questionId: number;
+  problemId: string;
   lapNo: number;
-  answeredAt: Date;
   userAnswer: boolean;
   isCorrect: boolean;
+  answeredAt: Date;
   responseTimeSec: number;
 }
 
-// ── インポート ──
+// ── 演習用結合型 ──
 
-export type ImportStatus = 'pending' | 'completed' | 'error';
-
-export interface Import {
-  id?: number;
-  imageName: string;
-  ocrRawText: string;
-  importedAt: Date;
-  status: ImportStatus;
+export interface ProblemForExercise extends Problem {
+  answerBoolean: boolean; // ProblemAttr から（readyなので必ず非null）
+  subjectId: string;
+  chapterId: string;
 }
 
-// ── 演習 ──
+// ── 演習ステート ──
 
 export type ExercisePhase = 'answering' | 'feedback' | 'complete';
 
 export interface ExerciseResult {
-  questionId: number;
+  problemId: string;
   userAnswer: boolean;
   isCorrect: boolean;
   responseTimeSec: number;
-}
-
-export interface ExerciseState {
-  questions: Question[];
-  currentIndex: number;
-  phase: ExercisePhase;
-  lapNo: number;
-  results: ExerciseResult[];
-  startedAt: number;
 }
 
 // ── 集計 ──
@@ -76,8 +96,8 @@ export interface ExerciseState {
 export interface SubjectStats {
   subjectId: string;
   subjectName: string;
-  totalQuestions: number;
-  attemptedQuestions: number;
+  totalProblems: number;
+  attemptedProblems: number;
   correctCount: number;
   totalAttempts: number;
   accuracy: number;
@@ -87,8 +107,42 @@ export interface ChapterStats {
   chapterId: string;
   chapterName: string;
   subjectId: string;
-  totalQuestions: number;
+  totalProblems: number;
   correctCount: number;
   totalAttempts: number;
   accuracy: number;
+}
+
+// ── AI精査エクスポート形式 ──
+
+export interface TriageExportItem {
+  problemId: string;
+  sourceBook: string;
+  sourcePage: string;
+  sourceImageName: string;
+  rawText: string;
+  cleanedText: string;
+}
+
+export interface TriageExport {
+  exportedAt: string;
+  totalProblems: number;
+  problems: TriageExportItem[];
+}
+
+// ── AI判定インポート形式 ──
+
+export interface TriageJudgment {
+  problemId: string;
+  aiTriageStatus: AiTriageStatus;
+  aiDiscardReason?: AiDiscardReason | null;
+  aiAnswerCandidate?: boolean | null;
+  aiSubjectCandidate?: string | null;
+  aiChapterCandidate?: string | null;
+  aiCleanedText?: string | null;
+  aiConfidence?: number;
+}
+
+export interface TriageImport {
+  judgments: TriageJudgment[];
 }

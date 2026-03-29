@@ -2,12 +2,12 @@
 
 import { useState, useEffect, useReducer, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { db, upsertAttempt } from '@/lib/db';
+import { getReadyProblems, upsertAttempt } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
-import type { Question, ExerciseResult, ExercisePhase } from '@/types';
+import type { ProblemForExercise, ExerciseResult, ExercisePhase } from '@/types';
 
 interface State {
-  questions: Question[];
+  problems: ProblemForExercise[];
   currentIndex: number;
   phase: ExercisePhase;
   lapNo: number;
@@ -16,7 +16,7 @@ interface State {
 }
 
 type Action =
-  | { type: 'INIT'; questions: Question[]; lapNo: number }
+  | { type: 'INIT'; problems: ProblemForExercise[]; lapNo: number }
   | { type: 'ANSWER'; userAnswer: boolean }
   | { type: 'NEXT' };
 
@@ -25,7 +25,7 @@ function reducer(state: State, action: Action): State {
     case 'INIT':
       return {
         ...state,
-        questions: action.questions,
+        problems: action.problems,
         lapNo: action.lapNo,
         currentIndex: 0,
         phase: 'answering',
@@ -33,11 +33,11 @@ function reducer(state: State, action: Action): State {
         questionStartTime: Date.now(),
       };
     case 'ANSWER': {
-      const q = state.questions[state.currentIndex];
-      const isCorrect = action.userAnswer === q.answerBoolean;
+      const p = state.problems[state.currentIndex];
+      const isCorrect = action.userAnswer === p.answerBoolean;
       const elapsed = Math.round((Date.now() - state.questionStartTime) / 1000);
       const result: ExerciseResult = {
-        questionId: q.id!,
+        problemId: p.problemId,
         userAnswer: action.userAnswer,
         isCorrect,
         responseTimeSec: elapsed,
@@ -50,7 +50,7 @@ function reducer(state: State, action: Action): State {
     }
     case 'NEXT': {
       const nextIndex = state.currentIndex + 1;
-      if (nextIndex >= state.questions.length) {
+      if (nextIndex >= state.problems.length) {
         return { ...state, phase: 'complete' };
       }
       return {
@@ -66,7 +66,7 @@ function reducer(state: State, action: Action): State {
 }
 
 const initialState: State = {
-  questions: [],
+  problems: [],
   currentIndex: 0,
   phase: 'answering',
   lapNo: 1,
@@ -79,59 +79,44 @@ function SessionContent() {
   const router = useRouter();
   const [state, dispatch] = useReducer(reducer, initialState);
   const [loading, setLoading] = useState(true);
-  const [saveError, setSaveError] = useState(false); // 回答保存失敗フラグ
-  const lapNoRef = useRef(1);           // reducer state の lapNo を async 内で参照するための ref
-  const isAnsweringRef = useRef(false); // 二重タップ防止（NEXT で必ず false に戻す）
+  const [saveError, setSaveError] = useState(false);
+  const lapNoRef = useRef(1);
+  const isAnsweringRef = useRef(false);
 
   useEffect(() => {
     (async () => {
-      const subjectId = searchParams.get('subject') || '';
-      const chapterId = searchParams.get('chapter') || '';
+      const subjectId = searchParams.get('subject') || undefined;
+      const chapterId = searchParams.get('chapter') || undefined;
       const lapNo = Number(searchParams.get('lap') || '1');
 
-      let questions: Question[];
-      if (subjectId) {
-        questions = await db.questions
-          .where('subjectId')
-          .equals(subjectId)
-          .toArray();
-        if (chapterId) {
-          questions = questions.filter((q) => q.chapterId === chapterId);
-        }
-      } else {
-        questions = await db.questions.toArray();
-      }
+      let problems = await getReadyProblems(subjectId, chapterId);
 
       // シャッフル
-      for (let i = questions.length - 1; i > 0; i--) {
+      for (let i = problems.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [questions[i], questions[j]] = [questions[j], questions[i]];
+        [problems[i], problems[j]] = [problems[j], problems[i]];
       }
 
       lapNoRef.current = lapNo;
-      dispatch({ type: 'INIT', questions, lapNo });
+      dispatch({ type: 'INIT', problems, lapNo });
       setLoading(false);
     })();
   }, [searchParams]);
 
-  // 回答ごとに即時保存（中断・リロードでもデータが残る）
-  // isAnsweringRef で二重タップ・二重保存を防止
   const handleAnswer = async (userAnswer: boolean) => {
     if (isAnsweringRef.current) return;
     isAnsweringRef.current = true;
 
-    const q = state.questions[state.currentIndex];
-    const isCorrect = userAnswer === q.answerBoolean;
+    const p = state.problems[state.currentIndex];
+    const isCorrect = userAnswer === p.answerBoolean;
     const elapsed = Math.round((Date.now() - state.questionStartTime) / 1000);
 
-    // UI更新（phase → feedback）
     dispatch({ type: 'ANSWER', userAnswer });
     setSaveError(false);
 
-    // DB保存（即時・upsert: 同一lap同一問題は上書き）
     try {
       await upsertAttempt({
-        questionId: q.id!,
+        problemId: p.problemId,
         lapNo: lapNoRef.current,
         answeredAt: new Date(),
         userAnswer,
@@ -140,9 +125,8 @@ function SessionContent() {
       });
     } catch (e) {
       console.error('回答の保存に失敗:', e);
-      setSaveError(true); // ユーザーに通知（次の問題へは進める）
+      setSaveError(true);
     }
-    // ※ isAnsweringRef は NEXT ボタン押下時にリセットする
   };
 
   if (loading) {
@@ -153,7 +137,7 @@ function SessionContent() {
     );
   }
 
-  if (state.questions.length === 0) {
+  if (state.problems.length === 0) {
     return (
       <div className="px-4 pt-6 text-center space-y-4">
         <p className="text-slate-500">該当する問題がありません</p>
@@ -167,11 +151,9 @@ function SessionContent() {
     );
   }
 
-  const current = state.questions[state.currentIndex];
+  const current = state.problems[state.currentIndex];
   const lastResult =
-    state.results.length > 0
-      ? state.results[state.results.length - 1]
-      : null;
+    state.results.length > 0 ? state.results[state.results.length - 1] : null;
   const subject = subjects.find((s) => s.id === current?.subjectId);
   const chapter = chapters.find((c) => c.id === current?.chapterId);
 
@@ -198,7 +180,7 @@ function SessionContent() {
 
         <div className="space-y-2">
           {state.results.map((r, i) => {
-            const q = state.questions[i];
+            const p = state.problems[i];
             return (
               <div
                 key={i}
@@ -212,7 +194,7 @@ function SessionContent() {
                   {r.isCorrect ? '◯' : '✗'}
                 </span>
                 <span className="text-slate-700 line-clamp-1 flex-1">
-                  {q.normalizedText}
+                  {p.cleanedText || p.rawText}
                 </span>
                 <span className="text-slate-400 text-xs shrink-0">
                   {r.responseTimeSec}秒
@@ -222,7 +204,7 @@ function SessionContent() {
           })}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 pb-8">
           <button
             onClick={() => router.push('/exercise')}
             className="flex-1 rounded-xl bg-slate-100 py-3 font-bold text-slate-700 hover:bg-slate-200"
@@ -247,12 +229,12 @@ function SessionContent() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="rounded-full bg-indigo-100 text-indigo-700 px-2 py-0.5 text-xs font-medium">
-            {subject?.name}
+            {subject?.name ?? ''}
           </span>
-          <span className="text-xs text-slate-400">{chapter?.name}</span>
+          <span className="text-xs text-slate-400">{chapter?.name ?? ''}</span>
         </div>
         <span className="text-sm text-slate-500">
-          {state.currentIndex + 1} / {state.questions.length}
+          {state.currentIndex + 1} / {state.problems.length}
         </span>
       </div>
 
@@ -261,7 +243,11 @@ function SessionContent() {
         <div
           className="h-full rounded-full bg-indigo-500 transition-all"
           style={{
-            width: `${((state.currentIndex + (state.phase === 'feedback' ? 1 : 0)) / state.questions.length) * 100}%`,
+            width: `${
+              ((state.currentIndex + (state.phase === 'feedback' ? 1 : 0)) /
+                state.problems.length) *
+              100
+            }%`,
           }}
         />
       </div>
@@ -269,7 +255,7 @@ function SessionContent() {
       {/* 問題文 */}
       <div className="rounded-xl border border-slate-200 bg-white p-5 min-h-[150px]">
         <p className="text-base leading-relaxed text-slate-800">
-          {current.normalizedText || current.originalText}
+          {current.cleanedText || current.rawText}
         </p>
       </div>
 
@@ -308,20 +294,18 @@ function SessionContent() {
 
           {saveError && (
             <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
-              この回答の保存に失敗しました。通信・ストレージを確認してください。
+              この回答の保存に失敗しました。
             </div>
           )}
 
           <button
             onClick={() => {
-              isAnsweringRef.current = false; // 次の問題で回答できるようにリセット
+              isAnsweringRef.current = false;
               dispatch({ type: 'NEXT' });
             }}
             className="w-full rounded-xl bg-indigo-600 py-4 text-white text-lg font-bold hover:bg-indigo-700 transition-colors"
           >
-            {state.currentIndex + 1 < state.questions.length
-              ? '次の問題へ'
-              : '結果を見る'}
+            {state.currentIndex + 1 < state.problems.length ? '次の問題へ' : '結果を見る'}
           </button>
         </div>
       )}

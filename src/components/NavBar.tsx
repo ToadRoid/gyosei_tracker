@@ -7,6 +7,7 @@ const tabs = [
   { href: '/', label: 'ホーム', icon: '📊' },
   { href: '/import', label: '取込', icon: '📷' },
   { href: '/questions', label: '問題', icon: '📋' },
+  { href: '/triage', label: 'AI精査', icon: '🤖' },
   { href: '/exercise', label: '演習', icon: '✏️' },
 ] as const;
 

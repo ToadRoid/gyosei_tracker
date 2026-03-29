@@ -2,11 +2,13 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import SubjectChapterSelect from './SubjectChapterSelect';
-import { db } from '@/lib/db';
+import { db, upsertProblemAttr, generateProblemId } from '@/lib/db';
 
 interface Props {
   ocrText: string;
   imageName: string;
+  bookId: string;
+  pageNo: number;
   defaultSubjectId?: string;
   defaultChapterId?: string;
   onRegistered: (subjectId: string, chapterId: string) => void;
@@ -15,6 +17,8 @@ interface Props {
 export default function OcrReviewForm({
   ocrText,
   imageName,
+  bookId,
+  pageNo,
   defaultSubjectId = '',
   defaultChapterId = '',
   onRegistered,
@@ -26,7 +30,6 @@ export default function OcrReviewForm({
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
 
-  // 新しい画像に切り替わったとき OCR テキストをリセット、正解もリセット
   useEffect(() => {
     setText(ocrText);
     setAnswerBoolean(null);
@@ -41,22 +44,24 @@ export default function OcrReviewForm({
     setSaveError(null);
 
     try {
-      await db.imports.add({
-        imageName,
-        ocrRawText: ocrText,
-        importedAt: new Date(),
-        status: 'completed',
+      const problemId = generateProblemId(bookId, pageNo);
+      const status = 'ready';
+
+      await db.problems.add({
+        problemId,
+        sourceBook: bookId,
+        sourcePage: String(pageNo).padStart(3, '0'),
+        sourceImageName: imageName,
+        rawText: ocrText,
+        cleanedText: text.trim(),
+        status,
+        createdAt: new Date(),
       });
 
-      await db.questions.add({
+      await upsertProblemAttr(problemId, {
         subjectId,
         chapterId,
-        sourcePage: imageName,
-        originalText: ocrText,
-        normalizedText: text.trim(),
         answerBoolean: answerBoolean!,
-        tags: [],
-        createdAt: new Date(),
       });
 
       onRegistered(subjectId, chapterId);
@@ -66,12 +71,10 @@ export default function OcrReviewForm({
     } finally {
       setSaving(false);
     }
-  }, [canSave, saving, imageName, ocrText, subjectId, chapterId, text, answerBoolean, onRegistered]);
+  }, [canSave, saving, bookId, pageNo, imageName, ocrText, subjectId, chapterId, text, answerBoolean, onRegistered]);
 
-  // キーボードショートカット: O=◯, X=✗, Enter=登録
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      // textarea にフォーカス中は Enter 以外は素通し
       if (e.target instanceof HTMLTextAreaElement) return;
       if (e.key === 'o' || e.key === 'O') setAnswerBoolean(true);
       if (e.key === 'x' || e.key === 'X') setAnswerBoolean(false);
@@ -143,7 +146,7 @@ export default function OcrReviewForm({
         disabled={!canSave || saving}
         className="w-full rounded-xl bg-indigo-600 py-3 text-white font-bold transition-colors hover:bg-indigo-700 disabled:bg-slate-300 disabled:text-slate-500"
       >
-        {saving ? '保存中...' : `登録して次へ　Enter ↵`}
+        {saving ? '保存中...' : '登録して次へ　Enter ↵'}
       </button>
     </div>
   );

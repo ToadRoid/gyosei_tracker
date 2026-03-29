@@ -2,40 +2,72 @@
 
 import { useState } from 'react';
 import SubjectChapterSelect from './SubjectChapterSelect';
-import { db } from '@/lib/db';
-import type { Question } from '@/types';
+import { db, upsertProblemAttr } from '@/lib/db';
+import type { Problem, ProblemAttr, ProblemStatus } from '@/types';
 
 interface Props {
-  question: Question;
-  onSaved: (updated: Question) => void;
+  problem: Problem;
+  attr: ProblemAttr | undefined;
+  onSaved: (updated: Problem, updatedAttr: ProblemAttr) => void;
   onCancel: () => void;
 }
 
-export default function EditQuestionModal({ question, onSaved, onCancel }: Props) {
-  const [text, setText] = useState(question.normalizedText || question.originalText);
-  const [subjectId, setSubjectId] = useState(question.subjectId);
-  const [chapterId, setChapterId] = useState(question.chapterId);
-  const [answerBoolean, setAnswerBoolean] = useState<boolean>(question.answerBoolean);
+export default function EditQuestionModal({ problem, attr, onSaved, onCancel }: Props) {
+  const [text, setText] = useState(problem.cleanedText || problem.rawText);
+  const [subjectId, setSubjectId] = useState(attr?.subjectId ?? '');
+  const [chapterId, setChapterId] = useState(attr?.chapterId ?? '');
+  const [answerBoolean, setAnswerBoolean] = useState<boolean | null>(attr?.answerBoolean ?? null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const canSave = text.trim() && subjectId && chapterId;
+  const isReady = text.trim() && subjectId && chapterId && answerBoolean !== null;
 
   const handleSave = async () => {
-    if (!canSave || saving) return;
+    if (!text.trim() || saving) return;
     setSaving(true);
     setError(null);
 
-    const changes = {
-      normalizedText: text.trim(),
-      subjectId,
-      chapterId,
-      answerBoolean,
-    };
+    const status: ProblemStatus = isReady ? 'ready' : 'draft';
 
     try {
-      await db.questions.update(question.id!, changes);
-      onSaved({ ...question, ...changes });
+      // problems テーブル更新
+      const problemChanges = {
+        cleanedText: text.trim(),
+        status,
+      };
+      await db.problems.update(problem.id!, problemChanges);
+
+      // problemAttrs テーブル upsert
+      const attrChanges = {
+        subjectId,
+        chapterId,
+        answerBoolean,
+      };
+      await upsertProblemAttr(problem.problemId, attrChanges);
+
+      const updatedProblem: Problem = { ...problem, ...problemChanges };
+      const updatedAttr: ProblemAttr = {
+        id: attr?.id,
+        problemId: problem.problemId,
+        subjectId,
+        chapterId,
+        answerBoolean,
+        ...(attr ? {
+          importance: attr.importance,
+          needsReview: attr.needsReview,
+          year: attr.year,
+          memo: attr.memo,
+          aiTriageStatus: attr.aiTriageStatus,
+          aiDiscardReason: attr.aiDiscardReason,
+          aiAnswerCandidate: attr.aiAnswerCandidate,
+          aiSubjectCandidate: attr.aiSubjectCandidate,
+          aiChapterCandidate: attr.aiChapterCandidate,
+          aiCleanedText: attr.aiCleanedText,
+          aiConfidence: attr.aiConfidence,
+        } : {}),
+      };
+
+      onSaved(updatedProblem, updatedAttr);
     } catch (e) {
       console.error('更新エラー:', e);
       setError('保存に失敗しました。再度お試しください。');
@@ -45,15 +77,16 @@ export default function EditQuestionModal({ question, onSaved, onCancel }: Props
   };
 
   return (
-    // オーバーレイ
     <div
       className="fixed inset-0 z-50 flex items-end justify-center bg-black/40"
       onClick={(e) => { if (e.target === e.currentTarget) onCancel(); }}
     >
-      {/* ボトムシート */}
       <div className="w-full max-w-md rounded-t-2xl bg-white p-5 space-y-4 max-h-[90dvh] overflow-y-auto">
         <div className="flex items-center justify-between">
-          <h2 className="font-bold text-slate-800">問題を編集</h2>
+          <div>
+            <h2 className="font-bold text-slate-800">問題を編集</h2>
+            <p className="text-xs text-slate-400 mt-0.5">{problem.problemId}</p>
+          </div>
           <button onClick={onCancel} className="text-slate-400 hover:text-slate-600 text-xl leading-none">
             ✕
           </button>
@@ -77,11 +110,13 @@ export default function EditQuestionModal({ question, onSaved, onCancel }: Props
         />
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">正解</label>
+          <label className="block text-sm font-medium text-slate-700 mb-2">
+            正解　<span className="text-xs text-slate-400 font-normal">（未設定のまま保存すると下書き）</span>
+          </label>
           <div className="flex gap-3">
             <button
               type="button"
-              onClick={() => setAnswerBoolean(true)}
+              onClick={() => setAnswerBoolean(answerBoolean === true ? null : true)}
               className={`flex-1 rounded-xl py-3 text-lg font-bold transition-colors ${
                 answerBoolean === true
                   ? 'bg-green-500 text-white'
@@ -92,7 +127,7 @@ export default function EditQuestionModal({ question, onSaved, onCancel }: Props
             </button>
             <button
               type="button"
-              onClick={() => setAnswerBoolean(false)}
+              onClick={() => setAnswerBoolean(answerBoolean === false ? null : false)}
               className={`flex-1 rounded-xl py-3 text-lg font-bold transition-colors ${
                 answerBoolean === false
                   ? 'bg-red-500 text-white'
@@ -119,10 +154,10 @@ export default function EditQuestionModal({ question, onSaved, onCancel }: Props
           </button>
           <button
             onClick={handleSave}
-            disabled={!canSave || saving}
+            disabled={!text.trim() || saving}
             className="flex-1 rounded-xl bg-indigo-600 py-3 font-bold text-white hover:bg-indigo-700 disabled:bg-slate-300"
           >
-            {saving ? '保存中...' : '保存'}
+            {saving ? '保存中...' : isReady ? '保存（整備済み）' : '下書き保存'}
           </button>
         </div>
       </div>

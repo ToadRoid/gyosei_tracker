@@ -6,53 +6,107 @@ import QuestionCard from '@/components/QuestionCard';
 import EditQuestionModal from '@/components/EditQuestionModal';
 import { db } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
-import type { Question, Attempt } from '@/types';
+import type { Problem, ProblemAttr, ProblemStatus, Attempt } from '@/types';
+
+type ProblemRow = Problem & { attr: ProblemAttr | undefined };
 
 export default function QuestionsPage() {
   const [subjectFilter, setSubjectFilter] = useState('');
   const [chapterFilter, setChapterFilter] = useState('');
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [attempts, setAttempts] = useState<Map<number, Attempt[]>>(new Map());
+  const [statusFilter, setStatusFilter] = useState<'' | ProblemStatus>('');
+  const [rows, setRows] = useState<ProblemRow[]>([]);
+  const [attemptMap, setAttemptMap] = useState<Map<string, Attempt[]>>(new Map());
   const [loading, setLoading] = useState(true);
-  const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
+  const [editing, setEditing] = useState<{ problem: Problem; attr: ProblemAttr | undefined } | null>(null);
+
+  // 選択モード
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
 
   const loadData = useCallback(async () => {
     setLoading(true);
-    let query = db.questions.orderBy('createdAt');
 
-    const allQuestions = await query.reverse().toArray();
-    const filtered = allQuestions.filter((q) => {
-      if (subjectFilter && q.subjectId !== subjectFilter) return false;
-      if (chapterFilter && q.chapterId !== chapterFilter) return false;
-      return true;
-    });
+    const [allProblems, allAttrs, allAttempts] = await Promise.all([
+      db.problems.orderBy('createdAt').reverse().toArray(),
+      db.problemAttrs.toArray(),
+      db.attempts.toArray(),
+    ]);
 
-    const allAttempts = await db.attempts.toArray();
-    const attemptMap = new Map<number, Attempt[]>();
+    const attrMap = new Map<string, ProblemAttr>(allAttrs.map((a) => [a.problemId, a]));
+
+    // Join and filter
+    const filtered: ProblemRow[] = allProblems
+      .map((p) => ({ ...p, attr: attrMap.get(p.problemId) }))
+      .filter((row) => {
+        if (statusFilter && row.status !== statusFilter) return false;
+        if (subjectFilter && row.attr?.subjectId !== subjectFilter) return false;
+        if (chapterFilter && row.attr?.chapterId !== chapterFilter) return false;
+        return true;
+      });
+
+    const aMap = new Map<string, Attempt[]>();
     for (const a of allAttempts) {
-      const list = attemptMap.get(a.questionId) || [];
+      const list = aMap.get(a.problemId) || [];
       list.push(a);
-      attemptMap.set(a.questionId, list);
+      aMap.set(a.problemId, list);
     }
 
-    setQuestions(filtered);
-    setAttempts(attemptMap);
+    setRows(filtered);
+    setAttemptMap(aMap);
     setLoading(false);
-  }, [subjectFilter, chapterFilter]);
+  }, [subjectFilter, chapterFilter, statusFilter]);
 
   useEffect(() => {
     loadData();
   }, [loadData]);
 
-  const handleDelete = async (id: number) => {
-    await db.questions.delete(id);
-    await db.attempts.where('questionId').equals(id).delete();
-    loadData();
+  const handleDelete = async (problemId: string) => {
+    const problem = rows.find((r) => r.problemId === problemId);
+    if (!problem) return;
+    await db.problems.delete(problem.id!);
+    await db.problemAttrs.where('problemId').equals(problemId).delete();
+    await db.attempts.where('problemId').equals(problemId).delete();
+    setRows((prev) => prev.filter((r) => r.problemId !== problemId));
+    setSelectedIds((prev) => { const s = new Set(prev); s.delete(problemId); return s; });
   };
 
-  const handleEditSaved = (updated: Question) => {
-    setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
-    setEditingQuestion(null);
+  const handleBulkDelete = async () => {
+    const ids = Array.from(selectedIds);
+    for (const problemId of ids) {
+      const row = rows.find((r) => r.problemId === problemId);
+      if (!row) continue;
+      await db.problems.delete(row.id!);
+      await db.problemAttrs.where('problemId').equals(problemId).delete();
+      await db.attempts.where('problemId').equals(problemId).delete();
+    }
+    setRows((prev) => prev.filter((r) => !selectedIds.has(r.problemId)));
+    setSelectedIds(new Set());
+    setSelectMode(false);
+  };
+
+  const handleEditSaved = (updated: Problem, updatedAttr: ProblemAttr) => {
+    setRows((prev) =>
+      prev.map((r) =>
+        r.problemId === updated.problemId ? { ...updated, attr: updatedAttr } : r,
+      ),
+    );
+    setEditing(null);
+  };
+
+  const handleSelect = (problemId: string, checked: boolean) => {
+    setSelectedIds((prev) => {
+      const s = new Set(prev);
+      checked ? s.add(problemId) : s.delete(problemId);
+      return s;
+    });
+  };
+
+  const handleSelectAll = () => {
+    if (selectedIds.size === rows.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(rows.map((r) => r.problemId)));
+    }
   };
 
   const filteredChapters = subjectFilter
@@ -61,7 +115,22 @@ export default function QuestionsPage() {
 
   return (
     <div className="px-4 pt-6 space-y-4">
-      <h1 className="text-xl font-bold text-slate-800">問題一覧</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-bold text-slate-800">問題一覧</h1>
+        <button
+          onClick={() => {
+            setSelectMode((v) => !v);
+            setSelectedIds(new Set());
+          }}
+          className={`text-sm px-3 py-1.5 rounded-lg font-medium transition-colors ${
+            selectMode
+              ? 'bg-indigo-600 text-white'
+              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+          }`}
+        >
+          {selectMode ? '選択中' : '選択'}
+        </button>
+      </div>
 
       {/* フィルタ */}
       <div className="flex gap-2">
@@ -75,9 +144,7 @@ export default function QuestionsPage() {
         >
           <option value="">全科目</option>
           {subjects.map((s) => (
-            <option key={s.id} value={s.id}>
-              {s.name}
-            </option>
+            <option key={s.id} value={s.id}>{s.name}</option>
           ))}
         </select>
         <select
@@ -88,21 +155,57 @@ export default function QuestionsPage() {
         >
           <option value="">全章</option>
           {filteredChapters.map((c) => (
-            <option key={c.id} value={c.id}>
-              {c.name}
-            </option>
+            <option key={c.id} value={c.id}>{c.name}</option>
           ))}
         </select>
       </div>
 
-      <p className="text-sm text-slate-500">{questions.length}件</p>
+      {/* ステータスフィルタ */}
+      <div className="flex gap-2">
+        {(['', 'draft', 'ready'] as const).map((s) => (
+          <button
+            key={s}
+            onClick={() => setStatusFilter(s)}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+              statusFilter === s
+                ? 'bg-indigo-600 text-white'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >
+            {s === '' ? '全て' : s === 'draft' ? '下書き' : '整備済み'}
+          </button>
+        ))}
+      </div>
+
+      {/* 選択モード ツールバー */}
+      {selectMode && (
+        <div className="flex items-center gap-3 rounded-xl bg-slate-50 border border-slate-200 px-3 py-2">
+          <button
+            onClick={handleSelectAll}
+            className="text-sm text-indigo-600 font-medium"
+          >
+            {selectedIds.size === rows.length ? '全解除' : '全選択'}
+          </button>
+          <span className="text-sm text-slate-500 flex-1">{selectedIds.size}件選択中</span>
+          {selectedIds.size > 0 && (
+            <button
+              onClick={handleBulkDelete}
+              className="rounded-lg bg-red-500 text-white text-sm font-bold px-4 py-1.5 hover:bg-red-600"
+            >
+              {selectedIds.size}件削除
+            </button>
+          )}
+        </div>
+      )}
+
+      <p className="text-sm text-slate-500">{rows.length}件</p>
 
       {loading ? (
         <p className="text-center text-slate-400 py-12">読み込み中...</p>
-      ) : questions.length === 0 ? (
+      ) : rows.length === 0 ? (
         <div className="text-center py-12 space-y-3">
           <span className="text-4xl">📭</span>
-          <p className="text-slate-500">まだ問題がありません</p>
+          <p className="text-slate-500">問題がありません</p>
           <a
             href="/import"
             className="inline-block rounded-xl bg-indigo-600 px-6 py-2 text-white font-bold hover:bg-indigo-700"
@@ -111,26 +214,28 @@ export default function QuestionsPage() {
           </a>
         </div>
       ) : (
-        <div className="space-y-3 pb-4">
-          {questions.map((q) => {
-            const qAttempts = attempts.get(q.id!) || [];
+        <div className="space-y-3 pb-24">
+          {rows.map((row) => {
+            const attempts = attemptMap.get(row.problemId) || [];
             const lastAttempt =
-              qAttempts.length > 0
-                ? qAttempts.sort(
+              attempts.length > 0
+                ? attempts.sort(
                     (a, b) =>
-                      new Date(b.answeredAt).getTime() -
-                      new Date(a.answeredAt).getTime(),
+                      new Date(b.answeredAt).getTime() - new Date(a.answeredAt).getTime(),
                   )[0]
                 : null;
 
             return (
               <QuestionCard
-                key={q.id}
-                question={q}
-                attemptCount={qAttempts.length}
+                key={row.problemId}
+                problem={row}
+                attr={row.attr}
+                attemptCount={attempts.length}
                 lastCorrect={lastAttempt?.isCorrect ?? null}
-                onEdit={setEditingQuestion}
-                onDelete={handleDelete}
+                selected={selectMode ? selectedIds.has(row.problemId) : undefined}
+                onSelect={selectMode ? handleSelect : undefined}
+                onEdit={!selectMode ? (p, a) => setEditing({ problem: p, attr: a }) : undefined}
+                onDelete={!selectMode ? handleDelete : undefined}
               />
             );
           })}
@@ -139,11 +244,12 @@ export default function QuestionsPage() {
 
       <NavBar />
 
-      {editingQuestion && (
+      {editing && (
         <EditQuestionModal
-          question={editingQuestion}
+          problem={editing.problem}
+          attr={editing.attr}
           onSaved={handleEditSaved}
-          onCancel={() => setEditingQuestion(null)}
+          onCancel={() => setEditing(null)}
         />
       )}
     </div>
