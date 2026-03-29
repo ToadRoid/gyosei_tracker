@@ -86,13 +86,8 @@ export default function ImportPage() {
     setBatchPhase('importing');
     setBatchProgress({ done: 0, total: validCount, saved: 0, skipped: 0 });
 
-    const result = await importBatch(manifest, bid_bookId, (done, total) => {
-      setBatchProgress((prev) => ({
-        done,
-        total,
-        saved: prev.saved + (done > prev.done ? 1 : 0), // 暫定カウント
-        skipped: prev.skipped,
-      }));
+    const result = await importBatch(manifest, bid_bookId, (done, total, saved, skipped) => {
+      setBatchProgress({ done, total, saved, skipped });
     });
 
     setBatchId(result.batchId);
@@ -113,8 +108,15 @@ export default function ImportPage() {
     setPendingLoading(true);
     try {
       await runImport(pendingBatch.manifest, pendingBatch.bookId);
-      // 取込完了後のみ pending ファイルを削除
-      await fetch('/api/pending-import', { method: 'DELETE' });
+      // 取込完了後のみ pending ファイルを削除（batchId 照合付き）
+      const delRes = await fetch('/api/pending-import', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ batchId: pendingBatch.manifest.batchId }),
+      });
+      if (!delRes.ok) {
+        console.warn('pending 削除時に batchId 不一致が発生しました（無視して続行）');
+      }
       setPendingBatch(null);
     } catch (e) {
       console.error('pending import 失敗:', e);

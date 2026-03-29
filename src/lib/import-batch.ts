@@ -11,7 +11,7 @@ import { runGapCheck, type GapCheckResult } from './gap-check';
 
 export interface ManifestItem {
   baseName: string;
-  imageFile: string | null;
+  imageFile: string | null;  // "images/0001.png" 形式の相対パス
   textFile: string;
   ocrText: string;
   isEmpty: boolean;
@@ -33,17 +33,29 @@ export interface ImportResult {
 }
 
 /**
- * manifest + bookId を受け取って problems テーブルに upsert する。
- * 重複（同一 problemId）はスキップ。
+ * imageFile の相対パス（"images/0001.png"）からファイル名のみ取り出す。
+ * null の場合は baseName をフォールバックとして使う。
+ */
+function toImageBasename(imageFile: string | null, baseName: string): string {
+  if (!imageFile) return baseName;
+  // "images/0001.png" → "0001.png"
+  return imageFile.split('/').pop() ?? imageFile;
+}
+
+/**
+ * manifest + bookId を受け取って problems / problemAttrs テーブルに登録する。
+ * - problems: 全フィールドを初期値で登録（status: 'draft'）
+ * - problemAttrs: 空レコードを同時作成（AI精査・手動編集で後から埋める）
+ * - 重複（同一 problemId）はどちらもスキップ
  *
- * @param manifest  ocr_batch.sh が生成した manifest オブジェクト
- * @param bookId    "KB2025" など
- * @param onProgress  進捗コールバック（省略可）
+ * @param manifest    ocr_batch.sh が生成した manifest オブジェクト
+ * @param bookId      "KB2025" など
+ * @param onProgress  進捗コールバック。saved/skipped も渡す（省略可）
  */
 export async function importBatch(
   manifest: Manifest,
   bookId: string,
-  onProgress?: (done: number, total: number) => void,
+  onProgress?: (done: number, total: number, saved: number, skipped: number) => void,
 ): Promise<ImportResult> {
   const bid = manifest.batchId;
   const validItems = manifest.items.filter((item) => !item.isEmpty && item.ocrText.trim());
@@ -53,6 +65,7 @@ export async function importBatch(
   for (let i = 0; i < validItems.length; i++) {
     const item = validItems[i];
     const text = item.ocrText.trim();
+
     if (!text) {
       skipped++;
     } else {
@@ -61,24 +74,35 @@ export async function importBatch(
 
       const exists = await db.problems.where('problemId').equals(problemId).count();
       if (exists === 0) {
+        // ① problems に登録
         await db.problems.add({
           problemId,
           sourceBook: bookId,
           sourcePage: String(pageNo).padStart(3, '0'),
-          sourceImageName: item.imageFile ?? item.baseName,
+          sourceImageName: toImageBasename(item.imageFile, item.baseName), // basename のみ
           importBatchId: bid,
           rawText: text,
           cleanedText: text,
           status: 'draft',
           createdAt: new Date(),
         });
+
+        // ② problemAttrs を空レコードで同時作成
+        //    subjectId / chapterId / answerBoolean は AI精査・手動編集で後から埋める
+        await db.problemAttrs.add({
+          problemId,
+          subjectId: '',
+          chapterId: '',
+          answerBoolean: null,
+        });
+
         saved++;
       } else {
         skipped++;
       }
     }
 
-    onProgress?.(i + 1, validItems.length);
+    onProgress?.(i + 1, validItems.length, saved, skipped);
   }
 
   const gapCheck = await runGapCheck(manifest.items, bid);
