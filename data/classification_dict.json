@@ -2,11 +2,16 @@
   "_meta": {
     "description": "qa_draft.csv の3階層分類辞書。subject(大分類) / subject_middle(中分類) / section_title(小分類)。今後の追加レコードもこの辞書に従うこと。",
     "updated": "2026-03-29",
-    "note": "subject_middle は参考書（LEC肢別過去問集）の章扉・ページヘッダーに基づく正式表記。",
     "columns": {
       "subject": "大分類（試験科目）",
-      "subject_middle": "中分類（科目内の編・分野）",
+      "subject_middle": "中分類（章単位。参考書の章扉・ページヘッダーの正式表記に一致させる）",
       "section_title": "小分類（単元名、CSV上の列）"
+    },
+    "subject_middle_rules": {
+      "granularity": "章単位。編レベルの抽象化は使わない（例: 民法の場合 物権 ではなく 物権総論 / 担保物権 を章ごとに別登録する）",
+      "source": "参考書（LEC肢別過去問集）の章扉・ページヘッダーの実表記",
+      "cross_chapter_search": "編レベルで横断したい場合は subject_middle ではなく tags 列に編名を追加する（例: tags に 物権 を付与）",
+      "new_chapter": "後続画像で新しい章が始まったら subject_middle を新規追加し、CHAPTER_RANGES（スクリプト内）も更新する"
     },
     "status_values": {
       "gpt_check_status":   ["pending", "done", "flagged", "skip"],
