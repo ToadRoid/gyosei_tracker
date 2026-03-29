@@ -146,3 +146,35 @@ export interface TriageJudgment {
 export interface TriageImport {
   judgments: TriageJudgment[];
 }
+
+// ── LLM分割取込形式（llm_parse.js の出力） ──
+
+export interface ParsedBranch {
+  seqNo: number;
+  questionText: string;
+  answerBoolean: boolean | null;
+  explanationText: string;
+  subjectCandidate: string;
+  chapterCandidate: string;
+  confidence: number;
+}
+
+export interface ParsedPage {
+  sourcePage: string;           // "001" — 3桁ゼロパディング
+  originalProblemId: string;   // "KB2025-p001-q01" — ページ単位の旧ID
+  bookId: string;
+  batchId: string;
+  branches: ParsedBranch[];
+  parseError: string | null;
+}
+
+export interface ParsedImport {
+  type: 'parsed';
+  bookId: string;
+  batchId: string;
+  parsedAt: string;
+  model: string;
+  totalBranches: number;
+  pages: ParsedPage[];
+  queuedAt: string;
+}

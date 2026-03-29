@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import NavBar from '@/components/NavBar';
 import { db, upsertProblemAttr } from '@/lib/db';
+import { importParsedBatch } from '@/lib/import-parsed';
 import { subjects, chapters } from '@/data/master';
 import type {
   Problem,
@@ -12,9 +13,10 @@ import type {
   TriageImport,
   TriageJudgment,
   AiTriageStatus,
+  ParsedImport,
 } from '@/types';
 
-type Tab = 'export' | 'import' | 'review';
+type Tab = 'export' | 'import' | 'split' | 'review';
 
 // ── エクスポートタブ ──────────────────────────────────────
 
@@ -209,6 +211,183 @@ function ImportTab() {
           </p>
           <p className="text-xs text-green-600 mt-1">
             「レビュー」タブで確認・承認してください
+          </p>
+        </div>
+      )}
+
+      {error && (
+        <div className="rounded-xl bg-red-50 border border-red-200 p-4">
+          <p className="text-sm text-red-700">{error}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── 分割取込タブ ──────────────────────────────────────
+
+function SplitImportTab() {
+  const [pending, setPending] = useState<(ParsedImport & { pending: boolean }) | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [importing, setImporting] = useState(false);
+  const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
+  const [result, setResult] = useState<{
+    pagesProcessed: number;
+    oldRecordsDeleted: number;
+    branchesSaved: number;
+    branchesSkipped: number;
+    errorPages: number;
+  } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const checkPending = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/pending-parsed');
+      const data = await res.json();
+      setPending(data.pending ? data : null);
+    } catch {
+      setPending(null);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    checkPending();
+  }, []);
+
+  const handleImport = async () => {
+    if (!pending) return;
+    setImporting(true);
+    setResult(null);
+    setError(null);
+    setProgress({ done: 0, total: pending.pages?.length ?? 0 });
+
+    try {
+      const res = await importParsedBatch(pending as ParsedImport, (done, total) => {
+        setProgress({ done, total });
+      });
+
+      // ステージングファイルを削除
+      await fetch('/api/pending-parsed', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ batchId: pending.batchId }),
+      });
+
+      setResult(res);
+      setPending(null);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : '取込に失敗しました');
+    } finally {
+      setImporting(false);
+      setProgress(null);
+    }
+  };
+
+  if (loading) {
+    return <p className="text-center text-slate-400 py-12">確認中...</p>;
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+        <h2 className="font-bold text-slate-800">LLM分割結果を取込</h2>
+        <p className="text-sm text-slate-500">
+          <code className="text-xs bg-slate-100 px-1 rounded">llm_parse.js</code> +{' '}
+          <code className="text-xs bg-slate-100 px-1 rounded">stage_parsed.js</code> の出力を
+          DBに登録します。既存のページ単位レコードは肢単位レコードに置き換わります。
+        </p>
+      </div>
+
+      {!pending && !result && (
+        <div className="rounded-xl border border-slate-200 bg-white p-8 text-center space-y-3">
+          <p className="text-3xl">📭</p>
+          <p className="text-sm text-slate-500">保留中の分割データがありません</p>
+          <p className="text-xs text-slate-400 mt-1">
+            ターミナルで実行してください:<br />
+            <code className="bg-slate-100 px-2 py-1 rounded text-xs mt-1 inline-block">
+              node scripts/llm_parse.js --pages 1-10
+            </code><br />
+            <code className="bg-slate-100 px-2 py-1 rounded text-xs mt-1 inline-block">
+              node scripts/stage_parsed.js
+            </code>
+          </p>
+          <button
+            onClick={checkPending}
+            className="mt-2 text-xs text-indigo-600 hover:underline"
+          >
+            再確認
+          </button>
+        </div>
+      )}
+
+      {pending && !importing && !result && (
+        <div className="space-y-4">
+          {/* サマリー */}
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-3">
+            <p className="font-bold text-amber-900">⚡ 分割データを検出</p>
+            <div className="grid grid-cols-2 gap-2 text-sm">
+              <div className="bg-white rounded-lg p-3 text-center">
+                <p className="text-2xl font-black text-amber-700">{pending.pages?.length ?? 0}</p>
+                <p className="text-xs text-slate-500">ページ数</p>
+              </div>
+              <div className="bg-white rounded-lg p-3 text-center">
+                <p className="text-2xl font-black text-indigo-600">{pending.totalBranches ?? 0}</p>
+                <p className="text-xs text-slate-500">総肢数</p>
+              </div>
+            </div>
+            <div className="text-xs text-amber-700 space-y-1">
+              <p>モデル: {pending.model}</p>
+              <p>生成日時: {new Date(pending.parsedAt).toLocaleString('ja-JP')}</p>
+            </div>
+          </div>
+
+          <div className="rounded-xl bg-orange-50 border border-orange-200 p-3 text-xs text-orange-700">
+            ⚠️ 取込実行すると、対象ページのページ単位レコードが削除され、肢単位レコードに置き換わります。
+          </div>
+
+          <button
+            onClick={handleImport}
+            className="w-full rounded-xl bg-indigo-600 py-3 text-white font-bold text-sm hover:bg-indigo-700"
+          >
+            取込開始（{pending.totalBranches}肢）
+          </button>
+        </div>
+      )}
+
+      {importing && progress && (
+        <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-6 space-y-4 text-center">
+          <p className="text-sm font-bold text-indigo-700">取込中...</p>
+          <div className="w-full bg-indigo-100 rounded-full h-3">
+            <div
+              className="bg-indigo-600 h-3 rounded-full transition-all duration-300"
+              style={{ width: `${progress.total > 0 ? Math.round((progress.done / progress.total) * 100) : 0}%` }}
+            />
+          </div>
+          <p className="text-xs text-indigo-600">
+            {progress.done} / {progress.total} ページ
+          </p>
+        </div>
+      )}
+
+      {result && (
+        <div className="rounded-xl bg-green-50 border border-green-200 p-4 space-y-2">
+          <p className="font-bold text-green-800">✅ 取込完了</p>
+          <div className="text-sm text-green-700 space-y-1">
+            <p>処理ページ数: {result.pagesProcessed}件</p>
+            <p>旧レコード削除: {result.oldRecordsDeleted}件</p>
+            <p>肢登録: {result.branchesSaved}件</p>
+            {result.branchesSkipped > 0 && (
+              <p className="text-slate-500">スキップ（重複）: {result.branchesSkipped}件</p>
+            )}
+            {result.errorPages > 0 && (
+              <p className="text-red-600">エラーページ: {result.errorPages}件</p>
+            )}
+          </div>
+          <p className="text-xs text-green-600 mt-1">
+            「レビュー」タブで要確認（draft）の肢を確認できます
           </p>
         </div>
       )}
@@ -448,14 +627,15 @@ export default function TriagePage() {
       {/* タブ */}
       <div className="flex rounded-xl bg-slate-100 p-1 gap-1">
         {([
-          { key: 'export', label: 'エクスポート' },
-          { key: 'import', label: 'インポート' },
+          { key: 'split', label: '分割取込' },
+          { key: 'export', label: 'OCR出力' },
+          { key: 'import', label: 'AI判定' },
           { key: 'review', label: 'レビュー' },
         ] as const).map((t) => (
           <button
             key={t.key}
             onClick={() => setTab(t.key)}
-            className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
+            className={`flex-1 rounded-lg py-2 text-xs font-medium transition-colors ${
               tab === t.key
                 ? 'bg-white text-indigo-700 shadow-sm'
                 : 'text-slate-500 hover:text-slate-700'
@@ -466,6 +646,7 @@ export default function TriagePage() {
         ))}
       </div>
 
+      {tab === 'split' && <SplitImportTab />}
       {tab === 'export' && <ExportTab />}
       {tab === 'import' && <ImportTab />}
       {tab === 'review' && <ReviewTab />}
