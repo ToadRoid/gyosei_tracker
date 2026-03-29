@@ -7,20 +7,24 @@
  *   - 全件 review_status=draft。自動確定なし
  *   - 見えていない情報は補完しない。不確実性はフラグと remarks に残す
  *
- * 前提:
- *   ANTHROPIC_API_KEY 環境変数が必要
+ * 対応プロバイダ:
+ *   --provider anthropic  ANTHROPIC_API_KEY が必要（デフォルト）
+ *   --provider openai     OPENAI_API_KEY が必要
  *
  * 使い方:
- *   node scripts/vision_extract.js                          # 最新バッチの 1-10 ページ
- *   node scripts/vision_extract.js --pages 1-10             # ページ範囲指定
- *   node scripts/vision_extract.js --pages all              # 全件
- *   node scripts/vision_extract.js --pages 1               # 1ページのみ（動作確認）
+ *   node scripts/vision_extract.js                               # Claude, 1-10ページ
+ *   node scripts/vision_extract.js --provider openai --pages 1-10
+ *   node scripts/vision_extract.js --pages all
+ *   node scripts/vision_extract.js --pages 1                    # 1ページのみ（動作確認）
  *   node scripts/vision_extract.js --batch ~/Desktop/batch_20260329_112656
- *   node scripts/vision_extract.js --dry-run --pages 1     # API呼ばずプロンプト確認
+ *   node scripts/vision_extract.js --dry-run --pages 1          # API呼ばずプロンプト確認
  *
  * 出力:
- *   data/qa_draft_YYYYMMDD_HHMMSS.csv
- *   data/qa_draft_YYYYMMDD_HHMMSS.json  （デバッグ用）
+ *   data/qa_draft_YYYYMMDD_HHMMSS_{provider}.csv
+ *   data/qa_draft_YYYYMMDD_HHMMSS_{provider}.json  （デバッグ用）
+ *
+ * 比較評価:
+ *   同じページ範囲を両プロバイダで実行し、CSVを照合して精度を比較できる
  */
 
 const fs = require('fs');
@@ -32,10 +36,17 @@ const args = process.argv.slice(2);
 const get = (flag) => { const i = args.indexOf(flag); return i !== -1 ? args[i + 1] : null; };
 const has = (flag) => args.includes(flag);
 
-const MODEL    = get('--model')  ?? 'claude-opus-4-5';
+const PROVIDER  = get('--provider') ?? 'anthropic';   // 'anthropic' | 'openai'
+const DEFAULT_MODEL = PROVIDER === 'openai' ? 'gpt-4o' : 'claude-opus-4-5';
+const MODEL     = get('--model')  ?? DEFAULT_MODEL;
 const PAGES_ARG = get('--pages') ?? '1-10';
-const DRY_RUN  = has('--dry-run');
+const DRY_RUN   = has('--dry-run');
 const BATCH_ARG = get('--batch') ?? null;
+
+if (!['anthropic', 'openai'].includes(PROVIDER)) {
+  console.error(`❌ --provider は "anthropic" または "openai" を指定してください`);
+  process.exit(1);
+}
 
 // ── パス解決 ────────────────────────────────────────────────────────
 const projectRoot = path.join(__dirname, '..');
@@ -80,15 +91,22 @@ const { start, end } = parsePageRange(PAGES_ARG, allImages.length);
 const targets = allImages.slice(start, end + 1);
 
 // ── API キー確認 ─────────────────────────────────────────────────
-if (!DRY_RUN && !process.env.ANTHROPIC_API_KEY) {
-  console.error('❌ ANTHROPIC_API_KEY が設定されていません');
-  process.exit(1);
+if (!DRY_RUN) {
+  if (PROVIDER === 'anthropic' && !process.env.ANTHROPIC_API_KEY) {
+    console.error('❌ ANTHROPIC_API_KEY が設定されていません');
+    process.exit(1);
+  }
+  if (PROVIDER === 'openai' && !process.env.OPENAI_API_KEY) {
+    console.error('❌ OPENAI_API_KEY が設定されていません');
+    process.exit(1);
+  }
 }
 
 console.log('');
 console.log('🔍 vision_extract.js — 画像から肢データ抽出');
 console.log(`   バッチ: ${batchDir}`);
 console.log(`   ページ: ${start + 1}〜${end + 1} (${targets.length}件)`);
+console.log(`   プロバイダ: ${PROVIDER}`);
 console.log(`   モデル: ${MODEL}`);
 if (DRY_RUN) console.log('   ⚠️  DRY RUN');
 console.log('');
@@ -163,44 +181,61 @@ async function extractFromImage(imageFile, pageIndex) {
     return { page_notes: 'DRY RUN', records: [] };
   }
 
-  const resp = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': process.env.ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 8192,
-      system: SYSTEM_PROMPT,
-      messages: [{
-        role: 'user',
-        content: [
+  let text;
+
+  if (PROVIDER === 'anthropic') {
+    // ── Anthropic API ──────────────────────────────────────
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 8192,
+        system: SYSTEM_PROMPT,
+        messages: [{
+          role: 'user',
+          content: [
+            { type: 'image', source: { type: 'base64', media_type: 'image/png', data: base64 } },
+            { type: 'text', text: userMessage },
+          ],
+        }],
+      }),
+    });
+    if (!resp.ok) throw new Error(`Anthropic API error ${resp.status}: ${(await resp.text()).slice(0, 200)}`);
+    const data = await resp.json();
+    text = data.content?.[0]?.text ?? '';
+
+  } else {
+    // ── OpenAI API ────────────────────────────────────────
+    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 8192,
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
           {
-            type: 'image',
-            source: {
-              type: 'base64',
-              media_type: 'image/png',
-              data: base64,
-            },
-          },
-          {
-            type: 'text',
-            text: userMessage,
+            role: 'user',
+            content: [
+              { type: 'image_url', image_url: { url: `data:image/png;base64,${base64}`, detail: 'high' } },
+              { type: 'text', text: userMessage },
+            ],
           },
         ],
-      }],
-    }),
-  });
-
-  if (!resp.ok) {
-    const err = await resp.text();
-    throw new Error(`API error ${resp.status}: ${err.slice(0, 200)}`);
+      }),
+    });
+    if (!resp.ok) throw new Error(`OpenAI API error ${resp.status}: ${(await resp.text()).slice(0, 200)}`);
+    const data = await resp.json();
+    text = data.choices?.[0]?.message?.content ?? '';
   }
-
-  const data = await resp.json();
-  const text = data.content?.[0]?.text ?? '';
 
   const jsonMatch = text.match(/```json\s*([\s\S]*?)```/) ?? text.match(/(\{[\s\S]*\})/);
   if (!jsonMatch) {
@@ -315,8 +350,8 @@ async function main() {
   const ts = now.toISOString().replace(/[-:T]/g, '').slice(0, 15);
   fs.mkdirSync(dataDir, { recursive: true });
 
-  const csvPath  = path.join(dataDir, `qa_draft_${ts}.csv`);
-  const jsonPath = path.join(dataDir, `qa_draft_${ts}.json`);
+  const csvPath  = path.join(dataDir, `qa_draft_${ts}_${PROVIDER}.csv`);
+  const jsonPath = path.join(dataDir, `qa_draft_${ts}_${PROVIDER}.json`);
 
   // CSV: ヘッダ + データ行
   const csvLines = [
