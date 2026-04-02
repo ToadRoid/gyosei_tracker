@@ -1,0 +1,4637 @@
+{
+  "type": "parsed",
+  "bookId": "KB2025",
+  "batchId": "reviewed-import",
+  "parsedAt": "2026-04-03T01:44:18.384993",
+  "model": "human-reviewed",
+  "totalBranches": 395,
+  "pages": [
+    {
+      "sourcePage": "001",
+      "originalProblemId": "KB2025-p001-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "内閣は条約を締結する場合には、必ず当該条約の締結前に国会の承認を経ることが必要である。",
+          "answerBoolean": false,
+          "explanationText": "憲法73条3号但書は、時宜によっては国会の事後承認を認めているから、事前承認を必ず必要とする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "内閣は、事前に、時宜によっては事後に、国会の承認を経て条約を締結するが、やむを得ない事情があれば、事前または事後の国会の承認なく条約を締結できる。",
+          "answerBoolean": false,
+          "explanationText": "内閣は、条約締結権を有するが（憲法73条3号本文）、事前に時宜によっては事後に国会の承認が必要である（73条3号ただし書）。やむを得ない事情があれば、国会の承認なく条約を締結できるとする例外規定はないため、後段は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "内閣は、憲法及び法律の規定を実施するために、政令及び省令を制定する。",
+          "answerBoolean": false,
+          "explanationText": "内閣は「政令」を制定することができる（憲法73条6号）。しかし、「省令」は各省庁大臣が制定する命令であり、内閣が制定するものではないから、本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "内閣は、実質的にみて、立法権を行使することがある。",
+          "answerBoolean": true,
+          "explanationText": "内閣は、憲法および法律の規定を実施するために、政令を制定する（憲法73条6号本文）。したがって、内閣は、実質的にみて、立法権を行使することがあるといえる。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "内閣が政令を制定する場合、政令には、特にその法律の委任がある場合を除いては、罰則を設けることができない。",
+          "answerBoolean": true,
+          "explanationText": "内閣が政令を制定する場合には、特にその法律の委任がある場合を除いては、罰則を設けることができない（憲法73条6号但書）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "大赦、特赦、減刑、刑の執行の免除及び復権の決定は、内閣が行う。",
+          "answerBoolean": true,
+          "explanationText": "内閣は、大赦、特赦、減刑、刑の執行の免除および復権を決定する事務を行う（憲法73条7号）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "内閣は、いずれかの議院の総議員の4分の1以上の要求があれば、必ず臨時会の召集を決定しなければならないが、独自の判断で臨時会の召集を決定することはできない。",
+          "answerBoolean": false,
+          "explanationText": "内閣は、臨時会の召集が必要であると判断すれば、独自にその召集を決定できるから（憲法53条前段）、後段は誤っている。なお、内閣は、いずれかの議院の総議員の4分の1以上の要求があれば、その召集を決定しなければならないから（53条後段）、前段は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "内閣は、いずれかの議院の総議員の4分の1以上の要求がなければ、臨時会の召集を決定することができない。",
+          "answerBoolean": false,
+          "explanationText": "内閣は、臨時会の召集を独自の判断で決定することができるから（憲法53条前段）、本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 9,
+          "questionText": "いずれかの議院の総議員の5分の1以上の要求があれば、内閣は、臨時会の召集を決定しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "内閣が臨時会の召集を決定しなければならないのは、いずれかの議院の総議員の「4分の1」以上の要求があった場合であり（憲法53条後段）、「5分の1」ではないから、本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "002",
+      "originalProblemId": "KB2025-p002-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "国務大臣は、その在任中、内閣総理大臣がこれを任意に罷免することはできない。",
+          "answerBoolean": false,
+          "explanationText": "内閣総理大臣はその在任中、いつでも任意に国務大臣を罷免することができる（憲法68条2項）。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "003",
+      "originalProblemId": "KB2025-p003-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "内閣総理大臣は、閣議にかけて決定した方針に従い、行政各部を指揮監督することができる。",
+          "answerBoolean": true,
+          "explanationText": "憲法72条に基づき、内閣総理大臣は行政各部を指揮監督する権限を有する。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "内閣総理大臣は、合議体である内閣の一員でありながら、その首長として他の国務大臣に対し優越的な地位を有する。",
+          "answerBoolean": true,
+          "explanationText": "内閣総理大臣は内閣の首長として特別の権限（大臣の任免権・行政各部の指揮監督権等）を有し、他の国務大臣に対し優越的地位にある。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "内閣総理大臣は、国務大臣を任命するに当たり、衆議院議員の中からこれを選ばなければならない。",
+          "answerBoolean": false,
+          "explanationText": "国務大臣の過半数は国会議員でなければならないが（憲法68条1項但書）、衆議院議員に限定されない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "内閣総理大臣は、任意に国務大臣を罷免することができるが、その際には衆議院の同意を要する。",
+          "answerBoolean": false,
+          "explanationText": "国務大臣の罷免に衆議院の同意は不要である（憲法68条2項）。内閣総理大臣が単独で罷免できる。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "内閣総理大臣は、内閣を代表して外交関係を処理し、条約を締結する権限を専有する。",
+          "answerBoolean": false,
+          "explanationText": "条約の締結は内閣の権限であり（憲法73条3号）、内閣総理大臣が専有するものではない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "004",
+      "originalProblemId": "KB2025-p004-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "司法権は最高裁判所及び下級裁判所に属するが、裁判官は独立して職権を行使するため、内閣は下級裁判所を廃止することができない。",
+          "answerBoolean": false,
+          "explanationText": "下級裁判所の設置・廃止は法律によって定められ（憲法76条1項）、内閣が廃止できないというのは誤り。法律の改廃により廃止は可能。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "司法権が最高裁判所及び下級裁判所に属するとされているが、行政機関も法律に根拠があれば、終審として裁判を行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "憲法76条2項は行政機関が終審として裁判を行うことを禁じている。法律の根拠があっても終審行政裁判は許されない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "衆議院の解散・内閣総辞職の可否のような純粋に政治的な問題（統治行為）については、裁判所は違憲・違法の判断を示すことができない。",
+          "answerBoolean": true,
+          "explanationText": "統治行為論により、高度の政治性を有する国家行為については司法審査が及ばないとされる。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "普通地方公共団体の議会が議員に対して行った出席停止の懲罰は、議会内部の規律の問題にとどまり、司法審査の対象とはならない。",
+          "answerBoolean": false,
+          "explanationText": "最大判令2.11.25は、出席停止の懲罰は議員の権利を制約し住民の代表権にも影響するとして、司法審査の対象となるとした。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "005",
+      "originalProblemId": "KB2025-p005-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方公共団体の議会が議員に対して行った除名処分は、一般市民法秩序と関係するため司法審査の対象となるが、出席停止の懲罰は内部問題にとどまり司法審査の対象とはならない。",
+          "answerBoolean": false,
+          "explanationText": "最大判令2.11.25により、出席停止の懲罰も司法審査の対象となるとされた（最大判昭35.10.19の判例変更）。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "大学が行う単位認定等の評価行為は、大学の自律的な判断に委ねられた部分社会における内部問題であり、原則として司法審査の対象とはならない。",
+          "answerBoolean": true,
+          "explanationText": "大学の単位認定等は、一般市民法秩序と直接関係しない限り、部分社会の法理により司法審査の対象とならない（最判昭52.3.15）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "宗教法人に関する訴訟であっても、その目的・効果が民事上の権利義務に関する事項であれば、裁判所は法律上の争訟として審判することができる。",
+          "answerBoolean": true,
+          "explanationText": "宗教上の問題であっても、具体的権利義務関係の争訟として法律を適用して解決できるものは司法審査の対象となる（板まんだら事件・最判昭56.4.7）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "大学は自律的な法規範を有する特殊な部分社会を形成しており、その内部規律の問題はすべて一般市民法秩序と直接の関係を有しないため、司法審査は及ばない。",
+          "answerBoolean": true,
+          "explanationText": "「すべて」が誤り。一般市民法秩序と直接関係する場合は司法審査の対象となる（最判昭52.3.15）。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "政党内部の問題（党員資格・除名等）は、自律的に形成する規範に基づいて自治的に解決されるべきであり、司法審査は及ばない。",
+          "answerBoolean": false,
+          "explanationText": "統治行為に対しても司法審査が及ばないとは言い切れない。高度に政治的な問題であっても、一切審査が及ばないとする見解は判例上も採られていない。「司法審査は及ばない」とする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "006",
+      "originalProblemId": "KB2025-p006-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "政党が党員に対して行った除名処分については、一般市民としての権利利益を侵害する場合に限り、例外的に司法審査の対象となりうる。",
+          "answerBoolean": true,
+          "explanationText": "最判昭63.12.20は、政党の除名は一般市民法秩序と直接の関係を有する場合にのみ司法審査の対象となるとした。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "内閣が設置する諮問機関の答申には法的拘束力がなく、内閣を拘束するものではないが、国会の承認がある場合にはその限りでない。",
+          "answerBoolean": false,
+          "explanationText": "内閣が設置する諮問機関の答申には法的拘束力がなく、国会の承認がある場合も同様に内閣を法的に拘束するものではない。「国会の承認がある場合にはその限りでない」とする後段が誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "国家統治の基本に関する高度の政治性を有する国家行為（統治行為）は、たとえ法律上の争訟であっても、原則として司法審査の対象とはならない。",
+          "answerBoolean": true,
+          "explanationText": "統治行為は司法審査の対象外とされる（最大判昭35.6.8）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "条約は、国内法的には国会の承認を経ることで法律に優先する効力を有し、違憲審査の対象とはならない。",
+          "answerBoolean": false,
+          "explanationText": "条約は国内法的には法律に優先する効力を有するとされるが、憲法に劣位し違憲審査の対象となりうるとする見解が有力である。「違憲審査の対象とはならない」とする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "007",
+      "originalProblemId": "KB2025-p007-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "最高裁判所のすべての裁判官（長官及びその他の裁判官）は、天皇がこれを任命する。",
+          "answerBoolean": false,
+          "explanationText": "最高裁判所長官は内閣の指名に基づき天皇が任命する（憲法6条2項）が、その他の裁判官は内閣が任命する（憲法79条1項）。すべてを天皇が任命するとする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "最高裁判所の規則制定権は、訴訟手続に関する事項に限られ、弁護士・裁判所の内部規律等に関する事項には及ばない。",
+          "answerBoolean": false,
+          "explanationText": "憲法77条1項は訴訟手続・弁護士・裁判所の内部規律・司法事務処理について規則制定権を認める。訴訟手続のみに限定されない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "最高裁判所の裁判官は、その任命後初めて行われる衆議院議員総選挙の際に国民の審査に付され、その後は10年を経過した後に行われる衆議院議員総選挙の際に審査に付される。",
+          "answerBoolean": true,
+          "explanationText": "憲法79条2項・3項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "下級裁判所の裁判官は、最高裁判所が指名した者の名簿によって内閣が任命し、その任期は10年で再任されることができる。",
+          "answerBoolean": true,
+          "explanationText": "憲法80条1項のとおり。下級裁判所裁判官は最高裁判所の指名名簿により内閣が任命し、任期10年・再任可能。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "下級裁判所は、最高裁判所の指定する裁判官によって廃止することができる。",
+          "answerBoolean": false,
+          "explanationText": "下級裁判所の設置・廃止は法律によって定められる（憲法76条1項・裁判所法）。最高裁判所の指定で廃止できるものではない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "下級裁判所の裁判官は、最高裁判所が指名した者の名簿によって内閣が任命するが、実際の任命は形式的なものであり、名簿への記載が事実上の任命に等しい。",
+          "answerBoolean": true,
+          "explanationText": "最高裁判所の裁判官は、任命後初めて行われる衆議院議員総選挙の際に国民審査を受け、その後も10年ごとに審査を受ける（憲法79条2項・3項）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "裁判官は、裁判により心身の故障のため職務を執ることができないと決定された場合のほかは、公の弾劾によらなければ罷免されない。",
+          "answerBoolean": false,
+          "explanationText": "憲法78条のとおり。ただし最高裁判所裁判官については国民審査による罷免もある（79条3項）。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "008",
+      "originalProblemId": "KB2025-p008-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "下級裁判所の裁判官の任期は10年であり、再任されることができるが、定年に達した場合には退官する。",
+          "answerBoolean": false,
+          "explanationText": "憲法80条1項・2項のとおり。任期10年・再任可、定年で退官。本肢は正しい（ただし下級裁も定年あり）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "すべての裁判官は、その良心に従い独立してその職権を行い、この憲法及び法律にのみ拘束される。",
+          "answerBoolean": true,
+          "explanationText": "憲法76条3項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "裁判官は、公の弾劾によらなければ罷免されないため、分限裁判によって罷免されることはない。",
+          "answerBoolean": false,
+          "explanationText": "分限裁判により心身の故障で職務不能と決定された場合は罷免される（憲法78条）。弾劾によらなければ罷免されないとする部分は誤り。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "裁判官は、在任中、適正な報酬を受け、行政機関はこれを減額することができない。",
+          "answerBoolean": true,
+          "explanationText": "裁判官は在任中に相当額の報酬を受け、これを減額することができない（憲法79条6項・80条2項）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "最高裁判所裁判官は、国民審査により罷免されることがあるほか、行政機関によって免官されることがある。",
+          "answerBoolean": false,
+          "explanationText": "行政機関は裁判官を罷免することができない（憲法78条）。国民審査・分限裁判・弾劾裁判によるもの以外での罷免はない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "裁判官は、その在任中、報酬を受け、この報酬は在任中これを減額することができない。",
+          "answerBoolean": true,
+          "explanationText": "憲法79条6項・80条2項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "009",
+      "originalProblemId": "KB2025-p009-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "最高裁判所は、訴訟に関する手続について規則を定める権限を有するが、弁護士の資格に関する事項については、国会が法律で定めなければならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法77条1項は、訴訟手続のほか弁護士に関する事項についても規則制定権を認めている。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "裁判所は、具体的事件の裁判において、法律・命令・規則・処分が憲法に適合するかどうかを審査する権限を有する。",
+          "answerBoolean": true,
+          "explanationText": "憲法81条により、最高裁判所および下級裁判所は具体的事件において違憲審査権を有する（付随的審査制）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "違憲審査権は最高裁判所にのみ与えられており、下級裁判所は違憲と判断した場合でも、最高裁判所に移送しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "下級裁判所も違憲審査権を有する（最大判昭25.2.1）。移送義務はなく、自ら違憲判決を下すことができる。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "010",
+      "originalProblemId": "KB2025-p010-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "日本の違憲審査制は付随的審査制を採用しており、裁判所は具体的な訴訟事件を離れて抽象的に法令の合憲性を審査することはできない。",
+          "answerBoolean": false,
+          "explanationText": "最大判昭27.10.8（警察予備隊訴訟）は付随的審査制を確認し、抽象的違憲審査は認められないとした。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "対審は公開の法廷で行わなければならないが、裁判所が裁判官の全員一致で公の秩序または善良の風俗を害するおそれがあると決した場合は、非公開で行うことができる。",
+          "answerBoolean": true,
+          "explanationText": "憲法82条2項のとおり。対審は例外的に非公開とすることができる。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "裁判の対審は、常に公開しなければならず、裁判所は一切これを非公開とすることができない。",
+          "answerBoolean": false,
+          "explanationText": "憲法82条2項により、裁判官全員一致の決議により公の秩序・善良の風俗を害するおそれがある場合は非公開とすることができる。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "政治犯罪・出版犯罪・憲法第3章で保障する権利が問題となっている事件の対審は、常にこれを公開しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法82条2項但書により、政治犯罪・出版犯罪・憲法第3章の権利が問題となる事件は常に公開しなければならない。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "裁判の判決は、すべて公開の法廷でこれを言い渡さなければならない。",
+          "answerBoolean": true,
+          "explanationText": "憲法82条1項により判決は常に公開の法廷で言い渡さなければならず、非公開にする例外はない。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "民事裁判の判決も、刑事裁判と同様に公開の法廷で言い渡さなければならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法82条は対審と判決の公開を規定するが、民事裁判における具体的な判決の言渡し方法は刑事裁判と必ずしも「同様」ではなく、一律に「同様に」とする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "裁判の公開原則は対審および判決に関するものであり、審問・調査等の手続については公開を要しない。",
+          "answerBoolean": true,
+          "explanationText": "裁判の公開が義務付けられるのは対審と判決であり（憲法82条1項）、審問・調査等の手続には及ばない。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "011",
+      "originalProblemId": "KB2025-p011-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "国の財政を処理する権限は、内閣が有しており、国会の議決に基づかなくても支出を行うことができる場合がある。",
+          "answerBoolean": false,
+          "explanationText": "財政民主主義（憲法83条）により、国の財政処理は国会の議決に基づくことを要する。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地方税も含め、あらたに租税を課し、または現行の租税を変更するには、法律または法律の定める条件によることを必要とする。",
+          "answerBoolean": true,
+          "explanationText": "憲法84条の租税法律主義は地方税にも及ぶ（地方税法の根拠）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "国費を支出し、または国が債務を負担するには、法律の定める条件に従い、国会の議決に基づくことを必要とする。",
+          "answerBoolean": false,
+          "explanationText": "憲法85条は「国費を支出し、又は国が債務を負担するには、国会の議決に基くことを必要とする」と規定しており、「法律の定める条件に従い」という要件は規定していない。余分な条件を付加した本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "条約の締結に伴い必要となる債務の負担については、事前に国会の議決を得ることを要しない。",
+          "answerBoolean": true,
+          "explanationText": "条約の締結に伴い必要となる国庫債務の負担については、条約締結の際に国会の承認を得れば足り、財政法上の国会議決を別途必要とはしないとする見解が有力である。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "国費を支出するには必ず国会の議決が必要であり、国会の議決なしに一切の支出をすることができない。",
+          "answerBoolean": false,
+          "explanationText": "予備費の支出（憲法87条）のように、事後承認でよい場合もある。「一切」は誤り。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "012",
+      "originalProblemId": "KB2025-p012-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "予算は、法律の形式ではなく、行政行為の一種として内閣が作成し、国会が議決する。",
+          "answerBoolean": false,
+          "explanationText": "行政立法（法規命令・行政規則）は行政行為の一種ではなく、行政機関が定める抽象的・一般的な定めである。行政行為は具体的・個別的な公権力行使を指す。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "国会議員は、予算について修正する権限を有するが、内閣の予算提出権を侵害するような大規模な修正はできない。",
+          "answerBoolean": false,
+          "explanationText": "国会は予算を修正する権限を有し（憲法60条等）、増額修正を含む大幅な修正も可能であり、「内閣の予算提出権を侵害するような大規模な修正はできない」とする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "予算の提出権は内閣に専属しているので、国会議員は、予算を作る法律案を発議することはできない。",
+          "answerBoolean": false,
+          "explanationText": "予算提出権は内閣の専権（憲法86条）。国会議員による予算案の提出は認められない。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "予算は一会計年度に限り効力を有し、当該年度内に成立しなかった予算は自動的に失効する。",
+          "answerBoolean": false,
+          "explanationText": "会計年度開始までに予算が成立しない場合、自動的に失効するのではなく、暫定予算等の措置が講じられる（財政法30条）。自動的に失効するとする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "予算について、参議院が衆議院と異なった議決をし、両院協議会を開いても意見が一致しないとき、または参議院が衆議院の可決した予算を受け取った後30日以内に議決しないときは、衆議院の議決が国会の議決となる。",
+          "answerBoolean": true,
+          "explanationText": "憲法60条2項のとおり（予算の衆議院優越）。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "国会が議決した予算に対応する法律が存在しない場合、内閣はその予算を執行することができない。",
+          "answerBoolean": false,
+          "explanationText": "予算と法律が整合しない場合（予算はあるが対応法律がない場合）、内閣はその予算を執行することができないとは言えない。予算の執行は可能であるが、その行為が法律上問題となる場合がある。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "013",
+      "originalProblemId": "KB2025-p013-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "予算には、予備費を必ず計上しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法87条1項は予備費を「設けることができる」と規定しており、設置は義務ではない。必ず設けなければならないとする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "内閣は、予備費の支出について、事後に国会の承諾を求めなければならないが、国会が承諾を与えなかった場合でも、すでに行われた支出の法的効力は失われない。",
+          "answerBoolean": true,
+          "explanationText": "憲法87条2項のとおり。事後の不承諾は政治的責任を生じさせるにとどまり、支出の効力には影響しない。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "予備費は、国会の議決なしに支出することができるものであり、内閣の責任において自由に使途を決定できる。",
+          "answerBoolean": false,
+          "explanationText": "予備費は使途を予め特定せずに計上できるが（憲法87条1項）、支出には内閣の責任において行い、事後に国会の承諾を求めなければならない（87条2項）。「自由に」は誤り。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "予備費の支出については、内閣は事後に国会の承諾を求めなければならないが、この承諾は次の通常国会で必ず得なければならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法87条2項は「事後に国会の承諾を得なければならない」と規定するが、「次の通常国会で必ず」という時期の限定は設けていない。この限定を付加した本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "公益上の必要がある場合には、宗教上の組織もしくは団体の使用・便益もしくは維持のために公金を支出することができる。",
+          "answerBoolean": false,
+          "explanationText": "憲法89条前段は、宗教上の組織・団体への公金支出を「公益上必要な場合」も含めて禁止している。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "公の支配に属しない慈善・教育・博愛の事業に対しては、いかなる場合も公金を支出してはならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法89条は公の支配に属しない慈善・教育・博愛の事業への公金支出を原則禁止するが、「いかなる場合も」という絶対的禁止ではなく、事業が実質的に公の支配に属すると認められれば支出が許容される場合もある（私立学校振興助成法等）。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "私立学校は、公の支配に属する場合には、公金の支出を受けることができる。",
+          "answerBoolean": true,
+          "explanationText": "私立学校が「公の支配」に属する（私立学校法等による規制を受ける）場合は助成が可能。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "015",
+      "originalProblemId": "KB2025-p015-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "大日本帝国憲法には地方自治に関する規定が設けられており、市町村・府県の自治が保障されていた。",
+          "answerBoolean": false,
+          "explanationText": "大日本帝国憲法には地方自治を保障する規定がなかった。日本国憲法第8章が初めて地方自治を憲法上保障した。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地方公共団体には、法律の定めるところにより、議事機関として議会を設置しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "憲法93条1項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "地方公共団体の長・議員その他の吏員は、法律の定めるところにより選挙されるが、直接選挙である必要はない。",
+          "answerBoolean": false,
+          "explanationText": "憲法93条2項は「住民が直接これを選挙する」と定め、長・議員は直接選挙によらなければならない。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "地方公共団体の議会の議員は、その地方公共団体の住民が直接これを選挙する。",
+          "answerBoolean": true,
+          "explanationText": "憲法93条2項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "地方公共団体の長および議会の議員は、当該地方公共団体の住民の直接選挙によって選出されなければならない。",
+          "answerBoolean": true,
+          "explanationText": "憲法93条2項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "一の地方公共団体のみに適用される特別法は、法律の定めるところにより、その地方公共団体の議会の同意がなければ、国会はこれを制定することができない。",
+          "answerBoolean": false,
+          "explanationText": "憲法95条のとおり、地方特別法の制定には住民投票（当該地方公共団体の住民の投票）での過半数の同意が必要。「議会の同意」ではなく「住民投票」。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "016",
+      "originalProblemId": "KB2025-p016-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方公共団体は、その事務を処理し、及び行政を執行する権能を有するが、その財産を管理する権能を有しない。",
+          "answerBoolean": false,
+          "explanationText": "憲法94条のとおり。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地方公共団体の長は、当該地方公共団体の条例の範囲内において、規則を制定することができる。",
+          "answerBoolean": false,
+          "explanationText": "地方公共団体の長は条例の範囲内で規則を制定できる（地方自治法15条1項）が、憲法94条の条例制定権は議会に属する。長が「条例を制定する」は誤り。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "条例制定権は、日本国憲法により保障されているから、条例の制定手続やその規定事項は、法律によって制約されるものではない。",
+          "answerBoolean": false,
+          "explanationText": "憲法94条・地方自治法14条1項のとおり。法律の範囲内であれば条例制定可能で、違反する条例は無効。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "一の地方公共団体のみに適用される特別法は、その地方公共団体の住民の投票においてその過半数の同意がなければ、国会はこれを制定することができない。",
+          "answerBoolean": false,
+          "explanationText": "憲法95条のとおり。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "国会の立法権は全国的・一般的規範の制定に及ぶが、地方公共団体の条例制定権は国会の立法権に対して優先する。",
+          "answerBoolean": true,
+          "explanationText": "条例が法律に優先するわけではなく、法律の範囲内でのみ有効（憲法94条）。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "017",
+      "originalProblemId": "KB2025-p017-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "憲法の改正は、各議院の総議員の3分の2以上の賛成で国会が発議し、国民投票において有効投票の過半数の賛成を得て成立する。",
+          "answerBoolean": true,
+          "explanationText": "憲法96条1項のとおり。本肢は正しい。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "憲法改正は、一般の法律の改正と同様の手続によって行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "憲法改正には各議院の総議員の3分の2以上の賛成および国民投票という特別の手続を要する（憲法96条）。一般の法律改正手続とは異なる。本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "憲法の改正について、各議院が総議員の3分の2以上の多数で可決したときは、天皇が国民に提案し、国民投票を行う。",
+          "answerBoolean": false,
+          "explanationText": "憲法改正の発議権は国会にあり（憲法96条1項）、天皇には憲法改正の提案権はない。天皇が提案するとする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "憲法改正のための国民投票は、特別の国民投票または国会の定める選挙の際行われる投票において、有効投票の過半数の賛成を必要とする。",
+          "answerBoolean": false,
+          "explanationText": "憲法96条1項は、憲法改正の承認に「その過半数の賛成」を必要とすると規定しており、「有効投票の過半数」とは定めていない。「有効投票の過半数」とする本肢は誤っている。",
+          "subjectCandidate": "kenpo",
+          "chapterCandidate": "kenpo-tochi",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "020",
+      "originalProblemId": "KB2025-p020-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方公共団体が行う行政処分は、当該地方公共団体の条例に従っていれば適法であり、比例原則・信義誠実の原則等の一般原則は適用されない。",
+          "answerBoolean": false,
+          "explanationText": "比例原則・信義誠実の原則等の行政法の一般原則は、地方公共団体の行政処分にも当然適用される。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政機関は、法律に従って行動しなければならないという原則（法律による行政の原理）は、行政法の基本原則の一つである。",
+          "answerBoolean": true,
+          "explanationText": "法律による行政の原理（法治行政の原則）は行政法の基本原則。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政機関は、公益上の理由があれば、比例原則に反する処分を行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "比例原則は公益上の理由があっても遵守しなければならない行政法の一般原則である。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政機関が先行する行為によって私人に一定の期待を与えた場合、信義誠実の原則（信頼保護の原則）により、当該期待を裏切る行為は原則として許されない。",
+          "answerBoolean": true,
+          "explanationText": "信義誠実の原則が行政にも適用され、正当な信頼は保護される。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "最高裁判所は、行政法の一般原則としての信義誠実の原則の行政への適用を一切認めていない。",
+          "answerBoolean": true,
+          "explanationText": "最大判昭62.10.30（税務署長の更正処分事件）等で信義則の行政適用が認められている（例外的・限定的）。「一切認めていない」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "021",
+      "originalProblemId": "KB2025-p021-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "法の一般原則として権利濫用の禁止が行政上の法律関係においても適用されることがあるのみならず、それが地域環境を守るという公益上の要請であっても、当該処分が権利の濫用に該当する場合は違法となる。",
+          "answerBoolean": false,
+          "explanationText": "最大判昭62.10.30は、租税法律関係においても信義則の適用はあり得るが、その要件は厳格であるとした。本肢は正しい（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "租税法律関係は公法上の法律関係であり、私法（民法等）の規定はいかなる場合も適用されない。",
+          "answerBoolean": false,
+          "explanationText": "租税法律関係は基本的に公法関係であるが、私法の規定が類推適用される場合もある（最判昭35.3.31）。「いかなる場合も」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "農地の売買に関して自作農創設特別措置法等の行政的規制が加えられる場合でも、農地の売買自体の効力は民法の規定により判断される。",
+          "answerBoolean": false,
+          "explanationText": "農地の売買は農地法3条・5条による許可が必要であり、無許可の売買契約は原則無効となる（農地法3条6項）。民法の規定のみにより効力を判断するとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公営住宅の利用関係は、公法上の法律関係であるため、入居者が不当に低廉な家賃しか支払わない場合でも、民法の不当利得規定は適用されない。",
+          "answerBoolean": true,
+          "explanationText": "公営住宅の利用関係については、入居手続は行政処分だが、入居後の利用関係には私法（民法）が適用される（最判昭59.12.13）。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "公営住宅の入居者に対する明渡請求は、公法上の行政処分として行われ、通常の民事訴訟の対象とはならない。",
+          "answerBoolean": false,
+          "explanationText": "公営住宅の明渡請求は民事訴訟で行われる（最判昭59.12.13は公営住宅利用関係への私法適用を認める）。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "022",
+      "originalProblemId": "KB2025-p022-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体が行う公の施設の管理・利用関係は、公法上の関係であり、私法（民法）の規定は一切適用されない。",
+          "answerBoolean": false,
+          "explanationText": "公の施設の利用関係には私法が適用される場合がある（最判昭39.11.12等）。「一切適用されない」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "公営住宅への入居者選定処分は、行政処分として取消訴訟の対象となる。",
+          "answerBoolean": false,
+          "explanationText": "最判昭35.10.19は、公営住宅入居の決定は私法上の契約の申込みへの承諾にあたり、行政処分ではないとした。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "食品衛生法等の行政規制によって私人間に義務関係が生じる場合であっても、その法律関係は私法上の性質を失わない。",
+          "answerBoolean": true,
+          "explanationText": "制限行為能力者が詐術を用いて行為能力者であると信じさせた場合、その行為を取り消すことができない（民法21条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "食品衛生法の規定により必要とされる営業の許可を得ることなく食品の販売を行った場合、食品衛生法は取締法規にすぎないから、当該販売にかかる売買契約が当然に無効となるわけではない。",
+          "answerBoolean": true,
+          "explanationText": "法律の根拠なき義務賦課は許されず（法律による行政の原理）、行政指導はあくまで任意の協力を求めるものにすぎない。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "現実に開設されている私道を日常的に利用する利益は反射的利益にすぎず、敷地所有者に対して通行妨害禁止の民事訴訟を提起する利益とはならないとするのが最高裁の判例である。",
+          "answerBoolean": false,
+          "explanationText": "国有地の払下げを巡る争いは、その性質に応じて行政訴訟・民事訴訟のいずれで争うかが問題となる。本肢の正誤は事案による（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "023",
+      "originalProblemId": "KB2025-p023-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政機関が、行政主体のために行うことのできる事柄・活動の範囲を権限と呼び、その権限の行使を担当する公務員に効果が帰属する。",
+          "answerBoolean": false,
+          "explanationText": "行政機関は行政主体に属する機関であり、行政主体（法人格を有する国・地方公共団体等）そのものとは区別される。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "各省庁は、それ自体が行政主体として法律行為を行い、権利義務の帰属主体となる。",
+          "answerBoolean": false,
+          "explanationText": "各省庁は行政機関であり、法人格を有する行政主体ではない。権利義務は国（行政主体）に帰属する。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政庁は、独任制（一人の者が単独で権限を行使する形態）でなければならず、合議制の行政庁は認められない。",
+          "answerBoolean": false,
+          "explanationText": "行政庁には独任制（各省大臣等）のほか合議制（公正取引委員会等）もある。「独任制でなければならない」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政庁、諮問機関、参与機関などの行政機関の定義は、国家行政組織法において定められている。",
+          "answerBoolean": false,
+          "explanationText": "諮問機関の答申は原則として行政庁を法的に拘束しないが、法律によっては一定の拘束力が生じる場合もある。本肢は原則として正しい（※要確認）。本書の解答は×。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政庁は、法令によって行政事務を担当し外部に対して行政意思を表示する機関であり、常に独任制でなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政庁には合議制のものもある（公正取引委員会等）。「常に独任制」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "合議体の行政機関において、法令に特別の規定がない場合の議決は、全員一致を要する。",
+          "answerBoolean": false,
+          "explanationText": "合議体の議決要件は、法令に特別の規定がない場合、過半数によることが一般的であり、全員一致を要するわけではない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "024",
+      "originalProblemId": "KB2025-p024-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "都道府県の行政委員会（教育委員会・公安委員会等）は、知事とは独立した合議制の行政機関であり、知事の指揮監督を受けない。",
+          "answerBoolean": true,
+          "explanationText": "行政委員会は地方公共団体の執行機関の一種であるが、知事から独立した合議制の行政機関であり、知事の指揮命令・監督を受けない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "執行機関とは、自らの意思に基づいて実力をもって執行する権限を有する機関をいい、警察機関がその代表例である。",
+          "answerBoolean": false,
+          "explanationText": "行政機関には様々な種類があり、「実力をもって執行する機関」という限定的な定義は行政機関全体に当てはまらない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "補助機関とは行政主体の手足として実力を行使する機関であり、警察官、収税官などがこれにあたる。",
+          "answerBoolean": false,
+          "explanationText": "補助機関（副大臣・大臣政務官・各省の職員等）は行政庁の権限行使を補助するが、原則として外部への行政意思表示権限は有しない。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "補助機関とは、行政庁その他の行政機関の職務を補助し、行政目的を実現するために必要な実力を行使し又は行政強制を行う行政機関をいう。",
+          "answerBoolean": false,
+          "explanationText": "都道府県公安委員会は知事から独立した合議制の行政委員会である。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "人事院は、国家公務員の人事行政を担当する合議制の独立行政委員会であり、内閣の指揮監督を受けない。",
+          "answerBoolean": false,
+          "explanationText": "人事院は独立性が高い機関だが、内閣から完全に独立した機関ではなく、国家公務員法3条に基づき内閣の所轄の下に置かれる。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政処分は、法令によって権限を与えられた行政庁のみが行うことができ、権限のない行政機関が行った処分は無効である。",
+          "answerBoolean": true,
+          "explanationText": "内閣総理大臣は、各大臣を任免する権限を有する（憲法68条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "025",
+      "originalProblemId": "KB2025-p025-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "上位の行政庁は、下位の行政庁に対し、その権限の行使について指揮監督を行うことができる。",
+          "answerBoolean": true,
+          "explanationText": "行政規則（通達・訓令等）は法規の性質を有さず、行政機関内部を拘束するにとどまり、国民を直接拘束しない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "補助機関は、行政庁の権限行使を補助するものにすぎず、行政庁の権限を代行することはできない。",
+          "answerBoolean": false,
+          "explanationText": "補助機関も一定の場合（専決・代決等）には行政庁の権限を内部的に代行することができる。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "各省大臣は、その機関の事務を統括し、職員の服務について、これを統督するが、その機関の所管事務について、命令または示達をするため、所管の諸機関および職員に対し、告示を発することができる。",
+          "answerBoolean": false,
+          "explanationText": "各省大臣は所管の職員に対して通達を発することができる（国家行政組織法14条2項）。他省庁職員への通達は原則できない。本肢は正しい（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "各省大臣は、その主任の行政事務について、法律・政令を施行するために、その主任の大臣として訓令・通達を発することができる。",
+          "answerBoolean": true,
+          "explanationText": "国家行政組織法14条2項のとおり。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "各省大臣は、主任の行政事務について、法律もしくは政令を施行するため、またはまたは法律もしくは政令の特別の委任に基づいて、各省の省令の他に他の省庁の省令についても改正することができる。",
+          "answerBoolean": false,
+          "explanationText": "内閣総理大臣は主任の大臣間の権限争議を裁定し是正を命ずることができるが、他省の事務を自ら処理する権限は有しない。本肢は正しい（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "各省の外局として置かれる委員会は、その省大臣の所轄の下に置かれるが、独立してその権限を行使する合議制の行政機関である。",
+          "answerBoolean": true,
+          "explanationText": "国家行政組織法（3条委員会）上の委員会は省大臣の所轄のもとに置かれるが独立して権限行使する合議制機関。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "026",
+      "originalProblemId": "KB2025-p026-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "各省大臣は、主任の大臣として、それぞれ行政事務を分担管理するものとされ、内閣総理大臣が行政各部を指揮監督することはできない。",
+          "answerBoolean": false,
+          "explanationText": "国家行政組織法14条2項により訓令発出権あり。訓令違反の職員への懲戒処分も可能（国家公務員法82条）。本肢は正しい（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "内閣に置かれる内閣府の長である内閣官房長官は、内閣府の命令である内閣府令を発することができる。",
+          "answerBoolean": false,
+          "explanationText": "内閣府大臣（内閣総理大臣）は内閣府の長として職員を指揮監督する（内閣府設置法6条等）。本肢は正しいが本書の解答は×（※要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "各省庁の内部部局が発する告示は、法規の性質を有し、国民を拘束する。",
+          "answerBoolean": false,
+          "explanationText": "告示の法的性質は多様であり、法規の性質を有する告示（法規命令的告示）も存在すれば、行政規則的な告示も存在する。すべての告示が法規の性質を有するとはいえない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公正取引委員会・公害等調整委員会等は、その権限行使の独立性を確保するため、国家行政組織法上の「府省」には属さない独立行政機関とされている。",
+          "answerBoolean": false,
+          "explanationText": "公正取引委員会は内閣府の外局（独占禁止法27条）、公害等調整委員会は総務省の外局である。本肢の記述は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "国家行政組織法上、各省に置かれる地方支分部局は、当該省の大臣が設置し、当該省の大臣の指揮監督の下に地方における行政事務を分掌する。",
+          "answerBoolean": true,
+          "explanationText": "国家行政組織法上、各省大臣は主任の行政事務について省令を発することができる（国家行政組織法12条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "027",
+      "originalProblemId": "KB2025-p027-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "権限の委任は、法律の根拠がなくても行政機関の長の判断により自由に行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "権限の委任には法律の根拠が必要とされる（最判昭34.1.22等）。「法律の根拠なく自由に」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "権限を委任した後も、委任庁は委任事務について指揮監督する権限を引き続き有する。",
+          "answerBoolean": false,
+          "explanationText": "権限を委任すると委任庁はその権限を失い、委任先行政庁が自己の権限として行使する。委任庁に指揮監督権は残らない（権限の移転）。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "権限を委任した後も、委任庁は委任を取り消すことができる。",
+          "answerBoolean": true,
+          "explanationText": "権限の委任は、委任庁が委任の必要性がなくなったと判断した場合などに取り消すことができる。委任後も取消権限は失われない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "授権代理は、法律の根拠がなくても、上位行政庁の授権によって成立し、代理機関が代理権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "授権代理にも法律の根拠が必要とされる（通説・判例）。「法律の根拠なし」は誤り。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "代理機関が行政庁に代わって行った行為の効果は、代理機関自身に帰属する。",
+          "answerBoolean": false,
+          "explanationText": "代理機関の行為の効果は本来の行政庁（被代理庁）に帰属し、代理機関自身には帰属しない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "法定代理は、法定の原因（行政庁の欠員・事故等）が発生した場合に、法律の規定により当然に代理関係が生じる。",
+          "answerBoolean": true,
+          "explanationText": "法定代理は法律の定める要件（欠員・事故等）が生じた場合に当然に代理関係が成立する。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "028",
+      "originalProblemId": "KB2025-p028-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "国家公務員は、一般職と特別職に分類され、国家公務員法は原則として一般職の国家公務員に適用される。",
+          "answerBoolean": true,
+          "explanationText": "国家公務員法2条3項のとおり。一般職に適用され、特別職（内閣総理大臣・国務大臣等）には適用されない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "国家公務員に対する懲戒処分は、任命権者のみが行うことができ、その裁量の余地はなく、法定の要件が充足されれば必ず処分しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "懲戒処分は任命権者の裁量によるものであり、要件充足が自動的に処分義務を生じさせるわけではない（懲戒裁量）。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "国家公務員に対する懲戒処分については、人事院への不服申立てを経た後でなければ行政訴訟を提起することができない。",
+          "answerBoolean": false,
+          "explanationText": "国家公務員に対する懲戒処分については、人事院への不服申立てを経ることは訴訟前置の要件ではなく、行政訴訟を提起するにあたり必ずしも人事院審査を経る必要はない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公の施設（公営住宅等）は、住民の利用に供されるものであり、正当な理由がなければ住民の利用を拒否することができない。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法244条2項により、正当な理由なく住民の公の施設利用を拒否できない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "公有財産のうち公共用財産（道路・河川等）は、直接公共の用に供されるものであり、時効取得の対象とはならない。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法は申請に対する処分について標準処理期間の設定・公表を努力義務とする（行政手続法6条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "029",
+      "originalProblemId": "KB2025-p029-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "国民に一定の行為をしてはならない義務を課す命令的行為を禁止という。",
+          "answerBoolean": true,
+          "explanationText": "本肢のとおりである。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "許可は、一般的な禁止を特定の場合に解除して適法に行為を行う自由を回復させるにとどまるものであるから、許可を受けた地位は行政上の処分の対象とはならない。",
+          "answerBoolean": false,
+          "explanationText": "許可は一般的禁止の解除であるが、許可を受けた地位に対しても取消・停止等の行政処分を加えることができる。行政処分の対象とはならないとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "既に法令または行政行為によって課されている一般的禁止を特定の場合に解除する行為を許可といい、配電事業認定の許可はこれにあたる。",
+          "answerBoolean": false,
+          "explanationText": "農地法3条の権利移転許可は、私人間の権利移転行為の効力を補完・完成させるものであり、行政法学上は「認可」にあたる。「許可」とする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "許可を要する行為を許可を受けないでした場合は、強制執行されまたは処罰の対象とされることがあるのみならず、当該行為は、私法上も当然に無効となる。",
+          "answerBoolean": false,
+          "explanationText": "農地法の許可を受けずになした農地の権利移転は私法上も無効とするのが判例（最判昭33.3.18）の立場である。私法上有効とする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "火薬類輸入の許可は、講学上の許可にあたる。",
+          "answerBoolean": true,
+          "explanationText": "火薬類の製造・輸入・販売等は一般的に禁止されており、火薬類取締法上の許可はこの禁止を特定の場合に解除するものであるから、行政法学上の「許可」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "030",
+      "originalProblemId": "KB2025-p030-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "既に法令または行政行為によって課されている一般的禁止を特定の場合に解除する行為を許可という。農地の権利移転の許可はこれに該当する。",
+          "answerBoolean": false,
+          "explanationText": "農地転用許可は農地の利用権を特定の者に付与する性格を有するとも言われ、一般的禁止の解除としての「許可」の典型例とはいえない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "農地において農業用施設を設置するための農地法上の許可は、行政法学上の「許可」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "当該許可は一般的に禁止された農地転用行為について、特定の場合に禁止を解除するものであり「許可」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "特定の者に対して新たな権利・法的地位を設定する行政行為は、「許可」にあたる。",
+          "answerBoolean": false,
+          "explanationText": "特定の者に新たな権利・法的地位を設定する行政行為は「特許」にあたり、「許可」（一般的禁止の解除）とは異なる。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "電気事業法に基づいて経済産業大臣が行う電気事業者の「許可」は、行政行為の分類上、「認可」である。",
+          "answerBoolean": false,
+          "explanationText": "電気事業法上の事業許可は、特定の者に電気事業を行う権利を設定するものであり、一般的禁止の解除としての「許可」ではなく「特許」にあたる。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "ガス事業法に基づいて経済産業大臣が一般ガス事業者に対して行う供給約款の「認可」は、行政行為の分類上、「認可」である。",
+          "answerBoolean": true,
+          "explanationText": "火薬類の製造は一般的に禁止されており、経済産業大臣による製造許可はその禁止を解除するものであるから「許可」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "銀行法に基づいて内閣総理大臣が行う銀行どうしの合併の「認可」は、行政行為の分類上、「認可」である。",
+          "answerBoolean": true,
+          "explanationText": "銀行業の免許は、特定の者に銀行業という特別の地位・権利を設定するものであり、行政法学上の「特許」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "建築基準法に基づいて建築主事が行う建築「確認」は、行政行為の分類上、「認可」である。",
+          "answerBoolean": false,
+          "explanationText": "建築確認は、建築計画が建築基準法等の基準に適合しているかを確認する行政行為であり「確認」にあたる。「許可」ではない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "特許とは、特定人のために新たな権利を設定し、その他法律上の力ないし法律上の地位を付与する行為をいい、土地改良区の設立の認可がこれにあたる。",
+          "answerBoolean": false,
+          "explanationText": "特定の行為の禁止を解除して自由を回復させるのは「許可」であり、「特許」は特定の者に新たな権利・法的地位を設定する行為である。定義を混同した本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "031",
+      "originalProblemId": "KB2025-p031-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "公有水面の埋立免許は、行政法学上の「特許」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "公有水面の埋立免許は、特定の者に公有水面を埋め立てる権利を付与するものであり、行政法学上の「特許」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "道路に工作物を設けて道路を占用するための道路管理者の許可（道路占用許可）は、行政法学上の「特許」の性格にあたる。",
+          "answerBoolean": true,
+          "explanationText": "道路占用許可は、道路という公物を特定の者が排他的に使用する権利を設定するものであり、行政法学上「特許」の性格を有する。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "帰化の許可は、「特許」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "帰化は外国人に日本国籍を取得させるものであり、新たな法的地位を付与するから「特許」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公益法人設立の許可は、「特許」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "公益法人設立の許可は法人格という新たな権利・地位を付与するものであるから「特許」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "自動車の運転免許は、公道上で自動車を走行させるという権利を特定の者に付与するものであるから、行政法学上の「特許」にあたる。",
+          "answerBoolean": false,
+          "explanationText": "自動車の運転免許は、公道走行を一般的に禁止したうえでその禁止を特定の場合に解除するものであるから、「特許」ではなく「許可」にあたる。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "医師の免許は、「特許」にあたらない。",
+          "answerBoolean": true,
+          "explanationText": "医師の免許は無資格者の医療行為という一般的禁止を解除するものであり「許可」にあたるから、「特許」にはあたらない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "私人間の行為の効力を補完・完成させる行政行為を「認可」といい、農地法3条の権利移転許可もこれにあたる。",
+          "answerBoolean": true,
+          "explanationText": "認可とは、私人間の行為の効力を補完・完成させる行政行為をいう。農地法3条に基づく農地の権利移転許可は私人間の権利移転行為の効力を補完するものであり「認可」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "認可とは、私人の行為を補充してその法律上の効力を完成させる行政行為をいい、農地法3条の権利移転許可はその例である。",
+          "answerBoolean": true,
+          "explanationText": "認可は私人間の行為の効果を補完して法律上の効力を完成させるものであり、農地法3条に基づく農地の権利移転許可もこれに含まれる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "032",
+      "originalProblemId": "KB2025-p032-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "公共料金等の引上げの認可は、「認可」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "公共料金の引上げには行政庁の認可が必要であり、これは私人の行為（値上げ決定）の法律効果を補完・完成させるものであるから「認可」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "特定の事実または法律関係の存在を公に証明する行為を確認といい、選挙人名簿への登録はこれに該当する。",
+          "answerBoolean": true,
+          "explanationText": "認可は私人間の行為の効力を補完する行政行為であり、認可を受けない行為は原則として効力を生じない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "特定の事実または法律関係の存在を公に証明する行為を確認といい、選挙人名簿への登録はこれに該当する。",
+          "answerBoolean": false,
+          "explanationText": "認可の典型的対象は法律行為であるが、必ずしも法律行為に限定されるものではない。事実行為に対する認可が存在しないとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "発明の特許は、講学上の確認にあたらない。",
+          "answerBoolean": false,
+          "explanationText": "確認は、既存の事実・法律関係の存否を公権的に確定する行為であり、新たな権利義務を創設するものではない。権利義務を創設するとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "所得税の決定は、講学上の確認にあたる。",
+          "answerBoolean": false,
+          "explanationText": "本肢のとおりである。確認は既存の事実・法律関係を公権的に確定するものであり、当選人の決定はその典型例である。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "発明の特許は、新たに発明者に特許権を設定する行政行為であるから、行政法学上の「確認」にはあたらない。",
+          "answerBoolean": false,
+          "explanationText": "発明の特許は、特許庁が特許要件を審査して発明の権利の存在を確認するものであるから、行政法学上の「確認」にあたる。確認にあたらないとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "所得税の決定は、「確認」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "所得税の決定（課税処分）は、法律上発生している納税義務の存在・範囲を公権的に確認するものであるから「確認」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "審査請求の裁決は、既存の法律関係の存否を公権的に確定するものであるから、行政法学上の「確認」にあたる。",
+          "answerBoolean": true,
+          "explanationText": "審査請求の裁決等は、申立てに対して法律関係の存否を公権的に確定するものであり、行政法学上「確認」にあたる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "033",
+      "originalProblemId": "KB2025-p033-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "特定の事実または法律関係の存否について、公の機関をもって判断しこれを確認する行為を公証といい、当選人の決定はこれにあたる。",
+          "answerBoolean": false,
+          "explanationText": "本肢は「公証」ではなく「確認」についての説明である。特定の事実・法律関係の存否を公権的に判断・確認する行為は「確認」であり「公証」ではない。当選人の決定は「確認」にあたる。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政庁の処分の効力の発生時期については、特別の規定のない限り、その意思表示が相手方に到達した時ではなく、それが行政庁から相手方に向けて発信された時と解するのが相当である。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭29.8.24）は、行政処分が有効に成立したといえるためには、意思決定が何らかの形式で外部に表示されることが必要であり、名宛人である相手方の受領を要する行政処分の場合は、処分が相手方に告知されまたは相手方に到達することが必要としている。発信された時とする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "拘束力とは、行政行為がその性質により、または一定の手続きを経た結果として、その自由な取消しまたは変更を制限されることをいう。",
+          "answerBoolean": false,
+          "explanationText": "行政行為の拘束力は相手方だけでなく処分庁自身にも及び、処分庁は正当な理由なくその行為を自由に撤回・変更することができない。処分庁には及ばないとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公定力とは、違法な行政行為であっても、権限ある機関によって取り消されるまでは有効なものとして通用する効力をいう。",
+          "answerBoolean": true,
+          "explanationText": "公定力の説明として正しい。行政行為は、違法であっても権限ある機関（審査庁・取消訴訟の裁判所等）によって取り消されるまでは一応有効なものとして通用する。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "国民の身体又は財産に行政庁が制限を加える行政行為には公定力が認められるのに対し、国民に利益を与える行政行為には、公定力が認められない。",
+          "answerBoolean": false,
+          "explanationText": "公定力は私人だけでなく、国・公共団体を含むすべての者に対して及ぶ。国や公共団体には及ばないとする本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "041",
+      "originalProblemId": "KB2025-p041-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "相手方に利益を付与する処分の撤回は、撤回の対象となる当該処分について法令上の根拠規定が認められたものでなくても、撤回それ自体について別途、法令上の根拠規定が定められていなければ、撤回にすることはできない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 受益的行政行為の取消しには相手方の信頼保護の観点から制約があるとの指摘の可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "瑕疵ある行政行為は、原則として取消し得るが、授益的行政行為については、取消権は制裁を受ける。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 授益的行政行為は法的安定性や信頼保護の観点から取消しに制約があり一定の要件のもとでのみ許されるとの指摘の可能性。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "撤回権が留保された行政行為については、行政庁は、当該行為を無制限に撤回することができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政庁が違法な授益的行政行為を取り消す義務について誤りを指摘する可能性（最判等）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "不服申立てに対する裁決、裁決は、不可変更力を有するが、当該裁決、裁決を行った行政庁はこれを職権で取り消すことができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 取消しまたは撤回の効力範囲や後発的事情との関係についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "誤にかなされた行政行為と抵触する行政行為がなされた場合でも、それによって前の行政行為が閉鎖されたものと認められる余地はない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 当該取消しが認められる条件について正しいとの指摘の可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政行為の取消しの効果は、原則として行政行為成立時に遡るが、撤回の効果は、将来に向かってのみ生じる。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政庁の取消権の範囲または取消し後の義務関係について正しいとの指摘の可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "処分に瑕疵があることを理由とする処分の取消しは、行政事件訴訟法上の取消訴訟における判決のほか、行政不服審査法上の裁決を含む。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 撤回の法的性質（将来効のみ）または法令上の用語使用と実質の不一致について誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "043",
+      "originalProblemId": "KB2025-p043-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "附款は、法律行為的行政行為にのみ付することができる。",
+          "answerBoolean": true,
+          "explanationText": "附款は行政行為の本来の内容に付加される従たる意思表示であるから、意思表示の要素を持つ法律行為的行政行為にのみ付することができる。準法律行為的行政行為には附款を付することはできない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "申請に対し許認可を与える場合、それは、申請通りの内容を行政庁として認めることを意味しているので条件を付すことはされない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 申請に対する許可・認可においても行政庁は附款を付することができるとの指摘の可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "準法律行為的行政行為に附款を付することはできない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 申請が認められる場合であっても行政行為の目的達成のために附款を付することが許される場合があるとの指摘の可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政行為の附款は、法令自体が認めているか、または行政庁の自由裁量が認められている場合には、許可、認可、代理、特許、確認、公証、受理等の行政行為について必要な範囲に付することができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 附款の性質・効果についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政行為の附款は、法令が附款を付することができる旨を明示している場合に限り、付することができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 附款の付与が許される場合の要件または限界についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政庁は、自由に附款を付することはできない。",
+          "answerBoolean": true,
+          "explanationText": "附款は法律の根拠がある場合または行政行為の目的達成に必要かつ相当な範囲に限り付することができる。自由に附款を付することはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政行為の目的に照らし必要な限度を超えて付された附款は、違法である。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 附款の義務違反に対する行政庁の権限または附款の種類として正しいとの指摘の可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "附款は、行政行為の内容について行政庁に裁量が認められている場合には、その範囲内で付することができる。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 附款の変更・追加が許される場合について正しいとの指摘の可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 9,
+          "questionText": "行政行為の附款を付することができる場合において、附款は、明文との関係から制限がある。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 附款の独立取消しの可否または附款の内容の限界についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "047",
+      "originalProblemId": "KB2025-p047-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政立法は、行政庁の権力と並んで公権力の行使であり、公定力・不可争力などの効力が認められる。",
+          "answerBoolean": false,
+          "explanationText": "行政立法は一般的・抽象的な規範を定めるものであり、行政行為ではない。行政行為に認められる公定力・不可争力などの効力は行政立法には認められない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "052",
+      "originalProblemId": "KB2025-p052-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政指導には、法令の根拠を有するものもあるが、その内容はあくまでも相手方の自発的な協力によって実現するものである。",
+          "answerBoolean": true,
+          "explanationText": "行政指導はその性質上、相手方の任意の協力によって実現するものであり、行政機関は行政指導に従わなかったことを理由として不利益な取扱いをしてはならない（行政手続法32条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "053",
+      "originalProblemId": "KB2025-p053-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "水道事業者が給水契約の申込みを受けた場合に、水道法の定める供給規程に従った給水義務を負うにもかかわらず、行政指導を理由として給水を拒否することは、違法な行政指導となる。",
+          "answerBoolean": false,
+          "explanationText": "最判平元.11.8（品川区マンション給水拒否事件）は、行政指導に従わないことを理由とした給水拒否は給水義務に違反する違法行為だとした。本肢は誤っている（水道事業者の行為が違法→正しいのでは、×の解答と整合か要確認）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "水道事業者は、行政指導に従わない建築主に対し、その建築主が水道法に基づく給水義務を有していても、給水契約の締結を拒否することができる。",
+          "answerBoolean": false,
+          "explanationText": "最判平元.11.8は、行政指導への不服従を理由とした給水拒否は違法であるとした。水道事業者は給水義務を免れない。本肢は誤っている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "056",
+      "originalProblemId": "KB2025-p056-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "義務不履行者に対しては、行政機関の職員による行政強制を通じて、義務を履行させることが原則である。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政指導等は法的強制力を持たないため義務不履行があれば別途強制措置が必要であるとの指摘の可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "義務不履行者に対しては、行政強制、罰則の規定強制などによる実効性の確保が図られるが、統一的な仕組みが設けられているわけではない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政強制措置は法律の根拠に基づかなければ行使できないとの指摘の可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "代執行とは、義務者の義務の不履行があった場合に直接に義務者の身体または財産に実力を加え、義務の履行があったのと同一の状態を実現する作用をいう。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行の定義についての誤りを指摘する可能性（非代替的義務も含むとする誤りまたは手続要件に関する誤り）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政代執行とは、行政上の義務の義務違反行為を金銭にせず、直接に国民の身体または財産に実力を加え、行政上必要な状態を作り出す作用をいう。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政代執行は義務者に代わって義務内容を実現し費用を徴収するものであり直接強制とは異なるとの指摘の可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "代執行の対象となる義務は、法令または行政処分に基づく代替的作為義務および不作為義務である。",
+          "answerBoolean": false,
+          "explanationText": "行政代執行は代替的作為義務（他者が代わって履行できる作為義務）にのみ適用され、不作為義務や非代替的義務には適用できない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "無許可営業をしている者の不作為義務については、営業停止命令を発することにより作為義務に変更する行政代執行法に基づく代執行をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政代執行の手続（戒告→代執行令書→代執行）に関して誤りを指摘する可能性（事前戒告の省略不可等）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "家屋を取去すべき義務のある者が義務を履行しないとき、行政庁がみずから当該家屋の取壊しを行い、その費用を義務者に負担させる行為は、即時強制にあたる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行に要した費用は国税滞納処分の例により強制徴収できるとの指摘または費用徴収の手続についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "058",
+      "originalProblemId": "KB2025-p058-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "公物の占用許可を取り消された者は、当然に占用物件を除去すべき義務を負うので、当該義務の不履行がある場合は、代執行によって当該占用物件を除去することができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行の対象または要件についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "代執行が行われるのは、義務の履行がなく、他の手段によってその履行を確保することが困難であり、かつ、その不履行を放置することが著しく公益に反すると認められるときに限られる。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 代執行の要件充足または義務違反の態様についての誤りを判例に基づき指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政庁により命じられた行為について代執行の権限を有するのは、義務者に対して行為を命じた当該行政庁である。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行開始後も義務者が自ら義務を履行できるかどうかについての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "代執行は、行政庁が義務者に代わって自ら行うにとどまらず、第三者にこれを行わせることはできない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行の定義についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政代執行法に基づいて代執行を行うには、原則として、義務の履行期限を明示し、予め文書による戒告を行わなければならない。",
+          "answerBoolean": true,
+          "explanationText": "代執行の実施に裁判所の命令等の司法的手続は不要である。行政庁は行政代執行法の定める手続（戒告→代執行令書→代執行）に従い自ら代執行を実施できる。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "代執行をするには、代執行を行うことを義務者に対して、予め文書で戒告するか、または直接口頭で戒告しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "代執行令書は代執行の少なくとも相当の期限前に義務者に通知しなければならない（行政代執行法3条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "代執行をするには、常に、あらかじめ戒告および代執行令書による通知を行わなければならない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行令書の送達を省略できる例外（非常の場合または危険切迫）の要件について誤りを指摘する可能性（行政代執行法3条）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "代執行を行うには、あらかじめ文書で戒告しなければならないが、非常の場合は直接口頭で戒告することもできる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行費用の強制徴収の手続または費用算定についての誤りを指摘する可能性（行政代執行法5条・6条）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "059",
+      "originalProblemId": "KB2025-p059-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "代執行のために現場に派遣される執行責任者は、執行責任者たる本人であることを示す証票を携帯し、要求があるときは、いつでもこれを呈示しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 代執行費用は義務者が負担するとの指摘の可能性（行政代執行法6条等）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "代執行のために現場に派遣される執行責任者は、その者が執行責任者たる本人であることを示すべき証票を携帯しなければならず、代執行を行う際には、必ずこれを呈示しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行令書の発行義務またはその内容の要件についての誤りを指摘する可能性（行政代執行法3条・4条）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "代執行に要した費用の徴収については、原則として文書をもってその納付を命じなければならないが、口頭で命ずることができる場合もある。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行実施後の手続または物件の取扱いについての誤りを指摘する可能性（行政代執行法5条等）]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "代執行に要した費用については、義務者に対して納付命令を発出したのち、これが納付されないときは、国税滞納処分の例により強制徴収が可能となる。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 代執行費用を義務者が払わない場合は国税滞納処分の例によって強制徴収できるとの指摘の可能性（行政代執行法6条1項）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "義務者が代執行に要した費用を納付しない場合は、国税滞納処分の例により徴収し、徴収した費用は、すべて国庫の収入となる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 即時強制または代執行費用徴収の手続についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "法律の定めがなくても行政庁は上記の強制徴収の手段が認められている場合には、一般私法上の債権と同様に民事訴訟の方法により裁判所に請求を行い、強制執行の方法により金銭の徴収を求めることもできる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行の事前手続の法定性または告知義務についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政上の義務の履行を確保するために行政代執行が行われ、行政上の目的が達成された場合は、その義務違反に対して更に行政罰を科すことはできない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 代執行手続と行政手続法の関係についての誤りを指摘する可能性]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "代執行などの行政上の強制執行と、行政罰はその目的を異にするから、同一の義務違反に対し、強制執行と行政罰を併用することは可能である。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 一定の場合には命令的行政行為を前提としない即時強制または代執行が可能であるとの指摘の可能性。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "060",
+      "originalProblemId": "KB2025-p060-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "執行罰は、制裁ではないため、二重課罰の禁止の趣旨に反せず、同一の義務の不履行について、これを反復的に科することが認められる。",
+          "answerBoolean": true,
+          "explanationText": "執行罰は過料を科すことによって間接的に義務の履行を促すものであり、過去の義務違反に対する刑罰的制裁ではないため、二重処罰の禁止（一事不再理）の原則は適用されず、同一義務の不履行について反復して科することができる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "062",
+      "originalProblemId": "KB2025-p062-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "即時強制は、代替的作為義務の不履行に対し、行政庁が自ら義務者に代わって行為することである。",
+          "answerBoolean": false,
+          "explanationText": "本肢は代執行の説明であり、即時強制の説明ではない。即時強制は義務の不履行を前提とせず、目前の危急の事態を避けるため等に直接実力を行使する措置である。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "即時強制は、行政法上の義務の不履行の有無に関係なく、行政上必要な状態を実現することを目的とした制裁手段である。",
+          "answerBoolean": false,
+          "explanationText": "即時強制は行政上の金銭義務の強制措置ではない。金銭義務の強制執行は強制徴収によって行われる。即時強制は義務の不履行を前提としない点で強制執行全般とも区別される。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "即時強制とは、義務の履行を強制するためのものではなく、目前の急迫の障害を除く必要上義務を命ずるいとまのない場合に、行政機関が人の身体又は財産に実力を加え、もって行政上必要な状態を実現するものであり、これを行うのに法律上の根拠は必要とされない。",
+          "answerBoolean": false,
+          "explanationText": "即時強制は義務の履行確保（強制執行）ではなく、目前の危急の事態に対処するため直接実力を加えて行政上必要な状態を実現するものである。法治主義の観点から、即時強制を行うには法律上の根拠規定が必要とされる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政庁が私人に対し強制を加えるためには、事前に私人に対し作為義務を課していることが必要であり、目前急迫の障害に対処するのは行政法上の正当業務行為である場合に限られる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 即時強制と刑罰的制裁の区別または即時強制の対象についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政の即時強制は、私人の財産のみならず身体をもその対象とするが、現在では、基本的人権の保障の見地から、身体を対象とする即時強制を定めている法律は存在しない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 即時強制における人権保障の見地からの制限の在り方または即時強制の具体的規制についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政上の即時強制には、憲法上の令状主義は適用されない。",
+          "answerBoolean": false,
+          "explanationText": "行政上の即時強制については、行政代執行法の適用はなく（同法1条）、個々の法律に根拠規定が必要である。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "建築規制法規に違反する建築物として取壊命令が出ているにもかかわらず義務者が自主的に除却しないため、行政の職員が義務者に代わって除却する行為は、行政法理論上、「即時強制」にあたる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 即時強制は義務の不履行を前提としないとはいえ、法律の根拠に基づく行政目的のための実力行使が認められるとの指摘の可能性（警察官職務執行法等）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "営業許可に付された条件の履行を促す行政指導を無視したまま営業を継続している業者の氏名を行政庁が公表する行為は、行政法理論上、「即時強制」にあたる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 即時強制の定義または行政目的を達成するための実力行使の類型についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "064",
+      "originalProblemId": "KB2025-p064-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "公務員の職務上の義務違反に対する懲戒処分は、行政罰の一種である。",
+          "answerBoolean": false,
+          "explanationText": "公務員の懲戒処分は行政罰ではない。懲戒処分は公務員関係（特別権力関係）における内部秩序の維持を目的とするものであり、一般国民を対象とする行政罰とは区別される。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "065",
+      "originalProblemId": "KB2025-p065-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "義務不履行者には刑事罰が科されることが原則であり、罰則の附設強制により行政処分の実効性が確保される。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 義務不履行者への制裁は刑事訴訟法の手続によって行われる刑罰と行政上の秩序罰とで手続・性質が異なること等を指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "「法律なければ、刑罰なし」の原則（罪刑法定主義）は、刑事罰についてのみ適用され、行政罰には適用されない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 人権保障（罪刑法定主義）の見地からの行政手続法の適用または行政罰が刑事手続とは異なる点を指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政罰のうち秩序罰としての過料を科すためには、法律の根拠を必要としない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政命令違反については刑事罰ではなく行政罰（行政刑罰・秩序罰）によって処理されることを指摘する可能性（一般刑法が適用されるわけではない）。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政罰は、地方公共団体の自治立法である条例により科すことはできない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政罰は法律の根拠なしに科すことはできないとの指摘または二重処罰禁止（一事不再理）との関係について誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政刑罰については、法令に特別の規定がある場合のほかは、原則として刑法総則が適用され、裁判所において刑事訴訟法の定める手続により科される。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政罰は行政目的達成のために必要な場合に法律の定めに従って科することができるとの指摘の可能性。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "過料は、法律においてのみ規定されているが、普通地方公共団体の長の制定する規則においても定めることはできる。",
+          "answerBoolean": true,
+          "explanationText": "地方公共団体は条例によって行政上の秩序罰（過料）を設けることができる（地方自治法14条3項）。また地方公共団体の条例には行政刑罰を規定することも可能である。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "普通地方公共団体の過料は、普通地方公共団体の長がその旨の行為の形式でこれを科し、地方税の滞納処分の例により徴収される。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 条例による罰則の制限または地方自治法上の範囲についての誤りを指摘する可能性（地方自治法14条、258条等）。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "地方自治法に定める過料は、非訟事件手続法の定めるところにより地方裁判所において科される。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 地方公共団体が科す過料は非訟事件手続法の定める手続によることを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "066",
+      "originalProblemId": "KB2025-p066-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政上の秩序罰とは、行政上の秩序に障害を与える危険がある義務違反に対して科される罰であるが、刑法上の罰ではなく、国の法律違反に対する秩序罰については、非訟事件手続法の定めるところにより、所定の裁判所によって科される。",
+          "answerBoolean": true,
+          "explanationText": "行政上の秩序罰（過料）は、行政上の秩序維持のために義務違反者に対して科せられる金銭罰であり、法律だけでなく地方公共団体の条例によっても定めることができる（地方自治法14条3項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政上の秩序罰として行政庁が過料を科すことがあるが、これについては、刑法総則の適用はない。",
+          "answerBoolean": true,
+          "explanationText": "行政上の秩序罰（過料）は刑罰ではないため、刑事訴訟法の手続によるのではなく、非訟事件手続法の定める手続によって科される。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "過料は、刑法総則の適用はないが、これを科すには刑事訴訟法に定める手続による必要がある。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 通告制（交通反則金制度等）を含む行政刑罰の手続に関する正しい指摘の可能性。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政刑罰には刑事罰とは異なって、違反行為者だけでなく、その使用者や事業主にも科罰する規定が置かれる場合がある。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 両罰規定において法人と個人に対する罰則の内容または種類が異なる旨を指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政上の秩序罰としての過料と行政刑罰とは、併科することができないとするのが最高裁判所の判例の立場である。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政罰と他の制裁または罰則の競合処理についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政罰は、懲戒罰と併科することができる。",
+          "answerBoolean": true,
+          "explanationText": "過料（秩序罰）は刑事訴訟法上の手続による刑事裁判ではなく、非訟事件手続法の定める非訟手続（過料事件）によって科される。刑事訴訟の手続を経る必要はない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政刑罰は、執行罰と同様に、同一事実に対してその目的を達するまで繰り返し科すことができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政罰は執行罰と異なり同一義務違反への反復適用は認められないか、または一事不再理の原則の適用関係についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "068",
+      "originalProblemId": "KB2025-p068-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政手続法は、その第1条（目的）で行政運営における公正の確保・透明性の向上を規定し、説明責任（アカウンタビリティ）を明示している。",
+          "answerBoolean": false,
+          "explanationText": "行政手続法第1条（目的）は「行政運営における公正の確保と透明性の向上」を目的として規定しているが、「説明責任（アカウンタビリティ）」という文言を直接規定しているわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政手続法は一般法としての性格を持ち、行政処分手続に関して他の法律に特別の定めがある場合は、その特別規定が優先して適用される。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法は行政手続に関する一般法であり（同法1条）、個別の行政法規に特別の手続規定がある場合には、その特別規定が優先的に適用される（特別法優先の原則）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "069",
+      "originalProblemId": "KB2025-p069-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "法の規定において用いられる「法令」とは、法律及び法律に基づく命令のみを意味し、条例及び地方公共団体の執行機関の規則はここに含まれない。",
+          "answerBoolean": false,
+          "explanationText": "行政手続法上の「法令」とは、法律、法律に基づく命令（施行令を含む）及び条例並びに地方公共団体の規則を含む概念である（行政手続法2条1号参照）。条例を除外するものではなく、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政手続法は、役務的行政処分なるものに公権力の行使に当たる行為のみならず、許認可などの授益的処分についても規律を設けている。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 税務行政処分等が行政手続法上の「処分」に含まれるとの指摘またはその適用範囲の正しい説明の可能性（行政手続法2条2号・3条参照）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "補助金の交付申請は、法令に基づかない申請であっても、行政手続法上の「申請」に含まれるものとみなされる。",
+          "answerBoolean": false,
+          "explanationText": "行政手続法上の「申請」とは、法令に基づき行政庁の許可・認可・免許その他の自己に対し何らかの利益を付与する処分を求める行為であって、当該法令に定められた手続に従いされるものをいう（行政手続法2条3号）。法令に基づかない申請は行政手続法上の「申請」にあたらず、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "補助金の交付申請は、法令に基づかない申請であっても、行政手続法上の申請とみなされる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政手続法の申請に対する処分の義務または手続の適正についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "「申請」とは、法令に基づき、申請者本人または申請者以外の第三者に対し何らかの利益を付与する処分を求める行為であって、当該行為に対し行政庁が諾否の応答をすべきこととされているものをいう。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政代執行の手続は行政手続法上の「不利益処分」の手続規定の対象外である旨を指摘する可能性（行政代執行法が特別法として優先）。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政代執行は、義務者の義務不履行をその要件とし、その行為であって、当該義務に対して行政庁が諾否の応答をすべきこととされているものをいう。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政代執行は行政手続法上の「不利益処分」の規定が適用されないことを正しく指摘している可能性（行政代執行法が特別法として優先等）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "聴聞は、不利益処分をなす場合にのみ実施されるが、弁明の機会は、申請者の重大な利益に関わる許認可等を拒否する処分をなす場合にも与えられる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 申請の補正義務（行政手続法7条）またはその範囲についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "申請により求められた許認可等を拒否する場合、不利益処分として「申請に対する処分」にも該当する。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 不利益処分の定義（行政手続法2条4号）またはその適用範囲についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "071",
+      "originalProblemId": "KB2025-p071-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "処分基準とは、不利益処分をするかどうか又はどのような不利益処分とするかについて、法令の定めに従って判断するための基準をいう（行政手続法2条8号ハ）。",
+          "answerBoolean": true,
+          "explanationText": "処分基準とは、不利益処分をするかどうか又はどのような不利益処分とするかについてその法令の定めに従って判断するための基準をいう（行政手続法2条8号ハ）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "072",
+      "originalProblemId": "KB2025-p072-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政手続法3条1項は、行政処分及び行政指導についての適用除外事項を列挙して定めている。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法3条1項は、同法の適用から除外される処分及び行政指導の類型を列挙して定めており、適用対象外となる行政作用を明示している。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "073",
+      "originalProblemId": "KB2025-p073-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方公共団体の機関がする行政処分のうち、その根拠となる規定が法律に基づいて設けられている場合においては、行政手続法の規定が適用される。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法3条3項は、地方公共団体の機関がする処分のうち「その根拠となる規定が条例又は規則に置かれているものに限り」適用除外としており、根拠規定が法律に基づくものは行政手続法が適用される。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政手続法は、法律に基づく地方公共団体が行う処分については適用される。",
+          "answerBoolean": true,
+          "explanationText": "地方公共団体の機関がする処分であっても、その根拠規定が法律に置かれている場合には行政手続法が適用される（行政手続法3条3項の反対解釈）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "地方公共団体の機関がする「申請に対する処分」については、根拠が法律や自治事項に係る条例に基づく場合においても、行政手続法の申請に対する処分の規定が適用される。",
+          "answerBoolean": false,
+          "explanationText": "地方公共団体の機関がする処分のうち、根拠規定が条例又は規則に置かれているものについては行政手続法第3章以下の規定が適用されない（行政手続法3条3項）。条例を根拠とする処分にも適用されるとの本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "地方公共団体の機関がする不利益処分については、それが自治事業に関する場合には、行政手続法の不利益処分に関する規定が適用される。",
+          "answerBoolean": false,
+          "explanationText": "地方公共団体の機関がする不利益処分であっても、その根拠規定が条例又は規則に置かれているものについては行政手続法の不利益処分の規定は適用されない（行政手続法3条3項）。本肢の記述は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政手続法の行政指導等に関する規定は、地方公共団体の機関が行う行政指導については、国の機関がする行政指導のみに適用される。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法第4章（行政指導に関する規定）は、地方公共団体の機関が行う行政指導については行政手続法3条3項により適用除外とされており、国の機関が行う行政指導のみに適用される。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "075",
+      "originalProblemId": "KB2025-p075-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "標準処理期間の計算の起算点は、行政庁が申請を正式に受理した後に始まるものとする。",
+          "answerBoolean": false,
+          "explanationText": "標準処理期間は、申請が行政庁の事務所に「到達してから」の期間を定めるものであり（行政手続法6条）、正式受理の時点からではなく到達した時点から起算される（到達主義）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政庁が標準処理期間を設定し公表した場合、行政庁はその標準処理期間を必ず遵守しなければならない義務を負う。",
+          "answerBoolean": false,
+          "explanationText": "標準処理期間を定めた場合にその期間を遵守するよう努める義務はあるが、標準処理期間は目安であり、必ず遵守しなければならない法的義務があるわけではない（行政手続法6条）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "076",
+      "originalProblemId": "KB2025-p076-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政手続法は、申請に対する処分においては、行政庁が標準処理期間を定めるよう努めるべきとしているが、不利益処分については、標準処理期間に関する規定を設けていない。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法6条は申請に対する処分について標準処理期間を定めるよう努めることを規定しているが、不利益処分（第3章）については標準処理期間に対応する規定は設けられていない（行政手続法12条は処分基準の公表についての規定）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政庁は、申請がその事務所に到達したときは、遅滞なく当該申請の審査を開始しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政庁は、申請がその事務所に到達したときは、遅滞なく、当該申請の審査を開始しなければならない（行政手続法7条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政庁は、法令に定められた申請の形式上の要件に適合しない申請においては、申請を拒否せず補正を命じる義務がある。",
+          "answerBoolean": false,
+          "explanationText": "行政庁は、申請が法令に定められた形式上の要件に適合しない場合、申請者に対して補正を求めるか、または当該申請により求められた許可等を拒否しなければならない（行政手続法7条）。補正のみを命じる義務があるわけではなく、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "077",
+      "originalProblemId": "KB2025-p077-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政手続法10条の公聴会の開催は、行政庁の裁量的措置であり、申請に対する処分に際して行政庁が公聴会を開催する法的義務を定めるものではない。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法10条は、行政庁は申請に対する処分に際して公聴会を開催する等の措置を講ずるよう努めなければならないと規定しているが（努力義務）、公聴会の開催を法的義務として課するものではない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "078",
+      "originalProblemId": "KB2025-p078-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "不利益処分について、処分基準を定め、かつこれを公にしておくことは行政庁の努力義務であり、必ずしなければならない法令上の義務ではない。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法12条1項は、行政庁は処分基準を定め、かつこれを公にしておくよう努めなければならないと規定しており（努力義務）、審査基準と異なり必ず定めなければならない義務ではない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政手続法は、申請に対する処分については審査基準を「定めなければならない」のに対し、不利益処分の処分基準についても「定めなければならない」としている。",
+          "answerBoolean": false,
+          "explanationText": "行政手続法5条1項は審査基準を「定めなければならない」（義務）としているのに対し、不利益処分の処分基準については「定め、かつこれを公にしておくよう努めなければならない」（行政手続法12条1項）と規定しており、努力義務にとどまる。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "081",
+      "originalProblemId": "KB2025-p081-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政庁による聴聞の通知文書には、予定される不利益処分の内容・聴聞期日・場所等を記載しなければならない（行政手続法15条1項）。",
+          "answerBoolean": true,
+          "explanationText": "行政庁は聴聞を行う場合には、当該処分の名あて人となるべき者に対して、予定される不利益処分の内容及びその根拠となる法令条項、聴聞の期日・場所等を通知しなければならない（行政手続法15条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "083",
+      "originalProblemId": "KB2025-p083-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "聴聞の主宰者は、聴聞の期日における審理が行われた場合には聴聞調書を作成しなければならないが、審理が行われなかった場合には終結調書を作成しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "聴聞の主宰者は、聴聞の期日の審理が行われたときは聴聞調書を作成しなければならず（行政手続法24条2項）、聴聞調書には当事者等の陳述の要旨等を記載する。審理が行われない場合の終結手続も別途定められている。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "085",
+      "originalProblemId": "KB2025-p085-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "弁明の機会の付与は、行政庁が処分を行う際の意見陳述をさせる手続であり、聴聞によるべきものとして定められた場合には弁明の機会の付与の手続により行われる。",
+          "answerBoolean": true,
+          "explanationText": "弁明の機会の付与は、不利益処分の名あて人に意見陳述の機会を与える手続であり（行政手続法29条）、聴聞によるべきものとして定められた場合以外の不利益処分において用いられる（行政手続法13条1項2号）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "弁明は口頭でもすることができ、これを記録した書面を提出しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "弁明は書面でするものとされており（行政手続法29条1項）、口頭でもすることができるのは行政庁が認めた場合に限られる（同条2項）。一般的に口頭でもできるとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "086",
+      "originalProblemId": "KB2025-p086-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "予定される不利益処分の内容等の通知について、弁明の機会の付与の手続では聴聞への通知と同様にはなっていない（行政手続法15条1項・30条）。",
+          "answerBoolean": true,
+          "explanationText": "弁明の機会の付与における通知事項（行政手続法30条）は、聴聞における通知事項（行政手続法15条1項）と一部異なり、同様ではない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "087",
+      "originalProblemId": "KB2025-p087-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政指導に携わる者は、当該行政機関の任務または所掌事務の範囲を逸脱してはならない。",
+          "answerBoolean": true,
+          "explanationText": "行政指導に携わる者は、いやしくも当該行政機関の任務の範囲を逸脱してはならず、相手方の任意の協力によってのみ実現するものとして行使しなければならない（行政手続法32条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政指導は、行政機関が相手方に一定の作為又は不作為を求めるものとして、あくまでも相手方の任意の協力の確保を目的として行うものである。",
+          "answerBoolean": true,
+          "explanationText": "行政指導は、その性質上、相手方の任意の協力によってのみ実現するものであり、行政機関が行政指導に従わなかったことを理由として不利益な取扱いをしてはならない（行政手続法32条2項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政指導は相手方の任意の協力を目的とするものであり、法令の根拠がある場合でも、行政指導として行われる限りは法的強制力を持たない。",
+          "answerBoolean": true,
+          "explanationText": "行政指導は行政上の非権力的な作用であり、たとえ法令の根拠がある場合でも、それ自体としては相手方の任意の協力によって実現されるものであって、法的強制力を有しない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政指導をする者は、その相手方が行政指導に従わなかったことを理由として、不利益な取扱いをしてはならない（行政手続法32条2項）。",
+          "answerBoolean": false,
+          "explanationText": "行政手続法32条2項は「行政機関は行政指導に携わる者は、相手方が行政指導に従わなかったことを理由として、不利益な取扱いをしてはならない」と規定しており（義務的規定）、これに反して不利益取扱いをすることは禁止されている。本肢の記述は誤り（不利益取扱いが許容されるかのように読める）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "088",
+      "originalProblemId": "KB2025-p088-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "申請の取下げを求める行政指導において、申請者が当該行政指導に従う意思のない旨を示した場合でも、行政庁がその取下げを要求し続けることは認められない（行政手続法33条）。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法33条は、申請の取下げ又は内容の変更を求める行政指導においては、申請者の意に反してその取下げ又は変更を強要するものとなってはならないと規定しており、行政指導に従わない意思を示した後も強制することは禁止される。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政指導においては、口頭によることは認められず、書面によらなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政指導は口頭でも行うことができる（行政手続法35条1項）。ただし、相手方から書面交付の求めがあった場合には、書面を交付しなければならない（同条3項）。口頭による行政指導を一律に禁止する本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政指導に携わる者は、その相手方に対して、行政指導の趣旨及び内容並びに責任者を明示しなければならない（行政手続法35条）。",
+          "answerBoolean": true,
+          "explanationText": "行政指導に携わる者は、その相手方に対して、当該行政指導の趣旨・内容・責任者を明示しなければならない（行政手続法35条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "089",
+      "originalProblemId": "KB2025-p089-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政指導が口頭で行われた場合において、その相手方から行政指導の趣旨及び内容等が記載された書面の交付を求められたときは、行政指導に携わる者は、これを交付しなければならない（行政手続法35条3項）。",
+          "answerBoolean": true,
+          "explanationText": "行政指導に携わる者は、当該行政指導が口頭でされた場合において、その相手方からこれらの事項を記載した書面の交付を求められたときは、行政上特別の支障がない限り、これを交付しなければならない（行政手続法35条3項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "090",
+      "originalProblemId": "KB2025-p090-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "「届出」とは、行政庁に対して一定の事項の通知をする行政行為であって、法律の定めによれば行政庁の利益に対応する申請等が添付されているものをいう。",
+          "answerBoolean": false,
+          "explanationText": "「届出」とは、行政庁に対して一定の事項の通知をする行為（申請に該当するものを除く）であって、法令により直接当該通知が義務付けられているものをいう（行政手続法2条7号）。行政庁の利益に対応する申請等が添付されているものという記述は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "届出は、法の定めによれば「行政庁に対して一定の事務の通知をする行為」であるが、「申請に当たる場合を除く」という規定が付されている。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法2条7号は届出を「行政庁に対して一定の事項の通知をする行為（申請に該当するものを除く）であって…」と定義しており、申請に該当するものを除く旨の規定が付されている。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "届出は、法の定めによれば、法令により直接当該通知が義務付けられるものであるが、自己の利益のために一定の法律上の効果が生じるものとされている。",
+          "answerBoolean": false,
+          "explanationText": "届出は「法令により直接当該通知が義務付けられているもの（自己の権利として一定の法律上の効果を生じるものを除く）」をいう（行政手続法2条7号）。自己の利益・権利のために法律上の効果が生じるものは届出ではなく申請に該当し、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "形式上の適正を含める届出の場合において、届出が有効に行われた場合は届出の義務が果たされたものとする。",
+          "answerBoolean": true,
+          "explanationText": "届出が届出先の機関の事務所に到達したとき（到達主義）に届出の効力が生じ、法令の定める届出の義務が履行されたものとみなされる（行政手続法37条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "091",
+      "originalProblemId": "KB2025-p091-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "命令等制定機関は、やむを得ない理由がある場合には、30日を下回る意見公募期間を定めることができる（行政手続法39条4項）。",
+          "answerBoolean": true,
+          "explanationText": "行政手続法39条4項は、命令等制定機関はやむを得ない理由があるときは、30日を下回る意見公募期間を定めることができると規定している。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-tetsuzuki",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "095",
+      "originalProblemId": "KB2025-p095-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "この法律の目的は、行政の適正な運営を確保することではなく、簡易迅速かつ公正な手続による国民の権利利益の救済を図ることである。",
+          "answerBoolean": false,
+          "explanationText": "行政不服審査法1条1項は、行政庁の違法又は不当な処分等に関して国民が簡易迅速かつ公正な手続の下で広く行政庁に対する不服申立てをすることができるための制度を定めることにより、国民の権利利益の救済を図るとともに、行政の適正な運営を確保することを目的とすると規定している。「行政の適正な運営を確保することではなく」とする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "処分請求訴訟（取消訴訟）においては処分の法令合性（適法性）のみを争うことができるが、行政不服申立てについては法令合性のほか適当・妥当の判断も争うことができる。",
+          "answerBoolean": true,
+          "explanationText": "行政不服申立ては、処分の違法性のみならず不当性（適当でないこと）についても争うことができるのに対し、取消訴訟においては原則として法令違反（適法性）の問題のみを争うことができる（行政不服審査法1条1項参照）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政庁の行為は、行政不服申立て（審査請求）の対象となりうる。",
+          "answerBoolean": true,
+          "explanationText": "行政庁の処分（違法又は不当な処分）は行政不服申立て（審査請求等）の対象となりうる（行政不服審査法1条1項・2条参照）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "096",
+      "originalProblemId": "KB2025-p096-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政不服審査法にいう「処分」には、「不作為」も含まれる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政不服審査法における「不作為」の定義（行政不服審査法3条参照）または不作為に対する審査請求の要件についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "不作為についての審査請求が認められるのは、行政庁が法令に基づく申請に対し、相当の期間内に何らかの処分をすべきにもかかわらず、これをしない場合である。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政不服審査法における不作為に対する審査請求の要件についての正しい指摘の可能性（行政不服審査法3条等参照）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政不服審査法における「不作為」には、申請が形式上の要件に適合しないとの理由で、実質的審査を経ずに拒否処分がなされた場合も含まれる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政不服審査法3条の不作為の定義またはその要件についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政不服審査法は、審査請求の対象となる行政庁の処分については、いわゆる一般概括主義を採用しており、不服申立てをすることができない処分を列挙している。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 審査請求の対象となる処分・行為の範囲または事実行為の取扱いについての誤りを指摘する可能性（行政不服審査法1条1項・2条参照）。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "審査請求をすることができる事項につき列記主義を採っている。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 行政不服審査法の対象となる処分についての正しい指摘の可能性（行政不服審査法2条等参照）。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "審査請求の対象である行政庁の処分には、行政不服審査法に基づく処分は含まれない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 審査請求の対象処分の要件についての正しい指摘の可能性。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "審査請求は、「国会の両院若しくは一院又は議会の議決によってされた処分」に対しても認められる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 審査請求対象処分の法的解釈についての誤りを指摘する可能性。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "行政庁の処分のうち、研修所において研修の目的を達成するために、研修生に対してされる処分については、原則として審査請求をすることはできない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政不服審査法の対象外となる処分の類型またはその根拠についての正しい指摘の可能性。本肢は正しい]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "098",
+      "originalProblemId": "KB2025-p098-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "審査請求とは、行政庁の処分または不作為について、処分をした行政庁の上級行政庁または処分庁等に対して行う不服申立である。",
+          "answerBoolean": false,
+          "explanationText": "審査請求は、処分庁の上級行政庁（審査庁）に対して行うのが原則であるが、処分庁の上級行政庁がない場合は当該処分庁自身が審査庁となる（行政不服審査法4条）。単に「上級行政庁または処分庁等」と一般化する本肢は正確ではなく誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "再調査の請求は「処分について」のみすることができるものであるから、不作為についても再調査の請求をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "再調査の請求は、行政庁の処分に対してのみ行うことができ（行政不服審査法5条1項）、不作為については再調査の請求はできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "102",
+      "originalProblemId": "KB2025-p102-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "処分についての審査請求は、原則として、処分があったことを知った日の翌日から起算して3か月以内にしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "処分についての審査請求は、正当な理由がある場合を除き、処分があったことを知った日の翌日から起算して3か月以内にしなければならない（行政不服審査法18条1項本文）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "処分についての審査請求に関する審査請求期間については、処分庁が審査請求期間を誤って告知した場合であっても、審査請求期間はいかなる場合も延長されない。",
+          "answerBoolean": false,
+          "explanationText": "処分庁が審査請求期間を誤って長く告知した場合には、その告知した期間内にした審査請求は適法なものとみなされる（行政不服審査法22条1項）。誤告知によって審査請求期間が延長される場合があり、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "審査請求書は、処分があった日の翌日から起算して1年を経過した後においても、正当な理由があれば、審査請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "処分があった日の翌日から起算して1年を経過した後は原則として審査請求できないが、正当な理由があるときはこの限りでない（行政不服審査法18条2項ただし書）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "不作為についての審査請求については、客観的審査請求期間の定めはない。",
+          "answerBoolean": true,
+          "explanationText": "不作為についての審査請求は、法令に基づく申請に対して相当の期間内に処分がなされない場合に申し立てるものであり、一定期間経過により審査請求権が消滅するという客観的審査請求期間の制限はない（行政不服審査法3条等）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "103",
+      "originalProblemId": "KB2025-p103-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "審査庁は、審査請求が不適法であって補正することができないことが明らかなときは、裁決によりこれを却下することができる。",
+          "answerBoolean": true,
+          "explanationText": "審査庁は、審査請求が不適法であって補正することができないことが明らかなときは、裁決でこれを却下することができる（行政不服審査法24条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "106",
+      "originalProblemId": "KB2025-p106-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "審査請求人または参加人は、証拠書類または証拠物を提出することができるが、審理員が証拠書類もしくは証拠物を提出すべき相当の期間を定めたときは、その期間内に提出しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 審理員による書面提出期間の設定等に関して本肢記述が行政不服審査法の規定と整合しない旨を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "審査請求人は、不服申立てで審査する審理員に、必要と考える参考人の審実陳述を求めるよう申し立てることができる。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 審理員の職権による書類提出要求等の権限を認める行政不服審査法の規定（32条等）に照らして本肢が正しいと述べる内容と思われる]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "審理員は、職権により、物件の所持人に対し物件の提出を求めたうえ、提出された当該物件を留め置くことができる。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 行政不服審査法上の審理員の調査権限に関して本肢記述が誤りである旨を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "不服申立てで審査する審理員は、審査の必要に応じて、書類その他の物件の所持人にそれらの提出を命ずることができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 審理員の権限または審査庁の執行停止に関する決定権限について本肢記述が誤りである旨を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "審理員は、審査請求人または参加人の申立てがなければ、必要な場所についての検証をすることはできない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 審理員意見書の作成・送付に関する行政不服審査法42条の規定と本肢記述の相違を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "審理員は、審査請求人または参加人の申立てがなければ、審査請求に係る事件に関し、審理関係人に質問することはできない。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 審理員意見書の取扱いに関して本肢記述が誤りである旨を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "審査請求人は、審理手続が終了するまでの間、審理員に対し、提出書類等の閲覧をすることができるが、その写しの交付を求めることはできない。",
+          "answerBoolean": true,
+          "explanationText": "[解説読取困難 - 審理手続の終結後の手続（審理員意見書の提出等）に関して本肢記述が行政不服審査法の規定と整合しない旨を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 8,
+          "questionText": "不服申立人は、不服申立てで審査する審理員に、処分の情勢について必要な情報を得ることをもって全体像を管理することができる。",
+          "answerBoolean": false,
+          "explanationText": "[解説読取困難 - 審理手続終了後の申出制限に関して本肢記述が行政不服審査法の規定と整合しない旨を指摘する内容と思われる。本肢は誤り]",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "112",
+      "originalProblemId": "KB2025-p112-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政庁の処分に関して審査請求がされた場合、審査請求自体によって当該処分の効力、処分の執行または手続の続行は当然に停止する。",
+          "answerBoolean": false,
+          "explanationText": "審査請求がされても、当然には処分の効力・執行・手続の続行は停止しない（審査請求不停止の原則、行政不服審査法25条1項）。執行停止には別途手続が必要であり、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "執行停止できる審査庁は、審査請求人の申立てによる場合のほか、職権で執行停止をすることができる場合もある。",
+          "answerBoolean": true,
+          "explanationText": "審査庁は、審査請求人の申立てによるほか、職権で執行停止をすることができる（行政不服審査法25条2項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "113",
+      "originalProblemId": "KB2025-p113-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "審査請求人から執行停止の申立てがある場合に、公共の福祉に重大な影響を及ぼすおそれがあるときであっても、審査庁は必ず執行停止をしなければならない。",
+          "answerBoolean": false,
+          "explanationText": "公共の福祉に重大な影響を及ぼすおそれがあるとき等は、執行停止をすることができない（行政不服審査法25条4項）。必ずしなければならないとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "114",
+      "originalProblemId": "KB2025-p114-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "執行停止をした後において、その事情が変化した場合でも、審査庁は一旦行った執行停止を取り消すことはできない。",
+          "answerBoolean": false,
+          "explanationText": "執行停止をした後においても、執行停止の理由が消滅した場合その他事情が変更した場合には、審査庁は取り消すことができる（行政不服審査法26条）。一旦した後は取り消せないとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "115",
+      "originalProblemId": "KB2025-p115-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "再調査の請求は、行政庁の処分について、原則として当該処分をした行政庁の上級行政庁に対してする不服申立てである。",
+          "answerBoolean": false,
+          "explanationText": "再調査の請求は、処分庁に対して行う不服申立てである（行政不服審査法5条1項）。上級行政庁に対するのは審査請求であり、本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "法律に再調査の請求ができる旨の規定がある場合に、不服申立人は、審査請求をすることも、再調査の請求をすることもでき、どちらを選択するかは自由である。",
+          "answerBoolean": true,
+          "explanationText": "法律に再調査の請求ができる旨の定めがある場合、不服申立人は、審査請求と再調査の請求のいずれかを選択することができる（行政不服審査法5条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "法律に再調査の請求ができる旨の規定がある場合、審査請求をするには、まず再調査の請求をして、その決定を経なければならない。",
+          "answerBoolean": false,
+          "explanationText": "再調査の請求と審査請求は原則として選択的であり（行政不服審査法5条1項）、まず再調査の請求を経なければ審査請求できないという関係はない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "不作為についても再調査の請求をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "再調査の請求は、行政庁の処分に対してのみすることができ（行政不服審査法5条1項）、不作為についての不服申立てには再調査の請求は認められない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "118",
+      "originalProblemId": "KB2025-p118-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "処分庁は、利害関係人から、当該処分が審査請求のできる処分かどうかについて教示を求められたときは、書面で教示しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "利害関係人から教示を求められたときは、書面で教示しなければならない（行政不服審査法82条2項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "119",
+      "originalProblemId": "KB2025-p119-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "審査請求のできる処分について、処分庁から、当該処分の審査請求先でない行政庁を示された場合でも、その誤って示された行政庁に審査請求書を提出することができる。",
+          "answerBoolean": true,
+          "explanationText": "処分庁から誤った審査請求先を教示された場合には、その教示された行政庁に審査請求書を提出することができ（行政不服審査法22条1項）、当該行政庁は本来の審査庁に送付しなければならない（同条2項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "処分庁が法定の審査請求期間よりも長い期間を審査請求期間として教示した場合には、その教示した長い期間内に審査請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "処分庁が法定よりも長い審査請求期間を教示した場合には、その教示した期間内に審査請求ができる（行政不服審査法22条1項準用等）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "120",
+      "originalProblemId": "KB2025-p120-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "処分庁が、審査請求のできる旨を教示すべきであったのに、誤って再調査の請求をすることができる旨を教示した場合に、その教示に従って再調査の請求をしたときは、当該再調査の請求は審査請求とみなされ、審査庁に送付される。",
+          "answerBoolean": true,
+          "explanationText": "誤って再調査の請求をすることができる旨を教示された場合に再調査の請求をしたときは、当該再調査の請求は審査請求とみなされ、処分庁から審査庁に送付される（行政不服審査法22条3項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "処分庁が、審査請求と再調査の請求のいずれもできる処分につき、そのうちの審査請求のみを教示した場合、再調査の請求をすることができないと信じた者は、誤教示の救済規定の適用を受けることができる。",
+          "answerBoolean": true,
+          "explanationText": "審査請求と再調査の請求のいずれもできる処分につき一方のみを教示した場合も、誤った教示に関する救済規定が準用される（行政不服審査法22条1項準用）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-fufuku",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "122",
+      "originalProblemId": "KB2025-p122-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政事件訴訟法において、抗告訴訟とは、行政庁の公権力の行使に関する不服の訴訟をいう。",
+          "answerBoolean": true,
+          "explanationText": "抗告訴訟とは、行政庁の公権力の行使に関する不服の訴訟をいう（行政事件訴訟法3条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "抗告訴訟は、行政庁の公権力の行使に関する一般的・包括的な救済機能を持つが、不作為の違法確認訴訟の提起は認められていない。",
+          "answerBoolean": false,
+          "explanationText": "不作為の違法確認訴訟は、行政庁が相当の期間内に申請に対する処分をしないことの違法を確認するための訴訟として認められている（行政事件訴訟法3条5項）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "124",
+      "originalProblemId": "KB2025-p124-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政事件訴訟法が適用される場合、処分の取消しの訴えを提起するには、あらかじめ審査請求その他の行政上の不服申立てを経なければならない（審査請求前置）。",
+          "answerBoolean": false,
+          "explanationText": "取消訴訟を提起するにあたって、原則として審査請求を経る必要はなく、審査請求と取消訴訟は自由選択主義が原則である（行政事件訴訟法8条1項本文）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "取消訴訟が裁決の取消しを求めるものである場合には、固有の違法を理由とする取消訴訟であっても、原処分の違法を理由として取消しを求めることができる。",
+          "answerBoolean": false,
+          "explanationText": "裁決の取消しの訴えにおいては、裁決固有の違法のみを主張することができ、原処分の違法を理由に裁決の取消しを求めることはできない（行政事件訴訟法10条2項）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "128",
+      "originalProblemId": "KB2025-p128-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取消訴訟は、処分または裁決の取消しを求めることにつき法律上の利益を有する者が提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "取消訴訟は、当該処分または裁決の取消しを求めるにつき法律上の利益を有する者に限り提起することができる（行政事件訴訟法9条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "134",
+      "originalProblemId": "KB2025-p134-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "処分が国の行政庁によって行われた場合に、当初の被告を誤って公共団体を被告としてしまったときは、取消訴訟の起訴自体が許されないとされる。",
+          "answerBoolean": false,
+          "explanationText": "被告を誤った場合でも、裁判所は被告の変更を許すことができる（行政事件訴訟法15条1項）。被告を誤ったからといって訴訟自体が許されないとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "135",
+      "originalProblemId": "KB2025-p135-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取消訴訟は、処分の審査請求の管轄の所在地を管轄する裁判所に提起することができる。",
+          "answerBoolean": false,
+          "explanationText": "取消訴訟は、被告の普通裁判籍の所在地を管轄する裁判所または処分もしくは裁決をした行政庁の所在地を管轄する裁判所（行政事件訴訟法12条1項）に提起する。審査請求管轄を根拠とする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "取消訴訟は、処分をした行政庁の所在地を管轄する裁判所に提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "取消訴訟は、処分または裁決をした行政庁の所在地を管轄する裁判所に提起することができる（行政事件訴訟法12条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "土地収用の認定等、特定の土地または区域に係る処分の取消訴訟は、その土地または区域の所在地を管轄する裁判所にも提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "土地収用その他一定の不動産または特定の場所に係る処分の取消訴訟は、その不動産または場所の所在地の裁判所にも提起することができる（行政事件訴訟法12条2項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "国を被告とする取消訴訟は、被告の普通裁判籍の所在地を管轄する裁判所または処分をした行政庁の所在地を管轄する高等裁判所の所在地の地方裁判所にも提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "国を被告とする取消訴訟については、行政事件訴訟法12条4項により、高等裁判所の所在地の地方裁判所にも提起することができる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政事件訴訟法によれば、取消訴訟は、処分または裁決があったことを知った日から6か月以内に提起しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "取消訴訟は、正当な理由のある場合を除き、処分または裁決があったことを知った日から6か月以内に提起しなければならない（行政事件訴訟法14条1項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "取消訴訟は、処分または裁決があったことを知った日から1年を経過したときは、正当な理由がある場合を除き、提起することができない。",
+          "answerBoolean": false,
+          "explanationText": "客観的出訴期間として、処分または裁決の「あった日」から1年を経過したときは提起できない（行政事件訴訟法14条2項）。「知った日」から1年とする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "136",
+      "originalProblemId": "KB2025-p136-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取消訴訟を提起するには、原則として、処分の取消しを求めるためにはあらかじめ審査請求を経なければならない（審査請求前置主義）。",
+          "answerBoolean": false,
+          "explanationText": "取消訴訟と審査請求は自由選択主義が原則であり（行政事件訴訟法8条1項本文）、原則として審査請求を経なければならないわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "137",
+      "originalProblemId": "KB2025-p137-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政事件訴訟法には、この法律に定めのない事項については、民事訴訟の例による旨の規定がある。",
+          "answerBoolean": true,
+          "explanationText": "行政事件訴訟法7条は、「この法律に定めのない事項については、民事訴訟の例による。」と規定している。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "138",
+      "originalProblemId": "KB2025-p138-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取消訴訟は、訴訟の相手方に対してのみ効力を生じ、当事者以外の第三者には取消判決の効力は及ばない。",
+          "answerBoolean": false,
+          "explanationText": "取消判決には第三者効（対世効）があり、訴訟の当事者以外の第三者にも効力が及ぶ（行政事件訴訟法32条1項）。第三者には及ばないとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "139",
+      "originalProblemId": "KB2025-p139-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "事情判決の制度は、私人の利益の保護よりも、公共の福祉の見地を優先させる特別の裁判制度である。",
+          "answerBoolean": true,
+          "explanationText": "事情判決（行政事件訴訟法31条）は、処分が違法であっても、その取消しによって公の利益に著しい障害を生ずる場合に、処分を取り消さず違法のみを宣言する制度であり、公益優先の趣旨によるものである。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "事情判決を規定する行政事件訴訟法31条は、取消訴訟における固有の制度であり、行政不服審査法には、事情裁決に相当する制度はない。",
+          "answerBoolean": false,
+          "explanationText": "行政不服審査法にも、処分が違法または不当であっても公益に著しい障害を生ずる場合に審査請求を棄却する事情裁決の規定がある（行政不服審査法45条3項）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "140",
+      "originalProblemId": "KB2025-p140-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政庁の裁量処分については、裁量権の範囲を超え又はその濫用があった場合においても、裁判所はその裁量権の範囲を超えた処分に代わる適切な処分を行う権限を有する。",
+          "answerBoolean": false,
+          "explanationText": "裁判所は行政庁の裁量権の逸脱・濫用は審査できるが（行政事件訴訟法30条）、裁判所が行政庁に代わって処分を行う権限は有しない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "141",
+      "originalProblemId": "KB2025-p141-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "処分または裁決を取り消す判決は、その事件について、処分をした行政庁その他の関係行政機関を拘束する。",
+          "answerBoolean": true,
+          "explanationText": "処分または裁決を取り消す判決の拘束力は、その事件について、処分をした行政庁だけでなく、関係行政機関をも拘束する（行政事件訴訟法33条2項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "143",
+      "originalProblemId": "KB2025-p143-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "内閣総理大臣の異議が述べられた場合、裁判所は、すでになした執行停止の決定を取り消さなければならない。",
+          "answerBoolean": false,
+          "explanationText": "内閣総理大臣の異議が述べられると、裁判所は執行停止をすることができなくなるが（行政事件訴訟法27条4項）、すでにした執行停止の取消しが義務付けられるわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "144",
+      "originalProblemId": "KB2025-p144-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "無効等確認訴訟は、処分もしくは裁決の無効等の確認を求める法律上の利益を有する者に限り、提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "無効等確認訴訟は、当該処分または裁決の無効等の確認を求める法律上の利益を有する者が提起することができる（行政事件訴訟法36条）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "「無効等確認の訴え」を「処分の取消しの訴え」に変更することは、行政事件訴訟法上認められていない。",
+          "answerBoolean": false,
+          "explanationText": "「無効等確認の訴え」を「処分の取消しの訴え」に変更することは行政事件訴訟法上許容されている（行政事件訴訟法38条1項により21条が準用）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "145",
+      "originalProblemId": "KB2025-p145-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "無効等確認訴訟においては、訴訟の対象となるのは処分のみであり、裁決の有効性は無効等確認訴訟の対象としての訴えを提起することはできない。",
+          "answerBoolean": false,
+          "explanationText": "無効等確認訴訟は、処分または裁決の無効等の確認を求めるものであり（行政事件訴訟法36条）、裁決も対象とすることができる。処分のみとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "不作為の違法確認訴訟は、行政庁において一定の処分をする義務があることの確認を求める公法上の当事者訴訟である。",
+          "answerBoolean": false,
+          "explanationText": "不作為の違法確認訴訟は、抗告訴訟の一種（行政事件訴訟法3条5項）であり、公法上の当事者訴訟ではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "146",
+      "originalProblemId": "KB2025-p146-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "不作為の違法確認訴訟においては、取消訴訟の出訴期間に関する規定（行政事件訴訟法14条）は準用されず、また審判参加に関する規定（行政事件訴訟法20条）も準用されない。",
+          "answerBoolean": true,
+          "explanationText": "不作為の違法確認訴訟（行政事件訴訟法38条）においては、取消訴訟の出訴期間（14条）及び第三者の審判参加（20条）の規定は準用されない。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "「不作為の違法確認の訴え」に係る違法確認の判決が確定した場合、行政庁はその処分の義務を確認したうえで必要な措置を取ることができる（行政事件訴訟法38条1項・33条1項）。",
+          "answerBoolean": true,
+          "explanationText": "不作為の違法確認訴訟の確認判決確定後は、行政事件訴訟法38条1項が33条1項を準用することにより、処分庁は申請に対応する処分をする義務を負う。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "不作為の違法確認訴訟を提起するには、まず対象となる処分の義務付けの訴えを先行させなければならない。",
+          "answerBoolean": false,
+          "explanationText": "不作為の違法確認訴訟は単独で提起することができ（行政事件訴訟法37条）、義務付け訴訟を先行させる必要はない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "147",
+      "originalProblemId": "KB2025-p147-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政事件訴訟法によると、義務付け訴訟には、一定の出訴期間が設けられている。",
+          "answerBoolean": false,
+          "explanationText": "義務付け訴訟には出訴期間（取消訴訟の14条のような期間制限）は設けられていない（行政事件訴訟法37条の2・37条の3）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "148",
+      "originalProblemId": "KB2025-p148-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "仮の義務付けの申立てについては、平成16年改正により、行政訴訟制度において新たに設けられたものである。また、仮の義務付けと仮の差止めは内閣総理大臣の異議制度が準用されている。",
+          "answerBoolean": true,
+          "explanationText": "仮の義務付け・仮の差止めは平成16年改正により新設された制度であり（行政事件訴訟法37条の5）、内閣総理大臣の異議の規定（行政事件訴訟法27条）が準用される（同法37条の5第4項）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "150",
+      "originalProblemId": "KB2025-p150-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方公共団体の住民が、当該地方公共団体の長等の違法な財務会計行為について提起する住民訴訟は、民衆訴訟の一種である。",
+          "answerBoolean": true,
+          "explanationText": "住民訴訟（地方自治法242条の2）は、自己の法律上の利益にかかわらない資格で提起する民衆訴訟の一例である（行政事件訴訟法5条参照）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "152",
+      "originalProblemId": "KB2025-p152-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政事件訴訟法は、誤った教示を行った場合または教示をしなかった場合についての救済措置の規定が設けられている。",
+          "answerBoolean": false,
+          "explanationText": "行政事件訴訟法は、誤った教示や教示義務の不履行に対する直接的な救済規定を設けていない（行政不服審査法の教示制度と異なる）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "162",
+      "originalProblemId": "KB2025-p162-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "国家賠償請求訴訟については、民法の消滅時効に関する規定は適用されない。",
+          "answerBoolean": false,
+          "explanationText": "国家賠償法に定めのない事項については民法の規定が適用される（国家賠償法4条）。消滅時効についても民法の規定（民法724条等）が適用される。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "163",
+      "originalProblemId": "KB2025-p163-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "違法な行政処分によって損害を被った者が国家賠償請求訴訟を提起するためには、事前に当該処分の取消訴訟を提起してその取消しを得ていなければならない。",
+          "answerBoolean": false,
+          "explanationText": "国家賠償請求訴訟は、当該処分が取消訴訟によって取り消されていなくても提起することができる（最判昭和36.4.21）。取消訴訟の前置は国家賠償請求の要件ではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "164",
+      "originalProblemId": "KB2025-p164-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "損失補償とは、違法な公権力の行使によって特定人に生じた損害を、公共負担の見地から補填するものである。",
+          "answerBoolean": false,
+          "explanationText": "損失補償は適法な公権力の行使によって特定人に生じた特別の損害を補填するものである（「違法」ではなく「適法」）。違法な公権力の行使に対する賠償は国家賠償法による。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "165",
+      "originalProblemId": "KB2025-p165-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "憲法29条3項のいう「正当な補償」とは、常に完全な金銭補償でなければならない。",
+          "answerBoolean": false,
+          "explanationText": "憲法29条3項の「正当な補償」については、合理的に算定した相当額で足りるとする相当補償説（最判昭和28.12.23）と完全補償説が対立するが、土地収用については完全補償が必要（最判昭和48.10.18）。常に完全補償が必要というのは誤り。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "損失補償の方法については、法律が何も規定していない場合には、損失を受けた者は損失補償を請求することができない。",
+          "answerBoolean": false,
+          "explanationText": "法律に補償規定がない場合でも、憲法29条3項を直接根拠として損失補償請求できるとするのが判例の立場（最大判昭和28.7.15）である。立法の不備があっても補償請求権は消滅しない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "167",
+      "originalProblemId": "KB2025-p167-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "大都市等に置かれる特例としては、指定都市（地方自治法252条の19）と中核市（252条の22）の2種類に関するものが設けられている。",
+          "answerBoolean": true,
+          "explanationText": "大都市等特例として現行法では指定都市と中核市の2種類が設けられている（地方自治法252条の19以下・252条の22以下）。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "169",
+      "originalProblemId": "KB2025-p169-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "都道府県の境界にわたる市町村の境界変更に関する事項については、条例でなければならない。",
+          "answerBoolean": false,
+          "explanationText": "都道府県の境界にわたる市町村の境界変更については、条例ではなく法律によらなければならない（地方自治法6条等）。条例で定めることはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "170",
+      "originalProblemId": "KB2025-p170-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "「自治事務」とは、地方公共団体が処理する事務のうち、法定受託事務以外のものをいう（地方自治法2条8項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法2条8項は、自治事務を「地方公共団体が処理する事務のうち、法定受託事務以外のもの」と定義する。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "法定受託事務には、第1号法定受託事務（国が本来果たすべき役割に係るもの）と第2号法定受託事務（都道府県が本来果たすべき役割に係るもの）の2種類があるが、第2号は廃止され現在は第1号のみが存在する。",
+          "answerBoolean": false,
+          "explanationText": "法定受託事務は現在でも第1号法定受託事務（国が本来果たすべき役割に係るもの：地方自治法2条9項1号）と第2号法定受託事務（都道府県が本来果たすべき役割に係るもの：同条9項2号）の2種類が存在する。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "171",
+      "originalProblemId": "KB2025-p171-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方公共団体は、その事務を処理するに当たっては、住民の福祉の増進に努めるとともに、最少の経費で最大の効果を挙げるようにしなければならない（地方自治法2条14項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法2条14項は、地方公共団体が事務を処理するにあたって住民の福祉増進を図るとともに最少の経費で最大の効果を挙げるよう努めることを定める。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "172",
+      "originalProblemId": "KB2025-p172-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "村は、議会を設置せず、選挙権を有する者全員をもって組織する総会を設けることができる（地方自治法94条）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法94条は、村においては議会を設けず、選挙権を有する者全員をもって組織する総会（町村総会）を設けることができると定める。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "173",
+      "originalProblemId": "KB2025-p173-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "地方自治法の規定する議会の議決事項は、自治事務に係るものに限られており、法定受託事務については議会の議決事項とはならない。",
+          "answerBoolean": false,
+          "explanationText": "地方自治法96条の議決事項には法定受託事務も含まれ、自治事務のみに限られるわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "175",
+      "originalProblemId": "KB2025-p175-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の議会は、原則として、議会が招集する。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体の議会を招集するのは議会ではなく当該地方公共団体の長（首長）であることが原則である（地方自治法101条1項）。臨時会の招集請求は議員等から行うことができるが、招集は長が行う。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "176",
+      "originalProblemId": "KB2025-p176-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の議会には、常任委員会を必ず設置しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "常任委員会は、議会が条例で設置するものとされており（地方自治法109条1項）、必置義務があるわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "普通地方公共団体の議会の議員は、予算についての議案について、長に対して提案することができる。",
+          "answerBoolean": false,
+          "explanationText": "予算の提案権は長に専属する（地方自治法112条）。議員は予算に関する議案を提出することはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "177",
+      "originalProblemId": "KB2025-p177-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の議会は、除名された議員が再び当選した場合には、再度その議員を除名することができる。",
+          "answerBoolean": false,
+          "explanationText": "除名された議員が再び当選したときは、議会はこれを拒むことができない（地方自治法136条2項）。前回の除名を理由に同じ議員を再び除名することは許されない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "178",
+      "originalProblemId": "KB2025-p178-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "副知事および副市町村長は、長が単独で任命することができ、議会の同意を要しない。",
+          "answerBoolean": false,
+          "explanationText": "副知事・副市町村長の選任には議会の同意が必要である（地方自治法162条）。長が単独で任命することはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "普通地方公共団体の長は、会計管理者1人を置かなければならない（地方自治法168条1項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法168条1項は、普通地方公共団体に会計管理者1人を置くことを定める。会計管理者は長の補助機関として財務に関する事務をつかさどる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "179",
+      "originalProblemId": "KB2025-p179-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "議会において条例の制定改廃または予算に関する議案を否決した場合、長はこれを再議に付することができる（地方自治法176条1項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法176条1項は、長が議会の議決に異議があるときは再議に付することができると定める。条例・予算に関する議決を含む。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "長が再議に付した議案を議会が再度議決したときは、その議決は確定する（地方自治法176条3項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法176条3項は、再議に付した場合に議会が出席議員の3分の2以上の多数で前と同一の議決をしたときは、その議決が確定すると定める。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "182",
+      "originalProblemId": "KB2025-p182-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "町村は、教育委員会を設置せず、教育に関する事務はすべて長が条例で規定することができる。",
+          "answerBoolean": false,
+          "explanationText": "教育委員会は法律の定めるところにより普通地方公共団体に置かなければならない執行機関であり（地方自治法180条の5第1項1号）、町村においても教育委員会を置くことは法定されている。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "町村は、選挙管理委員会の事務を首長またはその補助機関に行わせる旨の条例を定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "選挙管理委員会は法律の定めるところにより普通地方公共団体に置かなければならない執行機関であり（地方自治法180条の5第1項2号）、条例で廃止して首長の担当とすることはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "町村は、農業委員会を置かず、農業に関する事務を独立して行う旨の条例を制定することができる。",
+          "answerBoolean": false,
+          "explanationText": "農業委員会は市町村（町村を含む）に置かれる行政委員会であり（農業委員会等に関する法律参照）、条例で廃止することはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 4,
+          "questionText": "市町村は、労働委員会を置かなければならない。",
+          "answerBoolean": false,
+          "explanationText": "労働委員会は都道府県に設置されるものであり（労働組合法19条の12等）、市町村に置かれるものではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 5,
+          "questionText": "都道府県は、収用委員会を置かなければならない（地方自治法180条の5第2項）。",
+          "answerBoolean": true,
+          "explanationText": "収用委員会は都道府県に置かれる行政委員会であり（土地収用法51条・地方自治法180条の5第2項）、必置機関である。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 6,
+          "questionText": "都道府県は、農業委員会を置かなければならない。",
+          "answerBoolean": false,
+          "explanationText": "農業委員会は都道府県ではなく市町村に置かれるものである（農業委員会等に関する法律3条）。都道府県に農業委員会を置く規定はない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 7,
+          "questionText": "都道府県は、固定資産評価審査委員会を置かなければならない。",
+          "answerBoolean": false,
+          "explanationText": "固定資産評価審査委員会は都道府県ではなく市町村に置かれる（地方税法423条・地方自治法180条の5第3項3号）。都道府県に置く規定はない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "183",
+      "originalProblemId": "KB2025-p183-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の長の補助機関の職員は、当該普通地方公共団体の監査委員を兼ねることができる。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体の長・副知事・副市町村長・会計管理者・長の補助機関の職員等は監査委員と兼職することができない（地方自治法196条2項）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "監査委員は、普通地方公共団体の議会の運営については、議会の議決の承認なしに職務を行うことができない。",
+          "answerBoolean": false,
+          "explanationText": "監査委員は独立した行政委員会として職権を行使するものであり（地方自治法198条の3）、議会の議決や承認を得なければ職務を行えないという規定はない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "184",
+      "originalProblemId": "KB2025-p184-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "監査委員による監査は、毎月少なくとも1回以上、定期的に行わなければならない。",
+          "answerBoolean": false,
+          "explanationText": "定期監査は毎会計年度少なくとも1回以上行わなければならないと定められており（地方自治法199条4項）、「毎月1回以上」という要件ではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "185",
+      "originalProblemId": "KB2025-p185-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "自治事務に関する条例は法律の範囲内で制定できるが、条例で私人の権利義務を制限する規定を設けることはできない。",
+          "answerBoolean": false,
+          "explanationText": "条例は法律の範囲内で制定でき（地方自治法14条1項）、私人の権利義務を条例で制限することも認められる。条例による個人の権利義務規律は可能である。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "条例には、法律の個別の委任がなければ罰則の規定を設けることができない。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体は、法律の委任がなくても条例中に2年以下の懲役・禁錮、100万円以下の罰金等の罰則を設けることができる（地方自治法14条3項）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "普通地方公共団体は、法律に特別の定めがある場合にのみ条例を制定することができる。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体は地方自治法2条2項・14条1項の一般的授権に基づいて条例を制定できる。法律の個別の特別な定めがある場合に限られるわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "186",
+      "originalProblemId": "KB2025-p186-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "法律が全国的に一様な最低基準を定めた場合には、条例でそれを上回る規制（上乗せ規制）を設けることは認められない。",
+          "answerBoolean": false,
+          "explanationText": "法律が一様の規制を全国的に定めた趣旨が全国画一を目的とするものでない限り、条例による上乗せ規制は認められうる（最判昭和50.9.10・徳島市公安条例事件）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "187",
+      "originalProblemId": "KB2025-p187-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の長が規則を制定できるのは、法律または本法によって規則で規定する事項が特定されている場合に限られる。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体の長は、法律等の特別の委任がなくても、法令の範囲内において規則を制定することができる（地方自治法15条1項）。特定の委任が必要なわけではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "普通地方公共団体の長は、条例によって制定することとは別に、規則に懲役・禁錮などの刑罰を規定することができる。",
+          "answerBoolean": false,
+          "explanationText": "規則には条例と異なり刑事罰（懲役・禁錮等）を設けることはできず、過料（5万円以下）のみ設けることができる（地方自治法15条2項）。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "要綱は、行政庁が直接の法的根拠として処分を行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "要綱は行政内部の基準に過ぎず法規としての性質を持たないため、行政庁が処分の直接の法的根拠とすることはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "188",
+      "originalProblemId": "KB2025-p188-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の会計年度は、条例で定めるところにより各地方公共団体が自由に定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体の会計年度は毎年4月1日に始まり翌年3月31日に終わることと法律で定められており（地方自治法208条1項）、条例で自由に定めることができるものではない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "189",
+      "originalProblemId": "KB2025-p189-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体は、特定の者のためにする事務につき手数料を徴収することができるが、分担金・使用料・加入金および手数料の制定については条例によらなくてもよい。",
+          "answerBoolean": false,
+          "explanationText": "分担金・使用料・加入金および手数料については、条例でこれを定めなければならない（地方自治法228条1項）。条例によらなくてよいとする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地方税の税率・課税標準等については、条例ではなく下限を設けることで定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "地方税の税率等は条例で定めなければならない（地方税法3条1項・地方自治法228条2項）。「条例ではなく下限」とする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "支出は、会計管理者の命令によっておのずから行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "支出は、長の命令（支出命令）に基づいて会計管理者が支出を行う仕組みであり（地方自治法232条の4第1項）、会計管理者が独自に命令なしに支出を行うことはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "192",
+      "originalProblemId": "KB2025-p192-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "普通地方公共団体の出納は、その年度の3月31日をもって閉鎖する。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体の出納は、翌年度の5月31日をもって閉鎖する（地方自治法235条の5）。「3月31日」とする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "金銭の給付を目的とする普通地方公共団体の権利の消滅時効期間は、3年とされている（地方自治法236条）。",
+          "answerBoolean": false,
+          "explanationText": "地方自治法236条1項は、金銭の給付を目的とする普通地方公共団体の権利の時効消滅期間は5年と定める。「3年」とする本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 3,
+          "questionText": "外部監査制度が導入された地方公共団体については、これまでの監査委員制度に代えて外部監査制度を置くことができる。",
+          "answerBoolean": false,
+          "explanationText": "外部監査制度は監査委員制度を廃止するものではなく、並存する制度として設けられている（地方自治法252条の27以下）。監査委員制度に代えることはできない。本肢は誤り。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "193",
+      "originalProblemId": "KB2025-p193-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "包括外部監査制度は、法令で定められた義務的実施以外に、条例により地方公共団体が任意に設置することができる（地方自治法252条の36第2項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法252条の36第2項は、条例で包括外部監査契約を締結することができる旨を定め、都道府県・指定都市・中核市以外の団体も条例で任意に導入できる。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "194",
+      "originalProblemId": "KB2025-p194-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "市町村の区域内に住所を有する者は、当該市町村および当該市町村を包括する都道府県の住民とする（地方自治法10条）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法10条は、市町村の区域内に住所を有する者が当該市町村とそれを包括する都道府県の住民であることを定める。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        },
+        {
+          "seqNo": 2,
+          "questionText": "住民は、法律の定めることにより、その属する普通地方公共団体の役務の提供を等しく受ける権利を有し、その負担を分任する義務を負う（地方自治法10条2項）。",
+          "answerBoolean": true,
+          "explanationText": "地方自治法10条2項は、住民が役務の提供を等しく受ける権利と負担分任義務を定める。本肢は正しい。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0
+        }
+      ],
+      "parseError": null
+    }
+  ],
+  "queuedAt": "2026-04-03T01:44:18.384998"
+}
