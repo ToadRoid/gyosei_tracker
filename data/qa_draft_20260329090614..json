@@ -1,0 +1,18 @@
+{
+  "extractedAt": "2026-03-29T09:06:14.187Z",
+  "model": "claude-opus-4-5",
+  "batchDir": "/Users/tanakayoshhiro/Desktop/batch_20260329_112656",
+  "pageRange": "1-1",
+  "pageCount": 1,
+  "errorPages": 0,
+  "totalRecords": 0,
+  "totalIssueFlags": 0,
+  "pages": [
+    {
+      "pageNo": 1,
+      "imageFile": "0001.png",
+      "page_notes": "DRY RUN",
+      "records": []
+    }
+  ]
+}
