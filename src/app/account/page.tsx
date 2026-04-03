@@ -108,6 +108,7 @@ export default function AccountPage() {
           sourcePageAnswer?: string;
           subjectCandidate?: string;
           chapterCandidate?: string;
+          isDescriptive?: boolean;
         }>;
       }> = json.pages ?? [];
 
@@ -143,6 +144,9 @@ export default function AccountPage() {
               attrChanges.answerBoolean = branch.answerBoolean;
             if (existingAttr.explanationText !== branch.explanationText)
               attrChanges.explanationText = branch.explanationText;
+            const newQuestionType = branch.isDescriptive ? 'descriptive' : undefined;
+            if (existingAttr.questionType !== newQuestionType)
+              attrChanges.questionType = newQuestionType;
             if (Object.keys(attrChanges).length > 0) {
               await upsertProblemAttr(problemId, attrChanges);
               updatedAttrs++;

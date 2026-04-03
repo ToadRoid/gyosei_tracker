@@ -63,6 +63,7 @@ export interface ProblemAttr {
   sourcePageQuestion?: string;     // 問題ページ番号
   sourcePageAnswer?: string;       // 解説ページ番号
   explanationText?: string;        // 解説テキスト
+  questionType?: 'descriptive';    // 記述式問題フラグ
 }
 
 // ── 学習ログ ──
@@ -87,6 +88,7 @@ export interface ProblemForExercise extends Problem {
   sectionTitle?: string;
   sourcePageQuestion?: string;
   sourcePageAnswer?: string;
+  questionType?: 'descriptive';
 }
 
 // ── 演習ステート ──

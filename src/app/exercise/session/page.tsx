@@ -114,6 +114,10 @@ function SessionContent() {
   const lapNoRef = useRef(1);
   const isAnsweringRef = useRef(false);
 
+  // 記述式
+  const [descriptiveText, setDescriptiveText] = useState('');
+  const [descriptiveRevealed, setDescriptiveRevealed] = useState(false);
+
   // 報告モーダル
   const [reportOpen, setReportOpen] = useState(false);
   const [reportFromAnswering, setReportFromAnswering] = useState(false);
@@ -201,12 +205,19 @@ function SessionContent() {
     })();
   }, [searchParams]);
 
+  // 記述式: 問題が変わったらリセット
+  useEffect(() => {
+    setDescriptiveText('');
+    setDescriptiveRevealed(false);
+  }, [state.currentIndex, state.phase === 'answering']);
+
   const handleAnswer = async (userAnswer: boolean) => {
     if (isAnsweringRef.current) return;
     isAnsweringRef.current = true;
 
     const p = state.problems[state.currentIndex];
-    const isCorrect = userAnswer === p.answerBoolean;
+    // 記述式は自己採点（userAnswerがそのまま正誤）
+    const isCorrect = p.questionType === 'descriptive' ? userAnswer : userAnswer === p.answerBoolean;
     const elapsed = Math.round((Date.now() - state.questionStartTime) / 1000);
 
     dispatch({ type: 'ANSWER', userAnswer });
@@ -379,6 +390,68 @@ function SessionContent() {
 
       {/* 回答ボタン or フィードバック */}
       {state.phase === 'answering' ? (
+        current.questionType === 'descriptive' ? (
+          /* 記述式UI */
+          <div className="space-y-3 pb-4">
+            <textarea
+              value={descriptiveText}
+              onChange={(e) => setDescriptiveText(e.target.value)}
+              placeholder="解答を書いてみましょう（任意）"
+              rows={4}
+              className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed resize-none focus:outline-none focus:border-indigo-400"
+            />
+            {!descriptiveRevealed ? (
+              <button
+                onClick={() => setDescriptiveRevealed(true)}
+                className="w-full rounded-xl bg-amber-500 py-4 text-white font-bold text-lg hover:bg-amber-600 transition-colors"
+              >
+                解答を見る
+              </button>
+            ) : (
+              <div className="space-y-3">
+                {current.explanationText && (
+                  <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-1">
+                    <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide">模範解答</p>
+                    <p className="text-sm leading-relaxed text-slate-700">{current.explanationText}</p>
+                  </div>
+                )}
+                <p className="text-sm text-center text-slate-500 font-medium">自己採点してください</p>
+                <div className="flex gap-4">
+                  <button
+                    onClick={() => handleAnswer(true)}
+                    className="flex-1 rounded-xl bg-green-50 border-2 border-green-200 py-5 text-2xl font-black text-green-600 hover:bg-green-100 transition-colors"
+                  >
+                    ◯ 書けた
+                  </button>
+                  <button
+                    onClick={() => handleAnswer(false)}
+                    className="flex-1 rounded-xl bg-red-50 border-2 border-red-200 py-5 text-2xl font-black text-red-500 hover:bg-red-100 transition-colors"
+                  >
+                    ✗ 書けなかった
+                  </button>
+                </div>
+              </div>
+            )}
+            <div className="flex gap-3">
+              {state.currentIndex > 0 && (
+                <button
+                  onClick={() => dispatch({ type: 'BACK' })}
+                  className="flex-1 rounded-xl bg-slate-100 py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-200 transition-colors"
+                >
+                  ← 前の問題の解説を見る
+                </button>
+              )}
+              <button
+                onClick={() => openReport(true)}
+                className="rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-400 hover:text-red-400 hover:border-red-200 transition-colors"
+                aria-label="問題を報告してスキップ"
+              >
+                🚩
+              </button>
+            </div>
+          </div>
+        ) : (
+        /* 通常○×UI */
         <div className="space-y-3">
           <div className="flex gap-4">
             <button
@@ -412,9 +485,16 @@ function SessionContent() {
             </button>
           </div>
         </div>
+        )
       ) : (
         <div className="space-y-4 pb-8">
           {/* 正解 / 不正解バナー */}
+          {current.questionType === 'descriptive' ? (
+            <div className={`rounded-xl p-4 text-center ${lastResult?.isCorrect ? 'bg-green-50 border-2 border-green-200' : 'bg-red-50 border-2 border-red-200'}`}>
+              <span className="text-3xl">{lastResult?.isCorrect ? '✍️ 書けた!' : '📝 要復習'}</span>
+              <p className="text-xs text-slate-400 mt-1">記述式（自己採点）</p>
+            </div>
+          ) : (
           <div
             className={`rounded-xl p-4 text-center ${
               lastResult?.isCorrect
@@ -434,6 +514,7 @@ function SessionContent() {
               )}
             </p>
           </div>
+          )}
 
           {/* 解説 */}
           {current.explanationText && (

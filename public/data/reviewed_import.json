@@ -9624,7 +9624,8 @@
           "confidence": 1.0,
           "sectionTitle": "03_原告適格・訴えの利益",
           "sourcePageQuestion": "360",
-          "sourcePageAnswer": "361"
+          "sourcePageAnswer": "361",
+          "isDescriptive": true
         },
         {
           "seqNo": 2,
@@ -10539,7 +10540,8 @@
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383"
+          "sourcePageAnswer": "383",
+          "isDescriptive": true
         },
         {
           "seqNo": 6,
@@ -10551,7 +10553,8 @@
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383"
+          "sourcePageAnswer": "383",
+          "isDescriptive": true
         },
         {
           "seqNo": 7,
@@ -10563,7 +10566,8 @@
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383"
+          "sourcePageAnswer": "383",
+          "isDescriptive": true
         },
         {
           "seqNo": 8,
@@ -10575,7 +10579,8 @@
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383"
+          "sourcePageAnswer": "383",
+          "isDescriptive": true
         }
       ],
       "parseError": null
@@ -17307,7 +17312,8 @@
           "confidence": 1.0,
           "sectionTitle": "04_無効・取消し・条件・期限",
           "sourcePageQuestion": "572",
-          "sourcePageAnswer": "573"
+          "sourcePageAnswer": "573",
+          "isDescriptive": true
         },
         {
           "seqNo": 4,
@@ -17319,7 +17325,8 @@
           "confidence": 1.0,
           "sectionTitle": "04_無効・取消し・条件・期限",
           "sourcePageQuestion": "572",
-          "sourcePageAnswer": "573"
+          "sourcePageAnswer": "573",
+          "isDescriptive": true
         },
         {
           "seqNo": 5,
@@ -17331,7 +17338,8 @@
           "confidence": 1.0,
           "sectionTitle": "04_無効・取消し・条件・期限",
           "sourcePageQuestion": "572",
-          "sourcePageAnswer": "573"
+          "sourcePageAnswer": "573",
+          "isDescriptive": true
         },
         {
           "seqNo": 6,

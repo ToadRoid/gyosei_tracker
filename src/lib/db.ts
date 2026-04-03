@@ -150,6 +150,7 @@ export async function getReadyProblems(
         sectionTitle: attr.sectionTitle ?? undefined,
         sourcePageQuestion: attr.sourcePageQuestion ?? undefined,
         sourcePageAnswer: attr.sourcePageAnswer ?? undefined,
+        questionType: attr.questionType ?? undefined,
       } as ProblemForExercise;
     })
     .filter((p): p is ProblemForExercise => p !== null);
