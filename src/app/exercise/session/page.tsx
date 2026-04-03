@@ -112,11 +112,19 @@ function SessionContent() {
       const lapNo = Number(searchParams.get('lap') || '1');
 
       let problems = await getReadyProblems(subjectId, chapterId, sectionTitle);
+      const isRandom = searchParams.get('random') === '1';
 
-      // シャッフル
-      for (let i = problems.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [problems[i], problems[j]] = [problems[j], problems[i]];
+      if (isRandom) {
+        // ランダム
+        for (let i = problems.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [problems[i], problems[j]] = [problems[j], problems[i]];
+        }
+      } else {
+        // 連番順（problemId = "KB2025-p001-q01" の辞書順）
+        problems = problems.slice().sort((a, b) =>
+          a.problemId.localeCompare(b.problemId),
+        );
       }
 
       lapNoRef.current = lapNo;

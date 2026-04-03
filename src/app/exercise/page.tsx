@@ -15,6 +15,7 @@ export default function ExerciseSetupPage() {
   const [lapNo, setLapNo] = useState(1);
   const [problemCount, setProblemCount] = useState(0);
   const [maxLap, setMaxLap] = useState(0);
+  const [random, setRandom] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -61,6 +62,7 @@ export default function ExerciseSetupPage() {
     if (chapterId) params.set('chapter', chapterId);
     if (sectionTitle) params.set('section', sectionTitle);
     params.set('lap', String(lapNo));
+    if (random) params.set('random', '1');
     router.push(`/exercise/session?${params.toString()}`);
   };
 
@@ -145,6 +147,26 @@ export default function ExerciseSetupPage() {
           {problemCount}
           <span className="text-sm font-normal text-slate-500 ml-1">問</span>
         </p>
+
+        {/* 順番切替 */}
+        <div className="flex rounded-xl overflow-hidden border border-slate-200 text-sm font-medium">
+          <button
+            onClick={() => setRandom(false)}
+            className={`flex-1 py-2 transition-colors ${
+              !random ? 'bg-indigo-600 text-white' : 'bg-white text-slate-500 hover:bg-slate-50'
+            }`}
+          >
+            連番順
+          </button>
+          <button
+            onClick={() => setRandom(true)}
+            className={`flex-1 py-2 transition-colors ${
+              random ? 'bg-indigo-600 text-white' : 'bg-white text-slate-500 hover:bg-slate-50'
+            }`}
+          >
+            🔀 ランダム
+          </button>
+        </div>
 
         <button
           onClick={handleStart}

@@ -67,7 +67,8 @@ export default function AccountPage() {
   }
 
   return (
-    <div className="px-4 py-6 flex flex-col gap-6">
+    <>
+    <div className="px-4 py-6 flex flex-col gap-6 pb-24">
       <h1 className="text-lg font-bold text-slate-800">アカウント</h1>
 
       {/* ユーザー情報 */}
@@ -124,5 +125,6 @@ export default function AccountPage() {
       )}
     </div>
     <NavBar />
+    </>
   );
 }
