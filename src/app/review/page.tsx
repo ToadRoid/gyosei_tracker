@@ -11,6 +11,23 @@ const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
 
 const COOLDOWN_MS = 24 * 60 * 60 * 1000;
 
+const LS_KEY = (userId: string) => `review_pack_cache_${userId}`;
+
+function savePack(userId: string, pack: ReviewPack) {
+  try {
+    localStorage.setItem(LS_KEY(userId), JSON.stringify(pack));
+  } catch {}
+}
+
+function loadCachedPack(userId: string): ReviewPack | null {
+  try {
+    const raw = localStorage.getItem(LS_KEY(userId));
+    return raw ? (JSON.parse(raw) as ReviewPack) : null;
+  } catch {
+    return null;
+  }
+}
+
 // ── Section block ──────────────────────────────────────────────────────────
 
 function SectionBlock({ label, children }: { label: string; children: React.ReactNode }) {
@@ -259,10 +276,15 @@ export default function ReviewPage() {
       .then((data) => {
         if (data.record?.packJson) {
           setPack(data.record.packJson as ReviewPack);
+        } else {
+          // Supabase取得失敗 or 未保存 → localStorageから復元
+          const cached = loadCachedPack(user.id);
+          if (cached) setPack(cached);
         }
       })
-      .catch((err) => {
-        console.warn('Failed to fetch latest review pack:', err);
+      .catch(() => {
+        const cached = loadCachedPack(user.id);
+        if (cached) setPack(cached);
       })
       .finally(() => setLoading(false));
   }, [user]);
@@ -286,7 +308,9 @@ export default function ReviewPage() {
         throw new Error(errData.error ?? `HTTP ${res.status}`);
       }
       const data = await res.json();
-      setPack(data.pack as ReviewPack);
+      const newPack = data.pack as ReviewPack;
+      setPack(newPack);
+      savePack(user.id, newPack);
       setQuizState({ answers: {}, revealed: {} });
       setExpandedTheme(null);
     } catch (err) {
