@@ -4,20 +4,64 @@ import { createClient } from '@supabase/supabase-js';
 import { buildGptPrompt } from '@/lib/review-pack-builder';
 import type { ReviewPackInput, ReviewPack } from '@/types/review-pack';
 
+const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+  .split(',').map((e) => e.trim()).filter(Boolean);
+
+const COOLDOWN_HOURS = 24;
+
 export async function POST(req: NextRequest) {
-  let body: { userId?: string; input?: ReviewPackInput };
+  let body: { userId?: string; userEmail?: string; input?: ReviewPackInput };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
 
-  const { userId, input } = body;
+  const { userId, userEmail, input } = body;
   if (!userId || !input) {
     return NextResponse.json(
       { error: 'Missing required fields: userId and input' },
       { status: 400 },
     );
+  }
+
+  const isAdmin = !!userEmail && ADMIN_EMAILS.includes(userEmail);
+
+  // 非管理者: 24h クールダウンチェック
+  if (!isAdmin) {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? '';
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '';
+    if (supabaseUrl && supabaseAnonKey && supabaseUrl.startsWith('http')) {
+      try {
+        const supabase = createClient(supabaseUrl, supabaseAnonKey);
+        const { data } = await supabase
+          .from('review_packs')
+          .select('created_at')
+          .eq('user_id', userId)
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .single();
+
+        if (data?.created_at) {
+          const lastGenAt = new Date(data.created_at).getTime();
+          const elapsedMs = Date.now() - lastGenAt;
+          const cooldownMs = COOLDOWN_HOURS * 60 * 60 * 1000;
+          if (elapsedMs < cooldownMs) {
+            const remainingMs = cooldownMs - elapsedMs;
+            const remainingHours = Math.ceil(remainingMs / (60 * 60 * 1000));
+            return NextResponse.json(
+              {
+                error: `生成は${COOLDOWN_HOURS}時間に1回までです。あと約${remainingHours}時間後に再生成できます。`,
+                retryAfterMs: remainingMs,
+              },
+              { status: 429 },
+            );
+          }
+        }
+      } catch {
+        // Supabase check失敗は無視してそのまま続行
+      }
+    }
   }
 
   // Call OpenAI GPT-4o

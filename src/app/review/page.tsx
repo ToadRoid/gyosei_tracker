@@ -1,10 +1,15 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/components/AuthProvider';
 import { buildReviewPackInput } from '@/lib/review-pack-builder';
 import type { ReviewPack, ReviewTheme } from '@/types/review-pack';
+
+const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+  .split(',').map((e) => e.trim()).filter(Boolean);
+
+const COOLDOWN_MS = 24 * 60 * 60 * 1000;
 
 // ── ThemeCard ──────────────────────────────────────────────────────────────
 
@@ -198,6 +203,7 @@ function ThemeCard({
 
 export default function ReviewPage() {
   const { user } = useAuth();
+  const isAdmin = !!user?.email && ADMIN_EMAILS.includes(user.email);
   const [pack, setPack] = useState<ReviewPack | null>(null);
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
@@ -205,6 +211,20 @@ export default function ReviewPage() {
   const [expandedTheme, setExpandedTheme] = useState<number | null>(null);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
   const [quizRevealed, setQuizRevealed] = useState<Record<string, boolean>>({});
+
+  // クールダウン残り時間（非管理者のみ）
+  const cooldownRemaining = useMemo(() => {
+    if (isAdmin || !pack?.generatedAt) return 0;
+    const elapsed = Date.now() - new Date(pack.generatedAt).getTime();
+    return Math.max(0, COOLDOWN_MS - elapsed);
+  }, [isAdmin, pack?.generatedAt]);
+
+  const cooldownLabel = useMemo(() => {
+    if (cooldownRemaining <= 0) return '';
+    const h = Math.floor(cooldownRemaining / (60 * 60 * 1000));
+    const m = Math.floor((cooldownRemaining % (60 * 60 * 1000)) / 60000);
+    return h > 0 ? `あと${h}時間後に再生成可能` : `あと${m}分後に再生成可能`;
+  }, [cooldownRemaining]);
 
   // Fetch latest pack on mount
   useEffect(() => {
@@ -237,7 +257,7 @@ export default function ReviewPage() {
       const res = await fetch('/api/review-pack/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, input }),
+        body: JSON.stringify({ userId: user.id, userEmail: user.email, input }),
       });
       if (!res.ok) {
         const errData = await res.json().catch(() => ({}));
@@ -276,13 +296,18 @@ export default function ReviewPage() {
       </div>
 
       {/* Generate button */}
-      <button
-        onClick={handleGenerate}
-        disabled={generating}
-        className="w-full bg-indigo-600 text-white rounded-xl py-3 font-bold disabled:opacity-50"
-      >
-        {generating ? '生成中... (10〜20秒)' : pack ? '再生成する' : '復習パックを生成'}
-      </button>
+      <div className="space-y-1">
+        <button
+          onClick={handleGenerate}
+          disabled={generating || (!isAdmin && cooldownRemaining > 0)}
+          className="w-full bg-indigo-600 text-white rounded-xl py-3 font-bold disabled:opacity-40"
+        >
+          {generating ? '生成中... (10〜20秒)' : pack ? '再生成する' : '復習パックを生成'}
+        </button>
+        {!isAdmin && cooldownRemaining > 0 && (
+          <p className="text-xs text-center text-slate-400">{cooldownLabel}</p>
+        )}
+      </div>
 
       {/* Error */}
       {error && (
