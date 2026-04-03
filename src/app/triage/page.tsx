@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
+import { useAuth } from '@/components/AuthProvider';
 import { db, upsertProblemAttr } from '@/lib/db';
 import { importParsedBatch } from '@/lib/import-parsed';
 import { subjects, chapters } from '@/data/master';
@@ -617,8 +619,25 @@ function ReviewTab() {
 
 // ── メインページ ──────────────────────────────────────
 
+const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+  .split(',')
+  .map((e) => e.trim())
+  .filter(Boolean);
+
 export default function TriagePage() {
   const [tab, setTab] = useState<Tab>('export');
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && (!user?.email || !ADMIN_EMAILS.includes(user.email))) {
+      router.replace('/');
+    }
+  }, [user, loading, router]);
+
+  if (loading || !user?.email || !ADMIN_EMAILS.includes(user.email)) {
+    return null;
+  }
 
   return (
     <div className="px-4 pt-6 space-y-4">

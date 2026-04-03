@@ -2,17 +2,26 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useAuth } from '@/components/AuthProvider';
 
-const tabs = [
+const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+  .split(',')
+  .map((e) => e.trim())
+  .filter(Boolean);
+
+const baseTabs = [
   { href: '/', label: 'ホーム', icon: '📊' },
   { href: '/questions', label: '問題', icon: '📋' },
   { href: '/exercise', label: '演習', icon: '✏️' },
-  { href: '/triage', label: '精査', icon: '🤖' },
+  { href: '/triage', label: '精査', icon: '🤖', adminOnly: true },
   { href: '/account', label: 'アカウント', icon: '👤' },
 ] as const;
 
 export default function NavBar() {
   const pathname = usePathname();
+  const { user } = useAuth();
+  const isAdmin = !!user?.email && ADMIN_EMAILS.includes(user.email);
+  const tabs = baseTabs.filter((t) => !('adminOnly' in t && t.adminOnly) || isAdmin);
 
   return (
     <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-slate-200 z-50">
