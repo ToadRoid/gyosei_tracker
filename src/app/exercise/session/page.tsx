@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useReducer, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getReadyProblems, upsertAttempt } from '@/lib/db';
+import { db, getReadyProblems, upsertAttempt } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
 import type { ProblemForExercise, ExerciseResult, ExercisePhase } from '@/types';
 
@@ -114,14 +114,27 @@ function SessionContent() {
       let problems = await getReadyProblems(subjectId, chapterId, sectionTitle);
       const isRandom = searchParams.get('random') === '1';
 
+      // 今の周で既に回答済みの problemId を除外（途中再開は未回答のみ出題）
+      const answeredInLap = await db.attempts
+        .where('lapNo').equals(lapNo)
+        .toArray();
+      const answeredIds = new Set(
+        answeredInLap
+          .filter((a) => problems.some((p) => p.problemId === a.problemId))
+          .map((a) => a.problemId),
+      );
+      const unanswered = problems.filter((p) => !answeredIds.has(p.problemId));
+      // 未回答が一部ある場合（途中再開）→ 未回答のみ
+      if (unanswered.length > 0 && unanswered.length < problems.length) {
+        problems = unanswered;
+      }
+
       if (isRandom) {
-        // ランダム
         for (let i = problems.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [problems[i], problems[j]] = [problems[j], problems[i]];
         }
       } else {
-        // 連番順（problemId = "KB2025-p001-q01" の辞書順）
         problems = problems.slice().sort((a, b) =>
           a.problemId.localeCompare(b.problemId),
         );

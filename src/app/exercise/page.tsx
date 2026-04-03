@@ -108,7 +108,7 @@ async function loadCurriculumData(): Promise<SubjectInfo[]> {
       if (!secMap) continue;
 
       const sectionInfos: SectionInfo[] = [];
-      for (const [sectionTitle, problemIds] of secMap.entries()) {
+      for (const [sectionTitle, problemIds] of [...secMap.entries()].sort((a, b) => a[0].localeCompare(b[0], 'ja-JP'))) {
         const currentLap = computeCurrentLap(problemIds);
         const answeredInCurrentLap = problemIds.filter((id) =>
           answeredSet.has(`${id}::${currentLap}`),
