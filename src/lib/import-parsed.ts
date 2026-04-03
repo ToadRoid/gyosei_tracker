@@ -109,6 +109,9 @@ export async function importParsedBatch(
           aiAnswerCandidate: branch.answerBoolean,
           aiCleanedText: branch.questionText,
           aiConfidence: branch.confidence,
+          sectionTitle: branch.sectionTitle ?? '',
+          sourcePageQuestion: branch.sourcePageQuestion ?? '',
+          sourcePageAnswer: branch.sourcePageAnswer ?? '',
         });
 
         branchesSaved++;

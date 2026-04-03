@@ -58,6 +58,11 @@ export interface ProblemAttr {
   aiChapterCandidate?: string;
   aiCleanedText?: string;
   aiConfidence?: number;
+  // 参考書対応情報
+  sectionTitle?: string;           // 小分類（例: 審査請求先、誤教示）
+  sourcePageQuestion?: string;     // 問題ページ番号
+  sourcePageAnswer?: string;       // 解説ページ番号
+  explanationText?: string;        // 解説テキスト
 }
 
 // ── 学習ログ ──
@@ -76,8 +81,12 @@ export interface Attempt {
 
 export interface ProblemForExercise extends Problem {
   answerBoolean: boolean; // ProblemAttr から（readyなので必ず非null）
+  explanationText: string;
   subjectId: string;
   chapterId: string;
+  sectionTitle?: string;
+  sourcePageQuestion?: string;
+  sourcePageAnswer?: string;
 }
 
 // ── 演習ステート ──
@@ -157,6 +166,9 @@ export interface ParsedBranch {
   subjectCandidate: string;
   chapterCandidate: string;
   confidence: number;
+  sectionTitle?: string;
+  sourcePageQuestion?: string;
+  sourcePageAnswer?: string;
 }
 
 export interface ParsedPage {

@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { Problem, ProblemAttr, Attempt, ProblemForExercise } from '@/types';
+import { supabase } from './supabase';
 
 class GyoseiDB extends Dexie {
   problems!: EntityTable<Problem, 'id'>;
@@ -97,6 +98,25 @@ export async function upsertAttempt(data: Omit<Attempt, 'id'>): Promise<void> {
   } else {
     await db.attempts.add(data);
   }
+
+  // Supabaseにも保存（ログイン中のみ・失敗してもローカルには影響しない）
+  syncAttemptToSupabase(data).catch(() => {});
+}
+
+async function syncAttemptToSupabase(data: Omit<Attempt, 'id'>): Promise<void> {
+  if (!supabase) return;
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return;
+
+  await supabase.from('attempts').upsert({
+    user_id: user.id,
+    problem_id: data.problemId,
+    lap_no: data.lapNo,
+    user_answer: data.userAnswer,
+    is_correct: data.isCorrect,
+    response_time_sec: data.responseTimeSec,
+    answered_at: data.answeredAt.toISOString(),
+  }, { onConflict: 'user_id,problem_id,lap_no' });
 }
 
 /**
@@ -105,6 +125,7 @@ export async function upsertAttempt(data: Omit<Attempt, 'id'>): Promise<void> {
 export async function getReadyProblems(
   subjectId?: string,
   chapterId?: string,
+  sectionTitle?: string,
 ): Promise<ProblemForExercise[]> {
   const readyProblems = await db.problems.where('status').equals('ready').toArray();
   const allAttrs = await db.problemAttrs.toArray();
@@ -116,12 +137,20 @@ export async function getReadyProblems(
       if (!attr || attr.answerBoolean === null || attr.answerBoolean === undefined) return null;
       if (subjectId && attr.subjectId !== subjectId) return null;
       if (chapterId && attr.chapterId !== chapterId) return null;
+      if (sectionTitle && (attr.sectionTitle ?? '') !== sectionTitle) return null;
       return {
         ...p,
         answerBoolean: attr.answerBoolean as boolean,
+        explanationText: (() => {
+          const t = p.rawExplanationText ?? '';
+          return t.startsWith('[解説読取困難') ? '' : t;
+        })(),
         subjectId: attr.subjectId,
         chapterId: attr.chapterId,
-      };
+        sectionTitle: attr.sectionTitle ?? undefined,
+        sourcePageQuestion: attr.sourcePageQuestion ?? undefined,
+        sourcePageAnswer: attr.sourcePageAnswer ?? undefined,
+      } as ProblemForExercise;
     })
     .filter((p): p is ProblemForExercise => p !== null);
 }

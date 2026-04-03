@@ -88,6 +88,9 @@ def main():
                 "subjectCandidate": subject_id,
                 "chapterCandidate": chapter_id,
                 "confidence": 1.0,  # reviewed済みなので最高信頼度
+                "sectionTitle": r.get("section_title", ""),
+                "sourcePageQuestion": r.get("source_page_question", ""),
+                "sourcePageAnswer": r.get("source_page_answer", ""),
             })
             total_branches += 1
 

@@ -5,10 +5,10 @@ import { usePathname } from 'next/navigation';
 
 const tabs = [
   { href: '/', label: 'ホーム', icon: '📊' },
-  { href: '/import', label: '取込', icon: '📷' },
   { href: '/questions', label: '問題', icon: '📋' },
-  { href: '/triage', label: 'AI精査', icon: '🤖' },
   { href: '/exercise', label: '演習', icon: '✏️' },
+  { href: '/triage', label: '精査', icon: '🤖' },
+  { href: '/account', label: 'アカウント', icon: '👤' },
 ] as const;
 
 export default function NavBar() {

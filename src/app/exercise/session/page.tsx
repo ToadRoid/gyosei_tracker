@@ -18,7 +18,8 @@ interface State {
 type Action =
   | { type: 'INIT'; problems: ProblemForExercise[]; lapNo: number }
   | { type: 'ANSWER'; userAnswer: boolean }
-  | { type: 'NEXT' };
+  | { type: 'NEXT' }
+  | { type: 'BACK' };
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
@@ -60,6 +61,26 @@ function reducer(state: State, action: Action): State {
         questionStartTime: Date.now(),
       };
     }
+    case 'BACK': {
+      // feedback → answering（同じ問題を再回答）
+      if (state.phase === 'feedback') {
+        return {
+          ...state,
+          phase: 'answering',
+          results: state.results.slice(0, -1),
+          questionStartTime: Date.now(),
+        };
+      }
+      // answering → 前の問題のfeedback
+      if (state.phase === 'answering' && state.currentIndex > 0) {
+        return {
+          ...state,
+          currentIndex: state.currentIndex - 1,
+          phase: 'feedback',
+        };
+      }
+      return state;
+    }
     default:
       return state;
   }
@@ -87,9 +108,10 @@ function SessionContent() {
     (async () => {
       const subjectId = searchParams.get('subject') || undefined;
       const chapterId = searchParams.get('chapter') || undefined;
+      const sectionTitle = searchParams.get('section') || undefined;
       const lapNo = Number(searchParams.get('lap') || '1');
 
-      let problems = await getReadyProblems(subjectId, chapterId);
+      let problems = await getReadyProblems(subjectId, chapterId, sectionTitle);
 
       // シャッフル
       for (let i = problems.length - 1; i > 0; i--) {
@@ -226,16 +248,36 @@ function SessionContent() {
   return (
     <div className="px-4 pt-6 space-y-6">
       {/* ヘッダー */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="rounded-full bg-indigo-100 text-indigo-700 px-2 py-0.5 text-xs font-medium">
-            {subject?.name ?? ''}
+      <div className="space-y-1">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => router.push('/exercise')}
+              className="text-slate-400 hover:text-slate-600 mr-1"
+              aria-label="戻る"
+            >
+              ←
+            </button>
+            <span className="rounded-full bg-indigo-100 text-indigo-700 px-2 py-0.5 text-xs font-medium">
+              {subject?.name ?? ''}
+            </span>
+            <span className="text-xs text-slate-400">{chapter?.name ?? ''}</span>
+          </div>
+          <span className="text-sm text-slate-500">
+            {state.currentIndex + 1} / {state.problems.length}
           </span>
-          <span className="text-xs text-slate-400">{chapter?.name ?? ''}</span>
         </div>
-        <span className="text-sm text-slate-500">
-          {state.currentIndex + 1} / {state.problems.length}
-        </span>
+        {current.sectionTitle && (
+          <p className="text-xs text-slate-500 pl-1">{current.sectionTitle}</p>
+        )}
+        {(current.sourcePageQuestion || current.sourcePageAnswer) && (
+          <p className="text-xs text-slate-400 pl-1">
+            {'📖 合格革命 行政書士 肢別過去問集'}
+            {current.sourcePageQuestion && ` p.${current.sourcePageQuestion}`}
+            {current.sourcePageQuestion && current.sourcePageAnswer && ' /'}
+            {current.sourcePageAnswer && ` p.${current.sourcePageAnswer}`}
+          </p>
+        )}
       </div>
 
       {/* プログレス */}
@@ -261,22 +303,33 @@ function SessionContent() {
 
       {/* 回答ボタン or フィードバック */}
       {state.phase === 'answering' ? (
-        <div className="flex gap-4">
-          <button
-            onClick={() => handleAnswer(true)}
-            className="flex-1 rounded-xl bg-green-50 border-2 border-green-200 py-6 text-3xl font-black text-green-600 hover:bg-green-100 active:bg-green-200 transition-colors"
-          >
-            ◯
-          </button>
-          <button
-            onClick={() => handleAnswer(false)}
-            className="flex-1 rounded-xl bg-red-50 border-2 border-red-200 py-6 text-3xl font-black text-red-500 hover:bg-red-100 active:bg-red-200 transition-colors"
-          >
-            ✗
-          </button>
+        <div className="space-y-3">
+          <div className="flex gap-4">
+            <button
+              onClick={() => handleAnswer(true)}
+              className="flex-1 rounded-xl bg-green-50 border-2 border-green-200 py-6 text-3xl font-black text-green-600 hover:bg-green-100 active:bg-green-200 transition-colors"
+            >
+              ◯
+            </button>
+            <button
+              onClick={() => handleAnswer(false)}
+              className="flex-1 rounded-xl bg-red-50 border-2 border-red-200 py-6 text-3xl font-black text-red-500 hover:bg-red-100 active:bg-red-200 transition-colors"
+            >
+              ✗
+            </button>
+          </div>
+          {state.currentIndex > 0 && (
+            <button
+              onClick={() => dispatch({ type: 'BACK' })}
+              className="w-full rounded-xl bg-slate-100 py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-200 transition-colors"
+            >
+              ← 前の問題の解説を見る
+            </button>
+          )}
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 pb-8">
+          {/* 正解 / 不正解バナー */}
           <div
             className={`rounded-xl p-4 text-center ${
               lastResult?.isCorrect
@@ -287,10 +340,23 @@ function SessionContent() {
             <span className="text-3xl">
               {lastResult?.isCorrect ? '🎉 正解!' : '😢 不正解'}
             </span>
-            <p className="text-sm text-slate-600 mt-2">
+            <p className="text-sm text-slate-600 mt-1">
               正解: {current.answerBoolean ? '◯' : '✗'}
+              {lastResult && !lastResult.isCorrect && (
+                <span className="ml-2 text-slate-400">
+                  （あなたの回答: {lastResult.userAnswer ? '◯' : '✗'}）
+                </span>
+              )}
             </p>
           </div>
+
+          {/* 解説 */}
+          {current.explanationText && (
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-1">
+              <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide">解説</p>
+              <p className="text-sm leading-relaxed text-slate-700">{current.explanationText}</p>
+            </div>
+          )}
 
           {saveError && (
             <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
@@ -298,15 +364,28 @@ function SessionContent() {
             </div>
           )}
 
-          <button
-            onClick={() => {
-              isAnsweringRef.current = false;
-              dispatch({ type: 'NEXT' });
-            }}
-            className="w-full rounded-xl bg-indigo-600 py-4 text-white text-lg font-bold hover:bg-indigo-700 transition-colors"
-          >
-            {state.currentIndex + 1 < state.problems.length ? '次の問題へ' : '結果を見る'}
-          </button>
+          {/* ボタン行 */}
+          <div className="flex gap-3">
+            <button
+              onClick={() => {
+                isAnsweringRef.current = false;
+                dispatch({ type: 'BACK' });
+              }}
+              className="rounded-xl bg-slate-100 px-4 py-4 font-bold text-slate-600 hover:bg-slate-200 transition-colors whitespace-nowrap"
+              aria-label="問題に戻る"
+            >
+              再回答
+            </button>
+            <button
+              onClick={() => {
+                isAnsweringRef.current = false;
+                dispatch({ type: 'NEXT' });
+              }}
+              className="flex-1 rounded-xl bg-indigo-600 py-4 text-white text-lg font-bold hover:bg-indigo-700 transition-colors"
+            >
+              {state.currentIndex + 1 < state.problems.length ? '次の問題へ' : '結果を見る'}
+            </button>
+          </div>
         </div>
       )}
     </div>
