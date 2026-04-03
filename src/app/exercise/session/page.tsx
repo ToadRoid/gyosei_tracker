@@ -5,6 +5,15 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { db, getReadyProblems, upsertAttempt } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
 import type { ProblemForExercise, ExerciseResult, ExercisePhase } from '@/types';
+import { useAuth } from '@/components/AuthProvider';
+import { supabase } from '@/lib/supabase';
+
+const REPORT_TYPES = [
+  { value: 'ocr', label: '文字の抜け・誤字' },
+  { value: 'answer', label: '正誤の誤り' },
+  { value: 'explanation', label: '解説の誤り' },
+  { value: 'other', label: 'その他' },
+] as const;
 
 interface State {
   problems: ProblemForExercise[];
@@ -98,11 +107,45 @@ const initialState: State = {
 function SessionContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { user } = useAuth();
   const [state, dispatch] = useReducer(reducer, initialState);
   const [loading, setLoading] = useState(true);
   const [saveError, setSaveError] = useState(false);
   const lapNoRef = useRef(1);
   const isAnsweringRef = useRef(false);
+
+  // 報告モーダル
+  const [reportOpen, setReportOpen] = useState(false);
+  const [reportType, setReportType] = useState<string>('ocr');
+  const [reportComment, setReportComment] = useState('');
+  const [reportSending, setReportSending] = useState(false);
+  const [reportSent, setReportSent] = useState(false);
+
+  const handleSendReport = async () => {
+    if (!supabase || !user || !current) return;
+    setReportSending(true);
+    try {
+      await supabase.from('error_reports').insert({
+        user_id: user.id,
+        problem_id: current.problemId,
+        report_type: reportType,
+        comment: reportComment,
+        question_text: current.cleanedText || current.rawText || '',
+        status: 'pending',
+      });
+      setReportSent(true);
+      setTimeout(() => {
+        setReportOpen(false);
+        setReportSent(false);
+        setReportComment('');
+        setReportType('ocr');
+      }, 1200);
+    } catch (e) {
+      console.error('報告の送信に失敗:', e);
+    } finally {
+      setReportSending(false);
+    }
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -400,6 +443,14 @@ function SessionContent() {
               再回答
             </button>
             <button
+              onClick={() => setReportOpen(true)}
+              className="rounded-xl bg-slate-50 border border-slate-200 px-3 py-4 text-slate-400 hover:text-red-400 hover:border-red-200 transition-colors text-lg"
+              aria-label="問題を報告"
+              title="問題を報告"
+            >
+              🚩
+            </button>
+            <button
               onClick={() => {
                 isAnsweringRef.current = false;
                 dispatch({ type: 'NEXT' });
@@ -407,6 +458,63 @@ function SessionContent() {
               className="flex-1 rounded-xl bg-indigo-600 py-4 text-white text-lg font-bold hover:bg-indigo-700 transition-colors"
             >
               {state.currentIndex + 1 < state.problems.length ? '次の問題へ' : '結果を見る'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 報告モーダル */}
+      {reportOpen && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40">
+          <div className="w-full max-w-md bg-white rounded-t-2xl p-5 space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="font-bold text-slate-800">問題を報告する</h3>
+              <button
+                onClick={() => { setReportOpen(false); setReportComment(''); setReportType('ocr'); }}
+                className="text-slate-400 text-xl"
+              >✕</button>
+            </div>
+
+            <p className="text-xs text-slate-400 bg-slate-50 rounded-lg p-2 line-clamp-2">
+              {current?.cleanedText || current?.rawText}
+            </p>
+
+            {/* 報告タイプ */}
+            <div className="grid grid-cols-2 gap-2">
+              {REPORT_TYPES.map((t) => (
+                <button
+                  key={t.value}
+                  onClick={() => setReportType(t.value)}
+                  className={`rounded-xl py-2.5 text-sm font-medium border transition-colors ${
+                    reportType === t.value
+                      ? 'bg-red-50 border-red-300 text-red-700'
+                      : 'bg-white border-slate-200 text-slate-600'
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+
+            {/* コメント */}
+            <textarea
+              value={reportComment}
+              onChange={(e) => setReportComment(e.target.value)}
+              placeholder="具体的な内容（任意）"
+              rows={3}
+              className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm resize-none focus:outline-none focus:border-indigo-400"
+            />
+
+            <button
+              onClick={handleSendReport}
+              disabled={reportSending || reportSent}
+              className={`w-full rounded-xl py-3 font-bold transition-colors ${
+                reportSent
+                  ? 'bg-green-500 text-white'
+                  : 'bg-red-500 text-white hover:bg-red-600 disabled:opacity-50'
+              }`}
+            >
+              {reportSent ? '送信しました ✓' : reportSending ? '送信中...' : '報告を送信'}
             </button>
           </div>
         </div>

@@ -5,6 +5,24 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import { db } from '@/lib/db';
 import NavBar from '@/components/NavBar';
+import { supabase } from '@/lib/supabase';
+
+interface ErrorReport {
+  id: string;
+  problem_id: string;
+  report_type: string;
+  comment: string;
+  question_text: string;
+  status: string;
+  created_at: string;
+}
+
+const REPORT_TYPE_LABEL: Record<string, string> = {
+  ocr: '文字の抜け・誤字',
+  answer: '正誤の誤り',
+  explanation: '解説の誤り',
+  other: 'その他',
+};
 
 const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
   .split(',').map((e) => e.trim()).filter(Boolean);
@@ -21,7 +39,9 @@ export default function AccountPage() {
 
   useEffect(() => {
     db.attempts.count().then(setAttemptCount);
-  }, []);
+    if (isAdmin) loadReports();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAdmin]);
 
   const handleSignOut = async () => {
     await signOut();
@@ -30,6 +50,26 @@ export default function AccountPage() {
 
   const [syncing, setSyncing] = useState(false);
   const [syncResult, setSyncResult] = useState<string | null>(null);
+  const [reports, setReports] = useState<ErrorReport[]>([]);
+  const [reportsLoading, setReportsLoading] = useState(false);
+
+  const loadReports = async () => {
+    if (!supabase) return;
+    setReportsLoading(true);
+    const { data } = await supabase
+      .from('error_reports')
+      .select('*')
+      .eq('status', 'pending')
+      .order('created_at', { ascending: false });
+    setReports(data ?? []);
+    setReportsLoading(false);
+  };
+
+  const resolveReport = async (id: string) => {
+    if (!supabase) return;
+    await supabase.from('error_reports').update({ status: 'resolved' }).eq('id', id);
+    setReports((prev) => prev.filter((r) => r.id !== id));
+  };
 
   const handleSyncJson = async () => {
     setSyncing(true);
@@ -264,6 +304,50 @@ export default function AccountPage() {
             </button>
             {syncResult && (
               <p className="text-sm text-center text-slate-500">{syncResult}</p>
+            )}
+          </div>
+
+          {/* エラーレポート */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold text-slate-600">
+                🚩 エラー報告
+                {reports.length > 0 && (
+                  <span className="ml-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">{reports.length}</span>
+                )}
+              </p>
+              <button onClick={loadReports} className="text-xs text-indigo-500">再読込</button>
+            </div>
+            {reportsLoading ? (
+              <p className="text-xs text-slate-400 text-center py-2">読み込み中...</p>
+            ) : reports.length === 0 ? (
+              <p className="text-xs text-slate-400 text-center py-2">未解決のレポートはありません</p>
+            ) : (
+              <div className="space-y-2 max-h-72 overflow-y-auto">
+                {reports.map((r) => (
+                  <div key={r.id} className="rounded-xl border border-red-100 bg-red-50 p-3 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-bold text-red-700 bg-red-100 rounded px-1.5 py-0.5">
+                        {REPORT_TYPE_LABEL[r.report_type] ?? r.report_type}
+                      </span>
+                      <span className="text-xs text-slate-400 shrink-0">
+                        {new Date(r.created_at).toLocaleDateString('ja-JP')}
+                      </span>
+                    </div>
+                    <p className="text-xs font-mono text-slate-500">{r.problem_id}</p>
+                    <p className="text-xs text-slate-700 line-clamp-2">{r.question_text}</p>
+                    {r.comment && (
+                      <p className="text-xs text-slate-600 italic">「{r.comment}」</p>
+                    )}
+                    <button
+                      onClick={() => resolveReport(r.id)}
+                      className="w-full rounded-lg bg-white border border-slate-200 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
+                    >
+                      ✓ 解決済みにする
+                    </button>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
 
