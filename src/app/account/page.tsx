@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import { db } from '@/lib/db';
+import NavBar from '@/components/NavBar';
 
 export default function AccountPage() {
   const { user, loading, signOut } = useAuth();
@@ -122,5 +123,6 @@ export default function AccountPage() {
         </button>
       )}
     </div>
+    <NavBar />
   );
 }
