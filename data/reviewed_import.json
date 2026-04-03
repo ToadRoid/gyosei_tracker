@@ -4,7 +4,7 @@
   "batchId": "reviewed-import",
   "parsedAt": "2026-04-03T17:09:09.391607",
   "model": "gpt-generated-explanation",
-  "totalBranches": 1355,
+  "totalBranches": 1359,
   "pages": [
     {
       "sourcePage": "001",
@@ -3893,6 +3893,50 @@
         }
       ],
       "parseError": null
+    },
+    {
+      "sourcePage": "051",
+      "originalProblemId": "KB2025-p051-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政契約で、その内容が国民に義務を課したり、その権利を制限するものについては、法律の留保の原則に関する侵害留保理論に立った場合、法律の根拠が必要であると解される（H24-9-1）",
+          "answerBoolean": false,
+          "explanationText": "行政契約とは、行政主体が行政目的を達成するために締結する契約であって、その内容が国民に義務を課したり、その権利を制限するものであっても、当事者の意思の合致によって成立するから、行政契約については法律の根拠を要しない。",
+          "sectionTitle": "行政契約",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei_keiyaku"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地方公共団体が随意契約によることができない契約を地方公共団体が随意契約でする場合であっても、当該契約の効力を無効としなければ法治の規定の遵守を没却する結果を加える特段の事情が存在しない限り、当該契約は私法上有効なものとされる。（H20-24-7）地方自治法の規定違反（H24-9-2）（H24-9-2）（H29-24-1）",
+          "answerBoolean": true,
+          "explanationText": "地方公共団体が随意契約の制限に関する法令に違反して締結した契約について、違法な契約であっても、私法上当然に無効なものではなく、当該契約の効力を無効としないは法治義務の遵守を没却する結果となる特段の事情が認められる場合に限り、私法上無効となる（最判昭62.5.19）。",
+          "sectionTitle": "行政契約",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei_keiyaku"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "公益府止併定をし、地方公共団体が締結する規則行政策にかかる契約は、法律に根拠のない権利制限として法律による行政の原理に抵触するため、法的拘束力を有しない。（R4-9-エ）（H25-10-3）",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平21.7.10） は、処分案業が、公益即止措定において、協定の相手方対し、その事業の規照措定及を将来返与する旨を約束することは、処分案者自身の自由な判断で行えるとして、公害府止措施の遵法律性を肯定し、法的拘束力を否定できないとしている。",
+          "sectionTitle": "行政契約",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei_keiyaku"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "地方公共団体が指名競争入札に参加させようとする者を指名するに当たり、いかなる業者の活性化にも寄与することを考慮して地元企業を優先的に指名することは、公正明大な最端権の行使として許容される。（H25-8-ア）（H24-9-5）",
+          "answerBoolean": true,
+          "explanationText": "○判例（最判平18.10.26） は、地方公共団体が、指名入札者に雄編うようとして、その名簿を指名者すること、およびその蔵書の活性化にも寄与することを考成し、地元業競争力指名者を行うことについては、その合理性を肯定することができるとしているから、本肢は正しい。なお、本件事案でき、村特業者と間外の条件性に競争力を有し得るとして、およそ村西業でき対応できるべき工事以外の工事は村特業のみを指名するというさ有用について、その合理性がある優最模権の範囲内であるとはいえず、違法であるとしている。",
+          "sectionTitle": "行政契約",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei_keiyaku"
+        }
+      ]
     },
     {
       "sourcePage": "052",
