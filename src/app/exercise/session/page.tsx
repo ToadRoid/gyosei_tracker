@@ -116,10 +116,16 @@ function SessionContent() {
 
   // 報告モーダル
   const [reportOpen, setReportOpen] = useState(false);
+  const [reportFromAnswering, setReportFromAnswering] = useState(false);
   const [reportType, setReportType] = useState<string>('ocr');
   const [reportComment, setReportComment] = useState('');
   const [reportSending, setReportSending] = useState(false);
   const [reportSent, setReportSent] = useState(false);
+
+  const openReport = (fromAnswering: boolean) => {
+    setReportFromAnswering(fromAnswering);
+    setReportOpen(true);
+  };
 
   const handleSendReport = async () => {
     if (!supabase || !user || !current) return;
@@ -139,7 +145,11 @@ function SessionContent() {
         setReportSent(false);
         setReportComment('');
         setReportType('ocr');
-      }, 1200);
+        // 回答フェーズから報告した場合はスキップ
+        if (reportFromAnswering) {
+          dispatch({ type: 'NEXT' });
+        }
+      }, 1000);
     } catch (e) {
       console.error('報告の送信に失敗:', e);
     } finally {
@@ -384,14 +394,23 @@ function SessionContent() {
               ✗
             </button>
           </div>
-          {state.currentIndex > 0 && (
+          <div className="flex gap-3">
+            {state.currentIndex > 0 && (
+              <button
+                onClick={() => dispatch({ type: 'BACK' })}
+                className="flex-1 rounded-xl bg-slate-100 py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-200 transition-colors"
+              >
+                ← 前の問題の解説を見る
+              </button>
+            )}
             <button
-              onClick={() => dispatch({ type: 'BACK' })}
-              className="w-full rounded-xl bg-slate-100 py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-200 transition-colors"
+              onClick={() => openReport(true)}
+              className="rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-slate-400 hover:text-red-400 hover:border-red-200 transition-colors"
+              aria-label="問題を報告してスキップ"
             >
-              ← 前の問題の解説を見る
+              🚩
             </button>
-          )}
+          </div>
         </div>
       ) : (
         <div className="space-y-4 pb-8">
@@ -443,7 +462,7 @@ function SessionContent() {
               再回答
             </button>
             <button
-              onClick={() => setReportOpen(true)}
+              onClick={() => openReport(false)}
               className="rounded-xl bg-slate-50 border border-slate-200 px-3 py-4 text-slate-400 hover:text-red-400 hover:border-red-200 transition-colors text-lg"
               aria-label="問題を報告"
               title="問題を報告"
@@ -468,7 +487,9 @@ function SessionContent() {
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40">
           <div className="w-full max-w-md bg-white rounded-t-2xl p-5 space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="font-bold text-slate-800">問題を報告する</h3>
+              <h3 className="font-bold text-slate-800">
+              問題を報告{reportFromAnswering ? '・スキップ' : ''}
+            </h3>
               <button
                 onClick={() => { setReportOpen(false); setReportComment(''); setReportType('ocr'); }}
                 className="text-slate-400 text-xl"
