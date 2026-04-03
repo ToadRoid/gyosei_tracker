@@ -52,6 +52,22 @@ export default function AccountPage() {
   const [syncResult, setSyncResult] = useState<string | null>(null);
   const [reports, setReports] = useState<ErrorReport[]>([]);
   const [reportsLoading, setReportsLoading] = useState(false);
+  const [userStats, setUserStats] = useState<{ userId: string; count: number }[] | null>(null);
+  const [statsLoading, setStatsLoading] = useState(false);
+
+  const loadUserStats = async () => {
+    if (!user?.email) return;
+    setStatsLoading(true);
+    try {
+      const res = await fetch(`/api/admin/user-stats?email=${encodeURIComponent(user.email)}`);
+      const data = await res.json();
+      setUserStats(data.stats ?? []);
+    } catch {
+      setUserStats([]);
+    } finally {
+      setStatsLoading(false);
+    }
+  };
 
   const loadReports = async () => {
     if (!supabase) return;
@@ -304,6 +320,30 @@ export default function AccountPage() {
             </button>
             {syncResult && (
               <p className="text-sm text-center text-slate-500">{syncResult}</p>
+            )}
+          </div>
+
+          {/* ユーザー別回答数 */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold text-slate-600">👥 ユーザー別回答数</p>
+              <button onClick={loadUserStats} className="text-xs text-indigo-500">
+                {statsLoading ? '取得中...' : '取得'}
+              </button>
+            </div>
+            {userStats && (
+              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3 space-y-1">
+                {userStats.length === 0 ? (
+                  <p className="text-xs text-slate-400">データなし</p>
+                ) : (
+                  userStats.map((s, i) => (
+                    <div key={s.userId} className="flex justify-between text-xs text-slate-600">
+                      <span>ユーザー{i + 1} <span className="text-slate-400 font-mono text-[10px]">{s.userId.slice(0, 8)}...</span></span>
+                      <span className="font-bold text-indigo-600">{s.count}問</span>
+                    </div>
+                  ))
+                )}
+              </div>
             )}
           </div>
 
