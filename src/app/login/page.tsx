@@ -81,12 +81,6 @@ export default function LoginPage() {
         </button>
       </form>
 
-      <button
-        onClick={() => router.push('/')}
-        className="text-sm text-slate-400 underline"
-      >
-        ログインせずに使う
-      </button>
     </div>
   );
 }

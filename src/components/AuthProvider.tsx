@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import type { User } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
 import { db, upsertAttempt } from '@/lib/db';
@@ -65,6 +66,8 @@ async function autoImportIfEmpty() {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleSignIn = useCallback(async (newUser: User) => {
     setUser(newUser);
@@ -99,6 +102,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     return () => subscription.unsubscribe();
   }, [handleSignIn]);
+
+  // 未ログイン時は /login にリダイレクト（/login 自体は除外）
+  useEffect(() => {
+    if (!loading && !user && pathname !== '/login') {
+      router.replace('/login');
+    }
+  }, [loading, user, pathname, router]);
 
   const signOut = async () => {
     await supabase?.auth.signOut();
