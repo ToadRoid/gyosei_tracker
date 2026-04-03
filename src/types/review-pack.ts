@@ -5,19 +5,32 @@ export interface QuickQuiz {
 }
 
 export interface ReviewTheme {
-  // 元分類（GPT出力に含める）
+  // 元分類
   subjectName: string;
   chapterName: string;
   sectionTitle: string;
-  // GPT生成コンテンツ
   themeName: string;
   priority: 'high' | 'medium' | 'low';
-  weakPoint: string;
-  keyPoints: string[];
-  typicalTraps: string[];
-  distinctionPoints: string[];
+
+  // 1. 概要
+  overview: string;            // この制度/章が何を扱うか・何のためのルールか
+
+  // 2. 全体の位置づけ
+  positioning: string;         // 章のどこにあるか・近い論点との違い
+
+  // 3. 弱点診断
+  weakDiagnosis: string;       // 何を誤解しているか・何と何を混同しているか
+
+  // 4. ピンポイント解説
+  pinpointExplanation: string; // つまずいた論点の丁寧な説明
+  judgmentCriteria: string[];  // 判断基準
+  typicalTraps: string[];      // 典型ひっかけ
+  distinctionPoints: string[]; // 区別ポイント
+
+  // 5. 仕上げ
+  oneLiner: string;            // 一文まとめ
   quickQuiz: QuickQuiz[];
-  relatedProblemIds: string[];   // subset of candidateProblemIds chosen by GPT
+  relatedProblemIds: string[];
   pageRefQuestion: string;
   pageRefAnswer: string;
 }

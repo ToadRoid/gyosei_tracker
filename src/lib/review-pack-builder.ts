@@ -256,8 +256,15 @@ ${topicsText}
 - 言語はすべて日本語
 - themes は最大5件（弱点トピックを参考に生成）
 - 各テーマの relatedProblemIds は上記「候補問題ID」のリストから選んでください（それ以外のIDは使用禁止）
-- quickQuiz は問題DBとは独立した補助的な学習確認クイズです（answer は "○" または "×" のみ）
-- keyPoints・typicalTraps・distinctionPoints はそれぞれ2〜4件
+- quickQuiz は問題DBとは独立した補助的な確認クイズです（answer は "○" または "×" のみ）
+- judgmentCriteria・typicalTraps・distinctionPoints はそれぞれ2〜4件
+
+各テーマは以下の5段階構成で、概要から入りピンポイントで弱点を深掘りする教材として生成してください:
+1. overview: この制度/章が何を扱うものか・何のためのルールかを2〜3文で説明
+2. positioning: この論点が章のどこに位置するか・近い論点とどう違うかを2〜3文で説明
+3. weakDiagnosis: ユーザーが何を誤解しているか・何と何を混同しているかを具体的に1〜2文で診断
+4. pinpointExplanation: 今回つまずいた論点だけを丁寧に3〜5文で解説
+5. oneLiner: この論点を一文で言い切るまとめ
 
 【JSONスキーマ】
 {
@@ -270,10 +277,14 @@ ${topicsText}
       "sectionTitle": "セクション名",
       "themeName": "テーマ名（簡潔に）",
       "priority": "high | medium | low",
-      "weakPoint": "この分野の弱点・課題（1文）",
-      "keyPoints": ["要点1", "要点2", ...],
+      "overview": "概要（2〜3文）",
+      "positioning": "全体の位置づけ（2〜3文）",
+      "weakDiagnosis": "弱点診断（1〜2文）",
+      "pinpointExplanation": "ピンポイント解説（3〜5文）",
+      "judgmentCriteria": ["判断基準1", "判断基準2", ...],
       "typicalTraps": ["ひっかけパターン1", ...],
       "distinctionPoints": ["区別論点1", ...],
+      "oneLiner": "一文まとめ",
       "quickQuiz": [
         {
           "question": "問題文",
