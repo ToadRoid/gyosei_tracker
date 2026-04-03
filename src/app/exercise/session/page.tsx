@@ -105,6 +105,8 @@ function SessionContent() {
   const isAnsweringRef = useRef(false);
 
   useEffect(() => {
+    setLoading(true);
+    isAnsweringRef.current = false;
     (async () => {
       const subjectId = searchParams.get('subject') || undefined;
       const chapterId = searchParams.get('chapter') || undefined;
