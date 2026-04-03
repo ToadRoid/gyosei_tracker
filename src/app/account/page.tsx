@@ -28,6 +28,81 @@ export default function AccountPage() {
     router.push('/login');
   };
 
+  const [syncing, setSyncing] = useState(false);
+  const [syncResult, setSyncResult] = useState<string | null>(null);
+
+  const handleSyncJson = async () => {
+    setSyncing(true);
+    setSyncResult(null);
+    try {
+      const res = await fetch('/data/reviewed_import.json');
+      if (!res.ok) throw new Error('JSONの取得に失敗しました');
+      const json = await res.json();
+
+      const pages: Array<{
+        sourcePage: string;
+        bookId: string;
+        branches: Array<{
+          seqNo: number;
+          questionText: string;
+          answerBoolean: boolean;
+          explanationText: string;
+          sectionTitle?: string;
+          sourcePageQuestion?: string;
+          sourcePageAnswer?: string;
+          subjectCandidate?: string;
+          chapterCandidate?: string;
+        }>;
+      }> = json.pages ?? [];
+
+      let updatedProblems = 0;
+      let updatedAttrs = 0;
+
+      for (const page of pages) {
+        const pageNo = parseInt(page.sourcePage, 10);
+        const bookId = page.bookId ?? 'KB2025';
+
+        for (const branch of page.branches) {
+          const seq = branch.seqNo;
+          const p = String(pageNo).padStart(3, '0');
+          const q = String(seq).padStart(2, '0');
+          const problemId = `${bookId}-p${p}-q${q}`;
+
+          // problems テーブル: cleanedText を更新
+          const existing = await db.problems.where('problemId').equals(problemId).first();
+          if (existing && existing.cleanedText !== branch.questionText) {
+            await db.problems.update(existing.id!, {
+              cleanedText: branch.questionText,
+              rawText: branch.questionText,
+            });
+            updatedProblems++;
+          }
+
+          // problemAttrs テーブル: answerBoolean / explanationText を更新
+          const { upsertProblemAttr } = await import('@/lib/db');
+          const existingAttr = await db.problemAttrs.where('problemId').equals(problemId).first();
+          const attrChanges: Record<string, unknown> = {};
+          if (existingAttr) {
+            if (existingAttr.answerBoolean !== branch.answerBoolean)
+              attrChanges.answerBoolean = branch.answerBoolean;
+            if (existingAttr.explanationText !== branch.explanationText)
+              attrChanges.explanationText = branch.explanationText;
+            if (Object.keys(attrChanges).length > 0) {
+              await upsertProblemAttr(problemId, attrChanges);
+              updatedAttrs++;
+            }
+          }
+        }
+      }
+
+      setSyncResult(`完了: 問題文 ${updatedProblems}件・解説/正誤 ${updatedAttrs}件を更新しました`);
+    } catch (e) {
+      setSyncResult(`エラー: ${String(e)}`);
+    } finally {
+      setSyncing(false);
+    }
+  };
+
   const handleMigrateLapNo = async () => {
     setMigrating(true);
     setMigrateResult(null);
@@ -174,9 +249,26 @@ export default function AccountPage() {
         <p className="text-2xl font-bold text-indigo-600">{attemptCount}<span className="text-base font-normal text-slate-500 ml-1">件</span></p>
       </div>
 
-      {/* 管理者: lapNo 修正 */}
+      {/* 管理者ツール */}
       {isAdmin && (
-        <div className="space-y-2">
+        <div className="space-y-3">
+          {/* JSONデータ同期 */}
+          <div className="space-y-1">
+            <button
+              onClick={handleSyncJson}
+              disabled={syncing}
+              className="w-full bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-2xl py-4 font-medium flex items-center justify-center gap-2 disabled:opacity-40"
+            >
+              <span>🔄</span>
+              {syncing ? '同期中...' : 'JSONデータをDBに同期する（管理者）'}
+            </button>
+            {syncResult && (
+              <p className="text-sm text-center text-slate-500">{syncResult}</p>
+            )}
+          </div>
+
+          {/* lapNo 修正 */}
+          <div className="space-y-1">
           <button
             onClick={handleMigrateLapNo}
             disabled={migrating}
@@ -188,6 +280,7 @@ export default function AccountPage() {
           {migrateResult && (
             <p className="text-sm text-center text-slate-500">{migrateResult}</p>
           )}
+          </div>
         </div>
       )}
 
