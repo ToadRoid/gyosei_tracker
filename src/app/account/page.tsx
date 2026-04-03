@@ -32,29 +32,64 @@ export default function AccountPage() {
     setMigrating(true);
     setMigrateResult(null);
     try {
+      const SESSION_GAP_MS = 60 * 60 * 1000; // 1時間以内 = 同一セッション（再回答）扱い
       const allAttempts = await db.attempts.toArray();
-      // Group by problemId
+
+      // problemId ごとにグループ化
       const byProblem = new Map<string, typeof allAttempts>();
       for (const a of allAttempts) {
         const list = byProblem.get(a.problemId) ?? [];
         list.push(a);
         byProblem.set(a.problemId, list);
       }
+
       let updated = 0;
+      let deleted = 0;
+
       for (const [, attempts] of byProblem) {
-        // Sort by answeredAt ascending
+        // answeredAt 昇順でソート
         const sorted = [...attempts].sort(
           (a, b) => new Date(a.answeredAt).getTime() - new Date(b.answeredAt).getTime(),
         );
-        for (let i = 0; i < sorted.length; i++) {
-          const correctLap = i + 1;
-          if (sorted[i].lapNo !== correctLap) {
-            await db.attempts.update(sorted[i].id!, { lapNo: correctLap });
+
+        // 1時間以内の連続回答を「同一セッション（再回答）」としてグループ化
+        // 各セッションの最後の回答だけを正解ログとして残す
+        type Attempt = (typeof sorted)[number];
+        const sessions: Attempt[][] = [];
+        let cur: Attempt[] = [sorted[0]];
+        for (let i = 1; i < sorted.length; i++) {
+          const gap =
+            new Date(sorted[i].answeredAt).getTime() -
+            new Date(sorted[i - 1].answeredAt).getTime();
+          if (gap > SESSION_GAP_MS) {
+            sessions.push(cur);
+            cur = [sorted[i]];
+          } else {
+            cur.push(sorted[i]);
+          }
+        }
+        sessions.push(cur);
+
+        for (let si = 0; si < sessions.length; si++) {
+          const session = sessions[si];
+          const correctLap = si + 1;
+          const keep = session[session.length - 1]; // 最後の回答を残す
+
+          // セッション内の余分な回答を削除
+          for (let ai = 0; ai < session.length - 1; ai++) {
+            await db.attempts.delete(session[ai].id!);
+            deleted++;
+          }
+
+          // lapNo が違う場合は更新
+          if (keep.lapNo !== correctLap) {
+            await db.attempts.update(keep.id!, { lapNo: correctLap });
             updated++;
           }
         }
       }
-      setMigrateResult(`完了: ${updated}件を修正しました`);
+
+      setMigrateResult(`完了: ${updated}件修正 / ${deleted}件削除（再回答の重複）`);
     } catch (e) {
       setMigrateResult(`エラー: ${String(e)}`);
     } finally {
