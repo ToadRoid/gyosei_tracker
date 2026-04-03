@@ -1,16 +1,28 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 import QuestionCard from '@/components/QuestionCard';
 import EditQuestionModal from '@/components/EditQuestionModal';
 import { db } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
+import { useAuth } from '@/components/AuthProvider';
 import type { Problem, ProblemAttr, ProblemStatus, Attempt } from '@/types';
+
+const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+  .split(',').map((e) => e.trim()).filter(Boolean);
 
 type ProblemRow = Problem & { attr: ProblemAttr | undefined };
 
 export default function QuestionsPage() {
+  const { user, loading: authLoading } = useAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (!authLoading && user && !ADMIN_EMAILS.includes(user.email ?? '')) {
+      router.replace('/exercise');
+    }
+  }, [user, authLoading, router]);
   const [subjectFilter, setSubjectFilter] = useState('');
   const [chapterFilter, setChapterFilter] = useState('');
   const [statusFilter, setStatusFilter] = useState<'' | ProblemStatus>('');

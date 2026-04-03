@@ -1,12 +1,24 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 import StatsBar from '@/components/StatsBar';
 import { getOverallStats, getSubjectStats, getWeakChapters } from '@/lib/stats';
+import { useAuth } from '@/components/AuthProvider';
 import type { SubjectStats, ChapterStats } from '@/types';
 
+const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+  .split(',').map((e) => e.trim()).filter(Boolean);
+
 export default function DashboardPage() {
+  const { user, loading: authLoading } = useAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (!authLoading && user && !ADMIN_EMAILS.includes(user.email ?? '')) {
+      router.replace('/exercise');
+    }
+  }, [user, authLoading, router]);
   const [overall, setOverall] = useState({
     totalReady: 0,
     totalDraft: 0,
