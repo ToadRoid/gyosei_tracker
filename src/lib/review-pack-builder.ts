@@ -243,8 +243,8 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
 }
 
 /**
- * Builds the GPT prompt string from ReviewPackInput.
- * This is a pure function — safe to use on both client and server.
+ * @deprecated GPT API is no longer used. Deep-dive prompts are built in review/page.tsx.
+ * Kept temporarily for reference. Will be removed in a future cleanup.
  */
 export function buildGptPrompt(input: ReviewPackInput): string {
   const { userSummary, weakTopics } = input;

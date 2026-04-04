@@ -1,139 +1,21 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import NavBar from '@/components/NavBar';
-import { useAuth } from '@/components/AuthProvider';
 import { buildReviewPackInput } from '@/lib/review-pack-builder';
+import { getOverallStats } from '@/lib/stats';
 import { db } from '@/lib/db';
-import type { ReviewPack, ReviewTheme } from '@/types/review-pack';
+import type { ReviewPackInput, WeakTopicInput, QuestionExample } from '@/types/review-pack';
 
-const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
-  .split(',').map((e) => e.trim()).filter(Boolean);
-
-const COOLDOWN_MS = 24 * 60 * 60 * 1000;
-
-const LS_KEY = (userId: string) => `review_pack_cache_${userId}`;
-
-function savePack(userId: string, pack: ReviewPack) {
-  try {
-    localStorage.setItem(LS_KEY(userId), JSON.stringify(pack));
-  } catch {}
-}
-
-function loadCachedPack(userId: string): ReviewPack | null {
-  try {
-    const raw = localStorage.getItem(LS_KEY(userId));
-    return raw ? (JSON.parse(raw) as ReviewPack) : null;
-  } catch {
-    return null;
-  }
-}
-
-// ── Section block ──────────────────────────────────────────────────────────
-
-function SectionBlock({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <div className="space-y-1.5">
-      <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">{label}</p>
-      {children}
-    </div>
-  );
-}
-
-function BulletList({ items, color }: { items: string[]; color: string }) {
-  if (items.length === 0) return null;
-  return (
-    <ul className="space-y-1">
-      {items.map((item, i) => (
-        <li key={i} className="text-sm text-slate-700 flex gap-1.5">
-          <span className={`shrink-0 ${color}`}>•</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-// ── QuickQuiz ──────────────────────────────────────────────────────────────
-
-interface QuizState {
-  answers: Record<string, string>;
-  revealed: Record<string, boolean>;
-}
-
-function QuickQuizSection({
-  theme,
-  themeIdx,
-  quizState,
-  setQuizState,
-}: {
-  theme: ReviewTheme;
-  themeIdx: number;
-  quizState: QuizState;
-  setQuizState: React.Dispatch<React.SetStateAction<QuizState>>;
-}) {
-  if (theme.quickQuiz.length === 0) return null;
-
-  return (
-    <SectionBlock label="5. 確認クイズ">
-      <div className="space-y-3">
-        {theme.quickQuiz.map((quiz, qi) => {
-          const key = `${themeIdx}-${qi}`;
-          const revealed = quizState.revealed[key] ?? false;
-          const chosen = quizState.answers[key];
-          return (
-            <div key={qi} className="rounded-lg bg-slate-50 p-3 space-y-2">
-              <p className="text-sm text-slate-700">{quiz.question}</p>
-              {!revealed ? (
-                <div className="flex gap-2">
-                  {(['○', '×'] as const).map((ans) => (
-                    <button
-                      key={ans}
-                      onClick={() =>
-                        setQuizState((prev) => ({
-                          answers: { ...prev.answers, [key]: ans },
-                          revealed: { ...prev.revealed, [key]: true },
-                        }))
-                      }
-                      className="flex-1 py-1.5 rounded-lg border border-slate-200 text-sm font-bold text-slate-700 hover:bg-white"
-                    >
-                      {ans}
-                    </button>
-                  ))}
-                </div>
-              ) : (
-                <div className="space-y-1">
-                  <p className="text-sm font-bold">
-                    正解:{' '}
-                    <span className={quiz.answer === '○' ? 'text-green-600' : 'text-red-600'}>
-                      {quiz.answer}
-                    </span>
-                    {chosen && (
-                      <span className={chosen === quiz.answer ? 'ml-2 text-green-600' : 'ml-2 text-red-600'}>
-                        {chosen === quiz.answer ? '（正解）' : '（不正解）'}
-                      </span>
-                    )}
-                  </p>
-                  <p className="text-xs text-slate-600">{quiz.explanation}</p>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </SectionBlock>
-  );
-}
-
-// ── AI Deep Dive Buttons ──────────────────────────────────────────────────
+// ── AI Deep Dive ──────────────────────────────────────────────────────────
 
 const AI_SERVICES = [
   { name: 'ChatGPT', url: 'https://chatgpt.com/', emoji: '🤖', btnClass: 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100', openClass: 'bg-emerald-600' },
   { name: 'Gemini', url: 'https://gemini.google.com/app', emoji: '✨', btnClass: 'border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100', openClass: 'bg-blue-600' },
 ] as const;
 
-async function buildDeepDivePrompt(theme: ReviewTheme): Promise<string> {
-  const ids = theme.relatedProblemIds;
+async function buildDeepDivePrompt(topic: WeakTopicInput): Promise<string> {
+  const ids = topic.candidateProblemIds;
   const [problems, attrs, attempts] = await Promise.all([
     db.problems.where('problemId').anyOf(ids).toArray(),
     db.problemAttrs.where('problemId').anyOf(ids).toArray(),
@@ -160,13 +42,13 @@ async function buildDeepDivePrompt(theme: ReviewTheme): Promise<string> {
     return `問題: ${qText}\n正解: ${correctAns} / 私の回答: ${userAns}（${result}）\n${explanation ? `解説: ${explanation}` : ''}`;
   }).join('\n---\n');
 
+  const accPct = Math.round(topic.accuracy * 100);
+
   return `行政書士試験の以下のテーマについて、試験に合格できるレベルまで深く詳しく解説してください。
 
-【テーマ】${theme.themeName}
-【科目】${theme.subjectName} > ${theme.chapterName} > ${theme.sectionTitle}
-
-【弱点診断】
-${theme.weakDiagnosis}
+【テーマ】${topic.sectionTitle}
+【科目】${topic.subjectName} > ${topic.chapterName}
+【正答率】${accPct}%（${topic.totalAttempts}問回答）
 
 【この分野で私が解いた問題と結果】
 ${problemLines}
@@ -182,26 +64,26 @@ ${problemLines}
 }
 
 function AiDeepDiveButtons({
-  theme,
+  topic,
   idx,
-  copiedTheme,
-  setCopiedTheme,
+  copiedIdx,
+  setCopiedIdx,
   fallbackPrompt,
   setFallbackPrompt,
 }: {
-  theme: ReviewTheme;
+  topic: WeakTopicInput;
   idx: number;
-  copiedTheme: number | null;
-  setCopiedTheme: React.Dispatch<React.SetStateAction<number | null>>;
+  copiedIdx: number | null;
+  setCopiedIdx: React.Dispatch<React.SetStateAction<number | null>>;
   fallbackPrompt: { idx: number; text: string } | null;
   setFallbackPrompt: React.Dispatch<React.SetStateAction<{ idx: number; text: string } | null>>;
 }) {
   const handleClick = async (serviceUrl: string) => {
-    const prompt = await buildDeepDivePrompt(theme);
+    const prompt = await buildDeepDivePrompt(topic);
     try {
       await navigator.clipboard.writeText(prompt);
-      setCopiedTheme(idx);
-      setTimeout(() => setCopiedTheme(null), 3000);
+      setCopiedIdx(idx);
+      setTimeout(() => setCopiedIdx(null), 3000);
       window.open(serviceUrl, '_blank');
     } catch {
       setFallbackPrompt({ idx, text: prompt });
@@ -218,11 +100,11 @@ function AiDeepDiveButtons({
             className={`flex-1 rounded-xl border-2 ${svc.btnClass} px-3 py-3 text-sm font-bold transition-colors flex items-center justify-center gap-1.5`}
           >
             <span>{svc.emoji}</span>
-            <span>{copiedTheme === idx ? 'コピー済み!' : svc.name}</span>
+            <span>{copiedIdx === idx ? 'コピー済み!' : svc.name}</span>
           </button>
         ))}
       </div>
-      {copiedTheme === idx && (
+      {copiedIdx === idx && (
         <p className="text-xs text-center text-slate-500">プロンプトをコピーしました。開いたページに貼り付けてください</p>
       )}
       {fallbackPrompt?.idx === idx && (
@@ -257,130 +139,129 @@ function AiDeepDiveButtons({
   );
 }
 
-// ── ThemeCard ──────────────────────────────────────────────────────────────
+// ── Accuracy Badge ────────────────────────────────────────────────────────
 
-function PriorityBadge({ priority }: { priority: ReviewTheme['priority'] }) {
-  const map = {
-    high: { label: '優先度 高', cls: 'bg-red-100 text-red-700' },
-    medium: { label: '優先度 中', cls: 'bg-amber-100 text-amber-700' },
-    low: { label: '優先度 低', cls: 'bg-green-100 text-green-700' },
-  } as const;
-  const { label, cls } = map[priority];
-  return <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${cls}`}>{label}</span>;
+function AccuracyBadge({ accuracy }: { accuracy: number }) {
+  const pct = Math.round(accuracy * 100);
+  const cls =
+    pct >= 80 ? 'bg-green-100 text-green-700' :
+    pct >= 60 ? 'bg-amber-100 text-amber-700' :
+    pct >= 40 ? 'bg-orange-100 text-orange-700' :
+    'bg-red-100 text-red-700';
+  return <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${cls}`}>{pct}%</span>;
 }
 
-function ThemeCard({
-  theme,
+// ── Question Row ──────────────────────────────────────────────────────────
+
+function QuestionRow({ q }: { q: QuestionExample }) {
+  const icon = q.isCorrect ? '✓' : '✗';
+  const iconCls = q.isCorrect ? 'text-green-500' : 'text-red-500';
+  const text = q.questionText.length > 60 ? q.questionText.slice(0, 60) + '…' : q.questionText;
+
+  return (
+    <div className="flex items-start gap-2 py-1.5">
+      <span className={`text-sm font-bold shrink-0 ${iconCls}`}>{icon}</span>
+      <p className="text-xs text-slate-600 flex-1 leading-relaxed">{text}</p>
+      <span className="text-xs text-slate-400 shrink-0">{q.responseTimeSec}秒</span>
+    </div>
+  );
+}
+
+// ── Topic Card ────────────────────────────────────────────────────────────
+
+function TopicCard({
+  topic,
   idx,
   expanded,
   onToggle,
-  quizState,
-  setQuizState,
-  copiedTheme,
-  setCopiedTheme,
+  copiedIdx,
+  setCopiedIdx,
   fallbackPrompt,
   setFallbackPrompt,
 }: {
-  theme: ReviewTheme;
+  topic: WeakTopicInput;
   idx: number;
   expanded: boolean;
   onToggle: () => void;
-  quizState: QuizState;
-  setQuizState: React.Dispatch<React.SetStateAction<QuizState>>;
-  copiedTheme: number | null;
-  setCopiedTheme: React.Dispatch<React.SetStateAction<number | null>>;
+  copiedIdx: number | null;
+  setCopiedIdx: React.Dispatch<React.SetStateAction<number | null>>;
   fallbackPrompt: { idx: number; text: string } | null;
   setFallbackPrompt: React.Dispatch<React.SetStateAction<{ idx: number; text: string } | null>>;
 }) {
+  const accPct = Math.round(topic.accuracy * 100);
+  const wrongCount = topic.questionExamples.filter((q) => !q.isCorrect).length;
+  const correctCount = topic.questionExamples.filter((q) => q.isCorrect).length;
+
   return (
     <div className="rounded-xl border border-slate-100 bg-white shadow-sm overflow-hidden">
       {/* Header */}
-      <button onClick={onToggle} className="w-full text-left p-4 space-y-1">
+      <button onClick={onToggle} className="w-full text-left p-4 space-y-1.5">
         <div className="flex items-center gap-2 flex-wrap">
-          <PriorityBadge priority={theme.priority} />
-          <span className="font-bold text-slate-800 text-sm">{theme.themeName}</span>
+          <AccuracyBadge accuracy={topic.accuracy} />
+          <span className="font-bold text-slate-800 text-sm">{topic.sectionTitle}</span>
         </div>
         <p className="text-xs text-slate-400">
-          {theme.subjectName} &gt; {theme.chapterName} &gt; {theme.sectionTitle}
+          {topic.subjectName} &gt; {topic.chapterName}
         </p>
+        <div className="flex items-center gap-3 text-xs text-slate-500">
+          <span>{topic.totalAttempts}問回答</span>
+          <span className="text-red-400">✗ {wrongCount}</span>
+          <span className="text-green-400">✓ {correctCount}</span>
+          {topic.improvement !== null && (
+            <span className={topic.improvement >= 0 ? 'text-green-500' : 'text-red-500'}>
+              {topic.improvement >= 0 ? '↑' : '↓'}{Math.abs(Math.round(topic.improvement * 100))}%
+            </span>
+          )}
+        </div>
         <p className="text-xs text-slate-400 text-right">{expanded ? '▲ 閉じる' : '▼ 詳細を見る'}</p>
       </button>
 
       {/* Expanded body */}
       {expanded && (
-        <div className="border-t border-slate-100 p-4 space-y-5">
+        <div className="border-t border-slate-100 p-4 space-y-4">
 
-          {/* 1. 概要 */}
-          <SectionBlock label="1. 概要">
-            <p className="text-sm text-slate-700 leading-relaxed">{theme.overview}</p>
-          </SectionBlock>
-
-          {/* 2. 全体の位置づけ */}
-          <SectionBlock label="2. 全体の位置づけ">
-            <p className="text-sm text-slate-700 leading-relaxed">{theme.positioning}</p>
-          </SectionBlock>
-
-          {/* 3. 弱点診断 */}
-          <SectionBlock label="3. 今回の弱点診断">
-            <div className="rounded-lg bg-red-50 border border-red-100 p-3">
-              <p className="text-sm text-red-800 leading-relaxed">{theme.weakDiagnosis}</p>
-            </div>
-          </SectionBlock>
-
-          {/* 4. ピンポイント解説 */}
-          <SectionBlock label="4. ピンポイント解説">
-            <p className="text-sm text-slate-700 leading-relaxed">{theme.pinpointExplanation}</p>
-
-            {theme.judgmentCriteria.length > 0 && (
-              <div className="mt-2 space-y-1">
-                <p className="text-xs font-semibold text-indigo-500">判断基準</p>
-                <BulletList items={theme.judgmentCriteria} color="text-indigo-400" />
+          {/* 周回別成績 */}
+          {topic.lapStats.length > 0 && (
+            <div className="space-y-1.5">
+              <p className="text-xs font-bold text-slate-500">周回別成績</p>
+              <div className="flex gap-2 flex-wrap">
+                {topic.lapStats.map((lap) => (
+                  <div key={lap.lapNo} className="rounded-lg bg-slate-50 px-3 py-1.5 text-center">
+                    <p className="text-xs text-slate-400">{lap.lapNo}周目</p>
+                    <p className="text-sm font-bold text-slate-700">{Math.round(lap.accuracy * 100)}%</p>
+                    <p className="text-xs text-slate-400">{lap.attempts}問</p>
+                  </div>
+                ))}
               </div>
-            )}
-            {theme.typicalTraps.length > 0 && (
-              <div className="mt-2 space-y-1">
-                <p className="text-xs font-semibold text-amber-500">典型ひっかけ</p>
-                <BulletList items={theme.typicalTraps} color="text-amber-400" />
-              </div>
-            )}
-            {theme.distinctionPoints.length > 0 && (
-              <div className="mt-2 space-y-1">
-                <p className="text-xs font-semibold text-blue-500">区別ポイント</p>
-                <BulletList items={theme.distinctionPoints} color="text-blue-400" />
-              </div>
-            )}
-          </SectionBlock>
-
-          {/* 5. 仕上げ */}
-          <SectionBlock label="5. 仕上げ">
-            {/* 一文まとめ */}
-            <div className="rounded-lg bg-indigo-50 border border-indigo-100 p-3">
-              <p className="text-sm font-semibold text-indigo-800">{theme.oneLiner}</p>
             </div>
+          )}
 
-            {/* 確認クイズ */}
-            <QuickQuizSection
-              theme={theme}
-              themeIdx={idx}
-              quizState={quizState}
-              setQuizState={setQuizState}
-            />
-
-            {/* 関連問題 / ページ参照 */}
-            <div className="flex flex-wrap gap-3 text-xs text-slate-400 pt-1">
-              {theme.relatedProblemIds.length > 0 && (
-                <span>関連問題 {theme.relatedProblemIds.length}問</span>
-              )}
-              {theme.pageRefAnswer && <span>📖 解説 p.{theme.pageRefAnswer}</span>}
+          {/* 問題一覧 */}
+          {topic.questionExamples.length > 0 && (
+            <div className="space-y-1">
+              <p className="text-xs font-bold text-slate-500">問題一覧</p>
+              <div className="divide-y divide-slate-100">
+                {topic.questionExamples.map((q) => (
+                  <QuestionRow key={q.problemId} q={q} />
+                ))}
+              </div>
             </div>
-          </SectionBlock>
+          )}
+
+          {/* ページ参照 */}
+          <div className="flex flex-wrap gap-3 text-xs text-slate-400">
+            {topic.candidateProblemIds.length > 0 && (
+              <span>関連問題 {topic.candidateProblemIds.length}問</span>
+            )}
+            {topic.pageRefAnswer && <span>📖 解説 p.{topic.pageRefAnswer}</span>}
+          </div>
 
           {/* AIで深掘り */}
           <AiDeepDiveButtons
-            theme={theme}
+            topic={topic}
             idx={idx}
-            copiedTheme={copiedTheme}
-            setCopiedTheme={setCopiedTheme}
+            copiedIdx={copiedIdx}
+            setCopiedIdx={setCopiedIdx}
             fallbackPrompt={fallbackPrompt}
             setFallbackPrompt={setFallbackPrompt}
           />
@@ -393,88 +274,32 @@ function ThemeCard({
 // ── ReviewPage ─────────────────────────────────────────────────────────────
 
 export default function ReviewPage() {
-  const { user } = useAuth();
-  const isAdmin = !!user?.email && ADMIN_EMAILS.includes(user.email);
-  const [pack, setPack] = useState<ReviewPack | null>(null);
+  const [data, setData] = useState<ReviewPackInput | null>(null);
+  const [overallStats, setOverallStats] = useState<{ totalAttempts: number; accuracy: number; currentLap: number } | null>(null);
   const [loading, setLoading] = useState(true);
-  const [generating, setGenerating] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [expandedTheme, setExpandedTheme] = useState<number | null>(null);
-  const [quizState, setQuizState] = useState<QuizState>({ answers: {}, revealed: {} });
-  const [copiedTheme, setCopiedTheme] = useState<number | null>(null);
+  const [expandedTopic, setExpandedTopic] = useState<number | null>(null);
+  const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
   const [fallbackPrompt, setFallbackPrompt] = useState<{ idx: number; text: string } | null>(null);
 
-  // クールダウン残り時間（非管理者のみ）
-  const cooldownRemaining = useMemo(() => {
-    if (isAdmin || !pack?.generatedAt) return 0;
-    const elapsed = Date.now() - new Date(pack.generatedAt).getTime();
-    return Math.max(0, COOLDOWN_MS - elapsed);
-  }, [isAdmin, pack?.generatedAt]);
-
-  const cooldownLabel = useMemo(() => {
-    if (cooldownRemaining <= 0) return '';
-    const h = Math.floor(cooldownRemaining / (60 * 60 * 1000));
-    const m = Math.floor((cooldownRemaining % (60 * 60 * 1000)) / 60000);
-    return h > 0 ? `あと${h}時間後に再生成可能` : `あと${m}分後に再生成可能`;
-  }, [cooldownRemaining]);
-
-  // Fetch latest pack on mount
-  useEffect(() => {
-    if (!user) {
-      setLoading(false);
-      return;
-    }
-    fetch(`/api/review-pack/latest?userId=${encodeURIComponent(user.id)}`)
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.record?.packJson) {
-          setPack(data.record.packJson as ReviewPack);
-        } else {
-          // Supabase取得失敗 or 未保存 → localStorageから復元
-          const cached = loadCachedPack(user.id);
-          if (cached) setPack(cached);
-        }
-      })
-      .catch(() => {
-        const cached = loadCachedPack(user.id);
-        if (cached) setPack(cached);
-      })
-      .finally(() => setLoading(false));
-  }, [user]);
-
-  const handleGenerate = useCallback(async () => {
-    if (!user) {
-      setError('ログインが必要です');
-      return;
-    }
-    setGenerating(true);
-    setError(null);
+  const loadData = useCallback(async () => {
+    setLoading(true);
     try {
-      const input = await buildReviewPackInput();
-      const res = await fetch('/api/review-pack/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, userEmail: user.email, input }),
-      });
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.error ?? `HTTP ${res.status}`);
-      }
-      const data = await res.json();
-      const newPack = data.pack as ReviewPack;
-      setPack(newPack);
-      savePack(user.id, newPack);
-      setQuizState({ answers: {}, revealed: {} });
-      setExpandedTheme(null);
+      const [input, stats] = await Promise.all([
+        buildReviewPackInput(),
+        getOverallStats(),
+      ]);
+      setData(input);
+      setOverallStats(stats);
     } catch (err) {
-      console.error('Review pack generation error:', err);
-      setError(
-        err instanceof Error ? err.message : '生成に失敗しました。時間をおいて再試行してください。',
-      );
+      console.error('Failed to load review data:', err);
     } finally {
-      setGenerating(false);
+      setLoading(false);
     }
-  }, [user]);
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   if (loading) {
     return (
@@ -484,65 +309,65 @@ export default function ReviewPage() {
     );
   }
 
+  const hasData = data && data.weakTopics.length > 0;
+
   return (
     <div className="px-4 pt-6 pb-24 space-y-6 max-w-md mx-auto">
       {/* Header */}
       <div>
-        <h1 className="text-xl font-bold text-slate-800">復習パック</h1>
-        <p className="text-sm text-slate-500 mt-1">AIが弱点を分析し、概要から丁寧に解説します</p>
+        <h1 className="text-xl font-bold text-slate-800">弱点ダッシュボード</h1>
+        <p className="text-sm text-slate-500 mt-1">弱点を特定し、AIで深掘り学習</p>
       </div>
 
-      {/* Generate button */}
-      <div className="space-y-1">
-        <button
-          onClick={handleGenerate}
-          disabled={generating || (!isAdmin && cooldownRemaining > 0)}
-          className="w-full bg-indigo-600 text-white rounded-xl py-3 font-bold disabled:opacity-40"
-        >
-          {generating ? '生成中... (10〜20秒)' : pack ? '再生成する' : '復習パックを生成'}
-        </button>
-        {!isAdmin && cooldownRemaining > 0 && (
-          <p className="text-xs text-center text-slate-400">{cooldownLabel}</p>
-        )}
-      </div>
-
-      {/* Error */}
-      {error && (
-        <div className="rounded-xl bg-red-50 border border-red-100 p-3">
-          <p className="text-sm text-red-700">{error}</p>
+      {/* Overall Stats */}
+      {overallStats && overallStats.totalAttempts > 0 && (
+        <div className="grid grid-cols-3 gap-3">
+          <div className="rounded-xl bg-white border border-slate-100 p-3 text-center shadow-sm">
+            <p className="text-2xl font-bold text-slate-800">{Math.round(overallStats.accuracy * 100)}%</p>
+            <p className="text-xs text-slate-400">正答率</p>
+          </div>
+          <div className="rounded-xl bg-white border border-slate-100 p-3 text-center shadow-sm">
+            <p className="text-2xl font-bold text-slate-800">{overallStats.totalAttempts}</p>
+            <p className="text-xs text-slate-400">回答数</p>
+          </div>
+          <div className="rounded-xl bg-white border border-slate-100 p-3 text-center shadow-sm">
+            <p className="text-2xl font-bold text-slate-800">{overallStats.currentLap}</p>
+            <p className="text-xs text-slate-400">周回</p>
+          </div>
         </div>
       )}
+
+      {/* Refresh button */}
+      <button
+        onClick={loadData}
+        disabled={loading}
+        className="w-full bg-indigo-600 text-white rounded-xl py-3 font-bold disabled:opacity-40"
+      >
+        {loading ? '読み込み中...' : 'データを更新'}
+      </button>
 
       {/* Empty state */}
-      {!pack && !generating && (
+      {!hasData && !loading && (
         <div className="text-center py-12 text-slate-400">
-          <div className="text-4xl mb-3">📦</div>
-          <p>まだ復習パックがありません</p>
-          <p className="text-sm mt-1">演習を進めてから生成してください</p>
+          <div className="text-4xl mb-3">📊</div>
+          <p>弱点データがまだありません</p>
+          <p className="text-sm mt-1">演習で3問以上回答すると表示されます</p>
         </div>
       )}
 
-      {/* Pack display */}
-      {pack && (
+      {/* Weak topics */}
+      {hasData && (
         <>
-          <div className="bg-indigo-50 rounded-xl p-4">
-            <p className="text-sm text-indigo-800">{pack.overallComment}</p>
-            <p className="text-xs text-slate-400 mt-2">
-              生成日時: {new Date(pack.generatedAt).toLocaleString('ja-JP')}
-            </p>
-          </div>
-
-          {pack.themes.map((theme, idx) => (
-            <ThemeCard
-              key={idx}
-              theme={theme}
+          <p className="text-xs text-slate-400">正答率が低いセクション（上位5件）</p>
+          {data.weakTopics.map((topic, idx) => (
+            <TopicCard
+              key={`${topic.subjectName}-${topic.sectionTitle}`}
+              topic={topic}
               idx={idx}
-              expanded={expandedTheme === idx}
-              onToggle={() => setExpandedTheme(expandedTheme === idx ? null : idx)}
-              quizState={quizState}
-              setQuizState={setQuizState}
-              copiedTheme={copiedTheme}
-              setCopiedTheme={setCopiedTheme}
+              expanded={expandedTopic === idx}
+              onToggle={() => setExpandedTopic(expandedTopic === idx ? null : idx)}
+              copiedIdx={copiedIdx}
+              setCopiedIdx={setCopiedIdx}
               fallbackPrompt={fallbackPrompt}
               setFallbackPrompt={setFallbackPrompt}
             />
