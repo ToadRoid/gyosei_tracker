@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/components/AuthProvider';
 import { buildReviewPackInput } from '@/lib/review-pack-builder';
+import { db } from '@/lib/db';
 import type { ReviewPack, ReviewTheme } from '@/types/review-pack';
 
 const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
@@ -233,6 +234,69 @@ function ThemeCard({
               {theme.pageRefAnswer && <span>📖 解説 p.{theme.pageRefAnswer}</span>}
             </div>
           </SectionBlock>
+
+          {/* ChatGPTで深掘り */}
+          <button
+            onClick={async () => {
+              // Fetch actual problem data + attempts for this theme
+              const ids = theme.relatedProblemIds;
+              const [problems, attrs, attempts] = await Promise.all([
+                db.problems.where('problemId').anyOf(ids).toArray(),
+                db.problemAttrs.where('problemId').anyOf(ids).toArray(),
+                db.attempts.where('problemId').anyOf(ids).toArray(),
+              ]);
+              const attrMap = new Map(attrs.map((a) => [a.problemId, a]));
+              // Latest attempt per problem
+              const latestAttempt = new Map<string, typeof attempts[number]>();
+              for (const a of attempts) {
+                const existing = latestAttempt.get(a.problemId);
+                if (!existing || a.answeredAt > existing.answeredAt) {
+                  latestAttempt.set(a.problemId, a);
+                }
+              }
+
+              const problemLines = problems.map((p) => {
+                const attr = attrMap.get(p.problemId);
+                const attempt = latestAttempt.get(p.problemId);
+                const qText = p.cleanedText || p.rawText || '';
+                const correctAns = attr?.answerBoolean ? '○' : '×';
+                const userAns = attempt ? (attempt.userAnswer ? '○' : '×') : '未回答';
+                const result = attempt ? (attempt.isCorrect ? '正解' : '不正解') : '未回答';
+                const rawExp = p.rawExplanationText ?? '';
+                const explanation = attr?.explanationText || (rawExp.startsWith('[解説読取困難') ? '' : rawExp);
+                return `問題: ${qText}
+正解: ${correctAns} / 私の回答: ${userAns}（${result}）
+${explanation ? `解説: ${explanation}` : ''}`;
+              }).join('\n---\n');
+
+              const prompt = `行政書士試験の以下のテーマについて、試験に合格できるレベルまで深く詳しく解説してください。
+
+【テーマ】${theme.themeName}
+【科目】${theme.subjectName} > ${theme.chapterName} > ${theme.sectionTitle}
+
+【弱点診断】
+${theme.weakDiagnosis}
+
+【この分野で私が解いた問題と結果】
+${problemLines}
+
+以下の観点で解説してください：
+1. 根拠となる条文と趣旨（なぜこのルールが存在するか）
+2. 重要判例（判例名・事案の概要・判旨のポイント）
+3. 私が間違えた問題について、なぜ間違えたのか・どう考えれば正解できたか
+4. 正解した問題も含め、この分野の知識を体系的に整理
+5. 試験で問われる典型パターンと解き方のコツ
+6. 類似論点との比較表（混同しやすいものを整理）
+7. この分野で確実に得点するために覚えるべきことリスト`;
+
+              const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
+              window.open(url, '_blank');
+            }}
+            className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
+          >
+            <span>🤖</span>
+            <span>ChatGPTでもっと深く学ぶ</span>
+          </button>
         </div>
       )}
     </div>
