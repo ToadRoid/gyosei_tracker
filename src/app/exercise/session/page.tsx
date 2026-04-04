@@ -120,6 +120,7 @@ function SessionContent() {
 
   // ChatGPTコピー状態
   const [chatgptCopied, setChatgptCopied] = useState(false);
+  const [chatgptFallback, setChatgptFallback] = useState<string | null>(null);
 
   // 報告モーダル
   const [reportOpen, setReportOpen] = useState(false);
@@ -551,16 +552,46 @@ ${explanation ? `【テキストの解説】\n${explanation}\n` : ''}
 ${!isCorrect ? `3. 私が${userAnswer}と判断した場合、どんな誤解をしている可能性があるか\n4. 同じ間違いをしないための判断基準` : '3. この論点で間違えやすいパターン\n4. 関連する重要判例や条文'}
 5. 類似の論点との区別ポイント`;
 
-              await navigator.clipboard.writeText(prompt);
-              setChatgptCopied(true);
-              setTimeout(() => setChatgptCopied(false), 2000);
-              window.open('https://chatgpt.com/', '_blank');
+              try {
+                await navigator.clipboard.writeText(prompt);
+                setChatgptCopied(true);
+                setChatgptFallback(null);
+                setTimeout(() => setChatgptCopied(false), 3000);
+                window.open('https://chatgpt.com/', '_blank');
+              } catch {
+                setChatgptFallback(prompt);
+              }
             }}
             className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
           >
             <span>🤖</span>
             <span>{chatgptCopied ? 'コピー済み → ChatGPTに貼り付けてください' : 'ChatGPTで深掘りする'}</span>
           </button>
+          {chatgptFallback && (
+            <div className="space-y-2">
+              <p className="text-xs text-slate-500">自動コピーできませんでした。下のテキストを長押しでコピーしてChatGPTに貼り付けてください。</p>
+              <textarea
+                readOnly
+                value={chatgptFallback}
+                className="w-full h-32 text-xs border border-slate-200 rounded-lg p-2 text-slate-600"
+                onFocus={(e) => e.target.select()}
+              />
+              <div className="flex gap-2">
+                <button
+                  onClick={() => window.open('https://chatgpt.com/', '_blank')}
+                  className="flex-1 rounded-lg bg-emerald-600 text-white py-2 text-sm font-bold"
+                >
+                  ChatGPTを開く
+                </button>
+                <button
+                  onClick={() => setChatgptFallback(null)}
+                  className="rounded-lg bg-slate-100 px-4 py-2 text-sm text-slate-500"
+                >
+                  閉じる
+                </button>
+              </div>
+            </div>
+          )}
 
           {saveError && (
             <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">

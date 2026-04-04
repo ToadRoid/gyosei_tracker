@@ -146,6 +146,8 @@ function ThemeCard({
   setQuizState,
   copiedTheme,
   setCopiedTheme,
+  fallbackPrompt,
+  setFallbackPrompt,
 }: {
   theme: ReviewTheme;
   idx: number;
@@ -155,6 +157,8 @@ function ThemeCard({
   setQuizState: React.Dispatch<React.SetStateAction<QuizState>>;
   copiedTheme: number | null;
   setCopiedTheme: React.Dispatch<React.SetStateAction<number | null>>;
+  fallbackPrompt: { idx: number; text: string } | null;
+  setFallbackPrompt: React.Dispatch<React.SetStateAction<{ idx: number; text: string } | null>>;
 }) {
   return (
     <div className="rounded-xl border border-slate-100 bg-white shadow-sm overflow-hidden">
@@ -293,16 +297,48 @@ ${problemLines}
 6. 類似論点との比較表（混同しやすいものを整理）
 7. この分野で確実に得点するために覚えるべきことリスト`;
 
-              await navigator.clipboard.writeText(prompt);
-              setCopiedTheme(idx);
-              setTimeout(() => setCopiedTheme(null), 2000);
-              window.open('https://chatgpt.com/', '_blank');
+              try {
+                await navigator.clipboard.writeText(prompt);
+                setCopiedTheme(idx);
+                setTimeout(() => setCopiedTheme(null), 3000);
+                window.open('https://chatgpt.com/', '_blank');
+              } catch {
+                // クリップボード失敗時（iOS Safari等）→ テキスト表示
+                setFallbackPrompt({ idx, text: prompt });
+              }
             }}
             className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
           >
             <span>🤖</span>
             <span>{copiedTheme === idx ? 'コピー済み → ChatGPTに貼り付けてください' : 'ChatGPTでもっと深く学ぶ'}</span>
           </button>
+          {fallbackPrompt?.idx === idx && (
+            <div className="space-y-2">
+              <p className="text-xs text-slate-500">自動コピーできませんでした。下のテキストを長押しでコピーしてChatGPTに貼り付けてください。</p>
+              <textarea
+                readOnly
+                value={fallbackPrompt.text}
+                className="w-full h-32 text-xs border border-slate-200 rounded-lg p-2 text-slate-600"
+                onFocus={(e) => e.target.select()}
+              />
+              <div className="flex gap-2">
+                <button
+                  onClick={() => {
+                    window.open('https://chatgpt.com/', '_blank');
+                  }}
+                  className="flex-1 rounded-lg bg-emerald-600 text-white py-2 text-sm font-bold"
+                >
+                  ChatGPTを開く
+                </button>
+                <button
+                  onClick={() => setFallbackPrompt(null)}
+                  className="rounded-lg bg-slate-100 px-4 py-2 text-sm text-slate-500"
+                >
+                  閉じる
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -321,6 +357,7 @@ export default function ReviewPage() {
   const [expandedTheme, setExpandedTheme] = useState<number | null>(null);
   const [quizState, setQuizState] = useState<QuizState>({ answers: {}, revealed: {} });
   const [copiedTheme, setCopiedTheme] = useState<number | null>(null);
+  const [fallbackPrompt, setFallbackPrompt] = useState<{ idx: number; text: string } | null>(null);
 
   // クールダウン残り時間（非管理者のみ）
   const cooldownRemaining = useMemo(() => {
@@ -461,6 +498,8 @@ export default function ReviewPage() {
               setQuizState={setQuizState}
               copiedTheme={copiedTheme}
               setCopiedTheme={setCopiedTheme}
+              fallbackPrompt={fallbackPrompt}
+              setFallbackPrompt={setFallbackPrompt}
             />
           ))}
         </>
