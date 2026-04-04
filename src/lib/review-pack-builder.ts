@@ -3,6 +3,7 @@ import type {
   ReviewPackInput,
   WeakTopicInput,
   WrongExample,
+  QuestionExample,
 } from '@/types/review-pack';
 
 // Build subject/chapter name lookup maps (safe for both client and server)
@@ -39,6 +40,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
     pageRefAnswer: string;
     byLap: Map<number, { attempts: number; correct: number }>;
     recentWrong: { problemId: string; userAnswer: boolean; answeredAt: Date }[];
+    allAttempts: { problemId: string; userAnswer: boolean; isCorrect: boolean; answeredAt: Date; responseTimeSec: number }[];
   }
 
   const groups = new Map<GroupKey, GroupData>();
@@ -68,6 +70,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
         pageRefAnswer: attr.sourcePageAnswer ?? '',
         byLap: new Map(),
         recentWrong: [],
+        allAttempts: [],
       });
     }
 
@@ -93,7 +96,16 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
     lapData.attempts += 1;
     if (attempt.isCorrect) lapData.correct += 1;
 
-    // Track wrong attempts
+    // Track all attempts
+    group.allAttempts.push({
+      problemId: attempt.problemId,
+      userAnswer: attempt.userAnswer,
+      isCorrect: attempt.isCorrect,
+      answeredAt: attempt.answeredAt,
+      responseTimeSec: attempt.responseTimeSec,
+    });
+
+    // Track wrong attempts (for backward compat)
     if (!attempt.isCorrect) {
       group.recentWrong.push({
         problemId: attempt.problemId,
@@ -163,6 +175,42 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
         };
       });
 
+    // questionExamples: all problems in section, prioritizing wrong → slow correct → rest
+    // Deduplicate by problemId, keep latest attempt per problem
+    const latestByProblem = new Map<string, typeof group.allAttempts[number]>();
+    for (const a of group.allAttempts) {
+      const existing = latestByProblem.get(a.problemId);
+      if (!existing || a.answeredAt.getTime() > existing.answeredAt.getTime()) {
+        latestByProblem.set(a.problemId, a);
+      }
+    }
+    const sortedAll = Array.from(latestByProblem.values()).sort((a, b) => {
+      // Wrong first, then slow correct, then rest
+      if (a.isCorrect !== b.isCorrect) return a.isCorrect ? 1 : -1;
+      return b.responseTimeSec - a.responseTimeSec;
+    });
+    const questionExamples: QuestionExample[] = sortedAll
+      .slice(0, 10)
+      .map((a) => {
+        const attr = attrMap.get(a.problemId);
+        const problem = problemMap.get(a.problemId);
+        const rawExp = problem?.rawExplanationText ?? '';
+        const expText =
+          attr?.explanationText ??
+          (rawExp.startsWith('[解説読取困難') ? '' : rawExp);
+        return {
+          problemId: a.problemId,
+          questionText: problem?.cleanedText ?? problem?.rawText ?? '',
+          correctAnswer: attr?.answerBoolean ?? false,
+          userAnswer: a.userAnswer,
+          isCorrect: a.isCorrect,
+          explanationText: expText,
+          responseTimeSec: a.responseTimeSec,
+          pageRefQuestion: attr?.sourcePageQuestion ?? '',
+          pageRefAnswer: attr?.sourcePageAnswer ?? '',
+        };
+      });
+
     weakTopics.push({
       subjectName,
       chapterName,
@@ -175,6 +223,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
       pageRefAnswer: group.pageRefAnswer,
       candidateProblemIds,
       wrongExamples,
+      questionExamples,
     });
   }
 
@@ -216,17 +265,23 @@ export function buildGptPrompt(input: ReviewPackInput): string {
         )
         .join('\n');
 
-      const wrongText =
-        t.wrongExamples.length > 0
-          ? t.wrongExamples
+      // Use questionExamples (full context) for the prompt
+      const questionsText =
+        t.questionExamples.length > 0
+          ? t.questionExamples
               .map(
-                (w, wi) =>
-                  `  誤答例${wi + 1}:\n    問題文: ${w.questionText.slice(0, 80)}\n    正解: ${w.correctAnswer ? '○' : '×'} / ユーザー回答: ${w.userAnswer ? '○' : '×'}\n    解説抜粋: ${w.explanationSnippet}`,
+                (q, qi) =>
+                  `  問題${qi + 1} [${q.isCorrect ? '正解' : '不正解'}${!q.isCorrect ? '' : q.responseTimeSec > 30 ? '・遅答' : ''}]:
+    ID: ${q.problemId}
+    問題文: ${q.questionText}
+    正解: ${q.correctAnswer ? '○' : '×'} / ユーザー回答: ${q.userAnswer ? '○' : '×'}
+    解答時間: ${q.responseTimeSec}秒
+    解説: ${q.explanationText || '（解説なし）'}`,
               )
               .join('\n')
-          : '  （誤答例なし）';
+          : '  （問題データなし）';
 
-      return `【弱点トピック${i + 1}】
+      return `【トピック${i + 1}】
 科目: ${t.subjectName}
 章: ${t.chapterName}
 セクション: ${t.sectionTitle}
@@ -236,12 +291,20 @@ ${lapText}
 問題ページ参照: ${t.pageRefQuestion || '不明'}
 解説ページ参照: ${t.pageRefAnswer || '不明'}
 候補問題ID（relatedProblemIdsはここから選ぶこと）: ${t.candidateProblemIds.join(', ')}
-${wrongText}`;
+
+--- このセクションの問題と解説 ---
+${questionsText}`;
     })
     .join('\n\n');
 
-  return `あなたは行政書士試験の学習アドバイザーです。
-以下のユーザー学習データを分析し、今日の復習パックをJSON形式で生成してください。
+  return `あなたは行政書士試験の熟練講師です。
+以下のユーザーの学習データ（正解・不正解の両方を含む全問題と解説テキスト）を分析し、このセクションの知識を体系的に理解できる復習教材をJSON形式で生成してください。
+
+【重要な方針】
+- 不正解の問題だけでなく、正解した問題も含めて包括的に解説してください
+- 正解していても理解が曖昧な可能性があります（解答時間が長い問題は特に注意）
+- 提供された問題文・解説テキストの内容をベースに、より深い理解を促す解説を作成してください
+- 単なるフィードバックではなく、「このセクションの知識を確実に身につける」ための教材として生成してください
 
 【ユーザー学習サマリー】
 総回答数: ${userSummary.totalAttempts}問
@@ -254,22 +317,22 @@ ${topicsText}
 - 出力は下記JSONスキーマに厳密に従ってください
 - マークダウンコードブロック（\`\`\`json など）は使わず、JSONのみを出力してください
 - 言語はすべて日本語
-- themes は最大5件（弱点トピックを参考に生成）
+- themes は最大5件（トピックを参考に生成）
 - 各テーマの relatedProblemIds は上記「候補問題ID」のリストから選んでください（それ以外のIDは使用禁止）
 - quickQuiz は問題DBとは独立した補助的な確認クイズです（answer は "○" または "×" のみ）
 - judgmentCriteria・typicalTraps・distinctionPoints はそれぞれ2〜4件
 
-各テーマは以下の5段階構成で、概要から入りピンポイントで弱点を深掘りする教材として生成してください:
-1. overview: この制度/章が何を扱うものか・何のためのルールかを2〜3文で説明
-2. positioning: この論点が章のどこに位置するか・近い論点とどう違うかを2〜3文で説明
-3. weakDiagnosis: ユーザーが何を誤解しているか・何と何を混同しているかを具体的に1〜2文で診断
-4. pinpointExplanation: 今回つまずいた論点だけを丁寧に3〜5文で解説
+各テーマは以下の5段階構成で、セクション全体の知識を体系的に学べる教材として生成してください:
+1. overview: この制度/論点が何を扱うものか・何のためのルールかを、条文の趣旨や背景も含めて3〜5文で解説
+2. positioning: この論点が章・科目全体のどこに位置するか・近い論点（類似制度、関連条文）とどう違うかを3〜5文で解説
+3. weakDiagnosis: ユーザーの正答・誤答パターンから、理解が不十分な点・混同しやすい点を具体的に2〜3文で診断。正解していても理解が浅そうな箇所も指摘
+4. pinpointExplanation: このセクションの核心となる知識を、具体例・判例・条文を交えて5〜8文で丁寧に解説。試験で問われるポイントを明確に
 5. oneLiner: この論点を一文で言い切るまとめ
 
 【JSONスキーマ】
 {
   "generatedAt": "ISO8601文字列",
-  "overallComment": "全体コメント（1〜2文）",
+  "overallComment": "全体コメント（2〜3文。学習の進捗に対する具体的な評価）",
   "themes": [
     {
       "subjectName": "科目名",
@@ -277,10 +340,10 @@ ${topicsText}
       "sectionTitle": "セクション名",
       "themeName": "テーマ名（簡潔に）",
       "priority": "high | medium | low",
-      "overview": "概要（2〜3文）",
-      "positioning": "全体の位置づけ（2〜3文）",
-      "weakDiagnosis": "弱点診断（1〜2文）",
-      "pinpointExplanation": "ピンポイント解説（3〜5文）",
+      "overview": "概要（3〜5文）",
+      "positioning": "全体の位置づけ（3〜5文）",
+      "weakDiagnosis": "弱点診断（2〜3文）",
+      "pinpointExplanation": "詳細解説（5〜8文）",
       "judgmentCriteria": ["判断基準1", "判断基準2", ...],
       "typicalTraps": ["ひっかけパターン1", ...],
       "distinctionPoints": ["区別論点1", ...],
@@ -289,7 +352,7 @@ ${topicsText}
         {
           "question": "問題文",
           "answer": "○ または ×",
-          "explanation": "解説"
+          "explanation": "解説（2〜3文で丁寧に）"
         }
       ],
       "relatedProblemIds": ["KB2025-p001-q01", ...],

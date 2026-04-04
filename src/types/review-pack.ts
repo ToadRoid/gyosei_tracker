@@ -50,6 +50,18 @@ export interface WrongExample {
   pageRefAnswer: string;
 }
 
+export interface QuestionExample {
+  problemId: string;
+  questionText: string;
+  correctAnswer: boolean;
+  userAnswer: boolean;
+  isCorrect: boolean;
+  explanationText: string;
+  responseTimeSec: number;
+  pageRefQuestion: string;
+  pageRefAnswer: string;
+}
+
 export interface WeakTopicInput {
   subjectName: string;
   chapterName: string;
@@ -62,6 +74,7 @@ export interface WeakTopicInput {
   pageRefAnswer: string;
   candidateProblemIds: string[];
   wrongExamples: WrongExample[];
+  questionExamples: QuestionExample[];
 }
 
 export interface ReviewPackInput {

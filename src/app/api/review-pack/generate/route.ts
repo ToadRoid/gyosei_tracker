@@ -84,12 +84,12 @@ export async function POST(req: NextRequest) {
         {
           role: 'system',
           content:
-            'あなたは行政書士試験の学習アドバイザーです。指定されたJSONスキーマに従い、正確なJSONのみを返してください。マークダウンのコードブロックは使わないでください。',
+            'あなたは行政書士試験の熟練講師です。提供された問題文と解説テキストを基に、体系的で深い理解を促す復習教材を生成してください。指定されたJSONスキーマに従い、正確なJSONのみを返してください。マークダウンのコードブロックは使わないでください。',
         },
         { role: 'user', content: prompt },
       ],
-      temperature: 0.7,
-      max_tokens: 4096,
+      temperature: 0.4,
+      max_tokens: 8192,
     });
 
     const raw = completion.choices[0]?.message?.content ?? '';
