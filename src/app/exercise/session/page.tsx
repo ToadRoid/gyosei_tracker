@@ -118,6 +118,9 @@ function SessionContent() {
   const [descriptiveText, setDescriptiveText] = useState('');
   const [descriptiveRevealed, setDescriptiveRevealed] = useState(false);
 
+  // ChatGPTコピー状態
+  const [chatgptCopied, setChatgptCopied] = useState(false);
+
   // 報告モーダル
   const [reportOpen, setReportOpen] = useState(false);
   const [reportFromAnswering, setReportFromAnswering] = useState(false);
@@ -526,7 +529,7 @@ function SessionContent() {
 
           {/* ChatGPTで深掘り */}
           <button
-            onClick={() => {
+            onClick={async () => {
               const questionText = current.cleanedText || current.rawText || '';
               const explanation = current.explanationText || '';
               const correctAnswer = current.answerBoolean ? '○' : '×';
@@ -548,13 +551,15 @@ ${explanation ? `【テキストの解説】\n${explanation}\n` : ''}
 ${!isCorrect ? `3. 私が${userAnswer}と判断した場合、どんな誤解をしている可能性があるか\n4. 同じ間違いをしないための判断基準` : '3. この論点で間違えやすいパターン\n4. 関連する重要判例や条文'}
 5. 類似の論点との区別ポイント`;
 
-              const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
-              window.open(url, '_blank');
+              await navigator.clipboard.writeText(prompt);
+              setChatgptCopied(true);
+              setTimeout(() => setChatgptCopied(false), 2000);
+              window.open('https://chatgpt.com/', '_blank');
             }}
             className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
           >
             <span>🤖</span>
-            <span>ChatGPTで深掘りする</span>
+            <span>{chatgptCopied ? 'コピー済み → ChatGPTに貼り付けてください' : 'ChatGPTで深掘りする'}</span>
           </button>
 
           {saveError && (

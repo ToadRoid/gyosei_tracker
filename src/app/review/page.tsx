@@ -144,6 +144,8 @@ function ThemeCard({
   onToggle,
   quizState,
   setQuizState,
+  copiedTheme,
+  setCopiedTheme,
 }: {
   theme: ReviewTheme;
   idx: number;
@@ -151,6 +153,8 @@ function ThemeCard({
   onToggle: () => void;
   quizState: QuizState;
   setQuizState: React.Dispatch<React.SetStateAction<QuizState>>;
+  copiedTheme: number | null;
+  setCopiedTheme: React.Dispatch<React.SetStateAction<number | null>>;
 }) {
   return (
     <div className="rounded-xl border border-slate-100 bg-white shadow-sm overflow-hidden">
@@ -289,13 +293,15 @@ ${problemLines}
 6. 類似論点との比較表（混同しやすいものを整理）
 7. この分野で確実に得点するために覚えるべきことリスト`;
 
-              const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
-              window.open(url, '_blank');
+              await navigator.clipboard.writeText(prompt);
+              setCopiedTheme(idx);
+              setTimeout(() => setCopiedTheme(null), 2000);
+              window.open('https://chatgpt.com/', '_blank');
             }}
             className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
           >
             <span>🤖</span>
-            <span>ChatGPTでもっと深く学ぶ</span>
+            <span>{copiedTheme === idx ? 'コピー済み → ChatGPTに貼り付けてください' : 'ChatGPTでもっと深く学ぶ'}</span>
           </button>
         </div>
       )}
@@ -314,6 +320,7 @@ export default function ReviewPage() {
   const [error, setError] = useState<string | null>(null);
   const [expandedTheme, setExpandedTheme] = useState<number | null>(null);
   const [quizState, setQuizState] = useState<QuizState>({ answers: {}, revealed: {} });
+  const [copiedTheme, setCopiedTheme] = useState<number | null>(null);
 
   // クールダウン残り時間（非管理者のみ）
   const cooldownRemaining = useMemo(() => {
@@ -452,6 +459,8 @@ export default function ReviewPage() {
               onToggle={() => setExpandedTheme(expandedTheme === idx ? null : idx)}
               quizState={quizState}
               setQuizState={setQuizState}
+              copiedTheme={copiedTheme}
+              setCopiedTheme={setCopiedTheme}
             />
           ))}
         </>
