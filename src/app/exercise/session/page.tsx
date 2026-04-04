@@ -524,6 +524,39 @@ function SessionContent() {
             </div>
           )}
 
+          {/* ChatGPTで深掘り */}
+          <button
+            onClick={() => {
+              const questionText = current.cleanedText || current.rawText || '';
+              const explanation = current.explanationText || '';
+              const correctAnswer = current.answerBoolean ? '○' : '×';
+              const userAnswer = lastResult?.userAnswer ? '○' : '×';
+              const isCorrect = lastResult?.isCorrect;
+
+              const prompt = `行政書士試験の問題について、深く理解できるよう詳しく解説してください。
+
+【問題文】
+${questionText}
+
+【正解】${correctAnswer}
+【私の回答】${userAnswer}（${isCorrect ? '正解' : '不正解'}）
+
+${explanation ? `【テキストの解説】\n${explanation}\n` : ''}
+以下の観点で解説してください：
+1. この問題の正解の根拠（条文・判例）
+2. なぜ${correctAnswer}なのか、具体的な理由
+${!isCorrect ? `3. 私が${userAnswer}と判断した場合、どんな誤解をしている可能性があるか\n4. 同じ間違いをしないための判断基準` : '3. この論点で間違えやすいパターン\n4. 関連する重要判例や条文'}
+5. 類似の論点との区別ポイント`;
+
+              const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
+              window.open(url, '_blank');
+            }}
+            className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
+          >
+            <span>🤖</span>
+            <span>ChatGPTで深掘りする</span>
+          </button>
+
           {saveError && (
             <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
               この回答の保存に失敗しました。
