@@ -125,6 +125,138 @@ function QuickQuizSection({
   );
 }
 
+// ── AI Deep Dive Buttons ──────────────────────────────────────────────────
+
+const AI_SERVICES = [
+  { name: 'ChatGPT', url: 'https://chatgpt.com/', emoji: '🤖', btnClass: 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100', openClass: 'bg-emerald-600' },
+  { name: 'Gemini', url: 'https://gemini.google.com/app', emoji: '✨', btnClass: 'border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100', openClass: 'bg-blue-600' },
+] as const;
+
+async function buildDeepDivePrompt(theme: ReviewTheme): Promise<string> {
+  const ids = theme.relatedProblemIds;
+  const [problems, attrs, attempts] = await Promise.all([
+    db.problems.where('problemId').anyOf(ids).toArray(),
+    db.problemAttrs.where('problemId').anyOf(ids).toArray(),
+    db.attempts.where('problemId').anyOf(ids).toArray(),
+  ]);
+  const attrMap = new Map(attrs.map((a) => [a.problemId, a]));
+  const latestAttempt = new Map<string, typeof attempts[number]>();
+  for (const a of attempts) {
+    const existing = latestAttempt.get(a.problemId);
+    if (!existing || a.answeredAt > existing.answeredAt) {
+      latestAttempt.set(a.problemId, a);
+    }
+  }
+
+  const problemLines = problems.map((p) => {
+    const attr = attrMap.get(p.problemId);
+    const attempt = latestAttempt.get(p.problemId);
+    const qText = p.cleanedText || p.rawText || '';
+    const correctAns = attr?.answerBoolean ? '○' : '×';
+    const userAns = attempt ? (attempt.userAnswer ? '○' : '×') : '未回答';
+    const result = attempt ? (attempt.isCorrect ? '正解' : '不正解') : '未回答';
+    const rawExp = p.rawExplanationText ?? '';
+    const explanation = attr?.explanationText || (rawExp.startsWith('[解説読取困難') ? '' : rawExp);
+    return `問題: ${qText}\n正解: ${correctAns} / 私の回答: ${userAns}（${result}）\n${explanation ? `解説: ${explanation}` : ''}`;
+  }).join('\n---\n');
+
+  return `行政書士試験の以下のテーマについて、試験に合格できるレベルまで深く詳しく解説してください。
+
+【テーマ】${theme.themeName}
+【科目】${theme.subjectName} > ${theme.chapterName} > ${theme.sectionTitle}
+
+【弱点診断】
+${theme.weakDiagnosis}
+
+【この分野で私が解いた問題と結果】
+${problemLines}
+
+以下の観点で解説してください：
+1. 根拠となる条文と趣旨（なぜこのルールが存在するか）
+2. 重要判例（判例名・事案の概要・判旨のポイント）
+3. 私が間違えた問題について、なぜ間違えたのか・どう考えれば正解できたか
+4. 正解した問題も含め、この分野の知識を体系的に整理
+5. 試験で問われる典型パターンと解き方のコツ
+6. 類似論点との比較表（混同しやすいものを整理）
+7. この分野で確実に得点するために覚えるべきことリスト`;
+}
+
+function AiDeepDiveButtons({
+  theme,
+  idx,
+  copiedTheme,
+  setCopiedTheme,
+  fallbackPrompt,
+  setFallbackPrompt,
+}: {
+  theme: ReviewTheme;
+  idx: number;
+  copiedTheme: number | null;
+  setCopiedTheme: React.Dispatch<React.SetStateAction<number | null>>;
+  fallbackPrompt: { idx: number; text: string } | null;
+  setFallbackPrompt: React.Dispatch<React.SetStateAction<{ idx: number; text: string } | null>>;
+}) {
+  const handleClick = async (serviceUrl: string) => {
+    const prompt = await buildDeepDivePrompt(theme);
+    try {
+      await navigator.clipboard.writeText(prompt);
+      setCopiedTheme(idx);
+      setTimeout(() => setCopiedTheme(null), 3000);
+      window.open(serviceUrl, '_blank');
+    } catch {
+      setFallbackPrompt({ idx, text: prompt });
+    }
+  };
+
+  return (
+    <div className="space-y-2">
+      <div className="flex gap-2">
+        {AI_SERVICES.map((svc) => (
+          <button
+            key={svc.name}
+            onClick={() => handleClick(svc.url)}
+            className={`flex-1 rounded-xl border-2 ${svc.btnClass} px-3 py-3 text-sm font-bold transition-colors flex items-center justify-center gap-1.5`}
+          >
+            <span>{svc.emoji}</span>
+            <span>{copiedTheme === idx ? 'コピー済み!' : svc.name}</span>
+          </button>
+        ))}
+      </div>
+      {copiedTheme === idx && (
+        <p className="text-xs text-center text-slate-500">プロンプトをコピーしました。開いたページに貼り付けてください</p>
+      )}
+      {fallbackPrompt?.idx === idx && (
+        <div className="space-y-2">
+          <p className="text-xs text-slate-500">自動コピーできませんでした。下のテキストを長押しでコピーして貼り付けてください。</p>
+          <textarea
+            readOnly
+            value={fallbackPrompt.text}
+            className="w-full h-32 text-xs border border-slate-200 rounded-lg p-2 text-slate-600"
+            onFocus={(e) => e.target.select()}
+          />
+          <div className="flex gap-2">
+            {AI_SERVICES.map((svc) => (
+              <button
+                key={svc.name}
+                onClick={() => window.open(svc.url, '_blank')}
+                className={`flex-1 rounded-lg ${svc.openClass} text-white py-2 text-sm font-bold`}
+              >
+                {svc.name}を開く
+              </button>
+            ))}
+            <button
+              onClick={() => setFallbackPrompt(null)}
+              className="rounded-lg bg-slate-100 px-3 py-2 text-sm text-slate-500"
+            >
+              閉じる
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── ThemeCard ──────────────────────────────────────────────────────────────
 
 function PriorityBadge({ priority }: { priority: ReviewTheme['priority'] }) {
@@ -243,102 +375,15 @@ function ThemeCard({
             </div>
           </SectionBlock>
 
-          {/* ChatGPTで深掘り */}
-          <button
-            onClick={async () => {
-              // Fetch actual problem data + attempts for this theme
-              const ids = theme.relatedProblemIds;
-              const [problems, attrs, attempts] = await Promise.all([
-                db.problems.where('problemId').anyOf(ids).toArray(),
-                db.problemAttrs.where('problemId').anyOf(ids).toArray(),
-                db.attempts.where('problemId').anyOf(ids).toArray(),
-              ]);
-              const attrMap = new Map(attrs.map((a) => [a.problemId, a]));
-              // Latest attempt per problem
-              const latestAttempt = new Map<string, typeof attempts[number]>();
-              for (const a of attempts) {
-                const existing = latestAttempt.get(a.problemId);
-                if (!existing || a.answeredAt > existing.answeredAt) {
-                  latestAttempt.set(a.problemId, a);
-                }
-              }
-
-              const problemLines = problems.map((p) => {
-                const attr = attrMap.get(p.problemId);
-                const attempt = latestAttempt.get(p.problemId);
-                const qText = p.cleanedText || p.rawText || '';
-                const correctAns = attr?.answerBoolean ? '○' : '×';
-                const userAns = attempt ? (attempt.userAnswer ? '○' : '×') : '未回答';
-                const result = attempt ? (attempt.isCorrect ? '正解' : '不正解') : '未回答';
-                const rawExp = p.rawExplanationText ?? '';
-                const explanation = attr?.explanationText || (rawExp.startsWith('[解説読取困難') ? '' : rawExp);
-                return `問題: ${qText}
-正解: ${correctAns} / 私の回答: ${userAns}（${result}）
-${explanation ? `解説: ${explanation}` : ''}`;
-              }).join('\n---\n');
-
-              const prompt = `行政書士試験の以下のテーマについて、試験に合格できるレベルまで深く詳しく解説してください。
-
-【テーマ】${theme.themeName}
-【科目】${theme.subjectName} > ${theme.chapterName} > ${theme.sectionTitle}
-
-【弱点診断】
-${theme.weakDiagnosis}
-
-【この分野で私が解いた問題と結果】
-${problemLines}
-
-以下の観点で解説してください：
-1. 根拠となる条文と趣旨（なぜこのルールが存在するか）
-2. 重要判例（判例名・事案の概要・判旨のポイント）
-3. 私が間違えた問題について、なぜ間違えたのか・どう考えれば正解できたか
-4. 正解した問題も含め、この分野の知識を体系的に整理
-5. 試験で問われる典型パターンと解き方のコツ
-6. 類似論点との比較表（混同しやすいものを整理）
-7. この分野で確実に得点するために覚えるべきことリスト`;
-
-              try {
-                await navigator.clipboard.writeText(prompt);
-                setCopiedTheme(idx);
-                setTimeout(() => setCopiedTheme(null), 3000);
-                window.open('https://chatgpt.com/', '_blank');
-              } catch {
-                // クリップボード失敗時（iOS Safari等）→ テキスト表示
-                setFallbackPrompt({ idx, text: prompt });
-              }
-            }}
-            className="w-full rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-100 transition-colors flex items-center justify-center gap-2"
-          >
-            <span>🤖</span>
-            <span>{copiedTheme === idx ? 'コピー済み → ChatGPTに貼り付けてください' : 'ChatGPTでもっと深く学ぶ'}</span>
-          </button>
-          {fallbackPrompt?.idx === idx && (
-            <div className="space-y-2">
-              <p className="text-xs text-slate-500">自動コピーできませんでした。下のテキストを長押しでコピーしてChatGPTに貼り付けてください。</p>
-              <textarea
-                readOnly
-                value={fallbackPrompt.text}
-                className="w-full h-32 text-xs border border-slate-200 rounded-lg p-2 text-slate-600"
-                onFocus={(e) => e.target.select()}
-              />
-              <div className="flex gap-2">
-                <button
-                  onClick={() => {
-                    window.open('https://chatgpt.com/', '_blank');
-                  }}
-                  className="flex-1 rounded-lg bg-emerald-600 text-white py-2 text-sm font-bold"
-                >
-                  ChatGPTを開く
-                </button>
-                <button
-                  onClick={() => setFallbackPrompt(null)}
-                  className="rounded-lg bg-slate-100 px-4 py-2 text-sm text-slate-500"
-                >
-                  閉じる
-                </button>
-              </div>
-            </div>
-          )}
+          {/* AIで深掘り */}
+          <AiDeepDiveButtons
+            theme={theme}
+            idx={idx}
+            copiedTheme={copiedTheme}
+            setCopiedTheme={setCopiedTheme}
+            fallbackPrompt={fallbackPrompt}
+            setFallbackPrompt={setFallbackPrompt}
+          />
         </div>
       )}
     </div>
