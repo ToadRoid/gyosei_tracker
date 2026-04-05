@@ -866,6 +866,13 @@ GOLDEN_TESTS = [
     },
     # ── 行政手続法 ──
     {
+        "name": "行訴法31条: 事情判決は事情判決の論点で説明されている",
+        "chapter": "gyosei-jiken",
+        "check": lambda data: _find_branch(data, "139", 1),
+        "assert_exp_contains": "事情判決",
+        "assert_exp_not_contains": "認容判決",
+    },
+    {
         "name": "行手法: 聴聞は不利益処分のうち重大なもの",
         "chapter": "gyosei-tetsuzuki",
         "check": lambda data: _find_branch_by_keyword(data, "聴聞", "聴聞"),

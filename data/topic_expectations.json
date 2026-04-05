@@ -102,6 +102,18 @@
       "forbidden_articles": []
     },
     {
+      "id": "jiken_circumstantial_judgment",
+      "label": "事情判決",
+      "chapter": "gyosei-jiken",
+      "sections": ["06_判決"],
+      "match_keywords": ["事情判決", "31条", "公共の福祉", "公の利益に著しい障害"],
+      "required_elements": ["事情判決"],
+      "optional_elements": ["31条", "公の利益", "公共の福祉", "違法", "棄却"],
+      "reversed_elements": ["認容判決", "認容の判決"],
+      "expected_articles": ["31条"],
+      "forbidden_articles": []
+    },
+    {
       "id": "jiken_stay_of_execution",
       "label": "執行停止",
       "chapter": "gyosei-jiken",
