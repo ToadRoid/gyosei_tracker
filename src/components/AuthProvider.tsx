@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import { usePathname, useRouter } from 'next/navigation';
 import type { User } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
-import { db, upsertAttempt } from '@/lib/db';
+import { db, upsertAttempt, runOneTimeCleanup, refreshProblemDataIfNeeded } from '@/lib/db';
 
 type AuthContextType = {
   user: User | null;
@@ -54,12 +54,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(newUser);
     syncFromSupabase(newUser.id);
     autoImportIfEmpty();
+    await refreshProblemDataIfNeeded();
+    runOneTimeCleanup();
   }, []);
 
   useEffect(() => {
     if (!supabase) {
       // Supabase未設定: ゲストモードで動作
       autoImportIfEmpty();
+      refreshProblemDataIfNeeded().then(() => runOneTimeCleanup());
       setLoading(false);
       return;
     }

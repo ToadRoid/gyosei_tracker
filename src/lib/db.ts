@@ -300,3 +300,36 @@ export async function runOneTimeCleanup(): Promise<void> {
     console.log(`[cleanup] Deleted ${totalDeleted} stale attempts, fixed ${totalFixed} isCorrect values.`);
   }
 }
+
+
+/**
+ * 問題データの強制リフレッシュ
+ * reviewed_import.json から最新データを取り込み直す。
+ * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
+ * バージョン管理: DATA_VERSION が上がったときのみ実行。
+ */
+const DATA_VERSION = '2026-04-05-v4';
+const DATA_VERSION_KEY = 'gyosei_data_version';
+
+export async function refreshProblemDataIfNeeded(): Promise<void> {
+  if (typeof window === 'undefined') return;
+
+  const currentVersion = localStorage.getItem(DATA_VERSION_KEY);
+  if (currentVersion === DATA_VERSION) return;
+
+  console.log(`[data-refresh] Updating problem data: ${currentVersion ?? 'none'} → ${DATA_VERSION}`);
+
+  try {
+    const res = await fetch('/data/reviewed_import.json');
+    if (!res.ok) return;
+    const json = await res.json();
+
+    const { importParsedBatch } = await import('@/lib/import-parsed');
+    await importParsedBatch(json);
+
+    localStorage.setItem(DATA_VERSION_KEY, DATA_VERSION);
+    console.log('[data-refresh] Problem data updated successfully');
+  } catch (e) {
+    console.warn('[data-refresh] Failed:', e);
+  }
+}
