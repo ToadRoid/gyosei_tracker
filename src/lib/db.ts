@@ -166,3 +166,122 @@ export function generateProblemId(bookId: string, pageNo: number, seq = 1): stri
   const q = String(seq).padStart(2, '0');
   return `${bookId}-p${page}-q${q}`;
 }
+
+/**
+ * データクリーンアップ v3
+ * ─────────────────────────────────────────────────────────
+ * 問題データ修正に伴う attempt の整合性を保つ。
+ * 各パッチは localStorage フラグで1回だけ実行される。
+ *
+ * 新しい修正があった場合は PATCHES 配列に追加するだけでよい。
+ */
+
+interface CleanupPatch {
+  key: string;               // localStorage キー（ユニークにする）
+  deleteLap1: string[];       // lap1 の attempt を削除する problemId 一覧
+  recalcCorrect: {            // isCorrect を再計算する problemId と正解
+    problemId: string;
+    correctAnswer: boolean;
+  }[];
+}
+
+const PATCHES: CleanupPatch[] = [
+  // v2: 2026-04-05 セクション04 問題データ修正
+  {
+    key: 'cleanup_2026-04-05_v2',
+    deleteLap1: [
+      'KB2025-p133-q01',
+      'KB2025-p134-q01', 'KB2025-p134-q02', 'KB2025-p134-q03',
+      'KB2025-p134-q04', 'KB2025-p134-q05', 'KB2025-p134-q06', 'KB2025-p134-q07',
+      'KB2025-p135-q06', 'KB2025-p135-q07',
+      'KB2025-p136-q03',
+    ],
+    recalcCorrect: [],
+  },
+  // v3: 2026-04-05 p138-q05 answerBoolean 修正 (false→true)
+  {
+    key: 'cleanup_2026-04-05_v3_p138q05',
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p138-q05', correctAnswer: true },
+    ],
+  },
+  // v3b: 2026-04-05 p138-q02 第三者効 answerBoolean 修正 (false→true)
+  {
+    key: 'cleanup_2026-04-05_v3b_p138q02',
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p138-q02', correctAnswer: true },
+    ],
+  },
+  // v3c: 2026-04-05 p141-q04 再審の訴え answerBoolean 修正 (false→true)
+  {
+    key: 'cleanup_2026-04-05_v3c_p141q04',
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p141-q04', correctAnswer: true },
+    ],
+  },
+  // v4: 2026-04-05 p139-q05,q06 正誤逆転修正 + p140-q04 正誤修正
+  {
+    key: 'cleanup_2026-04-05_v4_p139_p140',
+    deleteLap1: [
+      // p140 q4-q8 は問題文が架空だったため全削除
+      'KB2025-p140-q04', 'KB2025-p140-q05', 'KB2025-p140-q06',
+      'KB2025-p140-q07', 'KB2025-p140-q08',
+    ],
+    recalcCorrect: [
+      // p139 q5: false → true
+      { problemId: 'KB2025-p139-q05', correctAnswer: true },
+      // p139 q6: false → true
+      { problemId: 'KB2025-p139-q06', correctAnswer: true },
+      // p140 q4: false → true (第三者効)
+      { problemId: 'KB2025-p140-q04', correctAnswer: true },
+    ],
+  },
+  // ─── 今後の修正はここに追加 ───
+];
+
+export async function runOneTimeCleanup(): Promise<void> {
+  if (typeof window === 'undefined') return;
+
+  let totalDeleted = 0;
+  let totalFixed = 0;
+
+  for (const patch of PATCHES) {
+    if (localStorage.getItem(patch.key)) continue;
+
+    // 1. lap1 削除
+    for (const pid of patch.deleteLap1) {
+      const found = await db.attempts
+        .where('[problemId+lapNo]')
+        .equals([pid, 1])
+        .first();
+      if (found?.id !== undefined) {
+        await db.attempts.delete(found.id);
+        totalDeleted++;
+      }
+    }
+
+    // 2. isCorrect 再計算
+    for (const { problemId, correctAnswer } of patch.recalcCorrect) {
+      const attempts = await db.attempts
+        .where('problemId')
+        .equals(problemId)
+        .toArray();
+      for (const attempt of attempts) {
+        const shouldBeCorrect = attempt.userAnswer === correctAnswer;
+        if (attempt.isCorrect !== shouldBeCorrect && attempt.id !== undefined) {
+          await db.attempts.update(attempt.id, { isCorrect: shouldBeCorrect });
+          totalFixed++;
+        }
+      }
+    }
+
+    localStorage.setItem(patch.key, new Date().toISOString());
+  }
+
+  if (totalDeleted > 0 || totalFixed > 0) {
+    console.log(`[cleanup] Deleted ${totalDeleted} stale attempts, fixed ${totalFixed} isCorrect values.`);
+  }
+}

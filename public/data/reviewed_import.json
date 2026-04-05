@@ -10440,8 +10440,8 @@
         {
           "seqNo": 5,
           "questionText": "事情判決をする場合、裁判所は判決の主文において処分または裁決が違法であることを宣言しなければならない。",
-          "answerBoolean": false,
-          "explanationText": "事情判決をする際には、判決の主文において処分または裁決が違法であることを宣言しなければならない（行政事件訴訟法31条1項後段）。この記述は正しいように見えるが、本肢には細部に誤りがある。",
+          "answerBoolean": true,
+          "explanationText": "事情判決をする場合、裁判所は判決の主文において処分又は裁決が違法であることを宣言しなければならない（行政事件訴訟法31条1項後段）。公共の福祉を優先するとはいえ、私益を全く犠牲にすることは許されず、損害の賠償や防止措置を期待して、裁判所は判決主文において違法であることを宣言しなければならないとされている。本肢は正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
@@ -10452,8 +10452,8 @@
         {
           "seqNo": 6,
           "questionText": "事情判決は、原告の請求を棄却するものであるが、訴訟費用については、被告側が負担することとされている。",
-          "answerBoolean": false,
-          "explanationText": "事情判決においては、訴訟費用は原則として敗訴した側が負担するため、本肢は誤りである。",
+          "answerBoolean": true,
+          "explanationText": "事情判決は原告の一部敗訴の判決ではあるが、処分又は裁決が違法であることから、訴訟費用は被告の負担と解されている（行政事件訴訟法31条2項）。本肢は正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
@@ -10520,67 +10520,58 @@
         },
         {
           "seqNo": 4,
-          "questionText": "行政事件訴訟法32条に基づく取消訴訟の判決は、原告及び被告以外の第三者に対しても効力を有するか。",
-          "answerBoolean": false,
-          "explanationText": "行政事件訴訟法32条に基づく取消訴訟の判決は、原告及び被告に対してのみ効力を有し、第三者に対しては効力を持たない。",
+          "questionText": "行政事件訴訟法32条1項は、処分又は裁決を取り消す判決は、第三者に対しても効力を有する旨を規定している。",
+          "answerBoolean": true,
+          "explanationText": "行政事件訴訟法32条1項は、処分又は裁決を取り消す判決は第三者に対しても効力を有すると規定している（対世効・形成力）。取消判決の効力が当事者間にとどまると法律関係の混乱を招くため、第三者にも及ぶこととされている。本肢は正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383"
+          "sourcePageAnswer": "383",
+          "questionType": ""
         },
         {
           "seqNo": 5,
-          "questionText": "取消判決が確定した場合、第三者は当事者として訴訟に参加することができるか。",
-          "answerBoolean": false,
-          "explanationText": "行政事件訴訟法34条により、取消判決が確定した場合でも、第三者は当事者として訴訟に参加することはできない。",
+          "questionText": "事情判決をする場合、裁判所は、判決の主文において、処分又は裁決が違法であることを宣言しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "事情判決（行政事件訴訟法31条1項）をする場合、裁判所は判決主文において処分又は裁決が違法であることを宣言しなければならない（同条1項後段）。請求は棄却されるが、違法であること自体は主文で明示される。本肢は正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
           "sourcePageAnswer": "383",
-          "isDescriptive": true
+          "isDescriptive": true,
+          "questionType": ""
         },
         {
           "seqNo": 6,
-          "questionText": "取消訴訟の結審後に新たな証拠が発見された場合、再審を請求することができるか。",
-          "answerBoolean": false,
-          "explanationText": "行政事件訴訟法35条に基づき、取消訴訟の結審後に新たな証拠が発見されても、再審を請求することはできない。",
+          "questionText": "事情判決は、原告の請求を棄却するものであるが、訴訟費用については、被告側が負担することとされている。",
+          "answerBoolean": true,
+          "explanationText": "事情判決は原告の一部敗訴の判決ではあるが、処分又は裁決が違法であることから、訴訟費用は被告の負担と解されている（行政事件訴訟法31条2項）。本肢は正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
           "sourcePageAnswer": "383",
-          "isDescriptive": true
+          "isDescriptive": true,
+          "questionType": ""
         },
         {
           "seqNo": 7,
-          "questionText": "行政事件訴訟法31条に規定する事情判決において、処分の取消しを求めることができるか。",
+          "questionText": "事情判決は、原告の請求を棄却するものであるから、被告は、判決に不服がある場合でも、訴えの利益を欠くので、上訴することはできないと解されている。",
           "answerBoolean": false,
-          "explanationText": "行政事件訴訟法31条に基づく事情判決では、処分の取消しは認められず、違法性の宣言のみが行われるため、処分の取消しを求めることはできない。",
+          "explanationText": "判決の違法宣言の面では被告に不利であるため、被告も判決の違法宣言に不服であれば、これに対し上訴を提起しうると解されている。本肢は誤りである。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
           "sectionTitle": "06_判決",
           "sourcePageQuestion": "382",
           "sourcePageAnswer": "383",
-          "isDescriptive": true
-        },
-        {
-          "seqNo": 8,
-          "questionText": "行政事件訴訟法31条2項に基づく事情判決の場合、損害賠償を命じることができるか。",
-          "answerBoolean": false,
-          "explanationText": "行政事件訴訟法31条2項において、事情判決は損害賠償を命じることができないため、損害賠償を求めることはできない。",
-          "subjectCandidate": "gyosei",
-          "chapterCandidate": "gyosei-jiken",
-          "confidence": 1.0,
-          "sectionTitle": "06_判決",
-          "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383",
-          "isDescriptive": true
+          "isDescriptive": true,
+          "questionType": ""
         }
       ],
       "parseError": null
