@@ -389,6 +389,123 @@ def is_explanation_suspect(s: Suspect) -> bool:
     return "explanation_risk" in s.suspectFlags
 
 
+def is_structural_suspect(s: Suspect) -> bool:
+    return bool(set(s.suspectFlags) & STRUCTURAL_FLAGS)
+
+
+# ────────────────────────────────────────────────────────
+# 構造化監査: 論点ベースのチェック
+# ────────────────────────────────────────────────────────
+
+STRUCTURAL_FLAGS = frozenset([
+    "topic_missing_required_element",
+    "topic_contains_reversed_element",
+    "topic_explanation_off_target",
+    "topic_wrong_article_reference",
+])
+
+_topic_expectations_cache = None
+
+def _load_topic_expectations():
+    global _topic_expectations_cache
+    if _topic_expectations_cache is not None:
+        return _topic_expectations_cache
+    path = ROOT / "data" / "topic_expectations.json"
+    if not path.exists():
+        _topic_expectations_cache = []
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    _topic_expectations_cache = data.get("topics", [])
+    return _topic_expectations_cache
+
+
+def infer_topic_tag(b: dict) -> list[dict]:
+    """問題の questionText/explanationText/sectionTitle から該当する論点タグを推定"""
+    topics = _load_topic_expectations()
+    q = b.get("questionText", "")
+    exp = b.get("explanationText", "")
+    section = b.get("sectionTitle", "")
+    chapter = b.get("chapterCandidate", "")
+    combined = q + " " + exp
+
+    matched = []
+    for topic in topics:
+        # Chapter must match
+        if topic["chapter"] != chapter:
+            continue
+
+        # Section match (any of the listed sections)
+        section_match = any(s in section for s in topic.get("sections", []))
+
+        # Keyword match (any keyword present in question or explanation)
+        keyword_match = any(kw in combined for kw in topic.get("match_keywords", []))
+
+        if section_match and keyword_match:
+            matched.append(topic)
+        elif keyword_match and not topic.get("sections"):
+            matched.append(topic)
+
+    return matched
+
+
+def check_structural(b: dict, page: str) -> list[Suspect]:
+    """構造化監査: 論点期待値に基づくチェック"""
+    suspects = []
+    matched_topics = infer_topic_tag(b)
+
+    if not matched_topics:
+        return suspects
+
+    exp = b.get("explanationText", "")
+    q = b.get("questionText", "")
+
+    for topic in matched_topics:
+        topic_id = topic["id"]
+        topic_label = topic["label"]
+
+        # 1. 必須要素チェック
+        required = topic.get("required_elements", [])
+        missing = [elem for elem in required if elem not in exp]
+        if missing:
+            s = _make_suspect(b, page)
+            s.suspectFlags.append("topic_missing_required_element")
+            s.severity = "medium"
+            s.reasons.append(
+                f'論点[{topic_label}]: explanation に必須要素が欠落: {", ".join(missing)}'
+            )
+            s.priority = "P1"
+            suspects.append(s)
+
+        # 2. 逆転ワードチェック
+        reversed_elems = topic.get("reversed_elements", [])
+        found_reversed = [elem for elem in reversed_elems if elem in exp]
+        if found_reversed:
+            s = _make_suspect(b, page)
+            s.suspectFlags.append("topic_contains_reversed_element")
+            s.severity = "high"
+            s.reasons.append(
+                f'論点[{topic_label}]: explanation に逆転ワード: {", ".join(found_reversed)}'
+            )
+            suspects.append(s)
+
+        # 3. 条文番号チェック
+        expected_articles = topic.get("expected_articles", [])
+        forbidden_articles = topic.get("forbidden_articles", [])
+
+        for art in forbidden_articles:
+            if art in exp:
+                s = _make_suspect(b, page)
+                s.suspectFlags.append("topic_wrong_article_reference")
+                s.severity = "high"
+                s.reasons.append(
+                    f'論点[{topic_label}]: 禁止条文 {art} が explanation に含まれている'
+                )
+                suspects.append(s)
+
+    return suspects
+
+
 # ────────────────────────────────────────────────────────
 # メイン監査
 # ────────────────────────────────────────────────────────
@@ -401,6 +518,7 @@ ALL_CHECKS = [
     check_topic_confusion,
     check_explanation_risk,
     check_ocr_broken,
+    check_structural,
 ]
 
 
@@ -478,6 +596,23 @@ def run_audit(chapter_filter: Optional[str] = None, summary_granularity: str = "
                 s.questionText[:100], s.explanationText[:150],
             ])
 
+    # ── 出力: audit_structural.csv（構造化監査結果）──
+    structural_suspects = [s for s in all_suspects if is_structural_suspect(s)]
+    struct_path = OUT_DIR / f"audit_structural{suffix}.csv"
+    with open(struct_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "page", "seqNo", "problemId", "subject", "chapter", "section",
+            "severity", "priority", "suspectFlags", "reasons",
+            "questionText", "explanationText",
+        ])
+        for s in structural_suspects:
+            writer.writerow([
+                s.page, s.seqNo, s.problemId, s.subject, s.chapter, s.section,
+                s.severity, s.priority, "|".join(s.suspectFlags), " / ".join(s.reasons),
+                s.questionText[:100], s.explanationText[:150],
+            ])
+
     # ── 出力: 自動修正候補 JSON ──
     autofix = [asdict(s) for s in all_suspects if s.autoFixable]
     autofix_path = OUT_DIR / f"legal_autofix_candidates{suffix}.json"
@@ -493,7 +628,7 @@ def run_audit(chapter_filter: Optional[str] = None, summary_granularity: str = "
     summary_rows = build_chapter_summary(data, all_suspects, chapter_filter, summary_granularity, suffix)
 
     # ── コンソール出力 ──
-    _print_audit_summary(stats, legal_suspects, ocr_suspects, exp_suspects, autofix, manual, suffix)
+    _print_audit_summary(stats, legal_suspects, ocr_suspects, exp_suspects, structural_suspects, autofix, manual, suffix)
 
     return all_suspects, stats, data, summary_rows
 
@@ -521,10 +656,10 @@ def _write_suspect_csv(path: Path, suspects: list[Suspect], include_fix: bool = 
             writer.writerow(row)
 
 
-def _print_audit_summary(stats, legal_suspects, ocr_suspects, exp_suspects, autofix, manual, suffix):
+def _print_audit_summary(stats, legal_suspects, ocr_suspects, exp_suspects, structural_suspects, autofix, manual, suffix):
     scope = "全件" if not suffix else f"対象: {suffix[1:]}"
     print("=" * 60)
-    print(f"法学問題データ横断監査レポート v4 [{scope}]")
+    print(f"法学問題データ横断監査レポート v4.1 [{scope}]")
     print("=" * 60)
     print(f"総問題数: {stats['total_problems']}")
     print(f"suspect 検出数: {stats['total_suspects']}")
@@ -537,6 +672,7 @@ def _print_audit_summary(stats, legal_suspects, ocr_suspects, exp_suspects, auto
     print()
     print("■ レイヤー別:")
     print(f"  legal_inconsistency:  {len(legal_suspects)}")
+    print(f"  structural_audit:     {len(structural_suspects)}")
     print(f"  explanation_quality:   {len(exp_suspects)}")
     print(f"  ocr_suspect:          {len(ocr_suspects)}")
     print()
@@ -620,13 +756,21 @@ def build_chapter_summary(
         p2 = sum(1 for s in quality_suspects if classify_explanation_priority(s) == "P2")
         p3 = sum(1 for s in quality_suspects if classify_explanation_priority(s) == "P3")
 
+        structural = sum(1 for s in suspects if is_structural_suspect(s))
+        struct_missing = sum(1 for s in suspects if "topic_missing_required_element" in s.suspectFlags)
+        struct_reversed = sum(1 for s in suspects if "topic_contains_reversed_element" in s.suspectFlags)
+
         # 完了判定（OCRは別レーン → release_statusに影響しない）
         if critical > 0:
             status = "出荷不可"
         elif legal > 0:
             status = "要レビュー"
+        elif struct_reversed > 0:
+            status = "要レビュー"
         elif p1 > 0:
             status = "要レビュー"
+        elif struct_missing > 0:
+            status = "要確認"
         else:
             status = "OK"
 
@@ -637,6 +781,7 @@ def build_chapter_summary(
             "total_questions": info["total"],
             "critical_count": critical,
             "legal_inconsistency_count": legal,
+            "structural_issue_count": structural,
             "explanation_p1_count": p1,
             "explanation_p2_count": p2,
             "explanation_p3_count": p3,
@@ -648,7 +793,7 @@ def build_chapter_summary(
     summary_path = OUT_DIR / f"chapter_audit_summary{suffix}.csv"
     fieldnames = [
         "subject", "chapter", "group", "total_questions",
-        "critical_count", "legal_inconsistency_count",
+        "critical_count", "legal_inconsistency_count", "structural_issue_count",
         "explanation_p1_count", "explanation_p2_count", "explanation_p3_count",
         "ocr_suspect_count", "release_status",
     ]
@@ -663,24 +808,27 @@ def build_chapter_summary(
     print("=" * 100)
     print(f"{label}別サマリー")
     print("=" * 100)
-    print(f"{'グループ':42s} {'問題':>4s} {'crit':>4s} {'legal':>5s} {'P1':>3s} {'P2':>3s} {'P3':>3s} {'OCR':>4s} {'判定':>8s}")
-    print("-" * 100)
+    print(f"{'グループ':42s} {'問題':>4s} {'crit':>4s} {'legal':>5s} {'構造':>4s} {'P1':>3s} {'P2':>3s} {'P3':>3s} {'OCR':>4s} {'判定':>8s}")
+    print("-" * 110)
 
     ok_count = 0
     review_count = 0
     blocked_count = 0
+    check_count = 0
     for r in rows:
-        status_mark = {"OK": "✓", "要レビュー": "△", "出荷不可": "✗"}[r["release_status"]]
-        print(f"{r['group']:42s} {r['total_questions']:4d} {r['critical_count']:4d} {r['legal_inconsistency_count']:5d} {r['explanation_p1_count']:3d} {r['explanation_p2_count']:3d} {r['explanation_p3_count']:3d} {r['ocr_suspect_count']:4d} {status_mark} {r['release_status']}")
+        status_mark = {"OK": "✓", "要レビュー": "△", "出荷不可": "✗", "要確認": "○"}[r["release_status"]]
+        print(f"{r['group']:42s} {r['total_questions']:4d} {r['critical_count']:4d} {r['legal_inconsistency_count']:5d} {r['structural_issue_count']:4d} {r['explanation_p1_count']:3d} {r['explanation_p2_count']:3d} {r['explanation_p3_count']:3d} {r['ocr_suspect_count']:4d} {status_mark} {r['release_status']}")
         if r["release_status"] == "OK":
             ok_count += 1
+        elif r["release_status"] == "要確認":
+            check_count += 1
         elif r["release_status"] == "要レビュー":
             review_count += 1
         else:
             blocked_count += 1
 
-    print("-" * 100)
-    print(f"合計: {len(rows)} {label} | OK: {ok_count} | 要レビュー: {review_count} | 出荷不可: {blocked_count}")
+    print("-" * 110)
+    print(f"合計: {len(rows)} {label} | OK: {ok_count} | 要確認: {check_count} | 要レビュー: {review_count} | 出荷不可: {blocked_count}")
     print(f"出力: {summary_path}")
 
     return rows

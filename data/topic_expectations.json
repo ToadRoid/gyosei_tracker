@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "論点ごとの explanation 必須要素定義。構造化監査で使用。",
+    "updated": "2026-04-05"
+  },
+  "topics": [
+    {
+      "id": "jiken_filing_period",
+      "label": "取消訴訟の出訴期間",
+      "chapter": "gyosei-jiken",
+      "sections": ["04_被告適格・管轄・出訴期間"],
+      "match_keywords": ["出訴期間", "14条"],
+      "required_elements": ["6か月"],
+      "optional_elements": ["1年", "客観的出訴期間", "主観的出訴期間"],
+      "reversed_elements": ["3か月", "3ヶ月"],
+      "expected_articles": ["14条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_ex_officio_evidence",
+      "label": "職権証拠調べ",
+      "chapter": "gyosei-jiken",
+      "sections": ["05_取消訴訟の審理"],
+      "match_keywords": ["職権", "証拠調べ", "24条"],
+      "required_elements": ["職権", "意見"],
+      "optional_elements": ["弁論主義", "職権探知主義"],
+      "reversed_elements": ["聞く必要はない", "聞く必要がない", "意見を聞く必要はない"],
+      "expected_articles": ["24条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_third_party_effect",
+      "label": "取消判決の第三者効",
+      "chapter": "gyosei-jiken",
+      "sections": ["06_判決"],
+      "match_keywords": ["第三者", "32条", "対世効"],
+      "required_elements": ["第三者", "32条"],
+      "optional_elements": ["対世効", "形成力"],
+      "reversed_elements": ["第三者には及ばない", "第三者には効力を持たない", "第三者に対しては効力がない", "当事者間のみ"],
+      "expected_articles": ["32条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_binding_force",
+      "label": "取消判決の拘束力",
+      "chapter": "gyosei-jiken",
+      "sections": ["06_判決"],
+      "match_keywords": ["拘束力", "33条"],
+      "required_elements": ["33条", "拘束力"],
+      "optional_elements": ["関係行政庁", "処分庁"],
+      "reversed_elements": [],
+      "expected_articles": ["33条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_freedom_of_choice",
+      "label": "自由選択主義",
+      "chapter": "gyosei-jiken",
+      "sections": ["05_取消訴訟の審理", "08_無効等確認・不作為違法確認訴訟"],
+      "match_keywords": ["自由選択", "審査請求前置", "8条"],
+      "required_elements": ["自由選択"],
+      "optional_elements": ["8条", "審査請求前置"],
+      "reversed_elements": ["原則として審査請求前置"],
+      "expected_articles": ["8条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_plaintiff_standing",
+      "label": "原告適格",
+      "chapter": "gyosei-jiken",
+      "sections": ["03_原告適格・訴えの利益"],
+      "match_keywords": ["原告適格", "法律上の利益", "9条"],
+      "required_elements": ["法律上の利益"],
+      "optional_elements": ["9条", "反射的利益"],
+      "reversed_elements": [],
+      "expected_articles": ["9条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_disposability",
+      "label": "処分性",
+      "chapter": "gyosei-jiken",
+      "sections": ["02_処分性"],
+      "match_keywords": ["処分性", "処分の取消し", "3条"],
+      "required_elements": ["公権力"],
+      "optional_elements": ["権利義務", "法的地位", "直接"],
+      "reversed_elements": [],
+      "expected_articles": ["3条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_defendant",
+      "label": "被告適格",
+      "chapter": "gyosei-jiken",
+      "sections": ["04_被告適格・管轄・出訴期間"],
+      "match_keywords": ["被告", "11条"],
+      "required_elements": [],
+      "optional_elements": ["国", "公共団体", "11条"],
+      "reversed_elements": [],
+      "expected_articles": ["11条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_stay_of_execution",
+      "label": "執行停止",
+      "chapter": "gyosei-jiken",
+      "sections": ["07_執行停止"],
+      "match_keywords": ["執行停止", "25条"],
+      "required_elements": ["執行停止"],
+      "optional_elements": ["執行不停止の原則", "25条", "重大な損害"],
+      "reversed_elements": [],
+      "expected_articles": ["25条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "jiken_third_party_intervention",
+      "label": "訴訟参加",
+      "chapter": "gyosei-jiken",
+      "sections": ["05_取消訴訟の審理"],
+      "match_keywords": ["訴訟参加", "22条", "23条"],
+      "required_elements": ["訴訟参加"],
+      "optional_elements": ["22条", "23条", "第三者"],
+      "reversed_elements": [],
+      "expected_articles": ["22条", "23条"],
+      "forbidden_articles": []
+    },
+
+    {
+      "id": "fufuku_appeal_period",
+      "label": "審査請求期間",
+      "chapter": "gyosei-fufuku",
+      "sections": ["02_審査請求の要件・申立て"],
+      "match_keywords": ["審査請求期間", "18条"],
+      "required_elements": ["3か月"],
+      "optional_elements": ["18条", "主観的期間"],
+      "reversed_elements": ["60日", "30日"],
+      "expected_articles": ["18条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "fufuku_inaction_appeal",
+      "label": "不作為の審査請求",
+      "chapter": "gyosei-fufuku",
+      "sections": ["01_不服申立て（総論）", "02_審査請求の要件・申立て"],
+      "match_keywords": ["不作為", "3条"],
+      "required_elements": ["不作為"],
+      "optional_elements": ["3条", "処分をしていない"],
+      "reversed_elements": [],
+      "expected_articles": ["3条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "fufuku_instruction",
+      "label": "教示制度",
+      "chapter": "gyosei-fufuku",
+      "sections": ["06_教示制度と救済"],
+      "match_keywords": ["教示", "82条"],
+      "required_elements": ["教示"],
+      "optional_elements": ["82条", "書面", "利害関係人"],
+      "reversed_elements": [],
+      "expected_articles": ["82条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "fufuku_examiner",
+      "label": "審理員",
+      "chapter": "gyosei-fufuku",
+      "sections": ["03_審理手続・裁決", "審理員"],
+      "match_keywords": ["審理員", "9条"],
+      "required_elements": ["審理員"],
+      "optional_elements": ["9条", "指名"],
+      "reversed_elements": [],
+      "expected_articles": ["9条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "fufuku_stay_of_execution",
+      "label": "審査請求の執行停止",
+      "chapter": "gyosei-fufuku",
+      "sections": ["04_執行停止"],
+      "match_keywords": ["執行停止", "25条"],
+      "required_elements": ["執行停止"],
+      "optional_elements": ["25条", "審査庁"],
+      "reversed_elements": [],
+      "expected_articles": ["25条"],
+      "forbidden_articles": []
+    },
+
+    {
+      "id": "tetsuzuki_hearing_vs_explanation",
+      "label": "聴聞と弁明の区別",
+      "chapter": "gyosei-tetsuzuki",
+      "sections": ["05_不利益処分（聴聞）", "06_不利益処分（弁明）"],
+      "match_keywords": ["聴聞", "弁明"],
+      "required_elements": [],
+      "optional_elements": ["13条", "許認可の取消し", "資格・地位の剥奪"],
+      "reversed_elements": [],
+      "expected_articles": ["13条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "tetsuzuki_reason_statement",
+      "label": "理由提示",
+      "chapter": "gyosei-tetsuzuki",
+      "sections": ["03_申請に対する処分", "04_不利益処分（総論）"],
+      "match_keywords": ["理由", "8条", "14条"],
+      "required_elements": ["理由"],
+      "optional_elements": ["8条", "14条", "書面"],
+      "reversed_elements": [],
+      "expected_articles": ["8条", "14条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "tetsuzuki_adverse_disposition",
+      "label": "不利益処分の手続",
+      "chapter": "gyosei-tetsuzuki",
+      "sections": ["04_不利益処分（総論）"],
+      "match_keywords": ["不利益処分"],
+      "required_elements": ["不利益処分"],
+      "optional_elements": ["聴聞", "弁明", "13条"],
+      "reversed_elements": [],
+      "expected_articles": ["13条"],
+      "forbidden_articles": []
+    },
+    {
+      "id": "tetsuzuki_administrative_guidance",
+      "label": "行政指導",
+      "chapter": "gyosei-tetsuzuki",
+      "sections": ["07_行政指導"],
+      "match_keywords": ["行政指導", "32条", "33条", "34条", "35条"],
+      "required_elements": ["行政指導"],
+      "optional_elements": ["任意", "強制", "32条"],
+      "reversed_elements": [],
+      "expected_articles": ["32条", "33条", "34条", "35条"],
+      "forbidden_articles": []
+    }
+  ]
+}
