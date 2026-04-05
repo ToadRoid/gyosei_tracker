@@ -187,17 +187,11 @@ interface CleanupPatch {
 }
 
 const PATCHES: CleanupPatch[] = [
-  // v2: 2026-04-05 セクション04 問題データ修正
+  // v2: 無効化（lap1削除が不要だったため空にして残す）
   {
     key: 'cleanup_2026-04-05_v2',
     deleteAllAttempts: [],
-    deleteLap1: [
-      'KB2025-p133-q01',
-      'KB2025-p134-q01', 'KB2025-p134-q02', 'KB2025-p134-q03',
-      'KB2025-p134-q04', 'KB2025-p134-q05', 'KB2025-p134-q06', 'KB2025-p134-q07',
-      'KB2025-p135-q06', 'KB2025-p135-q07',
-      'KB2025-p136-q03',
-    ],
+    deleteLap1: [],
     recalcCorrect: [],
   },
   // v3: 2026-04-05 p138-q05 answerBoolean 修正 (false→true)
