@@ -14,6 +14,12 @@ const AI_SERVICES = [
   { name: 'Gemini', url: 'https://gemini.google.com/app', emoji: '✨', btnClass: 'border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100', openClass: 'bg-blue-600' },
 ] as const;
 
+function isTextPossiblyBroken(text: string): boolean {
+  if (!text || text.length < 20) return true;
+  if (text.includes('OCR') || text.includes('読取困難')) return true;
+  return false;
+}
+
 async function buildDeepDivePrompt(topic: WeakTopicInput): Promise<string> {
   const ids = topic.candidateProblemIds;
   const [problems, attrs, attempts] = await Promise.all([
@@ -30,7 +36,7 @@ async function buildDeepDivePrompt(topic: WeakTopicInput): Promise<string> {
     }
   }
 
-  const problemLines = problems.map((p) => {
+  const problemLines = problems.map((p, i) => {
     const attr = attrMap.get(p.problemId);
     const attempt = latestAttempt.get(p.problemId);
     const qText = p.cleanedText || p.rawText || '';
@@ -39,28 +45,141 @@ async function buildDeepDivePrompt(topic: WeakTopicInput): Promise<string> {
     const result = attempt ? (attempt.isCorrect ? '正解' : '不正解') : '未回答';
     const rawExp = p.rawExplanationText ?? '';
     const explanation = attr?.explanationText || (rawExp.startsWith('[解説読取困難') ? '' : rawExp);
-    return `問題: ${qText}\n正解: ${correctAns} / 私の回答: ${userAns}（${result}）\n${explanation ? `解説: ${explanation}` : ''}`;
+    const broken = isTextPossiblyBroken(qText);
+    return `問題${i + 1}:
+  questionText: ${qText}
+  correctAnswer: ${correctAns}
+  userAnswer: ${userAns}
+  result: ${result}
+  explanation: ${explanation || '（なし）'}
+  isTextPossiblyBroken: ${broken}`;
   }).join('\n---\n');
 
   const accPct = Math.round(topic.accuracy * 100);
+  const wrongCount = problems.filter((p) => {
+    const attempt = latestAttempt.get(p.problemId);
+    return attempt && !attempt.isCorrect;
+  }).length;
 
-  return `行政書士試験の以下のテーマについて、試験に合格できるレベルまで深く詳しく解説してください。
+  return `あなたは行政書士試験の学習支援を行う講師です。
+目的は、ユーザーの理解を深めることではなく、**次回同種問題で正答できる状態にすること**です。
+総論を広げすぎず、**ユーザーが実際に間違えた問題の誤答原因を特定し、再発防止につながる解説**を最優先してください。
 
 【テーマ】${topic.sectionTitle}
 【科目】${topic.subjectName} > ${topic.chapterName}
-【正答率】${accPct}%（${topic.totalAttempts}問回答）
+【正答率】${accPct}%（${topic.totalAttempts}問回答、不正解${wrongCount}問）
 
 【この分野で私が解いた問題と結果】
 ${problemLines}
 
-以下の観点で解説してください：
-1. 根拠となる条文と趣旨（なぜこのルールが存在するか）
-2. 重要判例（判例名・事案の概要・判旨のポイント）
-3. 私が間違えた問題について、なぜ間違えたのか・どう考えれば正解できたか
-4. 正解した問題も含め、この分野の知識を体系的に整理
-5. 試験で問われる典型パターンと解き方のコツ
-6. 類似論点との比較表（混同しやすいものを整理）
-7. この分野で確実に得点するために覚えるべきことリスト`;
+【最重要ルール】
+1. **必ず各問題について、問題文・ユーザーの回答・正解をセットで再掲すること。**
+   - ユーザーが問題文を記憶している前提で説明してはいけない。
+   - どの文言が正誤を分けるのかを、問題文の中の具体的表現に即して示すこと。
+
+2. **必ず実際の条文・判例・制度趣旨に照らして説明すること。**
+   - 条文ベースで確認できる論点は、まず条文を優先すること。
+   - 判例を出す場合は、論点との関連が明確なものだけに限定すること。
+   - 不確かな記憶で断定しないこと。条文上・判例上の根拠関係を明示すること。
+
+3. **章全体の総論を広げすぎないこと。**
+   - ユーザーが聞いているのは「この分野の一般論」ではなく、「自分がなぜこの問題で間違えたか」である。
+   - まずは誤答問題ごとに、誤読・混同・誤学習の原因を特定すること。
+   - 総論や体系整理は、個別誤答の分析のあとに、必要な範囲でのみ行うこと。
+
+4. **得点向上に直結する説明をすること。**
+   - 「どう考えればこの肢を切れたか」
+   - 「次に同じパターンが出たら何を見ればよいか」
+   - 「混同しやすい対立概念は何か」
+   まで必ず示すこと。
+
+5. **ユーザーの誤答原因を具体的に言語化すること。**
+   - 例：
+     - 被告適格と裁判上の一切の行為を混同している
+     - 主観的出訴期間と客観的出訴期間を逆に覚えている
+     - 処分取消訴訟と裁決取消訴訟の被告を混同している
+     - 管轄を審査請求の制度と混同している
+   - 「理解不足」といった曖昧な表現で済ませないこと。
+
+6. **問題文のどこが誤りか、どこが正しいかをピンポイントで示すこと。**
+   - 「この一語が違う」
+   - 「この主語の取り違えが誤り」
+   - 「この起算点が違う」
+   のように、肢の判定ポイントを明確にすること。
+
+7. **ユーザーが正解した問題も、安定して理解しているのか、たまたま当たったのかを見極めること。**
+
+8. **説明がブレないように、同一論点では同じ整理軸を使うこと。**
+
+【出力の基本方針】
+- まず最初に、今回の問題群における**主要な誤答原因の要約**を2〜5個程度で示すこと。
+- その後、**各問題ごと**に以下の形式で説明すること。
+- 最後に、その分野を解くための**判定ルール**と**再発防止の暗記ポイント**を整理すること。
+
+【各問題の出力形式】
+各問題について、必ず次の順序で書くこと。
+
+### 問題番号
+
+【問題文】
+（問題文をそのまま再掲）
+
+【あなたの回答】○ or ×
+
+【正解】○ or ×
+
+【結論】この問題は正しい / 誤り
+
+【どの文言が正誤を分けるか】
+- 問題文中の該当箇所を抜き出して示すこと
+- どの表現が正しく、どの表現が誤りかを明示すること
+
+【根拠】
+- 該当条文
+- 必要に応じて制度趣旨
+- 必要に応じて重要判例
+を簡潔かつ正確に示すこと
+
+【なぜあなたが間違えた可能性が高いか】
+- ユーザーの誤解・混同パターンを具体的に指摘すること
+- 「〜と〜を混同した可能性が高い」の形で明示すること
+
+【次に同じ問題が出たときの判定基準】
+- 本試験で瞬時に使える判断基準を1〜3行で示すこと
+
+【類似論点との違い】
+- その問題で混同しやすい論点があれば、1〜3行で比較すること
+
+【全体の最後に必ず入れるもの】
+1. 今回の誤答原因の総括
+2. 混同しやすい論点の比較表
+3. この分野で確実に得点するための暗記ルール
+4. 「今回のユーザーは何を誤学習したか」の明示
+5. 次に解くときのチェックポイント
+
+【表現上の禁止事項】
+- ユーザーが問題文を覚えている前提で説明しない
+- いきなり章全体の総論から入らない
+- 条文上の根拠があるのに、ふわっとした説明で済ませない
+- 正解理由だけ述べて、誤答原因分析を省略しない
+- 「重要です」「覚えましょう」だけで終わらせない
+- 似た論点を並べるだけで、違いを明示しない
+- 問題群に現れていない論点を長々と展開しない
+
+【優先順位】
+1. 問題文・回答・正解の再掲
+2. その問題の正誤判定
+3. 誤答原因の特定
+4. 次回正解するための判定基準
+5. 条文・判例・制度趣旨
+6. 必要最小限の体系整理
+
+【ゴール】
+最終的にユーザーが
+- この問題をなぜ間違えたか
+- 次に同種問題が出たらどこを見ればいいか
+- 何を混同していたのか
+を、自分で説明できる状態にすること。`;
 }
 
 function AiDeepDiveButtons({
