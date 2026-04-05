@@ -265,6 +265,20 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p129-q04', correctAnswer: false },
     ],
   },
+  // v7: 2026-04-05 原本照合p143-152 正解修正
+  {
+    key: 'cleanup_2026-04-05_v7_p143_p152',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p143-q01', correctAnswer: true },
+      { problemId: 'KB2025-p143-q04', correctAnswer: true },
+      { problemId: 'KB2025-p143-q05', correctAnswer: true },
+      { problemId: 'KB2025-p144-q04', correctAnswer: true },
+      { problemId: 'KB2025-p144-q06', correctAnswer: true },
+      { problemId: 'KB2025-p147-q05', correctAnswer: true },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -333,7 +347,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-05-v6';
+const DATA_VERSION = '2026-04-05-v7';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
