@@ -217,7 +217,7 @@
         {
           "seqNo": 6,
           "questionText": "内閣総理大臣の報酬は、在任中、これを減額することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "憲法には内閣総理大臣の在任中の報酬の減額を禁止する規定はない。",
           "subjectCandidate": "憲法",
           "chapterCandidate": "kenpo-tochi",
@@ -229,7 +229,7 @@
         {
           "seqNo": 7,
           "questionText": "内閣総理大臣が行政各部に対し指揮監督権を行使するためには、内閣総理大臣が決定した方針が存在する必要がある。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "判例（最大判平7.2.22：フジチヤ事件札孔ート）は、内閣総理大臣の強力な監督権から、本肢のように判断する。内閣総理大臣は、国務大臣の任免権を有し、内閣を代表して行政各部を指揮監督する広範な権能（憲法72条）を有するなど、内閣の権威を剥奪する法的障害はない。",
           "subjectCandidate": "憲法",
           "chapterCandidate": "",
@@ -2225,7 +2225,7 @@
         {
           "seqNo": 1,
           "questionText": "公有水面の埋立免許は、 謁学上の特許にあたる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "公有水面の埋立免許は、特定の資格者に公有水面を埋め立てるという新たな権利を付与するものであり、謁学上の「特許」にあたる。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -2237,7 +2237,7 @@
         {
           "seqNo": 2,
           "questionText": "道路に電柱を設置するための道路管理者の許可は、 謁学上の特許にあたる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "道路に電柱を設置するための道路管理者の許可は、道路の利用権を新たに付与するものであり、謁学上の「特許」にあたる。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -2249,7 +2249,7 @@
         {
           "seqNo": 3,
           "questionText": "外国人の帰化の許可は、 謁学上の特許にあたる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "帰化は、外国人が日本国籍を取得することであり、帰化の許可は日本国籍を付与する特許にあたる。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -2261,7 +2261,7 @@
         {
           "seqNo": 4,
           "questionText": "公益法人設立の許可は、 謁学上の特許にあたる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "公益法人に対して新たに権利能力を付与するものであり、謁学上の「特許」にあたる。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -2285,7 +2285,7 @@
         {
           "seqNo": 6,
           "questionText": "医師の免許は、 謁学上の特許にあたらない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "各種の営業免許は謁学上の特許ではなく、「許可」にあたり、医師の免許も営業許可の１つである。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -3125,7 +3125,7 @@
         {
           "seqNo": 1,
           "questionText": "附款は、法律行為的行政行為にのみ付することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "附款とは、行政行為の本来の内容に付加される従たる内容で行政庁の意思表示であるから、附款は法律行為的行政行為にのみ付することができ、意思表示を要素としない準法律行為的行政行為には、附款を付することはできない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
@@ -6801,7 +6801,7 @@
         {
           "seqNo": 5,
           "questionText": "意見公募手続について、当該手続の実施について周知することおよび当該手続の実施に関連する情報を提供することは、命令等制定機関の努力義務にとどまり、義務とはされていない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "本設は、行政手続法41条のとおりであり、多くの人が意見提出の機会および十分な検討時間が確保できるように定められたものであり、意見公募手続の周知等は努力義務である。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -7697,7 +7697,7 @@
         {
           "seqNo": 4,
           "questionText": "不服申立てを審査する理由は、書証の必要に応じて、書類その他の物件の所持人にそれらの提出を命ずることができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "審理員は、審査請求人等の申立てまたは職権により、非審理その他の物件の所持人に対し、その物件の提出を求めることができる（行政不服審査法33条4）。提出命令を発することはできない。",
           "subjectCandidate": "審査請求の審理手続",
           "chapterCandidate": "gyosei-fufuku",
@@ -9849,7 +9849,7 @@
         {
           "seqNo": 4,
           "questionText": "行政事件訴訟法31条1項に規定する事情判決は、行政事件訴訟に特有な制度であり、行政不服審査法には、類似の事情裁決という制度はない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "行政不服審査法には、事情判決の制度に類似した事情裁決の制度がある（行政不服審査法45条3項）。",
           "subjectCandidate": "不明",
           "chapterCandidate": "gyosei-jiken",
@@ -9861,7 +9861,7 @@
         {
           "seqNo": 5,
           "questionText": "事情判決をする場合、裁判所は、判決の主文において、処分または裁決が違法であることを宣言しなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "公共の福祉を優先するとはいえ、私人を全く犠牲にすることは許されず、損害の賠償や防止措置を期待して、裁判所は、判決文において処分または裁決が違法であることを宣言しなければならない（行政事件訴訟法31条1項後段）。",
           "subjectCandidate": "不明",
           "chapterCandidate": "gyosei-jiken",
@@ -13769,7 +13769,7 @@
         {
           "seqNo": 4,
           "questionText": "事務監査請求は、当該普通地方公共団体の住民であれば、日本国民であるか否か、また選挙権を有するか否かにかかわらず、これを請求することができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "選挙権を有する者に、その総数の50分の1以上の者の連署をもって、その代表者から、普通地方公共団体の監査委員に対し、当該普通地方公共団体の事務の執行に関し、監査の請求をすることができる（事務監査請求・地方自治法75条1項）。したがって、事務監査請求をするには、日本国民であること、選挙権を有することが必要である。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -15797,7 +15797,7 @@
         {
           "seqNo": 3,
           "questionText": "代理権は、本人の死亡により消滅する。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "本人の死亡は、代理権の消滅事由の1つではない（民法111条1項1号）。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
