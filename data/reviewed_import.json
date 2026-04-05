@@ -5945,7 +5945,7 @@
         {
           "seqNo": 1,
           "questionText": "聴聞手続は行政庁の通知によって開始される。通知文書には、予定される不利益処分の内容、聴聞期日、場所等が必ず記載されていなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "行政庁による聴聞の通知文書には、予定される不利益処分の内容、聴聞期日、場所等を必ず記載しなければならない（行政手続法15条1項各号）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -10005,7 +10005,7 @@
         {
           "seqNo": 2,
           "questionText": "仮の義務付けおよび仮の差止めは、それぞれ義務付け訴訟および差止訴訟を提起しなければ申し立てることができないが、執行停止については、取消訴訟または無効確認訴訟を提起しなくても、単独で申し立てることができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "執行停止は取消訴訟等を提起しなければ申し立てることができないか（行政事件訴訟法25条2項、無効確認訴訟にかかる第38条3項再判）のち、執行停止については、取消訴訟または無効確認訴訟または無効確認訴訟...",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-jiken",
@@ -10029,7 +10029,7 @@
         {
           "seqNo": 4,
           "questionText": "従来、きわめて厳格であった「回復の困難な損害を避けるため緊急の必要があるとき」という執行停止の要件が、「重大な損害を避けるため緊急の必要があるとき」とされ、平成16年に改正前に改緩和された。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "平成16年改正により、行政訴訟や社会の多様化に対応するため、「回復の困難な損害」から「重大な損害」という文言になった（行政事件訴訟法25条2項）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-jiken",
@@ -10073,7 +10073,7 @@
         {
           "seqNo": 1,
           "questionText": "処分の執行停止に関する決定をなすにあたり、裁判所は、あらかじめ、当事者の意見をきかなければならないが、口頭弁論を経る必要はない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "執行停止の決定は、口頭弁論を経ないですることができるが、あらかじめ、当事者の意見をきかなければならない。（行政事件訴訟法25条6項）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-jiken",
@@ -12689,7 +12689,7 @@
         {
           "seqNo": 5,
           "questionText": "普通地方公共団体の常勤の職員は、監査委員を兼務することができない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "監査委員は、地方公共団体の常勤の職員および短時間勤務職員と兼ねることができない（地方自治法196条3項）。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -12813,7 +12813,7 @@
         {
           "seqNo": 1,
           "questionText": "都道府県議会は、自治事務に関しては、国の法律に違反しない限り条例を制定できるが、法定受託事務については、国の法律の特別の定めがない限り条例を制定できない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "普通地方公共団体は、自治事務と法定受託事務の区別なく、法律に違反しない限りにおいてその事務に関し、条例を制定することができる（地方自治法14条1項）。法定受託事務は、県（または指定都市）が本来処理結果を求めるべき責務に属するのであって、地方公共団体の事務であるから、14条に基づき地方議会の条例制定権限（96条1項1号）は、自治事務、法定受託事務の双方に及ぶことになる。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -12849,7 +12849,7 @@
         {
           "seqNo": 4,
           "questionText": "普通地方公共団体は、法律の特別の定めがあるものを除くほか、その条例中に、条例に違反した者に対し、刑罰を科する旨の規定を設けることができるが、刑罰の種類は、罰金及び科料に限られ、懲役や禁錮は、設けることができない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "普通地方公共団体は、条例中に、2年以下の懲役もしくは禁錮、100万円以下の罰金、拘留、科料、若しくは没収の刑罰を科する旨の規定を設けることができるから（地方自治法14条3項）。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -12949,7 +12949,7 @@
         {
           "seqNo": 1,
           "questionText": "法律の委任がある事項につき、委任の範囲内で条例に罰則を定めることは可能である。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "条例は法律に基づするものであるから、法律の授権が相当な程度に具体的であり、限定されていれば、条例によって刑罰を定めることができる（最大判昭37・5・30）。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -14553,7 +14553,7 @@
         {
           "seqNo": 1,
           "questionText": "国地方係争処理委員会の委員は総務大臣が両議院の同意を得て任命し、また自治紛争処理委員は、事件ごとに総務大臣または都道府県知事が任命する。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "国地方係争処理委員会の委員は、両議院の同意を得て総務大臣が任命し、自治法250条の9第1項。自治紛争処理委員は、事件ごとに総務大臣または都道府県知事が任命する。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -15853,7 +15853,7 @@
         {
           "seqNo": 1,
           "questionText": "Ａは、Ａ所有する地の売主権設定に関する代理権をＢに授与していないのに、ＣにＢに代理権を授与した旨を表示していたところ、Ｂは、Ａに無断でＡの代理人として当該土地を目的とした売買契約をＣと締結した。Ｃは、Ｂに土地売却の代理権があると信ずべき正当な理由があるときは、Ａに対して土地の引渡しを請求することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "○　第三者（Ｃ）に対して他人（Ｂ）に代理権を与えた旨を表示した者（Ａ）は、その他人（Ｂ）が第三者（Ｃ）との間で行為をしたような状況において、\n善意の第三者（Ｃ）がその行為についての代理権があると信ずべき正当な理由があるときに限り、その行為についての責任を負う（10条2項）。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
@@ -15901,7 +15901,7 @@
         {
           "seqNo": 5,
           "questionText": "Ａは、ＢにＣから50万円を借り入れる旨の金銭消費貸借契約の代理権を授与したが、撤回した。Ｂは、Ａに無断でＡの代理人として、100万円の金銭消費貸借契約を締結した。この100万円の借入れに関する代理権がＢにあると信ずべき正当な理由があるときは、Ａに対して100万円の貸金返還請求をすることができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "○　他人（Ｂ）に代理権を与えた者（Ａ）は、代理権の「消滅後」に、\nその代理権の「範囲内」においてその他人（Ｂ）が第三者（Ｃ）との\n間でその行為をしたような状況において、善意の第三者（Ｃ）がその\n行為についての代理権があると信ずべき正当な理由があるときに限り、\nその行為についての責任を負う（民法112条2項）。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
@@ -16905,7 +16905,7 @@
         {
           "seqNo": 2,
           "questionText": "AがBに電化製品を売却し、Bの任意の支払方法によ  き、数回の期日の分割して弁済するとの明示の利息支払約束がないでした場合、Bが1回でも支払を怠ればAの請求により前後に残債務全部弁済するときは時効が成立する。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "判例（最判昭42.6.23）において、割賦の利益支払約定が付与しされ契約の期から1回関内支払の不履行があっても、何ら減免減量との評定がされている場合には非実行する。債権者が残務債務の消を求める言ありのお意表示をしたとき限り、その時から残余金額について消滅時効が進行するとしている。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
