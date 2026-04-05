@@ -234,6 +234,23 @@ const PATCHES: CleanupPatch[] = [
     ],
     recalcCorrect: [],
   },
+  // v5: 2026-04-05 原本照合p133-142 重複削除+正解修正
+  {
+    key: 'cleanup_2026-04-05_v5_p133_p142',
+    deleteAllAttempts: [
+      // p134 重複q6削除 → 旧q6,q7の回答リセット
+      'KB2025-p134-q06', 'KB2025-p134-q07',
+      // p136 重複q4削除 → 旧q4,q5の回答リセット
+      'KB2025-p136-q04', 'KB2025-p136-q05',
+      // p140 誤コピーq5-q7削除
+      'KB2025-p140-q05', 'KB2025-p140-q06', 'KB2025-p140-q07',
+    ],
+    deleteLap1: [],
+    recalcCorrect: [
+      // p142-q4: false→true
+      { problemId: 'KB2025-p142-q04', correctAnswer: true },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -302,7 +319,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-05-v4';
+const DATA_VERSION = '2026-04-05-v5';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

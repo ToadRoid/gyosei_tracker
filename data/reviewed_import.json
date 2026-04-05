@@ -10034,18 +10034,6 @@
         },
         {
           "seqNo": 6,
-          "questionText": "処分があった後に当該処分をした行政庁の権限が他の行政庁に承継された場合には、当該処分をした行政庁のほか、権限を承継した行政庁も取消訴訟の被告適格を有する。",
-          "answerBoolean": false,
-          "explanationText": "処分があった後に当該処分をした行政庁の権限が他の行政庁に承継された場合には、権限を承継した行政庁が所属する国又は公共団体を被告として提起しなければならない（行政事件訴訟法11条1項・2項参照）。旧庁と新庁の双方が並列で被告適格を持つわけではないため、本肢は誤りである。",
-          "subjectCandidate": "gyosei",
-          "chapterCandidate": "gyosei-jiken",
-          "confidence": 1.0,
-          "sectionTitle": "04_被告適格・管轄・出訴期間",
-          "sourcePageQuestion": "370",
-          "sourcePageAnswer": "371"
-        },
-        {
-          "seqNo": 7,
           "questionText": "処分をした行政庁は、当該処分の取消訴訟について、裁判上の一切の行為をする権限を有する。",
           "answerBoolean": true,
           "explanationText": "行政事件訴訟法11条6項は、第1項により国又は公共団体を被告とする訴訟について、処分又は裁決をした行政庁に裁判上の一切の行為をする権限を認める規定である。本肢は正しい。",
@@ -10196,18 +10184,6 @@
         },
         {
           "seqNo": 4,
-          "questionText": "行政事件訴訟では、原則として審査請求前置主義が採られていることから、処分の取消しの訴えは、法律に別段の定めがない限り、処分についての審査請求に対する裁決を経た後でなければ、提起することはできない。",
-          "answerBoolean": false,
-          "explanationText": "取消訴訟の係属中に審査請求がされた場合、裁判所は訴訟手続を中止することができるため、審査請求を経る必要はない。行政事件訴訟法23条に基づき、本肢は誤りである。",
-          "subjectCandidate": "gyosei",
-          "chapterCandidate": "gyosei-jiken",
-          "confidence": 1.0,
-          "sectionTitle": "05_取消訴訟の審理",
-          "sourcePageQuestion": "374",
-          "sourcePageAnswer": "375"
-        },
-        {
-          "seqNo": 5,
           "questionText": "審査請求の前置が処分取消訴訟の要件と切れている場合には、その審査請求は適法なものでなければならないが、行政庁が誤って不適法として却下したときは、却下裁決に対する取消訴訟を提起すべきこととなる。",
           "answerBoolean": false,
           "explanationText": "審査請求が適法でなければ、却下裁決に対する取消訴訟を提起する必要はない。審査請求前置がある場合、取り下げられた場合の扱いについても明確な規定があるため、本肢は誤りである。",
@@ -10530,48 +10506,6 @@
           "sourcePageQuestion": "382",
           "sourcePageAnswer": "383",
           "questionType": ""
-        },
-        {
-          "seqNo": 5,
-          "questionText": "事情判決をする場合、裁判所は、判決の主文において、処分又は裁決が違法であることを宣言しなければならない。",
-          "answerBoolean": true,
-          "explanationText": "事情判決（行政事件訴訟法31条1項）をする場合、裁判所は判決主文において処分又は裁決が違法であることを宣言しなければならない（同条1項後段）。請求は棄却されるが、違法であること自体は主文で明示される。本肢は正しい。",
-          "subjectCandidate": "gyosei",
-          "chapterCandidate": "gyosei-jiken",
-          "confidence": 1.0,
-          "sectionTitle": "06_判決",
-          "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383",
-          "isDescriptive": true,
-          "questionType": ""
-        },
-        {
-          "seqNo": 6,
-          "questionText": "事情判決は、原告の請求を棄却するものであるが、訴訟費用については、被告側が負担することとされている。",
-          "answerBoolean": true,
-          "explanationText": "事情判決は原告の一部敗訴の判決ではあるが、処分又は裁決が違法であることから、訴訟費用は被告の負担と解されている（行政事件訴訟法31条2項）。本肢は正しい。",
-          "subjectCandidate": "gyosei",
-          "chapterCandidate": "gyosei-jiken",
-          "confidence": 1.0,
-          "sectionTitle": "06_判決",
-          "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383",
-          "isDescriptive": true,
-          "questionType": ""
-        },
-        {
-          "seqNo": 7,
-          "questionText": "事情判決は、原告の請求を棄却するものであるから、被告は、判決に不服がある場合でも、訴えの利益を欠くので、上訴することはできないと解されている。",
-          "answerBoolean": false,
-          "explanationText": "判決の違法宣言の面では被告に不利であるため、被告も判決の違法宣言に不服であれば、これに対し上訴を提起しうると解されている。本肢は誤りである。",
-          "subjectCandidate": "gyosei",
-          "chapterCandidate": "gyosei-jiken",
-          "confidence": 1.0,
-          "sectionTitle": "06_判決",
-          "sourcePageQuestion": "382",
-          "sourcePageAnswer": "383",
-          "isDescriptive": true,
-          "questionType": ""
         }
       ],
       "parseError": null
@@ -10620,7 +10554,7 @@
         },
         {
           "seqNo": 4,
-          "questionText": "処分または裁決を取り消す判決により権利を害された第三者で、自己の商めに帰することができない理由により訴訟に参加することができなかったため判決に影響を及ぼすべき攻撃または防御の方法を提出することができなかったものは、これを理由として、確定の終局判決に対し、再審の訴えをもって、不服の申立てをすることができる。",
+          "questionText": "処分または裁決を取り消す判決により権利を害された第三者で、自己の責めに帰することができない理由により訴訟に参加することができなかったため判決に影響を及ぼすべき攻撃または防御の方法を提出することができなかったものは、これを理由として、確定の終局判決に対し、再審の訴えをもって、不服の申立てをすることができる。",
           "answerBoolean": true,
           "explanationText": "行政事件訴訟法34条は、処分又は裁決を取り消す判決により権利を害された第三者で、自己の責めに帰することができない理由により訴訟に参加できなかったものは、確定判決に対し再審の訴えで不服申立てができると定めている（同条1項・2項）。本肢は正しい。",
           "subjectCandidate": "gyosei",
@@ -10690,8 +10624,8 @@
         {
           "seqNo": 4,
           "questionText": "平成16年改正により、行政事件訴訟法の執行停止要件中の「回復の困難な損害」という概念が「重大な損害」に改められた。",
-          "answerBoolean": false,
-          "explanationText": "平成16年改正において、執行停止要件の「回復の困難な損害」は「重大な損害」に改められていないため、本肢は誤りである。",
+          "answerBoolean": true,
+          "explanationText": "平成16年改正により、行政事件訴訟法25条2項の執行停止の要件が「回復の困難な損害を避けるため緊急の必要があるとき」から「重大な損害を避けるため緊急の必要があるとき」に改められた。本肢は正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
