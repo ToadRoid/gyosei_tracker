@@ -41,3 +41,10 @@ yarn-error.log*
 next-env.d.ts
 tmp/
 images/
+
+# audit generated outputs (re-generatable via scripts/audit_legal_consistency.py)
+data/audit_*.csv
+data/chapter_audit_summary*.csv
+data/legal_audit_report*.csv
+data/legal_autofix_candidates*.json
+data/legal_manual_review_queue*.csv
