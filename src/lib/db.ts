@@ -179,6 +179,7 @@ export function generateProblemId(bookId: string, pageNo: number, seq = 1): stri
 interface CleanupPatch {
   key: string;               // localStorage キー（ユニークにする）
   deleteLap1: string[];       // lap1 の attempt を削除する problemId 一覧
+  deleteAllAttempts: string[]; // 全 attempt を削除する problemId 一覧（未回答状態に戻す）
   recalcCorrect: {            // isCorrect を再計算する problemId と正解
     problemId: string;
     correctAnswer: boolean;
@@ -189,6 +190,7 @@ const PATCHES: CleanupPatch[] = [
   // v2: 2026-04-05 セクション04 問題データ修正
   {
     key: 'cleanup_2026-04-05_v2',
+    deleteAllAttempts: [],
     deleteLap1: [
       'KB2025-p133-q01',
       'KB2025-p134-q01', 'KB2025-p134-q02', 'KB2025-p134-q03',
@@ -201,6 +203,7 @@ const PATCHES: CleanupPatch[] = [
   // v3: 2026-04-05 p138-q05 answerBoolean 修正 (false→true)
   {
     key: 'cleanup_2026-04-05_v3_p138q05',
+    deleteAllAttempts: [],
     deleteLap1: [],
     recalcCorrect: [
       { problemId: 'KB2025-p138-q05', correctAnswer: true },
@@ -209,6 +212,7 @@ const PATCHES: CleanupPatch[] = [
   // v3b: 2026-04-05 p138-q02 第三者効 answerBoolean 修正 (false→true)
   {
     key: 'cleanup_2026-04-05_v3b_p138q02',
+    deleteAllAttempts: [],
     deleteLap1: [],
     recalcCorrect: [
       { problemId: 'KB2025-p138-q02', correctAnswer: true },
@@ -217,27 +221,24 @@ const PATCHES: CleanupPatch[] = [
   // v3c: 2026-04-05 p141-q04 再審の訴え answerBoolean 修正 (false→true)
   {
     key: 'cleanup_2026-04-05_v3c_p141q04',
+    deleteAllAttempts: [],
     deleteLap1: [],
     recalcCorrect: [
       { problemId: 'KB2025-p141-q04', correctAnswer: true },
     ],
   },
-  // v4: 2026-04-05 p139-q05,q06 正誤逆転修正 + p140-q04 正誤修正
+  // v4: 2026-04-05 p139-p140 正誤逆転・架空問題修正 → 全attempt削除して未回答に戻す
   {
     key: 'cleanup_2026-04-05_v4_p139_p140',
-    deleteLap1: [
-      // p140 q4-q8 は問題文が架空だったため全削除
+    deleteLap1: [],
+    deleteAllAttempts: [
+      // p139 q5,q6: 正誤逆転していたため回答ログ削除
+      'KB2025-p139-q05', 'KB2025-p139-q06',
+      // p140 q4-q8: 架空問題だったため全削除
       'KB2025-p140-q04', 'KB2025-p140-q05', 'KB2025-p140-q06',
       'KB2025-p140-q07', 'KB2025-p140-q08',
     ],
-    recalcCorrect: [
-      // p139 q5: false → true
-      { problemId: 'KB2025-p139-q05', correctAnswer: true },
-      // p139 q6: false → true
-      { problemId: 'KB2025-p139-q06', correctAnswer: true },
-      // p140 q4: false → true (第三者効)
-      { problemId: 'KB2025-p140-q04', correctAnswer: true },
-    ],
+    recalcCorrect: [],
   },
   // ─── 今後の修正はここに追加 ───
 ];
@@ -250,6 +251,20 @@ export async function runOneTimeCleanup(): Promise<void> {
 
   for (const patch of PATCHES) {
     if (localStorage.getItem(patch.key)) continue;
+
+    // 0. 全 attempt 削除（未回答状態に戻す）
+    for (const pid of patch.deleteAllAttempts ?? []) {
+      const all = await db.attempts
+        .where('problemId')
+        .equals(pid)
+        .toArray();
+      for (const a of all) {
+        if (a.id !== undefined) {
+          await db.attempts.delete(a.id);
+          totalDeleted++;
+        }
+      }
+    }
 
     // 1. lap1 削除
     for (const pid of patch.deleteLap1) {
