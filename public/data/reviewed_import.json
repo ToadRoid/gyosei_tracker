@@ -181,7 +181,7 @@
         {
           "seqNo": 3,
           "questionText": "内閣総理大臣その他の国務大臣は、答弁又は説明のため出席を求められたときは、出席しなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "内閣総理大臣その他の国務大臣は、答弁または説明のため出席を求められたときは、出席しなければならない（憲法63条後段）。",
           "subjectCandidate": "憲法",
           "chapterCandidate": "kenpo-tochi",
@@ -697,7 +697,7 @@
         {
           "seqNo": 5,
           "questionText": "わが裁判所が現行の制度上与えられているのは司法権を行う権限であり、そして司法権が発動するためには具体的な争訟事件が提起されることを必要とする。我が裁判所は具体的な争訟事件が提起されないのに将来を予想して法及びその他の法律命令等の解釈により「存在する」疑義管轄に関し抽象的判断を下すことを権限を有しないのではないか。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "本肢は、警察予備脱違憲訴訟判決（最大判昭27.10.8）の判示のとおりであり、我が国が付随的違憲審査制を採用していることを判示している。この判決は、憲法81条の定める違憲審査制の性格が最高裁判所のリーディングケースである。",
           "subjectCandidate": "憲法",
           "chapterCandidate": "kenpo-tochi",
@@ -821,7 +821,7 @@
         {
           "seqNo": 3,
           "questionText": "わが国は租税法律主義をとっているので、地方公共団体は、地方税について条例によりその税目・税率等を定めることはできない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "条例は民主的基盤を有する地方議会により制定されるものであるから、地方税について、条例により税目・税率等を定めたとしても、憲法84条の趣旨に反しないと解することができる。よって、条例により税目・税率等を定めることはできるから、本肢は誤っている。",
           "subjectCandidate": "憲法",
           "chapterCandidate": "kenpo-tochi",
