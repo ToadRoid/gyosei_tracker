@@ -1,0 +1,115 @@
+chapter,page,seqNo,reason_for_sampling,risk_type,source_needed,review_status
+gyosei-chiho,195,6,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,171,5,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-chiho,168,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,200,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,179,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,178,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,177,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,173,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,200,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-chiho,171,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-fufuku,098,3,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,114,3,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,096,4,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,096,3,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,098,4,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,105,1,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,105,5,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,118,3,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,096,2,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,104,3,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,114,2,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,105,2,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,115,6,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,107,3,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-fufuku,095,2,OCR多発章（5件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,032,8,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,058,2,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,049,2,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,043,3,短い問題文（OCR崩壊の可能性） / 結論フレーズなし（正誤逆転の偽陰性リスク） / OCR多発章（11件）,ocr_partial|answer_no_conclusion_phrase|ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,032,6,短い問題文（OCR崩壊の可能性） / OCR多発章（11件）,ocr_partial|ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,038,2,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,048,4,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,028,6,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,028,1,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,054,3,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,028,3,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,052,3,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,050,1,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,042,2,OCR多発章（11件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-ippan,024,1,短い解説（偽陰性リスク: explanation内容誤り） / OCR多発章（11件）,explanation_content|ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,143,3,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,146,2,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,128,5,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,140,1,短い問題文（OCR崩壊の可能性） / OCR多発章（6件）,ocr_partial|ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,126,5,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,146,6,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,136,4,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,151,1,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,150,4,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,139,4,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,148,1,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,132,3,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,126,2,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,124,4,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-jiken,134,1,OCR多発章（6件）,ocr_heavy_chapter,要原本照合,未レビュー
+gyosei-kokubai,163,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,157,2,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-kokubai,154,6,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,164,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,156,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,164,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,155,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,158,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,157,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-kokubai,159,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,083,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,074,3,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,083,5,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,083,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,076,4,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,079,3,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,070,5,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,074,5,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,091,3,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+gyosei-tetsuzuki,078,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei_keiyaku,051,2,結論フレーズなし（正誤逆転の偽陰性リスク）,answer_no_conclusion_phrase,テキスト確認のみ,未レビュー
+gyosei_keiyaku,051,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+gyosei_keiyaku,051,3,結論フレーズなし（正誤逆転の偽陰性リスク）,answer_no_conclusion_phrase,テキスト確認のみ,未レビュー
+gyosei_keiyaku,051,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+kenpo-tochi,013,6,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,要原本照合,未レビュー
+kenpo-tochi,015,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+kenpo-tochi,012,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+kenpo-tochi,005,1,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+kenpo-tochi,014,5,ランダムサンプリング（ベースライン）,baseline,要原本照合,未レビュー
+kenpo-tochi,007,5,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+kenpo-tochi,016,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+kenpo-tochi,016,4,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+kenpo-tochi,001,8,短い解説（偽陰性リスク: explanation内容誤り）,explanation_content,テキスト確認のみ,未レビュー
+kenpo-tochi,005,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,250,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,245,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,246,7,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,247,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,246,5,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,245,3,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,246,3,結論フレーズなし（正誤逆転の偽陰性リスク）,answer_no_conclusion_phrase,テキスト確認のみ,未レビュー
+minpo-bukken,248,4,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,250,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-bukken,249,2,ランダムサンプリング（ベースライン）,baseline,テキスト確認のみ,未レビュー
+minpo-sosoku,243,2,短い解説（偽陰性リスク: explanation内容誤り） / OCR多発章（7件）,explanation_content|ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,236,5,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,232,2,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,242,5,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,235,2,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,220,2,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,226,4,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,220,1,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,225,5,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,239,3,結論フレーズなし（正誤逆転の偽陰性リスク） / OCR多発章（7件）,answer_no_conclusion_phrase|ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,238,3,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,240,3,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,233,4,結論フレーズなし（正誤逆転の偽陰性リスク） / OCR多発章（7件）,answer_no_conclusion_phrase|ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,232,3,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー
+minpo-sosoku,230,5,OCR多発章（7件）,ocr_heavy_chapter,要原本照合,未レビュー

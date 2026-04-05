@@ -214,9 +214,13 @@ def check_text_explanation_conflict(b: dict, page: str) -> list[Suspect]:
     if not q or not exp:
         return suspects
 
-    has_negation = any(neg in q for neg in ["ではない", "ない。", "できない", "必ずしも"])
-    if "しなければならない" in q and ans is True and not has_negation:
-        if "できるにすぎない" in exp or "する必要はない" in exp or "義務ではない" in exp:
+    # 否定形チェック: 「〜ない。」は「なければならない。」の末尾にもマッチするため、
+    # 義務表現の末尾を除外した上で否定語を検索する
+    obligation_pattern = re.search(r'[かさたなまらわ]なければならない', q)
+    q_without_obligation = re.sub(r'[かさたなまらわ]なければならない', '', q) if obligation_pattern else q
+    has_negation = any(neg in q_without_obligation for neg in ["ではない", "ない。", "できない", "必ずしも"])
+    if obligation_pattern and ans is True and not has_negation:
+        if "できるにすぎない" in exp or "する必要はない" in exp or "義務ではない" in exp or "聞く必要はない" in exp or "必要がない" in exp:
             s = _make_suspect(b, page)
             s.suspectFlags.append("text_explanation_conflict")
             s.severity = "high"
