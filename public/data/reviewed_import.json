@@ -10612,8 +10612,8 @@
         {
           "seqNo": 3,
           "questionText": "処分の執行停止のうち処分の効力の停止は、処分の効力の停止以外の方法で目的を達することができる場合にはすることができない。",
-          "answerBoolean": false,
-          "explanationText": "行政事件訴訟法25条3項により、処分の効力の停止は効力停止以外の方法で目的を達することができない場合に限られるため、本肢は誤りである。",
+          "answerBoolean": true,
+          "explanationText": "行政事件訴訟法25条3項は、処分の効力の停止は、処分の効力の停止以外の手段によって目的を達することができる場合には、することができないと規定している。本肢はこの条文の内容をそのまま述べており、正しい。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
