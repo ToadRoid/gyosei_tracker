@@ -279,6 +279,18 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p147-q05', correctAnswer: true },
     ],
   },
+  // v8: 2026-04-06 無効等確認訴訟 正解修正
+  // p144-q06: 前置不要なので○(解説と一致) false→true
+  // p145-q04: 無効原因なし=本案棄却であり却下ではない true→false
+  {
+    key: 'cleanup_2026-04-06_v8_p144q06_p145q04',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p144-q06', correctAnswer: true },
+      { problemId: 'KB2025-p145-q04', correctAnswer: false },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -347,7 +359,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-verify-batch2';
+const DATA_VERSION = '2026-04-06-verify-batch3';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

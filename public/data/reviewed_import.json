@@ -10237,7 +10237,7 @@
         {
           "seqNo": 6,
           "questionText": "無効確認訴訟は、処分の取消訴訟につき審査請求の前置が要件とされている場合においても、審査請求に対する答弁書を作成せずに提起することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "無効確認訴訟を提起するための要件として、不服申立ての前置は要件化されていない(行政事件訴訟法38条1項・9項は8条を準用しない)。",
           "subjectCandidate": "行政事件訴訟法",
           "chapterCandidate": "gyosei-jiken",
@@ -10305,7 +10305,7 @@
         {
           "seqNo": 4,
           "questionText": "無効確認訴訟は、処分が無効であることを主張して提起する訴訟であるから、当該処分に無効原因となる瑕疵が存在しない場合、当該訴訟は不適法なものとして却下される。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "無効確認訴訟の無効原因となる瑕疵が存在しない場合には、無効確認訴訟は請求却下判決がなされる。",
           "subjectCandidate": "行政事件訴訟法",
           "chapterCandidate": "gyosei-jiken",
