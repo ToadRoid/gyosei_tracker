@@ -6,6 +6,41 @@ import NavBar from '@/components/NavBar';
 import { db, getReadyProblems } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
 
+// ── 学習スケジュール（ノルマ計算用） ────────────────────────────────────────────
+
+const SCHEDULE = [
+  { start: new Date('2026-04-04'), end: new Date('2026-04-17'), quota: 10, label: '行政事件訴訟法+国賠' },
+  { start: new Date('2026-04-18'), end: new Date('2026-05-01'), quota: 18, label: '地方自治法' },
+  { start: new Date('2026-05-02'), end: new Date('2026-05-08'), quota: 24, label: '憲法・人権' },
+  { start: new Date('2026-05-09'), end: new Date('2026-05-27'), quota: 33, label: '民法' },
+  { start: new Date('2026-05-28'), end: new Date('2026-06-04'), quota: 23, label: '商法' },
+  { start: new Date('2026-06-05'), end: new Date('2026-06-15'), quota: 27, label: '基礎法学+基礎知識' },
+];
+
+interface DailyQuotaStats {
+  quota: number;
+  answered: number;
+  label: string;
+}
+
+async function getDailyQuotaStats(): Promise<DailyQuotaStats | null> {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const period = SCHEDULE.find((s) => today >= s.start && today <= s.end);
+  if (!period) return null;
+
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  const answered = await db.attempts
+    .where('answeredAt')
+    .between(today, tomorrow, true, false)
+    .count();
+
+  return { quota: period.quota, answered, label: period.label };
+}
+
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 interface LapData {
@@ -245,6 +280,7 @@ export default function ExercisePage() {
   const [expandedSubjects, setExpandedSubjects] = useState<Set<string>>(new Set());
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
   const [random, setRandom] = useState(false);
+  const [dailyQuota, setDailyQuota] = useState<DailyQuotaStats | null>(null);
 
   useEffect(() => {
     loadCurriculumData().then((d) => {
@@ -254,6 +290,7 @@ export default function ExercisePage() {
       setExpandedChapters(new Set(d.flatMap((s) => s.chapters.map((c) => c.chapterId))));
       setLoading(false);
     });
+    getDailyQuotaStats().then(setDailyQuota);
   }, []);
 
   const toggleSubject = (id: string) => {
@@ -354,6 +391,36 @@ export default function ExercisePage() {
       >
         続きから開始 →
       </button>
+
+      {/* 今日のノルマ */}
+      {dailyQuota && (() => {
+        const { quota, answered, label } = dailyQuota;
+        const remaining = Math.max(0, quota - answered);
+        const done = answered >= quota;
+        const pct = Math.min(100, Math.round((answered / quota) * 100));
+        return (
+          <div className={`rounded-xl p-4 space-y-2 border ${done ? 'bg-green-50 border-green-200' : 'bg-white border-slate-200'}`}>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-bold text-slate-700">今日のノルマ</span>
+                <span className="text-xs text-slate-400">{label}</span>
+              </div>
+              {done ? (
+                <span className="text-sm font-bold text-green-600">達成! ✓</span>
+              ) : (
+                <span className="text-sm font-bold text-slate-600">残り <span className="text-indigo-600">{remaining}</span>問</span>
+              )}
+            </div>
+            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
+              <div
+                className={`h-full rounded-full transition-all ${done ? 'bg-green-500' : 'bg-indigo-500'}`}
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+            <p className="text-xs text-slate-400 text-right">{answered} / {quota}問</p>
+          </div>
+        );
+      })()}
 
       {/* Divider */}
       <div className="flex items-center gap-3">
