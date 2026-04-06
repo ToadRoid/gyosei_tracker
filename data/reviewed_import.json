@@ -1369,7 +1369,7 @@
         {
           "seqNo": 2,
           "questionText": "課税処分において信義則の法理の適用により当該課税処分が違法であるとして取り消されるのは、租税法の適用における納税者間の平等、公平という要請に反するときに限られる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "信義則は、租税法の法理の例外として、信頼保護の原則に反しない限り、課税処分を取消すことはできない。",
           "subjectCandidate": "行政法総論",
           "chapterCandidate": "gyosei-ippan",
@@ -1805,7 +1805,7 @@
         {
           "seqNo": 7,
           "questionText": "各省の外局として置かれる各庁の長および各委員会は、規則その他の特別の命令を発することができるが、これについては、それぞれの設置法などの法律に別の定めを要する。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "各委員会および各庁の庁長は、別に法律の定めるところにより、政令の他に省令以外の規則その他の特別の命令を自ら発することができる（国家行政組織法13条1項）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -3161,7 +3161,7 @@
         {
           "seqNo": 4,
           "questionText": "行政行為の附款は、法令自体が認めているか、または行政庁の自由裁量に認められている場合には、許可、認可、代理、特許、確認、公証、受理等の法律行為的行政行為について必要な範囲に於て付することができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "附款は、法律行為的行政行為にのみ付することができるから、確認、公証、受理等の準法律行為的行政行為には、性質上、付しえない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
@@ -4229,7 +4229,7 @@
         {
           "seqNo": 1,
           "questionText": "代執行のために現場に派遣される執行責任者は、執行責任者なる本人であることを示す証票を携帯し、要求があるときは、いつでもこれを呈示しなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "代執行が義務者の財産に対する失力行為を伴うため、義務者に適正手続を保障するために証票の携帯・呈示が要求される（行政代執行法4条）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -4829,7 +4829,7 @@
         {
           "seqNo": 6,
           "questionText": "過料は、法律において規定されているほか、普通地方公共団体の長の制定する規則においても定めることができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "過料は、法律のみならず、地方公共団体の条例や規則によっても科することができる（地方自治法14条3項、15条2項、228条2項、255条の３等）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -5573,7 +5573,7 @@
         {
           "seqNo": 3,
           "questionText": "申請に対する処分について、申請がその事務所に到達してから当該申請に対する処分をするまでに通常要すべき標準的な期間を定めることは、当該行政庁の努力義務にとどまり、義務は課されていない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "標準処理期間の「設定」は努力義務であるが、通常要すべき標準的な期間を定めるよう努めなければならない（行政手続法6条）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6073,7 +6073,7 @@
         {
           "seqNo": 5,
           "questionText": "聴聞の期日における審理は、行政庁が公開することを相当と認めるときを除き、公開しない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "本肢は、行政手続法20条6項のとおりである。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6117,7 +6117,7 @@
         {
           "seqNo": 1,
           "questionText": "主宰者は、当事者の全部または一部が正当な理由なく聴聞の期日に出頭せず、かつ、陳述書または証拠書類等を提出しない場合、これらの者に対して改めて意見を述べ、および証拠書類を提出する機会を与えることなく、聴聞を終結することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "本肢は、行政手続法23条1項のとおりである。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6325,7 +6325,7 @@
         {
           "seqNo": 6,
           "questionText": "処分基準の設定は、行政手続法上、聴聞を経る処分の要件を設定することを含むとしている。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "処分基準の設定は、不利益処分を行う場合とされるため、聴聞を経ない処分手続だけでなく、弁明の機会の付与を経る処分の手続にも認められている（行政手続法12条1項）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6697,7 +6697,7 @@
         {
           "seqNo": 2,
           "questionText": "行政機関は法律に基づく命令を定めた後においても、当該命令の実施状況や社会経済情勢の変化等を勘案し、その内容について検討を加えるよう努めなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "命令等制定機関は、命令等を定めた後においても、当該命令等の現況の実施状況、社会経済情勢等の変化等を勘案し、必要に応じ、当該命令等の内容について検討を加え、その適正を確保するよう努めなければならない（行政手続法38条2項）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -7301,7 +7301,7 @@
         {
           "seqNo": 5,
           "questionText": "多数人が共同して行った審査請求においては、法定数以内の総代を共同審査請求人により互選することが認められているが、その場合においても、共同審査請求人を目的、総代を通じてのみ当該審査請求に関する一切の行為を行うことができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "多数人が共同して審査請求をしようとする時は、三人を超えない総代を互選することができる（行政不服審査法14条1項）。総代が選任されたときも、共同審査請求人と目的、総代を通じてのみ当該審査請求に関する一切の行為をすることができる（14条4項）。",
           "subjectCandidate": "審査請求の要件",
           "chapterCandidate": "gyosei-fufuku",
@@ -8389,7 +8389,7 @@
         {
           "seqNo": 1,
           "questionText": "再調査の請求において、請求人数または参加人の申立てがあった場合には、それが無理由であると認められるときでなければ、口頭で意見を述べる機会を与えなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "審査請求に関する口頭意見陳述の規定は準用されている（行政不服審査法16条、31条1項）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-fufuku",
@@ -8493,7 +8493,7 @@
         {
           "seqNo": 5,
           "questionText": "審査請求の対象とされた処分（原処分）を違法として棄却した審査請求の裁決（原裁決）があった場合に、当該審査請求の救済に係る再審査請求において、原裁決は違法であるが、原処分は違法でも不当でもないとは、再審査庁は、裁決で、当該再審査請求を棄却するとする。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "審査請求に係る原裁決（審査請求を却下し、または棄却したものに限る。）が法律または不当である場合においては、当該審査請求に係る処分が違法または不当でないときは、再審査庁は、裁決で、当該再審査請求を棄却する（行政不服審査法64条3項）。",
           "subjectCandidate": "行政不服審査法",
           "chapterCandidate": "gyosei-fufuku",
@@ -8581,7 +8581,7 @@
         {
           "seqNo": 1,
           "questionText": "行政庁が処分を行う際に教示をしなかった場合、当該処分庁に不服申立を提起することができるとき、当該処分庁が処分庁に審査請求できるものであったことは、...。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "行政庁が処分を行う際に教示をしなかった場合、処分庁に不服申立を提起することができる（行政不服審査法38条1項）。処分庁が処分庁に審査請求できるものであったときは不服申立期間内に適法な審査請求がされたものとみなされる（同条5項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-fufuku",
@@ -8825,7 +8825,7 @@
         {
           "seqNo": 1,
           "questionText": "取消訴訟を提起できるのは、その対象となっている処分または裁決に違法がある場合に限られる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "行政不服審査法と異なり、取消訴訟を提起できるのは処分・裁決が違法であるか（行政事件訴訟法3条2項・3項、10条参照）、不当である場合には提起できない（行政不服審査法1条1項参照）。",
           "subjectCandidate": "行政事件訴訟法",
           "chapterCandidate": "gyosei-jiken",
@@ -9949,7 +9949,7 @@
         {
           "seqNo": 1,
           "questionText": "申請を拒否する処分に対する審査請求の棄却裁決を取り消す判決は、裁決をした行政庁その他の関係行政庁を拘束する。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "本肢は行政事件訴訟法33条1項のとおりであり、処分または裁決を取り消す判決は、その事件について、処分または裁決をした行政庁その他の関係行政庁を拘束する（拘束力）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
@@ -11581,7 +11581,7 @@
         {
           "seqNo": 2,
           "questionText": "広域連合は、構成団体間において処理しようとする事務がすべて同一種類の事務である必要はなく、この点は従前の一部事務組合と同様である。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "広域連合は、事務の共同処理ではなく、広域的事務の効率的執行を目的として設置されるため、特に処理する事務が必ずしも同一種類のものである必要はない（地方自治法285条参照）。広域処理が適当であると認めるものとされている（284条３項）。処理する事務がすべて同一種類である必要はない。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -13133,7 +13133,7 @@
         {
           "seqNo": 4,
           "questionText": "支出は、会計管理者の命令がこれによるものでなければならない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "会計管理者は、普通地方公共団体の長の政令で定めるところによる命令がなければ、支出をすることができない。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -14429,7 +14429,7 @@
         {
           "seqNo": 2,
           "questionText": "各大臣は、その所管する法令（法律、法律に基づく政令）に係る都道府県知事の法定受託事務の執行が法令の規定に違反すると認め、その是正を勧告しても期間を定めて当該是正を是正することを励行することが明らかであるとは、文書により、当該都道府県知事に対して、その名称・期限を定めて当該是正を是正するように勧告し、都道府県知事の意義が期限まで必に是正することが励行されるようになることが明らかであると認めることができるときは、「高等裁判所」に対し、訴えをもって、その処理の是正を求めることを為する旨の裁判を請求することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "各大臣は、その所管する法令（法律、法律に基づく政令）に係る都道府県知事の法定受託事務の執行が法令の規定に違反するときは、その是正を勧告することが明確であるとは、文書により、当該都道府県知事に対し、その名称・期限を定めて当該是正を是正するべきことを勧告し（地方自治法245条の8第1項）、都道府県知事がその意議を述べ、文書により期限を定めてすべきことを指示できるときには、295条の8第2項、都道府県知事が期限までに当該事項を執行すべきことを為さないときは、「高等裁判所」に対し、訴えをもってその是正事項を請求することを為する旨の裁判を請求することができる（245条の8第3項）。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -14777,7 +14777,7 @@
         {
           "seqNo": 1,
           "questionText": "未成年者が単に業務を免れる法律行為を行うときには、法定代理人の同意を要しないため、未成年者が法定代理人の同意を得ないで行った契約の受領は、取り消すことができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "単独でできます、取り消すことができる（5条2項、120条1項）。",
           "subjectCandidate": "未成年者",
           "chapterCandidate": "minpo-sosoku",
@@ -15189,7 +15189,7 @@
         {
           "seqNo": 5,
           "questionText": "Aについて失踪宣告がなされた後にBはCと婚姻したが、その後、失踪宣告が取り消された場合に、A・B間の婚姻とB・D間の婚姻は、当然には無効とならず、共に重婚を理由として取り消し得るにすぎない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "婚姻当事者であるBとDがさらにAの生存につき善意の場合、後婚であるBとD間の婚姻のみが有効とされる（民法32条1項）。これに対し、悪意であった場合には無効とされ、前婚が復活。無効にするか否かは選択次第の問題。また、この場合、後婚については取消原因である（732条,744条）。前婚について普通重婚として無効となるわけではない。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
@@ -15773,7 +15773,7 @@
         {
           "seqNo": 1,
           "questionText": "A所有の建物を売却する代理権をAから与えられたBが、自らその買主となった場合に、そのままBが登記を備えたとすれば、Aに効力が帰属する。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "同一の法律行為について、原則として、相手方の代理人（自己契約または双方代理）となることはできない。したがって、AとB間の売買契約の効果はAに帰属しない。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
@@ -16561,7 +16561,7 @@
         {
           "seqNo": 1,
           "questionText": "AがBに対する甲債権の担保として所有の不動産に抵当権を有している場合。債務者Aには、対抗すべき他人に対する負債がないため、甲債権が消滅すれば再び同一不動産の処分を免れる地位にあるため、甲債権につき消滅時効を援用することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "物上保証人は、当該他人の債務の消滅時効を援用することができる（民法は条かっこ書）。したがって、物上保証人は、AのBに対する甲債権につき消滅時効を援用することができる。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",

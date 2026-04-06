@@ -507,6 +507,59 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p242-q02', correctAnswer: true },   // 民法147条2項: 時効更新
     ],
   },
+  // v15: 2026-04-07 全候補178件照合完了 — 26件修正 + v7パッチ3件誤り訂正
+  // 残り142件を全文照合し batch_classifications で確定。
+  // v7パッチ(p143-q04, p144-q04, p147-q05)が誤ってTrueに設定していたため、
+  // 正しいFalseに上書きする。p141-q04は空問題（幽霊レコード）を除外。
+  {
+    key: 'cleanup_2026-04-07_v15_full_scan_all_subjects',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    isExcludedProblems: [
+      {
+        problemId: 'KB2025-p141-q04',
+        reason: 'ghost_record',
+        note: '問題文・解説ともに空白。IndexedDB残留の幽霊レコード。',
+      },
+    ],
+    recalcCorrect: [
+      // 行政法総論
+      { problemId: 'KB2025-p020-q02', correctAnswer: false },  // 信義則適用要件:平等に限らない
+      { problemId: 'KB2025-p025-q07', correctAnswer: true },   // 国行組法13条1項:別法律の定め要
+      { problemId: 'KB2025-p043-q04', correctAnswer: false },  // 確認・公証・受理は準法律行為的=附款不可
+      // 行政代執行
+      { problemId: 'KB2025-p059-q01', correctAnswer: true },   // 代執行法4条:証票携帯+要求時呈示
+      // 秩序罰
+      { problemId: 'KB2025-p065-q06', correctAnswer: true },   // 地自法15条2項:規則による過料可
+      // 行政手続法
+      { problemId: 'KB2025-p075-q03', correctAnswer: true },   // 行手法6条:標準処理期間=努力義務
+      { problemId: 'KB2025-p082-q05', correctAnswer: true },   // 行手法20条6項:聴聞は原則非公開
+      { problemId: 'KB2025-p083-q01', correctAnswer: true },   // 行手法23条1項:不出頭→機会不再付与
+      { problemId: 'KB2025-p085-q06', correctAnswer: true },   // 行手法12条1項:処分基準=不利益処分全般
+      { problemId: 'KB2025-p091-q02', correctAnswer: true },   // 行手法38条2項:命令等制定後の見直し努力
+      // 行政不服申立
+      { problemId: 'KB2025-p100-q05', correctAnswer: true },   // 不服審査法14条4項:総代を通じてのみ
+      { problemId: 'KB2025-p116-q01', correctAnswer: true },   // 不服審査法31条1項準用:口頭意見陳述
+      { problemId: 'KB2025-p117-q05', correctAnswer: true },   // 不服審査法64条3項:原処分不当でなければ棄却
+      { problemId: 'KB2025-p119-q01', correctAnswer: true },   // 不服審査法38条5項:不教示→処分庁申立みなし
+      // 行政事件訴訟法
+      { problemId: 'KB2025-p125-q01', correctAnswer: true },   // 行訴法:違法のみ取消訴訟可、不当は不可
+      { problemId: 'KB2025-p141-q01', correctAnswer: true },   // 行訴法33条1項:拘束力
+      // v7パッチ誤り訂正 (Trueに設定されていたが実際はFalse)
+      { problemId: 'KB2025-p143-q04', correctAnswer: false },  // 内閣総理大臣の異議:決定前に限らず
+      { problemId: 'KB2025-p144-q04', correctAnswer: false },  // 無効確認訴訟:取消訴訟出訴期間の準用なし
+      { problemId: 'KB2025-p147-q05', correctAnswer: false },  // 義務付け訴訟:申請型は重大損害不要
+      // 地方自治法
+      { problemId: 'KB2025-p169-q02', correctAnswer: false },  // 一部事務組合=同種事務必要(広域連合と非同様)
+      { problemId: 'KB2025-p189-q04', correctAnswer: false },  // 支出命令=会計管理者でなく長の命令
+      { problemId: 'KB2025-p207-q02', correctAnswer: true },   // 地自法245条の8第3項:高裁への訴え
+      // 民法
+      { problemId: 'KB2025-p214-q01', correctAnswer: true },   // 民法5条2項:未成年者の同意なし行為=取消可
+      { problemId: 'KB2025-p219-q05', correctAnswer: false },  // 失踪宣告取消:後婚のみ有効、共に取消は誤り
+      { problemId: 'KB2025-p230-q01', correctAnswer: false },  // 民法108条:自己契約=本人帰属しない
+      { problemId: 'KB2025-p240-q01', correctAnswer: true },   // 民法145条かっこ書:物上保証人=時効援用可
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -599,7 +652,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v14';
+const DATA_VERSION = '2026-04-07-audit-v15';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
