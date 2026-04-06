@@ -207,6 +207,8 @@ export async function getReadyProblems(
       const attr = attrMap.get(p.problemId);
       if (!attr || attr.answerBoolean === null || attr.answerBoolean === undefined) return null;
       if (attr.isExcluded === true) return null;
+      // needsSourceCheck = true の問題も安全優先で出題停止
+      if (attr.needsSourceCheck === true) return null;
       if (subjectId && attr.subjectId !== subjectId) return null;
       if (chapterId && attr.chapterId !== chapterId) return null;
       if (sectionTitle && (attr.sectionTitle ?? '') !== sectionTitle) return null;
@@ -254,6 +256,11 @@ interface CleanupPatch {
   deleteAllAttempts: string[]; // 全 attempt を削除する problemId 一覧（未回答状態に戻す）
   discardProblems?: string[];  // status='discard' にする problemId 一覧（演習から除外）
   needsSourceCheckProblems?: string[]; // needsSourceCheck=true にする problemId 一覧
+  isExcludedProblems?: {      // isExcluded=true にする problemId 一覧（理由付き）
+    problemId: string;
+    reason: string;           // 'ghost_record' | 'data_error' | 'ocr_corruption' | 'non_boolean_format' | 'manual_hold'
+    note?: string;
+  }[];
   recalcCorrect: {            // isCorrect を再計算する problemId と正解
     problemId: string;
     correctAnswer: boolean;
@@ -440,6 +447,49 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p232-q04', correctAnswer: false },
     ],
   },
+  // v13: 2026-04-06 幽霊レコード除外 + needsSourceCheck を安全優先で一時停止に格上げ
+  // p144/p145「08_無効等確認」セクションに書籍非掲載の問12・13が IndexedDB に残留。
+  // 書籍では 問1-11（p144:q01-q07, p145:q01-q04）しか存在しないため、
+  // それ以降のシーケンス番号 (p145-q05, p145-q06) を ghost_record で除外。
+  // またneedsSourceCheck問題も安全優先で manual_hold 除外とする。
+  {
+    key: 'cleanup_2026-04-06_v13_ghost_records',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    isExcludedProblems: [
+      // 08_無効等確認 幽霊レコード（書籍上に存在しない問12・13）
+      {
+        problemId: 'KB2025-p145-q05',
+        reason: 'ghost_record',
+        note: '書籍ページ上に存在せず、IndexedDB残留疑い（無効等確認 問12相当）',
+      },
+      {
+        problemId: 'KB2025-p145-q06',
+        reason: 'ghost_record',
+        note: '書籍ページ上に存在せず、IndexedDB残留疑い（無効等確認 問13相当）',
+      },
+      // needsSourceCheck 問題を安全優先で出題停止（manual_hold）
+      // ※ getReadyProblems で needsSourceCheck=true も既にフィルタ済みだが、
+      //   isExcluded フラグも立てて管理UIから確認しやすくする
+      { problemId: 'KB2025-p062-q01', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p062-q02', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p062-q03', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p062-q04', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p062-q05', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p078-q01', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p078-q02', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p078-q03', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText途中切断疑い）' },
+      { problemId: 'KB2025-p129-q01', reason: 'manual_hold', note: '要原本確認のため一時停止（<省略>タグ混入）' },
+      { problemId: 'KB2025-p129-q02', reason: 'manual_hold', note: '要原本確認のため一時停止（<省略>タグ混入）' },
+      { problemId: 'KB2025-p129-q03', reason: 'manual_hold', note: '要原本確認のため一時停止（<省略>タグ混入）' },
+      { problemId: 'KB2025-p162-q01', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText切断疑い）' },
+      { problemId: 'KB2025-p162-q02', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText切断疑い）' },
+      { problemId: 'KB2025-p162-q03', reason: 'manual_hold', note: '要原本確認のため一時停止（questionText切断疑い）' },
+      { problemId: 'KB2025-p142-q02', reason: 'manual_hold', note: '要原本確認のため一時停止（執行停止の説明破損疑い）' },
+      { problemId: 'KB2025-p101-q03', reason: 'manual_hold', note: '要原本確認のため一時停止（解説と正解不一致疑い）' },
+    ],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -492,6 +542,16 @@ export async function runOneTimeCleanup(): Promise<void> {
       await upsertProblemAttr(pid, { needsSourceCheck: true });
     }
 
+    // 2c. isExcluded フラグ設定（理由付き）
+    for (const { problemId, reason, note } of patch.isExcludedProblems ?? []) {
+      await upsertProblemAttr(problemId, {
+        isExcluded: true,
+        excludeReason: reason,
+        excludeNote: note,
+        excludedAt: new Date(),
+      });
+    }
+
     // 3. isCorrect 再計算
     for (const { problemId, correctAnswer } of patch.recalcCorrect) {
       const attempts = await db.attempts
@@ -522,7 +582,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-audit-v12';
+const DATA_VERSION = '2026-04-06-audit-v13';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

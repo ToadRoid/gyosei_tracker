@@ -76,9 +76,31 @@ if [ $PROMOTE_EXIT -ne 0 ]; then
   echo "警告: auto_promote_draft.py が終了コード $PROMOTE_EXIT で終了"
 fi
 
+# ─── ステップ 3: 法律整合性監査 ────────────────────────────
+echo ""
+echo "[Step 3] 法律整合性監査..."
+
+python3 scripts/audit_legal_consistency.py
+AUDIT_EXIT=$?
+
+if [ $AUDIT_EXIT -ne 0 ]; then
+  echo "⚠ 監査でエラーが発生しました"
+fi
+
+# ゴールデンテスト
+echo ""
+echo "[Step 3b] ゴールデンテスト..."
+python3 scripts/audit_legal_consistency.py --golden
+GOLDEN_EXIT=$?
+
+if [ $GOLDEN_EXIT -ne 0 ]; then
+  echo "⚠⚠⚠ ゴールデンテスト FAILED — デプロイ前に確認してください ⚠⚠⚠"
+fi
+
 echo ""
 echo "=============================="
 echo "パイプライン完了: $(date '+%Y-%m-%d %H:%M:%S')"
 echo "=============================="
 echo ""
 echo "→ アプリの /triage ページを開いて「取込開始」をクリックしてください"
+echo "→ critical があれば data/legal_audit_report.csv を確認してください"
