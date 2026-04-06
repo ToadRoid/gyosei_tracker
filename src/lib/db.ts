@@ -490,6 +490,23 @@ const PATCHES: CleanupPatch[] = [
     ],
     recalcCorrect: [],
   },
+  // v14: 2026-04-07 訴訟法以外 全科目精査 — 8件修正 (行政手続法・不服申立法・地自法・民法)
+  // 全 MEDIUM候補36件を全文照合し、optimizer誤検出28件を除外した確定修正。
+  {
+    key: 'cleanup_2026-04-07_v14_non_litigation_batch',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p075-q05', correctAnswer: true },   // 行政手続法6条: 標準処理期間+公表義務
+      { problemId: 'KB2025-p082-q01', correctAnswer: true },   // 行政手続法18条1項後段: 閲覧拒否要件
+      { problemId: 'KB2025-p083-q04', correctAnswer: true },   // 行政手続法24条3項: 報告書+調書提出義務
+      { problemId: 'KB2025-p141-q03', correctAnswer: true },   // 行訴法33条2項2号: 手続違法→再処分義務
+      { problemId: 'KB2025-p167-q06', correctAnswer: true },   // 地自法252条の24第2項: 中核市申出要件
+      { problemId: 'KB2025-p187-q04', correctAnswer: false },  // 過料≠刑罰(括弧書き誤り)
+      { problemId: 'KB2025-p216-q06', correctAnswer: true },   // 民法876条の4: 保佐人代理権付与
+      { problemId: 'KB2025-p242-q02', correctAnswer: true },   // 民法147条2項: 時効更新
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -582,7 +599,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-audit-v13';
+const DATA_VERSION = '2026-04-07-audit-v14';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

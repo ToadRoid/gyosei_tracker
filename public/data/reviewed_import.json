@@ -5597,7 +5597,7 @@
         {
           "seqNo": 5,
           "questionText": "行政庁は、申請がその事務所に到達してから当該申請に対する処分をするまでに通常要すべき標準的な期間を定めるよう努める、これを定めたときは、これの当該申請の審理が他の機関の事務所における働付けその他の適当な方法により公にしておかなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "行政庁は、申請がその事務所に到達してから当該申請に対する処分をするまでに通常要すべき標準的な期間を定めるよう努めるとともに、これを定めたときは、これの当該申請の審理が他の機関の事務所における働付けその他の適当な方法により公にしておかなければならない（行政手続法6条）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6025,7 +6025,7 @@
         {
           "seqNo": 1,
           "questionText": "聴聞の通知があった時から聴聞が終結する時までの間、当事者から行政庁に対し、当該不利益処分の原因となる事実を証する資料の閲覧を求められた場合、行政庁は、第三者の利益を害するおそれがあるときその他正当な理由があるときは、その閲覧を拒むことができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "正当な理由が認められる場合には、行政庁は資料の閲覧を拒むことができる（行政手続法18条1項後段）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6153,7 +6153,7 @@
         {
           "seqNo": 4,
           "questionText": "聴聞の主宰者は、聴聞の終結後、速やかに、不利益処分の原因となる事実に対する当事者等の主張に理由があるかどうかについての意見を記載した報告書を作成し、聴聞調書とともに行政庁に提出しなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "主宰者は、聴聞報告書を作成し、聴聞調書とともに行政庁に提出しなければならない（行政手続法24条3項）。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -9973,7 +9973,7 @@
         {
           "seqNo": 3,
           "questionText": "申請を認める処分が判決により手続に違法があることを理由として取り消された場合、その処分をした行政庁は、判決の趣旨に従い改めて申請に対する処分をしなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "処分または裁決を取り消す判決において、処分または審査請求を棄却した裁決が判決によより手続違法があることを理由として取り消された場合、その処分または裁決をした行政庁は、判決の趣旨に従い、改めて申請に対する処分または審査請求対する裁決をしなければならない（行政事件訴訟法33条2項・2号）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
@@ -11469,7 +11469,7 @@
         {
           "seqNo": 6,
           "questionText": "市が中核市の指定の申出をしようとするときは、当該市は、あらかじめ議会の議決を経て、都道府県の同意を得なければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "市が中核市の指定の申出をしようとするときは、当該市は、あらかじめ議会の議決を経て、都道府県の同意を得なければならない（地方自治法252条の24第2項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",
@@ -12985,7 +12985,7 @@
         {
           "seqNo": 4,
           "questionText": "普通地方公共団体の長は、法令に特別の定めがあるものを除くほか、普通地方公共団体の規則に違反した者に対し、5万円以下の過料（刑罰）を科する旨の規定を設けることができるが、刑罰を科することのできる旨の規定はこれを設けない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "普通地方公共団体の長は、法令に特別の定めがあるものを除くほか、普通地方公共団体の規則に違反した者に対し、5万円以下の過料を科する旨の規定を設けることができるが（地方自治法15条2項）、刑罰を科することができる旨の規定はこれを設けない。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -14985,7 +14985,7 @@
         {
           "seqNo": 6,
           "questionText": "家庭裁判所は、本人や保佐人等の請求によって、被保佐人のために特定の法律行為について保佐人に代理権を付与する旨の審判をすることができるが、本人以外の者の請求によってその審判をするには、本人の同意がなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "家庭裁判所は、民法11条本文に規定する者または保佐人もしくは保佐監督人の請求によって、被保佐人のために特定の法律行為について保佐人に代理権を付与する旨の審判をすることができる（876条の4第1項）が、本人以外の者の請求によってその審判をするには、本人の同意がなければならない（876条の4第2項）。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
@@ -16745,7 +16745,7 @@
         {
           "seqNo": 2,
           "questionText": "裁判上の請求がある場合において、確定判決または確定判決と同一の効力を有するものによって権利が確定したときは、時効は、裁判が終了した時から新たにその進行を始める。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "裁判上の請求がある場合には、確定判決または確定判決と同一の効力を有するものによって権利が確定したときは、時効は、裁判が終了した時から新たにその進行を始める（時効の更新・民法147条2項）。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
