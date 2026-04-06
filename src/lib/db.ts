@@ -415,6 +415,17 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p138-q01', correctAnswer: true  }, // 解説「職権で第三者訴訟参加可」→○
     ],
   },
+  // v11: 2026-04-06 p147-q04 answer inversion fix
+  // 申請型義務付け訴訟（処分拒否型）は取消訴訟/無効確認訴訟との併合が必要（37条の3第3項2号）
+  // → 問題文の記述は正しい → 正解は○（True）
+  {
+    key: 'cleanup_2026-04-06_v11_p147q04',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p147-q04', correctAnswer: true },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -497,7 +508,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-audit-v10';
+const DATA_VERSION = '2026-04-06-audit-v11';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
