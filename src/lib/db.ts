@@ -180,6 +180,7 @@ interface CleanupPatch {
   key: string;               // localStorage キー（ユニークにする）
   deleteLap1: string[];       // lap1 の attempt を削除する problemId 一覧
   deleteAllAttempts: string[]; // 全 attempt を削除する problemId 一覧（未回答状態に戻す）
+  discardProblems?: string[];  // status='discard' にする problemId 一覧（演習から除外）
   recalcCorrect: {            // isCorrect を再計算する problemId と正解
     problemId: string;
     correctAnswer: boolean;
@@ -291,6 +292,21 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p145-q04', correctAnswer: false },
     ],
   },
+  // v9: 2026-04-06 無効等確認訴訟 問題5・6・11 を discard（データ不整合のため教材不適）
+  // 問5(p144-q05): 21条準用で「許されない」断言は不正確
+  // 問6(p144-q06): 解説と正解が正面衝突、問題文も破損
+  // 問11(p145-q04): 問13と同論点で逆転、本案棄却/訴訟却下の混同
+  {
+    key: 'cleanup_2026-04-06_v9_discard_invalid',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    discardProblems: [
+      'KB2025-p144-q05',
+      'KB2025-p144-q06',
+      'KB2025-p145-q04',
+    ],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -329,7 +345,16 @@ export async function runOneTimeCleanup(): Promise<void> {
       }
     }
 
-    // 2. isCorrect 再計算
+    // 2. 問題を discard に設定（演習から除外）
+    for (const pid of patch.discardProblems ?? []) {
+      await upsertProblemAttr(pid, { aiTriageStatus: 'discard' });
+      const p = await db.problems.where('problemId').equals(pid).first();
+      if (p?.id !== undefined) {
+        await db.problems.update(p.id, { status: 'discard' });
+      }
+    }
+
+    // 3. isCorrect 再計算
     for (const { problemId, correctAnswer } of patch.recalcCorrect) {
       const attempts = await db.attempts
         .where('problemId')
@@ -359,7 +384,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-verify-batch3';
+const DATA_VERSION = '2026-04-06-verify-batch4';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
