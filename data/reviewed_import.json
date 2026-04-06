@@ -821,7 +821,7 @@
         {
           "seqNo": 3,
           "questionText": "わが国は租税法律主義をとっているので、地方公共団体は、地方税について条例によりその税目・税率等を定めることはできない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "条例は民主的基盤を有する地方議会により制定されるものであるから、地方税について、条例により税目・税率等を定めたとしても、憲法84条の趣旨に反しないと解することができる。よって、条例により税目・税率等を定めることはできるから、本肢は誤っている。",
           "subjectCandidate": "憲法",
           "chapterCandidate": "kenpo-tochi",
@@ -12413,7 +12413,7 @@
         {
           "seqNo": 4,
           "questionText": "議会の解散は、議会が長の不信任の議決を行ったとき、また住民から解散請求が求められたときに限られるが、議会が自らの議決に基づき自主解散することはできない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "1965年、「地方公共団体の議会の解散に関する特例法」が制定され、議長数の4分の3以上の者が出席し、その多数の4分の3以上の者が賛成したときは、議会は自主的に解散することができるから、本肢は誤りである。",
           "subjectCandidate": "地方自治法",
           "chapterCandidate": "gyosei-chiho",
@@ -15957,7 +15957,7 @@
         {
           "seqNo": 4,
           "questionText": "Aの子Bが、Aに無断でAの代理人としてA所有の土地をCに売却する契約を締結した場合、CはAが追認した後でも、この売買契約を取り消すことができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "相手方は、本人Aが追認した後でも、売買契約を取り消すことができないから、本肢は誤っている。すなわち、無権代理人がした契約は、本人が追認しない間、取り消すことができる（民法115条本文）。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",

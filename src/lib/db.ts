@@ -426,6 +426,20 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p147-q04', correctAnswer: true },
     ],
   },
+  // v12: 2026-04-06 import_optimizer.py 自動検出 HIGH信頼度3件
+  // p011-q03: 「条例で税目・税率を定めることはできない」→解説「本肢は誤っている」→ False
+  // p180-q04: 「議会の自主解散はできない」→解説「本肢は誤りである」(特例法で可) → False
+  // p232-q04: 「追認後も取消できる」→解説「本肢は誤っている」(115条本文) → False
+  {
+    key: 'cleanup_2026-04-06_v12_optimizer_batch1',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p011-q03', correctAnswer: false },
+      { problemId: 'KB2025-p180-q04', correctAnswer: false },
+      { problemId: 'KB2025-p232-q04', correctAnswer: false },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -508,7 +522,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-audit-v11';
+const DATA_VERSION = '2026-04-06-audit-v12';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
