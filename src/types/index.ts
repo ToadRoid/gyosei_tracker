@@ -64,6 +64,15 @@ export interface ProblemAttr {
   sourcePageAnswer?: string;       // 解説ページ番号
   explanationText?: string;        // 解説テキスト
   questionType?: 'descriptive';    // 記述式問題フラグ
+  // 除外フラグ（物理削除の代替）
+  isExcluded?: boolean;            // true = 演習・統計から除外
+  excludeReason?: string;          // 'data_error' | 'duplicate' | 'ocr_corruption' | 'ghost_record' | 'out_of_scope'
+  excludeNote?: string;            // 除外理由の補足
+  excludedAt?: Date;
+  excludedBy?: string;             // 実行者のメールアドレス
+  // 原本確認フラグ
+  needsSourceCheck?: boolean;      // true = 画像/参考書の原本確認が必要
+  sourceCheckNote?: string;
 }
 
 // ── 学習ログ ──

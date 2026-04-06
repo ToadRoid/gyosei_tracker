@@ -1,0 +1,10 @@
+problemId,page,seqNo,section,answerBoolean,review_status,suspectCategory,contradiction,legal_basis,source_evidence,final_decision,fix_targets
+KB2025-p016-q01,016,1,05_地方自治・憲法改正,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,憲法94条（財産管理権能を含む）,原本p.136-137確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p016-q03,016,3,05_地方自治・憲法改正,false,fixed,explanation_reversal+ocr,explanation「本肢は正しい」vs answerBoolean=false,憲法94条・地方自治法14条1項,原本p.136-137確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p021-q05,021,5,01_行政法の基本原則・法律関係,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,最判昭53.6.16,原本p.146-147確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p023-q01,023,1,02_行政機関と権限,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,行政法の基本理論（効果帰属先は行政主体）,原本p.150-151確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p024-q04,024,4,02_行政機関と権限,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,補助機関≠執行機関の区別,原本p.152-153確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p024-q05,024,5,02_行政機関と権限,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,独占禁止法27条の2（公取は内閣府の外局）,原本p.152-153確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p026-q01,026,1,02_行政機関と権限,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,内閣法6条（首相の指揮監督権）,原本p.156-157確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p026-q02,026,2,02_行政機関と権限,false,fixed,explanation_reversal,explanation「本肢は正しい」vs answerBoolean=false,内閣府設置法6条1項（長は内閣総理大臣）,原本p.156-157確認済,answerBoolean=false正。explanation修正,reviewed_import.json
+KB2025-p104-q06,104,6,03_審理手続・裁決,true,fixed,explanation_reversal,explanation「本肢は誤り」vs answerBoolean=true,行政不服審査法29条5項（弁明書の送付義務）,原本p.310-311確認済,answerBoolean=true正。explanation修正,reviewed_import.json

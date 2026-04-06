@@ -66,6 +66,16 @@ export default function QuestionCard({
               要確認
             </span>
           )}
+          {attr?.isExcluded === true && (
+            <span className="rounded-full bg-orange-500 text-white px-2 py-0.5 text-xs font-medium">
+              除外
+            </span>
+          )}
+          {attr?.needsSourceCheck === true && (
+            <span className="rounded-full bg-amber-100 text-amber-700 px-2 py-0.5 text-xs font-medium">
+              要原本確認
+            </span>
+          )}
         </div>
 
         <div className="flex items-center gap-3 shrink-0">

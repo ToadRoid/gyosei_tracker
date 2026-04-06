@@ -7,7 +7,7 @@ export async function getSubjectStats(): Promise<SubjectStats[]> {
   const allAttempts = await db.attempts.toArray();
 
   return subjects.map((subject) => {
-    const subjectAttrs = allAttrs.filter((a) => a.subjectId === subject.id);
+    const subjectAttrs = allAttrs.filter((a) => a.subjectId === subject.id && a.isExcluded !== true && a.aiTriageStatus !== 'discard');
     const problemIds = new Set(subjectAttrs.map((a) => a.problemId));
     const subjectAttempts = allAttempts.filter((a) => problemIds.has(a.problemId));
     const correctCount = subjectAttempts.filter((a) => a.isCorrect).length;
@@ -30,7 +30,7 @@ export async function getChapterStats(): Promise<ChapterStats[]> {
   const allAttempts = await db.attempts.toArray();
 
   return chapters.map((chapter) => {
-    const chapterAttrs = allAttrs.filter((a) => a.chapterId === chapter.id);
+    const chapterAttrs = allAttrs.filter((a) => a.chapterId === chapter.id && a.isExcluded !== true && a.aiTriageStatus !== 'discard');
     const problemIds = new Set(chapterAttrs.map((a) => a.problemId));
     const chapterAttempts = allAttempts.filter((a) => problemIds.has(a.problemId));
     const correctCount = chapterAttempts.filter((a) => a.isCorrect).length;
@@ -48,7 +48,13 @@ export async function getChapterStats(): Promise<ChapterStats[]> {
 }
 
 export async function getOverallStats() {
-  const totalReady = await db.problems.where('status').equals('ready').count();
+  const readyProblems = await db.problems.where('status').equals('ready').toArray();
+  const allAttrs = await db.problemAttrs.toArray();
+  const attrMap = new Map(allAttrs.map((a) => [a.problemId, a]));
+  const totalReady = readyProblems.filter((p) => {
+    const attr = attrMap.get(p.problemId);
+    return !attr || attr.isExcluded !== true;
+  }).length;
   const totalDraft = await db.problems.where('status').equals('draft').count();
   const allAttempts = await db.attempts.toArray();
   const correctCount = allAttempts.filter((a) => a.isCorrect).length;

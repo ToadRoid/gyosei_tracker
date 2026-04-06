@@ -5609,7 +5609,7 @@
         {
           "seqNo": 6,
           "questionText": "行政庁が、申請の処理に要する標準処理期間を設定し、これを公表した場合において、当該標準処理期間を超過してもなお申請お申請に対する処分がなされないときであっても、当該申請に対して拒否処分がなされたものとみなされない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "申請に対する処分における標準処理期間の設定は（行政手続法６条）、目安で考えなければならない。当該標準処理期間を超過してもなお申請に対し何らの処分がなされないときであっても、当該申請に対して拒否処分がなされたものとみなされるものではない。",
           "subjectCandidate": "行政手続法",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -8973,7 +8973,7 @@
         {
           "seqNo": 2,
           "questionText": "道路交通法に基づく違反行為に対する反則金の納付通知について不服がある場合は、被通知者において、刑事訴訟で無罪を主張するか、当該納付通知の取消訴訟を提起するかのいずれかを選択することができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "判例（最判昭57.7.15）は、道路交通法に基づく反則金の納付の通知は、処分性は認められず、抗告訴訟の対象とはならないとしている。従って、道路交通法の違反行為に対する反則金の納付通知について不服がある場合は、当該納付通知の取消訴訟を提起できない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
@@ -9553,7 +9553,7 @@
         {
           "seqNo": 5,
           "questionText": "国を被告とする取消訴訟は、原告の普通裁判籍の所在地を管轄する高等裁判所の所在地を管轄する地方裁判所にも提起することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "国を被告とする取消訴訟は、原告の普通裁判籍の所在地を管轄する高等裁判所の所在地を管轄する地方裁判所にも提起することができる（特定管轄裁判所）。",
           "subjectCandidate": "裁判管轄",
           "chapterCandidate": "gyosei-jiken",
@@ -9745,7 +9745,7 @@
         {
           "seqNo": 1,
           "questionText": "裁判所は、訴訟の結果により権利を害される第三者があるときは、決定をもって、当該第三者を訴訟に参加させることができるが、この決定は、当該第三者の申立てがない場合であっても、職権で行うことができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "裁判所は、訴訟の結果により権利を害される第三者があるときは、当事者もしくはその第三者の申立てによりまたは職権で、決定をもって、その第三者を訴訟に参加させることができる（行政事件訴訟法22条1項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",

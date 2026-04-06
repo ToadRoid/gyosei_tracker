@@ -1,0 +1,26 @@
+[
+  {
+    "problemId": "KB2025-p138-q05",
+    "description": "行訴法24条: 職権証拠調べ結果の当事者意見聴取は必要→○",
+    "expected_answerBoolean": true,
+    "actual_answerBoolean": true,
+    "pass": true,
+    "questionText": "裁判所は、必要があると認めるときは、職権で、証拠調べをすることができるが、その証拠調べの結果について、当事者の意見をきかなければならない。"
+  },
+  {
+    "problemId": "KB2025-p136-q02",
+    "description": "行訴法14条: 取消訴訟出訴期間は6か月(旧3か月表記は誤り)→×",
+    "expected_answerBoolean": false,
+    "actual_answerBoolean": false,
+    "pass": true,
+    "questionText": "取消訴訟は、処分又は裁決があったことを知った日から3ヶ月以内に提起しなければならず、訴訟提起前に審査請求をすることが定められている場合でも、審査請求があった日か"
+  },
+  {
+    "problemId": "KB2025-p138-q01",
+    "description": "行訴法32条: 取消判決の第三者効「及ばない」は誤り→×",
+    "expected_answerBoolean": false,
+    "actual_answerBoolean": false,
+    "pass": true,
+    "questionText": "取消訴訟は、訴訟の相手方に対してのみ効力を生じ、当事者以外の第三者には取消判決の効力は及ばない。"
+  }
+]

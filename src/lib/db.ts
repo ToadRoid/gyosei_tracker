@@ -51,6 +51,11 @@ class GyoseiDB extends Dexie {
       problemAttrs: '++id, &problemId, subjectId, chapterId, aiTriageStatus',
       attempts: '++id, problemId, lapNo, [problemId+lapNo], answeredAt',
     });
+
+    // v6: isExcluded インデックス追加（除外フラグ管理）
+    this.version(6).stores({
+      problemAttrs: '++id, &problemId, subjectId, chapterId, aiTriageStatus, isExcluded',
+    });
   }
 }
 
@@ -76,6 +81,72 @@ export async function upsertProblemAttr(
       answerBoolean: null,
       ...changes,
     });
+  }
+}
+
+/**
+ * 問題を除外フラグで非表示にする（物理削除の代替）
+ */
+export async function excludeProblem(
+  problemId: string,
+  reason: string,
+  note?: string,
+  excludedBy?: string,
+): Promise<void> {
+  await upsertProblemAttr(problemId, {
+    isExcluded: true,
+    excludeReason: reason,
+    excludeNote: note,
+    excludedAt: new Date(),
+    excludedBy,
+  });
+}
+
+export async function unexcludeProblem(problemId: string): Promise<void> {
+  await upsertProblemAttr(problemId, {
+    isExcluded: false,
+    excludeReason: undefined,
+    excludeNote: undefined,
+    excludedAt: undefined,
+    excludedBy: undefined,
+  });
+}
+
+export async function setNeedsSourceCheck(
+  problemId: string,
+  value: boolean,
+  note?: string,
+): Promise<void> {
+  await upsertProblemAttr(problemId, {
+    needsSourceCheck: value,
+    sourceCheckNote: note,
+  });
+}
+
+export async function bulkExcludeProblems(
+  problemIds: string[],
+  reason: string,
+  note?: string,
+  excludedBy?: string,
+): Promise<void> {
+  for (const pid of problemIds) {
+    await excludeProblem(pid, reason, note, excludedBy);
+  }
+}
+
+export async function bulkUnexcludeProblems(problemIds: string[]): Promise<void> {
+  for (const pid of problemIds) {
+    await unexcludeProblem(pid);
+  }
+}
+
+export async function bulkSetNeedsSourceCheck(
+  problemIds: string[],
+  value: boolean,
+  note?: string,
+): Promise<void> {
+  for (const pid of problemIds) {
+    await setNeedsSourceCheck(pid, value, note);
   }
 }
 
@@ -135,6 +206,7 @@ export async function getReadyProblems(
     .map((p) => {
       const attr = attrMap.get(p.problemId);
       if (!attr || attr.answerBoolean === null || attr.answerBoolean === undefined) return null;
+      if (attr.isExcluded === true) return null;
       if (subjectId && attr.subjectId !== subjectId) return null;
       if (chapterId && attr.chapterId !== chapterId) return null;
       if (sectionTitle && (attr.sectionTitle ?? '') !== sectionTitle) return null;
@@ -181,6 +253,7 @@ interface CleanupPatch {
   deleteLap1: string[];       // lap1 の attempt を削除する problemId 一覧
   deleteAllAttempts: string[]; // 全 attempt を削除する problemId 一覧（未回答状態に戻す）
   discardProblems?: string[];  // status='discard' にする problemId 一覧（演習から除外）
+  needsSourceCheckProblems?: string[]; // needsSourceCheck=true にする problemId 一覧
   recalcCorrect: {            // isCorrect を再計算する problemId と正解
     problemId: string;
     correctAnswer: boolean;
@@ -307,6 +380,41 @@ const PATCHES: CleanupPatch[] = [
     ],
     recalcCorrect: [],
   },
+  // v10: 2026-04-06 全問題監査結果の適用
+  // 優先度1: 解説と正解が逆転している4件を修正
+  // 優先度2: データ品質不明の14件に needsSourceCheck フラグ
+  // 優先度3: データなし・意味不明・記述式の4件を除外
+  {
+    key: 'cleanup_2026-04-06_v10_audit_results',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    discardProblems: [
+      'KB2025-p068-q06', // questionText・explanationText が両方空
+      'KB2025-p223-q01', // questionText空。データ構造ミス
+      'KB2025-p085-q05', // 意味不明な文章（OCR崩壊）
+      'KB2025-p137-q01', // □□□□ 穴埋め記述式。answerBoolean管理不可
+    ],
+    needsSourceCheckProblems: [
+      // p062: questionText途中切断 5件
+      'KB2025-p062-q01', 'KB2025-p062-q02', 'KB2025-p062-q03',
+      'KB2025-p062-q04', 'KB2025-p062-q05',
+      // p078: 同上 3件
+      'KB2025-p078-q01', 'KB2025-p078-q02', 'KB2025-p078-q03',
+      // p129: <省略>タグ混入 3件
+      'KB2025-p129-q01', 'KB2025-p129-q02', 'KB2025-p129-q03',
+      // p162: 国家賠償 questionText切断 3件
+      'KB2025-p162-q01', 'KB2025-p162-q02', 'KB2025-p162-q03',
+      // 個別
+      'KB2025-p142-q02', // 執行停止の単独申立て可否。説明が複雑で破損疑い
+      'KB2025-p101-q03', // 説明「前段は正しい」だが stored=False
+    ],
+    recalcCorrect: [
+      { problemId: 'KB2025-p075-q06', correctAnswer: false }, // 解説「みなし拒否なし」→×
+      { problemId: 'KB2025-p127-q02', correctAnswer: false }, // 解説「反則金通知は処分性なし」→×
+      { problemId: 'KB2025-p135-q05', correctAnswer: true  }, // 解説「原告普通裁判籍に提起可」→○
+      { problemId: 'KB2025-p138-q01', correctAnswer: true  }, // 解説「職権で第三者訴訟参加可」→○
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -354,6 +462,11 @@ export async function runOneTimeCleanup(): Promise<void> {
       }
     }
 
+    // 2b. needsSourceCheck フラグ設定
+    for (const pid of patch.needsSourceCheckProblems ?? []) {
+      await upsertProblemAttr(pid, { needsSourceCheck: true });
+    }
+
     // 3. isCorrect 再計算
     for (const { problemId, correctAnswer } of patch.recalcCorrect) {
       const attempts = await db.attempts
@@ -384,7 +497,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-06-verify-batch4';
+const DATA_VERSION = '2026-04-06-audit-v10';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

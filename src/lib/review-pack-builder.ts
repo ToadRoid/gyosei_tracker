@@ -48,6 +48,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
   for (const attempt of allAttempts) {
     const attr = attrMap.get(attempt.problemId);
     if (!attr) continue;
+    if (attr.isExcluded === true || attr.aiTriageStatus === 'discard') continue;
 
     const subjectId = attr.subjectId ?? '';
     const chapterId = attr.chapterId ?? '';

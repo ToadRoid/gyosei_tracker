@@ -1,0 +1,59 @@
+{
+  "runAt": "2026-04-05T14:26:51.862950",
+  "dryRun": true,
+  "applied": [
+    {
+      "problemId": "KB2025-p024-q05",
+      "page": "024",
+      "seqNo": 5,
+      "oldAnswer": false,
+      "newAnswer": true,
+      "explanationSnippet": "都道府県公安委員会は知事から独立した合議制の行政委員会である。本肢は正しいが本書の解答は×（※要確認）。",
+      "appliedAt": "2026-04-05T14:26:51.862935"
+    },
+    {
+      "problemId": "KB2025-p026-q01",
+      "page": "026",
+      "seqNo": 1,
+      "oldAnswer": false,
+      "newAnswer": true,
+      "explanationSnippet": "国家行政組織法14条2項により訓令発出権あり。訓令違反の職員への懲戒処分も可能（国家公務員法82条）。本肢は正しい（※要確認）。",
+      "appliedAt": "2026-04-05T14:26:51.862942"
+    },
+    {
+      "problemId": "KB2025-p104-q06",
+      "page": "104",
+      "seqNo": 6,
+      "oldAnswer": true,
+      "newAnswer": false,
+      "explanationSnippet": "口頭意見陳述の機会を与えるのは「申立て」がある場合であり（行政不服審査法31条1項）、処分庁等も申立てにより口頭意見陳述の機会を与えられる。本肢は誤りとも読めるが…。",
+      "appliedAt": "2026-04-05T14:26:51.862949"
+    }
+  ],
+  "skipped": [
+    {
+      "problemId": "KB2025-p016-q01",
+      "reason": "explanation に具体的根拠が不足。人間確認推奨"
+    },
+    {
+      "problemId": "KB2025-p016-q03",
+      "reason": "explanation に具体的根拠が不足。人間確認推奨"
+    },
+    {
+      "problemId": "KB2025-p021-q05",
+      "reason": "explanation に具体的根拠が不足。人間確認推奨"
+    },
+    {
+      "problemId": "KB2025-p023-q01",
+      "reason": "explanation に具体的根拠が不足。人間確認推奨"
+    },
+    {
+      "problemId": "KB2025-p024-q04",
+      "reason": "explanation に具体的根拠が不足。人間確認推奨"
+    },
+    {
+      "problemId": "KB2025-p026-q02",
+      "reason": "explanation に具体的根拠が不足。人間確認推奨"
+    }
+  ]
+}
