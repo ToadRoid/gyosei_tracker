@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "gyosei_tracker 修正台帳",
+    "baselineVersion": "v15",
+    "generatedAt": "2026-04-07",
+    "totalEntries": 54,
+    "uniqueProblems": 54,
+    "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
+  },
+  "corrections": [
+    {
+      "problemId": "KB2025-p138-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v3_p138q05",
+      "reason": "answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p138-q02",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v3b_p138q02",
+      "reason": "第三者効 answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p141-q04",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v3c_p141q04",
+      "reason": "ghost_record / no content in reviewed_import.json（v3cでtrue設定後、v15でghost_record除外）"
+    },
+    {
+      "problemId": "KB2025-p142-q04",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v5_p133_p142",
+      "reason": "原本照合p133-142: answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p126-q06",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v6_p122_p132",
+      "reason": "原本照合p122-132: answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p127-q03",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-05_v6_p122_p132",
+      "reason": "原本照合p122-132: answerBoolean 修正 (true→false)"
+    },
+    {
+      "problemId": "KB2025-p127-q04",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v6_p122_p132",
+      "reason": "原本照合p122-132: answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p129-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-05_v6_p122_p132",
+      "reason": "原本照合p122-132: answerBoolean 修正 (true→false)"
+    },
+    {
+      "problemId": "KB2025-p143-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v7_p143_p152",
+      "reason": "原本照合p143-152: answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p143-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "v7パッチ誤り→v15で訂正 / 内閣総理大臣の異議:決定前に限らず。v7がtrue（誤）に設定したものをfalse（正）に戻す"
+    },
+    {
+      "problemId": "KB2025-p143-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v7_p143_p152",
+      "reason": "原本照合p143-152: answerBoolean 修正 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p144-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "v7パッチ誤り→v15で訂正 / 無効確認訴訟:取消訴訟出訴期間の準用なし。v7がtrue（誤）に設定したものをfalse（正）に戻す"
+    },
+    {
+      "problemId": "KB2025-p144-q06",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-05_v7_p143_p152",
+      "reason": "原本照合p143-152 (v7) + v8再確認: 前置不要なので○(解説と一致) false→true。v7とv8で同値に設定"
+    },
+    {
+      "problemId": "KB2025-p147-q05",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "v7パッチ誤り→v15で訂正 / 義務付け訴訟:申請型は重大損害不要。v7がtrue（誤）に設定したものをfalse（正）に戻す"
+    },
+    {
+      "problemId": "KB2025-p145-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-06_v8_p144q06_p145q04",
+      "reason": "無効原因なし=本案棄却であり却下ではない (true→false)"
+    },
+    {
+      "problemId": "KB2025-p075-q06",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-06_v10_audit_results",
+      "reason": "解説「みなし拒否なし」→× (true→false)"
+    },
+    {
+      "problemId": "KB2025-p127-q02",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-06_v10_audit_results",
+      "reason": "解説「反則金通知は処分性なし」→× (true→false)"
+    },
+    {
+      "problemId": "KB2025-p135-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-06_v10_audit_results",
+      "reason": "解説「原告普通裁判籍に提起可」→○ (false→true)"
+    },
+    {
+      "problemId": "KB2025-p138-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-06_v10_audit_results",
+      "reason": "解説「職権で第三者訴訟参加可」→○ (false→true)"
+    },
+    {
+      "problemId": "KB2025-p147-q04",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-06_v11_p147q04",
+      "reason": "申請型義務付け訴訟（処分拒否型）は取消訴訟/無効確認訴訟との併合が必要（37条の3第3項2号）→ 問題文の記述は正しい → 正解は○（true）"
+    },
+    {
+      "problemId": "KB2025-p011-q03",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-06_v12_optimizer_batch1",
+      "reason": "「条例で税目・税率を定めることはできない」→解説「本肢は誤っている」→ false"
+    },
+    {
+      "problemId": "KB2025-p180-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-06_v12_optimizer_batch1",
+      "reason": "「議会の自主解散はできない」→解説「本肢は誤りである」(特例法で可) → false"
+    },
+    {
+      "problemId": "KB2025-p232-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-06_v12_optimizer_batch1",
+      "reason": "「追認後も取消できる」→解説「本肢は誤っている」(115条本文) → false"
+    },
+    {
+      "problemId": "KB2025-p075-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "行政手続法6条: 標準処理期間+公表義務 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p082-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "行政手続法18条1項後段: 閲覧拒否要件 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p083-q04",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "行政手続法24条3項: 報告書+調書提出義務 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p141-q03",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "行訴法33条2項2号: 手続違法→再処分義務 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p167-q06",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "地自法252条の24第2項: 中核市申出要件 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p187-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "過料≠刑罰(括弧書き誤り) (true→false)"
+    },
+    {
+      "problemId": "KB2025-p216-q06",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "民法876条の4: 保佐人代理権付与 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p242-q02",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "reason": "民法147条2項: 時効更新 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p020-q02",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "信義則適用要件:平等に限らない (true→false)"
+    },
+    {
+      "problemId": "KB2025-p025-q07",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "国行組法13条1項:別法律の定め要 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p043-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "確認・公証・受理は準法律行為的=附款不可 (true→false)"
+    },
+    {
+      "problemId": "KB2025-p059-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "代執行法4条:証票携帯+要求時呈示 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p065-q06",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "地自法15条2項:規則による過料可 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p075-q03",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行手法6条:標準処理期間=努力義務 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p082-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行手法20条6項:聴聞は原則非公開 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p083-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行手法23条1項:不出頭→機会不再付与 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p085-q06",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行手法12条1項:処分基準=不利益処分全般 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p091-q02",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行手法38条2項:命令等制定後の見直し努力 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p100-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "不服審査法14条4項:総代を通じてのみ (false→true)"
+    },
+    {
+      "problemId": "KB2025-p116-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "不服審査法31条1項準用:口頭意見陳述 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p117-q05",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "不服審査法64条3項:原処分不当でなければ棄却 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p119-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "不服審査法38条5項:不教示→処分庁申立みなし (false→true)"
+    },
+    {
+      "problemId": "KB2025-p125-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行訴法:違法のみ取消訴訟可、不当は不可 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p141-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "行訴法33条1項:拘束力 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p169-q02",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "一部事務組合=同種事務必要(広域連合と非同様) (true→false)"
+    },
+    {
+      "problemId": "KB2025-p189-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "支出命令=会計管理者でなく長の命令 (true→false)"
+    },
+    {
+      "problemId": "KB2025-p207-q02",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "地自法245条の8第3項:高裁への訴え (false→true)"
+    },
+    {
+      "problemId": "KB2025-p214-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "民法5条2項:未成年者の同意なし行為=取消可 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p219-q05",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "失踪宣告取消:後婚のみ有効、共に取消は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p230-q01",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "民法108条:自己契約=本人帰属しない (true→false)"
+    },
+    {
+      "problemId": "KB2025-p240-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "reason": "民法145条かっこ書:物上保証人=時効援用可 (false→true)"
+    }
+  ]
+}
