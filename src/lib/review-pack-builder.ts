@@ -218,6 +218,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
       sectionTitle: group.sectionTitle,
       accuracy,
       totalAttempts: group.totalAttempts,
+      correctCount: group.correctCount,
       lapStats,
       improvement,
       pageRefQuestion: group.pageRefQuestion,

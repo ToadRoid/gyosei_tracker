@@ -308,8 +308,8 @@ function TopicCard({
   setFallbackPrompt: React.Dispatch<React.SetStateAction<{ idx: number; text: string } | null>>;
 }) {
   const accPct = Math.round(topic.accuracy * 100);
-  const wrongCount = topic.questionExamples.filter((q) => !q.isCorrect).length;
-  const correctCount = topic.questionExamples.filter((q) => q.isCorrect).length;
+  const correctCount = topic.correctCount;
+  const wrongCount = topic.totalAttempts - correctCount;
 
   return (
     <div className="rounded-xl border border-slate-100 bg-white shadow-sm overflow-hidden">

@@ -68,6 +68,7 @@ export interface WeakTopicInput {
   sectionTitle: string;
   accuracy: number;
   totalAttempts: number;
+  correctCount: number;
   lapStats: { lapNo: number; attempts: number; accuracy: number }[];
   improvement: number | null;
   pageRefQuestion: string;
