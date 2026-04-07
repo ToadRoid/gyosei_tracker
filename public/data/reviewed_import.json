@@ -4161,7 +4161,7 @@
         {
           "seqNo": 4,
           "questionText": "代執行は、行政庁が義務者に代わって自ら行わなければならず、第三者にこれを行わせることはできない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "代執行は、行政庁が義務者に代わるべき行為を自ら行う必要はなく、第三者に行わせることもできる（行政代執行法2条）。",
           "subjectCandidate": "行政法",
           "chapterCandidate": "gyosei-ippan",
@@ -15413,7 +15413,7 @@
         {
           "seqNo": 3,
           "questionText": "仮装の売買契約に基づく売買代金債権が他に譲渡された場合、債権の譲受人は善意者にあたるなどないため、譲受人は、譲受債権の発生原因が詐欺偽表示によるものであることについて善意であっても、買主に対して売買代金の支払を求めることができない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "仮装債権の譲受人は、民法94条２項の「第三者」にあたる（大判昭13.12.10）。したがって、仮装債権の譲受人は、譲受債権の発生原因が詐欺偽表示によるものであることについて善意であれば、買主に対して売買代金の支払を求めることができる。",
           "subjectCandidate": "物権法",
           "chapterCandidate": "minpo-sosoku",
@@ -15705,7 +15705,7 @@
         {
           "seqNo": 2,
           "questionText": "Aは、Bの親権者として、BのCに対する金銭の返済を受けた。Aが被保佐人であった場合、Aが保佐人の同意のないまま賃金の返済を受領したとしても、制限行為能力を理由にして、賃金の受領を取り消すことができない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "制限行為能力者が代理人としてした行為は、原則として行為能力の制限によって取り消すことができないが、制限行為能力者（A）が他の制限行為能力者（B）の法定代理人としてした行為については、他の制限行為能力者本人の利益保護のため、取り消すことができる（民法102条ただし書）",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",
@@ -16585,7 +16585,7 @@
         {
           "seqNo": 3,
           "questionText": "AがBに対する甲債権の担保として所有の不動産に抵当権を有している場合。丙が不動産をBから取得したとしても、甲債権が消滅すれば当該他の負担を免れる地位にあるが、このような利益は反射的なものにすぎないため、甲債権につき消滅時効を援用することができない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "抵当不動産の譲渡を受けた第三者は、抵当権の被担保債権の消滅時効を援用することができる（民法145条かっこ書）。したがって、抵当不動産の第三取得者であるAのBに対する甲債権につき消滅時効を援用することができる。",
           "subjectCandidate": "総則",
           "chapterCandidate": "minpo-sosoku",

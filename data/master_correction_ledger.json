@@ -3,8 +3,8 @@
     "title": "gyosei_tracker 修正台帳",
     "baselineVersion": "v15",
     "generatedAt": "2026-04-07",
-    "totalEntries": 55,
-    "uniqueProblems": 55,
+    "totalEntries": 59,
+    "uniqueProblems": 59,
     "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
   },
   "corrections": [
@@ -392,6 +392,34 @@
       "after": false,
       "source_patch": "cleanup_2026-04-07_v16_p148q02_sashitome_kikan",
       "reason": "差止めの訴えに出訴期間（6ヶ月）の規定は準用されない（行訴法38条1項）。問題文は「提起することができない」と誤主張。 (true→false)"
+    },
+    {
+      "problemId": "KB2025-p058-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v17_reaudit_true_false_mismatch",
+      "reason": "行政代執行法2条「自ら…又は第三者をしてこれをなさしめ」→第三者使用可。Q「第三者に行わせることはできない」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p223-q03",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v17_reaudit_true_false_mismatch",
+      "reason": "民法94条2項・大判昭13.12.10：仮装債権の譲受人は第三者に当たり善意なら請求可。Q「請求できない」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p228-q02",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v17_reaudit_true_false_mismatch",
+      "reason": "民法102条ただし書：制限行為能力者が他の制限行為能力者の法定代理人としてした行為は取消可。Q「取り消すことができない」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p240-q03",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v17_reaudit_true_false_mismatch",
+      "reason": "民法145条括弧書：抵当不動産の第三取得者は消滅時効を援用可。反射的利益ではなく正当な利益あり。Q「援用できない」は誤り (true→false)"
     }
   ]
 }

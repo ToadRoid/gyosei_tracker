@@ -579,6 +579,29 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p148-q02', correctAnswer: false }, // 差止めに出訴期間（6ヶ月）の規定は準用されない（行訴法38条1項）
     ],
   },
+  // ─── v17: 再監査バグ修正（ans=True なのに法律と逆の4件） + 2件needsSourceCheck ───
+  //   p058-q04: 行政代執行法2条「第三者をして行わせること**もできる**」→Q誤り
+  //   p223-q03: 民法94条2項・大判昭13.12.10「仮装債権譲受人=第三者→善意なら支払請求**できる**」→Q誤り
+  //   p228-q02: 民法102条ただし書「制限行為能力者が他の制限行為能力者の法定代理人→取消**できる**」→Q誤り
+  //   p240-q03: 民法145条括弧書「第三取得者は時効援用**できる**、反射的利益ではない」→Q誤り
+  //   p142-q06: 仮の義務付け要件の記述がOCR切断疑い→needsSourceCheck
+  //   p155-q04: 国家賠償のE解説がOCR破損（「放改された」「女わされない」）→needsSourceCheck
+  {
+    key: 'cleanup_2026-04-07_v17_reaudit_true_false_mismatch',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    needsSourceCheckProblems: [
+      'KB2025-p142-q06', // 仮の義務付け要件 OCR切断疑い
+      'KB2025-p155-q04', // 国家賠償 E解説OCR破損
+    ],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p058-q04', correctAnswer: false }, // 代執行=第三者使用可（行政代執行法2条）
+      { problemId: 'KB2025-p223-q03', correctAnswer: false }, // 仮装債権譲受人=94条2項の第三者→善意なら請求可
+      { problemId: 'KB2025-p228-q02', correctAnswer: false }, // 民法102条ただし書→制限行為能力者法定代理取消可
+      { problemId: 'KB2025-p240-q03', correctAnswer: false }, // 民法145条括弧書→第三取得者は時効援用可
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -671,7 +694,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v16';
+const DATA_VERSION = '2026-04-07-audit-v17';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
