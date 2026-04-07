@@ -728,6 +728,31 @@ const PATCHES: CleanupPatch[] = [
     isExcludedProblems: [],
     recalcCorrect: [],
   },
+  // ─── v23: グループC p152系4件 NSC解除 ───
+  // p152-q03: answerBoolean False→True（行訴法46条2項 第三者利害関係人への教示義務）
+  // p152-q01/q04/q05: E補完のみ（ans変更なし）
+  {
+    key: 'cleanup_2026-04-08_v23_groupC_p152',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [
+      'KB2025-p152-q01',
+      'KB2025-p152-q03',
+      'KB2025-p152-q04',
+      'KB2025-p152-q05',
+    ],
+    clearIsExcluded: [
+      'KB2025-p152-q01',
+      'KB2025-p152-q03',
+      'KB2025-p152-q04',
+      'KB2025-p152-q05',
+    ],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p152-q03', correctAnswer: true }, // 行訴法46条2項 第三者利害関係人への教示義務→True
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -830,7 +855,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v22';
+const DATA_VERSION = '2026-04-08-audit-v23';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

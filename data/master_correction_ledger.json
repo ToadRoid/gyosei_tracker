@@ -3,8 +3,8 @@
     "title": "gyosei_tracker 修正台帳",
     "baselineVersion": "v15",
     "generatedAt": "2026-04-07",
-    "totalEntries": 65,
-    "uniqueProblems": 65,
+    "totalEntries": 66,
+    "uniqueProblems": 66,
     "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
   },
   "corrections": [
@@ -462,6 +462,13 @@
       "after": true,
       "source_patch": "cleanup_2026-04-07_v21_groupA_remaining4",
       "reason": "即時強制の正定義（義務不前提・急迫障害除去のための直接実力行使）を記述しており本肢は正しい。OCRによりQ末尾が切断され誤って False で取り込まれていた。"
+    },
+    {
+      "problemId": "KB2025-p152-q03",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-08_v23_groupC_p152",
+      "reason": "行政事件訴訟法46条2項は、処分・裁決につき利害関係を有する第三者（相手方以外）から教示を求められた場合に教示義務を定めている。Q「利害関係人でも教示義務あり」は正しい記述。OCR切断によりEが欠落しFalse登録されていた。"
     }
   ]
 }
