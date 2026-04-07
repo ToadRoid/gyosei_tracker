@@ -3,8 +3,8 @@
     "title": "gyosei_tracker 修正台帳",
     "baselineVersion": "v15",
     "generatedAt": "2026-04-07",
-    "totalEntries": 64,
-    "uniqueProblems": 64,
+    "totalEntries": 65,
+    "uniqueProblems": 65,
     "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
   },
   "corrections": [
@@ -455,6 +455,13 @@
       "after": true,
       "source_patch": "cleanup_2026-04-07_v19_p150q01_minshu_sosho_def",
       "reason": "行訴法5条の条文と一致する正しい定義。OCR「提起するものではなく」→「をいい」の破損で誤ってFalseに設定。解説テキストも修正。 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p062-q03",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v21_groupA_remaining4",
+      "reason": "即時強制の正定義（義務不前提・急迫障害除去のための直接実力行使）を記述しており本肢は正しい。OCRによりQ末尾が切断され誤って False で取り込まれていた。"
     }
   ]
 }

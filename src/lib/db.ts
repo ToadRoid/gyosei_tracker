@@ -665,6 +665,33 @@ const PATCHES: CleanupPatch[] = [
     isExcludedProblems: [],
     recalcCorrect: [],
   },
+  // ─── v21: グループA残り4件 原本照合・Q末尾復元 ───
+  //   p062-q03: 即時強制の正定義 → True（現在のFalseはバグ）
+  //   p062-q04: 先行義務不要のQを復元。False維持
+  //   p062-q05: 身体対象廃止の誤主張を復元。False維持。E修正
+  //   p078-q02: 審査基準=努力義務の誤主張を復元。False維持。E条文引用5条に修正
+  {
+    key: 'cleanup_2026-04-07_v21_groupA_remaining4',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [
+      'KB2025-p062-q03',
+      'KB2025-p062-q04',
+      'KB2025-p062-q05',
+      'KB2025-p078-q02',
+    ],
+    clearIsExcluded: [
+      'KB2025-p062-q03',
+      'KB2025-p062-q04',
+      'KB2025-p062-q05',
+      'KB2025-p078-q02',
+    ],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p062-q03', correctAnswer: true }, // 即時強制の正定義→True（OCR崩壊でFalseに誤設定）
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -767,7 +794,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v20';
+const DATA_VERSION = '2026-04-07-audit-v21';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
