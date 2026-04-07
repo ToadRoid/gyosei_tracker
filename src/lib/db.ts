@@ -692,6 +692,42 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p062-q03', correctAnswer: true }, // 即時強制の正定義→True（OCR崩壊でFalseに誤設定）
     ],
   },
+  // ─── v22: グループB 8件 原本照合・Q/E修正・NSC解除 ───
+  // answerBoolean 変更なし（全件 False/True 維持）
+  // p101-q03: E「前記肢は正しい」削除・明確化
+  // p142-q02: E OCR崩壊修正（条文引用重複・崩壊）
+  // p162-q01: Q「第１条」→「第２条」OCR誤り修正・末尾補完
+  // p162-q03: Q/E末尾補完（都道府県が責任主体）
+  // p129-q01~q03: <省略>タグ残存だが答え確認済み（E断片+判例で確認）
+  // p162-q02: Q/E変更なし
+  {
+    key: 'cleanup_2026-04-07_v22_groupB_all8',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [
+      'KB2025-p101-q03',
+      'KB2025-p129-q01',
+      'KB2025-p129-q02',
+      'KB2025-p129-q03',
+      'KB2025-p142-q02',
+      'KB2025-p162-q01',
+      'KB2025-p162-q02',
+      'KB2025-p162-q03',
+    ],
+    clearIsExcluded: [
+      'KB2025-p101-q03',
+      'KB2025-p129-q01',
+      'KB2025-p129-q02',
+      'KB2025-p129-q03',
+      'KB2025-p142-q02',
+      'KB2025-p162-q01',
+      'KB2025-p162-q02',
+      'KB2025-p162-q03',
+    ],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -794,7 +830,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v21';
+const DATA_VERSION = '2026-04-07-audit-v22';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
