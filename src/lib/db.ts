@@ -620,6 +620,20 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p101-q04', correctAnswer: false }, // 代理人資格は書面証明必要（不服審査法施行令3条1項）
     ],
   },
+  // ─── v19: p150-q01 民衆訴訟の定義（行訴法5条） False→True + 解説OCR修正 ───
+  //   Q = 行訴法5条の条文そのまま = 正しい → True が正解
+  //   OCR破損: 「提起するものではなく（5条）」→ 「をいい（5条）」
+  //   解説も同時に修正済み（reviewed_import.json）
+  {
+    key: 'cleanup_2026-04-07_v19_p150q01_minshu_sosho_def',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p150-q01', correctAnswer: true }, // 行訴法5条定義=Qと一致、解説OCR「ではなく」→「をいい」修正
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -712,7 +726,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v18';
+const DATA_VERSION = '2026-04-07-audit-v19';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

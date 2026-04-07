@@ -3,8 +3,8 @@
     "title": "gyosei_tracker 修正台帳",
     "baselineVersion": "v15",
     "generatedAt": "2026-04-07",
-    "totalEntries": 63,
-    "uniqueProblems": 63,
+    "totalEntries": 64,
+    "uniqueProblems": 64,
     "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
   },
   "corrections": [
@@ -448,6 +448,13 @@
       "after": false,
       "source_patch": "cleanup_2026-04-07_v18_twopart_q_rear_wrong",
       "reason": "行政不服審査法施行令3条1項前段：代理人の資格は書面で証明必要。Q後段「必ずしも書面不要」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p150-q01",
+      "before": false,
+      "after": true,
+      "source_patch": "cleanup_2026-04-07_v19_p150q01_minshu_sosho_def",
+      "reason": "行訴法5条の条文と一致する正しい定義。OCR「提起するものではなく」→「をいい」の破損で誤ってFalseに設定。解説テキストも修正。 (false→true)"
     }
   ]
 }
