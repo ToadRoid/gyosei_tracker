@@ -392,6 +392,8 @@ function TopicCard({
 
 // ── ReviewPage ─────────────────────────────────────────────────────────────
 
+const INITIAL_SHOW_COUNT = 5;
+
 export default function ReviewPage() {
   const [data, setData] = useState<ReviewPackInput | null>(null);
   const [overallStats, setOverallStats] = useState<{ totalAttempts: number; accuracy: number; currentLap: number } | null>(null);
@@ -399,6 +401,7 @@ export default function ReviewPage() {
   const [expandedTopic, setExpandedTopic] = useState<number | null>(null);
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
   const [fallbackPrompt, setFallbackPrompt] = useState<{ idx: number; text: string } | null>(null);
+  const [showAllTopics, setShowAllTopics] = useState(false);
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -475,24 +478,43 @@ export default function ReviewPage() {
       )}
 
       {/* Weak topics */}
-      {hasData && (
-        <>
-          <p className="text-xs text-slate-400">正答率が低いセクション（上位5件）</p>
-          {data.weakTopics.map((topic, idx) => (
-            <TopicCard
-              key={`${topic.subjectName}-${topic.sectionTitle}`}
-              topic={topic}
-              idx={idx}
-              expanded={expandedTopic === idx}
-              onToggle={() => setExpandedTopic(expandedTopic === idx ? null : idx)}
-              copiedIdx={copiedIdx}
-              setCopiedIdx={setCopiedIdx}
-              fallbackPrompt={fallbackPrompt}
-              setFallbackPrompt={setFallbackPrompt}
-            />
-          ))}
-        </>
-      )}
+      {hasData && (() => {
+        const total = data.weakTopics.length;
+        const visibleTopics = showAllTopics
+          ? data.weakTopics
+          : data.weakTopics.slice(0, INITIAL_SHOW_COUNT);
+        const showingCount = visibleTopics.length;
+        return (
+          <>
+            <p className="text-xs text-slate-400">
+              正答率が低いセクション（{showingCount}/{total}件）
+            </p>
+            {visibleTopics.map((topic, idx) => (
+              <TopicCard
+                key={`${topic.subjectName}-${topic.sectionTitle}`}
+                topic={topic}
+                idx={idx}
+                expanded={expandedTopic === idx}
+                onToggle={() => setExpandedTopic(expandedTopic === idx ? null : idx)}
+                copiedIdx={copiedIdx}
+                setCopiedIdx={setCopiedIdx}
+                fallbackPrompt={fallbackPrompt}
+                setFallbackPrompt={setFallbackPrompt}
+              />
+            ))}
+            {total > INITIAL_SHOW_COUNT && (
+              <button
+                onClick={() => setShowAllTopics((prev) => !prev)}
+                className="w-full rounded-xl border border-slate-200 bg-white py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-50 transition-colors"
+              >
+                {showAllTopics
+                  ? '▲ 折りたたむ'
+                  : `▼ すべて表示（残り ${total - INITIAL_SHOW_COUNT}件）`}
+              </button>
+            )}
+          </>
+        );
+      })()}
 
       <NavBar />
     </div>

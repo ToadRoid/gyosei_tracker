@@ -228,10 +228,9 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
     });
   }
 
-  // Sort by accuracy ascending, take top 5
+  // Sort by accuracy ascending (all sections)
   const sortedWeakTopics = weakTopics
-    .sort((a, b) => a.accuracy - b.accuracy)
-    .slice(0, 5);
+    .sort((a, b) => a.accuracy - b.accuracy);
 
   return {
     userSummary: {
