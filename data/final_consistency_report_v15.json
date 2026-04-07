@@ -1,0 +1,320 @@
+{
+  "reportTitle": "gyosei_tracker 整合レポート v7-v15",
+  "generatedAt": "2026-04-07",
+  "threeWayCheck": {
+    "totalCorrected": 52,
+    "mismatches": 0,
+    "note": "p141-q04 はゴーストレコード（JSON不在）のため比較対象外。有効問題は全件一致。"
+  },
+  "correctionsByPatch": {
+    "cleanup_2026-04-05_v3_p138q05": [
+      {
+        "problemId": "KB2025-p138-q05",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-05_v3b_p138q02": [
+      {
+        "problemId": "KB2025-p138-q02",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-05_v3c_p141q04": [
+      {
+        "problemId": "KB2025-p141-q04",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-05_v5_p133_p142": [
+      {
+        "problemId": "KB2025-p142-q04",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-05_v6_p122_p132": [
+      {
+        "problemId": "KB2025-p126-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p127-q03",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p127-q04",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p129-q04",
+        "answer": false
+      }
+    ],
+    "cleanup_2026-04-05_v7_p143_p152": [
+      {
+        "problemId": "KB2025-p143-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p143-q04",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p143-q05",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p144-q04",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p144-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p147-q05",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-06_v8_p144q06_p145q04": [
+      {
+        "problemId": "KB2025-p144-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p145-q04",
+        "answer": false
+      }
+    ],
+    "cleanup_2026-04-06_v10_audit_results": [
+      {
+        "problemId": "KB2025-p075-q06",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p127-q02",
+        "answer": false
+      }
+    ],
+    "cleanup_2026-04-06_v11_p147q04": [
+      {
+        "problemId": "KB2025-p147-q04",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-06_v12_optimizer_batch1": [
+      {
+        "problemId": "KB2025-p011-q03",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p180-q04",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p232-q04",
+        "answer": false
+      }
+    ],
+    "cleanup_2026-04-07_v14_non_litigation_batch": [
+      {
+        "problemId": "KB2025-p075-q05",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p082-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p083-q04",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p141-q03",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p167-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p187-q04",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p216-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p242-q02",
+        "answer": true
+      }
+    ],
+    "cleanup_2026-04-07_v15_full_scan_all_subjects": [
+      {
+        "problemId": "KB2025-p020-q02",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p025-q07",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p043-q04",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p059-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p065-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p075-q03",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p082-q05",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p083-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p085-q06",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p091-q02",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p100-q05",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p116-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p117-q05",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p119-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p125-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p141-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p143-q04",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p144-q04",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p147-q05",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p169-q02",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p189-q04",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p207-q02",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p214-q01",
+        "answer": true
+      },
+      {
+        "problemId": "KB2025-p219-q05",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p230-q01",
+        "answer": false
+      },
+      {
+        "problemId": "KB2025-p240-q01",
+        "answer": true
+      }
+    ]
+  },
+  "needsSourceCheck": {
+    "total": 22,
+    "problemIds": [
+      "KB2025-p062-q01",
+      "KB2025-p062-q02",
+      "KB2025-p062-q03",
+      "KB2025-p062-q04",
+      "KB2025-p062-q05",
+      "KB2025-p078-q01",
+      "KB2025-p078-q02",
+      "KB2025-p078-q03",
+      "KB2025-p129-q01",
+      "KB2025-p129-q02",
+      "KB2025-p129-q03",
+      "KB2025-p162-q01",
+      "KB2025-p162-q02",
+      "KB2025-p162-q03",
+      "KB2025-p142-q02",
+      "KB2025-p101-q03",
+      "KB2025-p152-q01",
+      "KB2025-p152-q03",
+      "KB2025-p152-q04",
+      "KB2025-p152-q05",
+      "KB2025-p225-q05",
+      "KB2025-p241-q01"
+    ]
+  },
+  "discardedProblems": {
+    "total": 3,
+    "problemIds": [
+      "KB2025-p144-q05",
+      "KB2025-p144-q06",
+      "KB2025-p145-q04"
+    ]
+  },
+  "excludedProblems": {
+    "total": 3,
+    "problemIds": [
+      "KB2025-p145-q05",
+      "KB2025-p145-q06",
+      "KB2025-p141-q04"
+    ]
+  },
+  "optimizerPolicy": {
+    "AUTO_APPLY": "Category C only (conf >= 0.90): 本肢は正しい/誤り 等の明示宣言",
+    "REPORT_ONLY": "Category A/B/F (conf 0.60-0.89): 末尾パターン・類似度ベース",
+    "falsePositiveRate": "78% (2026-04-07 実測, 142件照合)",
+    "manualProcess": "全文確認後 db.ts の recalcCorrect に個別追記して適用"
+  },
+  "manualHold": {
+    "total": 6,
+    "problemIds": [
+      "KB2025-p152-q01",
+      "KB2025-p152-q03",
+      "KB2025-p152-q04",
+      "KB2025-p152-q05",
+      "KB2025-p225-q05",
+      "KB2025-p241-q01"
+    ],
+    "reason": "OCR切断・崩壊により自動判定不能。原本確認後に対処。"
+  }
+}

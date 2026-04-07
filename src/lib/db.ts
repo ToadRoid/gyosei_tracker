@@ -515,6 +515,14 @@ const PATCHES: CleanupPatch[] = [
     key: 'cleanup_2026-04-07_v15_full_scan_all_subjects',
     deleteAllAttempts: [],
     deleteLap1: [],
+    needsSourceCheckProblems: [
+      'KB2025-p152-q01', // 行訴法46条2項: 口頭処分教示義務の有無 (OCR切断)
+      'KB2025-p152-q03', // 行訴法46条3項: 相手方以外への教示義務 (OCR切断)
+      'KB2025-p152-q04', // 行訴法: 誤教示救済規定の有無 (OCR切断)
+      'KB2025-p152-q05', // 行訴法46条1項: 国家賠償請求の教示事項該当性 (OCR切断)
+      'KB2025-p225-q05', // 民法: 動機の錯誤・表示要件 (Q・E両方OCR崩壊)
+      'KB2025-p241-q01', // 民法: 時効完成後の債務承認と信義則 (E OCR崩壊)
+    ],
     isExcludedProblems: [
       {
         problemId: 'KB2025-p141-q04',

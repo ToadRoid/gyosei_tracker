@@ -1,0 +1,423 @@
+{
+  "generatedAt": "2026-04-07",
+  "totalCorrections": 52,
+  "patchVersion": "v7-v15",
+  "records": [
+    {
+      "problemId": "KB2025-p011-q03",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v12_optimizer_batch1",
+      "sectionTitle": "国費の支出と国の債務負担行為の議決"
+    },
+    {
+      "problemId": "KB2025-p020-q02",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "行政法の一般原則"
+    },
+    {
+      "problemId": "KB2025-p025-q07",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "行政法の一般的な法理論"
+    },
+    {
+      "problemId": "KB2025-p043-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "05_附款・裁量"
+    },
+    {
+      "problemId": "KB2025-p059-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "行政代執行"
+    },
+    {
+      "problemId": "KB2025-p065-q06",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "行政法の一般的な法理論"
+    },
+    {
+      "problemId": "KB2025-p075-q03",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "03_申請に対する処分"
+    },
+    {
+      "problemId": "KB2025-p075-q05",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "03_申請に対する処分"
+    },
+    {
+      "problemId": "KB2025-p075-q06",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v10_audit_results",
+      "sectionTitle": "03_申請に対する処分"
+    },
+    {
+      "problemId": "KB2025-p082-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "不利益処分"
+    },
+    {
+      "problemId": "KB2025-p082-q05",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "不利益処分"
+    },
+    {
+      "problemId": "KB2025-p083-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "不利益処分"
+    },
+    {
+      "problemId": "KB2025-p083-q04",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "不利益処分"
+    },
+    {
+      "problemId": "KB2025-p085-q06",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "弁明の機会の付与"
+    },
+    {
+      "problemId": "KB2025-p091-q02",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "命令等制定手続"
+    },
+    {
+      "problemId": "KB2025-p100-q05",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "02_審査請求の要件・申立て"
+    },
+    {
+      "problemId": "KB2025-p116-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "審査請求"
+    },
+    {
+      "problemId": "KB2025-p117-q05",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "審査請求以外の不服申立て"
+    },
+    {
+      "problemId": "KB2025-p119-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "誤った教示による救済"
+    },
+    {
+      "problemId": "KB2025-p125-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "取消訴訟の訴訟要件"
+    },
+    {
+      "problemId": "KB2025-p126-q06",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v6_p122_p132",
+      "sectionTitle": "行政法"
+    },
+    {
+      "problemId": "KB2025-p127-q02",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v10_audit_results",
+      "sectionTitle": "02_処分性"
+    },
+    {
+      "problemId": "KB2025-p127-q03",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v6_p122_p132",
+      "sectionTitle": "02_処分性"
+    },
+    {
+      "problemId": "KB2025-p127-q04",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v6_p122_p132",
+      "sectionTitle": "02_処分性"
+    },
+    {
+      "problemId": "KB2025-p129-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v6_p122_p132",
+      "sectionTitle": "03_原告適格・訴えの利益"
+    },
+    {
+      "problemId": "KB2025-p138-q02",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v3b_p138q02",
+      "sectionTitle": "05_取消訴訟の審理"
+    },
+    {
+      "problemId": "KB2025-p138-q05",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v3_p138q05",
+      "sectionTitle": "05_取消訴訟の審理"
+    },
+    {
+      "problemId": "KB2025-p141-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "06_判決"
+    },
+    {
+      "problemId": "KB2025-p141-q03",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "06_判決"
+    },
+    {
+      "problemId": "KB2025-p141-q04",
+      "finalAnswer": true,
+      "jsonAnswer": null,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v3c_p141q04",
+      "sectionTitle": ""
+    },
+    {
+      "problemId": "KB2025-p142-q04",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v5_p133_p142",
+      "sectionTitle": "執行停止"
+    },
+    {
+      "problemId": "KB2025-p143-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v7_p143_p152",
+      "sectionTitle": "執行停止"
+    },
+    {
+      "problemId": "KB2025-p143-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "執行停止"
+    },
+    {
+      "problemId": "KB2025-p143-q05",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-05_v7_p143_p152",
+      "sectionTitle": "執行停止"
+    },
+    {
+      "problemId": "KB2025-p144-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "無効等確認訴訟"
+    },
+    {
+      "problemId": "KB2025-p144-q06",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v8_p144q06_p145q04",
+      "sectionTitle": "無効等確認訴訟"
+    },
+    {
+      "problemId": "KB2025-p145-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v8_p144q06_p145q04",
+      "sectionTitle": "08_無効等確認・不作為違法確認訴訟"
+    },
+    {
+      "problemId": "KB2025-p147-q04",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v11_p147q04",
+      "sectionTitle": "義務付け訴訟"
+    },
+    {
+      "problemId": "KB2025-p147-q05",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "義務付け訴訟"
+    },
+    {
+      "problemId": "KB2025-p167-q06",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "普通地方公共団体"
+    },
+    {
+      "problemId": "KB2025-p169-q02",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "地方公共団体の種類"
+    },
+    {
+      "problemId": "KB2025-p180-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v12_optimizer_batch1",
+      "sectionTitle": "04_長と議会の関係"
+    },
+    {
+      "problemId": "KB2025-p187-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "規則"
+    },
+    {
+      "problemId": "KB2025-p189-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "支出"
+    },
+    {
+      "problemId": "KB2025-p207-q02",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "12_国地方関係・広域連携"
+    },
+    {
+      "problemId": "KB2025-p214-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "行為能力"
+    },
+    {
+      "problemId": "KB2025-p216-q06",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "01_権利能力・行為能力"
+    },
+    {
+      "problemId": "KB2025-p219-q05",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "05_人・法人・物"
+    },
+    {
+      "problemId": "KB2025-p230-q01",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "03_代理"
+    },
+    {
+      "problemId": "KB2025-p232-q04",
+      "finalAnswer": false,
+      "jsonAnswer": false,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-06_v12_optimizer_batch1",
+      "sectionTitle": "03_代理"
+    },
+    {
+      "problemId": "KB2025-p240-q01",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v15_full_scan_all_subjects",
+      "sectionTitle": "06_時効"
+    },
+    {
+      "problemId": "KB2025-p242-q02",
+      "finalAnswer": true,
+      "jsonAnswer": true,
+      "consistent": true,
+      "patchKey": "cleanup_2026-04-07_v14_non_litigation_batch",
+      "sectionTitle": "06_時効"
+    }
+  ]
+}
