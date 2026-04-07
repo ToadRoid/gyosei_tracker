@@ -753,6 +753,32 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p152-q03', correctAnswer: true }, // 行訴法46条2項 第三者利害関係人への教示義務→True
     ],
   },
+  // ─── v24: グループC残り4件 NSC解除（p225-q05, p241-q01, p142-q06, p155-q04） ───
+  // answerBoolean 変更なし（全件 True 維持）
+  // p225-q05: OCR崩壊 Q/E全文再構成（最判平1.9.14 動機の錯誤・財産分与）
+  // p241-q01: OCR崩壊 Q/E全文再構成（最判昭41.4.20 時効援用と信義則）
+  // p142-q06: OCR崩壊 Q末尾「できない」→「できる」復元（25条4項 vs 37条の5）
+  // p155-q04: OCR崩壊 Q末尾「負うことはない」→「負うことがある」復元（最判昭57.4.1）
+  {
+    key: 'cleanup_2026-04-08_v24_groupC_remaining4',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [
+      'KB2025-p142-q06',
+      'KB2025-p155-q04',
+      'KB2025-p225-q05',
+      'KB2025-p241-q01',
+    ],
+    clearIsExcluded: [
+      'KB2025-p142-q06',
+      'KB2025-p155-q04',
+      'KB2025-p225-q05',
+      'KB2025-p241-q01',
+    ],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -855,7 +881,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-08-audit-v23';
+const DATA_VERSION = '2026-04-08-audit-v24';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
