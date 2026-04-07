@@ -3,8 +3,8 @@
     "title": "gyosei_tracker 修正台帳",
     "baselineVersion": "v15",
     "generatedAt": "2026-04-07",
-    "totalEntries": 59,
-    "uniqueProblems": 59,
+    "totalEntries": 63,
+    "uniqueProblems": 63,
     "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
   },
   "corrections": [
@@ -420,6 +420,34 @@
       "after": false,
       "source_patch": "cleanup_2026-04-07_v17_reaudit_true_false_mismatch",
       "reason": "民法145条括弧書：抵当不動産の第三取得者は消滅時効を援用可。反射的利益ではなく正当な利益あり。Q「援用できない」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p058-q08",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v18_twopart_q_rear_wrong",
+      "reason": "行政代執行法3条3項の緊急例外は代執行令書省略のみ。口頭での戒告は認めていない。Q後段「口頭で戒告できる」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p069-q07",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v18_twopart_q_rear_wrong",
+      "reason": "行政手続法2条4号ただし書：許認可等の申請拒否処分は不利益処分から除外→聴聞・弁明不要。Q後段「弁明の機会が与えられる」は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p087-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v18_twopart_q_rear_wrong",
+      "reason": "行政手続法32条2項の「不利益な取扱い」に助成金不交付措置は含まれない。Q後段の定義は誤り (true→false)"
+    },
+    {
+      "problemId": "KB2025-p101-q04",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v18_twopart_q_rear_wrong",
+      "reason": "行政不服審査法施行令3条1項前段：代理人の資格は書面で証明必要。Q後段「必ずしも書面不要」は誤り (true→false)"
     }
   ]
 }

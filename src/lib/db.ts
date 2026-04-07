@@ -602,6 +602,24 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p240-q03', correctAnswer: false }, // 民法145条括弧書→第三取得者は時効援用可
     ],
   },
+  // ─── v18: 2部構成Q「後段誤り」パターン True→False 4件 ───
+  //   p058-q08: 行政代執行法3条3項の緊急例外=令書省略のみ、口頭戒告は認めていない
+  //   p069-q07: 行政手続法2条4号ただし書：許認可拒否=不利益処分外→聴聞・弁明不要
+  //   p087-q04: 32条2項「不利益な取扱い」に助成金不交付は含まれない
+  //   p101-q04: 行政不服審査法施行令3条1項：代理人資格は書面証明必要
+  {
+    key: 'cleanup_2026-04-07_v18_twopart_q_rear_wrong',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p058-q08', correctAnswer: false }, // 代執行緊急時の令書省略≠口頭戒告可
+      { problemId: 'KB2025-p069-q07', correctAnswer: false }, // 許認可拒否は不利益処分外→弁明不要（行手法2条4号但書）
+      { problemId: 'KB2025-p087-q04', correctAnswer: false }, // 助成金不交付は32条2項「不利益な取扱い」に含まれない
+      { problemId: 'KB2025-p101-q04', correctAnswer: false }, // 代理人資格は書面証明必要（不服審査法施行令3条1項）
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -694,7 +712,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v17';
+const DATA_VERSION = '2026-04-07-audit-v18';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
