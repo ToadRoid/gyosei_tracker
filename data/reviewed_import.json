@@ -10405,7 +10405,7 @@
         {
           "seqNo": 2,
           "questionText": "差止めの訴えは、処分または裁決がされるとしていることを知った日から６箇月を経過したときは提起することができないが、正当な理由があるときはこの限りではない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "差止めの訴えについては、取消訴訟の出訴期間に関する規定は準用されていないため（行政事件訴訟法14条、38条１項）、処分または裁決がされるとしていることを知った日から６箇月を経過しても提起することができる。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",

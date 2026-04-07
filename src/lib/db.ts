@@ -568,6 +568,17 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p240-q01', correctAnswer: true },   // 民法145条かっこ書:物上保証人=時効援用可
     ],
   },
+  // ─── v16: p148-q02 差止め訴え出訴期間準用なし (True→False) ───
+  {
+    key: 'cleanup_2026-04-07_v16_p148q02_sashitome_kikan',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p148-q02', correctAnswer: false }, // 差止めに出訴期間（6ヶ月）の規定は準用されない（行訴法38条1項）
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -660,7 +671,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v15';
+const DATA_VERSION = '2026-04-07-audit-v16';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

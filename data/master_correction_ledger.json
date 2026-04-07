@@ -3,8 +3,8 @@
     "title": "gyosei_tracker 修正台帳",
     "baselineVersion": "v15",
     "generatedAt": "2026-04-07",
-    "totalEntries": 54,
-    "uniqueProblems": 54,
+    "totalEntries": 55,
+    "uniqueProblems": 55,
     "note": "v16以降はこの台帳に増分追記。v3-v15の再読み込み不要。"
   },
   "corrections": [
@@ -385,6 +385,13 @@
       "after": true,
       "source_patch": "cleanup_2026-04-07_v15_full_scan_all_subjects",
       "reason": "民法145条かっこ書:物上保証人=時効援用可 (false→true)"
+    },
+    {
+      "problemId": "KB2025-p148-q02",
+      "before": true,
+      "after": false,
+      "source_patch": "cleanup_2026-04-07_v16_p148q02_sashitome_kikan",
+      "reason": "差止めの訴えに出訴期間（6ヶ月）の規定は準用されない（行訴法38条1項）。問題文は「提起することができない」と誤主張。 (true→false)"
     }
   ]
 }
