@@ -256,11 +256,13 @@ interface CleanupPatch {
   deleteAllAttempts: string[]; // 全 attempt を削除する problemId 一覧（未回答状態に戻す）
   discardProblems?: string[];  // status='discard' にする problemId 一覧（演習から除外）
   needsSourceCheckProblems?: string[]; // needsSourceCheck=true にする problemId 一覧
+  clearNeedsSourceCheck?: string[];    // needsSourceCheck=false にする（原本確認後復帰）
   isExcludedProblems?: {      // isExcluded=true にする problemId 一覧（理由付き）
     problemId: string;
     reason: string;           // 'ghost_record' | 'data_error' | 'ocr_corruption' | 'non_boolean_format' | 'manual_hold'
     note?: string;
   }[];
+  clearIsExcluded?: string[];          // isExcluded=false にする（manual_hold 解除後復帰）
   recalcCorrect: {            // isCorrect を再計算する problemId と正解
     problemId: string;
     correctAnswer: boolean;
@@ -634,6 +636,35 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p150-q01', correctAnswer: true }, // 行訴法5条定義=Qと一致、解説OCR「ではなく」→「をいい」修正
     ],
   },
+  // ─── v20: グループA原本照合 — p062/p078 うち確認済み4件を演習復帰 ───
+  //   【復帰】Q完全・答え正しい・E確認済み:
+  //     p062-q01: 「代執行の説明」= False ✓（即時強制の定義ではない）
+  //     p062-q02: 「制裁手段」誤り = False ✓（即時強制は制裁手段ではない）
+  //     p078-q01: 「処分基準=努力義務」= True ✓（行手法12条1項「よう努めなければならない」）
+  //     p078-q03: 「できる限り具体的」= True ✓（行手法12条2項のとおり）
+  //   【継続保留】Q途中切断のため原本確認待ち:
+  //     p062-q03 (⚠️答え不確定: 即時強制の正定義なら True 候補)
+  //     p062-q04, p062-q05, p078-q02 (Falseが濃厚だが要確認)
+  {
+    key: 'cleanup_2026-04-07_v20_groupA_partial_restore',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [
+      'KB2025-p062-q01',
+      'KB2025-p062-q02',
+      'KB2025-p078-q01',
+      'KB2025-p078-q03',
+    ],
+    clearIsExcluded: [
+      'KB2025-p062-q01',
+      'KB2025-p062-q02',
+      'KB2025-p078-q01',
+      'KB2025-p078-q03',
+    ],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -686,6 +717,11 @@ export async function runOneTimeCleanup(): Promise<void> {
       await upsertProblemAttr(pid, { needsSourceCheck: true });
     }
 
+    // 2b2. needsSourceCheck 解除（原本確認後復帰）
+    for (const pid of patch.clearNeedsSourceCheck ?? []) {
+      await upsertProblemAttr(pid, { needsSourceCheck: false });
+    }
+
     // 2c. isExcluded フラグ設定（理由付き）
     for (const { problemId, reason, note } of patch.isExcludedProblems ?? []) {
       await upsertProblemAttr(problemId, {
@@ -694,6 +730,11 @@ export async function runOneTimeCleanup(): Promise<void> {
         excludeNote: note,
         excludedAt: new Date(),
       });
+    }
+
+    // 2c2. isExcluded 解除（manual_hold 解除後復帰）
+    for (const pid of patch.clearIsExcluded ?? []) {
+      await upsertProblemAttr(pid, { isExcluded: false });
     }
 
     // 3. isCorrect 再計算
@@ -726,7 +767,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-07-audit-v19';
+const DATA_VERSION = '2026-04-07-audit-v20';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
