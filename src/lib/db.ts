@@ -779,6 +779,20 @@ const PATCHES: CleanupPatch[] = [
     isExcludedProblems: [],
     recalcCorrect: [],
   },
+  // v30: p038-q03 answerBoolean True→False（最判昭47.12.5: 理由附記不備は審査請求でも治癒されない）
+  // + OCR全件スキャンフェーズ2（p012/p026/p038/p051/p078/p204/p231帯 改行・崩壊修正）
+  {
+    key: 'cleanup_2026-04-09_v30_ocr_phase2',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [],
+    clearIsExcluded: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p038-q03', correctAnswer: false },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -881,7 +895,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-08-audit-v28';
+const DATA_VERSION = '2026-04-09-audit-v32';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

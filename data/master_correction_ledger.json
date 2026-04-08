@@ -469,6 +469,16 @@
       "after": true,
       "source_patch": "cleanup_2026-04-08_v23_groupC_p152",
       "reason": "行政事件訴訟法46条2項は、処分・裁決につき利害関係を有する第三者（相手方以外）から教示を求められた場合に教示義務を定めている。Q「利害関係人でも教示義務あり」は正しい記述。OCR切断によりEが欠落しFalse登録されていた。"
+    },
+    {
+      "problemId": "KB2025-p038-q03",
+      "before": true,
+      "after": false,
+      "source_patch": "data_version_v30_ocr_scan_phase2",
+      "reason": "最判昭47.12.5：青色申告更正処分の理由附記不備の瑕疵は、審査請求において処分理由が明らかにされても治癒されない。QのOCR崩壊（「当分理由が示めされていない場合には」→「処分理由が示された場合には」）修正に伴い、正しい命題はFalse（治癒されない）に変更。",
+      "changedAt": "2026-04-09T00:02:01.695508"
     }
-  ]
+  ],
+  "totalEntries": 67,
+  "uniqueProblems": 67
 }
