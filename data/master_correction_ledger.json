@@ -477,8 +477,24 @@
       "source_patch": "data_version_v30_ocr_scan_phase2",
       "reason": "最判昭47.12.5：青色申告更正処分の理由附記不備の瑕疵は、審査請求において処分理由が明らかにされても治癒されない。QのOCR崩壊（「当分理由が示めされていない場合には」→「処分理由が示された場合には」）修正に伴い、正しい命題はFalse（治癒されない）に変更。",
       "changedAt": "2026-04-09T00:02:01.695508"
+    },
+    {
+      "problemId": "KB2025-p160-q02",
+      "sourcePage": "160",
+      "seqNo": 2,
+      "detectedAt": "2026-04-09",
+      "detectedBy": "user_preview",
+      "errorType": "answer_reversed",
+      "before": {
+        "answerBoolean": false
+      },
+      "after": {
+        "answerBoolean": true
+      },
+      "reason": "解説「本肢のように定式化し安全性の欠如について瑕疵の存否を判断すべきとする」が肢の内容を正しいと確認。最判昭45.8.20の定式化どおりでありTrueが正解",
+      "dataVersion": "v38"
     }
   ],
-  "totalEntries": 67,
-  "uniqueProblems": 67
+  "totalEntries": 68,
+  "uniqueProblems": 68
 }

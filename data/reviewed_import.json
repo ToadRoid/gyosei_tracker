@@ -11038,7 +11038,7 @@
         {
           "seqNo": 2,
           "questionText": "営造物の設置管理に瑕疵があるとは、その物が通常有すべき安全性を欠いていることをいう。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "判例は、営造物の設置管理の瑕疵について、本肢のように定式化し、安全性の欠如について瑕疵の存否を判断すべきとする。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
