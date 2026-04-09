@@ -493,8 +493,24 @@
       },
       "reason": "解説「本肢のように定式化し安全性の欠如について瑕疵の存否を判断すべきとする」が肢の内容を正しいと確認。最判昭45.8.20の定式化どおりでありTrueが正解",
       "dataVersion": "v38"
+    },
+    {
+      "problemId": "KB2025-p161-q03",
+      "sourcePage": "161",
+      "seqNo": 3,
+      "detectedAt": "2026-04-10",
+      "detectedBy": "user_error_report",
+      "errorType": "ocr_corruption",
+      "before": {
+        "questionText": "氾濫等の河川については改修的改修が必記とされ、水害発生部分について未改善が成されていなかったこともある中で、河川管理に瑕疵があるかないかは真実ではない。"
+      },
+      "after": {
+        "questionText": "氾濫等の危険のある河川については抜本的改修が必要とされ、水害発生部分について未改修のままであったとしても、改修計画が不合理でない限り、河川管理に瑕疵があるとはいえない。"
+      },
+      "reason": "OCR崩壊3箇所: 改修的改修→抜本的改修、未改善→未改修、真実ではない→瑕疵があるとはいえない。最判昭59.1.26（大東水害事件）の趣旨に合わせて復元。",
+      "dataVersion": "v42"
     }
   ],
-  "totalEntries": 68,
-  "uniqueProblems": 68
+  "totalEntries": 69,
+  "uniqueProblems": 69
 }
