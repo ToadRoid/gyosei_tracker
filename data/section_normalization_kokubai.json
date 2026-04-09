@@ -1,0 +1,72 @@
+{
+  "chapter": "gyosei-kokubai",
+  "appliedAt": "2026-04-09",
+  "dataVersion": "v37",
+  "totalProblems": 52,
+  "sections": 9,
+  "entries": [
+    {
+      "pages": ["154"],
+      "before_sectionTitle": "国家賠償法1条",
+      "after_sectionTitle": "01_国家賠償法1条（要件・概念）",
+      "count": 6,
+      "reason": "1条の基本要件・公権力行使の概念を扱うページ。セクション番号付与で演習順を明示"
+    },
+    {
+      "pages": ["155", "156"],
+      "before_sectionTitle": "損失補償",
+      "after_sectionTitle": "02_国家賠償法1条（外形標準説・判例）",
+      "count": 11,
+      "reason": "旧タイトル「損失補償」は誤分類。内容は1条の外形標準説・判例群（不法行為・過失の判断基準）"
+    },
+    {
+      "pages": ["157"],
+      "before_sectionTitle": "国の損害賠償責任",
+      "after_sectionTitle": "03_国家賠償法1条（医療・追跡・立法）",
+      "count": 5,
+      "reason": "医療行為・追跡行為・立法不作為など特殊類型の1条適用判例群"
+    },
+    {
+      "pages": ["159"],
+      "before_sectionTitle": "02_国家賠償法2条",
+      "after_sectionTitle": "04_国家賠償法1条（求償権・共同責任）",
+      "count": 2,
+      "reason": "旧タイトル「02_国家賠償法2条」は誤分類。内容は1条の求償権・共同不法行為責任"
+    },
+    {
+      "pages": ["160", "161"],
+      "before_sectionTitle": ["損失補償", "損失補償法"],
+      "after_sectionTitle": "05_国家賠償法2条（営造物責任）",
+      "count": 10,
+      "reason": "旧タイトルは誤分類（損失補償）。内容は2条の公の営造物責任・設置管理の瑕疵"
+    },
+    {
+      "pages": ["162"],
+      "before_sectionTitle": "賠償責任者、求償権",
+      "after_sectionTitle": "06_国家賠償法2条（責任者・求償権）",
+      "count": 3,
+      "reason": "2条の賠償責任者・求償権規定（162ページ前半q01-q03）"
+    },
+    {
+      "pages": ["162", "163"],
+      "before_sectionTitle": ["民法の適用", "相互保証"],
+      "after_sectionTitle": "07_国家賠償法（民法適用・相互保証）",
+      "count": 5,
+      "reason": "民法の補充適用（4条）と外国人への相互保証（6条）を一括化"
+    },
+    {
+      "pages": ["163"],
+      "before_sectionTitle": "取消訴訟と国家賠償請求訴訟との関係",
+      "after_sectionTitle": "08_国家賠償法と取消訴訟",
+      "count": 2,
+      "reason": "タイトル簡略化。先行処分取消不要論・違法性承継の関係"
+    },
+    {
+      "pages": ["164", "165"],
+      "before_sectionTitle": ["憲法上の請求権", "損失補償"],
+      "after_sectionTitle": "09_損失補償（憲法29条）",
+      "count": 8,
+      "reason": "憲法29条3項に基づく損失補償請求権の要件・判例（河川附近地制限令事件等）"
+    }
+  ]
+}
