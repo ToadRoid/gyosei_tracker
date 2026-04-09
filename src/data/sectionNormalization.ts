@@ -29,6 +29,10 @@ const EXACT_MAPPING: Record<string, Record<string, string>> = {
 
 /**
  * page-based split が必要な raw title を解決するルール。
+ * pageRange は sourcePageQuestion（書籍ページ）ではなく
+ * problemId の pXXX 部分（ファイルページ）で判定する。
+ * 例: 'KB2025-p155-q01' → filePage=155
+ *
  * { chapterId: { rawSectionTitle: Array<{ pageRange: [min, max]; display: string }> } }
  */
 const PAGE_SPLIT_RULES: Record<
@@ -49,15 +53,17 @@ const PAGE_SPLIT_RULES: Record<
  *
  * @param chapterId          problemAttrs.chapterId（例: 'gyosei-kokubai'）
  * @param rawSectionTitle    problemAttrs.sectionTitle（原本見出し・変更不可）
- * @param sourcePageQuestion problemAttrs.sourcePageQuestion（例: '422'）
- * @param _problemId         将来の拡張用（現時点では未使用）
+ * @param sourcePageQuestion problemAttrs.sourcePageQuestion（書籍ページ番号、例: '422'）
+ * @param problemId          problemId（例: 'KB2025-p155-q01'）。
+ *                           page-based split のファイルページ取得に使用。
+ *                           将来の追加拡張にも対応できる設計。
  * @returns displaySectionTitle。マッピングなければ rawSectionTitle をそのまま返す。
  */
 export function resolveDisplaySectionTitle(
   chapterId: string,
   rawSectionTitle: string,
   sourcePageQuestion: string,
-  _problemId?: string,
+  problemId?: string,
 ): string {
   // 1. まず exact mapping を試みる
   const exact = EXACT_MAPPING[chapterId]?.[rawSectionTitle];
@@ -66,10 +72,17 @@ export function resolveDisplaySectionTitle(
   // 2. page-based split が定義されているか確認
   const splits = PAGE_SPLIT_RULES[chapterId]?.[rawSectionTitle];
   if (splits) {
-    const pageNo = parseInt(sourcePageQuestion, 10);
-    for (const rule of splits) {
-      if (pageNo >= rule.pageRange[0] && pageNo <= rule.pageRange[1]) {
-        return rule.display;
+    // sourcePageQuestion は書籍ページ番号のため使用しない。
+    // problemId の pXXX 部分（ファイルページ）で判定する。
+    // 例: 'KB2025-p155-q01' → filePage=155
+    const filePageMatch = problemId?.match(/[^-]+-p(\d+)-q/);
+    const filePage = filePageMatch ? parseInt(filePageMatch[1], 10) : NaN;
+
+    if (!Number.isNaN(filePage)) {
+      for (const rule of splits) {
+        if (filePage >= rule.pageRange[0] && filePage <= rule.pageRange[1]) {
+          return rule.display;
+        }
       }
     }
     // どのページ帯にも当てはまらない場合は raw を返す（安全フォールバック）
