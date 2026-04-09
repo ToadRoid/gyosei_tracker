@@ -14,6 +14,7 @@
 
 import { db, generateProblemId } from './db';
 import type { ParsedImport, ParsedPage, ParsedBranch } from '@/types';
+import { resolveDisplaySectionTitle } from '@/data/sectionNormalization';
 
 /** このconfidence以上ならreadyに昇格 */
 const CONFIDENCE_THRESHOLD = 0.75;
@@ -98,10 +99,13 @@ export async function importParsedBatch(
         });
 
         // problemAttrs に登録
+        const rawSectionTitle = branch.sectionTitle ?? '';
+        const chapterId = branch.chapterCandidate ?? '';
+        const sourcePageQuestion = branch.sourcePageQuestion ?? '';
         await db.problemAttrs.add({
           problemId,
           subjectId: branch.subjectCandidate ?? '',
-          chapterId: branch.chapterCandidate ?? '',
+          chapterId,
           answerBoolean: branch.answerBoolean,
           aiTriageStatus: isReady ? 'ready' : 'needs_review',
           aiSubjectCandidate: branch.subjectCandidate,
@@ -109,8 +113,14 @@ export async function importParsedBatch(
           aiAnswerCandidate: branch.answerBoolean,
           aiCleanedText: branch.questionText,
           aiConfidence: branch.confidence,
-          sectionTitle: branch.sectionTitle ?? '',
-          sourcePageQuestion: branch.sourcePageQuestion ?? '',
+          sectionTitle: rawSectionTitle,           // raw: 原本見出し（変更禁止）
+          displaySectionTitle: resolveDisplaySectionTitle(
+            chapterId,
+            rawSectionTitle,
+            sourcePageQuestion,
+            problemId,
+          ),
+          sourcePageQuestion,
           sourcePageAnswer: branch.sourcePageAnswer ?? '',
         });
 

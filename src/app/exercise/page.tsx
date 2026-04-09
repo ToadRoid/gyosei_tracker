@@ -111,12 +111,14 @@ async function loadCurriculumData(): Promise<SubjectInfo[]> {
   }
 
   // 3. Group: subjectId → chapterId → sectionTitle → problemIds[]
+  // displaySectionTitle (UI用正規化ラベル) を優先し、なければ sectionTitle (raw) にフォールバック
   const subjectMap = new Map<string, Map<string, Map<string, string[]>>>();
 
   for (const p of allProblems) {
     const sid = p.subjectId ?? 'unknown';
     const cid = p.chapterId ?? 'unknown';
-    const sec = (p.sectionTitle && p.sectionTitle.trim()) ? p.sectionTitle.trim() : 'その他';
+    const rawSec = p.displaySectionTitle ?? p.sectionTitle ?? '';
+    const sec = rawSec.trim() || 'その他';
 
     if (!subjectMap.has(sid)) subjectMap.set(sid, new Map());
     const chapMap = subjectMap.get(sid)!;

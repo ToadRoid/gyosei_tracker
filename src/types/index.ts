@@ -58,10 +58,12 @@ export interface ProblemAttr {
   aiChapterCandidate?: string;
   aiCleanedText?: string;
   aiConfidence?: number;
-  // 参考書対応情報
-  sectionTitle?: string;           // 小分類（例: 審査請求先、誤教示）
+  // 参考書対応情報（raw: 原本の章見出しそのまま・変更禁止）
+  sectionTitle?: string;           // 原本の章見出し（例: 審査請求先、誤教示）
   sourcePageQuestion?: string;     // 問題ページ番号
   sourcePageAnswer?: string;       // 解説ページ番号
+  // UI表示用（display: import時に正規化・上書き自由）
+  displaySectionTitle?: string;    // UI表示用グルーピングラベル（sectionTitleの正規化版）
   explanationText?: string;        // 解説テキスト
   questionType?: 'descriptive';    // 記述式問題フラグ
   // 除外フラグ（物理削除の代替）
@@ -94,7 +96,8 @@ export interface ProblemForExercise extends Problem {
   explanationText: string;
   subjectId: string;
   chapterId: string;
-  sectionTitle?: string;
+  sectionTitle?: string;           // raw: 原本見出し
+  displaySectionTitle?: string;    // UI用: 正規化済みラベル
   sourcePageQuestion?: string;
   sourcePageAnswer?: string;
   questionType?: 'descriptive';
