@@ -1,6 +1,7 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { Problem, ProblemAttr, Attempt, ProblemForExercise } from '@/types';
 import { supabase } from './supabase';
+import { resolveDisplaySectionTitle } from '@/data/sectionNormalization';
 
 class GyoseiDB extends Dexie {
   problems!: EntityTable<Problem, 'id'>;
@@ -211,7 +212,17 @@ export async function getReadyProblems(
       if (attr.needsSourceCheck === true) return null;
       if (subjectId && attr.subjectId !== subjectId) return null;
       if (chapterId && attr.chapterId !== chapterId) return null;
-      if (sectionTitle && (attr.sectionTitle ?? '') !== sectionTitle) return null;
+      // displaySectionTitle を優先したフィルタ（session URL の ?section= に display ラベルが入るため）
+      // DB に displaySectionTitle がない旧レコードはオンザフライで解決する
+      const effectiveDisplay =
+        attr.displaySectionTitle ||
+        resolveDisplaySectionTitle(
+          attr.chapterId,
+          attr.sectionTitle ?? '',
+          attr.sourcePageQuestion ?? '',
+          p.problemId,
+        );
+      if (sectionTitle && effectiveDisplay !== sectionTitle) return null;
       return {
         ...p,
         answerBoolean: attr.answerBoolean as boolean,
@@ -221,8 +232,8 @@ export async function getReadyProblems(
         })(),
         subjectId: attr.subjectId,
         chapterId: attr.chapterId,
-        sectionTitle: attr.sectionTitle ?? undefined,               // raw: 原本見出し
-        displaySectionTitle: attr.displaySectionTitle ?? undefined, // UI用: 正規化済み
+        sectionTitle: attr.sectionTitle ?? undefined,    // raw: 原本見出し（変更禁止）
+        displaySectionTitle: effectiveDisplay || undefined, // UI用: 正規化済み（on-the-fly計算済み）
         sourcePageQuestion: attr.sourcePageQuestion ?? undefined,
         sourcePageAnswer: attr.sourcePageAnswer ?? undefined,
         questionType: attr.questionType ?? undefined,
@@ -908,7 +919,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-10-audit-v42';
+const DATA_VERSION = '2026-04-10-audit-v43';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
