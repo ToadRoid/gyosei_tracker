@@ -44,7 +44,8 @@ const EXACT_MAPPING: Record<string, Record<string, string>> = {
     '食品衛生法':                      '01_行政法総論',
     '通行権':                         '01_行政法総論',
     '土地所有権':                      '01_行政法総論',
-    '不明':                           '01_行政法総論',
+    // NOTE: '不明' は broad raw のため EXACT_MAPPING には入れない。
+    // KB2025-p058-q08 は PROBLEM_ID_OVERRIDES で個別に処理する。
     // ── 02 行政機関と権限 ──
     '02_行政機関と権限':                '02_行政機関と権限',
     '行政機関の種類':                   '02_行政機関と権限',
@@ -82,8 +83,8 @@ const EXACT_MAPPING: Record<string, Record<string, string>> = {
     '附款':                           '07_附款・裁量',
     '行政裁量':                        '07_附款・裁量',
     // ── 08 行政立法・契約・指導 ──
-    '06_行政立法・契約・指導・調査':       '08_行政立法・契約・指導',
-    '行政契約':                        '08_行政立法・契約・指導',
+    '06_行政立法・契約・指導・調査':       '08_行政立法・契約・指導・調査',
+    '行政契約':                        '08_行政立法・契約・指導・調査',
     // ── 09 行政上の強制執行 ──
     '07_行政上の強制執行':              '09_行政上の強制執行',
     '行政上の強制執行':                 '09_行政上の強制執行',
@@ -136,7 +137,8 @@ const EXACT_MAPPING: Record<string, Record<string, string>> = {
     '04_無効・取消し・条件・期限':         '06_無効・取消し・条件・期限',
     '無効・取消し':                     '06_無効・取消し・条件・期限',
     '条件・期限・期間の計算':             '06_無効・取消し・条件・期限',
-    '総則':                           '06_無効・取消し・条件・期限',
+    // NOTE: '総則' は broad raw のため EXACT_MAPPING には入れない。
+    // p234/p239 の各問題は PROBLEM_ID_OVERRIDES で個別に処理する。
     // ── 07 時効 ──
     '06_時効':                        '07_時効',
     '取得時効':                        '07_時効',
@@ -166,6 +168,34 @@ const PAGE_SPLIT_RULES: Record<
 };
 
 /**
+ * problemId 単位の限定 override。
+ * broad / 汎用 raw（`不明`、`(空)`、`総則` 等）は EXACT_MAPPING に入れず、
+ * 個別の problemId で display を指定する。
+ *
+ * GPT レビュー承認済み（2026-04-12）。
+ */
+const PROBLEM_ID_OVERRIDES: Record<string, string> = {
+  // gyosei-ippan: raw=不明 → 代執行の戒告手続（行政代執行法3条）
+  'KB2025-p058-q08': '10_行政代執行',
+  // gyosei-ippan: raw=(空) → 指名競争入札・裁量逸脱（最判平18.10.26）
+  'KB2025-p051-q05': '08_行政立法・契約・指導・調査',
+  // minpo-sosoku: raw=総則 / p234 → 無権代理と相続（最判昭63.3.1、最判平5.1.21）
+  'KB2025-p234-q01': '05_代理',
+  'KB2025-p234-q02': '05_代理',
+  'KB2025-p234-q03': '05_代理',
+  'KB2025-p234-q04': '05_代理',
+  'KB2025-p234-q05': '05_代理',
+  // minpo-sosoku: raw=総則 / p239-q01〜q02 → 期間計算（民法139条〜140条）
+  'KB2025-p239-q01': '06_無効・取消し・条件・期限',
+  'KB2025-p239-q02': '06_無効・取消し・条件・期限',
+  // minpo-sosoku: raw=総則 / p239-q03〜q06 → 時効の効力・援用（民法144条〜145条）
+  'KB2025-p239-q03': '07_時効',
+  'KB2025-p239-q04': '07_時効',
+  'KB2025-p239-q05': '07_時効',
+  'KB2025-p239-q06': '07_時効',
+};
+
+/**
  * raw sectionTitle → displaySectionTitle を解決する。
  *
  * @param chapterId          problemAttrs.chapterId（例: 'gyosei-kokubai'）
@@ -182,7 +212,13 @@ export function resolveDisplaySectionTitle(
   sourcePageQuestion: string,
   problemId?: string,
 ): string {
-  // 1. まず exact mapping を試みる
+  // 0. problemId 単位の限定 override（broad raw 用）
+  if (problemId) {
+    const override = PROBLEM_ID_OVERRIDES[problemId];
+    if (override) return override;
+  }
+
+  // 1. exact mapping を試みる
   const exact = EXACT_MAPPING[chapterId]?.[rawSectionTitle];
   if (exact) return exact;
 

@@ -143,7 +143,7 @@ describe('resolveDisplaySectionTitle — gyosei-ippan', () => {
   // 番号付き → display
   it('番号付き 02_行政機関と権限 → identity', () => expect(r('02_行政機関と権限')).toBe('02_行政機関と権限'));
   it('番号付き 05_附款・裁量 → 07_附款・裁量', () => expect(r('05_附款・裁量')).toBe('07_附款・裁量'));
-  it('番号付き 06_行政立法… → 08_行政立法…', () => expect(r('06_行政立法・契約・指導・調査')).toBe('08_行政立法・契約・指導'));
+  it('番号付き 06_行政立法… → 08_行政立法…調査', () => expect(r('06_行政立法・契約・指導・調査')).toBe('08_行政立法・契約・指導・調査'));
   it('番号付き 07_行政上の強制執行 → 09_', () => expect(r('07_行政上の強制執行')).toBe('09_行政上の強制執行'));
   it('番号付き 09_行政罰 → 12_行政罰', () => expect(r('09_行政罰')).toBe('12_行政罰'));
 
@@ -166,9 +166,23 @@ describe('resolveDisplaySectionTitle — gyosei-ippan', () => {
   it('無効な行政行為 → 06_取消し・撤回・瑕疵', () => expect(r('無効な行政行為')).toBe('06_取消し・撤回・瑕疵'));
   it('違法行為の承継 → 06_取消し・撤回・瑕疵', () => expect(r('違法行為の承継')).toBe('06_取消し・撤回・瑕疵'));
 
+  // display 名修正: 調査 を含む
+  it('06_行政立法… → 08_行政立法・契約・指導・調査', () => expect(r('06_行政立法・契約・指導・調査')).toBe('08_行政立法・契約・指導・調査'));
+  it('行政契約 → 08_行政立法・契約・指導・調査', () => expect(r('行政契約')).toBe('08_行政立法・契約・指導・調査'));
+
+  // PROBLEM_ID_OVERRIDES
+  it('p058-q08 不明 → 10_行政代執行（override）', () => {
+    expect(resolveDisplaySectionTitle('gyosei-ippan', '不明', '', 'KB2025-p058-q08')).toBe('10_行政代執行');
+  });
+  it('p051-q05 (空) → 08_行政立法・契約・指導・調査（override）', () => {
+    expect(resolveDisplaySectionTitle('gyosei-ippan', '', '', 'KB2025-p051-q05')).toBe('08_行政立法・契約・指導・調査');
+  });
+  it('不明（override対象外）→ raw フォールバック', () => {
+    expect(resolveDisplaySectionTitle('gyosei-ippan', '不明', '', 'KB2025-p999-q01')).toBe('不明');
+  });
+
   // フォールバック
   it('未定義 raw → raw のまま', () => expect(r('未知のテーマ')).toBe('未知のテーマ'));
-  it('(空) → raw のまま', () => expect(r('(空)')).toBe('(空)'));
 });
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -192,7 +206,7 @@ describe('resolveDisplaySectionTitle — minpo-sosoku', () => {
   it('詐欺および強迫 → 04_意思表示と瑕疵', () => expect(r('詐欺および強迫')).toBe('04_意思表示と瑕疵'));
   it('任意代理人 → 05_代理', () => expect(r('任意代理人')).toBe('05_代理'));
   it('無効・取消し → 06_無効・取消し…', () => expect(r('無効・取消し')).toBe('06_無効・取消し・条件・期限'));
-  it('総則 → 06_無効・取消し…', () => expect(r('総則')).toBe('06_無効・取消し・条件・期限'));
+  it('総則（override対象外 helper）→ raw フォールバック', () => expect(r('総則')).toBe('総則'));
   it('取得時効 → 07_時効', () => expect(r('取得時効')).toBe('07_時効'));
 
   // singleton → 統合先
@@ -201,6 +215,26 @@ describe('resolveDisplaySectionTitle — minpo-sosoku', () => {
   it('singleton 物 → 03_', () => expect(r('物')).toBe('03_人・法人・物'));
   it('singleton 消滅時効 → 07_', () => expect(r('消滅時効')).toBe('07_時効'));
   it('singleton 代理権の範囲 → 05_', () => expect(r('代理権の範囲')).toBe('05_代理'));
+
+  // PROBLEM_ID_OVERRIDES
+  it('p234-q01 総則 → 05_代理（override）', () => {
+    expect(resolveDisplaySectionTitle('minpo-sosoku', '総則', '', 'KB2025-p234-q01')).toBe('05_代理');
+  });
+  it('p234-q05 総則 → 05_代理（override）', () => {
+    expect(resolveDisplaySectionTitle('minpo-sosoku', '総則', '', 'KB2025-p234-q05')).toBe('05_代理');
+  });
+  it('p239-q01 総則 → 06_無効・取消し…（override）', () => {
+    expect(resolveDisplaySectionTitle('minpo-sosoku', '総則', '', 'KB2025-p239-q01')).toBe('06_無効・取消し・条件・期限');
+  });
+  it('p239-q03 総則 → 07_時効（override）', () => {
+    expect(resolveDisplaySectionTitle('minpo-sosoku', '総則', '', 'KB2025-p239-q03')).toBe('07_時効');
+  });
+  it('p239-q06 総則 → 07_時効（override）', () => {
+    expect(resolveDisplaySectionTitle('minpo-sosoku', '総則', '', 'KB2025-p239-q06')).toBe('07_時効');
+  });
+  it('総則（override対象外）→ raw フォールバック', () => {
+    expect(resolveDisplaySectionTitle('minpo-sosoku', '総則', '', 'KB2025-p999-q01')).toBe('総則');
+  });
 
   // フォールバック
   it('未定義 raw → raw のまま', () => expect(r('未知のテーマ')).toBe('未知のテーマ'));
