@@ -11198,7 +11198,7 @@
         },
         {
           "seqNo": 4,
-          "questionText": "国家賠償法にによる損害賠償の対象となるのは、生命、…",
+          "questionText": "国家賠償法による損害賠償の対象となるのは、生命、身体に対する損害に限られる。",
           "answerBoolean": false,
           "explanationText": "国家賠償法による損害賠償の対象に制限はないから、財産的損害のみならず、精神的損害も含まれる（国家賠償法４条、民法710条参照）。",
           "subjectCandidate": "gyosei",
@@ -11206,31 +11206,34 @@
           "confidence": 1.0,
           "sectionTitle": "民法の適用",
           "sourcePageQuestion": "426",
-          "sourcePageAnswer": "427"
+          "sourcePageAnswer": "427",
+          "cleanedText": "国家賠償法による損害賠償の対象となるのは、生命、身体に対する損害に限られる。"
         },
         {
           "seqNo": 5,
-          "questionText": "国家賠償法に基づく損害賠償請求権には、消滅時効ない。",
-          "answerBoolean": true,
+          "questionText": "国家賠償法に基づく損害賠償請求権には、消滅時効にかかることはない。",
+          "answerBoolean": false,
           "explanationText": "国家賠償法に基づく損害賠償請求権には、民法の規定が適用されるか（国家賠償法４条）、消滅時効にかかる（民法724条）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
           "confidence": 1.0,
           "sectionTitle": "民法の適用",
           "sourcePageQuestion": "426",
-          "sourcePageAnswer": "427"
+          "sourcePageAnswer": "427",
+          "cleanedText": "国家賠償法に基づく損害賠償請求権には、消滅時効にかかることはない。"
         },
         {
           "seqNo": 6,
-          "questionText": "消防職員の消火ミスにより、一度鎮火したはずの火災が再燃し、家屋が全焼した場合、大火責任法が適用されるため、被害者は国または公共団体に対して国家賠償法１条に基づく損害賠償を求めることができない。",
+          "questionText": "消防職員の消火ミスにより、一度鎮火したはずの火災が再燃し、家屋が全焼した場合、失火責任法が適用されるため、当該公務員に重大な過失がない限り、被害者は国又は公共団体に対して国家賠償法1条に基づく損害賠償を求めることができない。",
           "answerBoolean": true,
-          "explanationText": "失火責任法は、民法709条の例外であって国家賠償法４条にいう「民法」に含まれるものではないから、全焼が消失せる意思の再燃のうちに失火により…",
+          "explanationText": "失火責任法は、民法709条の特則であり、国家賠償法4条にいう「民法」に含まれるとするのが判例である（最判昭53.7.17）。したがって、公務員の失火による損害賠償請求には失火責任法が適用され、当該公務員に重大な過失がない限り、国又は公共団体は損害賠償責任を負わない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
           "confidence": 1.0,
           "sectionTitle": "民法の適用",
           "sourcePageQuestion": "426",
-          "sourcePageAnswer": "427"
+          "sourcePageAnswer": "427",
+          "cleanedText": "消防職員の消火ミスにより、一度鎮火したはずの火災が再燃し、家屋が全焼した場合、失火責任法が適用されるため、当該公務員に重大な過失がない限り、被害者は国又は公共団体に対して国家賠償法1条に基づく損害賠償を求めることができない。"
         }
       ]
     },
