@@ -818,7 +818,7 @@ const PATCHES: CleanupPatch[] = [
     ],
   },
   {
-    key: 'cleanup_2026-04-13_v50_p162_p165',
+    key: 'cleanup_2026-04-13_v52_p162_p165',
     deleteAllAttempts: [],
     deleteLap1: [],
     clearNeedsSourceCheck: [],
@@ -936,7 +936,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-14-audit-v52';
+const DATA_VERSION = '2026-04-14-audit-v53';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
