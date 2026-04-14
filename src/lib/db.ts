@@ -834,6 +834,21 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p162-q05', correctAnswer: false },
     ],
   },
+  {
+    key: 'cleanup_2026-04-15_v54_p165_gemini_restore',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [
+      'KB2025-p165-q01',
+      'KB2025-p165-q02',
+      'KB2025-p165-q03',
+      'KB2025-p165-q04',
+    ],
+    clearIsExcluded: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -936,7 +951,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-14-audit-v53';
+const DATA_VERSION = '2026-04-15-audit-v54';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

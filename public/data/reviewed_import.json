@@ -11357,51 +11357,55 @@
       "branches": [
         {
           "seqNo": 1,
-          "questionText": "公共のために必要な制限であっても、一般的に当然に忍...制限を超えて、財産上の特別の犠牲を課したと認められ...余償がある。",
+          "questionText": "公共のために必要な制限であっても、一般的に当然に受忍すべきものとされる制限の範囲を超えて、収用上の特別の犠牲を課したと認められる場合には補償請求をする余地がある。",
           "answerBoolean": true,
-          "explanationText": "通説によれば、財産権に内在する社会的制約の場合は補...されるべきことを要するため、特別の犠牲を課したと認...余償がある。",
+          "explanationText": "通説によれば、収用権に内在する社会的制約の場合は補償は不要であるが、特定の個人に対し社会通念上受忍の限度を超える特別の犠牲を加えた場合には補償が必要となる。従って、公用制限であっても、受忍限度を超えた特別の犠牲を課したと認められる場合には、補償請求をする余地がある。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
           "confidence": 1.0,
           "sectionTitle": "損失補償",
           "sourcePageQuestion": "432",
-          "sourcePageAnswer": "433"
+          "sourcePageAnswer": "433",
+          "cleanedText": "公共のために必要な制限であっても、一般的に当然に受忍すべきものとされる制限の範囲を超えて、収用上の特別の犠牲を課したと認められる場合には補償請求をする余地がある。"
         },
         {
           "seqNo": 2,
-          "questionText": "土地収用法における損失の補償は、収用の前後を通じて...完全な補償が必要であるとするのが最高裁判所の判例の...依る。",
+          "questionText": "土地収用法における損失の補償は、収用の前後を通じて被収用者の財産価値を等しくならしめるような完全な補償が必要であるとするのが最高裁判所の判例の立場である。",
           "answerBoolean": true,
-          "explanationText": "判例（最判昭48.10.18）は、土地収用法にお...の回復を図ることを目的とするものとするから、原則と...する。",
+          "explanationText": "判例（最判昭48.10.18）は、土地収用法における損失の補償は、収用によって所有者が被る特別な犠牲の回復を図ることを目的とするものであるから、原則として完全な補償をなすべきとするとする。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
           "confidence": 1.0,
           "sectionTitle": "損失補償",
           "sourcePageQuestion": "432",
-          "sourcePageAnswer": "433"
+          "sourcePageAnswer": "433",
+          "cleanedText": "土地収用法における損失の補償は、収用の前後を通じて被収用者の財産価値を等しくならしめるような完全な補償が必要であるとするのが最高裁判所の判例の立場である。"
         },
         {
           "seqNo": 3,
-          "questionText": "憲法第29条3項にいうところの財産権を公共の用に供す...正当な補償とは、その当時の経済状態において成立する...価値を常に完全に一致することが必要である。",
+          "questionText": "憲法第29条第3項にいうところの財産権を公共の用に供する場合の正当な補償とは、その当時の経済状態において成立すると考えられる価格と常に完全に一致することが必要である。",
           "answerBoolean": false,
-          "explanationText": "憲法29条3項の正当な補償とは、その当時の経済状態...算出された相当の額を必ずしも常に物から価値と完全に...ではない。",
+          "explanationText": "憲法第29条3項の正当な補償とは、その当時の経済状態において成立すると考えられる価格に基づき、合理的に算出された相当の額をいうのであって、必ずしも常にかる価格と完全に一致することを要するものではない（最大判昭28.12.23）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
           "confidence": 1.0,
           "sectionTitle": "損失補償",
           "sourcePageQuestion": "432",
-          "sourcePageAnswer": "433"
+          "sourcePageAnswer": "433",
+          "cleanedText": "憲法第29条第3項にいうところの財産権を公共の用に供する場合の正当な補償とは、その当時の経済状態において成立すると考えられる価格と常に完全に一致することが必要である。"
         },
         {
           "seqNo": 4,
-          "questionText": "損失補償が金銭補償の方式により行われる場合には、その支...るには制限に先立ち、又はそれと同時に行わなければなら...。",
+          "questionText": "損失補償が金銭補償の方式により行われる場合には、その支払が財産権の収用若しくは制限に先立ち、又はそれと同時に行われなければならない。",
           "answerBoolean": false,
-          "explanationText": "憲法は補償の時期については言及しておらず、補償対象...と同時に履行されるべきことまでは憲法が保障すること...。",
+          "explanationText": "憲法は補償の時期については言明しておらず、補償が財産の供与を交換的に同時に履行されるべきことは憲法（最大判昭24.7.13）が保障するところではない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-kokubai",
           "confidence": 1.0,
           "sectionTitle": "損失補償",
           "sourcePageQuestion": "432",
-          "sourcePageAnswer": "433"
+          "sourcePageAnswer": "433",
+          "cleanedText": "損失補償が金銭補償の方式により行われる場合には、その支払が財産権の収用若しくは制限に先立ち、又はそれと同時に行われなければならない。"
         }
       ]
     },
