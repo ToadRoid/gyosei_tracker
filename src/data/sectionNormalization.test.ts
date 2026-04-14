@@ -390,3 +390,112 @@ describe('resolveDisplaySectionTitle — kenpo-tochi', () => {
   // フォールバック
   it('未定義 raw → raw のまま', () => expect(r('未知のテーマ')).toBe('未知のテーマ'));
 });
+
+// ══════════════════════════════════════════════════════════════════════════════
+// gyosei-fufuku: 行政不服審査法
+// ══════════════════════════════════════════════════════════════════════════════
+describe('resolveDisplaySectionTitle — gyosei-fufuku', () => {
+  const r = (raw: string, pid = 'KB2025-p096-q01') =>
+    resolveDisplaySectionTitle('gyosei-fufuku', raw, '', pid);
+
+  // ── EXACT_MAPPING: 01 不服申立て総論 ──
+  it('目的 → 01_不服申立て総論', () => expect(r('目的')).toBe('01_不服申立て総論'));
+  it('不服申立ての種類 → 01_不服申立て総論', () => expect(r('不服申立ての種類')).toBe('01_不服申立て総論'));
+  it('不服申立ての類型（singleton）→ 01_不服申立て総論', () => expect(r('不服申立ての類型')).toBe('01_不服申立て総論'));
+  it('01_不服申立て（総論）→ 01_不服申立て総論', () => expect(r('01_不服申立て（総論）')).toBe('01_不服申立て総論'));
+
+  // ── EXACT_MAPPING: 02 審査請求の対象・要件・申立て ──
+  it('02_審査請求の要件・申立て → 02_審査請求の対象・要件・申立て', () =>
+    expect(r('02_審査請求の要件・申立て')).toBe('02_審査請求の対象・要件・申立て'));
+  it('処分についての審査請求 → 02_審査請求の対象・要件・申立て', () =>
+    expect(r('処分についての審査請求')).toBe('02_審査請求の対象・要件・申立て'));
+  it('不作為についての審査請求（singleton）→ 02_審査請求の対象・要件・申立て', () =>
+    expect(r('不作為についての審査請求')).toBe('02_審査請求の対象・要件・申立て'));
+
+  // ── EXACT_MAPPING: 03 審理手続 ──
+  it('審理員（singleton）→ 03_審理手続', () => expect(r('審理員')).toBe('03_審理手続'));
+  it('審査請求の提出・補正 → 03_審理手続', () => expect(r('審査請求の提出・補正')).toBe('03_審理手続'));
+  it('審査請求の審理手続 → 03_審理手続', () => expect(r('審査請求の審理手続')).toBe('03_審理手続'));
+  it('審査請求の整理手続 → 03_審理手続', () => expect(r('審査請求の整理手続')).toBe('03_審理手続'));
+
+  // ── EXACT_MAPPING: 04 裁決 ──
+  it('審査請求の終了 → 04_裁決', () => expect(r('審査請求の終了')).toBe('04_裁決'));
+
+  // ── EXACT_MAPPING: 05 執行停止（二重化解消）──
+  it('執行停止（prefixなし）→ 05_執行停止', () => expect(r('執行停止')).toBe('05_執行停止'));
+  it('04_執行停止（prefix付き）→ 05_執行停止', () => expect(r('04_執行停止')).toBe('05_執行停止'));
+
+  // ── EXACT_MAPPING: 06 再調査の請求・再審査請求 ──
+  it('05_再調査・再審査請求 → 06_再調査の請求・再審査請求', () =>
+    expect(r('05_再調査・再審査請求')).toBe('06_再調査の請求・再審査請求'));
+  it('審査請求以外の不服申立て → 06_再調査の請求・再審査請求', () =>
+    expect(r('審査請求以外の不服申立て')).toBe('06_再調査の請求・再審査請求'));
+
+  // ── EXACT_MAPPING: 07 教示制度と救済 ──
+  it('06_教示制度と救済 → 07_教示制度と救済', () =>
+    expect(r('06_教示制度と救済')).toBe('07_教示制度と救済'));
+  it('誤った教示による救済 → 07_教示制度と救済', () =>
+    expect(r('誤った教示による救済')).toBe('07_教示制度と救済'));
+
+  // ── PAGE_SPLIT_RULES: 03_審理手続・裁決 ──
+  // p106 → 03_審理手続（証拠書類・検証・閲覧）
+  it('03_審理手続・裁決 + p106 → 03_審理手続', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '03_審理手続・裁決', '', 'KB2025-p106-q01'),
+    ).toBe('03_審理手続');
+  });
+  it('03_審理手続・裁決 + p106-q08 → 03_審理手続', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '03_審理手続・裁決', '', 'KB2025-p106-q08'),
+    ).toBe('03_審理手続');
+  });
+  // p109 → 04_裁決（認容・棄却・拘束力）
+  it('03_審理手続・裁決 + p109 → 04_裁決', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '03_審理手続・裁決', '', 'KB2025-p109-q01'),
+    ).toBe('04_裁決');
+  });
+  // p110 → 04_裁決
+  it('03_審理手続・裁決 + p110 → 04_裁決', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '03_審理手続・裁決', '', 'KB2025-p110-q05'),
+    ).toBe('04_裁決');
+  });
+  // pageRange外 → raw フォールバック
+  it('03_審理手続・裁決 + 範囲外ページ → raw フォールバック', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '03_審理手続・裁決', '', 'KB2025-p999-q01'),
+    ).toBe('03_審理手続・裁決');
+  });
+
+  // ── PROBLEM_ID_OVERRIDES: p116 raw=審査請求（実態：再調査の請求）──
+  it('p116-q01 審査請求 → 06_再調査の請求・再審査請求（override）', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '審査請求', '', 'KB2025-p116-q01'),
+    ).toBe('06_再調査の請求・再審査請求');
+  });
+  it('p116-q04 審査請求 → 06_再調査の請求・再審査請求（override）', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '審査請求', '', 'KB2025-p116-q04'),
+    ).toBe('06_再調査の請求・再審査請求');
+  });
+  it('審査請求（override対象外）→ raw フォールバック', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '審査請求', '', 'KB2025-p999-q01'),
+    ).toBe('審査請求');
+  });
+
+  // ── PROBLEM_ID_OVERRIDES: p118-q05 空raw ──
+  it('p118-q05 空raw → 07_教示制度と救済（override）', () => {
+    expect(
+      resolveDisplaySectionTitle('gyosei-fufuku', '', '', 'KB2025-p118-q05'),
+    ).toBe('07_教示制度と救済');
+  });
+
+  // ── フォールバック ──
+  it('未定義 raw → raw のまま', () => expect(r('未知のテーマ')).toBe('未知のテーマ'));
+  it('未定義 chapter → raw をそのまま返す（他chapterのraw）', () =>
+    expect(resolveDisplaySectionTitle('gyosei-fufuku', '審査請求先', '', 'KB2025-p100-q01')).toBe(
+      '審査請求先',
+    ));
+});
