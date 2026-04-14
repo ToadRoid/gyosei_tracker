@@ -358,8 +358,8 @@ function SessionContent() {
             {state.currentIndex + 1} / {state.problems.length}
           </span>
         </div>
-        {current.sectionTitle && (
-          <p className="text-xs text-slate-500 pl-1">{current.sectionTitle}</p>
+        {(current.displaySectionTitle || current.sectionTitle) && (
+          <p className="text-xs text-slate-500 pl-1">{current.displaySectionTitle || current.sectionTitle}</p>
         )}
         {(current.sourcePageQuestion || current.sourcePageAnswer) && (
           <p className="text-xs text-slate-400 pl-1">
