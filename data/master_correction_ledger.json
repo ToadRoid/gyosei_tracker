@@ -559,8 +559,24 @@
       },
       "reason": "大火責任法→失火責任法。重過失条件追加。E全文修正（最判昭53.7.17）",
       "dataVersion": "v50"
+    },
+    {
+      "problemId": "KB2025-p171-q05",
+      "sourcePage": "171",
+      "seqNo": 5,
+      "detectedAt": "2026-04-15",
+      "detectedBy": "user_error_report",
+      "errorType": "answer_reversed",
+      "before": {
+        "answerBoolean": false
+      },
+      "after": {
+        "answerBoolean": true
+      },
+      "reason": "Q「条例に違反→無効」、E「2条17項により無効」で肢の内容を肯定。ans=Trueが正解",
+      "dataVersion": "v55"
     }
   ],
-  "totalEntries": 72,
-  "uniqueProblems": 72
+  "totalEntries": 73,
+  "uniqueProblems": 73
 }

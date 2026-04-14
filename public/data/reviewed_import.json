@@ -11798,7 +11798,7 @@
         {
           "seqNo": 5,
           "questionText": "市町村が当該都道府県の条例に違反して事務を処理した場合には、その市町村の行為は無効とされる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "地方公共団体は法令、市町村および特別区は当該都道府県の条例に違反してその事務を処理してはならず（地方自治法2条16項）、これに違反して行った地方公共団体の行為は無効である（2条17項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",

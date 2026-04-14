@@ -849,6 +849,18 @@ const PATCHES: CleanupPatch[] = [
     isExcludedProblems: [],
     recalcCorrect: [],
   },
+  {
+    key: 'cleanup_2026-04-15_v55_p171q05_ans',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    clearNeedsSourceCheck: [],
+    clearIsExcluded: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p171-q05', correctAnswer: true },
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -951,7 +963,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-15-audit-v54';
+const DATA_VERSION = '2026-04-15-audit-v55';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
