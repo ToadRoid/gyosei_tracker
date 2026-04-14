@@ -226,7 +226,7 @@ async function parsePage(imagePath) {
     config: {
       systemInstruction: SYSTEM_PROMPT,
       responseMimeType: 'application/json',
-      responseSchema: BRANCH_SCHEMA,
+      responseJsonSchema: BRANCH_SCHEMA,
       temperature: 0,
     },
   });
