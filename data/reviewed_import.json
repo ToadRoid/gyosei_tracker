@@ -4555,7 +4555,7 @@
           "seqNo": 6,
           "questionText": "行政上の即時強制には、懲法上の令状主義は適用されない。",
           "answerBoolean": false,
-          "explanationText": "行政上の即時強制も、刑罰の行使と同様国家の権利、自由を侵害する恐れがあるから、その運用においても水道法35...",
+          "explanationText": "行政上の即時強制も、刑罰権の行使と同様国民の権利、自由を侵害するおそれがあるから、その濫用防止のために憲法35条の令状主義が適用されうる（最大判昭47.11.22：川崎民商事件）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
           "confidence": 1.0,
@@ -4577,15 +4577,16 @@
         },
         {
           "seqNo": 8,
-          "questionText": "営業許可に付された条件の履行を促す行政措置を無視したまま営業を継続している業者の氏名を行政庁が公表する行...",
+          "questionText": "営業許可に付された条件の履行を促す行政指導を無視したまま営業を継続している業者の氏名を行政庁が公表する行為は、行政法理論上、「即時強制」にあたる。",
           "answerBoolean": false,
-          "explanationText": "当該措置を無視したまま営業を継続している業者の氏名を行政庁が公表する行為は、行政上の義務違反に対する制裁...",
+          "explanationText": "行政指導を無視したまま営業を継続している業者の氏名を行政庁が公表する行為は、行政上の義務違反に対する制裁としての公表にあたり、即時強制にはあたらない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
           "confidence": 1.0,
           "sectionTitle": "行政上の強制執行",
           "sourcePageQuestion": "226",
-          "sourcePageAnswer": "227"
+          "sourcePageAnswer": "227",
+          "cleanedText": "営業許可に付された条件の履行を促す行政指導を無視したまま営業を継続している業者の氏名を行政庁が公表する行為は、行政法理論上、「即時強制」にあたる。"
         }
       ]
     },
