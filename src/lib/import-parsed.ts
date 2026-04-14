@@ -27,6 +27,17 @@ export interface ImportParsedResult {
   errorPages: number;
 }
 
+/** 再取込をまたいで保全するフラグ */
+interface PreservedFlags {
+  isExcluded?: boolean;
+  excludeReason?: string;
+  excludeNote?: string;
+  excludedAt?: Date;
+  excludedBy?: string;
+  needsSourceCheck?: boolean;
+  sourceCheckNote?: string;
+}
+
 /**
  * ParsedImport を受け取って IndexedDB に登録する。
  *
@@ -51,14 +62,30 @@ export async function importParsedBatch(
     onProgress?.(i, validPages.length);
 
     try {
-      // ── 1. 旧ページ単位レコードを削除 ──────────────────────────
-      // sourcePage が一致する problems を全て削除（ページ内の全旧バージョン）
+      // ── 1. 旧ページ単位レコードを削除（削除前にフラグを保全） ──────────────
       const pageNo = String(parseInt(page.sourcePage, 10) || 0).padStart(3, '0');
       const oldProblems = await db.problems
         .where('sourceBook')
         .equals(bookId)
         .filter((p) => p.sourcePage === pageNo)
         .toArray();
+
+      // 削除前に手動設定フラグを保全する（DATA_VERSION バンプで消えないようにする）
+      const preservedFlags = new Map<string, PreservedFlags>();
+      for (const old of oldProblems) {
+        const attr = await db.problemAttrs.where('problemId').equals(old.problemId).first();
+        if (attr && (attr.isExcluded !== undefined || attr.needsSourceCheck !== undefined)) {
+          preservedFlags.set(old.problemId, {
+            isExcluded: attr.isExcluded,
+            excludeReason: attr.excludeReason,
+            excludeNote: attr.excludeNote,
+            excludedAt: attr.excludedAt,
+            excludedBy: attr.excludedBy,
+            needsSourceCheck: attr.needsSourceCheck,
+            sourceCheckNote: attr.sourceCheckNote,
+          });
+        }
+      }
 
       for (const old of oldProblems) {
         await db.problems.delete(old.id!);
@@ -98,7 +125,8 @@ export async function importParsedBatch(
           createdAt: new Date(),
         });
 
-        // problemAttrs に登録
+        // problemAttrs に登録（手動設定フラグを引き継ぐ）
+        const preserved = preservedFlags.get(problemId);
         const rawSectionTitle = branch.sectionTitle ?? '';
         const chapterId = branch.chapterCandidate ?? '';
         const sourcePageQuestion = branch.sourcePageQuestion ?? '';
@@ -122,6 +150,14 @@ export async function importParsedBatch(
           ),
           sourcePageQuestion,
           sourcePageAnswer: branch.sourcePageAnswer ?? '',
+          // フラグ保全: 削除前に読み取った手動設定値を復元する
+          isExcluded: preserved?.isExcluded,
+          excludeReason: preserved?.excludeReason,
+          excludeNote: preserved?.excludeNote,
+          excludedAt: preserved?.excludedAt,
+          excludedBy: preserved?.excludedBy,
+          needsSourceCheck: preserved?.needsSourceCheck,
+          sourceCheckNote: preserved?.sourceCheckNote,
         });
 
         branchesSaved++;
