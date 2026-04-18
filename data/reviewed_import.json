@@ -1906,7 +1906,7 @@
         {
           "seqNo": 2,
           "questionText": "行政庁の権限の委任は、法律の根拠が必要である。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "法律の根拠が必要である（地方自治法153条1項・2項等）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
