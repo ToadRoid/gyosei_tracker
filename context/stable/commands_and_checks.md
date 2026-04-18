@@ -40,8 +40,15 @@ scripts/stage_import.js         # Dexie への取り込み用 staging
 1. `data/reviewed_import.json` を更新（正本）
 2. `public/data/reviewed_import.json` と同期（下記「同期確認」を必須）
 3. `npm run dev` でアプリを起動し、該当ページ / 問題 ID を画面確認
-4. `subjectId === ''` / `isExcluded` / `needsSourceCheck` が意図通りか確認
-5. `npm run test` と `npm run lint`
+4. **フラグごとの合格条件を個別確認**
+   - `subjectId`: 空文字 / null / `undefined` でないこと。`resolveChapter()` で解決された値か既存値の引き継ぎであること
+   - `chapterId`: 空文字でないこと。原本の章立てに対応する値であること
+   - `isExcluded`: 意図した肢のみ `true`。他肢は既存値を保持していること
+   - `needsSourceCheck`: 原本確認済みの肢のみ `false`。未確認は `true` を維持
+   - `answerBoolean`: Q / E の極性と一致（review_policy.md §整合確認の実行順序 参照）
+5. **テスト / lint 確認**
+   - `npm run test`: **全件 pass 必須**
+   - `npm run lint`: 既存負債があるため**無条件 pass は期待しない**。本変更起因で**新規の warning / error が追加されていない**ことを確認（差分監視）
 6. コミット（`vNN:` プレフィックスと件数明記）
 
 ## 2 つの `reviewed_import.json` の同期確認 (必須)
@@ -51,9 +58,10 @@ scripts/stage_import.js         # Dexie への取り込み用 staging
 
 1. **正本の明示**: `data/reviewed_import.json` が正本。`public/data/` 側はコピー扱い
 2. **主判定 — diff / 件数整合** （必須）
-   - `diff data/reviewed_import.json public/data/reviewed_import.json` で差分を確認
-   - `jq 'length'` 等で含まれる問題数（肢数）が一致するか確認
-   - バイト数が一致するか確認
+   - `diff data/reviewed_import.json public/data/reviewed_import.json` で差分を確認（差分ゼロが理想）
+   - **件数定義**: ここでの「件数」は **問題数（= 肢数, 1 肢 = 1 エントリ）**。ページ数ではない
+   - `jq 'length'` 等で両ファイルの**肢数が一致**するか確認
+   - 参考として**バイト数**も一致するか確認（JSON 整形差で ±数 byte はあり得るため補助指標）
 3. **補助指標 — 更新時刻**
    - `ls -l data/reviewed_import.json public/data/reviewed_import.json` で mtime 順を確認
    - ただし mtime は**補助指標**。touch や VCS チェックアウトで前後することがあるため、これだけで同期判定しない
