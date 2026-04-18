@@ -5,11 +5,16 @@
 ## 直近の活動 (confirmed, from git log)
 
 <!-- auto:commits:begin -->
-- v58（最新）: p047 / p146 を Gemini 読取で追加、p146 の chapter 修正、p229 保留、p018 除外
-- v57: p063-q01 E の途切れ解消（1 肢）
-- v56: p062-q06 / q08 の Q/E 途切れ解消（2 肢限定）
-- v55: p171-q05 の `answerBoolean` を False → True に修正
-- v54: p165 の Q/E 復元と `needsSourceCheck` 解除
+- 256ef5e chore: add /review-handoff command for done-candidate report (#6)
+- 42315f2 chore: add /update-status command for current_status.md auto-regen (#5)
+- 6450c0b chore: reduce context_check.sh false positives (@-prefix, bare basename) (#4)
+- b264620 docs: add automation plan and read-only context check (#3)
+- a01f942 docs: add gyosei_tracker context structure and agent rules (#2)
+- eaccebf v57: p063-q01 E をGemini読取+手修正で途切れ解消（1肢のみ）
+- 33bd582 v56: p062-q06/q08 Q/E をGemini読取で途切れ解消（限定反映2肢のみ）
+- 4ba1c3c v55: p171-q05 answerBoolean False→True（条例違反→無効は正しい）
+- 353ae3a v54: p165 Q/E をGemini読取で復元 + needsSourceCheck解除（出題復帰）
+- 6bdb339 fix: responseSchema → responseJsonSchema（@google/genai 正式記法）
 <!-- auto:commits:end -->
 
 傾向: 個別ページ単位で OCR 読み直し → limited 反映 → コミットを繰り返すフェーズ。

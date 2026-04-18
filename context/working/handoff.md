@@ -1,6 +1,6 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-18
+最終更新: 2026-04-18 (automation M1 closeout)
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
@@ -14,18 +14,16 @@
 | `importParsedBatch` の分類継承バグ | 未修正 | `known_issues.md` §1 |
 | `subjectId === ''` 保存の禁止設計 | 未修正 | `known_issues.md` §3 |
 | `needsSourceCheck` 自動検知ルール | 未実装 | `known_issues.md` §5 |
-| コンテキスト整理 (本セッション) | 初稿作成済 | review 中、コミット前 |
+| context automation Phase M1 | ✅ 完了 | PR #3〜#6 merged、`automation_plan.md` §0 参照。M2 は凍結 |
 
 ## 次に触るべき領域 (inferred)
 
-優先度順：
+automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
-1. **原本照合の継続** — 直近フェーズが個別ページ単位のため、同じスタイルで続行可能
+1. **原本照合の継続（本業・最優先）** — 直近フェーズが個別ページ単位のため、同じスタイルで続行可能
    - 未処理ページは `data/` 配下の ledger / pending 系 CSV を参照
    - 新規ページに着手する前に `data/*ledger*.json` と `data/pending_*.csv` を確認
-2. **本コンテキスト整理のコミット** — 本セッションで新設した `context/` と README / AGENTS.md 追記
-   - 事実誤認と `unverified` / `inferred` 箇所の検証後にコミット
-3. **`MIGRATION_CANDIDATES.md` の実行判断** — 無害な移設（`docs/` の policy 類を `context/stable/` から参照追加）だけ先行するか判断
+2. **`MIGRATION_CANDIDATES.md` の実行判断（保留可）** — 無害な移設（`docs/` の policy 類を `context/stable/` から参照追加）だけ先行するか判断。本業を優先し、余力があれば手を付ける
 <!-- review-handoff:scope:end -->
 
 ## 現時点の未確定事項 (unverified)
