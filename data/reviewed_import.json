@@ -1382,7 +1382,7 @@
         {
           "seqNo": 3,
           "questionText": "公務員として採用された者が有罪判決を受け、その時点で失職していなかったのとき、裁判の確定後もその立場に留まり続けることが法律によって許される。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "司法権が失職前に生じていなかった場合には、事務を逐次執行していた者は新たに公務員に任命される。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
