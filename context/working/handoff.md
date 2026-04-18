@@ -4,6 +4,7 @@
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
+<!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
 
 | 領域 | 状態 | 備考 |
@@ -25,6 +26,7 @@
 2. **本コンテキスト整理のコミット** — 本セッションで新設した `context/` と README / AGENTS.md 追記
    - 事実誤認と `unverified` / `inferred` 箇所の検証後にコミット
 3. **`MIGRATION_CANDIDATES.md` の実行判断** — 無害な移設（`docs/` の policy 類を `context/stable/` から参照追加）だけ先行するか判断
+<!-- review-handoff:scope:end -->
 
 ## 現時点の未確定事項 (unverified)
 
