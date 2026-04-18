@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # context_check.sh — read-only health check for context/ files.
 #
-# Prints OK / WARNING lines. Never modifies any file.
+# Prints OK / INFO / WARNING lines. Never modifies any file.
 # Exit code is 0 even when warnings exist (observation mode).
 # Exit non-zero only on internal failures (e.g. script itself broken).
 #
@@ -9,16 +9,34 @@
 #   1. context/working/handoff.md         "最終更新:" が 7 日以上前 → WARNING
 #   2. context/working/current_status.md  "最終更新:" が 7 日以上前 → WARNING
 #   3. context/MIGRATION_CANDIDATES.md    backtick 参照のうち存在しないパス → WARNING
+#                                         ただし bare basename が repo 内で一意に
+#                                         見つかる場合は INFO として候補提示、
+#                                         @-prefix 参照は suppress
+#
+# Categories:
+#   OK        = explicit existence confirmed
+#   INFO      = not at literal path, but exactly one candidate found in repo
+#   WARNING   = truly missing / ambiguous / stale
+#   suppressed = @-prefix (AI directive notation, not a filesystem path)
 
 set -u
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+# Prefer `git rev-parse --show-toplevel` (run from script dir for reliable
+# repo detection); fall back to parent-of-scripts relative inference.
+if REPO_ROOT=$(cd "$SCRIPT_DIR" && git rev-parse --show-toplevel 2>/dev/null); then
+  :
+else
+  REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+fi
 cd "$REPO_ROOT"
 
 WARN_COUNT=0
+INFO_COUNT=0
+SUPPRESS_COUNT=0
 
 warn() { echo "WARNING: $*"; WARN_COUNT=$((WARN_COUNT + 1)); }
+info() { echo "INFO: $*";    INFO_COUNT=$((INFO_COUNT + 1)); }
 ok()   { echo "OK: $*"; }
 
 date_to_epoch() {
@@ -94,6 +112,15 @@ is_path_like() {
   return 1
 }
 
+# Look up a bare basename in tracked files. Prints matching paths, one per line.
+# Uses bash-native basename (`${f##*/}`) for speed. Returns empty on no match.
+lookup_basename() {
+  local name="$1"
+  git ls-files 2>/dev/null | while IFS= read -r f; do
+    [[ "${f##*/}" == "$name" ]] && printf '%s\n' "$f"
+  done
+}
+
 check_migration_paths() {
   local path="context/MIGRATION_CANDIDATES.md"
   if [[ ! -f "$path" ]]; then
@@ -108,16 +135,44 @@ check_migration_paths() {
   local missing=0
   while IFS= read -r ref; do
     [[ -z "$ref" ]] && continue
+
+    # @-prefix references are AI directive notation (e.g. CLAUDE.md's
+    # `@AGENTS.md` import), not filesystem paths. Suppress silently.
+    if [[ "$ref" == @* ]]; then
+      SUPPRESS_COUNT=$((SUPPRESS_COUNT + 1))
+      continue
+    fi
+
     is_path_like "$ref" || continue
     checked=$((checked + 1))
 
     local target="$ref"
     if [[ "$target" == */ ]]; then
+      # Directory reference (trailing slash)
       if [[ ! -d "${target%/}" ]]; then
         warn "MIGRATION_CANDIDATES.md: dangling ref '$ref' (directory not found)"
         missing=$((missing + 1))
       fi
+    elif [[ "$target" != */* ]]; then
+      # Bare basename (no slash). Try literal first, then basename lookup.
+      if [[ -e "$target" ]]; then
+        :  # OK at repo root, treat as found
+      else
+        local hits hit_count
+        hits=$(lookup_basename "$target")
+        hit_count=$(printf '%s' "$hits" | grep -c . || true)
+        if [[ "$hit_count" == "1" ]]; then
+          info "MIGRATION_CANDIDATES.md: bare basename '$ref' → candidate at '$hits'"
+        elif (( hit_count >= 2 )); then
+          warn "MIGRATION_CANDIDATES.md: bare basename '$ref' is ambiguous (${hit_count} candidates)"
+          missing=$((missing + 1))
+        else
+          warn "MIGRATION_CANDIDATES.md: dangling ref '$ref' (not found, no basename match)"
+          missing=$((missing + 1))
+        fi
+      fi
     else
+      # Path with slash (but not directory)
       if [[ ! -e "$target" ]]; then
         warn "MIGRATION_CANDIDATES.md: dangling ref '$ref' (not found)"
         missing=$((missing + 1))
@@ -140,8 +195,17 @@ echo ""
 check_migration_paths
 echo ""
 
-if (( WARN_COUNT > 0 )); then
-  echo "Summary: OK with ${WARN_COUNT} WARNING(s)"
+summary_parts=()
+(( WARN_COUNT > 0 ))     && summary_parts+=("${WARN_COUNT} WARNING(s)")
+(( INFO_COUNT > 0 ))     && summary_parts+=("${INFO_COUNT} INFO(s)")
+(( SUPPRESS_COUNT > 0 )) && summary_parts+=("${SUPPRESS_COUNT} suppressed (@-prefix)")
+
+if (( ${#summary_parts[@]} > 0 )); then
+  joined="${summary_parts[0]}"
+  for ((i = 1; i < ${#summary_parts[@]}; i++)); do
+    joined="${joined}, ${summary_parts[i]}"
+  done
+  echo "Summary: OK with ${joined}"
 else
   echo "Summary: OK (no warnings)"
 fi
