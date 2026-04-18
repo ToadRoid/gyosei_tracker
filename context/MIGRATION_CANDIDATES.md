@@ -14,13 +14,15 @@
 
 | 対象 | 提案 | 理由 |
 |---|---|---|
-| `docs/gemini_ocr_policy.md` | `context/stable/data_rules.md` からリンク | OCR 方針は stable 扱いだが、詳細は `docs/` のまま保持 |
-| `docs/section-title-policy.md` | `context/stable/review_policy.md` からリンク | 章立て規則の根拠ドキュメント |
-| `docs/chapter-audit-runbook.md` | `context/stable/commands_and_checks.md` からリンク | 実行手順として参照 |
-| `docs/legal-data-cleanup-v3.md` | `context/working/known_issues.md` からリンク | 現在進行中の cleanup 方針 |
-| `docs/p229_hold.md` | `context/working/known_issues.md` からリンク | 個別保留メモ（inferred） |
-| `docs/audit-coverage-gap.md` | `context/working/known_issues.md` からリンク | audit で未カバー領域の記述（inferred） |
-| `docs/structured-audit-design.md` | `context/stable/commands_and_checks.md` からリンク | 設計側なので stable 寄せ |
+| `docs/` 配下の OCR policy 類 | `context/stable/data_rules.md` からリンク | OCR 方針は stable 扱いだが、詳細は `docs/` のまま保持 |
+| `docs/` 配下の section / title policy 類 | `context/stable/review_policy.md` からリンク | 章立て規則の根拠ドキュメント |
+| `docs/` 配下の audit runbook 類 | `context/stable/commands_and_checks.md` からリンク | 実行手順として参照 |
+| `docs/` 配下の legal / data cleanup 類 | `context/working/known_issues.md` からリンク | 現在進行中の cleanup 方針 |
+| `docs/` 配下の hold memo 類 | `context/working/known_issues.md` からリンク | 個別保留メモ（inferred） |
+| `docs/` 配下の audit coverage 記述類 | `context/working/known_issues.md` からリンク | 未カバー領域の記述（inferred） |
+| `docs/` 配下の structured audit design 類 | `context/stable/commands_and_checks.md` からリンク | 設計側なので stable 寄せ |
+
+> 個別ファイル名は **Phase 2 実行時**に `docs/` の当時の実在ファイルを確認して確定する。本一覧はカテゴリ単位の提案。
 
 方針: **`docs/` は動かさず、`context/` から path を参照する**。
 理由: `docs/` は既にコミット履歴が積み上がっており、path 変更 = git log 追跡コスト。

@@ -33,8 +33,8 @@
 1. **原本を参照**（Kindle / 問題集現物 / `images_preprocessed/` 内のスクショ）
 2. **現行 `data/reviewed_import.json`** の既存エントリを読む（差分ベースで考える）
 3. **関連メモを確認**
-   - `docs/p229_hold.md` など hold 系メモ
-   - `data/*ledger*` / `data/correction_ledger_v15.json` 等の補正履歴
+   - `docs/` 配下の hold 系メモ・照合メモ（存在する場合）
+   - `data/` 配下の ledger 類・補正履歴
 4. **フィールド整合を順に確認**
    1. Q（問題文）: 原本との一致
    2. E（解説文）: Q と矛盾しないか
