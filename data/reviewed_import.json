@@ -3426,6 +3426,86 @@
       ]
     },
     {
+      "sourcePage": "047",
+      "originalProblemId": "KB2025-p047-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政立法は、行政庁の処分と並んで公権力の行使であり、公定力・不可争力などの効力が認められる。",
+          "answerBoolean": false,
+          "explanationText": "行政立法は、広く一般市民に対する一般規定であるから、公権力の行使にあたらず、効力は認められない。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0,
+          "sectionTitle": "行政法の一般的な法理論",
+          "sourcePageQuestion": "198",
+          "sourcePageAnswer": "199"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "罪刑法定主義の原則により、行政立法で罰則を設けることは、法律で個別的・具体的な委任がなされている場合でも、許されない。",
+          "answerBoolean": false,
+          "explanationText": "委任命令（行政立法の一種）において、法律で個別に・具体的に委任した場合にのみ罰則を設けることはできる。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0,
+          "sectionTitle": "行政法の一般的な法理論",
+          "sourcePageQuestion": "198",
+          "sourcePageAnswer": "199"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "通達の内容が、法令の解釈や取扱いに関するもので、国民の権利義務に重大なかかわりをもつものである場合には、当該通達に対して取消訴訟を提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "政令、省令は国の法規命令として、訓令・通達は行政規則として、訓令・通達は行政規則として、国民および裁判所を拘束する効力を有する。しかし、法規命令は国民および裁判所を拘束する効力を有しないもの、行政規則は国民および裁判所を拘束する効力を有しないから、裁判所は取り消すことはできない（通達自身の取消訴訟が一般的に認められないことにつき、最判昭43.12.24参照）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0,
+          "sectionTitle": "行政法の一般的な法理論",
+          "sourcePageQuestion": "198",
+          "sourcePageAnswer": "199"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "教科書検定につき、文部大臣が、学校教育法の規定に基づき、文部省令、文部省告示により、審査の内容及び基準並びに検定の手続を定めたことは、法律の委任を欠くとはいえない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平3.3.16、最判平8.9.20）は、文部大臣（当時：現文部科学大臣）が、学校教育法の規定に基づいて、右審査の内容および基準ならびに検定の手続を定めたことが、法律の委任を欠くとはいえないと判示している。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0,
+          "sectionTitle": "行政法の一般的な法理論",
+          "sourcePageQuestion": "198",
+          "sourcePageAnswer": "199"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "国家公務員法が人事院規則に委任しているのは、公務員の職務の遂行の政治的中立を損なうおそれが実質的に認められる政治的行為の行為類型を規制の対象として具体的に定めることであり、国家公務員法が懲戒処分の対象と刑罰の対象とで後者に区別することなく規制の対象となる政治的行為の定めを人事院規則に委任しているからといって、憲法上禁止される白紙委任に当たらない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平24.12.7）は、本法102条1項にいうのは、公務員の職務の遂行の政治的中立性を損なうおそれが実質的に認められる政治的行為の行為類型を規制の対象として具体的に定めることであるから、同項が懲戒処分の対象と刑罰の対象とで後者に区別することなく規制の対象となる政治的行為の定めを人事院規則に委任しているからといって、憲法上禁止される白紙委任に当たらないことは明らかであると判示している。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0,
+          "sectionTitle": "行政法の一般的な法理論",
+          "sourcePageQuestion": "198",
+          "sourcePageAnswer": "199"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "法律による委任の範囲を逸脱して定められた委任命令は、権限を有する機関が取り消すまで有効なものとして取り扱われる。",
+          "answerBoolean": false,
+          "explanationText": "行政立法の規定内容が法律の委任の範囲を超えるとき、その部分は無効となる。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-ippan",
+          "confidence": 1.0,
+          "sectionTitle": "行政法の一般的な法理論",
+          "sourcePageQuestion": "198",
+          "sourcePageAnswer": "199"
+        }
+      ]
+    },
+    {
       "sourcePage": "048",
       "originalProblemId": "KB2025-p048-q01",
       "bookId": "KB2025",
@@ -10315,6 +10395,86 @@
           "sectionTitle": "08_無効等確認・不作為違法確認訴訟",
           "sourcePageQuestion": "392",
           "sourcePageAnswer": "393"
+        }
+      ]
+    },
+    {
+      "sourcePage": "146",
+      "originalProblemId": "KB2025-p146-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "不作為の違法確認訴訟は、処分の相手方以外の者でも、不作為の違法の確認を求めるにつき法律上の利益を有する者であれば、提起することができる。",
+          "answerBoolean": false,
+          "explanationText": "不作為の違法確認訴訟は、処分の相手方以外の者でも、不作為の違法の確認を求めるにつき法律上の利益を有する者であれば、提起することができる（行政事件訴訟法38条1項）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0,
+          "sectionTitle": "行政事件訴訟法",
+          "sourcePageQuestion": "394",
+          "sourcePageAnswer": "395"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Xの家の隣地にある建築物が建築基準法に違反した危険なものであるにもかかわらず、建築基準法上の規制権限の発動がなされない場合、Xは、当該規制権限の不行使につき、不作為違法確認訴訟を提起することができる。",
+          "answerBoolean": false,
+          "explanationText": "Xは、処分の取消訴訟についての申請をした者ではなく（行政事件訴訟法37条）、原告適格を有しないから、不作為違法確認訴訟を提起することはできない。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0,
+          "sectionTitle": "行政事件訴訟法",
+          "sourcePageQuestion": "394",
+          "sourcePageAnswer": "395"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "不作為の違法確認訴訟自体には出訴期間の定めはないが、その訴訟係属中に、行政庁が何らかの処分を行った場合、当該訴訟は訴えの利益がなく却下される。",
+          "answerBoolean": true,
+          "explanationText": "不作為の違法確認訴訟自体には出訴期間の定めはないから（行政事件訴訟法38条1項・4項は14条を準用していない）、不作為状態が継続する限り不作為の違法確認の訴えを提起することができる。もっとも、不作為の違法確認訴訟の係属中に、行政庁が何らかの処分を行った場合、不作為状態は解消されるから、当該訴訟は訴えの利益がなくなり却下されることになる。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0,
+          "sectionTitle": "行政事件訴訟法",
+          "sourcePageQuestion": "394",
+          "sourcePageAnswer": "395"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政事件訴訟法によると、不作為の違法確認訴訟の出訴期間は、申請をした日から3か月以内である。",
+          "answerBoolean": false,
+          "explanationText": "不作為の違法確認訴訟については、取消訴訟の出訴期間の規定（行政事件訴訟法14条）を準用していないから（38条1項・4項）、出訴期間の制限はない。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0,
+          "sectionTitle": "行政事件訴訟法",
+          "sourcePageQuestion": "394",
+          "sourcePageAnswer": "395"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "「不作為の違法確認の訴え」の地方裁判所係属中に行政庁が当該申請を認める処分をした場合、原告国民は適時に、違法であった不作為に基づく損害の賠償を求める訴えに変更することができる。",
+          "answerBoolean": true,
+          "explanationText": "「不作為の違法確認の訴え」を損害賠償請求訴訟に変更することは、原告国民の申立てによりすることができる（行政事件訴訟法38条1項、21条1項）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0,
+          "sectionTitle": "行政事件訴訟法",
+          "sourcePageQuestion": "394",
+          "sourcePageAnswer": "395"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "不作為の違法確認訴訟を提起するときは、対象となる処分の義務付け訴訟も併合して提起しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政事件訴訟法上、「不作為の違法確認訴訟」を提起するときは、対象となる処分の義務付け訴訟も併合して提起しなければならない」とする規定は存在せず、不作為の違法確認訴訟を提起することができるから、本肢は誤っている。なお、義務付け訴訟を提起するときは、不作為の義務付け訴訟に併合して提起しなければならない（行政事件訴訟法37条の3第3項1号）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-jiken",
+          "confidence": 1.0,
+          "sectionTitle": "行政事件訴訟法",
+          "sourcePageQuestion": "394",
+          "sourcePageAnswer": "395"
         }
       ]
     },
