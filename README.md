@@ -1,3 +1,33 @@
+# gyosei_tracker
+
+行政書士試験（肢別過去問）の学習進捗と問題データを管理する Next.js アプリ。
+
+## ドキュメントの読み方
+
+| 目的 | 参照先 |
+|---|---|
+| AI エージェントとして作業する | [AGENTS.md](AGENTS.md) と [CLAUDE.md](CLAUDE.md) |
+| プロジェクト全体像を掴む | [context/stable/project_overview.md](context/stable/project_overview.md) |
+| データ構造 / import ルール | [context/stable/data_rules.md](context/stable/data_rules.md) |
+| 原本照合 / レビュー規則 | [context/stable/review_policy.md](context/stable/review_policy.md) |
+| コマンドと確認手順 | [context/stable/commands_and_checks.md](context/stable/commands_and_checks.md) |
+| 現在の作業状況 | [context/working/current_status.md](context/working/current_status.md) |
+| 既知の未修正事項 | [context/working/known_issues.md](context/working/known_issues.md) |
+| 次セッション引き継ぎ | [context/working/handoff.md](context/working/handoff.md) |
+| 詳細設計・ランブック | [docs/](docs/) |
+
+## 技術スタック
+
+Next.js 16 / React 19 / TypeScript / Tailwind v4 / Dexie (IndexedDB) / Supabase / vitest / OCR (OpenAI + Gemini + tesseract.js)
+
+## 関連（スコープ外）
+
+将来の meta-repo 化構想は [context/FUTURE_META_REPO.md](context/FUTURE_META_REPO.md)（メモのみ、実変更なし）。
+
+---
+
+## Next.js 基本操作
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
