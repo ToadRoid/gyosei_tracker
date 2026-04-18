@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie';
-import type { Problem, ProblemAttr, Attempt, ProblemForExercise } from '@/types';
+import type { Problem, ProblemAttr, Attempt, ProblemForExercise, ParsedImport } from '@/types';
 import { supabase } from './supabase';
 import { resolveDisplaySectionTitle } from '@/data/sectionNormalization';
 
@@ -987,8 +987,63 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-19-audit-v61-polarity-p106-p111-p115';
+const DATA_VERSION = '2026-04-19-audit-v62-orphan-sweep-attrs';
 const DATA_VERSION_KEY = 'gyosei_data_version';
+
+/**
+ * JSON に存在しない problemId を IDB から削除する。
+ *
+ * importParsedBatch は (sourceBook, sourcePage) 単位で delete-reinsert するため、
+ * JSON からページごと消えた問題（例: p050 削除後）は IDB に残り続ける。
+ * さらに runOneTimeCleanup 内の upsertProblemAttr 由来で、問題本体が存在しない
+ * ghost_record 向けに problemAttrs だけが作られるケースもある。
+ * DATA_VERSION 更新時に必ず走らせて孤児レコードを掃除する。
+ * attempts（回答履歴）は保持する。
+ */
+async function removeOrphanProblemsForBook(
+  payload: ParsedImport,
+): Promise<{ problems: number; attrs: number }> {
+  const { bookId, pages } = payload;
+
+  const validProblemIds = new Set<string>();
+  for (const page of pages) {
+    if (page.parseError) continue;
+    const pageNum = parseInt(page.sourcePage, 10) || 0;
+    for (const branch of page.branches) {
+      validProblemIds.add(generateProblemId(bookId, pageNum, branch.seqNo));
+    }
+  }
+
+  const allProblems = await db.problems.where('sourceBook').equals(bookId).toArray();
+
+  let removedProblems = 0;
+  const survivingIds = new Set<string>();
+  for (const p of allProblems) {
+    if (validProblemIds.has(p.problemId)) {
+      survivingIds.add(p.problemId);
+      continue;
+    }
+    if (p.id !== undefined) {
+      await db.problems.delete(p.id);
+    }
+    await db.problemAttrs.where('problemId').equals(p.problemId).delete();
+    removedProblems++;
+  }
+
+  // 本体 problems が存在しない problemAttrs（ghost_record 用に upsert されたものなど）も掃除
+  let removedAttrs = 0;
+  const allAttrs = await db.problemAttrs.toArray();
+  for (const attr of allAttrs) {
+    if (!attr.problemId.startsWith(`${bookId}-`)) continue;
+    if (survivingIds.has(attr.problemId)) continue;
+    if (attr.id !== undefined) {
+      await db.problemAttrs.delete(attr.id);
+      removedAttrs++;
+    }
+  }
+
+  return { problems: removedProblems, attrs: removedAttrs };
+}
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
   if (typeof window === 'undefined') return;
@@ -1001,10 +1056,17 @@ export async function refreshProblemDataIfNeeded(): Promise<void> {
   try {
     const res = await fetch('/data/reviewed_import.json');
     if (!res.ok) return;
-    const json = await res.json();
+    const json = (await res.json()) as ParsedImport;
 
     const { importParsedBatch } = await import('@/lib/import-parsed');
     await importParsedBatch(json);
+
+    const orphansRemoved = await removeOrphanProblemsForBook(json);
+    if (orphansRemoved.problems > 0 || orphansRemoved.attrs > 0) {
+      console.log(
+        `[data-refresh] Removed ${orphansRemoved.problems} orphan problem(s) and ${orphansRemoved.attrs} orphan attr(s) not present in JSON`,
+      );
+    }
 
     localStorage.setItem(DATA_VERSION_KEY, DATA_VERSION);
     console.log('[data-refresh] Problem data updated successfully');
