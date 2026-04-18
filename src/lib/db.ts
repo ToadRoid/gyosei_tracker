@@ -275,6 +275,7 @@ interface CleanupPatch {
     note?: string;
   }[];
   clearIsExcluded?: string[];          // isExcluded=false にする（manual_hold 解除後復帰）
+  removeProblems?: string[];           // problems / problemAttrs から完全削除する problemId 一覧（重複ページ除去等）
   recalcCorrect: {            // isCorrect を再計算する problemId と正解
     problemId: string;
     correctAnswer: boolean;
@@ -861,6 +862,20 @@ const PATCHES: CleanupPatch[] = [
       { problemId: 'KB2025-p171-q05', correctAnswer: true },
     ],
   },
+  // v59: 2026-04-18 p050 duplicate 削除（p051 と同一 spread 行政契約 204/205 の二重キャプチャ）
+  {
+    key: 'cleanup_2026-04-18_v59_p050_removal',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    removeProblems: [
+      'KB2025-p050-q01',
+      'KB2025-p050-q02',
+      'KB2025-p050-q03',
+      'KB2025-p050-q04',
+      'KB2025-p050-q05',
+    ],
+    recalcCorrect: [],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
@@ -933,6 +948,15 @@ export async function runOneTimeCleanup(): Promise<void> {
       await upsertProblemAttr(pid, { isExcluded: false });
     }
 
+    // 2d. problems / problemAttrs 完全削除（重複ページ除去等）
+    for (const pid of patch.removeProblems ?? []) {
+      const p = await db.problems.where('problemId').equals(pid).first();
+      if (p?.id !== undefined) {
+        await db.problems.delete(p.id);
+      }
+      await db.problemAttrs.where('problemId').equals(pid).delete();
+    }
+
     // 3. isCorrect 再計算
     for (const { problemId, correctAnswer } of patch.recalcCorrect) {
       const attempts = await db.attempts
@@ -963,7 +987,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-18-audit-v58';
+const DATA_VERSION = '2026-04-18-audit-v59-p050-removal';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
