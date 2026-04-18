@@ -4,11 +4,13 @@
 
 ## 直近の活動 (confirmed, from git log)
 
+<!-- auto:commits:begin -->
 - v58（最新）: p047 / p146 を Gemini 読取で追加、p146 の chapter 修正、p229 保留、p018 除外
 - v57: p063-q01 E の途切れ解消（1 肢）
 - v56: p062-q06 / q08 の Q/E 途切れ解消（2 肢限定）
 - v55: p171-q05 の `answerBoolean` を False → True に修正
 - v54: p165 の Q/E 復元と `needsSourceCheck` 解除
+<!-- auto:commits:end -->
 
 傾向: 個別ページ単位で OCR 読み直し → limited 反映 → コミットを繰り返すフェーズ。
 
