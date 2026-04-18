@@ -5303,7 +5303,7 @@
         {
           "seqNo": 6,
           "questionText": "意見公募手続の対象である命令等には、審査基準や処分基準など、処分をするかどうかを判断するための基準は含まれるが、行政指導に関する指針は含まれない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "命令等とは、法律に基づく命令または規則（行政手続法２条８号イ）、審査基準（２条８号ロ）、処分基準（２条８号ハ）のほか、行政指導指針（２条８号ニ）のことをいう。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6155,7 +6155,7 @@
         {
           "seqNo": 3,
           "questionText": "聴聞の主宰者は、聴聞の期日における審理が行われなかった場合には各期日ごとに聴聞調書を作成しなければならない。但し当該書面が不可欠な場合には、聴聞の終結後速やかに作成しなければならない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "聴聞調書は、聴聞の期日における審理が行われた場合には各期日ごとに、当該審理が行われなかった場合には聴聞の終結後速やかに作成しなければならない（行政手続法24条2項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-tetsuzuki",
@@ -6599,7 +6599,7 @@
         {
           "seqNo": 3,
           "questionText": "同一の行政目的を実現するために複数の者に対し行政指導をする場合、行政機関はあらかじめ行政指導の共通する内容を定め、行政上特別の支障がない限りそれを公表しなければならない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "行政指導の公平性、信頼性、明確性および透明性を確保するため、\n同一の行政目的を実現するため一定の条件に該当する複数の者に\n対して行政指導しようとするときは、行政機関は、あらかじめ、共\n通に応じ行政指導指針（行政手続法2条６号）すなわち行政指導基\n準を定め、かつ、行政上特別の支障のない限り、公表しなければなら\nない（36条）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-tetsuzuki",
