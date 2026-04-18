@@ -7723,7 +7723,7 @@
         {
           "seqNo": 5,
           "questionText": "審理員は、審査請求人または参加人の申立てがなければ、必要な場所についての検証をすることはできない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "審理員は、審査請求人、参加人、その代理人の申立てがある場合に限り検証を実施することができる（行政不服審査法35条2項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-fufuku",
@@ -8075,7 +8075,7 @@
         {
           "seqNo": 1,
           "questionText": "行政庁の処分の相手方以外の者が審査請求をした場合において、審査庁が当該処分の全部を取り消す裁決をしたときは、当該裁決は、審査請求人および処分の相手方の両者に送達することにより、その効力を生じる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "裁決は、審査請求人に送達することによって効力を生じるのが原則である（行政不服審査法51条1項）。処分の相手方以外の者が審査請求した場合は、審査請求人だけでなく、処分の相手方にも送達して、初めて裁決の効力を生じる（51条1項かっこ書）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-fufuku",
@@ -8347,7 +8347,7 @@
         {
           "seqNo": 3,
           "questionText": "法律に再調査の請求ができる旨の定めがある場合であっても、審査請求人は、審査請求、再調査の請求いずれかを選択することができるが、審査請求を選択した場合には再調査の請求をすることはできない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "法律に再調査の請求ができる旨の定めがあっても、不服申立ての便宜を考慮して、審査請求人は、いずれかを選択することができるが（自由選択主義：行政不服審査法５条１項本文）、審査請求を選択した場合には再調査の請求はできない（同項ただし書）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-fufuku",
@@ -8359,7 +8359,7 @@
         {
           "seqNo": 4,
           "questionText": "法律に再調査の請求ができる旨の定めがある場合、審査請求人が再調査の請求を選択したときは、原則として当該再調査の請求についでの決定を待たなければ審査請求をすることができない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "審査請求と再調査の請求との選択権が付与されているが（自由選択主義：行政不服審査法５条１項本文）、再調査の請求を選択した場合には、審査請求をすることは不能であるから、再調査の決定を待たなくても審査請求をすることができる（同令２項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-fufuku",
