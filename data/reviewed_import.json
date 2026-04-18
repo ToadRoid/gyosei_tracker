@@ -2158,7 +2158,7 @@
         {
           "seqNo": 3,
           "questionText": "特定の人のために新たな権利を設定し、その法令上の地位を付与する行為を許可という。風俗営業の許可がこれにあたる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "風俗営業の許可は譲許上の許可にあたるが、本肢の説明は、許可ではなく、特許の説明である。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
@@ -3026,7 +3026,7 @@
         {
           "seqNo": 5,
           "questionText": "既になされた行政行為と抵触する行政行為がなされた場合でも、それによって前の行政行為が撤回されるものと認められる余地はない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "撤回には、法的に特段の必要がない限り特別の手続は不要とされる。新たな行政行為を上記のような形態でなすことによっても、前の行政行為を撤回したことと認めることができる。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
@@ -3458,7 +3458,7 @@
         {
           "seqNo": 3,
           "questionText": "通達の内容が、法令の解釈や取扱いに関するもので、国民の権利義務に重大なかかわりをもつものである場合には、当該通達に対して取消訴訟を提起することができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "政令、省令は国の法規命令として、訓令・通達は行政規則として、訓令・通達は行政規則として、国民および裁判所を拘束する効力を有する。しかし、法規命令は国民および裁判所を拘束する効力を有しないもの、行政規則は国民および裁判所を拘束する効力を有しないから、裁判所は取り消すことはできない（通達自身の取消訴訟が一般的に認められないことにつき、最判昭43.12.24参照）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-ippan",
