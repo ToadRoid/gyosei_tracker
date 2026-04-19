@@ -16211,6 +16211,18 @@
           "sectionTitle": "03_代理",
           "sourcePageQuestion": "562",
           "sourcePageAnswer": "563"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "Aは、A所有の売却に関する代理権をBに授与していないのに、Cに対してBに代理権を授与した旨を表示していたところ、Bは、Aに無断でAの代理人として当該土地を目的として売買契約をCと締結した。Cは、Bが代理権を与えられていないことを知り、または過失によって知らなかったときは、Aに対して土地の引渡しを請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "第三者（C）に対して他人（B）に代理権を与えた旨を表示した者（A）は、その代理権の範囲内においてその他人（B）が第三者（C）との間でした行為について、第三者（C）が他人（B）が代理権を与えられていないことを知りまたは過失によって知らなかったときでなければ限り、その責任を負う（民法109条1項）。したがって、Cは、Bが代理権を与えられていないことに悪意、または有過失であるときは、Aに土地の引渡しを請求することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "562",
+          "sourcePageAnswer": "563"
         }
       ]
     },
