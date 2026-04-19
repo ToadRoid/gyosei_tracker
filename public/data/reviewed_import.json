@@ -14899,7 +14899,7 @@
         {
           "seqNo": 1,
           "questionText": "都道府県が担当する事務に関する国の是正の要求について国地方係争処理委員会が行った審査の結果不服があるときは、当該都道府県は、当該都道府県の知事は、この是正の要求について出訴することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "都道府県が担当する事務に関する国の是正の要求について国地方係争処理委員会が行った審査の結果不服があるときは、当該都道府県の知事は、この是正の要求について出訴することができる（地方自治法251条の5第1項1号）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",
@@ -15239,7 +15239,7 @@
         {
           "seqNo": 4,
           "questionText": "被保佐人が、保佐人の同意を得ることなく土地の贈与を受ける行為は、取り消し得ない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "負担付の贈与の申込みの承諾とは異なり（民法13条1項7号）、単なる土地の贈与を受ける行為は、被保佐人に利益となるものであるから、取り消し得べき行為にあたらず、取り消すことができない。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
