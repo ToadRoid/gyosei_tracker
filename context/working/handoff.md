@@ -32,6 +32,12 @@
 
 * **p238-q2 explanation**: `民法132条2項 → 民法131条2項`（条文番号誤記、polarity 非影響）
 
+### post-v76 housekeeping
+
+* leaked-key 由来の ephemeral JSON 削除済み
+* 旧 PR branch / tmp branch cleanup 実施済み
+* Gemini leaked key 2 本の rotate はユーザー側で実施予定（次セッション冒頭で完了確認）
+
 ## 次セッション最優先タスク
 
 ### 1. Gemini API key 2 本の rotate（GCP ブラウザ作業、ユーザー）
