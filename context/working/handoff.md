@@ -36,17 +36,11 @@
 
 * leaked-key 由来の ephemeral JSON 削除済み
 * 旧 PR branch / tmp branch cleanup 実施済み
-* Gemini leaked key 2 本の rotate はユーザー側で実施予定（次セッション冒頭で完了確認）
+* Gemini leaked key 2 本の rotate 完了（2026-04-19）：旧 2 本失効済み / 新 1 本発行済み / 値は未記載
 
 ## 次セッション最優先タスク
 
-### 1. Gemini API key 2 本の rotate（GCP ブラウザ作業、ユーザー）
-
-* chat に露出した **Gemini API key 2 本** を leak 済み secret として Disable / Delete
-* 新 key は chat / repo / handoff に記載しない
-* ブラウザ連携先のみ差し替え
-
-### 2. 累積 recheck queue 整理（C レーン一括 PR 候補）
+### 1. 累積 recheck queue 整理（C レーン一括 PR 候補）
 
 * p238-q2 E 誤記 `132条2項 → 131条2項`
 * p214 seq1-3 追跡項目
