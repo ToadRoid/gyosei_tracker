@@ -42,10 +42,10 @@
 
 ### 1. 累積 recheck queue 整理（C レーン一括 PR 候補）
 
-C レーン先頭（次に触るべき 1 件）= **p219-q3 substantive 差**
+C レーン先頭（次に触るべき 1 件）= **p227 seq1/seq2/seq3 polarity / sectionTitle drift**
 
 * ~~p214 seq1-3 追跡項目~~ → 2026-04-19 照合済み close（polarity / 条文整合 / ledger `master_correction_ledger.json` の 2026-04-07 fix と整合、修正不要）
-* p219-q3 substantive 差
+* **p219-q3 substantive 差（OCR pending）**: Q event `結婚の式授挙` は explanation 断定「本肢は特別失踪」(民法30条2項) と不整合 → OCR 破損確定。polarity は現 `ans=false` で正しい（7 年主張 × 特別失踪 → FALSE）。**次アクション**: user 側で `0219.png` Q3 を browser OCR し、event 正文（船舶沈没 / 海難等 30条2項 trigger）を確定 → Q text のみ修正の small PR
 * p227 seq1/seq2/seq3 polarity / sectionTitle drift
 * cosmetic OCR 揺れ ~7 件（p214-q1 の Q text 細部揺れが疑義ありなら本バケットに吸収）
 
