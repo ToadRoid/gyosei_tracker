@@ -1,14 +1,14 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-19 (v77 close reflection)
+最終更新: 2026-04-19 (v78 close reflection)
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-19 v77 close 後）
+## 現在地（confirmed, 2026-04-19 v78 close 後）
 
-* **main HEAD**: `965c6a6bb4011d568d131e0b207dda335e83f801`
+* **main HEAD**: `63d021c0a304dd798cbae01753ea6b2a884e0963`
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-19-audit-v77-p238-q2-explanation-132to131`
+* **DATA_VERSION**: `2026-04-19-audit-v78-p227-seq1-seq3-polarity-seq2-sectionTitle`
 * **L1 本線**: ✅ 実質完了維持
 
 ### v76 差分（v75 → v76）
@@ -32,6 +32,15 @@
 
 * **PR #31 / p238-q2 explanation**: `民法132条2項 → 民法131条2項`（条文番号 typo 修正、polarity 非影響）
 
+### v78 差分（2026-04-19）
+
+* **PR #32 / p227 seq1/seq2/seq3**:
+  * seq1: `ans false → true`（強迫取消は善意無過失第三者に対抗可、96条3項、explanation 自己整合）
+  * seq2: `sectionTitle 03_代理 → 02_意思表示と瑕疵`（drift のみ、polarity 非影響）
+  * seq3: `ans true → false`（98条の2 は意思能力欠如/未成年者/成年被後見人 限定、Q「制限行為能力者」overbroad）
+
+確認経路: 0227.png 原本 + 条文整合 + DB 内 explanation 自己整合の 3 経路一致。
+
 ### post-v76 housekeeping
 
 * leaked-key 由来の ephemeral JSON 削除済み
@@ -42,11 +51,11 @@
 
 ### 1. 累積 recheck queue 整理（C レーン一括 PR 候補）
 
-C レーン先頭（次に触るべき 1 件）= **p227 seq1/seq2/seq3 polarity / sectionTitle drift**
+C レーン先頭（次に触るべき 1 件）= **cosmetic OCR 揺れ ~7 件**
 
 * ~~p214 seq1-3 追跡項目~~ → 2026-04-19 照合済み close（polarity / 条文整合 / ledger `master_correction_ledger.json` の 2026-04-07 fix と整合、修正不要）
-* **p219-q3 substantive 差（OCR pending）**: Q event `結婚の式授挙` は explanation 断定「本肢は特別失踪」(民法30条2項) と不整合 → OCR 破損確定。polarity は現 `ans=false` で正しい（7 年主張 × 特別失踪 → FALSE）。**次アクション**: user 側で `0219.png` Q3 を browser OCR し、event 正文（船舶沈没 / 海難等 30条2項 trigger）を確定 → Q text のみ修正の small PR
-* p227 seq1/seq2/seq3 polarity / sectionTitle drift
+* **p219-q3 substantive 差（OCR pending / watch）**: Q event `結婚の式授挙` は explanation 断定「本肢は特別失踪」(民法30条2項) と不整合 → OCR 破損確定。polarity は現 `ans=false` で正しい（7 年主張 × 特別失踪 → FALSE）。**次アクション**: user 側で `0219.png` Q3 を browser OCR し、event 正文（船舶沈没 / 海難等 30条2項 trigger）を確定 → Q text のみ修正の small PR
+* ~~p227 seq1/seq2/seq3 polarity / sectionTitle drift~~ → v78 で close（PR #32）
 * cosmetic OCR 揺れ ~7 件（p214-q1 の Q text 細部揺れが疑義ありなら本バケットに吸収）
 
 <!-- review-handoff:scope:begin -->
@@ -65,7 +74,7 @@ C レーン先頭（次に触るべき 1 件）= **p227 seq1/seq2/seq3 polarity 
 
 automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
-1. **累積 recheck queue 整理（最優先）** — C レーン一括 PR 候補を束ねる（p219-q3 substantive 差、p227 seq1/seq2/seq3 polarity / sectionTitle drift、cosmetic OCR 揺れ ~7 件）
+1. **累積 recheck queue 整理（最優先）** — C レーン一括 PR 候補を束ねる（p219-q3 substantive 差 OCR pending、cosmetic OCR 揺れ ~7 件）
 2. **原本照合の継続** — 未処理ページが残る場合、直近フェーズと同じスタイルで続行可能
    - 未処理ページは `data/` 配下の ledger / pending 系 CSV を参照
    - 新規ページに着手する前に `data/*ledger*.json` と `data/pending_*.csv` を確認
