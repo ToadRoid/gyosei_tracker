@@ -11079,6 +11079,62 @@
       ]
     },
     {
+      "sourcePage": "158",
+      "originalProblemId": "KB2025-p158-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "国会議員が国会で行った発言によって他人の名誉や信用を害した場合、憲法51条により国会議員の法的責任は免責されるため、被害者は国家賠償法1条に基づく損害賠償を求めることができない。",
+          "answerBoolean": false,
+          "explanationText": "国会議員が国会で行った質疑等により他人の名誉・信用を害した場合、国が国家賠償法1条に基づく損害賠償責任を負う場合はあるから、本肢は誤っている（最判平9.9.9）。すなわち、国会議員が国会の質疑等において、個別の国民の名誉・信用を低下させる発言があったとしても、当然に国家賠償法1条の国家賠償責任が生ずるものではないが、「当該国会議員が、その職務とかかわりなく違法または不当な目的をもって事実を摘示し、あるいは、虚偽であることを知りながらあえてその事実を摘示するなど、国会議員がその付与された権限の趣旨に明らかに背いてこれを行使したものと認めるような特別の事情がある」場合には、国の損害賠償責任が肯定される。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "国の損害賠償責任",
+          "sourcePageQuestion": "418",
+          "sourcePageAnswer": "419"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "指定確認検査機関による建築確認に係る建築物について、確認をする権限を有する建築主事が置かれた地方公共団体は、指定確認検査機関が行った当該確認について、国家賠償法1条1項の国または公共団体としての責任を負うことはない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最決平17.6.24）は、指定確認検査機関が行う建築確認に関する事務は、建築主事による確認に関する事務の場合と同様に、地方公共団体の事務であり、その事務の帰属する行政主体は、当該確認に係る建築物について確認をする権限を有する建築主事が置かれた地方公共団体であるとして、当該地方公共団体が、当該事務について国家賠償法1条1項に基づく損害賠償責任を負うとしている。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "国の損害賠償責任",
+          "sourcePageQuestion": "418",
+          "sourcePageAnswer": "419"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "国家賠償法1条の賠償責任については、国又は公共団体は、公務員の選任及び監督に過失がなかったことを立証すれば、賠償責任を免れる。",
+          "answerBoolean": false,
+          "explanationText": "民法の使用者責任では、使用者の免責規定がおかれている（民法715条1項ただし書）のに対し、国家賠償法には、被害者の救済の徹底という観点から、国・公共団体の免責規定はない。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "国の損害賠償責任",
+          "sourcePageQuestion": "418",
+          "sourcePageAnswer": "419"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公権力の行使に当たる国または公共団体の公務員が、その職務を行うについて、過失によって違法に他人に損害を加えた場合には、国または公共団体がその被害者に対して賠償責任を負うが、故意または重過失の場合には、公務員個人が被害者に対して直接に賠償責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "最高裁の判例は、公務員個人は、直接被害者に対して責任を負わないとすることで確立している（最判昭30.4.19等）。国が責任を負えば被害者救済という目的が達成されるからである。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "国の損害賠償責任",
+          "sourcePageQuestion": "418",
+          "sourcePageAnswer": "419"
+        }
+      ]
+    },
+    {
       "sourcePage": "159",
       "originalProblemId": "KB2025-p159-q01",
       "bookId": "KB2025",
