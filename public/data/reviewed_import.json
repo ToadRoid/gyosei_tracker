@@ -16559,7 +16559,7 @@
         {
           "seqNo": 5,
           "questionText": "Aの長男BがAに無断でAの代理人と称してCにA所有の土地を売却した。その後、Aが本件売買契約につき追認を拒絶した後に死亡してBが単独相続した場合、Bは本件売買契約の追認を拒絶することができないため、本件売買契約は有効となる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "本人が無権代理行為の追認を拒絶した後に死亡し、無権代理人が本人を単独相続した場合には、無権代理行為の効果が本人に帰属しているとが確定され、その後は無権代理人が包括的に承継するためである。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
@@ -16639,7 +16639,7 @@
         {
           "seqNo": 6,
           "questionText": "BがAに騙されてAから金銭を借り入れ、CがBの保証人となった場合、CはAの詐欺を理由としてAB間の金銭消費貸借契約を取り消すことができる。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "保証人は取消権者に列挙されていないから（民法120条参照）、Cは、AB間の契約を取り消すことができない（大判昭20.5.21）。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
@@ -16891,7 +16891,7 @@
         {
           "seqNo": 5,
           "questionText": "停止条件付法律行為は、その条件が単に債務者の意思のみに係るときは、無効とする。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "停止条件付法律行為は、その条件が単に債務者の意思のみに係るとは、無効としない（例：気が向いたときに借金を返済する等：民法134条）。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
