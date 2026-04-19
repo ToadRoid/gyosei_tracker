@@ -42,12 +42,12 @@
 
 ### 1. 累積 recheck queue 整理（C レーン一括 PR 候補）
 
-C レーン先頭（次に触るべき 1 件）= **p214 seq1-3 追跡項目**
+C レーン先頭（次に触るべき 1 件）= **p219-q3 substantive 差**
 
-* p214 seq1-3 追跡項目
+* ~~p214 seq1-3 追跡項目~~ → 2026-04-19 照合済み close（polarity / 条文整合 / ledger `master_correction_ledger.json` の 2026-04-07 fix と整合、修正不要）
 * p219-q3 substantive 差
 * p227 seq1/seq2/seq3 polarity / sectionTitle drift
-* cosmetic OCR 揺れ ~7 件
+* cosmetic OCR 揺れ ~7 件（p214-q1 の Q text 細部揺れが疑義ありなら本バケットに吸収）
 
 <!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
@@ -65,7 +65,7 @@ C レーン先頭（次に触るべき 1 件）= **p214 seq1-3 追跡項目**
 
 automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
-1. **累積 recheck queue 整理（最優先）** — C レーン一括 PR 候補を束ねる（p238-q2 E 誤記、p214 seq1-3 追跡、p219-q3 substantive 差、p227 seq1/seq2/seq3 polarity / sectionTitle drift、cosmetic OCR 揺れ ~7 件）
+1. **累積 recheck queue 整理（最優先）** — C レーン一括 PR 候補を束ねる（p219-q3 substantive 差、p227 seq1/seq2/seq3 polarity / sectionTitle drift、cosmetic OCR 揺れ ~7 件）
 2. **原本照合の継続** — 未処理ページが残る場合、直近フェーズと同じスタイルで続行可能
    - 未処理ページは `data/` 配下の ledger / pending 系 CSV を参照
    - 新規ページに着手する前に `data/*ledger*.json` と `data/pending_*.csv` を確認
