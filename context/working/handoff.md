@@ -28,9 +28,13 @@
 
 * ~~p238-q1 / q2 原本再照合~~ → v76 で確定 close
 
+### v77 差分（2026-04-19）
+
+* **PR #31 / p238-q2 explanation**: `民法132条2項 → 民法131条2項`（条文番号 typo 修正、polarity 非影響）
+
 ### C レーン残件（新規追加）
 
-* **p238-q2 explanation**: `民法132条2項 → 民法131条2項`（条文番号誤記、polarity 非影響）
+* ~~p238-q2 explanation 132条2項 → 131条2項~~ → PR #31 で close
 
 ### post-v76 housekeeping
 
@@ -42,7 +46,8 @@
 
 ### 1. 累積 recheck queue 整理（C レーン一括 PR 候補）
 
-* p238-q2 E 誤記 `132条2項 → 131条2項`
+C レーン先頭（次に触るべき 1 件）= **p214 seq1-3 追跡項目**
+
 * p214 seq1-3 追跡項目
 * p219-q3 substantive 差
 * p227 seq1/seq2/seq3 polarity / sectionTitle drift
