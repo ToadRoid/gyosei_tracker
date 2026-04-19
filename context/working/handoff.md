@@ -1,14 +1,14 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-19 (v76 close reflection)
+最終更新: 2026-04-19 (v77 close reflection)
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-19 v76 close 後）
+## 現在地（confirmed, 2026-04-19 v77 close 後）
 
-* **main HEAD**: `fec03720314951e32e9d105ba1116fa7904f47a3`
+* **main HEAD**: `965c6a6bb4011d568d131e0b207dda335e83f801`
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-19-audit-v76-polarity-p238-q1-q2-2flips`
+* **DATA_VERSION**: `2026-04-19-audit-v77-p238-q2-explanation-132to131`
 * **L1 本線**: ✅ 実質完了維持
 
 ### v76 差分（v75 → v76）
@@ -31,10 +31,6 @@
 ### v77 差分（2026-04-19）
 
 * **PR #31 / p238-q2 explanation**: `民法132条2項 → 民法131条2項`（条文番号 typo 修正、polarity 非影響）
-
-### C レーン残件（新規追加）
-
-* ~~p238-q2 explanation 132条2項 → 131条2項~~ → PR #31 で close
 
 ### post-v76 housekeeping
 
