@@ -11163,6 +11163,54 @@
           "sectionTitle": "02_国家賠償法2条",
           "sourcePageQuestion": "420",
           "sourcePageAnswer": "421"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "公の営造物の設置管理の瑕疵に基づく損害賠償責任は、公権力の行使に基づく損害賠償責任と同様、過失責任主義に立脚するものである。",
+          "answerBoolean": false,
+          "explanationText": "公の営造物の設置または管理の瑕疵に基づく損害賠償責任（国家賠償法2条）は、土地工作物責任を定めた民法717条と同様、国または公共団体の過失を必要としない無過失責任である（最判昭45.8.20）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "02_国家賠償法2条",
+          "sourcePageQuestion": "420",
+          "sourcePageAnswer": "421"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "国家賠償法第2条は、国または公共団体の無過失責任を認めるものであるから、不可抗力による損害に対しても国または公共団体は損害賠償の責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "判例は、国家賠償法2条の性質を無過失責任としつつも、結果責任を認めるものではないとして、不可抗力の場合には責任を負わない、とする（最判昭50.7.25、最判昭56.7.16等）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "02_国家賠償法2条",
+          "sourcePageQuestion": "420",
+          "sourcePageAnswer": "421"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "公の営造物の設置または管理の瑕疵により損害賠償請求をすることができるのは、当該営造物の利用者に限られず、当該営造物の存在に起因してその周辺居住者等に被害が及ぶ場合には、その被害者もまた損害賠償請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "営造物が周辺居住者等利用者以外の者に損害を及ぼすことも当然に許されないから、営造物の利用者以外の被害者も、国賠法2条により損害賠償を請求しうる（最大判昭56.12.16）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "02_国家賠償法2条",
+          "sourcePageQuestion": "420",
+          "sourcePageAnswer": "421"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "市内の河川について市が法律上の管理権をもたない場合でも、当該市が地域住民の要望にこたえて都市排水路の機能の維持及び都市水害の防止など地方公共の目的を達成するために河川の改修工事をして、これを事実上管理することになったときは、当該市は、当該河川の管理につき、国家賠償法2条1項の責任を負う公共団体に当たる。",
+          "answerBoolean": true,
+          "explanationText": "判例は、「国家賠償法2条にいう公の営造物の管理者は、必ずしも当該営造物について法律上の管理権ないしは所有権、賃借権等の権原を有している者に限られるものではなく、事実上の管理をしているにすぎない国又は公共団体も同条にいう管理者に含まれる」（最判昭59.11.29）として、本肢所定の市は国家賠償法2条1項の責任を負う公共団体にあたる、とする。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-kokubai",
+          "confidence": 1.0,
+          "sectionTitle": "02_国家賠償法2条",
+          "sourcePageQuestion": "420",
+          "sourcePageAnswer": "421"
         }
       ]
     },
