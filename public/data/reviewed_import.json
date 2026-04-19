@@ -16043,6 +16043,98 @@
       ]
     },
     {
+      "sourcePage": "229",
+      "originalProblemId": "KB2025-p229-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "法定代理人は、復代理人を選任した場合、選任につきやむを得ない事由があるときは、本人に対してその選任および監督についての責任のみを負う。",
+          "answerBoolean": true,
+          "explanationText": "法定代理人は、復代理人を選任した場合、原則として全責任を負うが（民法105条前段）、選任につきやむを得ない事由があるときは、本人に対してその選任および監督についての責任のみを負う（105条後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "復代理人は、代理人の代理人である。",
+          "answerBoolean": false,
+          "explanationText": "復代理人は、代理人の代理人ではなく、あくまで本人の代理人であるから、直接、本人を代理する（民法106条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "復代理人は、代理人に対して権利義務を有し、本人に対しては何ら権利義務を有しない。",
+          "answerBoolean": false,
+          "explanationText": "復代理人は、本人および第三者に対して、その権限の範囲内において、代理人と同一の権利を有し、義務を負う（民法106条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "代理人は、復代理人を選任しても代理権を失うものではなく、選任後は復代理人と同等の立場で本人を代理することになる。",
+          "answerBoolean": true,
+          "explanationText": "復代理人の選任は代理権の全面的譲渡ではないから、復代理人を選任しても、代理人は代理権を失うものではなく、両者はともに同等の立場で本人を代理する（大判大10.12.6）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "代理人が本人の許諾を得て復代理人を選任した場合において、復代理人が代理行為の履行として相手方から目的物を受領したときは、同人はこれを代理人に対してではなく、本人に対して引き渡す義務を負う。",
+          "answerBoolean": false,
+          "explanationText": "復代理人が委任事務を処理するに当たり金銭等を受領したときは、復代理人は、特別の事情がない限り、本人に受領物を引き渡す義務を負うほか、代理人にも引き渡す義務を負い、もし復代理人において代理人に引渡したときは、代理人に対する受領物引渡義務は消滅するとともに、本人に対する受領物引渡義務もまた消滅する（最判昭51.4.9）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "代理人が本人の許諾を得て復代理人を選任した場合は、その後、代理人が死亡しても復代理人の代理権は、消滅しない。",
+          "answerBoolean": false,
+          "explanationText": "代理人の代理権が消滅すれば（民法111条1項2号）、原則として復代理人の代理権も消滅する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "Aの代理人Bは、A所有の土地をAのためにすることを示してCに売却した。Bが売却代金を着服する意図を有していた場合、Cがその目的を知りまたは知ることができたとしても、Aは、Cからの当該土地の引渡請求を拒むことができない。",
+          "answerBoolean": false,
+          "explanationText": "代理人が自己または第三者の利益を図る目的で代理権の範囲内の行為をした場合、相手方がその目的を知りまたは知ることができたときは、その行為は、代理権を有しない者がした行為とみなされる（民法107条）。したがって、本肢所定の場合には、Bの行為は無権代理行為とみなされる結果、Aは、Cからの土地の引渡請求を拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "560",
+          "sourcePageAnswer": "561"
+        }
+      ]
+    },
+    {
       "sourcePage": "230",
       "originalProblemId": "KB2025-p230-q01",
       "bookId": "KB2025",
