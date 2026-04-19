@@ -13474,6 +13474,42 @@
       "branches": [
         {
           "seqNo": 1,
+          "questionText": "せり売りとは、入札の方法によらないで、不特定多数の者を口頭または挙手によって競争させる方法であり、遺失物等の売り払いのような場合にこの方法がとられることもある。",
+          "answerBoolean": true,
+          "explanationText": "せり売りとは、買受者が口頭（挙動、挙手）をもって価格の競争をするものであり、競争入札とは異なり、他の競争者の申出価格を知って互いに競争をするものであって入札の方法によらない。所有者の不明な遺失物等の処分などの動産の売り払いで当該契約の性質がせり売りに適している契約について認められるものである。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "484",
+          "sourcePageAnswer": "485"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "一般競争入札により契約を締結する場合においては、政令の定めるところにより、契約の目的に応じ、予定価格の制限の範囲内で最高または最低の価格をもって申込みをした者を契約の相手方とするものとされており、この点についての例外は認められていない。",
+          "answerBoolean": false,
+          "explanationText": "普通地方公共団体は、一般競争入札または指名競争入札（競争入札）に付する場合、原則として、政令の定めるところにより、契約の目的に応じ、予定価格の制限の範囲内で最高または最低の価格をもって申込みをした者を契約の相手方とするが、「例外として」、普通地方公共団体の支出の原因となる契約については、政令の定めるところにより、予定価格の制限の範囲内の価格をもって申込みをした者のうち最低の価格をもって申込みをした者以外の者を契約の相手方とすることができる（地方自治法234条3項）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "484",
+          "sourcePageAnswer": "485"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "随意契約の手続に関し必要な事項は、当該普通地方公共団体が条例でこれを定める。",
+          "answerBoolean": false,
+          "explanationText": "競争入札に加わろうとする者に必要な資格、競争入札における公告または指名の方法、随意契約およびせり売りの手続その他契約の締結の方法に関し必要な事項は、「政令」で定める（地方自治法234条6項）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "484",
+          "sourcePageAnswer": "485"
+        },
+        {
+          "seqNo": 4,
           "questionText": "普通地方公共団体は、金融機関を指定して、公金の収納または支払いの事務を取り扱わせなければならない。",
           "answerBoolean": false,
           "explanationText": "都道府県は、必ず政令の定めるところに従って、金融機関を指定して、公金の収納または支払の事務を取り扱わせなければならない（地方自治法235条1項）。市町村の場合は、任意的である（235条2項）。",
@@ -13485,7 +13521,7 @@
           "sourcePageAnswer": "485"
         },
         {
-          "seqNo": 2,
+          "seqNo": 5,
           "questionText": "普通地方公共団体は、地方債を起こすこと以外の方法で、借入れをなすことはできない。",
           "answerBoolean": false,
           "explanationText": "普通地方公共団体の長は、歳計予算の支出をするため、一時借入金を借入れることができる（地方自治法235条の3第1項）。よって、地方債の起債以外でも借入をしうる。",
