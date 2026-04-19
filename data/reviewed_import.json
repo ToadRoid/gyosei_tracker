@@ -15963,7 +15963,7 @@
         {
           "seqNo": 1,
           "questionText": "AはBの強迫により、Bに土地を安価で売り、第三者Cは、そのことと善意無過失で、Bからその土地を買い受けた。この場合、Aは、Bとの契約を取り消し、Cに対してその土地に対する自己の所有権を主張することができる。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "強迫の場合には、強迫による表意者の帰責性が少ないため、詐欺と異なり第三者保護規定はなく、強迫による意思表示の取消しは、善意無過失の第三者（C）に対抗できる（民法96条３項参照）。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
@@ -15980,14 +15980,14 @@
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
           "confidence": 1.0,
-          "sectionTitle": "03_代理",
+          "sectionTitle": "02_意思表示と瑕疵",
           "sourcePageQuestion": "556",
           "sourcePageAnswer": "557"
         },
         {
           "seqNo": 3,
           "questionText": "意思表示の相手方が、その意思表示を受けた時に意思能力を有しなかったとき、または制限行為能力者であったときは、その意思表示をもってその相手方に対抗することができない。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "意思表示の相手方がその意思表示を受けた時に意思能力を有していたときは、「未成年者もしくは成年被後見人」であったときは、その意思表示をもってその相手方に対抗することができる（民法98条の２本文）。受領に制限行為能力者（未成年者、成年被後見人、被補助人、被補佐人；13歳2項110号）のすべてではなく、成年被後見人と成年被後見人」であったときに対抗することができない。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
