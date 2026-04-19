@@ -4,11 +4,11 @@
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-19 v78 close 後）
+## 現在地（confirmed, 2026-04-20 OCR pending queue 明示化後）
 
-* **main HEAD**: `63d021c0a304dd798cbae01753ea6b2a884e0963`
+* **main HEAD**: `ac56d4296815c8f239767f82ae1f20d3046b6623`
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-19-audit-v78-p227-seq1-seq3-polarity-seq2-sectionTitle`
+* **DATA_VERSION**: `2026-04-19-audit-v78-p227-seq1-seq3-polarity-seq2-sectionTitle`（handoff-only PR #33 につき未変更）
 * **L1 本線**: ✅ 実質完了維持
 
 ### v76 差分（v75 → v76）
