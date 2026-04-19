@@ -1,6 +1,6 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-19 (v78 close reflection)
+最終更新: 2026-04-20 (OCR pending queue 明示化)
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
@@ -51,12 +51,37 @@
 
 ### 1. 累積 recheck queue 整理（C レーン一括 PR 候補）
 
-C レーン先頭（次に触るべき 1 件）= **cosmetic OCR 揺れ ~7 件**
+C レーン先頭（次に触るべき 1 件）= **OCR pending queue の先頭項目（下記 §2）**
 
 * ~~p214 seq1-3 追跡項目~~ → 2026-04-19 照合済み close（polarity / 条文整合 / ledger `master_correction_ledger.json` の 2026-04-07 fix と整合、修正不要）
-* **p219-q3 substantive 差（OCR pending / watch）**: Q event `結婚の式授挙` は explanation 断定「本肢は特別失踪」(民法30条2項) と不整合 → OCR 破損確定。polarity は現 `ans=false` で正しい（7 年主張 × 特別失踪 → FALSE）。**次アクション**: user 側で `0219.png` Q3 を browser OCR し、event 正文（船舶沈没 / 海難等 30条2項 trigger）を確定 → Q text のみ修正の small PR
 * ~~p227 seq1/seq2/seq3 polarity / sectionTitle drift~~ → v78 で close（PR #32）
-* cosmetic OCR 揺れ ~7 件（p214-q1 の Q text 細部揺れが疑義ありなら本バケットに吸収）
+
+### 2. OCR pending queue（browser OCR / vision 要）
+
+旧「cosmetic OCR 揺れ ~7 件」を廃止し、明示列挙に置換（2026-04-20）。
+CLAUDE.md §5 auto-detection rule で scan した結果、単純 typo-replace で安全に直せる純 cosmetic は 0 件。全件 **substantive OCR 破損 = browser OCR / vision 要**。いずれも未 close。
+
+**運用**:
+
+* 修正は **1 ページずつ別 PR**（バンドル禁止、page-by-page PR 対象）
+* browser OCR / vision で正文確定後に着手
+* 確定前は polarity / ledger を触らない
+
+**列挙（7 件, 2026-04-20 scan 時点）**:
+
+| # | 対象 | 症状 | 状態 |
+| --- | --- | --- | --- |
+| 1 | p219-q01 seq3 Q | `結婚の式授挙` （event 破損、`30条2項` 特別失踪 trigger と不整合） | OCR pending / watch（polarity `ans=false` は現状正しい） |
+| 2 | p227-q01 seq2 Q | `知ることができる適当先がなかった` （単純 typo ではなく文構造ごと破損疑い、第三者強迫主語も揺れ） | OCR pending |
+| 3 | p227-q01 seq3 E | `被補佐人` 周辺（同 E 内に `成年被後見人と成年被後見人` 重複、`13歳2項110号` 不明 garble 併発、単語差し替えで済まない） | OCR pending |
+| 4 | p062-q01 seq7 Q | Q 文末欠落疑い（`...` / `…` を含む） | OCR pending |
+| 5 | p078-q01 seq4 Q | Q 文末欠落疑い | OCR pending |
+| 6 | p119-q01 seq1 Q | Q 文末欠落疑い | OCR pending |
+| 7 | p136-q01 seq4 Q | Q 文末欠落疑い | OCR pending |
+
+**件数増減のルール**: 新たな scan hit や user 指摘で 7 件から増減する場合、理由を 1 行ずつ本表末に追記する。
+
+**次アクション**: queue の先頭（`p219-q01 seq3 Q`）を browser OCR で確定 → Q text のみ修正の small PR。
 
 <!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
@@ -74,7 +99,7 @@ C レーン先頭（次に触るべき 1 件）= **cosmetic OCR 揺れ ~7 件**
 
 automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
-1. **累積 recheck queue 整理（最優先）** — C レーン一括 PR 候補を束ねる（p219-q3 substantive 差 OCR pending、cosmetic OCR 揺れ ~7 件）
+1. **累積 recheck queue 整理（最優先）** — OCR pending queue を 1 ページずつ page-by-page PR で消化（上記 §2 の 7 件、先頭は `p219-q01 seq3 Q`）
 2. **原本照合の継続** — 未処理ページが残る場合、直近フェーズと同じスタイルで続行可能
    - 未処理ページは `data/` 配下の ledger / pending 系 CSV を参照
    - 新規ページに着手する前に `data/*ledger*.json` と `data/pending_*.csv` を確認
