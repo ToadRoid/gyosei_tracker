@@ -12251,6 +12251,30 @@
           "sectionTitle": "3) 招集及び会期",
           "sourcePageQuestion": "452",
           "sourcePageAnswer": "453"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "普通地方公共団体の議会の議長は、自らが所属する常任委員会でない委員会に出席し、発言することはできない。",
+          "answerBoolean": false,
+          "explanationText": "議会の議長は、自らが所属する常任委員会でなくとも、委員会に出席し、発言することができる（地方自治法105条）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0,
+          "sectionTitle": "4) 議長及び副議長",
+          "sourcePageQuestion": "452",
+          "sourcePageAnswer": "453"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "普通地方公共団体の議会の議長および副議長は、議会の許可を得ることによってのみ辞職することができる。",
+          "answerBoolean": false,
+          "explanationText": "議長および副議長は議会の許可を得て辞職するのが原則であるが（地方自治法108条本文）、「副議長」は、議会の閉会中においては、議長の許可を得て辞職することができる（108条ただし書）。",
+          "subjectCandidate": "gyosei",
+          "chapterCandidate": "gyosei-chiho",
+          "confidence": 1.0,
+          "sectionTitle": "4) 議長及び副議長",
+          "sourcePageQuestion": "452",
+          "sourcePageAnswer": "453"
         }
       ]
     },
