@@ -15995,6 +15995,30 @@
           "sectionTitle": "意思表示の効力発生時期",
           "sourcePageQuestion": "556",
           "sourcePageAnswer": "557"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "代理行為の効果は、代理によってなされた法律行為から生ずる法律的な効果が、直接、本人に帰属することである。",
+          "answerBoolean": true,
+          "explanationText": "代理行為の効果は、代理人ではなく直接、本人に帰属する（民法99条1項）。例えば、売買契約の意思表示をするのは代理人であるが、その効果は直接本人に対して効力を生じる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "556",
+          "sourcePageAnswer": "557"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aの代理人Bが、Cを騙してC所有の建物を安い値で買った場合、AがBの欺罔行為につき善意無過失であったときには、B自身の欺罔行為なので、CはBの詐欺を理由にした売買契約の取消しをAに主張することはできない。",
+          "answerBoolean": false,
+          "explanationText": "代理行為における意思表示の瑕疵の有無は、原則として、本人ではなく、代理行為を行った代理人を基準に決められる（民法101条1項）。本肢では、BはCを騙しているから、CはBの詐欺を理由に売買契約の取消しをAに主張することができる（96条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sosoku",
+          "confidence": 1.0,
+          "sectionTitle": "03_代理",
+          "sourcePageQuestion": "556",
+          "sourcePageAnswer": "557"
         }
       ]
     },
