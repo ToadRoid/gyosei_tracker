@@ -11835,7 +11835,7 @@
         {
           "seqNo": 5,
           "questionText": "広域連合には構成団体の住民による直接請求の制度があるが、長および議会議員の選出について、住民の直接選挙が可能とされている。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "広域連合には、構成団体の住民による直接請求の制度がある（地方自治法291条の６の6）はが、長および議会議員の選出について、住民の直接選挙は不可である（291条の６）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",
@@ -12471,7 +12471,7 @@
         {
           "seqNo": 2,
           "questionText": "都道府県知事は、その権限に属する事務を市町村長に委任することができない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "普通地方公共団体の長は、その権限に属する事務の一部を「その管理に属する」行政庁に委任することができるところ（地方自治法153条2項）、市町村長は管理に属する行政庁ではない。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",
@@ -12539,7 +12539,7 @@
         {
           "seqNo": 1,
           "questionText": "会計管理者は、当該普通地方公共団体の長の補助機関である職員のうちから命ずるが、長と一定の親職関係にある者は、会計管理者とすることができず、また長と会計管理者の間にこれらの関係が生じたときは、会計管理者は、その職を失う。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "会計管理者は、当該普通地方公共団体の長の補助機関である職員のうちから命ずる（地方自治法168条2項）、長、即知事もしくは副市町村長または監査委員と親、姻等の3親等以内の関係にある者を会計管理者とすることができず（169条1項）、会計管理者は、これらの関係があるときは、その職を失う（同条2項）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",
@@ -12679,7 +12679,7 @@
         {
           "seqNo": 6,
           "questionText": "議会において地方公共団体の長に対する不信任議決が行われたとき、地方公共団体の長は、内閣同様、10日以内に解散権を行使しなければ襲職を失う。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "地方公共団体の長は、不信任議決の日の通知を受けた日から10日以内に議会を解散しないときは、失職する（地方自治法178条2項）。内閣は、10日以内に衆議院を解散しない限り総辞職する（憲法第69条）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-chiho",
