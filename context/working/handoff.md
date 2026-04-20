@@ -6,7 +6,7 @@
 
 ## 現在地（confirmed, 2026-04-20 v92 反映後）
 
-* **main HEAD**: `a2b26111bdb818425109127b9f8717277407286c`（直前は handoff mainHEAD sync PR #48。本 PR #49 v92 merge 後に更新）
+* **main HEAD**: `ece5d89d9a21a1f449214f6f17a21ea4c6d5361f`（v92 squash merge, PR #49）
 * **総ページ**: 239 / **総肢**: 1312（不変）
 * **DATA_VERSION**: `2026-04-20-audit-v92-p116-q01-seq2-e-restore`
 * **L1 本線**: ✅ 実質完了維持
