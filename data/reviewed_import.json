@@ -9612,7 +9612,7 @@
           "seqNo": 1,
           "questionText": "処分につき審査請求をすることができる場合においても、処分の取消しの訴えを直ちに提起してよいか。",
           "answerBoolean": true,
-          "explanationText": "処分の取消しの訴えは、当該処分につき定めがなければ、直ちに処分の取消しの訴えを提起すること...（行政事件訴訟法8条1項本文：自由選択主義）。",
+          "explanationText": "処分の取消しの訴えは、当該処分につき法令の規定により審査請求をすることができる場合においても、直ちに提起することができる（行政事件訴訟法8条1項本文：自由選択主義）。",
           "subjectCandidate": "gyosei",
           "chapterCandidate": "gyosei-jiken",
           "confidence": 1.0,
