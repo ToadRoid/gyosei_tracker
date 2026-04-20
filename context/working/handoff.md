@@ -6,12 +6,17 @@
 
 ## 現在地（confirmed, 2026-04-20 v93 反映後）
 
-* **main HEAD**: `075e4a227693f9f6bc13ad1ce3fc502716ae6c20`（v93 squash merge, PR #51）
+* **latest data merge**: `075e4a227693f9f6bc13ad1ce3fc502716ae6c20`（v93 squash merge, PR #51 = A5 `p136-q01 seq1 E` close）
+* **latest main HEAD at handoff edit time**: `d161966267874f36088d1a9b4f54627d5191b144`（PR #52 = v93 mainHEAD sync。本ポリシー変更 PR merge 後に main HEAD は再び進むが、本フィールドはあくまで**編集時点の snapshot**であって stale 化を許容する）
 * **総ページ**: 239 / **総肢**: 1312（不変）
 * **DATA_VERSION**: `2026-04-20-audit-v93-p136-q01-seq1-e-restore`
 * **L1 本線**: ✅ 実質完了維持
-* **直近 merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1 close) → v90 (PR #45, `e2321a9`, A2 close) → handoff sync (PR #46, `8b8c3b0`) → v91 (PR #47, `c9fe732`, A3 close) → handoff mainHEAD sync (PR #48, `a2b2611`) → v92 (PR #49, `ece5d89`, A4 close) → handoff mainHEAD sync (PR #50, `8286ebb`) → v93 (PR #51, A5 close)
-* **運用（2026-04-20 v92 後に復帰）**: v## merge 後は必ず **専用の handoff mainHEAD sync PR** を 1 本挟む（PR #46 / #48 / #50 precedent）。本ブロック内の main HEAD は常に「最新 main の commit」を示す
+* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5)
+* **付随 sync PR**: PR #46 (`8b8c3b0`) / PR #48 (`a2b2611`) / PR #50 (`8286ebb`) / PR #52 (`d161966`) — 旧「都度 mainHEAD sync」運用の痕跡（本ポリシー変更で廃止）
+* **運用（2026-04-20 v93 後に変更）**: 旧「都度 sync PR」方式は fixed point を持たない構造（sync PR 自身が merge commit を作るため handoff が即 stale）のため**廃止**。新方針:
+  - `latest data merge` = **最新の v## restore PR の squash merge commit**（data 到達点。次の v## restore までは stable）
+  - `latest main HEAD at handoff edit time` = **handoff 編集時点の repo 先端**の snapshot（merge 後は stale 化するが、意図的に許容する表示値）
+  - **sync PR は起票しない**。v## restore PR 1 本で `latest data merge` と `latest main HEAD at handoff edit time` の両方を更新し、commit 時点の snapshot として閉じる
 
 ### v76 差分（v75 → v76）
 
