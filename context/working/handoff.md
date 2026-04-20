@@ -4,12 +4,13 @@
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-20 v88 反映後）
+## 現在地（confirmed, 2026-04-20 v90 反映後）
 
-* **main HEAD**: `bd45bd77e6c65b5231163db7ab5499387b29e74b`（v88 squash merge, PR #43）
+* **main HEAD**: `e2321a990ccd63e7b5ec531e61c6e828e74beab4`（v90 squash merge, PR #45）
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-20-audit-v88-p227-q01-seq3-e-digit-restore`
+* **DATA_VERSION**: `2026-04-20-audit-v90-p175-q01-seq3-e-restore`
 * **L1 本線**: ✅ 実質完了維持
+* **直近 merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1 close) → v90 (PR #45, `e2321a9`, A2 close)
 
 ### v76 差分（v75 → v76）
 
