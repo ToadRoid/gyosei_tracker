@@ -4,14 +4,14 @@
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-21 v95 反映後）
+## 現在地（confirmed, 2026-04-21 v97 反映後）
 
-* **latest data merge**: v97 restore (PR #58、squash merge commit SHA は merge 後確定、次 handoff 編集で補完) / 直前の merged v## = v96 (`a076e59dc9a1b064e7010feea10d461250023a9e`, PR #57, B5 partial close)
-* **latest main HEAD at handoff edit time**: `a076e59dc9a1b064e7010feea10d461250023a9e`（v96 squash merge, PR #57 = 本 v97 ブランチのベース。本 PR merge 後 stale 化するが snapshot として許容）
+* **latest data merge**: `7171dac9ad13a92fa051da26d9110ac5d8f3c74e`（v97 squash merge, PR #58, B6 closed to limit of source quality = **B 群 active 完走**）/ 直前の merged v## = v96 (`a076e59dc9a1b064e7010feea10d461250023a9e`, PR #57, B5 partial close)
+* **latest main HEAD at handoff edit time**: `7171dac9ad13a92fa051da26d9110ac5d8f3c74e`（v97 squash merge, PR #58。2026-04-21 SHA backfill commit 時点の repo 先端）
 * **総ページ**: 239 / **総肢**: 1312（不変）
 * **DATA_VERSION**: `2026-04-21-audit-v97-p118-q01-seq1-e-restore`（本 PR で v96 → v97 bump）
 * **L1 本線**: ✅ 実質完了維持
-* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, `a076e59`, B5) → v97 (PR #58, **B6 = B 群 active 完走**)
+* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, `a076e59`, B5) → v97 (PR #58, `7171dac`, **B6 = B 群 active 完走**)
 * **付随 sync PR**: PR #46 (`8b8c3b0`) / PR #48 (`a2b2611`) / PR #50 (`8286ebb`) / PR #52 (`d161966`) — 旧「都度 mainHEAD sync」運用の痕跡（PR #53 で廃止、v94 以降は新方針で運用）
 * **運用（2026-04-20 PR #53 で確立、v94 = PR #54 で初適用、本 PR で 2 サイクル目）**:
   - `latest data merge` = **最新の v## restore PR の squash merge commit**（data 到達点。SHA 確定は merge 後で、**本 PR のように進行中は PR # で参照し SHA は次 handoff 編集で補完**。次の v## restore までは stable）
