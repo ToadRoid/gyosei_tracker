@@ -3,7 +3,7 @@
 CLAUDE.md 第 1-2 節・第 6-7 節の内容を抜き出してトラッキング用に再掲。
 原典は CLAUDE.md。ここは作業 TODO のインデックス。
 
-## 1. 分類崩壊バグ (**部分修正済み 2026-04-21, PR #??**, CLAUDE.md 第1節)
+## 1. 分類崩壊バグ (**部分修正済み 2026-04-21, PR #60**, CLAUDE.md 第1節)
 
 **現象**: `DATA_VERSION` が上がった再 import 時、既存の分類 / フラグが消える。
 
@@ -15,7 +15,7 @@ CLAUDE.md 第 1-2 節・第 6-7 節の内容を抜き出してトラッキング
 | 2 | `runOneTimeCleanup` の PATCH を localStorage フラグで管理 | problemAttrs 再作成後に cleanup が再実行されない | **未解決**（PATCH 側はそのまま。代わりに importParsedBatch で属性を継承する方針で回避） |
 | 3 | `subjectId === ''` を許容する設計 | 科目ツリーから問題が消え、UI 上「存在しない」状態に見える | **未解決**（§3 で別トラック。本修正で空文字上書きの経路は 1 本減） |
 
-**修正内容 (2026-04-21, PR #??)**:
+**修正内容 (2026-04-21, PR #60)**:
 
 - `src/lib/import-parsed.ts`:
   - `PreservedAttrs` に `subjectId` / `chapterId` を追加（従来は `isExcluded` / `needsSourceCheck` のみ）
@@ -71,7 +71,7 @@ CLAUDE.md 第 1-2 節・第 6-7 節の内容を抜き出してトラッキング
 
 ## 6. TODO 一覧 (from CLAUDE.md 第7節)
 
-- [x] `importParsedBatch` に分類 / フラグ継承を入れる（2026-04-21, PR #??）
+- [x] `importParsedBatch` に分類 / フラグ継承を入れる（2026-04-21, PR #60）
 - [x] 継承条件を設計し、無条件上書きを避ける（2026-04-21, 優先順 (1) 新 OCR → (2) 既存 → (3) fallback ''、純関数 `inheritClassificationField` で固定）
 - [ ] PATCH / cleanup の再実行条件を `DATA_VERSION` と整合（§1 原因 2、未対応。属性継承が入ったため実害は軽減）
 - [ ] `subjectId === ''` を保存しない設計に修正（§3、別トラック）

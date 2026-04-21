@@ -437,7 +437,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
   - 件数増減：close -1（B1）/ frozen -3（B2-B4、queue の active 枠からは外れるが記録は保持）/ active +2（B5-B6 を次着手化）。形式的には **6 件維持**（B1 close 済 + B2-B4 frozen + B5-B6 active）、**実作業（active）は 2 件**
 - 2026-04-21: v96 反映で B 群 active #1 = `B5 p090-q01 seq1 Q+E` を **partial close**（Q OCR 1 char 誤字「語否→諾否」+ E 末尾 substantive 復元「応答義務があり→応答義務がなく」（届出定義 2条7号との論理反転修正）+「自己の期待する→届出人の期待する」（主語 drift 復元）、書籍 page 283 右列 row 1 × と 3 経路一致、load-bearing 7 点「諾否 / 語否非含有 / 応答義務がなく / 旧 garble 非含有 / `...` unresolved marker 保持 / ans=False 維持 / mirror byte-identical」を Python assertion で確認、polarity 非影響、他 seq (2-5) hash 変化なし）。**E 中盤 `申請（2条3号）...届出の場合には、` の `...` 部分は ERROR_UNREADABLE_SOURCE として unresolved 維持**（画像解像度で transitional sentence verbatim 確定不能、条文逆算禁止ルール 2026-04-21 確立に従い未補完）。（-1 → 1 件 active、B 群 active 2 → 1、残は B6 p118-q01 seq1 E = v97 予定）。
 - 2026-04-21: v97 反映で B 群 active #2 = `B6 p118-q01 seq1 E` を **closed to limit of source quality**（E 中盤 `口頭又は書面で当該処分に係る部分を教示` → `①審査請求をすることができること、②審査請求をすべき行政庁および③審査請求期間を書面で教示`（行審法82条1項 教示 3 事項 + 書面、abstract drift から concrete restore）+ `職権による必要的記載` → `職権による必要的教示`（講学ラベル正字化）を原本復元、書籍 page 338 右列 row 1 × と 3 経路一致、load-bearing 9 点「教示 3 事項列挙 / 書面で教示 / 必要的教示 / 旧 `口頭又は書面で当該処分に係る部分を教示` 非含有 / 旧 `必要的記載` 非含有 / 84条 tail 不変（ERROR_UNREADABLE_SOURCE 維持） / ans=False 維持 / 他 seq (2-5) hash 変化なし / mirror byte-identical」を Python assertion で確認、polarity 非影響）。**二層表現採用**: 層 1 = substantive risk mitigated / 層 2 = 84条への繋ぎ末尾は画像解像度で verbatim 確定不能ゆえ ERROR_UNREADABLE_SOURCE として完全不変維持、条文逆算禁止、**future high-res recrop candidate only**。（-1 → 0 件 active、**B 群 active 完走**、残は B2-B4 frozen（p006 画像未存在、repo 追加待ち）+ B5/B6 の image-resolution-limited fragment（高解像度 recrop 待ち））。
-- 2026-04-21: **別領域移行 #1 = `importParsedBatch` の分類継承バグを修正**（PR #??、data 変更なし / DATA_VERSION bump なし / v97 維持）。known_issues.md §1 原因 1 を解決：
+- 2026-04-21: **別領域移行 #1 = `importParsedBatch` の分類継承バグを修正**（PR #60、data 変更なし / DATA_VERSION bump なし / v97 維持）。known_issues.md §1 原因 1 を解決：
   - `src/lib/import-parsed.ts`: 純関数 `inheritClassificationField(newValue, existingValue, fallback='')` を export、`subjectId` / `chapterId` の優先順を (1) 新 OCR → (2) 既存 existingAttr → (3) fallback '' に固定。`PreservedAttrs` に `subjectId` / `chapterId` を追加、preserved Map の条件を撤廃し attr 存在時は常に積むよう変更（旧コードは `isExcluded` / `needsSourceCheck` 有無で条件付けしていて、分類だけ持っていた既存レコードから拾えなかった）
   - `src/components/AuthProvider.tsx`: `prepareLocalDataOnce` を追加し `autoImportIfEmpty → refreshProblemDataIfNeeded → runOneTimeCleanup` を await で直列化。旧 `handleSignIn` は `autoImportIfEmpty()` / `runOneTimeCleanup()` を非 await で呼び競合の余地があったが、これを解消。guest モードのローディング UX は現状維持（`void prepareLocalDataOnce(); setLoading(false);`）
   - `src/lib/import-parsed.test.ts`（新規）: `inheritClassificationField` の優先順 12 ケースを vitest で回帰防止、全 187 テスト pass
@@ -459,7 +459,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 |---|---|---|
 | 肢別過去問データの原本照合 | 継続中。p238-q1/q2 は v76 で close 済み | 直近 v75-v76 で個別ページ単位の修正 |
 | OCR パイプラインのモデル差し替え | 未着手 | `scripts/ocr_batch.*` が対象（CLAUDE.md 第 4 節） |
-| `importParsedBatch` の分類継承バグ | **部分修正済み（2026-04-21, PR #??）** | 原因 1 を解決。`inheritClassificationField` で subjectId / chapterId の継承、cleanup 直列化。原因 2（PATCH 再実行条件）と 原因 3（`''` 禁止）は別トラック。詳細 `known_issues.md` §1 |
+| `importParsedBatch` の分類継承バグ | **部分修正済み（2026-04-21, PR #60）** | 原因 1 を解決。`inheritClassificationField` で subjectId / chapterId の継承、cleanup 直列化。原因 2（PATCH 再実行条件）と 原因 3（`''` 禁止）は別トラック。詳細 `known_issues.md` §1 |
 | `subjectId === ''` 保存の禁止設計 | 未修正 | `known_issues.md` §3。本修正で空文字上書きの経路 1 本は減ったが、許容設計自体は未変更 |
 | `needsSourceCheck` 自動検知ルール | 未実装 | `known_issues.md` §5 |
 | context automation Phase M1 | ✅ 完了 | PR #3〜#6 merged、`automation_plan.md` §0 参照。M2 は凍結 |
@@ -470,7 +470,7 @@ automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
 1. **累積 recheck queue 整理（A 群完走、B 群 active 完走）** — v88 反映後に CLAUDE.md §5 auto-detection 再走で新規 hit 13 件を検出（A 群 7 件 = 実作業 / B 群 6 件 = 判断保留 / C 群 3 件 = 管理対象外）。**v89-v95 で A 群 7/7 完了**、2026-04-21 B 群再整理：**B1 cosmetic close** / **B2-B4 frozen（p006 画像未存在）** / **v96 で B5 closed to limit of source quality（Q+E 末尾 substantive restore、E 中盤 `...` は ERROR_UNREADABLE_SOURCE 維持）** / **v97 で B6 closed to limit of source quality（E 中盤 教示 3 点列挙 + 書面で + 必要的教示 substantive restore、84条 tail は ERROR_UNREADABLE_SOURCE 維持）** = **B 群 active 2/2 完走**。**二層表現採用**（層 1 = substantive risk mitigated / 層 2 = image-quality-limited fragment unresolved = future high-res recrop candidate only）。**別領域へ移行済み**（下記 2 を参照）。B2-B4 の解凍は `0006.png` repo 追加待ち / B5-B6 の層 2 fragment 確定は高解像度 recrop 待ち。
 2. **別領域移行（進行中、優先順は known_issues.md §1-5 に整合）**
-   - **#1 `importParsedBatch` 分類継承バグ**: 2026-04-21 PR #?? で**部分修正**（原因 1 解決、原因 2/3 は別トラック）
+   - **#1 `importParsedBatch` 分類継承バグ**: 2026-04-21 PR #60 で**部分修正**（原因 1 解決、原因 2/3 は別トラック）
    - **#2 `subjectId === ''` 禁止設計**（未着手、§3）
    - **#3 `needsSourceCheck` 自動検知**（未着手、§5。Dexie index §2 と同時着手候補）
    - **#4 OCR パイプラインモデル差し替え**（未着手、§4、`scripts/ocr_batch.*` のみ対象）
