@@ -1,17 +1,17 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-21 (v95：**A 群 #7 = A 群最終項目** `p136-q01 seq3 E` を原本復元で close。`「直ちに提出` → `直ちに提起`（stray 「 + 提出/提起 substantive 誤字）+ 大幅文末欠落「〜自由選択主義）...→〜、裁決を経なければ取消訴訟を提起できないのが原則であるとする前段は誤っている。なお、審査請求前置主義が採用されている場合でも（8条1項ただし書）〜（8条2項1号）、後段は正しい。」復元、行訴法8条1項本文 + 1項ただし書 + 2項1号の 3 条文整合、polarity 非影響。**A 群 1 → 0 = A 群完走**、queue 7 → 6、次着手は B 群（判断保留 6 件の原本照合再判定）)
+最終更新: 2026-04-21 (**handoff-only**：B 群判定着手、B1 `p006-q01 seq1 E` を **cosmetic close**（共産党除名事件判旨、bracket-balanced 標準学術引用 `「...」`、C 群類似 = OCR 破損ではない、data 変更なし）。B2/B3/B4（p006 seq2/seq3/seq4）は `images_preprocessed/0006.png` が repo 内に未存在のため原本照合不能と判明し **凍結（frozen、image 取得待ち）**。次着手 = B5 `p090-q01 seq1 E` + B6 `p118-q01 seq1 E` の read-only 判定（`images_preprocessed/0090.png` / `0118.png` は存在確認済み）。v95 merge SHA `95a50f95aae52bf43fe5b1db8ef70d81a53bde51` を `latest data merge` に補完。**データ変更なし、DATA_VERSION bump なし**、queue 件数 6 維持（B 群 6 件のうち内訳変化：B1 close / B2-B4 frozen / B5-B6 active 再判定対象）)
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
 ## 現在地（confirmed, 2026-04-21 v95 反映後）
 
-* **latest data merge**: v95 restore (PR #55、squash merge commit SHA は merge 後確定、次 handoff 編集で補完) / 直前の merged v## = v94 (`54ec51f0e9f7b42c65006364b4a188475930674a`, PR #54, A6 close)
-* **latest main HEAD at handoff edit time**: `54ec51f0e9f7b42c65006364b4a188475930674a`（v94 squash merge, PR #54 = 本ブランチのベース。本 PR merge 後 stale 化するが snapshot として許容）
+* **latest data merge**: v95 restore (`95a50f95aae52bf43fe5b1db8ef70d81a53bde51`, PR #55, A7 = **A 群完走**) / 直前の merged v## = v94 (`54ec51f0e9f7b42c65006364b4a188475930674a`, PR #54, A6 close)
+* **latest main HEAD at handoff edit time**: `95a50f95aae52bf43fe5b1db8ef70d81a53bde51`（v95 squash merge, PR #55 = 本 handoff-only PR のベース。本 PR は data 変更なし、merge 後 stale 化するが snapshot として許容）
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-21-audit-v95-p136-q01-seq3-e-restore`（本 PR で bump）
+* **DATA_VERSION**: `2026-04-21-audit-v95-p136-q01-seq3-e-restore`（v95 時点の値を維持、本 handoff-only PR では bump なし）
 * **L1 本線**: ✅ 実質完了維持
-* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, A7 = **A 群最終項目**)
+* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = **A 群最終項目 = A 群完走**)
 * **付随 sync PR**: PR #46 (`8b8c3b0`) / PR #48 (`a2b2611`) / PR #50 (`8286ebb`) / PR #52 (`d161966`) — 旧「都度 mainHEAD sync」運用の痕跡（PR #53 で廃止、v94 以降は新方針で運用）
 * **運用（2026-04-20 PR #53 で確立、v94 = PR #54 で初適用、本 PR で 2 サイクル目）**:
   - `latest data merge` = **最新の v## restore PR の squash merge commit**（data 到達点。SHA 確定は merge 後で、**本 PR のように進行中は PR # で参照し SHA は次 handoff 編集で補完**。次の v## restore までは stable）
@@ -338,16 +338,16 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 
 **着手順**: 上表 ~~A1~~ → ~~A2~~ → ~~A3~~ → ~~A4~~ → ~~A5~~ → ~~A6~~ → ~~A7~~（全 close、**A 群完走**）。v87 で p136-q01 seq4 close + v93/v94/v95 で p136 seq1/seq2/seq3 close により、**p136 全 4 seq 完了**。**次着手 = B 群**（判断保留 6 件、原本照合で substantive/cosmetic 再判定）。
 
-**B 群 — borderline（判断保留, 6 件, 原本照合後に substantive/cosmetic 再判定）**:
+**B 群 — borderline（判断保留, 6 件, 原本照合後に substantive/cosmetic 再判定。2026-04-21 read-only 判定で内訳再整理）**:
 
 | # | 対象 | 症状 | 状態 |
 | --- | --- | --- | --- |
-| B1 | p006-q01 seq1 E | 共産党除名事件判旨を `...` で2段圧縮、判旨の本文再構成が必要 | 保留（要原本照合） |
-| B2 | p006-q01 seq2 E | 苫米地事件、`は...明白に違憲無効` 冒頭 `...` + 開き「欠落 | 保留（要原本照合） |
-| B3 | p006-q01 seq3 E | 統治行為論、`判例は...場合でも` 中間語脱落の疑い | 保留（要原本照合） |
-| B4 | p006-q01 seq4 E | 在宅投票事件、冒頭 `...` + 開き「欠落（B2 と同型） | 保留（要原本照合） |
-| B5 | p090-q01 seq1 E | `申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮 | 保留（要原本照合） |
-| B6 | p118-q01 seq1 E | `審査請求...をすることができる` — 条文列挙の `等` 圧縮 | 保留（要原本照合） |
+| ~~B1~~ | ~~p006-q01 seq1 E~~ | ~~共産党除名事件判旨を `...` で2段圧縮、判旨の本文再構成が必要~~ | ~~**cosmetic close**（2026-04-21 read-only 判定: bracket-balanced 標準学術引用 `「...」`、C 群 C1/C2 と同型、OCR 破損ではない、data 変更なし）~~ |
+| B2 | p006-q01 seq2 E | 苫米地事件、`は...明白に違憲無効` 冒頭 `...` + 開き「欠落（read-only 判定で polarity 疑義も検出：E が「留保不在」を述べる一方 Q 側は「留保あり」と解釈され得るが原本不在で断定不能） | **凍結（frozen）** — `images_preprocessed/0006.png` が repo 内に未存在、原本照合不能（2026-04-21 確認）。画像取得後に再開 |
+| B3 | p006-q01 seq3 E | 統治行為論、`判例は...場合でも` 中間語脱落の疑い（read-only 判定で砂川事件 proviso 欠落の可能性、substantive restore 候補） | **凍結（frozen）** — 同上（p006 画像未存在） |
+| B4 | p006-q01 seq4 E | 在宅投票事件、冒頭 `...` + 開き「欠落（B2 と同型。read-only 判定では polarity 自己整合、typography restore のみ見込み） | **凍結（frozen）** — 同上（p006 画像未存在） |
+| B5 | p090-q01 seq1 E | `申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮 | 保留（**次着手**、`images_preprocessed/0090.png` 存在確認済み、read-only 判定予定） |
+| B6 | p118-q01 seq1 E | `審査請求...をすることができる` — 条文列挙の `等` 圧縮 | 保留（**次着手**、`images_preprocessed/0118.png` 存在確認済み、read-only 判定予定） |
 
 **C 群 — 修正不要（標準的学術引用, 3 件, queue 外 / 記録のみ）**:
 
@@ -378,8 +378,18 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 - 2026-04-20: v93 反映で A 群 `A5 p136-q01 seq1 E` を close（中盤 substantive garble「定めがなければ、→法令の規定により審査請求をすることができる場合においても、」+ duplicate phrase 除去「直ちに処分の取消しの訴えを提起すること...→直ちに提起することができる」、書籍 page 375 右列 row 1 ○ と 3 経路一致、load-bearing 3 点「法令の規定により審査請求 / 直ちに提起することができる / 自由選択主義末尾」を Python assertion で確認、polarity 非影響、v87 close 済み seq4 との対比整合）（-1 → 8 件、実作業は 2 件。残 A 群 2 件はすべて p136 seq2/seq3）。
 - 2026-04-20: v94 反映で A 群 `A6 p136-q01 seq2 E` を close（中盤 structural garble「法律に別段の定めがない限り、直ちに〜原則である）...→不服申立てをしてもよいし、直ちに〜原則であり（8条1項本文: 自由選択主義）」+ 大幅文末欠落 → 8条1項ただし書（審査請求前置主義=例外）+ 結論「よって〜審査請求に対する裁決を経ないで直ちに処分の取消しの訴えを提起できる」を復元、行訴法8条1項本文 + ただし書 + 結論の 3 段構成、書籍 page 375 右列 row 2 × と 3 経路一致、load-bearing 5 点「不服申立てをしてもよいし / 自由選択主義 / 審査請求前置主義 / よって〜別段の定めがない限り / 末尾終端」を Python assertion で確認、polarity 非影響）（-1 → 7 件、実作業は 1 件。**新方針 = sync PR 無し、restore PR 1 本のみで完結**の初適用）。
 - 2026-04-21: v95 反映で A 群 `A7 p136-q01 seq3 E` を close（stray 開き「除去 + 提出/提起 substantive 誤字「直ちに提出→直ちに提起」+ 大幅文末欠落「〜自由選択主義）...→前段誤り評価 +（8条1項ただし書）+ 3か月 rule +（8条2項1号）+ 後段正しい評価」を復元、行訴法8条1項本文 / ただし書 / 2項1号の 3 条文整合、書籍 page 375 右列 row 3 × と 3 経路一致、load-bearing 7 点「直ちに提起できる / 自由選択主義 / 前段は誤っている / 審査請求前置主義 / 3か月を経過 / 8条2項1号 / 後段は正しい」を Python assertion で確認、polarity 非影響、v87 seq4 / v93 seq1 / v94 seq2 との対比整合で p136 全 4 seq 完了）（-1 → 6 件、**実作業 0 件 = A 群完走**）。
+- 2026-04-21: **handoff-only 更新**（data 変更なし、DATA_VERSION bump なし）。B 群 6 件の内訳を read-only 判定で再整理：
+  - `B1 p006-q01 seq1 E` を **cosmetic close**（共産党除名事件判旨、bracket-balanced 標準学術引用 `「...」`、C 群 C1/C2 と同型 → queue から除外、data 変更は発生しない）
+  - `B2 p006-q01 seq2 E` / `B3 p006-q01 seq3 E` / `B4 p006-q01 seq4 E` を **凍結（frozen）**。理由：`images_preprocessed/0006.png` が repo 内に未存在で原本照合が成立しないため、画像取得までは判定も data 修正も行わない（B2 は polarity 疑義 / B3 は substantive restore 候補 / B4 は typography restore 見込みの未検証心証のみ記録）
+  - `B5 p090-q01 seq1 E` / `B6 p118-q01 seq1 E` を **次着手**（`images_preprocessed/0090.png` / `0118.png` は存在確認済み、次セッションで read-only 判定 → substantive なら A 群流の restore PR、cosmetic なら close）
+  - v95 merge SHA `95a50f95aae52bf43fe5b1db8ef70d81a53bde51` を `latest data merge` / `latest main HEAD at handoff edit time` / 直近 data merge 履歴 の 3 箇所に補完（PR #55 merge 後の snapshot として確定）
+  - 件数増減：close -1（B1）/ frozen -3（B2-B4、queue の active 枠からは外れるが記録は保持）/ active +2（B5-B6 を次着手化）。形式的には **6 件維持**（B1 close 済 + B2-B4 frozen + B5-B6 active）、**実作業（active）は 2 件**
 
-**次アクション**: **A 群完走**（7/7 close、p175 / p162 / p116 / p136 全ての A 群項目ゼロ）。**次フェーズ = B 群の原本照合再判定**（判断保留 6 件：p006 seq1/seq2/seq3/seq4 = 判例の `...` 圧縮引用、p090 seq1 = 申請/届出の対比記述圧縮、p118 seq1 = 条文列挙の `等` 圧縮）。B 群は原本照合で substantive/cosmetic を判定し、substantive と判明したものは C 群類似の標準引用と切り分けて別扱い。C 群は修正不要ゆえ着手しない。別領域（`importParsedBatch` 分類継承バグ / `subjectId === ''` 禁止設計 / `needsSourceCheck` 自動検知 / OCR パイプラインモデル差し替え）への移行は **B 群が全て解消してから**。
+**次アクション**: **A 群完走**（7/7 close 維持）+ **B 群 read-only 判定着手**（B1 cosmetic close、B2-B4 frozen = p006 画像取得待ち、B5-B6 が active 2 件）。次セッションの優先順：
+1. **B5 `p090-q01 seq1 E` の read-only 判定**（`images_preprocessed/0090.png` + 行政手続法2条3号（申請）との対比条文整合 + DB 内 explanation 自己整合 の 3 経路、substantive なら A 群流の restore PR、cosmetic なら handoff-only close）
+2. **B6 `p118-q01 seq1 E` の read-only 判定**（`images_preprocessed/0118.png` + 行政不服審査法の条文列挙（`等` 圧縮の部分）整合 + DB 自己整合 の 3 経路、B5 同様の判定フロー）
+3. **B2-B4 は `0006.png` が repo に追加されるまで触らない**（p006 原本画像の取得作業は本 session のスコープ外、別途 user 判断）
+4. B5/B6 完了後に **別領域へ移行**：`importParsedBatch` 分類継承バグ / `subjectId === ''` 禁止設計 / `needsSourceCheck` 自動検知 / OCR パイプラインモデル差し替え。順序は `known_issues.md` の優先度に従う
 
 <!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
@@ -397,7 +407,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 
 automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
-1. **累積 recheck queue 整理（A 群完走、B 群フェーズへ）** — v88 反映後に CLAUDE.md §5 auto-detection 再走で新規 hit 13 件を検出（A 群 7 件 = 実作業 / B 群 6 件 = 判断保留 / C 群 3 件 = 管理対象外）。**v89 A1 / v90 A2 / v91 A3 / v92 A4 / v93 A5 / v94 A6 / v95 A7 close、A 群 7/7 完了**（queue 全体 6、B 群 6 件のみ残存）。**次フェーズ = B 群の原本照合再判定**（判例/条文の `...` 圧縮引用か substantive garble かを原本で切り分け）。B 群完了後に別領域（分類継承バグ等）へ移行。
+1. **累積 recheck queue 整理（A 群完走、B 群 read-only 判定フェーズ）** — v88 反映後に CLAUDE.md §5 auto-detection 再走で新規 hit 13 件を検出（A 群 7 件 = 実作業 / B 群 6 件 = 判断保留 / C 群 3 件 = 管理対象外）。**v89-v95 で A 群 7/7 完了**、2026-04-21 handoff-only で B 群再整理：**B1 cosmetic close** / **B2-B4 frozen（p006 画像未存在）** / **B5 p090 seq1 E + B6 p118 seq1 E が active 次着手 2 件**。B5/B6 完了後（または B2-B4 の画像取得後）に別領域（分類継承バグ等）へ移行。
 2. **原本照合の継続** — 未処理ページが残る場合、直近フェーズと同じスタイルで続行可能
    - 未処理ページは `data/` 配下の ledger / pending 系 CSV を参照
    - 新規ページに着手する前に `data/*ledger*.json` と `data/pending_*.csv` を確認
