@@ -1,19 +1,19 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-21 (**別領域移行 #1**：`importParsedBatch` の分類継承バグ（known_issues.md §1 原因 1、CLAUDE.md 第 1-2 節）を修正。`src/lib/import-parsed.ts` に純関数 `inheritClassificationField(newValue, existingValue, fallback='')` を追加し、`subjectId` / `chapterId` の優先順 (1) 新 OCR → (2) 既存 existingAttr → (3) fallback '' で継承。`isExcluded` / `needsSourceCheck` は従来通り常時継承（ただし preserved Map の条件を撤廃し、attr 存在時は常に積む）。`src/components/AuthProvider.tsx` の cleanup 順序を `autoImportIfEmpty → refreshProblemDataIfNeeded → runOneTimeCleanup` に直列化（旧 fire-and-forget 競合を解消）。`src/lib/import-parsed.test.ts` で 12 ケースの回帰防止テスト追加、全 187 テスト pass、build green。**data 変更なし / DATA_VERSION bump なし**（v97 維持）。別領域残 = `subjectId === ''` 禁止設計 / `needsSourceCheck` 自動検知 / OCR パイプラインモデル差し替え。)
+最終更新: 2026-04-22 (**v98 = B2 `p006-q01 seq2` Q+E+ans 束ね substantive restore + polarity flip true→false**。B 群 frozen 解除の先頭項目。`images/0006.png` raw source が repo 内に存在することを確認（preprocessed 欠落だっただけ）、2x crop + 高解像度部分 crop で verbatim 確定。Q 中盤 `行われると` → `行われるなど`（OCR 語尾 garble）、ans `true → false`（polarity flip、留保不在ゆえ誤っているという E 論理に合わせる）、E 大幅 restore（`判例（最判昭35.6.8：苫米地事件）は...明白に違憲無効と認められる場合を除き」とする留保は付されていない。` → `判例（最大判昭35.6.8：苫米地事件）は、…かかる国家行為は裁判所の審査権の外にあるとしている。衆議院の解散は、極めて政治性の高い国家統治の基本に関する行為に当たり、司法審査の対象からは除外される。しかし、「一見極めて明白に違憲無効と認められる場合を除き」という留保は付されていないため本肢は誤っている。`）。`最判→最大判` 判例 rank 正字化、苫米地判旨本文復元、停止 `...` 解消、結語復元。scope: p006-q01 seq2 のみ、他 seq (1/3/4) hash 変化なし確認済。**handoff 同梱修正**: B1 cosmetic close → substantive pending に差し戻し（原本 Q/E に substantive drift 発見）、B2 = 本 PR で close、B3 `砂川事件 proviso 欠落` 記述取消 → `苫米地事件 / polarity flip pending`、B4 frozen → substantive pending、B2-B4 frozen（p006 画像未存在）の記述取消 = `images/0006.png` raw source は存在し preprocessed 欠落のみ。)
 
-直前: v97 (B 群 active #2 = B6 `p118-q01 seq1 E` closed to limit of source quality、B 群 active 完走、二層表現採用、`7171dac` PR #58 + SHA backfill `424fbc5` PR #59)。
+直前: 別領域移行 #1 = `importParsedBatch` 分類継承バグ修正（PR #60 `01397d8`, data 変更なし / DATA_VERSION bump なし / v97 維持）。その前は v97 (B 群 active #2 = B6 `p118-q01 seq1 E` closed to limit of source quality、B 群 active 完走、二層表現採用、`7171dac` PR #58 + SHA backfill `424fbc5` PR #59)。
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-21 v97 反映後）
+## 現在地（confirmed, 2026-04-22 v98 PR 進行中）
 
-* **latest data merge**: `7171dac9ad13a92fa051da26d9110ac5d8f3c74e`（v97 squash merge, PR #58, B6 closed to limit of source quality = **B 群 active 完走**）/ 直前の merged v## = v96 (`a076e59dc9a1b064e7010feea10d461250023a9e`, PR #57, B5 partial close)
-* **latest main HEAD at handoff edit time**: `7171dac9ad13a92fa051da26d9110ac5d8f3c74e`（v97 squash merge, PR #58。2026-04-21 SHA backfill commit 時点の repo 先端）
+* **latest data merge**: （本 PR = v98 = B2 `p006-q01 seq2` Q+E+ans flip restore、進行中ゆえ SHA 未確定、次 handoff 編集で補完）/ 直前の merged v## = v97 (`7171dac9ad13a92fa051da26d9110ac5d8f3c74e`, PR #58, B6 closed to limit of source quality = B 群 active 完走)
+* **latest main HEAD at handoff edit time**: `01397d88`（PR #60 squash merge, `importParsedBatch` 分類継承バグ修正, 2026-04-22 handoff 編集時点の repo 先端）
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-21-audit-v97-p118-q01-seq1-e-restore`（本 PR で v96 → v97 bump）
+* **DATA_VERSION**: `2026-04-22-audit-v98-p006-q01-seq2-qea-flip-restore`（本 PR で v97 → v98 bump）
 * **L1 本線**: ✅ 実質完了維持
-* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, `a076e59`, B5) → v97 (PR #58, `7171dac`, **B6 = B 群 active 完走**)
+* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, `a076e59`, B5) → v97 (PR #58, `7171dac`, B6 = B 群 active 完走) → **別領域 #1 (PR #60, `01397d8`, import 分類継承バグ修正、data 変更なし)** → **v98 (PR #TBD, SHA 未確定, B2 p006-q01 seq2 Q+E+ans flip, B 群 frozen 解除先頭)**
 * **付随 sync PR**: PR #46 (`8b8c3b0`) / PR #48 (`a2b2611`) / PR #50 (`8286ebb`) / PR #52 (`d161966`) — 旧「都度 mainHEAD sync」運用の痕跡（PR #53 で廃止、v94 以降は新方針で運用）
 * **運用（2026-04-20 PR #53 で確立、v94 = PR #54 で初適用、本 PR で 2 サイクル目）**:
   - `latest data merge` = **最新の v## restore PR の squash merge commit**（data 到達点。SHA 確定は merge 後で、**本 PR のように進行中は PR # で参照し SHA は次 handoff 編集で補完**。次の v## restore までは stable）
@@ -132,6 +132,32 @@
   * handoff pending queue には Q のみ記録だったが、原本読取時に E substantive garble + 文末欠落を発見し束ねて修正（v85 precedent 同様）
 
 確認経路: images/0136.png 原本（Claude vision, book p374-375 行4、section 取消訴訟と審査請求との関係） + 行政事件訴訟法8条1項ただし書 + 最判昭36.7.21（誤って不適法却下された適法な審査請求は経たものと扱う） + DB 内 ans=false 自己整合 の 3 経路一致。
+
+### v98 差分（2026-04-22）
+
+* **PR #TBD / p006-q01 seq2 Q+E+ans 束ね substantive restore**（**B 群 frozen 解除 #1 = B2**、Q + E + polarity 1 PR bundled、**polarity flip true→false**、書籍 page 117-118 見開き、section 裁判所、book 書籍 Q12-Q15 のうち Q13 ×、v82 / v86 precedent と同型）
+  * **前提訂正**: handoff v95 反映時に「`images_preprocessed/0006.png` が repo 内に未存在、原本照合不能」として B2-B4 を frozen 扱いしていたが、本 PR で `images/0006.png` raw source が repo 内に存在することを確認（`3024x1768 RGBA`, `2607618 bytes`）。preprocessed が生成欠落していただけで、raw からの 2x crop + 高解像度部分 crop で verbatim 確定可能。よって frozen を解除
+  * **Q 語尾 garble**: `解散が憲法の明文規定に反して行われると、一見極めて明白に違憲無効と認められる場合を除き` → `解散が憲法の明文規定に反して行われるなど、一見極めて明白に違憲無効と認められる場合を除き`（`行われると` → `行われるなど`、OCR 語尾 1 mora drift。Q 論理の接続が「反して行われる『と』」の仮定条件から「反して行われる『など』」の例示に変わる。原本は「など」、本肢は「反して行われる『ような事例でも』留保は付されている」という判例への誤解論点ゆえ「など」が正文）
+  * **ans**: `true → false`（polarity flip、E 論理との整合。E 末尾「留保は付されていないため本肢は誤っている」に対し、旧 ans=true は相互矛盾。原本の正しい解答は false）
+  * **E 全面 restore**:
+    - 判例 rank 正字化: `最判昭35.6.8` → `最大判昭35.6.8`（苫米地事件は最高裁大法廷判決）
+    - 苫米地判旨本文復元（停止 `...` 解消 + 判旨中段全段）: 旧 `判例（最判昭35.6.8：苫米地事件）は...明白に違憲無効と認められる場合を除き」とする留保は付されていない。` → 新 `判例（最大判昭35.6.8：苫米地事件）は、直接国家統治の基本に関する高度に政治性のある国家行為のごときはたとえそれが法律上の争訟となり、これに対する有効無効の判断が法律上可能である場合であっても、かかる国家行為は裁判所の審査権の外にあるとしている。衆議院の解散は、極めて政治性の高い国家統治の基本に関する行為に当たり、司法審査の対象からは除外される。しかし、「一見極めて明白に違憲無効と認められる場合を除き」という留保は付されていないため本肢は誤っている。`
+    - 結語はそのまま `本肢は誤っている` で統一
+  * scope: p006-q01 seq2 のみ、他 seq (1/3/4) hash 変化なし確認済
+  * **handoff 同梱修正**: B1 cosmetic close → substantive pending に差し戻し（B2 prep 時の原本 2x crop で B1 Q に `党内 → 党員` `による限りは → にとどまる限りは` など substantive drift を検出、cosmetic 評価は誤り）、B2 = 本 PR で close、B3 `砂川事件 proviso 欠落` 記述取消 → `苫米地事件 / polarity flip pending`（read-only 判定時に砂川事件と誤認していた、原本は苫米地事件の別側面を引用）、B4 frozen → substantive pending（Q `例外的の → 例外的な` + E 中間 `...` 判旨本文 restore 要）、B2-B4 frozen（p006 画像未存在）の記述取消 = `images/0006.png` raw source 存在、preprocessed 欠落のみ
+
+確認経路: `images/0006.png` raw source（Claude vision, 書籍 page 117-118 見開き、裁判所 section, book Q13 ×、2x crop で Q/E 本文 + 3x 部分 crop で送り仮名 / 判例 rank verbatim 確定） + 最大判昭35.6.8（苫米地事件判旨本文、衆議院解散の統治行為論、「法律上の争訟…であっても…審査権の外」の定式） + DB 内 E 末尾「留保は付されていないため本肢は誤っている」と ans=false の自己整合（polarity flip 後） の 3 経路一致。
+
+load-bearing Python assertion（編集時に検証、9 点）:
+- data ↔ public byte-identical mirror
+- Q: `行われるなど、一見極めて明白に` 含有 / 旧 garble `行われると、一見極めて` 非含有
+- E: `（最大判昭35.6.8：苫米地事件）は、直接国家統治の基本に関する` 含有
+- E: `かかる国家行為は裁判所の審査権の外にあるとしている。` 含有
+- E: `衆議院の解散は、極めて政治性の高い国家統治の基本に関する行為に当たり、司法審査の対象からは除外される。` 含有
+- E: `しかし、「一見極めて明白に違憲無効と認められる場合を除き」という留保は付されていないため本肢は誤っている。` で末尾終端
+- E: 旧 garble `（最判昭35.6.8：苫米地事件）は...明白に違憲無効` 非含有、`...` / `…` 非含有
+- ans=false 維持（polarity flip true→false 反映）
+- p006 他 seq (1/3/4) hash 変化なし
 
 ### v97 差分（2026-04-21）
 
@@ -389,14 +415,16 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 
 **着手順**: 上表 ~~A1~~ → ~~A2~~ → ~~A3~~ → ~~A4~~ → ~~A5~~ → ~~A6~~ → ~~A7~~（全 close、**A 群完走**）。v87 で p136-q01 seq4 close + v93/v94/v95 で p136 seq1/seq2/seq3 close により、**p136 全 4 seq 完了**。**次着手 = B 群**（判断保留 6 件、原本照合で substantive/cosmetic 再判定）。
 
-**B 群 — borderline（判断保留, 6 件, 原本照合後に substantive/cosmetic 再判定。2026-04-21 read-only 判定で内訳再整理）**:
+**B 群 — borderline（判断保留, 6 件, 原本照合後に substantive/cosmetic 再判定。2026-04-22 v98 prep 時に frozen 解除 + 判定見直し）**:
+
+**前提訂正**: v95 反映時の「`0006.png` が repo 内に未存在ゆえ B2-B4 frozen」判定は不正確だった。`images/0006.png` raw source は main repo 内に存在（untracked、`3024x1768 RGBA`、`2607618 bytes`）し、欠落していたのは `images_preprocessed/0006.png` のみ。raw から 2x crop で verbatim 確定可能ゆえ frozen 解除。なお同様に B1 cosmetic close 判定も撤回（v98 prep 時の 2x crop で Q/E に substantive drift を複数検出）。
 
 | # | 対象 | 症状 | 状態 |
 | --- | --- | --- | --- |
-| ~~B1~~ | ~~p006-q01 seq1 E~~ | ~~共産党除名事件判旨を `...` で2段圧縮、判旨の本文再構成が必要~~ | ~~**cosmetic close**（2026-04-21 read-only 判定: bracket-balanced 標準学術引用 `「...」`、C 群 C1/C2 と同型、OCR 破損ではない、data 変更なし）~~ |
-| B2 | p006-q01 seq2 E | 苫米地事件、`は...明白に違憲無効` 冒頭 `...` + 開き「欠落（read-only 判定で polarity 疑義も検出：E が「留保不在」を述べる一方 Q 側は「留保あり」と解釈され得るが原本不在で断定不能） | **凍結（frozen）** — `images_preprocessed/0006.png` が repo 内に未存在、原本照合不能（2026-04-21 確認）。画像取得後に再開 |
-| B3 | p006-q01 seq3 E | 統治行為論、`判例は...場合でも` 中間語脱落の疑い（read-only 判定で砂川事件 proviso 欠落の可能性、substantive restore 候補） | **凍結（frozen）** — 同上（p006 画像未存在） |
-| B4 | p006-q01 seq4 E | 在宅投票事件、冒頭 `...` + 開き「欠落（B2 と同型。read-only 判定では polarity 自己整合、typography restore のみ見込み） | **凍結（frozen）** — 同上（p006 画像未存在） |
+| B1 | p006-q01 seq1 Q+E | 共産党除名事件。Q OCR drift `党内 → 党員`、`内部的問題による限りは → 内部的な問題にとどまる限りは` など substantive、E 中間 `...` で判旨本文欠落 + `自律性 → 自主性` `において → は` drift | **substantive pending**（v98 prep で B1 cosmetic close 判定を撤回、v98 後の restore PR 候補 #4） |
+| ~~B2~~ | ~~p006-q01 seq2 Q+E+ans~~ | ~~Q 語尾 `行われると → 行われるなど`、E `判例（最判…苫米地）は...留保は付されていない` の停止 `...` + 判旨本文欠落 + `最判→最大判` 判例 rank drift、ans true→false polarity flip~~ | ~~**close（v98, PR #TBD）= B 群 frozen 解除 #1**~~ |
+| B3 | p006-q01 seq3 E+ans | 苫米地事件の別側面（v95 では砂川事件 proviso 欠落と誤認、v98 prep で苫米地事件と訂正）、polarity flip false→true 候補（E 論理との整合が旧 ans と不一致） | **substantive pending + polarity flip pending**（v98 後の restore PR 候補 #2） |
+| B4 | p006-q01 seq4 Q+E | 在宅投票事件。Q 送り仮名 `例外的の → 例外的な`、E 中間 `...` で判旨本文欠落、冒頭 `...` + 開き「欠落（typography だけでなく substantive） | **substantive pending**（v98 prep で frozen 撤回、v98 後の restore PR 候補 #3） |
 | ~~B5~~ | ~~p090-q01 seq1 E~~ | ~~`申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮~~ | ~~**closed to limit of source quality**（v96, PR #57）。**層 1 = substantive risk mitigated**（Q 1 char「語否→諾否」+ E 末尾 論理反転「応答義務があり→応答義務がなく」+ 主語 drift「自己の→届出人の」を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（E 中盤 `申請（2条3号）...届出の場合には、` の `...` transitional sentence は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** 維持、条文逆算禁止、**future high-res recrop candidate only**）~~ |
 | ~~B6~~ | ~~p118-q01 seq1 E~~ | ~~`審査請求...をすることができる` — 条文列挙の `等` 圧縮（read-only 判定で E 中盤〜末尾の教示 3 点列挙 drift + `必要的記載` → `必要的教示` 差検出、substantive restore 対象）~~ | ~~**closed to limit of source quality**（v97, PR #58）。**層 1 = substantive risk mitigated**（E 中盤 `口頭又は書面で当該処分に係る部分を教示` → `①審査請求をすることができること、②審査請求をすべき行政庁および③審査請求期間を書面で教示`（行審法82条1項 教示 3 事項 + 書面、abstract drift から concrete restore）+ `職権による必要的記載` → `職権による必要的教示`（講学ラベル正字化）を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（84条への繋ぎ末尾は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** として**完全不変維持**、条文逆算禁止、**future high-res recrop candidate only**）~~ |
 
@@ -437,6 +465,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
   - 件数増減：close -1（B1）/ frozen -3（B2-B4、queue の active 枠からは外れるが記録は保持）/ active +2（B5-B6 を次着手化）。形式的には **6 件維持**（B1 close 済 + B2-B4 frozen + B5-B6 active）、**実作業（active）は 2 件**
 - 2026-04-21: v96 反映で B 群 active #1 = `B5 p090-q01 seq1 Q+E` を **partial close**（Q OCR 1 char 誤字「語否→諾否」+ E 末尾 substantive 復元「応答義務があり→応答義務がなく」（届出定義 2条7号との論理反転修正）+「自己の期待する→届出人の期待する」（主語 drift 復元）、書籍 page 283 右列 row 1 × と 3 経路一致、load-bearing 7 点「諾否 / 語否非含有 / 応答義務がなく / 旧 garble 非含有 / `...` unresolved marker 保持 / ans=False 維持 / mirror byte-identical」を Python assertion で確認、polarity 非影響、他 seq (2-5) hash 変化なし）。**E 中盤 `申請（2条3号）...届出の場合には、` の `...` 部分は ERROR_UNREADABLE_SOURCE として unresolved 維持**（画像解像度で transitional sentence verbatim 確定不能、条文逆算禁止ルール 2026-04-21 確立に従い未補完）。（-1 → 1 件 active、B 群 active 2 → 1、残は B6 p118-q01 seq1 E = v97 予定）。
 - 2026-04-21: v97 反映で B 群 active #2 = `B6 p118-q01 seq1 E` を **closed to limit of source quality**（E 中盤 `口頭又は書面で当該処分に係る部分を教示` → `①審査請求をすることができること、②審査請求をすべき行政庁および③審査請求期間を書面で教示`（行審法82条1項 教示 3 事項 + 書面、abstract drift から concrete restore）+ `職権による必要的記載` → `職権による必要的教示`（講学ラベル正字化）を原本復元、書籍 page 338 右列 row 1 × と 3 経路一致、load-bearing 9 点「教示 3 事項列挙 / 書面で教示 / 必要的教示 / 旧 `口頭又は書面で当該処分に係る部分を教示` 非含有 / 旧 `必要的記載` 非含有 / 84条 tail 不変（ERROR_UNREADABLE_SOURCE 維持） / ans=False 維持 / 他 seq (2-5) hash 変化なし / mirror byte-identical」を Python assertion で確認、polarity 非影響）。**二層表現採用**: 層 1 = substantive risk mitigated / 層 2 = 84条への繋ぎ末尾は画像解像度で verbatim 確定不能ゆえ ERROR_UNREADABLE_SOURCE として完全不変維持、条文逆算禁止、**future high-res recrop candidate only**。（-1 → 0 件 active、**B 群 active 完走**、残は B2-B4 frozen（p006 画像未存在、repo 追加待ち）+ B5/B6 の image-resolution-limited fragment（高解像度 recrop 待ち））。
+- 2026-04-22: v98 反映で **B 群 frozen 解除 #1 = B2 `p006-q01 seq2` Q+E+ans** を close（Q 語尾 `行われると → 行われるなど` + ans `true → false` polarity flip + E 大幅 restore: `最判 → 最大判` 判例 rank + 苫米地判旨本文復元 + `...` 解消 + 結語復元、`images/0006.png` raw source で 2x crop + 高解像度部分 crop と 3 経路一致、load-bearing 9 点を Python assertion で確認）。**handoff 同梱修正**: v95 の B1 cosmetic close 判定撤回（v98 prep 2x crop で Q/E に substantive drift 検出）/ B2 = 本 PR で close / B3 `砂川事件 proviso 欠落` 記述取消 → `苫米地事件 / polarity flip pending`（v95 read-only 判定時に砂川事件と誤認していた、原本は苫米地事件の別側面）/ B4 frozen → substantive pending / B2-B4 frozen（p006 画像未存在）の記述取消 = `images/0006.png` raw source は存在し `images_preprocessed/0006.png` のみ欠落していたことを明記。（B 群状態変更: B1 cosmetic close → substantive pending active / B2 active → close / B3 frozen → substantive pending + polarity flip pending active / B4 frozen → substantive pending active。-1 close + B2-B4 凍結解除で active +3 + B1 再 active で active +1 → active 4 件 = B1 / B3 / B4 / +B5-B6 image-quality-limited fragment 待ち）
 - 2026-04-21: **別領域移行 #1 = `importParsedBatch` の分類継承バグを修正**（PR #60、data 変更なし / DATA_VERSION bump なし / v97 維持）。known_issues.md §1 原因 1 を解決：
   - `src/lib/import-parsed.ts`: 純関数 `inheritClassificationField(newValue, existingValue, fallback='')` を export、`subjectId` / `chapterId` の優先順を (1) 新 OCR → (2) 既存 existingAttr → (3) fallback '' に固定。`PreservedAttrs` に `subjectId` / `chapterId` を追加、preserved Map の条件を撤廃し attr 存在時は常に積むよう変更（旧コードは `isExcluded` / `needsSourceCheck` 有無で条件付けしていて、分類だけ持っていた既存レコードから拾えなかった）
   - `src/components/AuthProvider.tsx`: `prepareLocalDataOnce` を追加し `autoImportIfEmpty → refreshProblemDataIfNeeded → runOneTimeCleanup` を await で直列化。旧 `handleSignIn` は `autoImportIfEmpty()` / `runOneTimeCleanup()` を非 await で呼び競合の余地があったが、これを解消。guest モードのローディング UX は現状維持（`void prepareLocalDataOnce(); setLoading(false);`）
@@ -445,12 +474,14 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
   - 残る制約（別トラック）: known_issues.md §1 原因 2（PATCH / localStorage フラグの DATA_VERSION 連動化）・原因 3（`subjectId === ''` 禁止設計）・§2（`needsSourceCheck` Dexie index）は未対応。属性継承が入ったため実害は軽減
   - build green（Next.js 16.2.1 Turbopack、TypeScript pass）、lint は main に pre-existing 38 errors があるが本修正で新規追加なし
 
-**次アクション**: **A 群完走** + **B 群 active 完走** + **別領域移行 #1 完了**。次の優先順：
-1. **別領域移行 #2 = `subjectId === ''` 禁止設計**（known_issues.md §3）— 本修正で空文字上書きの経路は 1 本減ったが、空文字保存自体は許容されたまま。null / sentinel 値への移行は Dexie schema 変更 + 既存データ migration が必要ゆえ別 PR で設計検討から
-2. **別領域移行 #3 = `needsSourceCheck` 自動検知**（known_issues.md §5）— CLAUDE.md 第 5 節のルール (`...`/`…` / 助詞重複 / 文末欠落 / 既知 OCR 誤字 / Q-E 極性矛盾 / broad raw / 空 raw) を自動走査する scan runner を追加。Dexie index は §2 と同時着手候補
-3. **別領域移行 #4 = OCR パイプラインモデル差し替え**（known_issues.md §4、CLAUDE.md 第 4 節）— `scripts/ocr_batch.*` のみ対象、`kindle_capture.sh` / `reviewed_import.json` 形式 / `importParsedBatch` は維持
-4. **B2-B4 は `0006.png` が repo に追加されるまで触らない**（p006 原本画像の取得作業は別途 user 判断。画像取得時に frozen 解除 → read-only 判定 → A 群流の restore PR）
-5. **B5 / B6 の image-quality-limited fragment は future high-res recrop 待ち**（B5 = `0090.png` 中盤 `...` transitional sentence、B6 = `0118.png` 84条繋ぎ末尾。高解像度 re-crop または手元原本で verbatim 確定できた時点で v## として追加 restore）
+**次アクション**: **A 群完走** + **別領域移行 #1 完了** + **v98 で B 群 frozen 解除 #1 = B2 close**。B 群 active 残 4 件（B1 / B3 / B4 + B5-B6 image-quality-limited fragment 待ち）。次の優先順：
+1. **B3 `p006-q01 seq3 E+ans` restore**（B 群 frozen 解除 #2、苫米地事件の別側面、polarity flip false→true pending。v98 と同型の Q+E+ans 束ね PR 候補）
+2. **B4 `p006-q01 seq4 Q+E` restore**（B 群 frozen 解除 #3、Q 送り仮名 `例外的の → 例外的な` + E 中間 `...` 判旨本文 restore、polarity 非影響見込み）
+3. **B1 `p006-q01 seq1 Q+E` restore**（B 群 frozen 解除 #4 = 最終、v95 cosmetic close 判定撤回済み、Q `党内→党員` `内部的問題による限りは→内部的な問題にとどまる限りは` + E 判旨本文 `...` restore + 細部語彙 drift）
+4. **別領域移行 #2 = `subjectId === ''` 禁止設計**（known_issues.md §3）— 本修正で空文字上書きの経路は 1 本減ったが、空文字保存自体は許容されたまま。null / sentinel 値への移行は Dexie schema 変更 + 既存データ migration が必要ゆえ別 PR で設計検討から
+5. **別領域移行 #3 = `needsSourceCheck` 自動検知**（known_issues.md §5）— CLAUDE.md 第 5 節のルール (`...`/`…` / 助詞重複 / 文末欠落 / 既知 OCR 誤字 / Q-E 極性矛盾 / broad raw / 空 raw) を自動走査する scan runner を追加。Dexie index は §2 と同時着手候補
+6. **別領域移行 #4 = OCR パイプラインモデル差し替え**（known_issues.md §4、CLAUDE.md 第 4 節）— `scripts/ocr_batch.*` のみ対象、`kindle_capture.sh` / `reviewed_import.json` 形式 / `importParsedBatch` は維持
+7. **B5 / B6 の image-quality-limited fragment は future high-res recrop 待ち**（B5 = `0090.png` 中盤 `...` transitional sentence、B6 = `0118.png` 84条繋ぎ末尾。高解像度 re-crop または手元原本で verbatim 確定できた時点で v## として追加 restore）
 
 <!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
