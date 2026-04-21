@@ -1,17 +1,17 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-21 (**handoff-only**：B 群判定着手、B1 `p006-q01 seq1 E` を **cosmetic close**（共産党除名事件判旨、bracket-balanced 標準学術引用 `「...」`、C 群類似 = OCR 破損ではない、data 変更なし）。B2/B3/B4（p006 seq2/seq3/seq4）は `images_preprocessed/0006.png` が repo 内に未存在のため原本照合不能と判明し **凍結（frozen、image 取得待ち）**。次着手 = B5 `p090-q01 seq1 E` + B6 `p118-q01 seq1 E` の read-only 判定（`images_preprocessed/0090.png` / `0118.png` は存在確認済み）。v95 merge SHA `95a50f95aae52bf43fe5b1db8ef70d81a53bde51` を `latest data merge` に補完。**データ変更なし、DATA_VERSION bump なし**、queue 件数 6 維持（B 群 6 件のうち内訳変化：B1 close / B2-B4 frozen / B5-B6 active 再判定対象）)
+最終更新: 2026-04-21 (v96：B 群 active #1 = B5 `p090-q01 seq1 Q+E` を原本復元で close。Q `語否→諾否`（OCR 1 char）+ E 末尾 `応答義務があり、通知により自己の期待する`→`応答義務がなく、通知により届出人の期待する`（届出定義 2条7号との論理反転 + 主語 drift、substantive restore の核心）、E 中盤 `申請（2条3号）...届出の場合には、` の `...` は `0090.png` 解像度で verbatim 確定不能ゆえ ERROR_UNREADABLE_SOURCE として unresolved 維持（条文逆算禁止ルール遵守）、polarity 非影響 = ans=False 維持、他 seq (2/3/4/5) hash 変化なし。B 群 active 2 → 1、残は B6 `p118-q01 seq1 E`（v97 予定）。B1 close 済 + B2-B4 frozen は維持)
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
 ## 現在地（confirmed, 2026-04-21 v95 反映後）
 
-* **latest data merge**: v95 restore (`95a50f95aae52bf43fe5b1db8ef70d81a53bde51`, PR #55, A7 = **A 群完走**) / 直前の merged v## = v94 (`54ec51f0e9f7b42c65006364b4a188475930674a`, PR #54, A6 close)
-* **latest main HEAD at handoff edit time**: `95a50f95aae52bf43fe5b1db8ef70d81a53bde51`（v95 squash merge, PR #55 = 本 handoff-only PR のベース。本 PR は data 変更なし、merge 後 stale 化するが snapshot として許容）
+* **latest data merge**: v96 restore (PR #57、squash merge commit SHA は merge 後確定、次 handoff 編集で補完) / 直前の merged v## = v95 (`95a50f95aae52bf43fe5b1db8ef70d81a53bde51`, PR #55, A7 = A 群完走)
+* **latest main HEAD at handoff edit time**: `60b21bfba9f5d85bd14f4744b0fde3802455f102`（PR #56 merge = handoff-only B 群再整理 = 本 v96 ブランチのベース。本 PR merge 後 stale 化するが snapshot として許容）
 * **総ページ**: 239 / **総肢**: 1312（不変）
-* **DATA_VERSION**: `2026-04-21-audit-v95-p136-q01-seq3-e-restore`（v95 時点の値を維持、本 handoff-only PR では bump なし）
+* **DATA_VERSION**: `2026-04-21-audit-v96-p090-q01-seq1-qe-restore`（本 PR で v95 → v96 bump）
 * **L1 本線**: ✅ 実質完了維持
-* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = **A 群最終項目 = A 群完走**)
+* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, **B 群 active #1 = B5**)
 * **付随 sync PR**: PR #46 (`8b8c3b0`) / PR #48 (`a2b2611`) / PR #50 (`8286ebb`) / PR #52 (`d161966`) — 旧「都度 mainHEAD sync」運用の痕跡（PR #53 で廃止、v94 以降は新方針で運用）
 * **運用（2026-04-20 PR #53 で確立、v94 = PR #54 で初適用、本 PR で 2 サイクル目）**:
   - `latest data merge` = **最新の v## restore PR の squash merge commit**（data 到達点。SHA 確定は merge 後で、**本 PR のように進行中は PR # で参照し SHA は次 handoff 編集で補完**。次の v## restore までは stable）
@@ -130,6 +130,28 @@
   * handoff pending queue には Q のみ記録だったが、原本読取時に E substantive garble + 文末欠落を発見し束ねて修正（v85 precedent 同様）
 
 確認経路: images/0136.png 原本（Claude vision, book p374-375 行4、section 取消訴訟と審査請求との関係） + 行政事件訴訟法8条1項ただし書 + 最判昭36.7.21（誤って不適法却下された適法な審査請求は経たものと扱う） + DB 内 ans=false 自己整合 の 3 経路一致。
+
+### v96 差分（2026-04-21）
+
+* **PR #57 / p090-q01 seq1 Q+E restore**（**B 群 active #1 = B5**、Q 1 char OCR + E 末尾 substantive restore、書籍 page 282-283 見開き、section 届出, テキスト p.201〜202、書籍 page 283 右列 row 1 ×）
+  * **Q**: `語否` → `諾否`（OCR 1 char 誤字、届出定義「諾否の応答が義務づけられている」の正字化、polarity 非影響）
+  * **E 末尾**: `応答義務があり、通知により自己の期待する` → `応答義務がなく、通知により届出人の期待する`
+    - `応答義務があり` → `応答義務がなく`: 届出定義（行政手続法2条7号）との整合、現行 E は条文定義と真っ向から反転していたため substantive restore の核心
+    - `自己の期待する` → `届出人の期待する`: 主語 drift の原本復元
+  * **E 中盤 `...` は unresolved 維持**: `申請（2条3号）...届出の場合には、` の `...` 部分 = transitional sentence は `images_preprocessed/0090.png` の解像度で verbatim 確定不能のため **ERROR_UNREADABLE_SOURCE** として unresolved 維持。条文逆算による補完は運用ルール上禁止（user directive 2026-04-21 確立）
+  * ans=False 維持（Q「届出は諾否応答義務あり」を E が届出定義で正面否定、polarity 非影響）
+  * scope: p090-q01 seq1 のみ、Q+E 束ね（v84/v85/v87/v92 と同型）、他 seq (2-5) hash 変化なし確認済
+
+確認経路: images_preprocessed/0090.png（Claude vision, 書籍 page 282-283 見開き、section 届出, テキスト p.201〜202、書籍 page 283 右列 row 1 ×） + 行政手続法2条3号（申請の諾否応答義務）/ 2条7号（届出の通知義務、応答義務なし、通知による法的効果発生）+ DB 内 ans=False / Q-E polarity の自己整合 の 3 経路一致（中盤 transitional sentence は画像解像度限界で未確定、3 経路一致の対象から除外）。
+
+load-bearing Python assertion（編集時に検証済み、v95 までの precedent 継承）:
+- Q: `諾否` 含有、`語否` 非含有
+- E: `応答義務がなく、通知により届出人の期待する` 含有
+- E: 旧 garble `応答義務があり、通知により自己の期待する` 非含有
+- E: `申請（2条3号）...届出の場合には、` 構造保持（`...` を unresolved marker として意図的に残置）
+- ans=False 維持
+- data/reviewed_import.json ↔ public/data/reviewed_import.json byte-identical（1,224,257 bytes）
+- p090 他 seq (2/3/4/5) E sha256 変化なし（seq2: `85facba259e4` / seq3: `92e63992b12d` / seq4: `5e4fb546c376` / seq5: `efea57758032`）
 
 ### v95 差分（2026-04-21）
 
@@ -346,8 +368,8 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 | B2 | p006-q01 seq2 E | 苫米地事件、`は...明白に違憲無効` 冒頭 `...` + 開き「欠落（read-only 判定で polarity 疑義も検出：E が「留保不在」を述べる一方 Q 側は「留保あり」と解釈され得るが原本不在で断定不能） | **凍結（frozen）** — `images_preprocessed/0006.png` が repo 内に未存在、原本照合不能（2026-04-21 確認）。画像取得後に再開 |
 | B3 | p006-q01 seq3 E | 統治行為論、`判例は...場合でも` 中間語脱落の疑い（read-only 判定で砂川事件 proviso 欠落の可能性、substantive restore 候補） | **凍結（frozen）** — 同上（p006 画像未存在） |
 | B4 | p006-q01 seq4 E | 在宅投票事件、冒頭 `...` + 開き「欠落（B2 と同型。read-only 判定では polarity 自己整合、typography restore のみ見込み） | **凍結（frozen）** — 同上（p006 画像未存在） |
-| B5 | p090-q01 seq1 E | `申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮 | 保留（**次着手**、`images_preprocessed/0090.png` 存在確認済み、read-only 判定予定） |
-| B6 | p118-q01 seq1 E | `審査請求...をすることができる` — 条文列挙の `等` 圧縮 | 保留（**次着手**、`images_preprocessed/0118.png` 存在確認済み、read-only 判定予定） |
+| ~~B5~~ | ~~p090-q01 seq1 E~~ | ~~`申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮~~ | ~~**partial close**（v96, PR #57: Q 1 char + E 末尾 substantive restore 完了、ans=False 維持。ただし E 中盤 `...` は画像解像度で verbatim 確定不能ゆえ **ERROR_UNREADABLE_SOURCE** として unresolved 維持、条文逆算禁止）~~ |
+| B6 | p118-q01 seq1 E | `審査請求...をすることができる` — 条文列挙の `等` 圧縮（read-only 判定で E 中盤〜末尾の教示 3 点列挙 drift + `必要的記載` → `必要的教示` 差検出、substantive restore 対象） | 保留（**次着手 = v97**、`images_preprocessed/0118.png` 存在確認済み、B5 と同様に `...` 部分は原本画像で読めない場合 ERROR_UNREADABLE_SOURCE 維持、84条への繋ぎ末尾は未読なら触らない） |
 
 **C 群 — 修正不要（標準的学術引用, 3 件, queue 外 / 記録のみ）**:
 
@@ -384,12 +406,13 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
   - `B5 p090-q01 seq1 E` / `B6 p118-q01 seq1 E` を **次着手**（`images_preprocessed/0090.png` / `0118.png` は存在確認済み、次セッションで read-only 判定 → substantive なら A 群流の restore PR、cosmetic なら close）
   - v95 merge SHA `95a50f95aae52bf43fe5b1db8ef70d81a53bde51` を `latest data merge` / `latest main HEAD at handoff edit time` / 直近 data merge 履歴 の 3 箇所に補完（PR #55 merge 後の snapshot として確定）
   - 件数増減：close -1（B1）/ frozen -3（B2-B4、queue の active 枠からは外れるが記録は保持）/ active +2（B5-B6 を次着手化）。形式的には **6 件維持**（B1 close 済 + B2-B4 frozen + B5-B6 active）、**実作業（active）は 2 件**
+- 2026-04-21: v96 反映で B 群 active #1 = `B5 p090-q01 seq1 Q+E` を **partial close**（Q OCR 1 char 誤字「語否→諾否」+ E 末尾 substantive 復元「応答義務があり→応答義務がなく」（届出定義 2条7号との論理反転修正）+「自己の期待する→届出人の期待する」（主語 drift 復元）、書籍 page 283 右列 row 1 × と 3 経路一致、load-bearing 7 点「諾否 / 語否非含有 / 応答義務がなく / 旧 garble 非含有 / `...` unresolved marker 保持 / ans=False 維持 / mirror byte-identical」を Python assertion で確認、polarity 非影響、他 seq (2-5) hash 変化なし）。**E 中盤 `申請（2条3号）...届出の場合には、` の `...` 部分は ERROR_UNREADABLE_SOURCE として unresolved 維持**（画像解像度で transitional sentence verbatim 確定不能、条文逆算禁止ルール 2026-04-21 確立に従い未補完）。（-1 → 1 件 active、B 群 active 2 → 1、残は B6 p118-q01 seq1 E = v97 予定）。
 
-**次アクション**: **A 群完走**（7/7 close 維持）+ **B 群 read-only 判定着手**（B1 cosmetic close、B2-B4 frozen = p006 画像取得待ち、B5-B6 が active 2 件）。次セッションの優先順：
-1. **B5 `p090-q01 seq1 E` の read-only 判定**（`images_preprocessed/0090.png` + 行政手続法2条3号（申請）との対比条文整合 + DB 内 explanation 自己整合 の 3 経路、substantive なら A 群流の restore PR、cosmetic なら handoff-only close）
-2. **B6 `p118-q01 seq1 E` の read-only 判定**（`images_preprocessed/0118.png` + 行政不服審査法の条文列挙（`等` 圧縮の部分）整合 + DB 自己整合 の 3 経路、B5 同様の判定フロー）
+**次アクション**: **A 群完走** + **B 群 partial 進行中**（B1 close 済 + B2-B4 frozen + B5 partial close 済 + B6 active 1 件）。次セッションの優先順：
+1. **B6 `p118-q01 seq1 E` を v97 で restore**（`images_preprocessed/0118.png` verbatim 読解 → 教示 3 点列挙 + `書面で` + `必要的教示` を原本どおり restore、`審査請求…をすることができる` の `…` は原本教科書自体が `…` 省略なら touch なし、84条への繋ぎ末尾は読めないなら ERROR_UNREADABLE_SOURCE 維持で触らない、ans=False 維持、A 群流の Q+E 束ね / 1 seq 1 PR / polarity 非影響）
+2. **B5 `...` の追加 restore**（将来）：`0090.png` を高解像度 re-crop するか手元原本で transitional sentence を verbatim 確定できた時点で v## として追加 restore 予定。本 v96 時点では条文逆算禁止を遵守して未確定部分を unresolved のまま残した
 3. **B2-B4 は `0006.png` が repo に追加されるまで触らない**（p006 原本画像の取得作業は本 session のスコープ外、別途 user 判断）
-4. B5/B6 完了後に **別領域へ移行**：`importParsedBatch` 分類継承バグ / `subjectId === ''` 禁止設計 / `needsSourceCheck` 自動検知 / OCR パイプラインモデル差し替え。順序は `known_issues.md` の優先度に従う
+4. B6 完了後に **別領域へ移行**：`importParsedBatch` 分類継承バグ / `subjectId === ''` 禁止設計 / `needsSourceCheck` 自動検知 / OCR パイプラインモデル差し替え。順序は `known_issues.md` の優先度に従う
 
 <!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
@@ -407,7 +430,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 
 automation は M1 で一旦凍結。本業に戻る方針。優先度順：
 
-1. **累積 recheck queue 整理（A 群完走、B 群 read-only 判定フェーズ）** — v88 反映後に CLAUDE.md §5 auto-detection 再走で新規 hit 13 件を検出（A 群 7 件 = 実作業 / B 群 6 件 = 判断保留 / C 群 3 件 = 管理対象外）。**v89-v95 で A 群 7/7 完了**、2026-04-21 handoff-only で B 群再整理：**B1 cosmetic close** / **B2-B4 frozen（p006 画像未存在）** / **B5 p090 seq1 E + B6 p118 seq1 E が active 次着手 2 件**。B5/B6 完了後（または B2-B4 の画像取得後）に別領域（分類継承バグ等）へ移行。
+1. **累積 recheck queue 整理（A 群完走、B 群 partial 進行中）** — v88 反映後に CLAUDE.md §5 auto-detection 再走で新規 hit 13 件を検出（A 群 7 件 = 実作業 / B 群 6 件 = 判断保留 / C 群 3 件 = 管理対象外）。**v89-v95 で A 群 7/7 完了**、2026-04-21 B 群再整理：**B1 cosmetic close** / **B2-B4 frozen（p006 画像未存在）** / **v96 で B5 partial close（Q+E 末尾 restore、E 中盤 `...` は ERROR_UNREADABLE_SOURCE として unresolved 維持）** / **B6 p118 seq1 E が active 次着手 1 件（v97 予定）**。B6 完了後（または B2-B4 の画像取得 + B5 `...` の verbatim 確定後）に別領域（分類継承バグ等）へ移行。
 2. **原本照合の継続** — 未処理ページが残る場合、直近フェーズと同じスタイルで続行可能
    - 未処理ページは `data/` 配下の ledger / pending 系 CSV を参照
    - 新規ページに着手する前に `data/*ledger*.json` と `data/pending_*.csv` を確認
