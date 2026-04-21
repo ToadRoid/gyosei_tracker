@@ -10,6 +10,13 @@
  *      - confidenceが CONFIDENCE_THRESHOLD 以上 → status='ready'
  *      - それ未満 → status='draft'（要レビュー）
  *   3. 既存 problemId（他バッチ由来など）はスキップ
+ *
+ * 再 import の属性継承（known_issues.md §1、CLAUDE.md §1）:
+ *   - 同 problemId の既存 problemAttrs を読み、新 OCR 結果に値が無ければ既存値を継承する
+ *   - 対象フィールド: subjectId / chapterId / isExcluded / needsSourceCheck（+ 付随メタ）
+ *   - subjectId / chapterId の優先順: (1) 新しく確定した値 → (2) 既存 existingAttr → (3) fallback ''
+ *   - isExcluded / needsSourceCheck は手動設定フラグゆえ、新 OCR では決まらない。既存値をそのまま引き継ぐ。
+ *   - 空文字 '' の sentinel 禁止設計は別スコープ（fallback は '' のまま維持）。
  */
 
 import { db, generateProblemId } from './db';
@@ -27,8 +34,10 @@ export interface ImportParsedResult {
   errorPages: number;
 }
 
-/** 再取込をまたいで保全するフラグ */
-interface PreservedFlags {
+/** 再取込をまたいで保全する属性 */
+interface PreservedAttrs {
+  subjectId?: string;
+  chapterId?: string;
   isExcluded?: boolean;
   excludeReason?: string;
   excludeNote?: string;
@@ -36,6 +45,27 @@ interface PreservedFlags {
   excludedBy?: string;
   needsSourceCheck?: boolean;
   sourceCheckNote?: string;
+}
+
+/**
+ * 分類フィールド (subjectId / chapterId) の継承ルール。
+ *
+ * 優先順:
+ *   1. 新しく確定した値（非空文字）
+ *   2. 既存 problemAttrs の値（非空文字）
+ *   3. fallback（既定は ''）
+ *
+ * 空文字 '' は「値なし」扱い。`null` / `undefined` も同様。
+ * 純関数ゆえテスト容易、import-parsed.test.ts で回帰防止する。
+ */
+export function inheritClassificationField(
+  newValue: string | null | undefined,
+  existingValue: string | null | undefined,
+  fallback: string = '',
+): string {
+  if (newValue) return newValue;
+  if (existingValue) return existingValue;
+  return fallback;
 }
 
 /**
@@ -70,21 +100,26 @@ export async function importParsedBatch(
         .filter((p) => p.sourcePage === pageNo)
         .toArray();
 
-      // 削除前に手動設定フラグを保全する（DATA_VERSION バンプで消えないようにする）
-      const preservedFlags = new Map<string, PreservedFlags>();
+      // 削除前に既存属性を保全する（DATA_VERSION バンプで分類・フラグが消えないようにする）
+      // - subjectId / chapterId: 新 OCR に候補が無いとき継承する
+      // - isExcluded / needsSourceCheck: 手動設定フラグ、常に既存値を引き継ぐ
+      // existing attr がある限り必ず Map に積む（旧コードのように isExcluded/needsSourceCheck 有無で
+      // 条件付けすると、分類だけ持っていた既存レコードの subjectId / chapterId が拾えない）
+      const preservedAttrs = new Map<string, PreservedAttrs>();
       for (const old of oldProblems) {
         const attr = await db.problemAttrs.where('problemId').equals(old.problemId).first();
-        if (attr && (attr.isExcluded !== undefined || attr.needsSourceCheck !== undefined)) {
-          preservedFlags.set(old.problemId, {
-            isExcluded: attr.isExcluded,
-            excludeReason: attr.excludeReason,
-            excludeNote: attr.excludeNote,
-            excludedAt: attr.excludedAt,
-            excludedBy: attr.excludedBy,
-            needsSourceCheck: attr.needsSourceCheck,
-            sourceCheckNote: attr.sourceCheckNote,
-          });
-        }
+        if (!attr) continue;
+        preservedAttrs.set(old.problemId, {
+          subjectId: attr.subjectId,
+          chapterId: attr.chapterId,
+          isExcluded: attr.isExcluded,
+          excludeReason: attr.excludeReason,
+          excludeNote: attr.excludeNote,
+          excludedAt: attr.excludedAt,
+          excludedBy: attr.excludedBy,
+          needsSourceCheck: attr.needsSourceCheck,
+          sourceCheckNote: attr.sourceCheckNote,
+        });
       }
 
       for (const old of oldProblems) {
@@ -125,14 +160,17 @@ export async function importParsedBatch(
           createdAt: new Date(),
         });
 
-        // problemAttrs に登録（手動設定フラグを引き継ぐ）
-        const preserved = preservedFlags.get(problemId);
+        // problemAttrs に登録（既存の分類 + 手動設定フラグを引き継ぐ）
+        //   subjectId / chapterId: 新 OCR 値が空なら既存値を継承（inheritClassificationField）
+        //   isExcluded / needsSourceCheck: 手動設定ゆえ常に既存値を復元
+        const preserved = preservedAttrs.get(problemId);
         const rawSectionTitle = branch.sectionTitle ?? '';
-        const chapterId = branch.chapterCandidate ?? '';
+        const chapterId = inheritClassificationField(branch.chapterCandidate, preserved?.chapterId);
+        const subjectId = inheritClassificationField(branch.subjectCandidate, preserved?.subjectId);
         const sourcePageQuestion = branch.sourcePageQuestion ?? '';
         await db.problemAttrs.add({
           problemId,
-          subjectId: branch.subjectCandidate ?? '',
+          subjectId,
           chapterId,
           answerBoolean: branch.answerBoolean,
           aiTriageStatus: isReady ? 'ready' : 'needs_review',

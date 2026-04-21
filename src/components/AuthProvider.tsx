@@ -50,19 +50,33 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
 
+  // 起動時データ準備を直列化する（known_issues.md §1 / CLAUDE.md §1 原因2）。
+  //   1) autoImportIfEmpty  … DB が空なら reviewed_import.json を初回 import
+  //   2) refreshProblemDataIfNeeded … DATA_VERSION が変わっていれば再 import
+  //   3) runOneTimeCleanup … manual patch を適用（isExcluded / needsSourceCheck 等）
+  //
+  // 直列化しない場合、cleanup が (1)/(2) の進行中に走り、
+  //   - importParsedBatch が problemAttrs を消す前に cleanup が手動フラグを立てる
+  //   - その後 importParsedBatch がフラグを書き戻せず落ちる
+  // という競合が発生する。await で順序を固定する。
+  const prepareLocalDataOnce = useCallback(async () => {
+    await autoImportIfEmpty();
+    await refreshProblemDataIfNeeded();
+    await runOneTimeCleanup();
+  }, []);
+
   const handleSignIn = useCallback(async (newUser: User) => {
     setUser(newUser);
     syncFromSupabase(newUser.id);
-    autoImportIfEmpty();
-    await refreshProblemDataIfNeeded();
-    runOneTimeCleanup();
-  }, []);
+    await prepareLocalDataOnce();
+  }, [prepareLocalDataOnce]);
 
   useEffect(() => {
     if (!supabase) {
       // Supabase未設定: ゲストモードで動作
-      autoImportIfEmpty();
-      refreshProblemDataIfNeeded().then(() => runOneTimeCleanup());
+      // UX 維持のため setLoading(false) は直列ガードの外で即時解除する
+      // （本修正のスコープは cleanup 順序の是正のみ。ローディング UX は別スコープ）
+      void prepareLocalDataOnce();
       setLoading(false);
       return;
     }
@@ -85,7 +99,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
 
     return () => subscription.unsubscribe();
-  }, [handleSignIn]);
+  }, [handleSignIn, prepareLocalDataOnce]);
 
   // 未ログイン時は /login にリダイレクト（/login 自体は除外）
   useEffect(() => {
