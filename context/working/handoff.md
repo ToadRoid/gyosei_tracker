@@ -6,14 +6,16 @@ post-merge 追加更新: 2026-04-22 (**handoff-only 更新 = v98 merge SHA backf
 
 post-merge 追加更新 #2: 2026-04-22 (**p006 tracked preprocessed source derived from low-res raw を収載**, data 変更なし / DATA_VERSION bump なし / v98 維持): Claude 自力で `images_preprocessed/0006.png` を収載（6048x3536, 390KB, 既存 B5 `0090.png` / B6 `0118.png` と同仕様）。**出自（重要）**: 既存 low-res local raw `~/Desktop/kindle_shots/0006.png`（3024x1768）を `scripts/preprocess_images.py` に通して生成した **preprocessed 派生物**であり、**新しい高解像度 recrop そのものではない**。2x upscale + grayscale + CLAHE + 二値化 + 傾き補正 + 余白除去 + シャープ化は OCR 前処理 pipeline（既存 tracked と同一手順）。**user 手作業不要**（ユーザー directive 2026-04-22 「Claude 側で自力実行を試す」に応答）。**帰結（保守的評価, 2026-04-22 review 反映）**: `images_preprocessed/0006.png` の収載自体は完了だが、**resolution 起因の unreadable risk は未解消**。B1-B4 は **`pending / preprocessed source available, sufficiency unverified`** に状態変更（frozen 解除は保留）。次の実作業は **先に `images_preprocessed/0006.png` で B2 read-only sufficiency check** → 不十分なら **真の high-res recrop が引き続き必要**。優先順 `B2 → B3 → B1 → B4` は維持。**v98 polarity hotfix との整合**: 画像で苫米地事件（行 13）解説末尾に「『一見極めて明白に違憲無効と認められる場合を除き』という留保は付されていないという本肢は誤っている」と判読可能、v98 の ans=False polarity は維持で整合。**Q / E の verbatim restore は本 PR では行わない**（scope = image addition + handoff 更新のみ）。
 
+post-merge 追加更新 #3: 2026-04-22 (**B2 seq2 read-only sufficiency check 実施 / 本 PR = handoff-only 更新のみ**, data 変更なし / DATA_VERSION bump なし / v98 維持 / Q/E/ans 無変更): PR #64 squash = `4c19f0843f874d93a07811c6d010d7694610411e` 着地後、`images_preprocessed/0006.png` で p006-q01 seq2（苫米地事件, row 13）の Q / E について **read-only で判読可否を判定**。**本 PR の scope は handoff.md の sufficiency ログ追加のみ**（`data/` / `public/data/` / Q / E / ans / DATA_VERSION は一切触らない）。**結論（binary）: `restore 可（B5/B6 precedent 準拠 = 二層運用）`**。骨格・結論句・polarity は judge 十分、character-level verbatim の marginal fragment は v99 作業中に `ERROR_UNREADABLE_SOURCE` 扱い（B5 `0090.png` 中盤 / B6 `0118.png` 84条末尾と同一運用）。詳細は下記「原本照合 / needsSourceCheck」セクション 2026-04-22 sufficiency ログ参照。**次 PR = v99 = B2 seq2 Q/E verbatim restore**（ans=False 維持、v99 PR 内で本 PR = sufficiency check PR の squash merge SHA を `latest main HEAD at handoff edit time` / 直近 merge 履歴に backfill。PR #64 squash SHA `4c19f08...` の backfill も v99 で同時実施予定）。
+
 直前: v97 (B 群 active #2 = B6 `p118-q01 seq1 E` closed to limit of source quality、B 群 active 完走、二層表現採用、`7171dac` PR #58 + SHA backfill `424fbc5` PR #59) → **別領域移行 #1 = `importParsedBatch` 分類継承バグ部分修正**（PR #60、data 変更なし / v97 維持）→ **v98 polarity hotfix**（PR #62, `671eb79`）→ **本 handoff-only 更新**（post-v98-merge SHA backfill + p006 source 存在ログ, data 変更なし / v98 維持）。
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-22 post-v98-merge + PR #63 merged + p006 preprocessed source 収載 = sufficiency 未検証）
+## 現在地（confirmed, 2026-04-22 post-v98-merge + PR #63 + PR #64 merged + B2 sufficiency check 判定済 = restore 可 / B5/B6 precedent）
 
 * **latest data merge**: `671eb79f622bb797ec78b2c97788edba9ebe7b54`（v98 squash merge, PR #62, B2 `p006-q01 seq2` ans polarity hotfix = True → False single byte flip、Q/E 未修正維持）/ 直前の merged v## = v97 (`7171dac9ad13a92fa051da26d9110ac5d8f3c74e`, PR #58, B6 closed to limit of source quality = **B 群 active 完走**)
-* **latest main HEAD at handoff edit time**: `0c6ea3beffcd4daa64cb432c5b7e6b968e804a98`（PR #63 squash merge = post-v98-merge handoff-only SHA backfill + p006 source 存在ログ、本 PR 編集時の repo 先端。v99 SHA backfill は次の実作業 PR = B2 seq2 restore に同梱予定）
+* **latest main HEAD at handoff edit time**: `4c19f0843f874d93a07811c6d010d7694610411e`（PR #64 squash merge = p006 preprocessed source 収載 = `images_preprocessed/0006.png` 追加、本 PR 編集時の repo 先端。v99 SHA backfill は次の実作業 PR = v99 = B2 seq2 restore に同梱予定、併せて本 PR = B2 sufficiency check PR の squash SHA も v99 で backfill）
 * **総ページ**: 239 / **総肢**: 1312（不変）
 * **DATA_VERSION**: `2026-04-22-audit-v98-p006-q01-seq2-ans-polarity-hotfix`（本 PR で v97 → v98 bump。`p006-q01 seq2` の ans のみ True → False、Q / E は未修正）
 * **L1 本線**: ✅ 実質完了維持
@@ -427,7 +429,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 | # | 対象 | 症状 | 状態 |
 | --- | --- | --- | --- |
 | B1 | p006-q01 seq1 Q + E | 共産党除名事件、Q + E 両方に restore 要。旧 handoff `cosmetic close` 判定は**誤り**（2026-04-22 user directive で再 open） | **pending / preprocessed source available, sufficiency unverified** — `images_preprocessed/0006.png` 収載済（low-res raw 派生 preprocessed、新高解像度 recrop ではない）。**着手前に read-only sufficiency check 必須**、不十分なら真の high-res recrop が必要 |
-| B2 | p006-q01 seq2 Q + E + ans | 苫米地事件、Q「留保あり」vs E「留保不在」の自己矛盾 + E 冒頭 `...` / 開き「欠落 | **層 1 = ans polarity flip True→False 完了**（v98 PR #62, `671eb79`）／ **層 2 = Q/E verbatim restore pending / preprocessed source available, sufficiency unverified**（`images_preprocessed/0006.png` は low-res raw 派生 preprocessed、新高解像度 recrop ではない。**次の実作業は verbatim restore ではなく read-only sufficiency check**、十分なら restore に進む / 不十分なら真の high-res recrop 取得が必要。ans=False polarity は画像解説末尾「留保は付されていない...本肢は誤っている」と整合、維持で可） |
+| B2 | p006-q01 seq2 Q + E + ans | 苫米地事件、Q「留保あり」vs E「留保不在」の自己矛盾 + E 冒頭 `...` / 開き「欠落 | **層 1 = ans polarity flip True→False 完了**（v98 PR #62, `671eb79`）／ **層 2 = Q/E verbatim restore = sufficiency check 済 = `restore 可（B5/B6 precedent = 二層運用）`**（2026-04-22, 本 PR, `images_preprocessed/0006.png` による read-only 判定。骨格構造・結論句・polarity は判読可、character-level marginal fragment は v99 作業中に `ERROR_UNREADABLE_SOURCE` 扱い = B5/B6 同運用。ans=False polarity は画像末尾「本肢は誤っている」と整合、維持で可。**次 PR = v99 = B2 seq2 verbatim restore**） |
 | B3 | p006-q01 seq3 E + ans | 統治行為論、`判例は...場合でも` 中間語脱落、**ans False→True flip 候補**（read-only 判定時点の心証。判例特定・verbatim restore 詳細は原本画像到着後に確定） | **polarity flip pending / preprocessed source available, sufficiency unverified** — `images_preprocessed/0006.png` 収載済（low-res raw 派生 preprocessed）、read-only sufficiency check 後に restore 判断 |
 | B4 | p006-q01 seq4 Q + E | 在宅投票事件、**E 中央 restore** が主対象、Q 軽微修正は同 PR で可 | **pending / preprocessed source available, sufficiency unverified** — `images_preprocessed/0006.png` 収載済（low-res raw 派生 preprocessed）、read-only sufficiency check 後に restore 判断 |
 | ~~B5~~ | ~~p090-q01 seq1 E~~ | ~~`申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮~~ | ~~**closed to limit of source quality**（v96, PR #57）。**層 1 = substantive risk mitigated**（Q 1 char「語否→諾否」+ E 末尾 論理反転「応答義務があり→応答義務がなく」+ 主語 drift「自己の→届出人の」を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（E 中盤 `申請（2条3号）...届出の場合には、` の `...` transitional sentence は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** 維持、条文逆算禁止、**future high-res recrop candidate only**）~~ |
@@ -484,25 +486,51 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
   - **方針（固定, user directive 2026-04-22）**: local-only 運用ではなく **repo に source を残す** 方針にする。ただし **低解像度 0006.png のみを根拠に本文修正はしない**。直近アクション: (1) p006 seq2 の Q/E 該当箇所の **高解像度 recrop を作成**（user 側作業、Claude は着手しない）→ (2) recrop 画像を **tracked source path** = `images_preprocessed/` に追加（新 PR。`images/` は `.gitignore` 対象で tracked 不可ゆえ使用しない。B5 `0090.png` / B6 `0118.png` が `images_preprocessed/` で tracked されている実績に倣う。`images/` を使う必要が生じた場合は先に `.gitignore` 変更を別 PR で行う）→ (3) その後に限り **B2 seq2 の verbatim restore** を再開。
   - **制約**: 高解像度 recrop 前に Q/E 本文は修正しない / 現 `ans=False` は維持でよい / 優先順 `B2 → B3 → B1 → B4` は維持、**p006 は高解像度 source 収載まで frozen 扱い**。
   - **件数増減**: 形式的には B1-B4 active pending 維持（解除条件のみ「原本画像 repo 追加」→「高解像度 recrop 収載」に更新）。B5-B6 は従前通り `closed to limit of source quality` で高解像度 recrop 待ち。
-- 2026-04-22: **p006 tracked preprocessed source derived from low-res raw を収載** (本 PR, image addition + handoff-only 更新, data 変更なし / DATA_VERSION bump なし / v98 維持):
+- 2026-04-22: **B2 seq2 read-only sufficiency check** (本 PR, handoff-only 更新, data 変更なし / DATA_VERSION bump なし / v98 維持 / Q/E/ans 無変更):
+  - **対象**: `images_preprocessed/0006.png`（PR #64 squash `4c19f08...` 着地済、low-res raw 派生 preprocessed, 6048x3536）、row 13 = p006-q01 seq2（苫米地事件）
+  - **制約**: read-only（`data/reviewed_import.json` / `public/data/reviewed_import.json` / Q / E / ans / DATA_VERSION は一切未変更）。handoff.md sufficiency ログ追加のみ
+  - **1. 読める箇所（character-level に高信頼 or 構造判読可）**:
+    - **Q 全文（row 13 左）**: 「内閣による衆議院の解散は、高度の政治性を有する国家行為であるから、解散が憲法の明文規定に反して行われる（と）、一見極めて明白に違憲無効と認められる場合を除き、司法審査は及ばないとするのが判例である。」まで 4 行判読可（line break 近傍の「と」有無は marginal、#2 参照）
+    - **E 冒頭（row 13 右 start）**: 「○ 判例（**最大判**昭35.6.8：苫米地事件）は、」まで character-level 判読可。**現 DB `最判昭35.6.8` に対し画像は「最大判」**（1 char 差、「大」字の有無）を検出
+    - **E 中盤の骨格構造**: 「直接国家統治の基本に関する高度に政治性のある国家行為のごときはたとえ法律上の争訟となり / 有効無効の判断が法律上可能である場合であっても / かかる国家行為は裁判所の審査権の外にあるとしている。」の 3 段構造は structural に判読可（DB で `...` 省略されている区間）
+    - **E 末尾の評価句（現 DB で欠落）**: 「〜『一見極めて明白に違憲無効と認められる場合を除き』とする留保は付されていないという**本肢は誤っている**。」の最終評価句「という本肢は誤っている。」が判読可（**現 DB は「付されていない。」で切断**されており、この restore は v99 の主眼）
+    - **polarity 再確認**: E 末尾「本肢は誤っている」 → 「留保あり」を主張する Q は誤 → `ans=False` 維持で整合（v98 hotfix と同一結論）
+  - **2. 読めない / 確定困難な箇所（character-level verbatim marginal、preprocess 由来の binarization artifact 懸念）**:
+    - **Q 行末 line break 近傍「行われる」vs「行われると」**: 1 char 差、underline の範囲と黒潰れ境界が preprocess binarization で verbatim 1:1 確定困難
+    - **E 中盤の接続助詞 / 微小仮名**: 「これ**に**ついて」「**これに****す**いて」の判別、「〜のごとき**は**」等の助詞 1 char 差は preprocess 解像度で character-level 確信度 marginal
+    - **E 中盤の subject 語句（「判例の解説は」vs「判例の態度は」vs「判旨は」等）**: 該当 phrase の character-level 特定は preprocess で blur があり marginal
+    - **句読点（、 vs なし / 。 vs 、）**: 特に行末 / 改行近傍の punctuation は binarization による黒点ノイズと区別困難
+    - **細字ルビ / 条数注記等の fine detail**: 追加情報があれば preprocess 解像度では拾えない
+  - **3. 結論（binary, 本 PR）: `restore 可（B5/B6 precedent 準拠 = 二層運用）`**
+    - **層 1 = substantive risk mitigated（v99 で restore 対象）**: (i) 判例名「最判」→「最大判」1 char 補正、(ii) E 中盤 `...` → 3 段構造の concrete text restore、(iii) E 末尾「〜という本肢は誤っている。」評価句 restore、(iv) ans=False 維持（画像再確認済）
+    - **層 2 = image-quality-limited fragment unresolved（v99 作業中に fragment 単位で ERROR_UNREADABLE_SOURCE 扱い）**: 上記「2.」の助詞レベル / 句読点 / subject 語句 character-level marginal 箇所は v99 内で該当 fragment を `ERROR_UNREADABLE_SOURCE` 扱いとし、**future high-res recrop candidate** として記録（B5 `0090.png` 中盤 `...` transitional / B6 `0118.png` 84条繋ぎ末尾と同一運用）
+    - **strict verbatim policy を採用する場合**: 層 2 fragment の保留も許さないならば結論は `restore 不可 → true high-res recrop 必要`。本 handoff は **B5/B6 precedent との一貫性を優先**し `restore 可` を勧告、strict 運用に切り替える場合は v99 着手前にレビュー側で差し戻し可能
+  - **次 PR = v99 = B2 seq2 Q/E verbatim restore**（ans=False 維持）
+    - v99 PR 内で backfill 予定の SHA: (i) PR #64 squash = `4c19f0843f874d93a07811c6d010d7694610411e`、(ii) 本 PR（sufficiency check）の squash merge SHA
+    - 二層表現採用、層 2 fragment は ERROR_UNREADABLE_SOURCE として記録
+
+- 2026-04-22: **p006 tracked preprocessed source derived from low-res raw を収載** (PR #64 squash = `4c19f0843f874d93a07811c6d010d7694610411e`, image addition + handoff-only 更新, data 変更なし / DATA_VERSION bump なし / v98 維持):
   - **source**: `images_preprocessed/0006.png`（6048x3536, 390KB, 既存 B5 / B6 と同仕様）を追加。**出自（重要）**: 既存 low-res local raw `~/Desktop/kindle_shots/0006.png` (3024x1768) を `scripts/preprocess_images.py`（既存 OCR 前処理 pipeline = 2x upscale + CLAHE + 二値化 + 傾き補正 + 余白除去 + シャープ化）に通して生成した **preprocessed 派生物**であり、**新しい high-res recrop そのものではない**
   - **判定**: user directive 2026-04-22 「Claude 側で自力実行を試す」に応答し、既存 raw + 既存 pipeline で tracked 規格と整合する preprocessed source を生成 → user 手作業不要
   - **帰結（保守的評価, 2026-04-22 review 反映）**: `images_preprocessed/0006.png` の収載自体は完了だが、**resolution 起因の unreadable risk は未解消**（upscale は情報量を増やさない）。B1-B4 は `pending / frozen` → **`pending / preprocessed source available, sufficiency unverified`** に状態変更。**frozen 解除は保留**
-  - **次の実作業（要 sufficiency check ファースト）**: 次 PR でいきなり B2 verbatim restore に入らず、**まず `images_preprocessed/0006.png` で B2 read-only sufficiency check** を実施。十分なら restore に進む / 不十分なら **真の high-res recrop が引き続き必要**
+  - **次の実作業（要 sufficiency check ファースト）**: 次 PR でいきなり B2 verbatim restore に入らず、**まず `images_preprocessed/0006.png` で B2 read-only sufficiency check** を実施。十分なら restore に進む / 不十分なら **真の high-res recrop が引き続き必要**（→ 上記 2026-04-22 B2 sufficiency check エントリで結論 = **`restore 可（B5/B6 precedent = 二層運用）`**）
   - **Q/E verbatim は本 PR では行わない**（scope = image addition + handoff 更新のみ）
-  - **v99 SHA backfill**: 本 PR（p006 preprocessed source 収載）の squash merge SHA は次の実作業 PR で `latest main HEAD at handoff edit time` / 直近 merge 履歴に backfill 予定（new policy PR #53 準拠、sync-only PR は作らず次 work PR に相乗り）
+  - **v99 SHA backfill**: 本 PR（p006 preprocessed source 収載 = PR #64）の squash merge SHA = `4c19f0843f874d93a07811c6d010d7694610411e` は次の実作業 PR = v99 で `latest main HEAD at handoff edit time` / 直近 merge 履歴に backfill 予定（new policy PR #53 準拠、sync-only PR は作らず次 work PR に相乗り）
   - **v98 polarity との整合**: 画像で行 13 解説末尾に「『一見極めて明白に違憲無効と認められる場合を除き』という留保は付されていないという本肢は誤っている」と判読可能、v98 の ans=False は維持で整合
   - **継続制約**: 既存 B5 / B6 と同仕様ゆえ、一部 fragment が ERROR_UNREADABLE_SOURCE として残置になる可能性は継続（layer 2 = 原本逆算禁止 / future high-res recrop candidate only の運用継続）
 
-**次アクション**: **A 群完走** + **B 群 B6 まで close** + **別領域移行 #1 完了** + **B2 polarity hotfix（v98）完了** + **post-v98-merge handoff-only 更新（PR #63, `0c6ea3b`）完了** + **p006 preprocessed source 収載（本 PR, sufficiency 未検証）完了**。次の優先順：
-1. **B2 read-only sufficiency check（v## restore 前の必須 gate）**: `images_preprocessed/0006.png` で seq2 の Q + E（特に `...` 周辺 / 句読点 / 条文列挙 / 判例説明末尾）が verbatim 確定できるか **read-only で判定**。判定結果は handoff に記録する（data / DATA_VERSION 変更なし）
-   - (a) **十分** と判定された場合 → B2 seq2 verbatim restore を次 PR = v99 として実施（ans=False 維持。v99 PR 内で本 PR = p006 preprocessed source 収載 PR の squash merge SHA を `latest main HEAD at handoff edit time` / 直近 merge 履歴に backfill）。以後 B3 → B1 → B4 の順で同様に sufficiency check → restore 判断
-   - (b) **不十分** と判定された場合 → 真の high-res recrop 取得が引き続き必要（low-res raw `~/Desktop/kindle_shots/0006.png` の再撮影 / 書籍原本からの再 capture 等、OCR 方針 2026-04-22 に従い Gemini で先行試読 → 不安定箇所のみ high-res 再取得）
-2. **OCR 方針 2026-04-22（三者分担）との整合**: sufficiency check は Gemini OCR を一次経路、Claude を実装・記録担当、GPT をレビュー担当とする運用で回す
-3. **別領域移行 #2 = `subjectId === ''` 禁止設計**（known_issues.md §3）— 空文字保存自体は許容されたまま。null / sentinel 値への移行は Dexie schema 変更 + 既存データ migration が必要ゆえ別 PR で設計検討から
-4. **別領域移行 #3 = `needsSourceCheck` 自動検知**（known_issues.md §5）— CLAUDE.md 第 5 節のルール (`...`/`…` / 助詞重複 / 文末欠落 / 既知 OCR 誤字 / Q-E 極性矛盾 / broad raw / 空 raw) を自動走査する scan runner を追加。Dexie index は §2 と同時着手候補
-5. **別領域移行 #4 = OCR パイプラインモデル差し替え**（known_issues.md §4、CLAUDE.md 第 4 節）— `scripts/ocr_batch.*` のみ対象、`kindle_capture.sh` / `reviewed_import.json` 形式 / `importParsedBatch` は維持
-6. **B5 / B6 の image-quality-limited fragment は future high-res recrop 待ち**（B5 = `0090.png` 中盤 `...` transitional sentence、B6 = `0118.png` 84条繋ぎ末尾。高解像度 re-crop または手元原本で verbatim 確定できた時点で v## として追加 restore）
+**次アクション**: **A 群完走** + **B 群 B6 まで close** + **別領域移行 #1 完了** + **B2 polarity hotfix（v98）完了** + **post-v98-merge handoff-only 更新（PR #63, `0c6ea3b`）完了** + **p006 preprocessed source 収載（PR #64, `4c19f08`）完了** + **B2 seq2 read-only sufficiency check 完了（本 PR, 結論 = `restore 可（B5/B6 precedent = 二層運用）`）**。次の優先順：
+1. **v99 = B2 seq2 Q/E verbatim restore**（ans=False 維持、1 seq / 1 PR）:
+   - **層 1 restore 範囲**: (i) E 冒頭「最判昭35.6.8」→「**最大判**昭35.6.8」1 char 補正、(ii) E 中盤 `...` → 3 段構造の concrete text restore（直接国家統治 / 法律上の争訟 / 裁判所の審査権の外）、(iii) E 末尾「〜という**本肢は誤っている**。」評価句 restore
+   - **層 2 ERROR_UNREADABLE_SOURCE 扱い**: Q 行末「行われる / 行われると」の verbatim 1 char / E 中盤の助詞レベル / subject 語句（「判例の解説は」vs「判例の態度は」vs「判旨は」等）/ 句読点の marginal 箇所
+   - **v99 PR 内で backfill する SHA**: (i) PR #64 squash = `4c19f0843f874d93a07811c6d010d7694610411e`、(ii) 本 PR（sufficiency check）の squash merge SHA
+   - **以後**: B3 → B1 → B4 の順で同様に sufficiency check → restore 判断（1 seq / 1 PR）
+2. **（分岐, 未採用）strict verbatim policy を採用する場合**: 層 2 fragment 保留も許さないならば v99 着手前に「真の high-res recrop 取得」に切り替え（low-res raw `~/Desktop/kindle_shots/0006.png` 再撮影 / 書籍原本からの再 capture、OCR 方針 2026-04-22 に従い Gemini 先行試読 → 不安定箇所のみ high-res 再取得）
+3. **OCR 方針 2026-04-22（三者分担）との整合**: 上記 v99 作業は Gemini OCR を一次経路、Claude を実装・記録担当、GPT をレビュー担当とする運用で回す
+4. **別領域移行 #2 = `subjectId === ''` 禁止設計**（known_issues.md §3）— 空文字保存自体は許容されたまま。null / sentinel 値への移行は Dexie schema 変更 + 既存データ migration が必要ゆえ別 PR で設計検討から
+5. **別領域移行 #3 = `needsSourceCheck` 自動検知**（known_issues.md §5）— CLAUDE.md 第 5 節のルール (`...`/`…` / 助詞重複 / 文末欠落 / 既知 OCR 誤字 / Q-E 極性矛盾 / broad raw / 空 raw) を自動走査する scan runner を追加。Dexie index は §2 と同時着手候補
+6. **別領域移行 #4 = OCR パイプラインモデル差し替え**（known_issues.md §4、CLAUDE.md 第 4 節）— `scripts/ocr_batch.*` のみ対象、`kindle_capture.sh` / `reviewed_import.json` 形式 / `importParsedBatch` は維持
+7. **B5 / B6 の image-quality-limited fragment は future high-res recrop 待ち**（B5 = `0090.png` 中盤 `...` transitional sentence、B6 = `0118.png` 84条繋ぎ末尾。高解像度 re-crop または手元原本で verbatim 確定できた時点で v## として追加 restore）
 
 <!-- review-handoff:scope:begin -->
 ## 残件の大分類 (confirmed / inferred)
