@@ -146,7 +146,7 @@
   * **原本到着後に何を再開するか**:
     1. p006 原本画像（`0006.png`）が repo に追加された時点で frozen 解除
     2. B2 の Q / E verbatim restore（苫米地事件判旨の `...` 部分 + 「留保なし」記述の verbatim 確定）
-    3. B3（seq3, 統治行為論 = 砂川事件 proviso の疑い）の read-only 判定 → ans=False→True flip 可否 + E restore
+    3. B3（seq3, 統治行為論）の read-only 判定 → ans=False→True flip 可否 + E restore（判例特定は原本照合後に確定）
     4. B1（seq1, 共産党除名事件、現 handoff `cosmetic close` 前提は**誤り**。Q+E restore 対象）の再 open
     5. B4（seq4, 在宅投票事件、E 中央 restore が主対象、Q 軽微修正は同 PR で可）の restore
   * scope: p006-q01 seq2 `answerBoolean` のみ、他 seq (1/3/4) の ans / Q / E sha256 変化なし確認済、data ↔ public byte-identical mirror 維持（1,224,336 bytes、+1 byte = `true`→`false`）
@@ -424,7 +424,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 | --- | --- | --- | --- |
 | B1 | p006-q01 seq1 Q + E | 共産党除名事件、Q + E 両方に restore 要。旧 handoff `cosmetic close` 判定は**誤り**（2026-04-22 user directive で再 open） | **pending** — p006 原本画像到着後に Q + E verbatim restore |
 | B2 | p006-q01 seq2 Q + E + ans | 苫米地事件、Q「留保あり」vs E「留保不在」の自己矛盾 + E 冒頭 `...` / 開き「欠落 | **層 1 = ans polarity flip True→False 完了**（v98 本 PR）／ **層 2 = Q/E verbatim restore 保留**（p006 原本画像未存在のため、原本到着後に再開） |
-| B3 | p006-q01 seq3 E + ans | 統治行為論、`判例は...場合でも` 中間語脱落、ans False→True flip 候補（砂川事件 proviso 方向） | **polarity flip pending** — p006 原本画像到着後に E restore + ans flip（B2 層 2 と同タイミング） |
+| B3 | p006-q01 seq3 E + ans | 統治行為論、`判例は...場合でも` 中間語脱落、**ans False→True flip 候補**（read-only 判定時点の心証。判例特定・verbatim restore 詳細は原本画像到着後に確定） | **polarity flip pending** — p006 原本画像到着後に E restore + ans flip（B2 層 2 と同タイミング） |
 | B4 | p006-q01 seq4 Q + E | 在宅投票事件、**E 中央 restore** が主対象、Q 軽微修正は同 PR で可 | **pending** — p006 原本画像到着後に E 中央 restore + Q 軽微修正 |
 | ~~B5~~ | ~~p090-q01 seq1 E~~ | ~~`申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮~~ | ~~**closed to limit of source quality**（v96, PR #57）。**層 1 = substantive risk mitigated**（Q 1 char「語否→諾否」+ E 末尾 論理反転「応答義務があり→応答義務がなく」+ 主語 drift「自己の→届出人の」を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（E 中盤 `申請（2条3号）...届出の場合には、` の `...` transitional sentence は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** 維持、条文逆算禁止、**future high-res recrop candidate only**）~~ |
 | ~~B6~~ | ~~p118-q01 seq1 E~~ | ~~`審査請求...をすることができる` — 条文列挙の `等` 圧縮（read-only 判定で E 中盤〜末尾の教示 3 点列挙 drift + `必要的記載` → `必要的教示` 差検出、substantive restore 対象）~~ | ~~**closed to limit of source quality**（v97, PR #58）。**層 1 = substantive risk mitigated**（E 中盤 `口頭又は書面で当該処分に係る部分を教示` → `①審査請求をすることができること、②審査請求をすべき行政庁および③審査請求期間を書面で教示`（行審法82条1項 教示 3 事項 + 書面、abstract drift から concrete restore）+ `職権による必要的記載` → `職権による必要的教示`（講学ラベル正字化）を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（84条への繋ぎ末尾は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** として**完全不変維持**、条文逆算禁止、**future high-res recrop candidate only**）~~ |
@@ -479,7 +479,7 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 1. **p006 原本画像の取得**（`images/0006.png` または `images_preprocessed/0006.png` を repo に追加。user による別途取得作業、Claude は着手しない）
 2. **原本画像到着後の B 群再開**（優先順）:
    - B2 層 2 = Q/E verbatim restore（ans は v98 で既に flip 済み）
-   - B3 = E restore + ans False→True flip（統治行為論 / 砂川事件 proviso 方向）
+   - B3 = E restore + ans False→True flip（統治行為論、判例特定は原本照合後）
    - B1 = Q+E restore（共産党除名事件、旧 cosmetic close 判定は誤り）
    - B4 = E 中央 restore + Q 軽微修正（在宅投票事件）
 3. **別領域移行 #2 = `subjectId === ''` 禁止設計**（known_issues.md §3）— 空文字保存自体は許容されたまま。null / sentinel 値への移行は Dexie schema 変更 + 既存データ migration が必要ゆえ別 PR で設計検討から
