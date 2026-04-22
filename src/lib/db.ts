@@ -876,6 +876,19 @@ const PATCHES: CleanupPatch[] = [
     ],
     recalcCorrect: [],
   },
+  // v100: 2026-04-23 p006-q03 seq3 ans False→True flip に伴う attempt.isCorrect 再計算
+  //   統治行為論（苫米地事件, 最大判昭35.6.8）— 画像 row 14 右列 marker ○ 読取り + 判例整合
+  //   PR #68 の data 側 polarity flip と同期する cleanup patch
+  {
+    key: 'cleanup_2026-04-23_v100_p006q03_ans_true',
+    deleteAllAttempts: [],
+    deleteLap1: [],
+    needsSourceCheckProblems: [],
+    isExcludedProblems: [],
+    recalcCorrect: [
+      { problemId: 'KB2025-p006-q03', correctAnswer: true }, // 統治行為論=司法審査対象外（苫米地判例）
+    ],
+  },
   // ─── 今後の修正はここに追加 ───
 ];
 
