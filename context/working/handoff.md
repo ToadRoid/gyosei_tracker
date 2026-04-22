@@ -2,18 +2,20 @@
 
 最終更新: 2026-04-22 (**v98 polarity hotfix**：`p006-q01 seq2` の `answerBoolean` を True → False に単独 flip。現 DB が Q「留保あり、司法審査は及ばない」/ E「留保は付されていない」で自己矛盾していたため、polarity のみ先行修正。**Q / E は未修正維持**。理由：p006 原本画像（`images/0006.png` / `images_preprocessed/0006.png`）が repo 内に未存在で、Q/E の verbatim restore は「推測禁止 / repo 実状態優先」ルールに抵触するため保留。**二層表現採用**：層 1 = polarity hotfix（ans flip 完了）／ 層 2 = Q/E verbatim restore 保留（原本画像到着待ち）。他 seq (1/3/4) 完全不変、他 seq の hash 変化なし確認済。DATA_VERSION v97 → v98 bump。)
 
-直前: v97 (B 群 active #2 = B6 `p118-q01 seq1 E` closed to limit of source quality、B 群 active 完走、二層表現採用、`7171dac` PR #58 + SHA backfill `424fbc5` PR #59) → **別領域移行 #1 = `importParsedBatch` 分類継承バグ部分修正**（PR #60、data 変更なし / v97 維持）。
+post-merge 追加更新: 2026-04-22 (**handoff-only 更新 = v98 merge SHA backfill + p006 source 存在ログ**, data 変更なし / DATA_VERSION bump なし / v98 維持): v98 squash merge SHA = `671eb79f622bb797ec78b2c97788edba9ebe7b54`（PR #62）を `latest data merge` / `latest main HEAD at handoff edit time` / 直近 data merge 履歴の 3 箇所に backfill。同時に **p006 source 存在ログ**を追加：`~/Desktop/kindle_shots/0006.png`（kindle_capture.sh の OUTDIR デフォルト）に DB `p006` 対応の書籍見開き（書籍 p.116-117「裁判所」section の統治行為小項目）が scan されていることを確認（画像左ページ A 2段目 = seq2 Q 冒頭「内閣による衆議院の解散は、高度の政治性を有する国家行為であるから」が一致、右ページ 12 番が苫米地事件 E の原本）。**ただし現物は低解像度の見開き 1 枚**ゆえ「source existence の確認には使えるが、verbatim restore の根拠としては不十分」(user directive 2026-04-22)。**方針（固定）**: local-only 運用ではなく repo に source を残す。ただし **低解像度 0006.png のみを根拠に本文修正はしない**。**B1-B4 frozen 解除条件を「原本画像 repo 追加」→「高解像度 recrop 収載」に更新**。優先順 `B2 → B3 → B1 → B4` は維持、p006 は高解像度 source 収載まで frozen 扱い。
+
+直前: v97 (B 群 active #2 = B6 `p118-q01 seq1 E` closed to limit of source quality、B 群 active 完走、二層表現採用、`7171dac` PR #58 + SHA backfill `424fbc5` PR #59) → **別領域移行 #1 = `importParsedBatch` 分類継承バグ部分修正**（PR #60、data 変更なし / v97 維持）→ **v98 polarity hotfix**（PR #62, `671eb79`）→ **本 handoff-only 更新**（post-v98-merge SHA backfill + p006 source 存在ログ, data 変更なし / v98 維持）。
 
 **本ファイル単体で引き継ぎが成立することを目標にする**。repo 外 memory は補助扱い。
 
-## 現在地（confirmed, 2026-04-22 v98 反映前）
+## 現在地（confirmed, 2026-04-22 post-v98-merge + handoff-only SHA backfill & p006 source ログ）
 
-* **latest data merge**: `7171dac9ad13a92fa051da26d9110ac5d8f3c74e`（v97 squash merge, PR #58, B6 closed to limit of source quality = **B 群 active 完走**）/ 直前の merged v## = v96 (`a076e59dc9a1b064e7010feea10d461250023a9e`, PR #57, B5 partial close)
-* **latest main HEAD at handoff edit time**: `01397d8957819d318eb5bbd83d3cce43705d5a64`（PR #60 squash merge = `importParsedBatch` 分類継承バグ修正、2026-04-22 handoff 編集時の repo 先端）
+* **latest data merge**: `671eb79f622bb797ec78b2c97788edba9ebe7b54`（v98 squash merge, PR #62, B2 `p006-q01 seq2` ans polarity hotfix = True → False single byte flip、Q/E 未修正維持）/ 直前の merged v## = v97 (`7171dac9ad13a92fa051da26d9110ac5d8f3c74e`, PR #58, B6 closed to limit of source quality = **B 群 active 完走**)
+* **latest main HEAD at handoff edit time**: `671eb79f622bb797ec78b2c97788edba9ebe7b54`（PR #62 squash merge = v98 polarity hotfix、2026-04-22 post-v98-merge handoff-only 更新時の repo 先端）
 * **総ページ**: 239 / **総肢**: 1312（不変）
 * **DATA_VERSION**: `2026-04-22-audit-v98-p006-q01-seq2-ans-polarity-hotfix`（本 PR で v97 → v98 bump。`p006-q01 seq2` の ans のみ True → False、Q / E は未修正）
 * **L1 本線**: ✅ 実質完了維持
-* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, `a076e59`, B5) → v97 (PR #58, `7171dac`, **B6 = B 群 active 完走**) → v98 (本 PR, **B2 polarity hotfix のみ = Q/E 保留**)
+* **直近 data merge 履歴**: v88 (PR #43, `bd45bd7`) → v89 (PR #44, `2305dad`, A1) → v90 (PR #45, `e2321a9`, A2) → v91 (PR #47, `c9fe732`, A3) → v92 (PR #49, `ece5d89`, A4) → v93 (PR #51, `075e4a2`, A5) → v94 (PR #54, `54ec51f`, A6) → v95 (PR #55, `95a50f9`, A7 = A 群完走) → v96 (PR #57, `a076e59`, B5) → v97 (PR #58, `7171dac`, **B6 = B 群 active 完走**) → v98 (PR #62, `671eb79`, **B2 polarity hotfix のみ = Q/E 保留**)
 * **付随 sync PR**: PR #46 (`8b8c3b0`) / PR #48 (`a2b2611`) / PR #50 (`8286ebb`) / PR #52 (`d161966`) — 旧「都度 mainHEAD sync」運用の痕跡（PR #53 で廃止、v94 以降は新方針で運用）
 * **運用（2026-04-20 PR #53 で確立、v94 = PR #54 で初適用、本 PR で 2 サイクル目）**:
   - `latest data merge` = **最新の v## restore PR の squash merge commit**（data 到達点。SHA 確定は merge 後で、**本 PR のように進行中は PR # で参照し SHA は次 handoff 編集で補完**。次の v## restore までは stable）
@@ -422,10 +424,10 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 
 | # | 対象 | 症状 | 状態 |
 | --- | --- | --- | --- |
-| B1 | p006-q01 seq1 Q + E | 共産党除名事件、Q + E 両方に restore 要。旧 handoff `cosmetic close` 判定は**誤り**（2026-04-22 user directive で再 open） | **pending** — p006 原本画像到着後に Q + E verbatim restore |
-| B2 | p006-q01 seq2 Q + E + ans | 苫米地事件、Q「留保あり」vs E「留保不在」の自己矛盾 + E 冒頭 `...` / 開き「欠落 | **層 1 = ans polarity flip True→False 完了**（v98 本 PR）／ **層 2 = Q/E verbatim restore 保留**（p006 原本画像未存在のため、原本到着後に再開） |
-| B3 | p006-q01 seq3 E + ans | 統治行為論、`判例は...場合でも` 中間語脱落、**ans False→True flip 候補**（read-only 判定時点の心証。判例特定・verbatim restore 詳細は原本画像到着後に確定） | **polarity flip pending** — p006 原本画像到着後に E restore + ans flip（B2 層 2 と同タイミング） |
-| B4 | p006-q01 seq4 Q + E | 在宅投票事件、**E 中央 restore** が主対象、Q 軽微修正は同 PR で可 | **pending** — p006 原本画像到着後に E 中央 restore + Q 軽微修正 |
+| B1 | p006-q01 seq1 Q + E | 共産党除名事件、Q + E 両方に restore 要。旧 handoff `cosmetic close` 判定は**誤り**（2026-04-22 user directive で再 open） | **pending / frozen** — 低解像度 source `~/Desktop/kindle_shots/0006.png` 存在確認済、repo 未収載、見開き画像ゆえ verbatim 不可。**高解像度 recrop 収載後**に Q + E verbatim restore |
+| B2 | p006-q01 seq2 Q + E + ans | 苫米地事件、Q「留保あり」vs E「留保不在」の自己矛盾 + E 冒頭 `...` / 開き「欠落 | **層 1 = ans polarity flip True→False 完了**（v98 PR #62, `671eb79`）／ **層 2 = Q/E verbatim restore 保留 / frozen**（低解像度 source は local に存在するが見開き画像ゆえ verbatim 根拠として不十分、**高解像度 recrop 収載後**に再開） |
+| B3 | p006-q01 seq3 E + ans | 統治行為論、`判例は...場合でも` 中間語脱落、**ans False→True flip 候補**（read-only 判定時点の心証。判例特定・verbatim restore 詳細は原本画像到着後に確定） | **polarity flip pending / frozen** — **高解像度 recrop 収載後**に E restore + ans flip（B2 層 2 と同タイミング） |
+| B4 | p006-q01 seq4 Q + E | 在宅投票事件、**E 中央 restore** が主対象、Q 軽微修正は同 PR で可 | **pending / frozen** — **高解像度 recrop 収載後**に E 中央 restore + Q 軽微修正 |
 | ~~B5~~ | ~~p090-q01 seq1 E~~ | ~~`申請（2条3号）...届出の場合には` — 申請と届出の対比記述が圧縮~~ | ~~**closed to limit of source quality**（v96, PR #57）。**層 1 = substantive risk mitigated**（Q 1 char「語否→諾否」+ E 末尾 論理反転「応答義務があり→応答義務がなく」+ 主語 drift「自己の→届出人の」を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（E 中盤 `申請（2条3号）...届出の場合には、` の `...` transitional sentence は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** 維持、条文逆算禁止、**future high-res recrop candidate only**）~~ |
 | ~~B6~~ | ~~p118-q01 seq1 E~~ | ~~`審査請求...をすることができる` — 条文列挙の `等` 圧縮（read-only 判定で E 中盤〜末尾の教示 3 点列挙 drift + `必要的記載` → `必要的教示` 差検出、substantive restore 対象）~~ | ~~**closed to limit of source quality**（v97, PR #58）。**層 1 = substantive risk mitigated**（E 中盤 `口頭又は書面で当該処分に係る部分を教示` → `①審査請求をすることができること、②審査請求をすべき行政庁および③審査請求期間を書面で教示`（行審法82条1項 教示 3 事項 + 書面、abstract drift から concrete restore）+ `職権による必要的記載` → `職権による必要的教示`（講学ラベル正字化）を原本復元、ans=False 維持）／ **層 2 = image-quality-limited fragment unresolved**（84条への繋ぎ末尾は画像解像度で verbatim 確定不能、**ERROR_UNREADABLE_SOURCE** として**完全不変維持**、条文逆算禁止、**future high-res recrop candidate only**）~~ |
 
@@ -473,11 +475,17 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
   - `isExcluded` / `needsSourceCheck` の継承ロジックは挙動変更なし（既存コードで既に preserved → 新レコードへ復元していた。本修正は preserved Map の収集条件を緩めただけで副作用なし）
   - 残る制約（別トラック）: known_issues.md §1 原因 2（PATCH / localStorage フラグの DATA_VERSION 連動化）・原因 3（`subjectId === ''` 禁止設計）・§2（`needsSourceCheck` Dexie index）は未対応。属性継承が入ったため実害は軽減
   - build green（Next.js 16.2.1 Turbopack、TypeScript pass）、lint は main に pre-existing 38 errors があるが本修正で新規追加なし
-- 2026-04-22: v98 反映で **B2 p006-q01 seq2 の ans polarity hotfix を先行**（本 PR）。現 DB 内で Q「留保あり＝除き、司法審査は及ばない」と E「留保は付されていない」が polarity 逆で自己矛盾していたため、ans=True → False に single byte flip。**Q / E は未修正維持**（`images/0006.png` / `images_preprocessed/0006.png` が repo 内に未存在、`images_preprocessed/` は 0004→0007 で 0006 欠落、`git ls-files` 未追跡、原本照合不能ゆえ verbatim restore は原本到着まで保留）。**二層表現採用**（v96/v97 と同型）：層 1 = polarity hotfix 完了 / 層 2 = Q/E verbatim restore 保留。2026-04-21 read-only 判定で B1 を cosmetic close としていた前提も**誤り**と user directive で判明 → **B1 / B3 / B4 も pending に再分類**（B1: Q+E restore 対象 / B3: ans False→True flip + E restore pending / B4: E 中央 restore + Q 軽微修正 pending）。件数増減：B2 の ans のみ部分 close、Q/E + B1/B3/B4 は active pending（原本画像到着待ち）。
+- 2026-04-22: v98 反映で **B2 p006-q01 seq2 の ans polarity hotfix を先行**（PR #62, `671eb79`）。現 DB 内で Q「留保あり＝除き、司法審査は及ばない」と E「留保は付されていない」が polarity 逆で自己矛盾していたため、ans=True → False に single byte flip。**Q / E は未修正維持**（`images/0006.png` / `images_preprocessed/0006.png` が repo 内に未存在、`images_preprocessed/` は 0004→0007 で 0006 欠落、`git ls-files` 未追跡、原本照合不能ゆえ verbatim restore は原本到着まで保留）。**二層表現採用**（v96/v97 と同型）：層 1 = polarity hotfix 完了 / 層 2 = Q/E verbatim restore 保留。2026-04-21 read-only 判定で B1 を cosmetic close としていた前提も**誤り**と user directive で判明 → **B1 / B3 / B4 も pending に再分類**（B1: Q+E restore 対象 / B3: ans False→True flip + E restore pending / B4: E 中央 restore + Q 軽微修正 pending）。件数増減：B2 の ans のみ部分 close、Q/E + B1/B3/B4 は active pending（原本画像到着待ち）。
+- 2026-04-22: **handoff-only 更新**（post-v98-merge SHA backfill + p006 source 存在ログ, data 変更なし / DATA_VERSION bump なし / v98 維持）。
+  - **SHA backfill**: v98 squash merge SHA = `671eb79f622bb797ec78b2c97788edba9ebe7b54`（PR #62）を `latest data merge` / `latest main HEAD at handoff edit time` / 直近 data merge 履歴 の 3 箇所に補完（新方針 3 サイクル目: sync PR なし、次作業 PR 同梱で backfill）。
+  - **p006 source 存在ログ**: v98 時点で「原本画像未存在」としていた B 群 p006 について、local の `~/Desktop/kindle_shots/0006.png`（kindle_capture.sh の OUTDIR デフォルト）に DB `p006` 対応の書籍見開き 1 枚が scan されていることを確認。書籍 p.116-117「裁判所」section の「統治行為」小項目ページ、画像左ページ A 2段目 = seq2 Q 冒頭「内閣による衆議院の解散は、高度の政治性を有する国家行為であるから」が一致、右ページ 12 番 = 苫米地事件 E 原本。**ただし現物は低解像度の見開き 1 枚**（字画・句読点・漢字選択の微差は verbatim 確定不能）ゆえ「source existence の確認には使えるが、verbatim restore の根拠としては不十分」（user directive 2026-04-22）。
+  - **方針（固定, user directive 2026-04-22）**: local-only 運用ではなく **repo に source を残す** 方針にする。ただし **低解像度 0006.png のみを根拠に本文修正はしない**。直近アクション: (1) p006 seq2 の Q/E 該当箇所の **高解像度 recrop を作成**（user 側作業、Claude は着手しない）→ (2) recrop 画像を `images/` に追加（新 PR）→ (3) その後に限り **B2 seq2 の verbatim restore** を再開。
+  - **制約**: 高解像度 recrop 前に Q/E 本文は修正しない / 現 `ans=False` は維持でよい / 優先順 `B2 → B3 → B1 → B4` は維持、**p006 は高解像度 source 収載まで frozen 扱い**。
+  - **件数増減**: 形式的には B1-B4 active pending 維持（解除条件のみ「原本画像 repo 追加」→「高解像度 recrop 収載」に更新）。B5-B6 は従前通り `closed to limit of source quality` で高解像度 recrop 待ち。
 
-**次アクション**: **A 群完走** + **B 群 B6 まで close** + **別領域移行 #1 完了** + **B2 polarity hotfix（v98）完了**。次の優先順：
-1. **p006 原本画像の取得**（`images/0006.png` または `images_preprocessed/0006.png` を repo に追加。user による別途取得作業、Claude は着手しない）
-2. **原本画像到着後の B 群再開**（優先順）:
+**次アクション**: **A 群完走** + **B 群 B6 まで close** + **別領域移行 #1 完了** + **B2 polarity hotfix（v98）完了** + **post-v98-merge handoff-only 更新（本 PR、SHA backfill + p006 source 存在ログ）完了**。次の優先順：
+1. **p006 高解像度 recrop の作成 + repo 収載**（低解像度 `~/Desktop/kindle_shots/0006.png` は存在確認済だが見開き画像ゆえ verbatim 根拠として不十分。seq1/seq2/seq3/seq4 該当箇所の高解像度 recrop を作成し `images/` に追加する。user による撮影作業、Claude は着手しない）
+2. **高解像度 recrop 収載後の B 群再開**（優先順 `B2 → B3 → B1 → B4` 維持）:
    - B2 層 2 = Q/E verbatim restore（ans は v98 で既に flip 済み）
    - B3 = E restore + ans False→True flip（統治行為論、判例特定は原本照合後）
    - B1 = Q+E restore（共産党除名事件、旧 cosmetic close 判定は誤り）
