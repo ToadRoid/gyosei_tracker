@@ -410,7 +410,7 @@
         {
           "seqNo": 2,
           "questionText": "内閣による衆議院の解散は、高度の政治性を有する国家行為であるから、解散が憲法の明文規定に反して行われると、一見極めて明白に違憲無効と認められる場合を除き、司法審査は及ばないとするのが判例である。",
-          "answerBoolean": true,
+          "answerBoolean": false,
           "explanationText": "判例（最判昭35.6.8：苫米地事件）は...明白に違憲無効と認められる場合を除き」とする留保は付されていない。",
           "subjectCandidate": "kenpo",
           "chapterCandidate": "kenpo-tochi",
