@@ -876,17 +876,36 @@ const PATCHES: CleanupPatch[] = [
     ],
     recalcCorrect: [],
   },
-  // v100: 2026-04-23 p006-q03 seq3 ans False→True flip に伴う attempt.isCorrect 再計算
-  //   統治行為論（苫米地事件, 最大判昭35.6.8）— 画像 row 14 右列 marker ○ 読取り + 判例整合
-  //   PR #68 の data 側 polarity flip と同期する cleanup patch
+  // historical catchup: 2026-04-23 recent polarity flip PR (v76/v78/v82/v86/v98) の
+  // recalcCorrect 漏れを一括回収。各 PR で data 側 answerBoolean は flip 済みだが
+  // cleanup patch が追加されておらず、既存 attempt の isCorrect が stale のまま残っている
+  // 可能性があるため、current データと整合させて再計算する。
+  // v100 PR #68 の cleanup_2026-04-23_v100_p006q03_ans_true は同日別 PR で先行追加済み、
+  // 本 entry はそれと対をなす過去分の回収。
+  //   v76 (PR #30): p238-q1/q2 polarity restore
+  //   v78 (PR #32): p227 seq1/seq3 polarity flips
+  //   v82 (PR #37): p227-q01 seq2 false→true
+  //   v86 (PR #41): p119-q01 seq1 true→false
+  //   v98 (PR #62): p006-q01 seq2 True→False
   {
-    key: 'cleanup_2026-04-23_v100_p006q03_ans_true',
+    key: 'cleanup_2026-04-23_historical_catchup_v76_v78_v82_v86_v98',
     deleteAllAttempts: [],
     deleteLap1: [],
     needsSourceCheckProblems: [],
     isExcludedProblems: [],
     recalcCorrect: [
-      { problemId: 'KB2025-p006-q03', correctAnswer: true }, // 統治行為論=司法審査対象外（苫米地判例）
+      // v76 (p238-q01/q02)
+      { problemId: 'KB2025-p238-q01', correctAnswer: true },  // 停止条件成就済=無条件、解除条件成就済=無効
+      { problemId: 'KB2025-p238-q02', correctAnswer: true },  // 停止条件不成就確定=無効、解除条件不成就確定=無条件
+      // v78 (p227-q01/q03)
+      { problemId: 'KB2025-p227-q01', correctAnswer: true },  // 第三者強迫 C 善意無過失
+      { problemId: 'KB2025-p227-q03', correctAnswer: false }, // 意思表示受領時の意思能力/制限行為能力
+      // v82 (p227-q02)
+      { problemId: 'KB2025-p227-q02', correctAnswer: true },  // 第三者強迫 D
+      // v86 (p119-q01)
+      { problemId: 'KB2025-p119-q01', correctAnswer: false }, // 不服審査法 38条5項 不教示
+      // v98 (p006-q02)
+      { problemId: 'KB2025-p006-q02', correctAnswer: false }, // 衆議院解散=統治行為 司法審査対象外
     ],
   },
   // ─── 今後の修正はここに追加 ───
