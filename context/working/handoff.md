@@ -479,12 +479,12 @@ CLAUDE.md §5 auto-detection rule を **v88 反映後に再走**（2026-04-20）
 - 2026-04-22: **handoff-only 更新**（post-v98-merge SHA backfill + p006 source 存在ログ, data 変更なし / DATA_VERSION bump なし / v98 維持）。
   - **SHA backfill**: v98 squash merge SHA = `671eb79f622bb797ec78b2c97788edba9ebe7b54`（PR #62）を `latest data merge` / `latest main HEAD at handoff edit time` / 直近 data merge 履歴 の 3 箇所に補完（新方針 3 サイクル目: sync PR なし、次作業 PR 同梱で backfill）。
   - **p006 source 存在ログ**: v98 時点で「原本画像未存在」としていた B 群 p006 について、local の `~/Desktop/kindle_shots/0006.png`（kindle_capture.sh の OUTDIR デフォルト）に DB `p006` 対応の書籍見開き 1 枚が scan されていることを確認。書籍 p.116-117「裁判所」section の「統治行為」小項目ページ、画像左ページ A 2段目 = seq2 Q 冒頭「内閣による衆議院の解散は、高度の政治性を有する国家行為であるから」が一致、右ページ 12 番 = 苫米地事件 E 原本。**ただし現物は低解像度の見開き 1 枚**（字画・句読点・漢字選択の微差は verbatim 確定不能）ゆえ「source existence の確認には使えるが、verbatim restore の根拠としては不十分」（user directive 2026-04-22）。
-  - **方針（固定, user directive 2026-04-22）**: local-only 運用ではなく **repo に source を残す** 方針にする。ただし **低解像度 0006.png のみを根拠に本文修正はしない**。直近アクション: (1) p006 seq2 の Q/E 該当箇所の **高解像度 recrop を作成**（user 側作業、Claude は着手しない）→ (2) recrop 画像を `images/` に追加（新 PR）→ (3) その後に限り **B2 seq2 の verbatim restore** を再開。
+  - **方針（固定, user directive 2026-04-22）**: local-only 運用ではなく **repo に source を残す** 方針にする。ただし **低解像度 0006.png のみを根拠に本文修正はしない**。直近アクション: (1) p006 seq2 の Q/E 該当箇所の **高解像度 recrop を作成**（user 側作業、Claude は着手しない）→ (2) recrop 画像を **tracked source path** = `images_preprocessed/` に追加（新 PR。`images/` は `.gitignore` 対象で tracked 不可ゆえ使用しない。B5 `0090.png` / B6 `0118.png` が `images_preprocessed/` で tracked されている実績に倣う。`images/` を使う必要が生じた場合は先に `.gitignore` 変更を別 PR で行う）→ (3) その後に限り **B2 seq2 の verbatim restore** を再開。
   - **制約**: 高解像度 recrop 前に Q/E 本文は修正しない / 現 `ans=False` は維持でよい / 優先順 `B2 → B3 → B1 → B4` は維持、**p006 は高解像度 source 収載まで frozen 扱い**。
   - **件数増減**: 形式的には B1-B4 active pending 維持（解除条件のみ「原本画像 repo 追加」→「高解像度 recrop 収載」に更新）。B5-B6 は従前通り `closed to limit of source quality` で高解像度 recrop 待ち。
 
 **次アクション**: **A 群完走** + **B 群 B6 まで close** + **別領域移行 #1 完了** + **B2 polarity hotfix（v98）完了** + **post-v98-merge handoff-only 更新（本 PR、SHA backfill + p006 source 存在ログ）完了**。次の優先順：
-1. **p006 高解像度 recrop の作成 + repo 収載**（低解像度 `~/Desktop/kindle_shots/0006.png` は存在確認済だが見開き画像ゆえ verbatim 根拠として不十分。seq1/seq2/seq3/seq4 該当箇所の高解像度 recrop を作成し `images/` に追加する。user による撮影作業、Claude は着手しない）
+1. **p006 高解像度 recrop の作成 + repo 収載**（低解像度 `~/Desktop/kindle_shots/0006.png` は存在確認済だが見開き画像ゆえ verbatim 根拠として不十分。seq1/seq2/seq3/seq4 該当箇所の高解像度 recrop を作成し **tracked source path** = `images_preprocessed/` に追加する。`images/` は `.gitignore` 対象で tracked 不可ゆえ使用しない。B5 / B6 が `images_preprocessed/` で tracked されている実績に倣う。`images/` を使う必要が生じた場合は先に `.gitignore` 変更を別 PR で行う。user による撮影作業、Claude は着手しない）
 2. **高解像度 recrop 収載後の B 群再開**（優先順 `B2 → B3 → B1 → B4` 維持）:
    - B2 層 2 = Q/E verbatim restore（ans は v98 で既に flip 済み）
    - B3 = E restore + ans False→True flip（統治行為論、判例特定は原本照合後）
