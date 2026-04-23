@@ -17611,6 +17611,74 @@
       ]
     },
     {
+      "sourcePage": "248",
+      "originalProblemId": "KB2025-p248-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの所有する甲土地につきAがBに対して売却した後、Aが重ねて甲土地を背信的悪意者Cに売却し、さらにCが甲土地を悪意者Dに売却した場合に、第一買主Bは、背信的悪意転得者であるDに対して登記をしていなくても所有権の取得を対抗できる。",
+          "answerBoolean": false,
+          "explanationText": "背信的悪意者は、登記の欠缺を主張するについて正当な利益を有しないものであって、民法177条にいう「第三者」に当たらないとしている（最判昭43.8.2）。もっとも、背信的悪意者からの譲受人については、たとえ第2の買主Cが背信的悪意者に当たるとしても、第1の買主Bに対する関係で転得者D自身が背信的悪意者と評価されるのでない限り、Dはその不動産の取得を第1の買主に対抗することができる（最判平8.10.29）。したがって、登記のないBは、Dが背信的悪意者と評価されるのでない限り、その不動産の取得をDに対抗することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "598",
+          "sourcePageAnswer": "599"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AからBに不動産の売却が行われた後に、AがBの詐欺を理由に売買契約を取り消したにもかかわらず、Bがこの不動産をCに転売してしまった場合に、Cは善意であっても登記を備えなければ保護されない。",
+          "answerBoolean": true,
+          "explanationText": "不動産の売買契約が詐欺を理由に取り消された場合、売主と取消後に利害関係を有するに至った第三者との優劣は、登記の先後で決すべきであるとされている（大判昭17.9.30）。したがって、Cは善意であっても登記を備えなければ保護されない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "登記を対抗要件とする物権変動",
+          "sourcePageQuestion": "598",
+          "sourcePageAnswer": "599"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AからBに不動産の売却が行われたが、Bに代金不払いが生じたため、AはBに対し相当の期間を定めて履行を催告したうえで、その売買契約を解除した場合に、Bから解除後にその不動産を買い受けたCは、善意であっても登記を備えなければ保護されない。",
+          "answerBoolean": true,
+          "explanationText": "不動産の売買契約が解除された場合、売主と解除後に利害関係を有するに至った第三者との優劣は、登記の先後で決すべきであるとされている（最判昭35.11.29）。したがって、Bから解除後に不動産を買い受けたCは、善意であっても登記を備えなければ保護されない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "登記を対抗要件とする物権変動",
+          "sourcePageQuestion": "598",
+          "sourcePageAnswer": "599"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが所有する甲土地につき、Bの所有権の取得時効が完成し、その後、Bがこれを援用した。Bの時効完成前に、CがAから甲を買い受けて所有権移転登記を了した場合、Bは、Cに対して、登記なくして時効による所有権取得をもって対抗することができる。",
+          "answerBoolean": true,
+          "explanationText": "時効完成前に不動産を譲り受けた者（C）に対しては完全に所有権を取得し、登記を必要としない（最判昭41.11.22）。したがって、Bは、登記がなくても、Cに対して、時効による所有権取得を主張することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "登記を対抗要件とする物権変動",
+          "sourcePageQuestion": "598",
+          "sourcePageAnswer": "599"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "A所有の甲地につきBの取得時効が完成した後に、Aが甲地をCに譲渡した場合、Bは登記なくしてCに対抗できる。",
+          "answerBoolean": false,
+          "explanationText": "時効完成後に、元の所有者から当該土地を譲り受けた者に対して、時効取得者は、登記なくして所有権取得を対抗できない（最判昭33.8.28）。したがって、Bは、取得時効完成後に甲地を譲り受けたCに対して、登記を備えなければ、甲地所有権の取得を対抗できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "登記を対抗要件とする物権変動",
+          "sourcePageQuestion": "598",
+          "sourcePageAnswer": "599"
+        }
+      ]
+    },
+    {
       "sourcePage": "249",
       "originalProblemId": "KB2025-p249-q01",
       "bookId": "KB2025",
