@@ -19141,6 +19141,1326 @@
           "sourcePageAnswer": "643"
         }
       ]
+    },
+    {
+      "sourcePage": "271",
+      "originalProblemId": "KB2025-p271-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "動産の質権者が占有を奪われた場合、占有回収の訴えによって質物を奪り戻すことができるほか、質権に基づく物権的請求権によっても質物を取り戻すことができる。",
+          "answerBoolean": false,
+          "explanationText": "民法353条は、「動産質権者は、質物の占有を奪われたときは、占有回収の訴えによってのみ、その質物を回復することができる」と定めており、質権に基づいて返還請求できず、占有回収の訴えによる返還請求だけが認められている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "644",
+          "sourcePageAnswer": "645"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債務者が他人の所有に属する動産につき質権を設定した場合であっても、債権者は、その動産が債務者の所有物であることについて過失なく信じたときは、質権を即時取得することができる。",
+          "answerBoolean": true,
+          "explanationText": "即時取得に関する民法192条の「動産について行使する権利」とは、所有権と質権のことであるため、債務者が他人の所有に属する動産につき質権を設定した場合であっても、債権者は質権を即時取得することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "644",
+          "sourcePageAnswer": "645"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "不動産質権者は、設定者の承諾を得ることを要件として、目的不動産の用法に従ってその使用収益をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "不動産質権者は、設定者の承諾を得ることなく、目的不動産の用法に従ってその使用収益をすることができる（民法356条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "644",
+          "sourcePageAnswer": "645"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "不動産質権は、目的不動産を債権者に引き渡すことによってその効力を生ずるが、不動産質権者は、質権設定登記をしなければ、その質権をもって第三者に対抗することができない。",
+          "answerBoolean": true,
+          "explanationText": "不動産質権は、目的不動産を債権者に引き渡すことによってその効力を生じるが（民法344条）、質権設定登記をしなければ第三者に対抗することができない（177条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "644",
+          "sourcePageAnswer": "645"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "質権は、債権などの財産権の上にこれを設定することができる。",
+          "answerBoolean": true,
+          "explanationText": "質権は、債権などの財産権の上にこれを設定することができる（権利質：民法362条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "644",
+          "sourcePageAnswer": "645"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "抵当権は、不動産のほか、地上権及び永小作権を目的として設定することができる。",
+          "answerBoolean": true,
+          "explanationText": "抵当権は、不動産のほか、地上権および永小作権も、抵当権の目的とすることができる（民法369条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "644",
+          "sourcePageAnswer": "645"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "272",
+      "originalProblemId": "KB2025-p272-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "抵当権の効力は、原則として、抵当地の上の建物にも及ぶ。",
+          "answerBoolean": false,
+          "explanationText": "土地と建物は、別々の不動産であるので、土地に抵当権を設定しても、その上の建物には抵当権の効力は及ばない（民法370条参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "同一の不動産に複数の抵当権を設定することはできない。",
+          "answerBoolean": false,
+          "explanationText": "民法373条は、「同一の不動産について数個の抵当権が設定されたときは、その抵当権の順位は、登記の前後による」と規定しており、同一の不動産に複数の抵当権を設定できることを前提としている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "抵当権の効力は、設定行為に別段の定めがない限り、抵当不動産の付加一体物には及ばない。",
+          "answerBoolean": false,
+          "explanationText": "抵当権の換価価値を確保するため、抵当権の効力は、設定行為に別段の定めがある場合等を除き、その目的である不動産（抵当不動産）に付加して一体となっている物にも及ぶ（民法370条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AはBに金銭を貸し付け、この貸金債権を担保するためにB所有の建物に抵当権の設定を受けて、その登記を備えている場合、Aの抵当権が実行されたとしても、抵当権設定時に建物内に置いていたB所有の家電製品のテレビには抵当権の効力は及ばない。",
+          "answerBoolean": true,
+          "explanationText": "抵当権は、抵当地の上に存する建物を除き、その目的である不動産に付加して一体となっている物にも及ぶ（民法370条本文）。もっとも、建物内に置かれていたテレビは、建物から完全に独立した物であり、「付加して一体となっている物」に当たらない。したがって、Aの抵当権が実行された場合、抵当権設定時に建物内に置かれていたB所有の家電製品のテレビには抵当権の効力は及ばない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "抵当権の効力は、原則として、抵当権設定当時の従物にも及ぶ。",
+          "answerBoolean": true,
+          "explanationText": "抵当権の効力は、抵当権設定当時の従物にも及ぶ（大連判大8.3.15）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "抵当権の効力は抵当不動産の従物にも及ぶが、抵当不動産とは別個に従物について対抗要件を具備しなければ、その旨を第三者に対して対抗することができない。",
+          "answerBoolean": false,
+          "explanationText": "抵当権の効力は抵当不動産の従物にも及ぶ。そして、従物は、主物の処分に従うことから（民法87条2項）、主たる不動産に登記が備わることによって、従物の物権変動も公示される結果、従物について対抗要件を具備していなくても、その旨を第三者に対抗することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "借地上の建物に抵当権が設定された場合、その建物の抵当権の効力は、特段の合意がない限り借地権には及ばない。",
+          "answerBoolean": false,
+          "explanationText": "借地上の建物に設定した抵当権の効力は、抵当目的物の従たる権利である賃借権にも及ぶ（最判昭40.5.4）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "抵当権の効力及び目的物の範囲",
+          "sourcePageQuestion": "646",
+          "sourcePageAnswer": "647"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "273",
+      "originalProblemId": "KB2025-p273-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "抵当権の効力は、常に、抵当不動産から生じた果実にも及ぶ。",
+          "answerBoolean": false,
+          "explanationText": "抵当権は、その担保する債権について不履行があったときは、その後に生じた抵当不動産の果実に及ぶ（民法371条）。すなわち、抵当権の効力は設定後いつでも果実に及ぶわけではなく、被担保債権の債務不履行が生じた後でなければ及ばない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "648",
+          "sourcePageAnswer": "649"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AはBに金銭を貸し付け、この貸金債権を担保するためにB所有の建物に抵当権の設定を受けて、その登記を備えた後に、Bが同抵当建物をEに賃貸した場合、BのAに対する債務不履行後に生じた賃料について抵当権の効力が及ぶので、抵当権の実行としてAはこの賃料から優先的に弁済を受けることができる。",
+          "answerBoolean": true,
+          "explanationText": "抵当権は、その目的物の売却、賃貸、滅失または損傷によって債務者が受けるべき金銭その他の物に対しても、行使することができる（物上代位：民法372条、304条1項本文）。そして、賃料に対する物上代位も可能である（最判平1.10.27）。したがって、抵当権設定登記後BのAに対する債務不履行後Bが同抵当建物をEに賃貸した場合、BのAに対する債務不履行後に生じた賃料について抵当権の効力が及ぶので、抵当権の実行としてAはこの賃料から優先的に弁済を受けることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "648",
+          "sourcePageAnswer": "649"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに金銭を貸し付け、この貸金債権を担保するためにB所有の建物に抵当権の設定を受けて、その登記を備えた。Bが本件建物をCに賃貸した後、CがDに対して本件建物を転貸したときは、Aは、物上代位権を行使して、CのDに対する転貸賃料債権を差し押さえることができる。",
+          "answerBoolean": false,
+          "explanationText": "抵当不動産の賃借人が抵当不動産を転貸した場合、抵当権者は、抵当不動産の賃借人を所有者と同視することを相当とするときを除き、物上代位権を行使して、賃借人が取得する転貸賃料債権を差し押さえることはできない（最決平12.4.14）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "648",
+          "sourcePageAnswer": "649"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bに対する金銭債権を担保するため、BからCが賃借している甲建物に抵当権の設定を受け、その旨の登記がなされた。その後、BはCからも金銭を借り受けた。この場合、Aが抵当権に基づく物上代位権を行使して当該賃料債権を差し押さえたときであっても、Cは、Bに対する金銭債権を自動債権として、賃料債権との相殺をもってAに対抗することができる。",
+          "answerBoolean": false,
+          "explanationText": "抵当権者が差押えをした後は、賃借人は、抵当権設定登記の後に賃貸人に対して取得した債権を自動債権とする賃料債権との相殺をもって、抵当権者に対抗することはできない（最判平13.3.13）。したがって、Cは、Bに対する金銭債権を自動債権として、賃料債権との相殺をすることができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "648",
+          "sourcePageAnswer": "649"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは、Bから甲建物を買戻特約付きで買い受け、その旨の登記がなされた後、Cのために甲建物に抵当権を設定し、その旨の登記がなされた。その後、Bが甲建物の買戻権を行使した。AのBに対する買戻代金債権につき、Aの債権者Dが差し押さえたときであっても、Cは、当該買戻代金債権に対して抵当権に基づく物上代位権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "買戻特約付売買の買主（A）から目的不動産（甲建物）につき抵当権の設定を受けた者（C）は、抵当権に基づく物上代位の行使として、買戻権の行使により買主（A）が取得した買戻代金債権を差し押さえることができる（最判平11.11.30）。債権者の差押えよりも前に、抵当権の存在が登記により公示されているからである。したがって、Cは、買戻代金債権に対して抵当権に基づく物上代位権を行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "648",
+          "sourcePageAnswer": "649"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "274",
+      "originalProblemId": "KB2025-p274-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBに対する金銭債権を担保するため、B所有の甲建物に抵当権の設定を受けて登記を備えた後に、BがCに甲建物を賃貸した場合、BのCに対する賃料債権がBからDに譲渡され、Cが確定日付のある証書による承諾をしたとしても、Aは、自ら賃料債権を差し押さえて抵当権に基づく物上代位権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平10.1.30）は、抵当権の効力が抵当権設定登記の公示により物上代位の目的債権にも及んでいることから、抵当権者（A）は、物上代位の目的債権（BのCに対する賃料債権）が譲渡され第三者に対する対抗要件が備えられた後においても、自ら目的債権を差し押さえて物上代位権を行使することができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "650",
+          "sourcePageAnswer": "651"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、自己所有の甲建物をBに賃貸していたところ、Aの一般債権者CがAのBに対する賃料債権を差し押さえ、差押命令がBに送達された。その後、Aに対して金銭債権を有するDが当該債権の担保としてAから甲建物に抵当権の設定を受け、その旨の登記がなされた。この場合、Dは、AのBに対する賃料債権について抵当権に基づく物上代位権を行使することができない。",
+          "answerBoolean": true,
+          "explanationText": "一般債権者の差押えと抵当権者の物上代位に基づく差押えが競合した場合には、両者の優劣は一般債権者の申立てによる差押命令の第三債務者への送達と抵当権設定登記の先後によって決せられ、右の差押命令の第三債務者への送達が抵当権設定登記より先であれば、抵当権者は配当を受けることができない（最判平10.3.26）。したがって、Dは、AのBに対する賃料債権に対して抵当権に基づく物上代位権を行使することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "650",
+          "sourcePageAnswer": "651"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aに対して債務を負うBは、Aのために、自己が所有する土地に抵当権を設定した。BがAに対し、残存元本に加えて、最後の2年分の利息および遅延損害金を支払った場合には、Aの抵当権は、確定的に消滅する。",
+          "answerBoolean": false,
+          "explanationText": "抵当権設定者・債務者Bは、元本債権および満期となった利息等の全額を抵当権者Aに弁済しなければ、抵当権は消滅しないから、本肢は誤っている。すなわち、民法375条は、抵当権者は最後の2年分の利息（375条1項）・遅延損害金（375条2項）についてのみ行使することができる旨規定するが、これは、予想外に増大しうる既存の抵当権の被担保債権額の範囲を設定し、後順位抵当権者や一般債権者を保護するものであり、債務者との関係では適用されないのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "650",
+          "sourcePageAnswer": "651"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "275",
+      "originalProblemId": "KB2025-p275-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "抵当権者は、抵当不動産の交換価値の実現が妨げられ抵当権者の優先弁済請求権の行使が困難となるような状態がある場合には、抵当不動産の所有者に対して有する抵当不動産を適切に維持または保存するよう求める請求権を保全するために、所有者の不法占有者に対する妨害排除請求権を代位行使できる。",
+          "answerBoolean": true,
+          "explanationText": "抵当不動産の所有者は、抵当権に対する侵害が生じないよう抵当不動産を適切に維持管理することが予定されているから、本肢所定の事情が存するときには、抵当権者は、抵当不動産を適切に維持・保存するように求める請求権を保全するため、所有者の不法占有者に対する妨害排除請求権を代位行使（民法423条1項本文参照）することができる（最大判平11.11.24）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "652",
+          "sourcePageAnswer": "653"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが自己の所有する甲不動産に抵当権をBのために設定し、その旨の登記をした。Aは、競売手続を妨害する目的でCに賃貸し、甲不動産の交換価値の実現を妨げ、Bの優先弁済請求権の行使を困難にした。Bが抵当権に基づく妨害排除請求権を行使した場合において、Aが甲不動産を適切に維持管理することが期待できないときは、Cに対し、直接自己に甲不動産の明渡しを請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平17.3.10）は、抵当権に基づく妨害排除請求権の行使に当たり、抵当不動産の所有者において抵当権に対する侵害が生じないように抵当不動産を適切に維持管理することが期待できない場合には、抵当権者は、占有者に対し、直接自己への抵当不動産の明渡しを求めることができるとしている。したがって、Bは、Cに対して、直接自己に甲不動産の明渡しを請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "652",
+          "sourcePageAnswer": "653"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに対する貸金債権を担保するため、C所有の甲不動産に抵当権の設定を受けその旨の登記をした。Cが故意に甲不動産を損傷させた場合、Aは、甲不動産が被担保債権を満足するに足る担保価値を有していたときは、Cに対して損害賠償を請求することはできない。",
+          "answerBoolean": true,
+          "explanationText": "抵当不動産が故意過失によって損傷した場合、抵当権者は、損害賠償を請求することができるが（民法709条）、抵当権は担保価値を把握することにその本質があるから、抵当不動産が損傷されたとしても被担保債権を満足するに足る担保価値を有する場合には、「損害」があったとはいえない（大判昭3.8.1）。したがって、本所定の場合、Aは、Cに対して、損害賠償を請求することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "652",
+          "sourcePageAnswer": "653"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "工場抵当法により工場に属する建物とともに抵当権の目的とされた動産が、抵当権者に無断で同建物から搬出された場合には、第三者が即時取得しない限り、抵当権者は、目的動産をもとの備付場所である工場に戻すことを請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭57.3.12）は、工場抵当法により工場に属する土地または建物とともに抵当権の目的とされた動産が、備え付けられた工場から抵当権者の同意を得ないで搬出された場合には、第三者において即時取得をしない限りは、抵当権者は、搬出された目的動産をもとの備付場所である工場に戻すことを請求することができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "652",
+          "sourcePageAnswer": "653"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "276",
+      "originalProblemId": "KB2025-p276-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bに対する債務を担保するため、BのためにA所有の甲地に抵当権を設定し、この抵当権が実行されてCが甲地を買い受けた。抵当権設定当時甲地にA所有の建物が建っていたが、Aが抵当権設定後この建物を取り壊して旧建物と同一規模の新建物を建てた場合、新建物のために法定地上権は成立しない。",
+          "answerBoolean": false,
+          "explanationText": "抵当地上の建物が再築された場合には、旧建物のために法定地上権が成立する場合におけると同一の範囲内で、新建物のために法定地上権が成立する（大判昭10.8.10）。抵当権設定時には、法定地上権の成立要件を満たしているため、旧建物を基準として法定地上権の成立を認めても、抵当権者が不当に害されることにはならないためである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "法定地上権",
+          "sourcePageQuestion": "654",
+          "sourcePageAnswer": "655"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが自己所有の土地と建物に共同抵当権を設定したが、建物が滅失したため、新たに建物を再築した。その後、土地について抵当権が実行され、その土地は買受人Bが取得した。この場合、再築の時点での土地の抵当権者が再築建物について土地の抵当権と同順位の共同抵当権の設定を受けた等の事情のない限り、再築建物のために法定地上権は成立しない。",
+          "answerBoolean": true,
+          "explanationText": "本肢所定の場合には、法定地上権は成立しない。所有者が土地および地上建物に共同抵当権を設定した後に建物が取り壊され、土地上に新たに建物が建築された場合には、新建物の所有者が土地の所有者と同一であり、かつ、新建物が建築された時点での土地の抵当権者が新建物について土地の抵当権と同順位の共同抵当権の設定を受けたなどの特段の事情のない限り、新建物のために法定地上権は成立しない（最判平9.2.14）。土地と建物に共同抵当が設定された場合、抵当権者は、建物が取り壊されたときは、土地について法定地上権の制約のない更地として評価しようとするのが合理的意思だからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "法定地上権",
+          "sourcePageQuestion": "654",
+          "sourcePageAnswer": "655"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに対する債務を担保するため、BのためにA所有の甲地に抵当権を設定し、この抵当権が実行されてCが甲地を買い受けた。Bのための一番抵当権設定当時甲地は更地であったが、Fのために二番抵当権が設定される前に甲地に建物が建てられた場合、Fの申立てに基づいて土地抵当権が実行されたときは、この建物のために法定地上権が成立する。",
+          "answerBoolean": false,
+          "explanationText": "更地に1番抵当権を設定後、建物を築造し、次いで土地に2番抵当権を設定し、2番抵当権者の申立てにより競売された場合に法定地上権が成立するか否かについて、判例は、法定地上権が成立するかは1番抵当権を基準とし、Fの2番抵当権が実行されても法定地上権は成立しないとする（最判昭47.11.2）。1番抵当権設定時には、法定地上権の制約のない更地として評価されているからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "法定地上権",
+          "sourcePageQuestion": "654",
+          "sourcePageAnswer": "655"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bに対する債務を担保するため、BのためにA所有の甲地に抵当権を設定し、この抵当権が実行されてCが甲地を買い受けた。抵当権設定当時甲地にA所有の建物が建っていたが、Aが抵当権設定後この建物をDに譲渡し、Dのために甲地に賃借権を設定した場合に、この建物のために法定地上権は成立しない。",
+          "answerBoolean": false,
+          "explanationText": "抵当権設定当時に本件土地および建物は同一人に帰属し、抵当権者も法定地上権の成立を予測していたので、その後に別異の者に帰属することになっても法定地上権は成立する（大連判大12.12.14）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "法定地上権",
+          "sourcePageQuestion": "654",
+          "sourcePageAnswer": "655"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "277",
+      "originalProblemId": "KB2025-p277-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bに対する債務を担保するため、BのためにA所有の甲地に抵当権を設定し、この抵当権が実行されてCが甲地を買い受けた。抵当権設定当時甲地にはE所有の建物が建っていたが、抵当権設定後この建物をAが買い受け、抵当権実行時にこの建物はAの所有となっていた場合、この建物のために法定地上権は成立しない。",
+          "answerBoolean": true,
+          "explanationText": "抵当権設定当時に本件土地および建物は異なる所有者に帰属していたのであり、法定地上権の成立要件をみたさず、この建物のために法定地上権は成立しない（最判昭44.2.14）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "656",
+          "sourcePageAnswer": "657"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBから土地を借りてその土地上に建物を所有している場合において、Aは、その建物上に甲抵当権を設定したが、Bから土地を取得した後に、さらにその建物に乙抵当権を設定した。その後、甲抵当権が実行され、その建物は買受人Cが取得した場合、この建物のために法定地上権は成立しない。",
+          "answerBoolean": false,
+          "explanationText": "「建物」を目的とする1番抵当権設定時には土地と建物が別人所有であったが、2番抵当権設定時には同一人所有となった場合、法定地上権が成立する（大判昭14.7.26）。建物抵当の場合、法定地上権が成立しても担保価値は下落せず、1番抵当権は害されないからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "656",
+          "sourcePageAnswer": "657"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがBから土地を借りてその土地上に建物を所有している場合において、Bは、その土地上に甲抵当権を設定したが、Aから建物を取得した後に、さらにその土地に乙抵当権を設定した。その後、Bは、甲抵当権の被担保債権について弁済したので甲抵当権は消滅したが、乙抵当権の被担保債権については弁済できなかったので、乙抵当権が実行され、その土地は買受人Cが取得した。この場合、この建物のために法定地上権は成立しない。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合、法定地上権が成立する。すなわち、「土地」を目的とする1番抵当権設定時に土地と建物が別人所有であった場合には、法定地上権は成立しない（最判平2.1.22）。しかし、2番抵当権が設定された後、1番抵当権が消滅し、その後、2番抵当権の実行により土地と建物の所有者を異にすることになった場合には、法定地上権が成立する（最判平19.7.6）。2番抵当権者は、1番抵当権が設定契約の解除等により消滅することを予測した上、担保価値を把握すべきだからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "656",
+          "sourcePageAnswer": "657"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "建物が存在する土地を目的とする先順位の甲抵当権と後順位の乙抵当権が設定された後、甲抵当権が設定契約の解除により消滅し、その後、乙抵当権の実行により土地と地上建物の所有者を異にするに至った場合において、当該土地と建物が、甲抵当権の設定時には同一の所有者に属していなかったとしても、乙抵当権の設定時に同一の所有者に属していたときは、法定地上権が成立する。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平19.7.6）は、建物が存在する土地を目的とする先順位の甲抵当権と後順位の乙抵当権が設定された後、甲抵当権が設定契約の解除により消滅し、その後、乙抵当権の実行により土地と地上建物の所有者を異にするに至った場合において、当該土地と建物が、甲抵当権の設定時には同一の所有者に属していなかったとしても、乙抵当権の設定時に同一の所有者に属していたときは、法定地上権が成立するとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "656",
+          "sourcePageAnswer": "657"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "278",
+      "originalProblemId": "KB2025-p278-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AとBが建物を共同で所有し、Aがその建物の敷地を単独で所有している場合において、土地上に設定された抵当権が実行され、買受人Cが取得したときは、地上建物のために法定地上権は成立しない。",
+          "answerBoolean": false,
+          "explanationText": "建物が共有（AB）で、土地が単独所有（A）の場合には、法定地上権が成立する（最判昭46.12.21）。土地所有者（A）との関係では、法定地上権の成立要件をみたすし、他の建物共有者（B）との関係では、法定地上権の成立を認めても、その者に酷とはならず、むしろ利益となるからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "658",
+          "sourcePageAnswer": "659"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "XとA共有の甲土地上に、X単独所有の乙建物が建っている場合、BがXに対する債権を担保するため、Xの甲土地共有持分に抵当権が設定され、その抵当権が実行されたときは、乙建物のために法定地上権が成立する。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭29.12.23）は、土地共有者の1人（X）について法定地上権発生事由（民法388条）が生じたとしても、他の共有者（A）の意思に基づかずにその者（A）の持分にまで法定地上権の負担が生じるとするのは不当であることから、当該共有土地について法定地上権は成立しないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "658",
+          "sourcePageAnswer": "659"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "XとA共有の甲土地上に、XとB共有の乙建物が建っている場合、CがXに対する債権を担保するため、Xの甲土地共有持分に抵当権が設定され、その抵当権が実行されたときは、原則として、乙建物のために法定地上権が成立する。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判平6.12.20）は、土地共有者の1人（X）について法定地上権発生事由（民法388条）が生じたとしても、他の共有者（A）がその持分に基づく土地に対する使用収益権を事実上放棄し、土地共有者（X）の処分に委ねていたことなどにより法定地上権の発生をあらかじめ容認していた特段の事情がある場合でない限り、共有土地について法定地上権は成立しないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "658",
+          "sourcePageAnswer": "659"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AはBに金銭を貸し付け、この貸金債権を担保するためにB所有の土地の上に建っているB所有の建物に抵当権の設定を受けて、その登記を備えた場合、抵当権設定時にB所有の土地の登記名義がCであったとしても、抵当権実行により買受人Dのために法定地上権が成立する。",
+          "answerBoolean": true,
+          "explanationText": "土地およびその上に存する建物が同一の所有者に属する場合において、その土地または建物につき抵当権が設定され、その実行により所有者を異にするに至ったときは、その建物について、地上権が設定されたものとみなされる（法定地上権：民法388条前段）。そして、土地およびその地上建物の所有者が建物について土地の所有権移転登記を経由していなくとも、法定地上権は成立する（最判昭48.9.18、最判昭53.9.29）。したがって、抵当権設定時にB所有の土地の登記名義はCであった場合でも、抵当権実行により買受人Dのために法定地上権が成立する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "658",
+          "sourcePageAnswer": "659"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "279",
+      "originalProblemId": "KB2025-p279-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "抵当権設定後に抵当地に建物が築造された場合に、その建物が抵当権設定者以外の者によって築造されたときは、土地の抵当権者は、抵当地と共に一括してその建物を競売することはできない。",
+          "answerBoolean": false,
+          "explanationText": "抵当権の設定後に抵当地に建物が築造されたときは、築造した主体が抵当権設定者であるか否かを問わずに、抵当権者は、土地とともにその建物を一括して競売することができる（民法389条1項本文）。なお、建物から優先弁済を受けることはできない（389条1項ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "一括競売",
+          "sourcePageQuestion": "660",
+          "sourcePageAnswer": "661"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AはBに金銭を貸し付け、この貸金債権を担保するためにB所有の建物に抵当権の設定を受けて、その登記を備えた後に、Bが同抵当建物をFに賃貸した場合、対抗要件を備えた短期の賃貸借であっても、賃借人Fは抵当権実行による買受人Gに対抗できない。",
+          "answerBoolean": true,
+          "explanationText": "抵当権の設定登記後に設定された賃貸借は、原則として抵当権者に対抗できないから、その不動産の買受人は、買受後その賃借人に対して明渡しを求めることができ、他方で、抵当権に後れる賃借権の存続（民法387条）と、競売後一定期間（6か月）の明渡猶予の制度（395条）による保護を受けているだけである。したがって、抵当権に後れる賃借人保護の事情のない本肢においては、対抗要件を備えた短期の賃貸借であっても、賃借人Fは抵当権実行による買受人Gに対抗できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "抵当権者に対抗できない賃借人の地位",
+          "sourcePageQuestion": "660",
+          "sourcePageAnswer": "661"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "登記された賃貸借は、その登記前に抵当権の登記をしている抵当権者のすべてが、その賃借権に対抗力を与えることに同意し、かつ、その同意の登記があるときは、その同意をした抵当権者に対抗することができる。",
+          "answerBoolean": true,
+          "explanationText": "登記をした賃貸借は、その登記前に登記をした抵当権を有するすべての者が同意をし、かつ、その同意の登記があるときは、その同意をした抵当権者に対抗することができる（民法387条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "抵当権者に対抗できない賃借人の地位",
+          "sourcePageQuestion": "660",
+          "sourcePageAnswer": "661"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "抵当権者に対抗することができない賃貸借に基づく抵当建物の占有者が、競売手続の開始前よりその建物を使用または収益をしているときは、建物の占有者は、建物の競売による買受けの時から6か月間は、買受人に対して建物を引き渡すことを要しない。",
+          "answerBoolean": true,
+          "explanationText": "抵当権の設定登記後に設定された賃貸借は、原則として抵当権者に対抗できない。ただし、抵当権者に対抗することができない賃貸借であっても、より抵当権の目的である建物の使用または収益をする者であって、競売手続の開始前から使用または収益をする者については、その建物が競売された場合、不動産収益執行の管理人が競売手続の開始後にした賃貸借により使用または収益をする者については、その建物の競売における買受人の買受けの時から6か月の建物の明渡猶予が与えられる（民法395条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "抵当権者に対抗できない賃借人の地位",
+          "sourcePageQuestion": "660",
+          "sourcePageAnswer": "661"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "280",
+      "originalProblemId": "KB2025-p280-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AはBに金銭を貸し付け、この貸金債権を担保するためにB所有の建物に抵当権の設定を受けて、その登記を備えた後に、Bが抵当建物をHに賃貸してHがその旨の登記を備えた場合、抵当権実行による買受人Iからの明渡請求に対して、賃借人Hは、明渡しまでの使用の対価を支払うことなく、6ヶ月の猶予期間を与えられる。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合、Hは、使用の対価を支払わなければならないから、本肢は誤っている。すなわち、抵当権者に対抗することができない賃借権により抵当建物の使用または収益をする者で、民法395条1項各号所定の者は、その抵当権が実行されて買受人の買受け時から6か月間は明渡しが猶予される（395条1項）。買受人と賃借人には賃貸借契約は存在しないが、明渡しまでの使用の対価を支払うのは当然であり、賃料相当額を不当利得として支払わなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "662",
+          "sourcePageAnswer": "663"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは甲建物を抵当権の実行による競売により買い受けたが、甲建物には、抵当権設定後に従前の所有者より賃借したBが居住している。AはBに対し、相当の期間を定めて甲建物の賃料1ヶ月分以上の支払いを催告したが、期間経過後もBが賃料を支払わない場合には、Aは買受け後6ヶ月を経過した後、Bに対して建物の明け渡しを求めることができる。",
+          "answerBoolean": false,
+          "explanationText": "抵当建物使用者の引渡しの猶予に関する民法395条1項の要件を満たす場合であっても、建物使用の対価について、買受人（A）が抵当建物使用者（B）に対し相当の期間を定めてその1か月分以上の支払の催告をし、その相当の期間内に履行がないときは、買受人（A）は、6か月の経過を待たなくても、建物明渡しを建物使用者（B）に求めることができる（395条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "662",
+          "sourcePageAnswer": "663"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "抵当不動産の第三取得者が、一定の金額を抵当権者に提供してその抵当権を消滅させることを代価弁済という。",
+          "answerBoolean": false,
+          "explanationText": "抵当不動産の第三取得者が、一定の金額を抵当権者に提供して抵当権の消滅を請求する制度を抵当権消滅請求という（民法379条）。第三取得者にイニシアチブがある点で抵当権者の請求に応じてなす代価弁済（378条）と異なる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "抵当不動産の第三取得者の保護",
+          "sourcePageQuestion": "662",
+          "sourcePageAnswer": "663"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "抵当不動産について所有権を取得した第三者は、抵当権者に対して抵当権消滅請求をすることができるが、抵当権者は、これに対し、抵当権消滅請求を受けた後2か月以内に、通常と同様の手続で競売の申立てをすることができる。",
+          "answerBoolean": true,
+          "explanationText": "抵当権消滅請求の手続は、第三取得者が、登記をした各債権者に対して、民法383条所定の書面を送付することから始まる。そして、各債権者が消滅請求の申出を承諾すると、第三取得者が申出額を債権の順位に従って払渡しまたは供託することで、抵当権は消滅する（386条）。また、書面の送達を受けた債権者は、送達を受けた後2か月以内に抵当権を実行して競売を申し立てなければ、抵当権消滅請求を承諾したものとみなされる（384条1号）。したがって、抵当権者は、抵当権消滅請求を受けた後2か月以内であれば、通常と同様の手続で競売の申立てをすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "抵当不動産の第三取得者の保護",
+          "sourcePageQuestion": "662",
+          "sourcePageAnswer": "663"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "281",
+      "originalProblemId": "KB2025-p281-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "抵当権の順位は、各抵当権者の合意だけで変更することができるが、利害関係人の承諾を必要としない。",
+          "answerBoolean": false,
+          "explanationText": "抵当権の順位は、各抵当権者の合意によって変更することができるが、利害関係を有する者があるときは、その承諾を得なければならない（民法374条1項）。利害関係人とは、転抵当権者や、被担保債権の差押権者など抵当権の順位変更によって影響を受ける者である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "抵当権の処分",
+          "sourcePageQuestion": "664",
+          "sourcePageAnswer": "665"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "抵当権者は、その抵当権を他の債権の担保とすることができる。",
+          "answerBoolean": true,
+          "explanationText": "抵当権者は、その抵当権を他の債権の担保とすることができる（転抵当：民法376条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "抵当権の処分",
+          "sourcePageQuestion": "664",
+          "sourcePageAnswer": "665"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "抵当権は、1つの債権につき1つしか設定することができない。",
+          "answerBoolean": false,
+          "explanationText": "抵当権の担保機能を確実にするため、抵当権は、1つの債権を担保するために、複数の抵当目的物（不動産・地上権・永小作権等）に設定することができる（共同抵当：民法392条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共同抵当",
+          "sourcePageQuestion": "664",
+          "sourcePageAnswer": "665"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、B所有の甲土地について地上権の設定を受けて、同土地上に乙建物を建築した。Aが同建物を建築するについては、そのための資金としてC銀行から融資を受けた。AのC銀行に対する債務の担保のために、Aが乙建物についてC銀行のために抵当権を設定するとともに、Bが物上保証人として甲土地についてC銀行のために抵当権を設定していた場合において、C銀行が抵当権を実行するには、まず乙建物から行う必要はない。",
+          "answerBoolean": true,
+          "explanationText": "同一の債権の担保として数個の不動産に抵当権を設定した場合（共同抵当）、抵当権者は、その数個の不動産を同時に競売してもいいし（同時配当：民法392条1項参照）、1つずつ順に競売してもよい（異時配当：392条2項参照）。したがって、抵当権者であるC銀行は、乙建物から抵当権を実行する必要はない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共同抵当",
+          "sourcePageQuestion": "664",
+          "sourcePageAnswer": "665"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "抵当権は、債務者および抵当権設定者に対する関係では、その抵当権によって担保されている債権と同時でなければ、時効によって消滅することはない。",
+          "answerBoolean": true,
+          "explanationText": "抵当権は、債務者および抵当権設定者に対しては、その担保する債権と同時でなければ、時効によって消滅しない（民法396条）。抵当権者に債務ないし責任を負う者に対して抵当権の消滅を認めるのは信義則に反し不合理であるからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "抵当権の消滅",
+          "sourcePageQuestion": "664",
+          "sourcePageAnswer": "665"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "282",
+      "originalProblemId": "KB2025-p282-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "根抵当権の被担保債権は、債務者との特定の継続的取引契約から生ずる債権に限られる。",
+          "answerBoolean": false,
+          "explanationText": "根抵当権の被担保債権は、債務者との特定の継続的取引によって生ずる債権だけに限られず、債務者との一定の種類の取引によって生ずる債権、特定の原因に基づいて債務者との間に継続して生ずる債権、手形上もしくは小切手上の請求権も含まれる（民法398条の2）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "根抵当権",
+          "sourcePageQuestion": "666",
+          "sourcePageAnswer": "667"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "根抵当権者は、元本が確定した時に存在する被担保債権の元本についてのみ、極度額を限度として、優先弁済を受けることができる。",
+          "answerBoolean": false,
+          "explanationText": "根抵当権においては、根抵当権者は、確定した元本だけでなく、利息その他の定期金および債務の不履行によって生じた損害の賠償の全部について、極度額を限度として、根抵当権を行使することができる（398条の3第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "根抵当権",
+          "sourcePageQuestion": "666",
+          "sourcePageAnswer": "667"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "被担保債権の範囲は、確定した元本および元本確定後の利息その他の定期金の2年分である。",
+          "answerBoolean": false,
+          "explanationText": "根抵当権者は、確定した元本並びに利息その他の定期金および債務の不履行によって生じた損害の賠償の全部について、極度額を限度として根抵当権を行使することができる（民法398条の3第1項）。根抵当権は極度額の定めにより後順位抵当権者の利益保護を図り得るため、通常の抵当権（利息等の「最後の2年分」と異なり（375条）、被担保債権の範囲は「2年分」に限定されていない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "根抵当権",
+          "sourcePageQuestion": "666",
+          "sourcePageAnswer": "667"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは債権者Bのため、A所有の甲土地に被担保債権の範囲をAB間の継続的売買に係る売掛代金債権とし、その極度額を1億円とする根抵当権を設定した。元本確定前に、ABは協議により、被担保債権の範囲にAB間の金銭消費貸借取引に係る債権を加えることで合意した。ABがこの合意を後順位抵当権者であるCに対抗するためには、被担保債権の範囲の変更についてCの承諾が必要である。",
+          "answerBoolean": false,
+          "explanationText": "元本の確定前においては、根抵当権の担保すべき債権の範囲を変更をすることができる（民法398条の4第1項前段）。そして、極度額という枠の中での被担保債権の変更は、後順位の抵当権者その他の第三者を害さないため、それらの者の承諾を得ることを要しない（398条の4第2項）。したがって、Cの承諾は不要である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "根抵当権",
+          "sourcePageQuestion": "666",
+          "sourcePageAnswer": "667"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは債権者Bのため、A所有の甲土地に被担保債権の範囲をAB間の継続的売買に係る売掛代金債権とし、その極度額を1億円とする根抵当権を設定した。元本確定前に、BがAに対して有する継続的売買契約に係る売掛代金債権をCに譲渡した場合、Cは、その債権について甲土地に対する根抵当権を行使することはできない。",
+          "answerBoolean": true,
+          "explanationText": "元本の確定前に根抵当権者から債権を取得した者は、その債権について根抵当権を行使することができない（民法398条の7第1項前段）。したがって、元本確定前に、Bから売掛代金債権を取得したCは甲土地に対する根抵当権を行使することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "根抵当権",
+          "sourcePageQuestion": "666",
+          "sourcePageAnswer": "667"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "283",
+      "originalProblemId": "KB2025-p283-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "元本確定期日は、当事者の合意のみで変更後の期日を5年以内の期日とする限りで変更することができるが、変更前の期日より前に変更の登記をしなければ、変更前の期日に元本が確定する。",
+          "answerBoolean": true,
+          "explanationText": "根抵当権の担保すべき元本については、5年以内の範囲で、元本確定期日を定めまたは変更することができるが（民法398条の6第1項、3項）、期日の変更については変更前の期日より前に変更の登記をしなかったときは、担保すべき元本は変更前の期日に確定する（同条4項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "668",
+          "sourcePageAnswer": "669"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "元本確定前に根抵当権者から被担保債権を譲り受けた者は、その債権について根抵当権を行使することができないが、元本確定前に被担保債務の免責的債務引受があった場合には、根抵当権者は、引受人の債務について、その根抵当権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "元本の確定前に根抵当権者から債権を取得した者は、その債権について根抵当権を行使することができないため（民法398条の7第1項前段）、前段は正しい。元本の確定前に債務の引受けがあったときは、根抵当権者は、引受人の債務について、その根抵当権を行使することができないため（同条2項）、後段は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "668",
+          "sourcePageAnswer": "669"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "元本の確定前においては、根抵当権者は、根抵当権設定者の承諾を得なくても、その根抵当権を譲渡できる。",
+          "answerBoolean": false,
+          "explanationText": "根抵当権者が誰であるかは根抵当権設定者にとって重大な利害関係を有するもので、元本の確定前においては、根抵当権者は、根抵当権設定者の承諾を得なければ、その根抵当権を譲渡できない（民法398条の12第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "668",
+          "sourcePageAnswer": "669"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "根抵当権の設定に当たっては、元本の確定期日を定めることを要し、この定めのない根抵当権の設定は、他の債務者を害するおそれがあるので無効である。",
+          "answerBoolean": false,
+          "explanationText": "根抵当権の設定に当たっては、元本の確定期日を定めなくてもよい。この場合には、確定請求（民法398条の19）および元本確定事由（398条の20）が生じたときに確定することになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "668",
+          "sourcePageAnswer": "669"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "担保すべき元本の確定すべき期日の定めがない場合、根抵当権設定者は、根抵当権の設定の時から3年を経過したときには担保すべき元本の確定を請求することができるが、根抵当権者も、担保すべき元本の確定を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "担保すべき元本の確定すべき期日の定めがない場合、根抵当権設定者は、根抵当権の設定の時から3年を経過したときは担保すべき元本の確定を請求することができ（民法398条の19第1項前段・3項）、根抵当権者は、いつでも、担保すべき元本の確定を請求することができる（398条の19第2項・3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "668",
+          "sourcePageAnswer": "669"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "根抵当権者は、元本確定期日の定めがある場合を除き、いつでも担保すべき元本の確定を請求することができ、この請求があったときには、その請求の時に担保すべき元本が確定する。",
+          "answerBoolean": true,
+          "explanationText": "確定により、担保される債権が特定されるため、普通抵当権に近い状態となる。根抵当権者のイニシアティブによる確定請求も認められている（民法398条の19第2項）。これは形成権であり、元本は請求の時に確定する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "668",
+          "sourcePageAnswer": "669"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "284",
+      "originalProblemId": "KB2025-p284-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aに対して債務を負うBは、Aのために、自己が所有する土地に根抵当権を設定した。Bが破産手続開始の決定を受けたときは、被担保債権は確定して満足し、根抵当権は確定的に消滅する。",
+          "answerBoolean": false,
+          "explanationText": "ここでいう「確定」は、担保される元本債権が特定され、それ以後に発生する元本債権は担保されなくなることであり、元本が確定しても根抵当権が消滅するわけではない。債務者・根抵当権設定者の破産手続開始決定により元本は確定するが（民法398条の20第1項4号）、根抵当権が確定的に消滅するわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "670",
+          "sourcePageAnswer": "671"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは債権者Bのため、A所有の甲土地に被担保債権の範囲をAB間の継続的売買に係る売掛代金債権とし、その極度額を1億円とする根抵当権を設定した。元本が確定し、被担保債権が6,000万円となった場合、Aは、Bに対して甲土地に対する根抵当権の極度額1億円を、6,000万円と以後2年間に生ずべき利息その他の定期金および債務の不履行による損害賠償の額とを加えた額に減額することを請求できる。",
+          "answerBoolean": true,
+          "explanationText": "元本の確定後においては、根抵当権設定者（A）は、その根抵当権の極度額を、現に存在する債務の額と以後2年間に生ずべき利息その他の定期金および債務の不履行による損害賠償の額とを加えた額に減額することを請求することができる（民法398条の21第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "670",
+          "sourcePageAnswer": "671"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは債権者Bのため、A所有の甲土地に被担保債権の範囲をAB間の継続的売買に係る売掛代金債権とし、その極度額を1億円とする根抵当権を設定した。元本が確定し、被担保債権が1億2,000万円となった場合、甲土地について地上権を取得したCは、Bに対して1億円を払い渡して根抵当権の消滅を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "元本の確定後において現に存在する債務の額が根抵当権の極度額を超えるときは、他人の債務を担保するためその根抵当権を設定した者または抵当不動産について所有権、地上権、永小作権もしくは第三者に 対抗することができる賃借権を取得した第三者は、その極度額に相当する金額を払い渡しまたは供託して、その根抵当権の消滅請求をすることができる（民法398条の22第1項前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "670",
+          "sourcePageAnswer": "671"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、自己所有の不動産につき、債権者Bのために譲渡担保権を設定し、所有権移転登記をした場合、Bが、譲渡担保権の実行として、Aに対し目的不動産の引渡しを求める訴えを提起したのに対し、Aが清算金の支払と引換えにその履行をすべき旨を主張したときは、特段の事情のある場合を除き、Bの請求は、Aへの清算金の支払と引換えにのみ認容される。",
+          "answerBoolean": true,
+          "explanationText": "譲渡担保権者が優先弁済を受ける方法としては、①目的物の所有権を自己に帰属させて債権の満足を図る方法（帰属清算型）、②目的物を売却して、その代金から弁済を受ける方法（処分清算型）がある。いずれも、債権者が担保目的実現の手段として、債務者に対し不動産の引渡し・明渡しを請求した場合、債務者が清算金の支払との引換えを主張したときは、特段の事情のある場合を除き、債権者の請求は債務者への清算金の支払と引換えにのみ認容される（最判昭46.3.25）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "譲渡担保",
+          "sourcePageQuestion": "670",
+          "sourcePageAnswer": "671"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "285",
+      "originalProblemId": "KB2025-p285-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "不動産の譲渡担保において、債権者はその実行に際して清算義務を負うが、清算金が支払われる前に目的不動産が債権者に譲渡された場合、原則として、債務者は残債務を弁済して目的物を受け戻すことはできず、このことは譲受人が背信的悪意者にあたるときであっても異ならない。",
+          "answerBoolean": true,
+          "explanationText": "譲渡担保権者が被担保債権の弁済期後に目的不動産を譲渡した場合には、譲渡担保を設定した債務者は、譲受人が背信的悪意者にあたるか否かにかかわらず、債務を弁済して目的不動産を受け戻すことができない（最判平6.2.22）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "672",
+          "sourcePageAnswer": "673"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "集合動産譲渡担保が認められる場合において、種類、量的範囲、場所で特定された集合物を譲渡担保の目的とする旨の設定契約が締結され、占有改定による引渡しが行われたときは、集合物としての同一性が損なわれない限り、後に新たにその構成部分となった動産についても譲渡担保に関する対抗要件の効力が及ぶ。",
+          "answerBoolean": true,
+          "explanationText": "集合動産譲渡担保の設定者がその構成部分である動産の占有を取得したときは、譲渡担保権者が占有改定の方法によって占有権を取得する旨の合意があり、譲渡担保権設定者がその構成部分として現に存在する動産の占有を取得した場合には、譲渡担保権者は譲渡担保につき対抗要件を具備すると認められ、その効力は新たにその構成部分となった動産を包含する集合物に及ぶ（最判昭62.11.10）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "672",
+          "sourcePageAnswer": "673"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "集合動産の譲渡担保において、設定者がその目的物である動産につき通常の営業の範囲を超える売却処分をしたときは、当該譲渡担保の目的である集合物から離脱したと認められない限り、当該処分の相手方は目的物の所有権を承継取得することはできない。",
+          "answerBoolean": true,
+          "explanationText": "集合動産に譲渡担保を設定した債務者が、その目的物である動産につき通常の営業の範囲を超える売却処分をした場合、当該譲渡担保の目的である集合物から離脱したと認められない限り、当該処分の相手方は目的物の所有権を承継取得することはできない（最判平18.7.20）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "672",
+          "sourcePageAnswer": "673"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "集合債権の譲渡担保において、当該譲渡につき譲渡人から債務者に対して確定日付のある証書によって通知が行われた場合、その対抗要件具備の効力は、将来において発生する債権についても及ぶ。",
+          "answerBoolean": true,
+          "explanationText": "集合債権を対象とした譲渡担保契約において、同契約に係る債権の譲渡を第三者に対抗するには、指名債権譲渡の対抗要件の方法によることができる（最判平13.11.22）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "672",
+          "sourcePageAnswer": "673"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "動産の譲渡担保権を第三者に対抗するためには目的物の引渡しが必要であるが、この引渡しには、公示性の乏しい占有改定による引渡しは含まれない。",
+          "answerBoolean": false,
+          "explanationText": "売渡担保契約がなされ債務者が引き続き担保物件を占有している場合には、債務者は占有の改定により債権者のために占有するものであり、債権者は本件物件につき所有権と共に占有権を取得しその引渡しを受けたことによりその所有権の取得をもって第三者に対抗することができる（最判昭30.6.2）。したがって、動産の譲渡担保権を第三者に対抗するためには目的物の引渡しが必要であるが、この引渡しには、占有改定による引渡しが含まれる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "672",
+          "sourcePageAnswer": "673"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "286",
+      "originalProblemId": "KB2025-p286-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債権は、排他性、絶対性を有し、債務者に対する影響が大きいため、原則として法律に定めがある場合に限られる。したがって、債権を登録する必要がある。",
+          "answerBoolean": false,
+          "explanationText": "債権は、適法であり、公序良俗に反せず、目的が可能であり、かつ、履行の時までに確定できるものであれば、当事者が自由に作り出すことができる。また、債権は、特定の債務者のみに対する権利であるから、排他性・絶対性を有しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の目的",
+          "sourcePageQuestion": "674",
+          "sourcePageAnswer": "675"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債権は、原則として譲渡することができる。",
+          "answerBoolean": true,
+          "explanationText": "債権は、原則として譲渡することができる（民法466条1項本文）。ただし、その性質が許さないときは、譲り渡すことができない（466条1項ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の目的",
+          "sourcePageQuestion": "674",
+          "sourcePageAnswer": "675"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "同一債務者に対する、同一の内容を目的とする債権が、2個以上の契約として成立することは可能である。",
+          "answerBoolean": true,
+          "explanationText": "債権が成立するためには、債権の目的が可能であることが必要であるが、同一内容を目的とする債権が同一債務者に対して2個以上成立しても、給付の目的は可能である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の目的",
+          "sourcePageQuestion": "674",
+          "sourcePageAnswer": "675"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが「もち米」を50キロ買う契約をB米店との間で行い、Bによる引渡しの準備がまだ終わっていない。目的物が特定される前に、隣家の火災によりB米店の「もち米」がすべて焼失してしまった場合、その焼失はBの責任ではないので、Bは他から「もち米」を再調達して引き渡す義務はない。",
+          "answerBoolean": false,
+          "explanationText": "本肢において、Bは、「もち米」を再調達して引き渡さなければならないから、本肢は誤っている。すなわち、本件売買は、「もち米」という種類のみで指定しているから（民法401条参照）、Bが負担する「もち米」の引渡債務は、種類債務であり、目的物が特定するまでその責めに帰することができない事由によって滅失しても、Bは、なおその種類に属する物（本肢では、「もち米」が市場に存在する限り、再度同種の物を調達して、Aに引き渡す義務を負うことになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の目的",
+          "sourcePageQuestion": "674",
+          "sourcePageAnswer": "675"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aが「もち米」を50キロ買う契約をB米店との間で行い、Bによる引渡しの準備がまだ終わっていない。Bは、目的物が特定されるまでの間は、B米店にある「もち米」の保管について善管注意義務を負うことはない。",
+          "answerBoolean": true,
+          "explanationText": "本件売買の目的物は、「もち米」という種類のみで指定しており（民法401条参照）、種類物である。もち米の引渡債務を負う売主Bは、引き渡すべき目的物を特定するまでの間（401条2項参照）、目的物の保管について善管注意義務を負わない（400条参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の目的",
+          "sourcePageQuestion": "674",
+          "sourcePageAnswer": "675"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "287",
+      "originalProblemId": "KB2025-p287-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aが「もち米」を50キロ買う契約をB米店との間で行い、Bによる引渡しの準備がまだ終わっていない。A・B間で取り決めがなければ、Bは上等な「もち米」を50キロ引き渡さなければならない。",
+          "answerBoolean": false,
+          "explanationText": "特別の取り決めのない本肢では、Bは、中等の品質を有する「もち米」をAに給付すればよいから、上等な「もち米」を引き渡さなければならないとする本肢は誤っている。すなわち、債権の目的物を種類のみで指定した場合、特別の取り決めがないときは、債務者は、中等の品質を有する物を債権者に給付しなければならないから（民法401条1項）、Bは、取り決めがなければ、上等な「もち米」ではなく、中等の品質を有する物をAに給付すればよいことになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "676",
+          "sourcePageAnswer": "677"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが「もち米」を50キロ買う契約をB米店との間で行い、Bによる引渡しの準備がまだ終わっていない。「もち米」50キロの所有権は、目的物が特定される前でも、特約がなければ、A・B間の売買契約をした時に移転する。",
+          "answerBoolean": false,
+          "explanationText": "特約のない本肢において、「もち米」の所有権は、Aに引き渡すべき「もち米」が特定したときに移転するから、売買契約時に「もち米」の所有権が移転するとする本肢は誤っている。すなわち、本件売買は、「もち米」という種類のみで指定しており（民法401条参照）、このように債権の目的物を種類のみで指定した場合、その所有権は、目的物が特定したときに債権者に移転する（最判昭35.6.24）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "676",
+          "sourcePageAnswer": "677"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、BとB所有の建物を購入する売買契約を締結したが、契約締結前にBの火の不始末により当該建物は焼失していた。Aは、建物の引渡しが原始的に履行不能であったことを理由として、建物の引渡しを請求することはできないため、損害賠償請求をすることができない。",
+          "answerBoolean": false,
+          "explanationText": "債務（売主Bの引渡債務）の履行が契約その他の債務の発生原因および取引上の社会通念に照らして不能であるときは、債権者（引渡請求権を有する買主A）は、目的物消滅のため履行請求はできないが（民法412条の2第1項）、契約の有効性を前提に、債務不履行責任に基づき履行不能による損害賠償請求はできる（412条の2第2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "676",
+          "sourcePageAnswer": "677"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AがBにAの所有する甲建物または乙建物のうちいずれかを売買する旨の契約が締結された場合、給付の目的を甲建物とするか乙建物とするかについての選択権は、A B間に特約がない場合には、Bに帰属する。",
+          "answerBoolean": false,
+          "explanationText": "債権の目的が数個の給付の中から選択によって定まる場合、選択権者について特に定めのない場合、選択権は債務者（引渡債務を負う売主A）に属する（民法406条）。債務者は、給付の選択について最も利害関係を有する者だからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "676",
+          "sourcePageAnswer": "677"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AがBにAの所有する甲建物または乙建物のうちいずれかを売買する旨の契約が締結され、A B間の特約によってAが選択権者となった場合、Aは、甲建物を選択する旨の意思表示をBに対してした後であっても、Bの承諾を得ることなく、その意思表示を撤回して、乙建物を選択することができる。",
+          "answerBoolean": false,
+          "explanationText": "選択権は、相手方に対する意思表示によって行使し、その意思表示は、相手方の承諾を得なければ撤回できない（民法407条2項）。したがって、Aは、甲建物を選択する意思表示をしているため、Bの承諾を得なければ意思表示を撤回して乙建物を選択することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "676",
+          "sourcePageAnswer": "677"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "288",
+      "originalProblemId": "KB2025-p288-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBにAの所有する甲建物または乙建物のうちいずれかを売買する旨の契約が締結され、AB間の特約によって第三者Cが選択権者となった場合、Cの選択権の行使は、AおよびBの両者に対する意思表示によってしなければならない。",
+          "answerBoolean": false,
+          "explanationText": "第三者が選択をすべき場合、その選択は債権者または債務者に対する意思表示によってする（民法409条1項）。したがって、Cは、A「および」Bの両者に対する意思表示によってしなければならないとする点で本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債務不履行",
+          "sourcePageQuestion": "678",
+          "sourcePageAnswer": "679"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBにAの所有する甲建物または乙建物のうちいずれかを売買する旨の契約が締結され、AB間の特約によって第三者Cが選択権者となった場合、Cが選択をすることができないときは、選択権は、Bに移転する。",
+          "answerBoolean": false,
+          "explanationText": "第三者が選択権者となった場合において、第三者が選択をすることができず、または選択をする意思を有しないときは、選択権は債務者（引渡債務を負う債務者A）に移転する（民法409条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債務不履行",
+          "sourcePageQuestion": "678",
+          "sourcePageAnswer": "679"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがBにAの所有する甲建物または乙建物のうちいずれかを売買する旨の契約が締結され、AB間の特約でAが選択権者となった場合、Aの過失で甲建物が焼失したためにその給付が不能となったときは、給付の目的物は乙建物になる。",
+          "answerBoolean": true,
+          "explanationText": "債権の目的である給付の中に不能のものがある場合、その不能が選択権を有する者の過失によるものであるときは、債権は残存するものに存在する（民法410条）。したがって、選択権者Aの過失によって甲建物は滅失しているため、給付の目的物は乙建物になる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債務不履行",
+          "sourcePageQuestion": "678",
+          "sourcePageAnswer": "679"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AB間において、Aが発送した荷物がBの息子Cに到着した時に、BがAに代金を支払う旨の売買契約が締結され、荷物が4月1日に配達された場合、BがAから同月5日に代金支払請求を受けたとしても、Bが荷物の到着を知ったのが同月10日であったときは、Bが履行遅滞に陥るのは、10日以降となる。",
+          "answerBoolean": false,
+          "explanationText": "債務の履行について不確定期限があるとき、債務者（代金支払債務を負うB）は、その期限の到来（4月1日）した後に履行の請求を受けた時（同月5日）またはその期限の到来したことを知った時（同月10日）のいずれか早い時（同月5日）から遅滞の責任を負う（民法412条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債務不履行",
+          "sourcePageQuestion": "678",
+          "sourcePageAnswer": "679"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは、BにCから贈与を受けた動産甲を売却する旨の本件契約をBと締結したが、引渡し期日が過ぎても動産甲の引渡しは行われていない。動産甲が契約締結前に生じた自然災害により滅失していたために引渡しが不能である場合、本件契約は、その成立の時に不能であるから、Aは、Bに履行の不能によって生じた損害を賠償する責任を負わない。",
+          "answerBoolean": false,
+          "explanationText": "契約に基づく債務の履行が契約成立時に不能であったとしても、損害賠償を請求することができる（民法412条の2第2項）。したがって、動産甲の引渡しが契約締結前に不能である場合、AはBに損害賠償責任を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債務不履行",
+          "sourcePageQuestion": "678",
+          "sourcePageAnswer": "679"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "289",
+      "originalProblemId": "KB2025-p289-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A・B間で建物の売買契約が成立し、Aは、Bから建物の引渡しを受け、また、移転登記も得て、近く同建物に引っ越しをしようと思っていたところ、同建物は、第三者Cの放火によって焼失してしまった。Aは、Bに対して履行不能を理由として売買契約を解除することができる。",
+          "answerBoolean": false,
+          "explanationText": "Bは、Aに建物の引渡しおよび登記を移転し、既に自己の債務を履行している。したがって、Bに履行不能（民法412条の2、415条）の問題は生じないから、AはBの履行不能を理由として、売買契約を解除することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "680",
+          "sourcePageAnswer": "681"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債務不履行に基づく損害賠償を請求する場合は、債権者が債務者の故意または過失を立証しなければならず、不法行為に基づく損害賠償を請求する場合は、被害者が加害者の故意または過失を立証しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "債務不履行の場合は、「債権者」が債務者の故意または過失を立証する必要はなく、「債務者」が自己に故意または過失のないことを立証しなければ債務不履行責任を免れない。他方、不法行為の場合は、被害者（債権者）が加害者（債務者）の故意または過失を立証しなければ、不法行為による損害賠償を請求できない（民法709条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "680",
+          "sourcePageAnswer": "681"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、不動産会社Bと、BがC工務店に注文して建築させた建売住宅を購入する契約を締結した。この建売住宅が売買契約成立後Aへの引渡し前に、Bの責めに帰することができない事由によって火災で半焼してしまった場合、AはBに対して債務不履行に基づく損害賠償請求ができる。",
+          "answerBoolean": false,
+          "explanationText": "債務不履行に基づく損害賠償請求は、債務者に帰責事由がある場合に問題となる（民法415条1項）。本肢は、建売住宅の引渡債務を負うBの責めに帰することができない事由によって火災で半焼してしまった場合であるので、危険負担の問題となる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "680",
+          "sourcePageAnswer": "681"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "賃借人が賃貸人の承諾を得て賃貸不動産を転貸したが、転借人の過失により同不動産を損傷させた場合、賃貸人は転借人の選任および監督について過失がなければ、賃貸人に対し債務不履行責任を負わない。",
+          "answerBoolean": false,
+          "explanationText": "民法415条1項ただし書の「債務者の責めに帰することができない事由」とは、債務者の故意過失または信義則上これと同視すべきものではない事由のことであり、債務者が債務を履行するにあたって使用する者（履行補助者）の故意過失は、信義則上債務者の故意過失と同視すべき事由にあたる（大判昭4.3.30）から、履行補助者の選任・監督に過失がなくても、債務者は債務不履行責任を負う。したがって、賃借人は転借人の選任および監督について過失がなくても、賃貸人に対して債務不履行責任を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "680",
+          "sourcePageAnswer": "681"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "不法行為による損害賠償債務については、催告をまたず、損害発生と同時に遅滞に陥るとするのが判例の立場である。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭37.9.4）は、不法行為による損害賠償債務については、催告を要することなく、損害発生と同時に遅滞に陥るとする（民法412条参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "680",
+          "sourcePageAnswer": "681"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "290",
+      "originalProblemId": "KB2025-p290-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBに対して自己所有の家屋を売る契約をした場合、Aが当該家屋をBに引き渡すまでの間は善管注意義務をもって当該家屋を保存・管理しなければならないので、Aの履行遅滞中に不可抗力で当該家屋が滅失してもAが善管注意義務を尽くしていれば責任を負わない。",
+          "answerBoolean": false,
+          "explanationText": "債務者（家屋引渡債務の債務者A）が履行遅滞の責任を負っている間に当事者双方の責めに帰することができない事由によってその債務の履行が不能となったときは、その履行の不能は、債務者の責めに帰すべき事由によるものとみなされる結果（民法413条の2第1項）、Aは、債務不履行（履行不能を理由とする損害賠償）責任を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "682",
+          "sourcePageAnswer": "683"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBに対して自己所有の家屋を売る契約をしたにもかかわらず、Bが登記を備える前に、AがCに当該家屋を二重に売った場合、CがBより先に仮登記を備えたときでも、AのBに対する債務は未だ履行不能とはならない。",
+          "answerBoolean": true,
+          "explanationText": "不動産の二重売買において第二の買主が仮登記を備えたのみでは、第一の買主に対する所有権移転登記義務は履行不能とはならない（最判昭46.12.16）。したがって、Bが登記を備える前に、AがCに対し当該家屋を二重に売ってしまった場合、CがBより先に仮登記を備えたとしても、AのBに対する債務は未だ履行不能とはならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "682",
+          "sourcePageAnswer": "683"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがBに対して自己所有の家屋を売る契約をしたにもかかわらず、Bが登記を備える前に、AがBへの譲渡を知るDに当該家屋を二重に売り登記を移転した場合、Bは、それだけではDに対して債権侵害を理由とする不法行為責任を追及できない。",
+          "answerBoolean": true,
+          "explanationText": "本肢所定の場合、Dがその買受当時A B間の売買の事実を知っていたというだけでは、DはBに対し不法行為責任を負わない（最判昭30.5.31）。不動産の二重売買における第二の買主は、悪意であっても、登記を備えると完全に所有権を取得し、第一の買主はその所有権取得をもって第二の買主に対抗できないと解されているからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "682",
+          "sourcePageAnswer": "683"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "特別の事情によって生じた損害につき、債務者が契約締結時においてその事情を予見できなかったとしても、債務不履行時までに予見すべきであったと認められるときは、債務者はこれを賠償しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "特別の事情によって生じた損害であっても、当事者がその事情を予見すべきであったときは、債権者は、その賠償を請求することができる（民法416条2項）。判例（大判大7.8.27）は、この予見可能性の有無の判断時期は債務不履行時としている。したがって、特別の事情によって生じた損害につき、債務者が契約締結時においてその事情を予見できなかったとしても、債務不履行時までに予見すべきであったと認められるときは、債務者は賠償しなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "682",
+          "sourcePageAnswer": "683"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "建物の所有権を移転すべき債務者が建物の焼失によってその移転が不能となったものの、火災保険金を受け取っている場合、債権者は、建物所有権の代償として当該保険金相当額の利益の償還を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "債務者が、その債務の履行が不能となったのと同一の原因により債務の目的物の代償である権利または利益を取得したときは、債権者は、その受けた損害の額の限度において、債務者に対し、その権利の移転またはその利益の償還を請求できる（民法422条の2：代償請求権）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "682",
+          "sourcePageAnswer": "683"
+        }
+      ],
+      "parseError": null
     }
   ]
 }
