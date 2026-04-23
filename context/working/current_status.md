@@ -1,12 +1,13 @@
 # current_status — 現在の作業状況
 
-最終更新: 2026-04-23 (v102 = 後半 L2 バッチ 2 import = p250 + p251-p270 (excl. p255) = 20 ページ / 104 肢追加、Claude 自律運用 second cycle)
+最終更新: 2026-04-23 (v102 SHA backfill post-merge = PR #73 squash `6695b7be671075eec9ebc5dced143a686e4f94c1`)
 
-## 現在地 (confirmed, 2026-04-23 post-v102-batch2-import)
+## 現在地 (confirmed, 2026-04-23 post-v102-merge)
 
-- **latest data merge (in-flight)**: v102 = 本 PR = batch 2 = 20 ページ / 104 肢（minpo-bukken / 物権各論）
+- **latest data merge**: v102 = PR #73 squash = `6695b7be671075eec9ebc5dced143a686e4f94c1`（batch 2 = 20 ページ / 104 肢、minpo-bukken / 物権各論）
 - **前回 data merge**: v101 = PR #71 squash `77b2c14a8d136436c60226e94a53fce8ca7d08ea`（batch 1 = p248 5 肢）
-- **handoff-only SHA backfill PR**: PR #72 open（data 無変更）
+- **v101 SHA backfill PR #72**: closed（PR #73 に同梱吸収、独立 merge 不要と判断）
+- **本 PR**: handoff-only v102 SHA backfill（data 無変更）
 - **DATA_VERSION**: `2026-04-23-audit-v102-batch2-L2-p250-270-import`
 - **総ページ**: 240 → 260 (+20) / **総肢**: 1317 → 1421 (+104)
 - **L1 本線**: ✅ 実質完了維持
