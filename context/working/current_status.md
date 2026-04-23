@@ -4,7 +4,7 @@
 
 ## 現在地 (confirmed, 2026-04-23 post-v101-batch1-import)
 
-- **latest data merge (in-flight)**: v101 = 本 PR = 後半 L2 batch 1 import = p248 new content 5 肢
+- **latest data merge**: v101 = PR #71 squash `77b2c14a8d136436c60226e94a53fce8ca7d08ea`（後半 L2 バッチ 1 import = p248 物権変動 5 肢追加）
 - **前回 data merge**: v100 = PR #68 squash `c763007808af7c2b0747578981f10da49541fc08`
 - **v3 flow PR**: PR #70 squash `ddbeb049c5b03d903f3b97180ad27f659be49de8` (merged)
 - **DATA_VERSION**: `2026-04-23-audit-v101-batch1-L2-p248-import`
