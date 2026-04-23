@@ -17733,6 +17733,1414 @@
           "sourcePageAnswer": "601"
         }
       ]
+    },
+    {
+      "sourcePage": "250",
+      "originalProblemId": "KB2025-p250-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "甲土地が相続によりAおよびEの共有に属していたところ、Aが無断でAの単独所有名義の登記をしてBとの間で本件売買契約を締結し、Bが所有権移転登記をした場合において、Bがその事情を知らず、かつ、過失がないときは、Bは甲土地の全部について所有権を取得する。",
+          "answerBoolean": false,
+          "explanationText": "各共同相続人(AE)は、その相続分に応じて被相続人の権利義務を承継する(民法899条)。Aは、自己の持分を有効に処分できるのに対して、Eの持分については無権利であり、登記に公信力がないことから、Bは善意無過失であってもEの持分をAから取得することはできない(最判昭38.2.22)。したがって、Bは甲土地の全部について所有権を取得できない(甲土地はBEの共有となる)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "602",
+          "sourcePageAnswer": "603"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A所有の不動産を共同相続したBCのうちBが遺産分割によって単独で承継する場合、Cの債権者DがCに代位して共同相続の登記をし、Cの持分を差し押さえたときは、Bは、登記なくしてCの持分の取得をDに対抗できない。",
+          "answerBoolean": true,
+          "explanationText": "相続による権利の承継は、遺産の分割によるものかどうかにかかわらず、「相続分を超える部分」については、取引の安全を保護するため、登記、登録その他の対抗要件を備えなければ第三者に対抗することができない(民法899条の2第1項)。したがって、登記を具備していないBは、遺産分割後の第三者DにCの持分の取得を対抗できない(最判昭46.1.26参照)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "602",
+          "sourcePageAnswer": "603"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "共同相続人の1人Aが相続を放棄し、他の共同相続人Bが特定の相続不動産の所有権を単独で承継したが、Bが当該不動産の登記を備えないうちに、Aが相続を放棄しなければ得たであろうAの持分に対し、Aの債権者Cが仮差押えをし、登記を備えた。この場合、Bは、当該不動産の所有権をCに対抗できない。",
+          "answerBoolean": false,
+          "explanationText": "相続放棄(民法939条)の効力は絶対的であり、何人に対しても登記の有無を問わず、その効力を生ずると解すべきであって、放棄した相続人Aの債権者が相続財産たる不動産について、相続人Aも共同相続したものとして代位による所有権保存登記をした上で持分に対する仮差押登記をしても、これらは無効である(最判昭42.1.20)。それゆえ、Bは、当該不動産の所有権をCに対抗できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "602",
+          "sourcePageAnswer": "603"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aの「甲土地をBに相続させる」旨の特定財産承継遺言によって、Aの死亡時にBが所有権を取得した甲土地につき、共同相続人Cの債権者DがCに代位してBとCの法定相続分に応じて共同相続の登記をし、Cの持分を差し押さえた場合、Bは、登記を備えていなくても、甲土地所有権全部の取得をDに対抗することができる。",
+          "answerBoolean": false,
+          "explanationText": "相続による権利の承継は、遺産の分割によるものかどうかにかかわらず、「相続分を超える部分」については、取引の安全を保護するため、登記、登録その他の対抗要件を備えなければ第三者に対抗することができない(民法899条の2第1項)。したがって、登記を具備しなければ、Bは、甲土地のうちCの持分の取得をDに対抗できない(甲土地はBDの共有となる)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "602",
+          "sourcePageAnswer": "603"
+        }
+      ]
+    },
+    {
+      "sourcePage": "251",
+      "originalProblemId": "KB2025-p251-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、BからB所有の絵画を預かっている。Bがこの絵画を第三者Cに売却した場合、Cは売買契約のときにこの絵画の所有権を取得し、引渡しを受けていなくてもAに絵画の所有権を対抗することができる。",
+          "answerBoolean": true,
+          "explanationText": "動産の寄託を受け、一時それを保管するにすぎない者は、民法178条の第三者に当たらない（最判昭29.8.31）。それゆえ、Cは対抗要件である引渡しを受けていなくても、動産である絵画の寄託を受け一時それを保管しているAに、所有権を対抗することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "動産物権変動 1 対抗要件",
+          "sourcePageQuestion": "605",
+          "sourcePageAnswer": "606"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが横浜のB倉庫に置いてある商品をCに売却し、B倉庫の経営会社に対して以後はCのために商品を保管するように通知した場合、B倉庫会社がこれを承諾したときに占有権はAからCに移転する。",
+          "answerBoolean": false,
+          "explanationText": "指図による占有移転について民法184条は、「代理人によって占有をする場合において、本人がその代理人に対して以後第三者のためにその物を占有することを命じ、その第三者がこれを承諾したときは、その第三者は、占有権を取得する」と定めており、Bではなく第三者であるCの承諾が必要である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "動産物権変動 1 対抗要件",
+          "sourcePageQuestion": "605",
+          "sourcePageAnswer": "606"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "乙が甲から借りて使用していたカメラを、丙が乙の所有物だと過失なく信じて買い受けた場合、丙はそのカメラについての所有権を取得することができる。",
+          "answerBoolean": true,
+          "explanationText": "無権利者から動産を善意・無過失で買い受けた場合、即時取得（民法192条）により、その動産の所有権を取得する。したがって、即時取得の要件を具備する丙は、カメラの所有権を取得することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "動産物権変動 2 即時取得",
+          "sourcePageQuestion": "605",
+          "sourcePageAnswer": "606"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、BからB所有の絵画を預かっている。Aがこの絵画を自分の物であると偽って善意無過失のCに売却し、以後はCのためにその絵画を預かることを約束した場合には、即時取得によりCはこの絵画の所有権を取得する。",
+          "answerBoolean": false,
+          "explanationText": "譲受人が民法192条によりその所有権を取得し得るためには、外観上占有状態に変更を生ずる占有を取得することを要し、かかる状態に一般外観上変更をきたさない占有改定の方法による取得をもっては足りない（最判昭35.2.11）。本肢においてAがCのために絵画を預かることを約束していることから、Cの占有取得は占有改定の方法であるので（183条）、Cは即時取得により絵画の所有権を取得し得ない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "動産物権変動 2 即時取得",
+          "sourcePageQuestion": "605",
+          "sourcePageAnswer": "606"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "A所有のカメラをAの依頼により保管していたBがCに寄託していた場合において、Bが、Bに所有権があると誤信し、かつ、そのように信じたことに過失のないDに対して、以後Dのためにカメラを占有することをCに命じ、Dがこれを承諾したうえでカメラを売却したときは、Dは即時取得によりカメラの所有権を取得する。",
+          "answerBoolean": true,
+          "explanationText": "指図による占有移転により占有が移転したとしても、即時取得が成立する（最判昭57.9.7）。指図による占有移転においては、譲渡人か占有代理人に対する命令が必要であり、外部から認識することが容易だからである。したがって、指図による占有移転によりカメラの占有を取得したDは、即時取得によりカメラの所有権を取得する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "動産物権変動 2 即時取得",
+          "sourcePageQuestion": "605",
+          "sourcePageAnswer": "606"
+        }
+      ]
+    },
+    {
+      "sourcePage": "252",
+      "originalProblemId": "KB2025-p252-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aがその所有する建物をCに賃貸していたところ、Cがその建物を自己の所有する建物としてBに売却した場合、即時取得によりその所有権を取得できる可能性がある。",
+          "answerBoolean": false,
+          "explanationText": "即時取得の目的物は「動産」であり（民法192条）、不動産である建物については、即時取得は成立し得ない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aの所有する山林に生育する立木について、Bがその山林および立木を自己の所有するものであると誤信して、その立木を伐採した場合、即時取得によりその所有権を取得できる可能性がある。",
+          "answerBoolean": false,
+          "explanationText": "即時取得は「取引行為」によらなければならず（民法192条）、山林を自分のものと信じて伐採した事実行為の場合には、即時取得は成立し得ない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "成年被後見人Aは、その所有するパソコンをBに売却したが、Bは、Aが成年被後見人である事実について善意・無過失であった場合、即時取得によりその所有権を取得できる可能性がある。",
+          "answerBoolean": false,
+          "explanationText": "即時取得は、前主が処分権限のない者である場合に適用されるものであり、前主は所有者であるが、錯誤・行為能力の制限・無権代理などにより買主が権利を取得できないときは民法192条は適用されない。したがって、即時取得によりその所有権を取得できる可能性がある場合ではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aの所有する自転車をCが借りた後に駅前駐輪場に停めていたところ、Bがその自転車を自己の自転車と誤信して、その自転車の使用を継続した場合、即時取得によりその所有権を取得できる可能性がある。",
+          "answerBoolean": false,
+          "explanationText": "即時取得は「取引行為」によらなければならず（民法192条）、自転車を自分のものと信じて使用継続した場合には、取引をしていないBには、即時取得は成立し得ない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aの所有する宝石をCが盗み出し、CがこれをBに売却したが、Bは、その宝石が盗品である事実について善意・無過失であった場合、即時取得によりその所有権を取得できる可能性がある。",
+          "answerBoolean": true,
+          "explanationText": "Bは、「動産」である宝石を、盗み出した無権利者Cとの売買という「取引行為」によって、「平穏」・「公然」・「善意」・「無過失」で占有を開始しているから（民法192条）、即時取得によりその所有権を取得できる可能性がある。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aが所有する動産甲の保管をAから委ねられ占有しているBが、甲を自己の物と称してCに売却した場合、甲に対するCの即時取得の成立要件について、占有開始におけるCの平穏、公然、善意および無過失は推定される。",
+          "answerBoolean": true,
+          "explanationText": "即時取得（民法192条）における占有者の善意、平穏かつ公然と占有をすることは186条1項により、また、無過失については188条により推定される（最判昭41.6.9）。したがって、Cの即時取得の成立要件について、Cの平穏、公然、善意および無過失は推定される。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "乙が甲から横領したカメラを、丙が乙の所有物であると過失なく信じて買い受けた場合、甲は横領の時から2年間は、丙に対してそのカメラの返還を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "即時取得の対象となる動産が「盗品」または「遺失物」の場合、即時取得の特則によって原権利者は2年間返還請求ができる（民法193条）。しかし、「横領」した動産については、特則の規定の適用を受けないから、甲は、丙にカメラの返還を請求できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        }
+      ]
+    },
+    {
+      "sourcePage": "253",
+      "originalProblemId": "KB2025-p253-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "美術商Aは、Bが運営する個人美術館に盗まれた自己所有の絵画が掲げられているのを発見した。Bは、それまで面識のなかったCがBのもとに持ち込み買取りを求めたことに応じて買い受けたものであり、即時取得の要件を充たしている場合、Aは、盗難の日から2年以内であれば、Bに対してまったく無償で、その絵画の引渡しを求めることができる。",
+          "answerBoolean": true,
+          "explanationText": "占有物が盗品または遺失物であるときは、被害者または遺失主は、盗難または遺失の時から2年間、占有者に対してその物の回復を請求することができ（民法193条）、原則として特別の代価を支払うことなく回復請求することができる。即時取得は、取引の安全、Bの保護に資するが、反面、原権利者Aの権利を奪うものであるから、原権利者Aへの配慮から、原則として特別の代価を支払うことなく（例外として194条参照）、192条の例外規定を設けたものである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "美術商Aは、画廊に保管しておいた自己所有の絵画が盗難に遭ったが、ある日、Bが運営する個人美術館を訪ねた際、そこに盗まれた絵画が掲げられているのを発見した。Bは、ある日、本件絵画をオークションで落札して買い取り、Bには即時取得が成立している。Aは、盗難の日から2年以内であれば、Bに対して保管に要した費用を支払って、その絵画の引渡しを求めることができる。",
+          "answerBoolean": false,
+          "explanationText": "AはBに「保管に要した費用」ではなく、「オークションで落札した代価を弁償」する必要があるから、本肢は誤っている。すなわち、占有者が、盗品または遺失物を、競売、公の市場またはその物と同種の物を販売する商人から、善意で買い受けたときは、被害者または遺失者は、占有者が支払った代価を弁償しなければ、その物を回復することができない（民法194条）。代価の支払いは原則として不要であるが（193条）、即時取得者が盗品・遺失物を競売または商人から買い受けたときは、即時取得者への配慮から、原権利者による回復請求に際し、即時取得者が支払った代価の弁償を要求したのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "甲の所有地に対し、乙が1番抵当権、丙が2番抵当権を有していた場合、乙が甲からその土地を買い受けたときは、乙の1番抵当権は消滅し、丙が1番抵当権を有することとなる。",
+          "answerBoolean": false,
+          "explanationText": "同一物について所有権および他の物権が同一人に帰属すれば、原則として当該他の物権は消滅する（民法179条1項本文）。しかし、本肢のように、混同によって乙の1番抵当権が消滅すると、丙の2番抵当権の順位が上昇して、乙が不利益を受ける場合には、乙の1番抵当権は例外的に消滅しない（179条1項ただし書参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "土地の所有者が自己所有地を他人に賃貸して土地を引き渡した場合、土地の占有権は賃借人に移転するから、所有者は土地の占有権を失う。",
+          "answerBoolean": false,
+          "explanationText": "民法181条は、「占有権は、代理人によって取得することができる」と定めており、賃貸人自身も賃借人に貸している土地の占有を有している。このときの賃貸人の占有を代理占有（間接占有）といい、直接占有している賃借人を占有代理人という。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "608",
+          "sourcePageAnswer": "609"
+        }
+      ]
+    },
+    {
+      "sourcePage": "254",
+      "originalProblemId": "KB2025-p254-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "占有権の譲渡は、占有物を現実に引き渡さなければ、その効力を生じることはない。",
+          "answerBoolean": false,
+          "explanationText": "占有権の譲渡は、現実の引渡し以外の方法、即ち簡易の引渡し、占有改定、指図による占有移転の方法によってもなされ得る（民法182条2項、183条、184条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "610",
+          "sourcePageAnswer": "611"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "代理人が本人のために占有物を占有する意思を表示したときは、これによって本人が占有権を取得する。",
+          "answerBoolean": true,
+          "explanationText": "本肢は占有改定による占有権の移転である（民法183条）。例えば、売主が売った物を引き続き占有する場合、売主は占有代理人ということになる。代理人である売主が、本人、つまり買主のために占有する意思を表示したときは、買主が直接、占有していなくても占有権を取得する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "610",
+          "sourcePageAnswer": "611"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aが所有する動産戊を保管することをBに寄託し、これをBに引き渡した後、Aは戊をCに譲渡した場合、Aが、Bに対して以後Cの所有物として戊を占有するよう指示し、Cが、これを承諾したときは、戊についてAからCへの引渡しが認められる。",
+          "answerBoolean": true,
+          "explanationText": "代理人（B）によって占有をする場合、本人（A）がその代理人（B）に対して以後第三者（C）のためにその物を占有することを命じ、第三者（C）が承諾したときは、第三者（C）は、占有権を取得する（指図による占有移転：民法184条）。したがって、Aが、Bに対して以後Cの所有物としてA所有の動産戊を占有するよう指示し、Cが承諾したときは、戊についてAからCへの引渡しが認められる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "610",
+          "sourcePageAnswer": "611"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "土地賃借人である被相続人が死亡した場合、その相続人は、賃借地を現実に支配しなくても賃借人の死亡により当然に賃借地の占有権を取得する。",
+          "answerBoolean": true,
+          "explanationText": "被相続人の事実的支配の中にあった物は、原則として、当然に、相続人の支配の中に承継されるとみるべきであるから、被相続人が死亡して相続が開始するときは、特別の事情のない限り、従前の占有に属したものは、当然相続人の占有に移る（最判昭44.10.30）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "610",
+          "sourcePageAnswer": "611"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "権原の性質上占有者に所有の意思がないものとされる場合には、その占有者が、自己に占有をさせた者に対して所有の意思があることを表示し、または新たな権原により更に所有の意思をもって占有を始めるのでなければ、占有の性質は、変わらない。",
+          "answerBoolean": true,
+          "explanationText": "権原の性質上占有者に所有の意思がないものとされる場合には、その占有者が、自己に占有をさせた者に対して所有の意思があることを表示し、または新たな権原により更に所有の意思をもって占有を始めるのでなければ、占有の性質は変わらない（民法185条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "610",
+          "sourcePageAnswer": "611"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "占有者は、所有の意思をもって、善意、平穏かつ公然に占有をしているものとみなされる。",
+          "answerBoolean": false,
+          "explanationText": "占有者は、所有の意思をもって、善意で、平穏に、かつ、公然と占有をするものと「推定」されるのであり（民法186条1項）、「みなされる」のではない。「みなす」とは、反証を許さない点で、「推定」と異なる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "610",
+          "sourcePageAnswer": "611"
+        }
+      ]
+    },
+    {
+      "sourcePage": "256",
+      "originalProblemId": "KB2025-p256-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "代理人によって占有を行う場合、代理権が消滅すれば占有権も消滅する。",
+          "answerBoolean": false,
+          "explanationText": "占有代理人の占有権の法律上の基礎が消滅しても、占有という事実は残るから、占有代理人を通して占有する場合に、占有代理人の占有権は、代理権が消滅しても消滅しない（民法204条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "3 所有権 1) 所有権の限界 (相隣関係)",
+          "sourcePageQuestion": "614",
+          "sourcePageAnswer": "615"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "土地の所有者が、隣地との境界またはその近くで建物を築造、収去または修繕する場合は、必要な範囲内で、隣地を使用することができる。",
+          "answerBoolean": true,
+          "explanationText": "土地の所有者は、隣地との境界線近くで建物の築造、収去や修繕をする場合、必要な範囲内で隣地の使用をすることができる（民法209条1項本文）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "3 所有権 1) 所有権の限界 (相隣関係)",
+          "sourcePageQuestion": "614",
+          "sourcePageAnswer": "615"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "他の土地に囲まれて公道に通じない土地の所有者は公道に出るためにその土地を囲んでいる他の土地を通行する権利があるときは、必要のあるときは、自分の費用をもって、地ならしをしたり、砂利を敷くなどして、通路を開設することができる。",
+          "answerBoolean": true,
+          "explanationText": "他の土地に囲まれて公道に通じない土地（袋地）の所有者は、その土地を囲んでいる他の土地（囲繞地）を通行することができ（民法210条1項）、必要があるときは、通路を開設することもできる（211条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "3 所有権 1) 所有権の限界 (相隣関係)",
+          "sourcePageQuestion": "614",
+          "sourcePageAnswer": "615"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "甲土地を所有するAは、甲土地に隣接するB所有の乙土地を通行している。甲土地が乙土地に囲まれて公道に通じていない場合、AがBに対して囲繞地通行権を主張するためには、Aは甲土地の所有権の登記を具備していなければならない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭47.4.14）は、袋地の所有権を取得した者（A）は、所有権取得登記を経由していなくても、囲繞地の所有者（B）ないし利用権者に対して、囲繞地通行権を主張することができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "3 所有権 1) 所有権の限界 (相隣関係)",
+          "sourcePageQuestion": "614",
+          "sourcePageAnswer": "615"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "甲土地を所有するAは、甲土地に隣接するB所有の乙土地を通行している。甲土地と乙土地は元々一筆の土地であったが、分筆によって他の土地に囲まれて公道に通じていない甲土地が生じ、これによりAが乙土地に対する無償の囲繞地通行権を有するに至った場合において、その後に乙土地がCに売却されたとしても、Aは当然にCに対してこの通行権を主張することができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平2.11.20）は、共有物の分割または土地の一部譲渡によって公道に通じない土地（袋地）を生じた場合には、袋地の所有者は、民法213条に基づき、これを囲繞する土地のうち、他の分割者の所有地または土地の一部の譲渡人もしくは譲受人の所有地（残余地）についてのみ囲繞地通行権を有するが、囲繞地通行権は、残余地について特定承継が生じた場合にも消滅するものではないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "3 所有権 1) 所有権の限界 (相隣関係)",
+          "sourcePageQuestion": "614",
+          "sourcePageAnswer": "615"
+        }
+      ]
+    },
+    {
+      "sourcePage": "257",
+      "originalProblemId": "KB2025-p257-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "土地の所有者は、他の土地に設備を設置し、または他人が所有する設備を使用しなければ電気、ガスまたは水道水の供給等の継続的給付を受けることができないときは、必要な範囲内で、他の土地に設備を設置し、または他人が所有する設備を使用することができる。",
+          "answerBoolean": true,
+          "explanationText": "土地の所有者は、他の土地に設備を設置し、または他人が所有する設備を使用しなければ電気、ガスまたは水道水の供給等の継続的給付を受けることができないときは、必要な範囲内で、他の土地に設備を設置し、または他人が所有する設備を使用することができる（民法213条の2第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "616",
+          "sourcePageAnswer": "617"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "隣地から水が自然に流れてくる場合には、低地の所有者は、これを受忍しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "土地の所有者は、隣地から水が自然に流れてくるのを妨げてはならないから（民法214条）、低地の所有者は、自然的な流水を受忍しなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "616",
+          "sourcePageAnswer": "617"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A所有の甲土地内に存立する建物の屋根から雨水が直接に乙土地に注がれる場合に、甲土地の隣地である乙土地を所有するBは、その雨水が注がれることを受忍しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "土地の所有者は、直接に雨水を隣地に注ぐ構造の屋根その他の工作物を設けてはならない（民法218条）。したがって、甲土地内のAの建物の屋根から雨水が直接に乙土地に注がれる場合、Aはそのような構造の屋根を設けてはならないのであり、Bはその雨水が注がれることを受忍する必要はない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "616",
+          "sourcePageAnswer": "617"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "境界標の設置および保存の費用または測量の費用は、相隣者がそれぞれの土地の広狭に応じて負担する。",
+          "answerBoolean": false,
+          "explanationText": "境界標の設置および保存の費用は、相隣者が等しい割合で負担し（民法224条本文）、土地の広狭に応じて分担するのではない。ただし、測量の費用は、その土地の広狭に応じて分担する（224条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "616",
+          "sourcePageAnswer": "617"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "甲土地を所有するAおよび甲土地の隣接地の乙土地の所有者Bが甲土地および乙土地を所有する前から甲土地と乙土地の境界に設けられていた障壁は、AとBの共有に属するものと推定されるが、その保存の費用は、A・B間に別段の約定がない限り、AとBが、甲土地と乙土地の面積の割合に応じて負担する。",
+          "answerBoolean": false,
+          "explanationText": "境界線上に設けた境界標、囲障、溝および堀は、相隣者の共有に属するものと推定されるから（民法229条）、AおよびBが甲土地および乙土地を所有する前から甲土地と乙土地の境界に設けられていた障壁は、AとBの共有に属するものと推定される。そして、各共有者の持分は、相等しいものと推定され（250条）、各共有者は、その持分に応じ、管理の費用を支払い、その他共有物に関する負担を負うとされていることから（253条1項）、障壁の保存の費用は、A・B間に別段の約定がない限り、AとBが等しい割合で負担する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.9,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "616",
+          "sourcePageAnswer": "617"
+        }
+      ]
+    },
+    {
+      "sourcePage": "258",
+      "originalProblemId": "KB2025-p258-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "土地の所有者は、隣地の竹木の根や枝が境界線を越えるときは、当然にこれを切り取ることができる。",
+          "answerBoolean": false,
+          "explanationText": "隣地の竹木の「根」が境界線を越えるときは、その根を切り取ることができる（民法233条4項）。しかし、それが「枝」であるときは、土地の所有者は、竹木の所有者に切除させることができるにすぎず（233条1項）、当然にみずから切り取ることができない。なお、「枝」については、竹木の所有者に枝の切除を催告しても相当の期間内に切除しないとき、竹木の所有者・その所在を知ることができないとき、急迫の事情があるときは、例外として、土地の所有者は切除できる（233条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "618",
+          "sourcePageAnswer": "619"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "甲土地を所有するAは、境界線から1メートル未満の距離において甲土地に隣接する乙土地を見通すことができる窓または縁側（ベランダも含む）を設けることができるが、その場合には、目隠しを付さなければならない。",
+          "answerBoolean": true,
+          "explanationText": "境界線から1メートル未満の距離において他人の宅地を見通すことのできる窓または縁側（ベランダを含む。）を設ける者は、目隠しを付けなければならない（民法235条1項）。したがって、本肢所定の場合、Aは、目隠しを付さなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "618",
+          "sourcePageAnswer": "619"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "所有者のない動産または不動産を、所有の意思をもって占有した者は、その所有権を得ることができる。",
+          "answerBoolean": false,
+          "explanationText": "所有者のない「動産」を、所有の意思をもって占有する者は、その動産の所有権を取得することができる（民法239条1項）。しかし、所有者のない「不動産」は、国庫に帰属するのであり（239条2項）、所有の意思をもって占有しても、その不動産の所有権を取得することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "618",
+          "sourcePageAnswer": "619"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、所有者のいない動産を所有の意思をもって占有を始めた場合に、その動産の所有権を取得する。",
+          "answerBoolean": true,
+          "explanationText": "本肢は、民法239条1項のとおりであり、所有者のない「動産」は、所有の意思をもって占有することにより所有権を取得する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "618",
+          "sourcePageAnswer": "619"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "遺失物は、遺失物法の規定に従い、公告後3カ月以内に所有者が判明しないときは、拾得者がその所有権を取得する。",
+          "answerBoolean": true,
+          "explanationText": "遺失物は、遺失物法の定めるところに従い公告をした後3カ月以内にその所有者が判明しないときは、それを拾得した者がその所有権を取得する（民法240条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "618",
+          "sourcePageAnswer": "619"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Bの所有する動産がAの所有する不動産に従として付合した場合には、AとBは、AとBとの取決めに係りなく、Aの不動産の価格とBの動産の価格の割合に応じてその合成物を共有する。",
+          "answerBoolean": false,
+          "explanationText": "不動産の所有者は、原則として、その不動産に従として付合した物の所有権を取得する（民法242条本文）。したがって、本肢所定の場合には、不動産の所有者Aが合成物の所有権を取得するから、Aの不動産の価格とBの動産の価格の割合に応じて、その合成物を共有するとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "618",
+          "sourcePageAnswer": "619"
+        }
+      ]
+    },
+    {
+      "sourcePage": "259",
+      "originalProblemId": "KB2025-p259-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの所有する動産とBの所有する動産が付合して分離することが不可能になった場合において、両動産について主従の区別をすることができないときには、AとBは、当然に相等しい割合でその合成物を共有するものとみなす。",
+          "answerBoolean": false,
+          "explanationText": "所有者を異にする数個の動産が付合した場合、その付合した動産の主従の区別ができないときには、各動産の所有者は、その付合の時における価格の割合に応じてその合成物を共有する（民法244条）。したがって、本肢所定の場合には、AとBは、付合の時における価格の割合で合成物を共有するのであるから、当然に相等しい割合で共有するとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共有",
+          "sourcePageQuestion": "620",
+          "sourcePageAnswer": "621"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "BがAの所持する材料に工作を加えて椅子を完成させた場合に、その椅子の所有権は、AとBとの取決めに関係なく、Aに帰属する。",
+          "answerBoolean": false,
+          "explanationText": "他人の動産に工作を加えた者があるときは、その加工物の所有権は、原則として、材料の所有者に帰属する（民法246条1項本文）。ただ、加工してできた物の所有権を誰に帰属させるかは、当事者の利害調整の問題であるから、関係者の合意により変更できると解されている。したがって、AとBとの取決めに無関係なく、Aに帰属するとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共有",
+          "sourcePageQuestion": "620",
+          "sourcePageAnswer": "621"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "ABC三人がDから自動車1台を購入する契約をし、その売買代金として300万円の債務を負っている場合、購入した自動車がABC三人の共有となったときは、Aは、自動車の全部について、その持分に応じた使用をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "各共有者は、共有物の全部について、その持分に応じた使用をすることができる（民法249条1項）。したがって、購入した自動車がA、B、C三人の共有となった場合には、Aは、自動車の全部について、その持分に応じた使用をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共有",
+          "sourcePageQuestion": "620",
+          "sourcePageAnswer": "621"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A、BおよびCが甲土地を共有（各人の持分は平等である。）している場合において、Aが自己の持分に基づいて単独で甲土地の全部を使用しているときは、BおよびCは、Aに対し て、当然に甲土地の明渡しを求めることができる。",
+          "answerBoolean": false,
+          "explanationText": "共有者の1人が共有物を単独で占有している場合でも、自己の持分に基づいて共有物全体を使用収益する権原を有する以上（民法249条1項参照）、他の共有者は、当然に、その占有する共有物の明渡しを請求することはできない（最判昭41.5.19）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共有",
+          "sourcePageQuestion": "620",
+          "sourcePageAnswer": "621"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "ABCが共同相続し、遺産分割の前に、法定相続分に応じた持分の割合により相続登記がされた土地につき、CからDに不実の持分権移転登記がされた場合、Aは、Dに対して当該持分権移転登記の抹消登記手続を求めることができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平15.7.11）は、不動産の共有者の1人は、共有不動産について実体上の権利を有しないのに持分移転登記をしている者に対し、その持分移転登記の抹消登記手続を請求することができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "共有",
+          "sourcePageQuestion": "620",
+          "sourcePageAnswer": "621"
+        }
+      ]
+    },
+    {
+      "sourcePage": "260",
+      "originalProblemId": "KB2025-p260-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Dが無断で、A、BおよびCが共有する甲土地上に乙建物を建てて甲土地を占有使用している場合、Aは、Dに対し、単独で建物の収去および土地の明渡しならびに土地の占拠により生じた損害全額の賠償を求めることができる。",
+          "answerBoolean": false,
+          "explanationText": "判例（大判大7.4.19）は、共有者が共有物を不法に占拠する第三者に対して持分権に基づく妨害排除請求を単独で請求することは、保存行為（民法252条5項）に該当し許されるとしている。もっとも、判例（最判昭41.3.3、最判昭51.9.7）は、共有者は、単独で不法行為に基づく損害賠償請求をすることができるとしつつも、損害賠償請求は持分の割合に応じて各共有者に属するから、共有者の1人が請求することができる損害賠償の額は、自己の持分の割合に相当する額に限られ、損害全額の賠償を求めることができないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Eが、A、BおよびCが共有する乙建物をAの承諾のもとに賃借して居住し、A、BおよびCが共有する甲土地を占有使用する場合、BおよびCは、Eに対し当然には乙建物の明渡しを請求することはできない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭63.5.20）は、共有者の一部から共有物を占有使用することを承認された第三者に対して、その他の共有者は、当然には、共有物の明渡しを請求することができないとしている。したがって、BおよびCは、Eに対し当然には乙建物の明渡しを請求することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "各共有者は、他の共有者の同意なしに、自己の持分権を第三者に譲渡することはできない。",
+          "answerBoolean": false,
+          "explanationText": "各共有者の持分権は、共有関係から一定の制約を受けているとはいえ、独立の所有権である。したがって、自分の持分権を他に譲渡することも自由である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "共有物を使用する共有者は、共有者間の合意がある場合を除き、他の共有者に対し、自己の持分を超える使用の対価を償還する義務を負う。",
+          "answerBoolean": true,
+          "explanationText": "共有物を使用する共有者は、別段の合意がある場合を除き、他の共有者に対し、自己の持分を超える使用の対価を償還する義務を負う（民法249条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "共有者は、善良な管理者の注意をもって、共有物の使用をしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "共有者は、善良な管理者の注意をもって共有物の使用をしなければならない（民法249条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "各共有者は、他の共有者の同意を得なければ、共有物に形状または効用の著しい変更を加えることができない。",
+          "answerBoolean": true,
+          "explanationText": "各共有者は、他の共有者の同意を得なければ、共有物に形状または効用の著しい変更を加えることができない（民法251条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "各共有者は、共有物に軽微な変更を加える場合であっても、他の共有者の同意を得なければ、共有物の変更をすることはできない。",
+          "answerBoolean": false,
+          "explanationText": "各共有者は、共有物に形状または効用の著しい変更を伴わない変更をするには、各共有者の持分の価格に従い、その過半数で決する（民法251条1項、252条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "622",
+          "sourcePageAnswer": "623"
+        }
+      ]
+    },
+    {
+      "sourcePage": "261",
+      "originalProblemId": "KB2025-p261-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A、BおよびCが共有（各人の持分は平等である。）する甲土地を目的とした賃貸借契約をDと締結している場合において、Dが賃料の支払いを怠っているときは、A、BおよびCは、3人が共同でなければ賃貸借契約を解除することができない。",
+          "answerBoolean": false,
+          "explanationText": "共有物を賃貸している場合、この賃貸借契約を解除することは、共有物の管理に関する事項にあたるから（最判昭39.2.25）、各共有者の持分の価格に従い、その過半数で決する（民法252条1項）。したがって、ABC3人全員が共同でなくても、このうち2人が共同して賃貸借契約を解除することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "624",
+          "sourcePageAnswer": "625"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "各共有者は、単独で共有物の保存行為をなすことができる。",
+          "answerBoolean": true,
+          "explanationText": "保存行為は、共有物の現状を維持する行為であるから、各共有者が単独ですることができる（民法252条5項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "624",
+          "sourcePageAnswer": "625"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "各共有者は、その持分にかかわらず、均等に共有物の管理の費用を負担する。",
+          "answerBoolean": false,
+          "explanationText": "各共有者は、その持分に応じ、管理の費用を支払うのであり（民法253条1項）、均等に管理費用を負担するのではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "624",
+          "sourcePageAnswer": "625"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A、BおよびCは費用を出し合って、別荘地である甲土地上に築造された乙建物を持分割合を均等として購入した。甲土地および乙建物にかかる管理費用について、AおよびBはそれぞれの負担部分を支払ったが、資産状況が悪化したCはその負担に応じないため、AおよびBが折半してCの負担部分を支払った。この場合、Cが負担に応ずべき時から1年以内に負担に応じない場合には、AおよびBは、相当の償金を支払ってCの持分を取得することができる。",
+          "answerBoolean": true,
+          "explanationText": "共有者（C）が1年以内に共有物の管理負担義務を履行しないときは、他の共有者（AおよびB）は、相当の償金を支払ってその者の持分を取得することができる（民法253条2項）。負担義務の不履行の場合に、他の共有者に不履行者の持分取得権を認め、共有物の管理の実効化を図ったものである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "624",
+          "sourcePageAnswer": "625"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "A、BおよびCが甲土地を共有し、甲土地上には乙建物が存在している。A、BおよびCが乙建物を共有する場合において、Aが死亡して相続人が存在しないときは、Aの甲土地および乙建物の持分は、BおよびCに帰属する。",
+          "answerBoolean": true,
+          "explanationText": "共有者の1人が、その持分を放棄したとき、または死亡して相続人がないときは、その持分は他の共有者に帰属する（民法255条）。したがって、Aが死亡して相続人が存在しないときは、Aの甲土地および乙建物の持分は、他の共有者BおよびCに帰属する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "624",
+          "sourcePageAnswer": "625"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "A、BおよびCは費用を出し合って、別荘地である甲土地および同地上に築造された乙建物を持分割合を均等として購入した。Cは相続人となるべき者はなく、内縁の妻Eと共に生活していたところ、Cが死亡した。この場合、甲土地および乙建物にかかるCの持分は、特別縁故者に当たるEに分与されないことが確定した後でなければ、他の共有者であるAおよびBに帰属しない。",
+          "answerBoolean": true,
+          "explanationText": "共有者の一人（C）が、死亡して相続人がないときは、その持分は他の共有者に帰属する（民法255条）。もっとも、特別縁故者がいる場合には、当該持分は特別縁故者への財産分与の対象となり（958条の2、最判平1.11.24）、Cの持分は、特別縁故者に当たるEに分与されないことが確定した後でなければ、他の共有者であるAおよびBに帰属しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "624",
+          "sourcePageAnswer": "625"
+        }
+      ]
+    },
+    {
+      "sourcePage": "262",
+      "originalProblemId": "KB2025-p262-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、建物を建築した後、死亡し、Aの相続人BおよびCにより建物を共有することになった場合において、BおよびCは、相互に5年間は建物の分割を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "共有物の各共有者は、いつでも共有物の分割を請求できるのが原則である（民法256条1項本文）。したがって、BおよびCは、相互に5年間は建物の分割を請求することはできないとする本肢は誤りである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "626",
+          "sourcePageAnswer": "627"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "各共有者は、不分割の特約の有無にかかわらず、いつでも共有物の分割を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "各共有者は、原則としていつでも共有物の分割を請求できるが、特約で5年以内の共有物の分割請求を禁止することができる（民法256条1項ただし書）。したがって、かかる特約があれば、共有物分割請求をすることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "626",
+          "sourcePageAnswer": "627"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A、BおよびCが甲土地を共有し、甲土地上には乙建物が存在している。Aが乙建物を所有し居住している場合において、A、BおよびCが行った甲土地の分割協議が調わないときは、甲土地をAに単独所有させ、Aが、BおよびCに対して持分に相当する価格の賠償を支払う、いわゆる全面的価額賠償の方法によって分割しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "共有者間の協議が調うときは、現物分割、競売による代金分割、価格賠償分割（共有者の1人が単独所有となり他の共有者に価格賠償）いずれの方法でも共有物を分割できる。共有者間の協議が調わないときまたは協議をすることができないときは、その分割を裁判所に請求することができる（民法258条1項）。この裁判分割の場合、裁判所は、原則として現物分割、価格賠償分割の方法により、共有物の分割を命ずることができるが（258条2項）、これらの方法により共有物を分割することができないとき、または分割によってその価格を著しく減少させるおそれがあるときは、裁判所は、その競売を命ずることができる（競売による代金分割：258条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "626",
+          "sourcePageAnswer": "627"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Dが賃借権に基づいてA、BおよびCが共有する甲土地上に乙建物を建てた場合において、A、BおよびCが甲土地の分割協議を行うとするときは、Dに対して分割協議を行う旨を通知しなければならず、通知をしないときは、A、BおよびCの間でなされた分割の合意は、Dに対抗することができない。",
+          "answerBoolean": false,
+          "explanationText": "共有物について権利を有する者（賃借権者D）は、自己の費用で、共有物の分割に参加することができる（民法260条1項）。当該参加の請求があったにもかかわらず、その請求をした者を参加させないで分割をしたときは、その分割は、その請求をした者（D）に対抗することができない（260条2項）。この場合、共有物について権利を有する者（賃借権者D）に分割協議を行う旨の通知をしなければならないわけではないため、本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "626",
+          "sourcePageAnswer": "627"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "地上権は、地代を定めなくても設定することができる。",
+          "answerBoolean": true,
+          "explanationText": "地代は地上権の要素ではないため、地上権は地代を定めなくても設定することができる（民法266条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "4 用益物権",
+          "sourcePageQuestion": "626",
+          "sourcePageAnswer": "627"
+        }
+      ]
+    },
+    {
+      "sourcePage": "263",
+      "originalProblemId": "KB2025-p263-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "他人の土地の地下または空間の一部について、工作物を所有するため、上下の範囲を定めて地上権を設定することは認められない。",
+          "answerBoolean": false,
+          "explanationText": "地下または空間は、工作物を所有するため、上下の範囲を定めて地上権の目的とすることができる（民法269条の2第1項前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地上権者は、地上権に基づいて、土地の返還請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "地上権は、他人の土地において工作物または竹木を所有するため、その土地を使用する権利であり（民法265条）、地上権者は、地上権に基づいて土地の返還請求をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "地役権は、要役地から分離して譲渡することはできない。",
+          "answerBoolean": true,
+          "explanationText": "地役権は、要役地の便益のため認められたものであるから、要役地から分離して譲渡することはできない（民法281条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A、BおよびCは費用を出し合って、別荘地である甲土地を持分割合を均等として購入した。甲土地に隣接する丙土地について、甲土地からの観望を損ねるような工作物を築造しないことを内容とする地役権が設定され、登記されていた場合、Aは、自己の持分については、単独で同地役権を消滅させることができるが、同地役権の全部を消滅させることはできない。",
+          "answerBoolean": false,
+          "explanationText": "地役権は要役地全体の便益のために承役地の負担の上に存するものであるから、土地の共有者の一人（A）は、その持分につき、その土地のためにまたはその土地について存する地役権を消滅させることができない（不可分性：民法282条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "地役権は、継続的に行使され、かつ、外形上認識することができるものに限り、時効によって取得することができる。",
+          "answerBoolean": true,
+          "explanationText": "地役権は、継続的に行使され、かつ、外形上認識することができるものに限り、時効によって取得することができる（民法283条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "A B共有の甲土地に関して、甲土地を要役地、C所有の乙土地を承役地とする通行地役権をAが時効により取得した場合、Bも、Aと同じ内容の通行地役権を取得する。",
+          "answerBoolean": true,
+          "explanationText": "土地の共有者の1人（A）が時効によって地役権を取得したときは、地役権存続への配慮から、他の共有者（B）も地役権を取得する（民法284条1項）。したがって、Bも、Aと同じ内容の通行地役権を取得する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "甲地の共有者A・B・Cの3人が乙地の上に通行地役権を時効取得しようとする場合に、乙地の所有者Dは、A・B・Cのうち誰か1人に対して時効の更新をすれば、時効更新の効力はA・B・Cの3人に及ぶ。",
+          "answerBoolean": false,
+          "explanationText": "共有者に対する時効の更新は、地役権を行使する各共有者に対してしなければ、その効力を生じない（民法284条2項）。したがって、DがA・B・Cのうち誰か1人に対して時効の更新をしても、時効更新の効力はA・B・Cの3人には及ばない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "628",
+          "sourcePageAnswer": "629"
+        }
+      ]
+    },
+    {
+      "sourcePage": "264",
+      "originalProblemId": "KB2025-p264-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "要役地である甲地をA・B・Cの3人が共有しているが、承役地である乙地の通行地役権について消滅時効が進行している場合に、Aのみが通行地役権を行使して消滅時効を更新したときは、時効更新の効力はA・B・Cの3人に及ぶ。",
+          "answerBoolean": true,
+          "explanationText": "要役地が数人の共有に属する場合において、その一人のために時効の完成猶予または更新があるときは、その完成猶予または更新は他の共有者のためにも、その効力を生ずる（民法292条）。したがって、Aが消滅時効を更新したときは、時効更新の効力はA・B・Cの3人に及ぶ。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "630",
+          "sourcePageAnswer": "631"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "地役権者が、その権利の一部を行使しないときは、その部分についてのみ地役権は時効によって消滅する。",
+          "answerBoolean": true,
+          "explanationText": "地役権者が、その権利の一部を行使しないときは、行使しない部分についてのみ時効によって消滅する（民法293条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "630",
+          "sourcePageAnswer": "631"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "地役権者は、地役権に基づき、妨害排除請求、妨害予防請求をすることができるが、承役地の返還請求をすることはできない。",
+          "answerBoolean": true,
+          "explanationText": "地役権者は、地役権に基づき妨害排除請求、妨害予防請求をすることができるが、地役権者は承役地を排他的に使用するものではないため、承役地の返還請求をすることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "630",
+          "sourcePageAnswer": "631"
+        }
+      ]
+    },
+    {
+      "sourcePage": "265",
+      "originalProblemId": "KB2025-p265-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aが自己所有の土地の造成工事をBに依頼し、完了した部分を順次Bから引渡しを受けていたが、履行期日を過ぎてもBに代金を支払っていない場合、Bは、未だ引渡しをしていない土地の残余部分について留置権を主張して、Aからの残部の引渡請求を拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "留置権者は債権の全部の弁済を受けるまでは、留置物の全部についてその権利を行使することができる（民法296条：留置権の不可分性）。判例（最判平3.7.16）は、留置権者（B）が留置物の一部の占有を喪失した場合、占有喪失部分につき留置権を失うとしても、その債権の全部の弁済を受けるまで残部につき留置権を行使し得ている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "632",
+          "sourcePageAnswer": "633"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、自己の所有する甲機械が故障したためBに修理を依頼したが、Bに修理代の支払をしていない場合、修理後も甲機械を保管するBがAに無断で保存に必要な範囲を超えて使用した場合、Bの留置権は使用により直ちに消滅する。",
+          "answerBoolean": false,
+          "explanationText": "留置権者が債務者に無断で留置物を使用、賃貸、担保供与したときは、債務者は、留置権の消滅を請求することができる（民法298条2項・3項）。したがって、留置権者Bが保存に必要な範囲を超えて留置物（甲機械）を使用した場合でも、債務者Aが留置権の消滅請求をしないときには留置権は存続する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "632",
+          "sourcePageAnswer": "633"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A所有の甲機械の修理を依頼されたBは、修理代金債権を被担保債権として甲機械を留置していた際、有益費を支出し甲機械の価格を増加させた場合、Bは、支出した金額または増価額を選択してAに対して償還させることができる。",
+          "answerBoolean": false,
+          "explanationText": "留置権者（B）は、留置物について有益費を支出したときは、これによる価格の増加が現存する場合に限り、「所有者」（A）の選択に従い、その支出した金額または増価額を償還させることができる（民法299条2項本文）。したがって、「Bの選択に従い」、その支出した金額または増価額を償還させることができるわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "632",
+          "sourcePageAnswer": "633"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "留置権を行使していても、債権の消滅時効は更新しない。",
+          "answerBoolean": true,
+          "explanationText": "留置権の行使は、債権の消滅時効の進行を妨げない（民法300条）。留置権は、ある物に関して生じた債権を有する債権者が、その物を継続的に占有することで、債務者の弁済を間接的に強制する制度である。目的物を留置するだけでは、債権者・債務者間の権利関係を明確にしたことにはならず、時効の更新も生じない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "632",
+          "sourcePageAnswer": "633"
+        }
+      ]
+    },
+    {
+      "sourcePage": "266",
+      "originalProblemId": "KB2025-p266-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、自己所有の事務機器甲をBに売却する旨の売買契約を締結し、甲をまだBに引き渡していない。Bから甲を買い受けたCがAに対して所有権に基づいてその引渡しを求めた場合には、Aは、留置権を行使して、Bから売買代金の支払いを受けるまで甲の引渡しを拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "留置権は物権であり、第三者にも主張できる。したがって、留置権は、目的物の所有権が債務者から第三者Cに移転しても、留置権者Aは、その第三者Cに対して、留置権を行使して目的物甲の引渡しを拒むことができる（最判昭47.11.16）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "634",
+          "sourcePageAnswer": "635"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが自己所有の建物をBに売却し引き渡したが、登記をBに移転する前にCに二重に売却しCが先に登記を備えた場合、Bは、Cからの建物引渡請求に対して、Aに対する損害賠償債権を保全するために留置権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭43.11.21）は、不動産の二重売買において、所有権移転登記を備えた第二の買主Cが第一の買主Bに不動産の所有権に基づく明渡請求をした場合、第一の買主Bは売買契約不履行に基づく損害賠償債権をもって留置権を主張することができないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "634",
+          "sourcePageAnswer": "635"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがC所有の建物をBに売却し引き渡したが、Cから所有権を取得して移転することができなかった場合、Bは、Cからの建物引渡請求に対して、Aに対する損害賠償債権を保全するために留置権を行使することはできない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭51.6.17）は、他人物売買の買主Bは、その所有権を移転すべき売主Aの債務の履行不能による損害賠償債権をもって、所有者Cの目的物返還請求に対し、留置権を主張することはできないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "634",
+          "sourcePageAnswer": "635"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが自己所有の建物をBに賃貸したが、Bの賃料不払いがあったため賃貸借契約を解除したところ、その後も建物の占有をBが続け、有益費を支出したときは、Bは、Aからの建物明渡請求に対して、Aに対する有益費償還請求権を保全するために留置権を行使することはできない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭46.7.16）は、建物の賃貸借契約が解除された後に、当該建物を占有すべき権原のないことを知りながら不法にこれを占有していた者が当該建物につき有益費を支出した場合、民法295条2項の類推適用により、有益費償還請求権に基づく留置権を主張することはできないとしている。したがって、本肢所定の場合、Bは有益費償還請求権を保全するために留置権を行使することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "634",
+          "sourcePageAnswer": "635"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aが自己所有の建物をBに賃貸しBからAへ敷金が交付された場合において、賃貸借契約が終了したときは、Bは、Aからの建物明渡請求に対して、Aに対する敷金返還請求権を保全するために、同時履行の抗弁権を主張することも留置権を行使することもできない。",
+          "answerBoolean": true,
+          "explanationText": "賃貸人は、賃貸借が終了し、かつ、賃貸物の「返還を受けた」とき、賃借人に対し、敷金の残額を返還しなければならない（民法622条の2第1項1号）。したがって、賃貸物の返還を先に履行してからでないと敷金の返還を受けられないため、Bは、Aに対する敷金返還請求権を保全するため同時履行の抗弁権および留置権を主張して建物の明渡しを拒むことはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "634",
+          "sourcePageAnswer": "635"
+        }
+      ]
+    },
+    {
+      "sourcePage": "267",
+      "originalProblemId": "KB2025-p267-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "先取特権の目的物が賃貸されたことにより債務者が金銭を得ている場合でも、当該金銭に対しては、先取特権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "先取特権は、その目的物の売却、賃貸、滅失または損傷によって債務者が受けるべき金銭その他の物に対しても、行使することができるが、そのためには、先取特権者は、その払渡しまたは引渡しの前に差押えをしなければならない（物上代位：民法304条）。したがって、債務者が金銭を得ている本肢では、先取特権を行使できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "先取特権",
+          "sourcePageQuestion": "636",
+          "sourcePageAnswer": "637"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、Bから建物を賃借し、建物内に電気製品（以下、本件動産という）等を備え付けている。Aがその所有物である本件動産をCに売った場合に、Aの取得する売買代金について、Bは、Cの支払い前に差押えをすれば、先取特権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "先取特権には、物上代位性があり、目的物の売却、賃貸、滅失または損傷によって債務者が受けるべき金銭その他の物に対しても、先取特権者が、その払渡しまたは引渡しの前に差押えをすれば行使することができる（民法304条）。賃貸人Bは、不動産の賃料その他賃貸借関係から生じた賃借人Aの債務に関して、賃借人Aの本件動産に対して先取特権を有するところ、Aは、本件動産の売却により代金債権を取得しており、この売買代金は、本件動産の代価であるから、本件動産の上に先取特権を有するBは、CがAに代金を支払う前に差押えをすれば、売買代金について先取特権を行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "先取特権",
+          "sourcePageQuestion": "636",
+          "sourcePageAnswer": "637"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "動産売買の先取特権に基づく物上代位につき、動産の買主が第三取得者に対して有する転売代金債権が譲渡され、譲受人か第三者に対する対抗要件を備えた場合であっても、当該動産の元の売主は、第三取得者がその譲受人に転売代金を弁済していない限り、当該転売代金債権を差し押さえて物上代位権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "動産売買の先取特権者は、物上代位の目的債権が譲渡され、第三者に対する対抗要件が備えられた後においては、目的債権を差し押さえて物上代位権を行使することはできない（最判平17.2.22）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "先取特権",
+          "sourcePageQuestion": "636",
+          "sourcePageAnswer": "637"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "動産売買の先取特権に基づく物上代位につき、買主がその動産を用いて第三者のために請負工事を行った場合であっても、当該動産の請負代金全体に占める価格の割合や請負人（買主）の仕事内容に照らして、請負代金債権の全部または一部をもって転売代金債権と同視するに足りる特段の事情が認められるときは、動産の売主はその請負代金債権を差し押さえて物上代位権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "請負工事に用いられた動産の売主は、原則として、請負人が注文者に対して有する請負代金債権に対して動産売買の先取特権に基づく物上代位権を行使することができないが、請負代金全体に占める当該動産価額の割合や請負契約における請負人との債務の内容等に照らして請負代金の全部または一部を動産の転売による代金債権と同視するに足りる特段の事情がある場合には、請負人が注文者に対して有する請負代金債権に対しても、動産売買先取特権に基づく物上代位権の行使が認められる（最決平10.12.18）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "先取特権",
+          "sourcePageQuestion": "636",
+          "sourcePageAnswer": "637"
+        }
+      ]
+    },
+    {
+      "sourcePage": "268",
+      "originalProblemId": "KB2025-p268-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは自己所有の甲機械をBに賃貸し、その後、本件賃貸借契約の期間中にCがBから甲機械の修理を請け負い、Cによる修理が終了した。CはBに対して甲機械を返還したが、Bが修理代金を支払わない場合、Cは、Bが占有する甲機械につき、動産保存の先取特権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "動産の保存によって生じた債権を有する者は、債務者の特定の動産について先取特権を有する（民法311条4号）。甲機械はA所有の動産であり、修理代金の債務を負担するBの所有物ではないから、Cは、甲機械につき、動産保存の先取特権を行使することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "638",
+          "sourcePageAnswer": "639"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AはBに対して自己の所有する甲機械を売却して引き渡したが、Bが代金の支払をしていない。Bは、Cに対して甲機械を転売して引き渡したが、Cは代金の支払をしていない。その後、Bの債権者がBのCに対する代金債権を差し押さえた。Aが先取特権に基づき当該代金債権を差し押さえたときは、Aは、物上代位権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭60.7.19）は、先取特権者（A）による物上代位行使の目的となる債権（BのCに対する代金債権）について一般債権者が差押または仮差押の執行をしたにすぎないときは、その後に先取特権者が当該債権に対し物上代位権を行使することを妨げないとしている。つまり、BのCに対する転売代金に関して、「Aの動産売買の先取特権に基づく物上代位による差押え」と、「Bの債権者（一般債権者）による差押え」との利益調整について、Aを優先させたものである。したがって、Aは、物上代位権を行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "638",
+          "sourcePageAnswer": "639"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bから建物を賃借し、建物内に電気製品等を備え付けている。Aが、Bの承諾を得て、本件建物をCに転貸した場合に、Bの先取特権は、Cの備え付けた動産には及ばない。",
+          "answerBoolean": false,
+          "explanationText": "賃借権の転貸があった場合、賃貸人Bの先取特権は、転借人Cの動産にも及ぶから（民法314条）、本肢は誤っている。賃借権の譲渡や転貸の場合には、賃貸人の備え付けた動産が一緒に譲渡されることが多く、これにより賃貸人が動産の上に先取特権を行使できなくなる（333条）のを防ぐためであると解されている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "638",
+          "sourcePageAnswer": "639"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bから建物を賃借し、その建物内に電気製品（以下、本件動産という）等を備え付けている。本件動産がCの所有物である場合に、本件動産について、Bは、先取特権を即時取得することはできない。",
+          "answerBoolean": false,
+          "explanationText": "不動産賃貸貸の先取特権に即時取得に関する規定が準用されるから（民法319条）、本肢は誤っている。すなわち、不動産の賃貸人Bは、賃貸不動産に備え付けられた動産を賃借人Aの所有物と善意無過失で信じた場合には、Bのために、即時取得（民法192条）の準用により、本件動産の上に先取特権が成立する（319条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "638",
+          "sourcePageAnswer": "639"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "不動産工事の先取特権は、工事によって生じた不動産の価格の増加が現存する場合に限り、その増価額についてのみ存在する。",
+          "answerBoolean": true,
+          "explanationText": "不動産の工事の先取特権は、工事によって生じた不動産の価格の増加が、現存する場合に限り、その増価額についてのみ存在する（民法327条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "638",
+          "sourcePageAnswer": "639"
+        }
+      ]
+    },
+    {
+      "sourcePage": "269",
+      "originalProblemId": "KB2025-p269-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AはBにその所有する建物を賃貸した場合において、Bがその建物に備え付けた家具が競売されたときは、その執行費用に関する先取特権は、その建物の賃貸人Aが賃料債権に基づいて有する先取特権に優先する。",
+          "answerBoolean": true,
+          "explanationText": "一般の先取特権と特別の先取特権とが競合する場合には、特別の先取特権は、一般の先取特権に優先するのが原則であるが、共益の費用（例：執行費用等）の先取特権は、その利益を受けたすべての債権者に対して優先する効力を有する（民法329条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "640",
+          "sourcePageAnswer": "641"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、Bから建物を賃借し、その建物内に電気製品（以下、本件動産という）等を備え付けている。Aが本件動産をCから買ったが、まだCに対して代金の支払いがない場合において、本件動産についてCの先取特権がBの先取特権よりも優先する。",
+          "answerBoolean": false,
+          "explanationText": "Bの先取特権のほうがCの先取特権よりも優先するから、本肢は誤っている。すなわち、賃貸人Bは、不動産の賃料その他の賃貸借関係から生じた賃借人Aの債務に関して、賃借人Aの本件動産に対して先取特権を有し（民法311条1号、312条：不動産賃貸の先取特権）、他方で、本件動産の売主Cは、動産の代価およびその利息に関して、その動産に対して先取特権を有する（311条5号、321条：動産売買の先取特権）。このように本件動産についてBの先取特権とCの先取特権が競合する場合、動産先取特権の順位は、不動産の賃貸の先取特権が第1順位であり、動産売買の先取特権は第3順位であるから（330条）、Bの先取特権のほうがCの先取特権より優先する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "640",
+          "sourcePageAnswer": "641"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AはBに対して自己の所有する甲機械を売却して引き渡したが、Bが代金の支払いをしていない。Bは、甲機械をCから賃借している工場内に設置したが、Cに賃料の支払を滞納していた場合、CがBの代金未払の事実を知らなかったときは、Aは、Cに対して自己の先取特権の優先権を主張することはできない。",
+          "answerBoolean": true,
+          "explanationText": "動産先取特権相互間の順位について、不動産の賃貸は第1順位、動産の売買は第3順位である（民法330条1項）。もっとも、不動産賃貸の先取特権者（C）は、その債権取得の時において動産売買の先取特権者（A）があることを知っていたときは、この者に対して優先権を行使することはできない（330条2項前段）。したがって、BのAへの代金未払の事実をCが知らなかった本肢所定の場合、Aは、Cに対して自己の先取特権の優先権を主張することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "640",
+          "sourcePageAnswer": "641"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "同一の不動産について不動産保存の先取特権と不動産工事の先取特権が互いに競合する場合、各先取特権者は、その債権額の割合に応じて弁済を受ける。",
+          "answerBoolean": false,
+          "explanationText": "同一の不動産について特別の先取特権が互いに競合する場合には、その優先権の順位は、債権額の割合に応じるのではなく、不動産の保存、不動産の工事、不動産の売買の順序に従う（民法331条1項、325条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.95,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "640",
+          "sourcePageAnswer": "641"
+        }
+      ]
+    },
+    {
+      "sourcePage": "270",
+      "originalProblemId": "KB2025-p270-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bから建物を賃借し、その建物内に電気製品（以下、本件動産という）等を備え付けている。Aがその所有物である本件動産をCに売って引き渡した場合に、本件動産について、Bは、先取特権を行使することはできない。",
+          "answerBoolean": true,
+          "explanationText": "先取特権は、債務者がその目的である動産をその第三取得者に引き渡した後は、その動産について行使することができない（民法333条）。動産に先取特権がついていることを知らないで譲り受けることが多い第三取得者を保護するものである。したがって、賃貸人Bは、賃借人Aの本件動産に対して先取特権を有するが（311条1号、312条：不動産賃貸の先取特権）、Aは本件動産をCに売却し引き渡している以上、Bは先取特権を行使することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "一般の先取特権者は、まず不動産から弁済を受けたうえで、不足分に限り不動産以外の財産から弁済を受ける。",
+          "answerBoolean": false,
+          "explanationText": "一般の先取特権者は、まず「不動産以外」の財産から弁済を受け、なお不足あるときでなければ不動産から弁済を受けることができない（民法335条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "不動産の保存の先取特権は、保存行為を完了後、直ちに登記をしたときはその効力が保存され、同一不動産上に登記された既存の抵当権に優先する。",
+          "answerBoolean": true,
+          "explanationText": "不動産の保存の先取特権の効力を保存するためには、保存行為が完了した後直ちに登記をしなければならない（民法337条）。不動産の保存行為は、抵当目的物の交換価値を増加させ抵当権者の利益になるから、登記をした先取特権は、抵当権に先立って行使できる（339条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "差押えが禁じられている物を目的として、質権を設定することはできない。",
+          "answerBoolean": false,
+          "explanationText": "質権の目的物は、譲渡可能な物でなければならないところ（民法343条）、差押えの禁止される物であっても、譲渡が可能であるならば、質権を設定することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "質権は、質権設定者がその目的物を質権者に引き渡さなくてもその効力を生じる。",
+          "answerBoolean": false,
+          "explanationText": "質権の設定は、債権者に目的物を引き渡すことによって、その効力を生ずる（質権設定における要物性：民法344条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "質権が成立するためには目的物の引渡しが必要であるが、この引渡しには、設定者を以後、質権者の代理人として占有させる、占有改定による引渡しは含まれない。",
+          "answerBoolean": true,
+          "explanationText": "質権設定における要物性（民法344条）を貫徹するため、質権設定者は質権者に代わって質物を占有をさせることはできない（345条）ことから、この引渡しには占有改定は含まれない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "動産質権者は、継続して質物を占有しなければ、その質権をもって第三者に対抗することができず、また、質物の占有を第三者によって奪われたときは、占有回収の訴えによってのみ、その質物を回復することができる。",
+          "answerBoolean": true,
+          "explanationText": "動産質権者は、継続して質物を占有しなければ、その質権をもって第三者に対抗することができない（民法352条）。また、質物の占有を第三者によって奪われたときは、占有回収の訴えによってのみ、その質物を回復することができる（353条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.98,
+          "sectionTitle": "担保物権",
+          "sourcePageQuestion": "642",
+          "sourcePageAnswer": "643"
+        }
+      ]
     }
   ]
 }
