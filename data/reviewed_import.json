@@ -22584,6 +22584,2062 @@
         }
       ],
       "parseError": null
+    },
+    {
+      "sourcePage": "322",
+      "originalProblemId": "KB2025-p322-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "双務契約の当事者の一方が訴訟をもって債務の履行を請求した場合に、相手方から同時履行の抗弁の提出があったときは、原告の債務の履行と引換えに被告に債務の履行を命ずる旨の判決がなされる。",
+          "answerBoolean": true,
+          "explanationText": "裁判上、同時履行の抗弁権が適法に主張された場合、原告の請求を棄却せず、被告に対して、原告の給付と引換えに給付すべき旨を命ずる判決をなすべきものとされている（大判明44.12.11）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "742",
+          "sourcePageAnswer": "743"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが甲建物をBに売却する旨の売買契約を締結したが、甲建物の引渡しの履行期の直前に震災によって甲建物が滅失した場合は、Bは、履行不能を理由として代金の支払いを拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "危険負担は、双務契約上の債務の一方（例：売買契約上の売主の引渡債務）が履行不能となった場合、その債務の債権者（例：引渡請求権を有する買主）は、債務者（例：売主）からの反対給付の履行請求（例：代金支払請求）に対して履行不能を理由としてその履行を拒絶できるかという問題である（履行不能すなわち債務の消滅ではない）。民法は、原則として履行拒絶を認めている（民法536条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "危険負担",
+          "sourcePageQuestion": "742",
+          "sourcePageAnswer": "743"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A・B間で建物の売買契約が成立し、Aは、Bから建物の引渡しを受け、また、移転登記も得て、近く同建物に引っ越しをしようと思っていたところ、同建物は、第三者Cの放火によって焼失してしまった。同建物は、Bの責めに帰することのできない事由により焼失したので、危険負担に関し建物についてはAの負担に帰する。",
+          "answerBoolean": false,
+          "explanationText": "危険負担は、双務契約において、契約成立後、各債務が完全に履行される前に、一方の債務が履行不能となった危険を当事者のいずれが負担するかという問題である。よって、建物の引渡しおよび移転登記を終え、建物の引渡債務の履行が完了している本問においては、たとえ債務者の責めに帰すべからざる事由によって建物が焼失しても、危険負担の問題は生じない。したがって、「危険負担に関し」とする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "危険負担",
+          "sourcePageQuestion": "742",
+          "sourcePageAnswer": "743"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A・B間で建物の売買契約が成立し、Aは、Bから建物の引渡しを受け、また、移転登記も得て、近く同建物に引っ越しをしようと思っていたところ、同建物は、第三者Cの放火によって焼失してしまった。Aは、Bに対して代金の支払いを拒むことはできないが、債務不履行を理由とする損害賠償請求をすることができるので、この両者につき相殺を主張することができる。",
+          "answerBoolean": false,
+          "explanationText": "本肢では、建物の引渡しおよび登記を移転したBに債務不履行（民法415条）の問題は生じないから、Aは債務不履行を理由とする損害賠償請求をすることができない（この部分において本肢は誤っている）。そのため、債権が対立していない本肢では、Aは、相殺を主張することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "危険負担",
+          "sourcePageQuestion": "742",
+          "sourcePageAnswer": "743"
+        }
+      ]
+    },
+    {
+      "sourcePage": "323",
+      "originalProblemId": "KB2025-p323-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A・B間で建物の売買契約が成立し、Aは、Bから建物の引渡しを受け、また、移転登記も得て、近く同建物に引っ越しをしようと思っていたところ、同建物は、第三者Cの放火によって焼失してしまった。Aは、Bに対して代金の支払いをとめることはできないが、Cに対して不法行為を理由として損害賠償請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "建物の所有権は売買契約の締結と同時に買主に移転するから（民法176条）、Cの放火により建物の所有権を侵害されたAは、Cに対して不法行為を理由として損害賠償請求をすることができる（709条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "744",
+          "sourcePageAnswer": "745"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは不動産会社Bと、BがC工務店に注文して建築させた建売住宅を購入する契約を締結した。この建売住宅が売買契約成立後Aへの引渡し前に、Bの従業員の過失によって火災になり半焼してしまった場合、AはBに対して危険負担に基づく代金減額請求ができる。",
+          "answerBoolean": false,
+          "explanationText": "危険負担は、双務契約において一方の債務が債務者の責めに帰すことのできない理由で履行不能となった場合、その債務の債権者に反対債務の履行拒絶権が認められるかという問題である。本肢は、Bの従業員の過失によって、建売住宅が火災になり半焼してしまった場合であり、履行補助者の過失として債務不履行の問題となる（民法415条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "744",
+          "sourcePageAnswer": "745"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがBに対して自己所有の土地を売却する旨の売買契約を締結したが、Aは、Cに対する借金を返済するため、代金はBがCに直接支払うこととした場合、Cが契約の利益を享受する意思をBに表示した時に代金支払請求権が発生する。",
+          "answerBoolean": true,
+          "explanationText": "契約により当事者の一方が第三者（C）に対してある給付をすることを約したときは、その第三者（C）は、債務者（B）に対して直接にその給付を請求する権利を有することとなるが（民法537条1項）、この第三者（C）の権利は、その第三者（C）が債務者（B）に対して契約の利益を享受する意思を表示した時に発生する（537条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4) 第三者のためにする契約",
+          "sourcePageQuestion": "744",
+          "sourcePageAnswer": "745"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AがBに対して自己所有の土地を売却する旨の売買契約を締結したが、Aは、Cに対する借金を返済するため、代金はBがCに直接支払うこととした場合、Cが契約の利益を享受する意思を表示した後で、AB間で売買契約を合意により解除することはできない。",
+          "answerBoolean": true,
+          "explanationText": "第三者の権利が発生した後（Cが契約の利益を享受する意思を表示した後）は、当事者（A B）は、これを変更または消滅させることができない（民法538条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4) 第三者のためにする契約",
+          "sourcePageQuestion": "744",
+          "sourcePageAnswer": "745"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AがBに対して自己所有の土地を売却する旨の売買契約を締結したが、Aは、Cに対する借金を返済するため、代金はBがCに直接支払うこととした場合、Cが契約の利益を享受する意思を表示した後でも、AがBに土地を引き渡さないときは、Cの代金支払請求に対し、Bは代金の支払いを拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "債務者（代金支払債務を負うB）は、第三者のためにする契約に基づく抗弁（例：同時履行の抗弁権等）をもって、その契約の利益を受ける第三者（C）に対抗することができる（民法539条）。したがって、AがBに土地を引き渡さないときは、Bは代金の支払いを拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4) 第三者のためにする契約",
+          "sourcePageQuestion": "744",
+          "sourcePageAnswer": "745"
+        }
+      ]
+    },
+    {
+      "sourcePage": "324",
+      "originalProblemId": "KB2025-p324-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AはBとの間で、A所有の自動車を、代金後払い、代金額150万円の約定でBに売却する契約を締結した。Aは自動車の引き渡しを完了したが、代金支払期日を経過してもBからの代金の支払がない。そこでAはBに対して相当の期間を定めて代金を支払うよう催告したが、期日までに代金の支払いがなない。この場合、A・B間の売買契約は法律上当然に効力を失う。",
+          "answerBoolean": false,
+          "explanationText": "当事者の一方がその債務を履行しない場合、相手方が相当の期間を定めてその履行の催告をし、その期間内に履行がないときは、相手方は契約の解除をすることができ（民法541条）、この解除の意思表示によって契約関係は解消されるのであり、契約が法律上当然に効力を失うのではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約の解除",
+          "sourcePageQuestion": "746",
+          "sourcePageAnswer": "747"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債権者は、期限の定めのない債務について、相当の期間を定めて債務者に履行を催告し、債務者がその期間内に履行しなかった場合は、契約を解除することができる。",
+          "answerBoolean": true,
+          "explanationText": "期限の定めのない債務について債権者の催告後、相当期間が経過するまでに債務者が履行しないときは、債権者は契約を解除できる（大判大6.6.27）。期限の定めのない債務ということで、まず催告で「履行遅滞」にしたうえで、さらに、相当な期間を決めて「解除」するといった二度の催告は不要である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約の解除",
+          "sourcePageQuestion": "746",
+          "sourcePageAnswer": "747"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aが、その所有する建物をBに売却する契約を締結したが、その後、引渡し期日が到来してもAはBに建物を引き渡していない。Bが、期間を定めずに催告した場合、Bは改めて相当の期間を定めて催告をしなければ、当該売買契約を解除することはできない。",
+          "answerBoolean": false,
+          "explanationText": "債務者が遅滞に陥った場合には、債権者が期間を定めずに催告した場合でも、催告の時から相当期間を経過して、なお債務を履行しないならば、契約を解除できる（最判昭31.12.6）。したがって、Bは改めて催告をしなくても、相当の期間が経過すれば、当該売買契約を解除することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約の解除",
+          "sourcePageQuestion": "746",
+          "sourcePageAnswer": "747"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "債権者は、債務者が催告に対し履行拒絶の意思を明確に表示した場合は、その期間の満了を待たずに、契約を解除することができる。",
+          "answerBoolean": true,
+          "explanationText": "契約の解除は、催告による解除の場合は追完の催告から相当期間が経過し、かつ不適合の程度が軽微でないことが要件となり（民法541条）、無催告解除の場合は無催告解除事由があることが要件となる（542条1項1号～5号）。したがって、債務者がその債務の全部の履行を拒絶する意思を明確に表示したときは無催告解除事由として（同2号）、直ちに解除できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約の解除",
+          "sourcePageQuestion": "746",
+          "sourcePageAnswer": "747"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "特定物の売買契約において、契約締結後に目的物が不可抗力によって滅失した場合、買主は、履行不能を理由として契約を解除することができない。",
+          "answerBoolean": false,
+          "explanationText": "債権者は、債務の全部の履行が不能である場合には、催告をすることなく、直ちに契約の解除をすることができる（民法542条1項1号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約の解除",
+          "sourcePageQuestion": "746",
+          "sourcePageAnswer": "747"
+        }
+      ]
+    },
+    {
+      "sourcePage": "325",
+      "originalProblemId": "KB2025-p325-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債務者がその債務の全部について履行を拒絶する意思を明確に表示したとしても、債権者は、相当の期間を定めて履行の催告をし、その期間内に履行がない場合でなければ、契約を解除できない。",
+          "answerBoolean": false,
+          "explanationText": "債権者は、債務者がその債務の全部の履行を拒絶する意思を明確に表示した場合には、催告をすることなく、直ちに契約の解除をすることができる（民法542条1項2号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "748",
+          "sourcePageAnswer": "749"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが、その所有する建物をBに売却する契約を締結したが、その後、引渡しまでの間にAの火の不始末により当該建物が焼失した。Bは、引渡し期日が到来した後でなければ、当該売買契約を解除することができない。",
+          "answerBoolean": false,
+          "explanationText": "契約の解除には、催告による解除（民法541条）と催告によらない解除（542条）があり、債務の履行の全部が不能となったときは、債権者は、催告をすることなく、直ちに契約の解除をすることができる（542条1項1号）。したがって、Aの火の不始末という引渡債務の債務者Aの帰責事由により当該建物が焼失した本肢では、Bは、引渡し期日を待たずに直ちに契約の解除をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "748",
+          "sourcePageAnswer": "749"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AとBが、その共有する建物をCに売却する契約を締結したが、その後、AとBは、引渡し期日が到来してもCに建物を引き渡していない。Cが、当該売買契約を解除するためには、Aに対してのみ解除の意思表示をするのでは足りない。",
+          "answerBoolean": true,
+          "explanationText": "ABの負う建物引渡債務は、性質上、不可分債務である。そして、当事者の一方が数人ある場合には、契約の解除は、その全員からまたは全員に対してのみ、することができる（民法544条1項）。したがって、Cは、Aに対して解除の意思表示をしたとしても、Bに対しても解除の意思表示をしなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "748",
+          "sourcePageAnswer": "749"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが、その所有する土地をBに売却する契約を締結し、その後、Bが、この土地をCに転売した。Bが、代金を支払わないため、Aが、AB間の売買契約を解除した場合、C名義への移転登記が完了しているか否かにかかわらず、Cは、この土地の所有権を主張することができる。",
+          "answerBoolean": false,
+          "explanationText": "解除前の第三者Cは、善意であっても登記を備えなければ保護されないから、誤っている。すなわち、当事者の一方がその解除権を行使したときは、各当事者は、その相手方を原状に復させる義務を負うが、第三者の権利を害することはできない（民法545条1項）。そして、この規定により第三者Cが保護を受けるためには、その権利につき対抗要件を備えていることが必要である（大判大10.5.17）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "748",
+          "sourcePageAnswer": "749"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AからBに不動産の売却が行われ、BはこれをさらにCに転売したところ、A・Bの取引がA・Bにより合意解除された場合には、Cは善意であっても登記を備えなければ保護されない。",
+          "answerBoolean": true,
+          "explanationText": "不動産の売買契約の合意解除の前に利害関係を有するに至った第三者が保護を受けるためには、その権利につき対抗要件を備えていることが必要である（最判昭33.6.14）。したがって、Cは善意であっても登記を備えなければ保護されない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "748",
+          "sourcePageAnswer": "749"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aはその所有する建物をBに賃貸し、BはAの承諾を得てその建物をCに転貸している。A・Bが賃貸借契約を合意解除した場合には、AはそれをCに対抗することができる。",
+          "answerBoolean": false,
+          "explanationText": "賃貸人と賃借人との間で賃貸借契約を合意解除しても、特段の事情のない限り、転借人に対抗することができない（民法613条3項）。したがって、Aは、AB間の合意解除をCに対抗することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "748",
+          "sourcePageAnswer": "749"
+        }
+      ]
+    },
+    {
+      "sourcePage": "326",
+      "originalProblemId": "KB2025-p326-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "未登記の建物を書面によらず贈与した場合において、贈与者Aが受贈者Bにその建物を引き渡したときは、Aはその贈与契約を解除することができない。",
+          "answerBoolean": true,
+          "explanationText": "書面によらない不動産の贈与においては、不動産の引渡しによって履行が終了し（大判大9.6.17）、解除することができなくなる（民法550条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "権利移転型契約 贈与",
+          "sourcePageQuestion": "750",
+          "sourcePageAnswer": "751"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "既登記の建物を書面によらずに贈与した場合において、贈与者Aが受贈者Bにその建物を引き渡したときは、所有権移転登記が未了であっても、Aはその贈与契約を解除することができない。",
+          "answerBoolean": true,
+          "explanationText": "書面によらない不動産の贈与においては、その不動産の所有権移転登記がされたときは、引渡しの有無を問わず、履行が終了し（最判昭40.3.26）、解除することができなくなる（民法550条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "権利移転型契約 贈与",
+          "sourcePageQuestion": "750",
+          "sourcePageAnswer": "751"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "既登記の建物を書面によらずに贈与した場合において、贈与者Aから受贈者Bにその建物の引渡しが行われていないときであっても、所有権移転登記がなされていれば、Aはその贈与契約を解除することができない。",
+          "answerBoolean": true,
+          "explanationText": "書面によらない不動産の贈与契約において、その不動産の所有権移転登記がされたときは、引渡しの有無を問わず、履行が終了し（最判昭40.3.26）、解除することができなくなる（民法550条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "権利移転型契約 贈与",
+          "sourcePageQuestion": "750",
+          "sourcePageAnswer": "751"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "負担付贈与において受贈者Bがその負担である義務の履行を怠るときは、贈与者Aは契約の解除をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "負担付贈与においては、その性質に反しない限り、双務契約に関する規定が準用されるため（民法553条）、受贈者がその負担である義務の履行を怠るときは、契約の解除の規定を準用し、贈与者は贈与契約の解除をなし得る（最判昭53.2.17）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "権利移転型契約 贈与",
+          "sourcePageQuestion": "750",
+          "sourcePageAnswer": "751"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "受贈者Bに対する定期の給付を目的とする贈与であらかじめ期間の定めがあるものは、贈与者Aが死亡しても、その期間内は効力を失うことはない。",
+          "answerBoolean": false,
+          "explanationText": "定期贈与は、反対の意思表示のない限り、当事者の一方（贈与者または受贈者）の死亡により失効し（民法552条）、期間の定めの有無にかかわらない（552条、大判大6.11.5）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "権利移転型契約 贈与",
+          "sourcePageQuestion": "750",
+          "sourcePageAnswer": "751"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aが自己所有の甲建物をBに贈与する旨を約し、本件贈与につき書面が作成され、その書面でAが死亡した時に本件贈与の効力が生じる旨の合意がされた場合、遺言が撤回自由であることに準じて、Aはいつでも本件贈与を撤回することができる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭47.5.25）は、死因贈与の撤回については、遺贈の方式を除き、いつでも、その全部または一部を撤回することができる（民法1022条準用）としている。したがって、遺言が撤回自由であることに準じて、Aはいつでも本件贈与を撤回することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "権利移転型契約 贈与",
+          "sourcePageQuestion": "750",
+          "sourcePageAnswer": "751"
+        }
+      ]
+    },
+    {
+      "sourcePage": "327",
+      "originalProblemId": "KB2025-p327-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "売買契約において買主から売主に解約手付が交付された場合に、売主が売買の目的物である土地の移転登記手続等の自己の履行に着手したときは、売主は、まだ履行に着手していない買主に対しても、手付倍返しによる解除を主張することはできない。",
+          "answerBoolean": false,
+          "explanationText": "解約手付の授受された売買契約において、当事者の一方は、自ら履行に着手した場合でも、相手方が履行に着手するまでは、民法557条1項に定める解除権を行使することができる（557条1項ただし書）。557条1項は解除の相手方を保護する規定であり、相手方が履行に着手していない限り、履行に着手した当事者から解除しても差し支えない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 売買",
+          "sourcePageQuestion": "752",
+          "sourcePageAnswer": "753"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "当事者がお互いに履行に着手する前に、買主が解約手付を放棄して売買契約を解除した場合に、売主に損害が生じたときは、その損害賠償の責任が問題となる。",
+          "answerBoolean": false,
+          "explanationText": "当事者がお互いに履行に着手する前に、買主が解約手付を放棄して売買契約を解除した場合に、解除による損害の賠償を請求することはできない（民法557条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 売買",
+          "sourcePageQuestion": "752",
+          "sourcePageAnswer": "753"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "売買契約において買主が売主に解約手付を交付した場合に、このことによって、買主は、どのような要件のもとであれば、売買契約を解除することができるか。",
+          "answerBoolean": true,
+          "explanationText": "買主は売主の履行の着手前に手付金を放棄するとの要件のもとで売買契約を解除することができる。（45字）本肢は、民法557条1項の内容のとおりであり、買主が売主に手付を交付したときは、当事者の一方が契約の履行に着手するまでは、買主はその手付を放棄して、契約の解除をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 売買",
+          "sourcePageQuestion": "752",
+          "sourcePageAnswer": "753"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "売買の目的物の評価や契約書の作成に要した費用など、売買契約に関する費用は、特約のない限り、当事者双方が平分して負担する。",
+          "answerBoolean": true,
+          "explanationText": "売買契約に関する費用は、当事者双方が等しい割合で負担する（民法558条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 売買",
+          "sourcePageQuestion": "752",
+          "sourcePageAnswer": "753"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AがBの絵画を自分の物であると偽ってCに売却した場合、Bにこの絵画を手放す意思がないため、Aがこの絵画の所有権を取得してCに移転させることができないときは、この売買契約は無効である。",
+          "answerBoolean": false,
+          "explanationText": "他人の権利を売買の目的としたときは、売主は、その権利を取得して買主に移転する義務を負う（民法561条）。他人物売買は、物権的には所有権移転の効力を生じないが、債権的には契約上有効に成立し（最判昭25.10.26）、権利の全部が他人に属する場合に、権利を取得して相手方に移転できないとき債務不履行の一般規定によって処理される（権利の不適合に関する565条の適用はない）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 売買",
+          "sourcePageQuestion": "752",
+          "sourcePageAnswer": "753"
+        }
+      ]
+    },
+    {
+      "sourcePage": "328",
+      "originalProblemId": "KB2025-p328-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがB所有の土地を自己の土地であるとしてCに売却した。Cは、悪意または有過失であっても、20年間、所有の意思をもって平穏かつ公然とBの土地を占有継続すれば、Cは土地の所有権を時効取得する。",
+          "answerBoolean": true,
+          "explanationText": "20年間、所有の意思をもって、平穏に、かつ、公然と他人の物を占有した者は、その所有権を時効取得することができる（民法162条1項）。他人物売買においては、（債権的関係としては）売主は真の権利者から権利を取得して買主に移転しなければならない債務を負担するが、目的物が他人に属し、売主の物でない以上、物権的には効力は生じないので、Cは、依然「他人」であるBの土地を占有していることになる。そのため、Cが20年間平穏かつ公然と占有継続すれば、本件土地の所有権がAにないことを知っていたとしても（悪意）、時効により所有権を取得する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "754",
+          "sourcePageAnswer": "755"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBの絵画を自分の物であると偽ってCに売却し、後にBがこの売買契約を追認した場合でも、Cは契約のときに遡ってこの絵画の所有権を取得することはできない。",
+          "answerBoolean": false,
+          "explanationText": "無権利者が、他人の権利を自己に属するものとして処分した場合に、後に、権利者がその処分を追認したときは、民法116条の類推適用により、処分の時に遡って効力を生ずる（最判昭37.8.10）。本肢においてBが追認していることから、Cは契約の時に遡ってこの絵画の所有権を取得することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "754",
+          "sourcePageAnswer": "755"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがB所有の土地を自己の土地であるとしてCに売却した。AがBから土地の所有権を取得してCに移転できない場合、Cは、契約時にAに土地の所有権がないことを知っていたとしても、契約の解除ができる。",
+          "answerBoolean": true,
+          "explanationText": "AC間の本件売買契約は、他人Bの土地を売買の目的物とした他人物売買である。権利の全部が他人に属する場合には、債務不履行責任に従い、買主は、その権利が売主に属しないことを知っていたか否かに関係なく、契約の解除をすることができるから（民法415条、541条、542条）、買主Cは、本件土地の所有権が売主Aに属しないことを知っていた（悪意）としても、契約を解除できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "754",
+          "sourcePageAnswer": "755"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、新品の業務用冷蔵庫をBから購入したが、温度調節機能の不具合があったため、食材を保管できない状況にあった。温度調節機能の不具合は、機械マニアであったAが温度調節機能を分解して構造を確認していた際に部品を破損させたことが原因であった場合、Aが温度調節機能の不具合を引渡し時から1年以内にBに通知していたとしても、目的物の修補による履行の追完を請求することができない。",
+          "answerBoolean": true,
+          "explanationText": "目的物の種類・品質・数量に契約不適合があった場合、不完全履行として、買主（A）は、売主（B）に対し、原則として、目的物の修補、代替物の引渡しまたは不足分の引渡しによる履行の追完請求をすることができる（民法562条1項）。しかし、不適合が買主（A）の責めに帰すべき事由によるものであるときは、買主を保護する必要はないため、買主は、履行の追完請求ができない（562条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "754",
+          "sourcePageAnswer": "755"
+        }
+      ]
+    },
+    {
+      "sourcePage": "329",
+      "originalProblemId": "KB2025-p329-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bから本来であれば1500万円のB所有の土地を同額で購入したが、Cが保管していた産業廃棄物による土壌汚染により評価額は500万円に過ぎなかった。Aは、Bに相当の期間を定めて土壌の洗浄を催告したが、その期間内に洗浄がされなかったときは、1000万円の減額を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "目的物の種類・品質・数量に関して契約不適合があった場合、買主は、原則として、相当の期間を定めて履行の追完の催告をし、その期間内に履行の追完がないときは、不適合の程度に応じた代金減額請求をすることができる（民法563条1項）。代金減額請求権は、（債務者の帰責事由が必要な）損害賠償請求ではなく、契約の一部解除と捉えられるため、売主（B）の帰責事由がなくてもすることができる。したがって、Aは、1000万円の減額を請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "756",
+          "sourcePageAnswer": "757"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、Bから本来であれば1500万円のB所有の土地を同額で購入したが、Bが保管していた産業廃棄物による土壌汚染により評価額は500万円に過ぎなかった。Bが土壌の洗浄を拒絶する意思を明確に表示したときは、Aは、洗浄の催告をしなくても、直ちに1000万円の減額請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "目的物の種類・品質・数量に関して契約不適合があった場合、買主は、原則として、相当の期間を定めて履行の追完の催告をし、その期間内に履行の追完がないときでなければ代金減額請求をすることができない（民法563条1項）。しかし、履行の追完が不能であるときや、売主が履行の追完を拒絶する意思を明確に表示したとき等の場合には、買主は、追完の催告をすることなく、直ちに代金の減額を請求することができる（563条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "756",
+          "sourcePageAnswer": "757"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "売買契約の時に一定の面積を表示し、この数量を基礎として代金額を定めてBがAに甲土地を売却した場合において、甲土地の面積が契約時に表示された面積よりも実際には少なく、表示された面積が契約の目的を達成する上で特段の意味を有しているために実際の面積であればAがこれを買い受けなかったときは、Aは、その事実を知った時から1年以内にBに通知しなければ、Bに対して、契約を解除して、損害賠償を請求することができない。",
+          "answerBoolean": false,
+          "explanationText": "数量・権利に関する契約不適合の場合には、種類・品質に関する契約不適合の場合と異なり（民法566条参照）、買主の権利の消滅時効に関する一般規定によって処理される（166条1項）。したがって、数量・権利に関する契約不適合の場合、買主の権利は、契約不適合を知った時から5年、引渡し時から10年の経過によって消滅する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "756",
+          "sourcePageAnswer": "757"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "不特定物であるいす500脚の売買契約成立後、買主がその引渡しを受けた場合、買主が引渡し時にこの数量不足を知らなかったときは、代金減額請求をすることができるが、契約の解除はすることができない。",
+          "answerBoolean": false,
+          "explanationText": "売主は、種類物売買・特定物売買いずれの場合においても、種類・品質・数量に関して、買主に対して契約内容に適合した物を引き渡す債務を負担するため、契約内容に適合しない場合には債務不履行責任を負う。したがって、数量不足に関して、売主の善意悪意、買主の善意悪意に関わりなく、代金減額請求、契約の解除をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "756",
+          "sourcePageAnswer": "757"
+        }
+      ]
+    },
+    {
+      "sourcePage": "330",
+      "originalProblemId": "KB2025-p330-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは不動産会社Bと、BがC工務店に注文して建築させた建売住宅を購入する契約を締結した。この建売住宅にCの手抜き工事による欠陥があって、通行人Dがケガをしてしまった場合、DはCに対して契約不適合を理由とする損害賠償請求ができる。",
+          "answerBoolean": false,
+          "explanationText": "目的物の種類・品質・数量に関して契約不適合があった場合、買主は、追完請求（民法562条）、代金減額（563条）の他、債務不履行の一般規定に従い、解除権の行使（564条、542条）、損害賠償請求をすることができる（564条、415条）。DとC間には契約関係はないため、債務不履行責任ではなく、不法行為の問題となる（709条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "758",
+          "sourcePageAnswer": "759"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aから甲土地を購入したBが、その引渡しを受けてから10年以上経過した後に品質に関する契約不適合を発見し、その旨の通知をAにした場合、Aに対して契約不適合を理由とする損害賠償を請求したときは、Aは消滅時効を援用してこれを拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "目的物に種類・品質に関する契約不適合があった場合、買主は、不適合を知った時から1年以内にその旨を売主に通知すれば、原則として、不適合を理由として、追完請求、代金減額請求、損害賠償請求および契約の解除をすることができる（民法566条）。もっとも、契約不適合を理由とする損害賠償請求には消滅時効の規定の適用があるため、売主（A）は、目的物の引渡しから時効期間の経過による消滅時効を主張することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "758",
+          "sourcePageAnswer": "759"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aから甲建物を購入したBが、同建物の品質に関する契約不適合を理由としてAに対して損害賠償を請求する場合には、その不適合を発見してから1年以内にAに対して通知すれば、同請求権は失権しない。",
+          "answerBoolean": true,
+          "explanationText": "売主が種類・品質に関する契約不適合の目的物を買主に引き渡した場合、買主がその不適合を知った時から1年以内にその旨を売主に通知しないときは、買主は、その不適合を理由として、履行の追完の請求、代金の減額の請求、損害賠償の請求および契約の解除をすることができない。なお、売主が引渡時に不適合の事実につき悪意重過失があるときは、買主の権利を行使することができる（民法566条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "758",
+          "sourcePageAnswer": "759"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが数量を指示して代金額を決定してB所有の土地を購入したが、実際の土地面積が大きい場合には、Bは、実際の面積に応じて代金を増額する旨の合意がなくても、Aに対して代金の増額を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "数量指示売買において数量が超過する場合、超過部分の代金支払の合意があるときは売主が追加代金を請求し得るものの、その合意のないときは、売主は民法563条の類推適用を根拠として代金の増額を請求することはできない（最判平13.11.27）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "758",
+          "sourcePageAnswer": "759"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは甲土地についてその売主Bとの間で売買契約を締結したが、甲土地の一部の所有権がCに属していた場合において、BがCからその所有権を取得してAに移転することができないときは、Aは、甲土地の一部の所有権がCに属していたことを知った時から1年以内にBにその旨を通知しなければ、Bに対して、その不足する部分の割合に応じて代金の減額請求をすることができない。",
+          "answerBoolean": false,
+          "explanationText": "数量・権利に関する契約不適合の場合には、種類・品質に関する契約不適合の場合と異なり（民法566条参照）、買主の権利に関する失権効は採用されていないため、数量・権利の契約不適合を知った時から1年以内に通知をしなくても、代金減額請求等の担保責任を追及することができる。買主の権利の消滅は、債権の消滅時効に関する一般規定によって処理されるため（166条1項）、数量・権利に関する契約不適合の場合、買主の権利は、契約不適合を知った時から5年、引渡し時から10年の経過によって消滅する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "758",
+          "sourcePageAnswer": "759"
+        }
+      ]
+    },
+    {
+      "sourcePage": "331",
+      "originalProblemId": "KB2025-p331-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは不動産会社Bと、BがC工務店に注文して建築させた建売住宅を購入する契約を締結した。この建売住宅のために設定されているはずの通行地役権が設定されていなかった場合、AはBに対して危険負担に基づく解除をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "危険負担に基づく解除は、法定解除権として規定されていない。なお、建物売買において敷地利用権がないことは、権利に関する契約不適合があった場合にあたるため、買主は、売主に対して、追完請求権（民法565条、562条準用）、代金減額請求権（565条、563条準用）、損害賠償請求権（565条、564条、415条準用）、解除権（565条、564条、541条、542条準用）を行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "760",
+          "sourcePageAnswer": "761"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "甲土地の全部の所有権がCに属していたことを知りながらBがこれをAに売却した場合において、BがCからその所有権をAに移転することができないときは、甲土地の全部の所有権がCに属していたことについて善意のAは、その事実を知った時から1年以内に限り、Bに対して、契約を解除して、損害賠償を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "権利の全部が他人に属する場合には、権利を取得して相手方に移転できないときは、債務不履行の一般規定によって処理される（権利の不適合に関する民法565条の適用はない）。したがって、買主の権利の消滅は、債権の消滅時効により（166条1項）、契約不適合を知った時から5年、引渡し時から10年の経過によって消滅する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "760",
+          "sourcePageAnswer": "761"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "甲土地の全部の所有権がCに属していたことを知らずにBがこれをAに売却した場合において、BがCからその所有権を取得してAに移転することができないときは、Bは、契約の時に甲土地の全部の所有権がCに属していたことについて善意のAに対してのみ、契約の解除をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "他人物売買の売主は、その権利を取得して買主に目的物を移転する義務を負うため（民法561条）、善意の売主の解除権を認めた旧法の取扱いを改め、当該売主の解除権を認めないものとした。したがって、目的物が他人に属することにつき売主の善意悪意に関わりなく、売主Bは、契約を解除することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "760",
+          "sourcePageAnswer": "761"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは甲土地についてその売主Bとの間で売買契約を締結したが、甲土地についてCの抵当権が設定されていた場合において、抵当権の実行によりAが土地所有権を失ったときは、AはBに対して、契約を直ちに解除することができ、また、抵当権の設定を知らずに買い受けたときに限り、その賠償を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "買主が不動産の担保権の実行により所有権を失うことは、権利の全部が他人に属する場合に当たり、債務不履行の一般規定によって処理されるため（権利の不適合に関する民法565条の適用はない）、担保権設定につき買主の善意悪意に関わりなく、契約の解除、損害賠償請求をすることができる。買主の悪意（ある事実を知ること）をもって買主の救済を否定した旧法の取扱いを改め、当事者の約定を考慮した妥当な解決を図るべく、買主の主観的要件を不要としたものである。したがって、Aが抵当権の設定を知らずに買い受けたときに限り、としている点が誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "760",
+          "sourcePageAnswer": "761"
+        }
+      ]
+    },
+    {
+      "sourcePage": "332",
+      "originalProblemId": "KB2025-p332-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、BからB所有の土地を購入したが、その土地にはCの通行地役権が存在している場合、Bに対して、代金減額請求権、損害賠償請求権等を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "目的物に地上権・地役権・留置権・質権等占有を妨げる権利が存在していることは、目的物の利用が制限されているため、移転した権利が契約の内容に適合しない場合にあたる（民法565条）。この場合、不完全履行として、買主は、売主に対して、追完請求権（562条準用）、代金減額請求権（563条準用）、損害賠償請求権（564条、415条準用）、解除権（564条、541条、542条準用）を行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "762",
+          "sourcePageAnswer": "763"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、中古自動車をBに売却し、納車のためB宅に引き渡した後、保管場所の隣家の失火によって中古車の右側面が変色した場合、Bは、その損傷を理由として、補修等の追完請求、代金減額請求、損害賠償請求および契約の解除ができない一方で、Aからの代金支払請求を拒否できない。",
+          "answerBoolean": true,
+          "explanationText": "売主が買主に目的物（売買の目的として特定したものに限る）を引き渡した場合、引渡し後に目的物が当事者双方の責めに帰することができない事由によって滅失または損傷したときは、買主は、その滅失または損傷を理由として、追完請求、代金減額請求、損害賠償請求および契約の解除ができない一方で、買主は、代金の支払を拒むことができない（民法567条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "762",
+          "sourcePageAnswer": "763"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、BからB所有の土地を購入したが、当該土地にはCのBに対する貸金債権を担保するため抵当権が設定されその旨の登記がなされていた。Aは、当該抵当権消滅請求の手続が終わるまで、その代金の支払を拒むことができ、また、自ら費用を支出して土地の所有権を保存したときは、Bに対し、その費用の償還を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "買い受けた不動産について契約の内容に適合しない抵当権、先取特権または質権の登記があるときは、買主は、抵当権消滅請求の手続が終わるまで、その代金の支払を拒むことができる（民法577条1項前段・2項）。また、買主が費用を支出してその不動産の所有権を保存したときは、買主は、売主に対し、その費用の償還を請求することができる（570条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "762",
+          "sourcePageAnswer": "763"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "売買目的物の引渡しについて期限があるときは、代金の支払についても同一の期限までに買主が売主に対してその代金を支払わなければならないものと推定される。",
+          "answerBoolean": true,
+          "explanationText": "本肢は、民法573条のとおりであり、双務契約である売買では、当事者は同時履行の抗弁権を有するから（533条）、売主の引渡債務についてのみ期限の定めがある場合にも、公平の見地から、買主の代金債務について同一の期限の定めがあると推定したのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "762",
+          "sourcePageAnswer": "763"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "売買契約の成立後、当該売買契約の目的物に生じた果実は、当該目的物の引渡しおよび代金の支払いかなくても、買主に帰属する。",
+          "answerBoolean": false,
+          "explanationText": "売買の目的物に生じた果実は、その目的物の引渡しがなされるまでは売主に帰属するから（民法575条1項）、目的物の引渡しのない本肢では、果実は買主に帰属しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "762",
+          "sourcePageAnswer": "763"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "売買の目的物について、第三者が所有権を主張し、買主が目的物の権利を失うおそれがあるときは、特約のない限り、買主は、売主が相当の担保を提供した場合を除き、その危険の程度に応じて、代金の全部又は一部の支払を拒否できる。",
+          "answerBoolean": true,
+          "explanationText": "売買の目的物について権利を主張する者があるために買主がその買い受けた権利の全部または一部を失うおそれがあるときは、売主が相当の担保を供したときを除いて、買主は、その危険の程度に応じて、代金の全部または一部の支払を拒むことができる（民法576条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "762",
+          "sourcePageAnswer": "763"
+        }
+      ]
+    },
+    {
+      "sourcePage": "333",
+      "originalProblemId": "KB2025-p333-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "売買の目的物である不動産に抵当権の登記がなされている場合、特約のない限り、買主は、売主から抵当権消滅請求をするよう求められたときは、遅滞なくその手続をしなければ、その代金の支払を拒否できない。",
+          "answerBoolean": true,
+          "explanationText": "買い受けた不動産について抵当権の登記があるときは、買主は抵当権消滅請求の手続が終わるまで、その代金の支払いを拒むことができる。この場合において、売主は、買主に対し、遅滞なく抵当権消滅請求をすべき旨を請求することができ、それにもかかわらず、買主が遅滞なく抵当権消滅請求をしない場合には、買主は代金支払拒絶権を失う（民法577条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "764",
+          "sourcePageAnswer": "765"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが、B所有の自動車をCに売却する契約を締結し、Cが、使用していたが、その後、Bが、所有権に基づいてこの自動車をCから回収したため、Cは、AC間の売買契約を解除した。この場合、Cは、Aに対しこの自動車の使用利益（相当額）を返還する義務を負う。",
+          "answerBoolean": true,
+          "explanationText": "他人物売買により目的物の引渡を受けていた買主（C）は、契約を解除した場合でも、原状回復義務の内容として、解除までの間目的物を使用したことによる利益を売主（A）に返還しなければならない（最判昭51.2.13）。解除によって売買契約が遡及的に消滅する結果として、原状回復をさせるためには、使用利益の返還も必要だからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "764",
+          "sourcePageAnswer": "765"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A所有の動産甲を、BがB自身を売主、Cを買主としてCに売却する契約（本件契約）を締結した場合であっても、契約は原則として有効であり、Bは、Aから甲の所有権を取得してCに移転する義務を負うところ、本件契約後にBが死亡し、AがBを単独相続した場合においては、Cは当然に甲の所有権を取得する。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭49.9.4）は、他人（A）の権利の売主（B）が死亡し、その権利者（A）において売主（B）を相続した場合には、権利者（A）は、相続により売主（B）の売買契約上の義務ないし地位を承継するが、権利者（A）自身が売買契約を締結したことになるものではないことはもちろん、これによって売買の目的とされた権利が当然に買主（C）に移転するものではないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "764",
+          "sourcePageAnswer": "765"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "土地の売買において買戻しの特約をする場合は、契約締結時にしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "買戻しとは、売買契約と同時になされる特約によって、売主が代金および契約の費用を買主に返還して契約を解除し、目的物を取り戻す契約である（民法579条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "764",
+          "sourcePageAnswer": "765"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "書面によらない消費貸借は、当事者の一方が種類、品質および数量の同じ物をもって返還をすることを約して相手方から金銭その他の物を受け取ることによって効力を生じる要物契約である。",
+          "answerBoolean": true,
+          "explanationText": "書面によらない消費貸借は、当事者の一方が種類、品質および数量の同じ物をもって返還をすることを約して相手方から金銭その他の物を受け取ることによって効力を生じる（要物契約：民法587条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "消費貸借",
+          "sourcePageQuestion": "764",
+          "sourcePageAnswer": "765"
+        }
+      ]
+    },
+    {
+      "sourcePage": "334",
+      "originalProblemId": "KB2025-p334-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "書面でする消費貸借は、当事者の一方が金銭その他の物を引き渡すことを約し、相手方がその受け取った物と種類、品質および数量の同じ物をもって返還をすることを約することによって効力を生じる諾成契約である。",
+          "answerBoolean": true,
+          "explanationText": "書面でする消費貸借は、当事者の一方が金銭その他の物を引き渡すことを約し、相手方がその受け取った物と種類、品質および数量の同じ物をもって返還をすることを約することによって効力を生じる（諾成契約：民法587条の2第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "766",
+          "sourcePageAnswer": "767"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "書面でする消費貸借の借主は、貸主から金銭その他の物を受け取るまで、契約の解除をすることができ、この場合において、貸主は、その契約の解除によって損害を受けたときは、借主に対し、その賠償を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "書面でする消費貸借の借主は、貸主から金銭その他の物を受け取るまで、契約の解除をすることができる（民法587条の2第2項前段）。この場合において、貸主は、その契約の解除によって損害を受けたときは、借主に対し、その賠償を請求することができる（587条の2第2項後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "766",
+          "sourcePageAnswer": "767"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "貸主から引き渡された物が種類または品質に関して契約の内容に適合しないものであるときは、借主は、その物の価額を返還することができる。",
+          "answerBoolean": true,
+          "explanationText": "消費貸借契約の貸主から引き渡された物が種類または品質に関して契約の内容に適合しないものであるときは、借主は、その物の価額を返還することができる（民法590条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "766",
+          "sourcePageAnswer": "767"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "消費貸借については、返還時期の合意がないときには、貸主の請求があれば借主は直ちに返還しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "消費貸借について、返還時期の合意がないときには、「貸主」は、相当の期間を定めて返還の催告をすることができる（民法591条1項）。したがって、返還時期の合意がない消費貸借契約においては、貸主の相当期間を定めた催告後でなければ借主には返還義務が生じないため、借主は、貸主の請求後直ちに返還しなければならないわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "766",
+          "sourcePageAnswer": "767"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "使用貸借は、賃貸借いずれの場合にも、借主の死亡によって、その効力を失う。",
+          "answerBoolean": false,
+          "explanationText": "使用貸借は、借主の死亡によって、その効力を失う（民法597条3項）。使用貸借は、貸主の借主その人自身に対する善意が基礎となっているからである。しかし、賃貸借は客観的な価値を有する財産権であり、相続の対象となるので、借主が死亡しても賃貸借の効力には影響がない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 使用貸借",
+          "sourcePageQuestion": "766",
+          "sourcePageAnswer": "767"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "使用貸借においては、借用物の通常の必要費については借主の負担となるのに対し、有益費については貸主の負担となり、その償還の時期は使用貸借の終了時であり、貸主の請求により裁判所は相当の期限を許与することはできない。",
+          "answerBoolean": false,
+          "explanationText": "使用貸借契約において、借用物の通常の必要費は借主、それ以外の特別の必要費、有益費については貸主の負担となる（民法595条1項・2項、583条2項）。有益費の償還については、貸主の請求により裁判所は相当の期限を許与することができる（595条2項、583条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 使用貸借",
+          "sourcePageQuestion": "766",
+          "sourcePageAnswer": "767"
+        }
+      ]
+    },
+    {
+      "sourcePage": "335",
+      "originalProblemId": "KB2025-p335-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aが使用貸借契約に基づきBからB所有の甲建物を借りている場合、Aが甲建物をCに転貸するには、Bの承諾は不要である。",
+          "answerBoolean": false,
+          "explanationText": "使用貸借契約の場合、借主（A）が第三者（C）に借用物の使用または収益をさせるには、貸主（B）の承諾が必要である（民法594条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが使用貸借契約に基づきBからB所有の甲土地を借りている場合、AがCに甲土地の使用または収益をさせるにはBの承諾は必要である。",
+          "answerBoolean": true,
+          "explanationText": "使用貸借契約の場合は、借主（A）は、貸主（B）の承諾を得なければ、第三者（C）に借用物の使用または収益をさせることができない（民法594条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "当事者が使用貸借の期間ならびに使用および収益の目的を定めなかったときは、貸主は、いつでも契約の解除をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "当事者が使用貸借の期間ならびに使用および収益の目的を定めなかったときは、貸主は、いつでも契約の解除をすることができる（民法598条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "使用貸借契約においては、期間や使用収益の目的を定めているか否かにかかわらず、借主は、いつでも契約の解除をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "使用貸借契約における借主は、貸主の場合と異なり（民法598条2項参照）、期間や使用収益の目的を定めているか否かにかかわらず、いつでも契約の解除をすることができる（598条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "民法上の賃貸借の存続期間は、10年を超えることはできない。",
+          "answerBoolean": false,
+          "explanationText": "民法上の賃貸借の存続期間は、10年ではなく、50年を超えることはできない（民法604条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aは、B所有の甲土地について地上権の設定を受けて、同土地上に乙建物を建築した。A・B間では賃借権ではなく地上権が設定されたので、その存続期間については、借地借家法の適用はなく民法の規定が適用される。",
+          "answerBoolean": false,
+          "explanationText": "借地借家法は、建物所有を目的とする「地上権」および土地の賃借権について、それらの存続期間等に適用される（借地借家法1条、2条1号）。したがって、建物を所有する目的で地上権の設定を受けた本肢においても借地借家法が適用されるから、Aの地上権の存続期間について、借地借家法の適用はないとする本肢は誤りである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "不動産の賃貸借は、これを登記しても、その後その不動産について物権を取得した者に対してはその効力を生じない。",
+          "answerBoolean": false,
+          "explanationText": "賃借権は債権であるから、本来物権に対抗できない（「売買は賃貸借を破る」）。しかし、登記などの対抗要件を備えることで、物権を取得した者にも対抗することができる（不動産賃借権の物権化：民法605条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "賃貸借",
+          "sourcePageQuestion": "768",
+          "sourcePageAnswer": "769"
+        }
+      ]
+    },
+    {
+      "sourcePage": "336",
+      "originalProblemId": "KB2025-p336-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bとの間でA所有の甲建物の賃貸借契約を締結し、甲建物を引き渡したが、その後、Aは、同建物をCに譲渡した。甲建物についてのAのBに対する賃貸人たる地位は、Bの承諾を要しないで、AとCとの合意により、Cに移転させることができる。",
+          "answerBoolean": true,
+          "explanationText": "賃貸借の対抗要件を備えた不動産（甲建物）が譲渡されたときは、不動産の賃貸人（A）たる地位は、賃借人（B）の承諾を必要とすることなく、譲受人（C）に移転する（民法605条の2第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "770",
+          "sourcePageAnswer": "771"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、Bとの間でA所有の甲建物の賃貸借契約を締結し、甲建物を引き渡したが、その後、Aは、同建物をCに譲渡した。AとCが甲建物の賃貸人たる地位をAに留保する旨の合意および甲建物をCがAに賃貸する旨の合意をしたときは、賃貸人たる地位はCに移転しない。",
+          "answerBoolean": true,
+          "explanationText": "不動産の譲渡人（A）および譲受人（C）が賃貸人たる地位を譲渡人に留保する旨およびその不動産を譲受人（C）が譲渡人（A）に賃貸する旨の合意をしたときは、賃貸人たる地位は、譲受人（C）に移転しない（民法605条の2第2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "770",
+          "sourcePageAnswer": "771"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "第三者が賃貸不動産を不法占有している場合、賃借人は、その賃借権が対抗要件を具備しているか否かを問わず、その不法占有者に対して、当該不動産に関する賃借権に基づく妨害排除請求を行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "対抗要件を備えた不動産の賃借人は、その不動産を第三者が占有している場合にはその第三者に対して返還の請求をすることができる（民法605条の4第2号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "770",
+          "sourcePageAnswer": "771"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "賃貸人が賃貸物の保存のために必要な行為をしようとする場合、賃借人はこれを拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "賃貸物は、賃貸人にとっても重要な財産であるから、賃貸人が賃貸物の保存に必要な行為をしようとするときは、賃借人は、これを拒むことができない（民法606条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "770",
+          "sourcePageAnswer": "771"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは自己所有の甲建物をBに賃貸し、本件賃貸借において、Bが甲建物のために必要費および有益費を支出した場合、特約がない限り、Bはこれらの費用につき、直ちにAに対して償還請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "賃借人は、賃借物について賃貸人の負担に属する必要費を支出したときは、賃貸人に対し、直ちにその償還を請求することができる（民法608条1項）。他方で、賃借人は、有益費を支出したときは、直ちにではなく、賃貸借の終了の時に、その償還を請求することができる（608条2項）。したがって、賃借人Bは、必要費に限り、直ちに賃貸人Aに対して償還請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "770",
+          "sourcePageAnswer": "771"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aは、Bの建物を借り、Bの承諾を得て当該建物を日本料理店向けに増改築した。その後、近所からの類焼により当該建物が焼失してしまった場合、賃借人Aは、賃貸人Bに対し、賃貸借契約の終了に伴い、当該建物の増改築に支出した費用の償還を請求することはできない。",
+          "answerBoolean": true,
+          "explanationText": "賃借人が支出した増改築に伴う費用は有益費用となり、賃借人は、賃貸借契約終了時に償還請求をすることができる（民法608条2項）。ただし、賃借人が賃借建物に付加した増・改築部分が、賃貸人に返還される前に、当事者の責めに帰すべきならざる事由により滅失したときは、特段の事情のない限り、右部分に関する有益費用償還請求権は消滅する（最判昭48.7.17）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "770",
+          "sourcePageAnswer": "771"
+        }
+      ]
+    },
+    {
+      "sourcePage": "337",
+      "originalProblemId": "KB2025-p337-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBに対して貸した自己所有の建物の一部がBの過失によらずに滅失したときは、賃料は、その滅失した部分の割合に応じて減額される。",
+          "answerBoolean": true,
+          "explanationText": "賃借物（A所有の建物）の一部が滅失その他の事由により使用および収益をすることができなくなった場合、それが賃借人（B）の責めに帰することができない事由によるものであるときは、賃料は、その使用および収益をすることができなくなった部分の割合に応じて減額される（民法611条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "772",
+          "sourcePageAnswer": "773"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "賃貸借契約は、期間の定めがある場合であっても、賃借物の全部が滅失その他の事由により使用及び収益をすることができなくなったときには、当該賃貸借契約は終了する。",
+          "answerBoolean": true,
+          "explanationText": "賃貸借契約の目的物である賃借物の全部が滅失その他の事由により使用および収益をすることができなくなった場合には、賃貸人の賃貸債務は履行不能となり当該賃貸借契約は終了する（民法616条の2）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "772",
+          "sourcePageAnswer": "773"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、B所有の甲土地上に乙建物を建てて保存登記をし、乙建物をCが使用している。Aが、Bとの間の土地賃貸借契約に基づいて乙建物を建てている場合、Aが、Cに対して乙建物を売却するためには、特段の事情のない限り、甲土地にかかる賃借権を譲渡することについてBの承諾を得る必要がある。",
+          "answerBoolean": true,
+          "explanationText": "賃借人は、賃貸人の承諾を得なければ、その賃借権を譲り渡し、または賃借物を転貸することができない（民法612条1項）。賃借地上にある建物の売買契約が締結された場合においては、特別の事情のないかぎり、売主は、買主に対し、その建物の敷地の賃借権をも譲渡したものであって、それに伴い、その賃借権譲渡につき賃貸人の承諾を得る義務を負うものと解すべきである（最判昭47.3.9）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "772",
+          "sourcePageAnswer": "773"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "賃貸借契約は、賃借人が賃貸人の承諾なしに賃借権を譲渡することによって、終了する。",
+          "answerBoolean": false,
+          "explanationText": "賃借人が賃貸人の承諾を得ないで、第三者に賃借物の使用収益をさせたときは、賃貸人は、契約の解除をすることができるのであり（民法612条2項）、賃貸借契約が当然に終了するのではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "772",
+          "sourcePageAnswer": "773"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは、Bの土地を借り、自己名義で店舗を建て、内縁の妻であるCと共同で飲食業を営んでおり、Bもそのことを知っていた。その後、Aが死亡し、Aの相続人がBの承諾を得ることなく当該店舗と土地の賃借権をCに譲渡した。この場合、賃貸人Bは、土地の賃貸借契約を解除できない。",
+          "answerBoolean": true,
+          "explanationText": "賃借権の無断譲渡は、賃貸借契約の解除原因であるが（民法612条2項）、それが賃貸人に対する背信的行為と認めるに足りない特段の事情があるときは、賃貸人は、契約を解除できない（最判昭39.6.30）。したがって、Aと共同で飲食業を営んでいた内縁の妻Cに、Aの相続人が賃借権を譲渡した場合は、賃貸人Bの承諾がなくても、Bに対する背信的行為と認めるに足りない特段の事情があるといえる（最判昭39.6.30）。したがって、Bは、土地の賃貸借契約を解除できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "772",
+          "sourcePageAnswer": "773"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aは、Bの建物を借り居住していたが、当該建物の賃借権をCに譲渡したいと考え、Bに賃借権譲渡の承諾を求めたところ、承諾を得ることができた。この場合、賃貸人Bは、賃借人AがCと賃借権譲渡契約を締結する前であれば、当該承諾を一方的に撤回することができる。",
+          "answerBoolean": false,
+          "explanationText": "賃借権の譲渡につき賃貸人がいったん与えた承諾は撤回することはできない（最判昭30.5.13）。したがって、賃貸人Bは、賃借人AがCと賃借権譲渡契約を締結する前であっても、当該承諾を一方的に撤回することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "772",
+          "sourcePageAnswer": "773"
+        }
+      ]
+    },
+    {
+      "sourcePage": "338",
+      "originalProblemId": "KB2025-p338-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A所有の甲土地をBに対して建物所有の目的で賃貸する旨の賃貸借契約が締結され、Bが甲土地上に乙建物を建築して建物所有権保存登記をした後、AがCに甲土地を売却した場合、賃貸人の地位は、別段の合意がない限り、AからCに移転する。",
+          "answerBoolean": true,
+          "explanationText": "賃貸借の対抗要件を備えた場合、その不動産が譲渡されたときは、不動産の賃貸人たる地位は譲受人（C）に移転する（民法605条の2第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "774",
+          "sourcePageAnswer": "775"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、Bの土地を借り、建物を建て自己名義の登記をした。その後、Bは、Aの承諾を得ることなく当該土地と賃貸人の地位をCに譲渡し、登記した。この場合、当該土地の譲受人Cは、賃借人Aに対して、賃貸人たる地位を主張することができる。",
+          "answerBoolean": true,
+          "explanationText": "賃貸借の目的となっている土地の所有者Bが、その所有権とともに賃貸人たる地位をCに譲渡することは、賃貸人の義務の移転を伴うが（民法605条の2第1項）、特段の事情がない限り、賃借人Aの承諾を必要とせず、B・C間で契約できる（605条の3前段）。譲受人Cは、その所有権の移転につき、その登記をしなければ、賃借人に対抗しえず、賃貸人たる地位を取得したことも主張できない（605条の2第3項）。本肢では、Cは、登記を備えているので、Aに対し、賃貸人たる地位を主張することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "774",
+          "sourcePageAnswer": "775"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bの土地を借り、Bの承諾を得て当該土地をさらにCに賃貸した。Cは転借料を転貸借契約に定める支払期日前にAに支払っていたが、その後、Bが、Aの賃貸料不払いを理由にCに対し賃借料を請求した。この場合、転借人Cは、賃借人Aに対する当該前払いをもって賃貸人Bに対抗することはできない。",
+          "answerBoolean": true,
+          "explanationText": "賃借人が適法に賃借物を転貸したときは、転借人は、賃貸人に対し直接に義務を負い、この場合において、転借人は「借料の前払い」すなわち転借料の支払期日以前の支払（大判昭7.10.8）をもって賃貸人に対抗することができない（民法613条1項）。したがって、転借人Cは、賃借人Aに対する当該前払いをもって賃貸人Bに対抗することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "774",
+          "sourcePageAnswer": "775"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは自己所有の甲建物をBに賃貸し、BはAの承諾を得て甲建物をEに転貸したが、その後、Bの賃料不払いにより本件賃貸借が解除された場合、B・E間の転貸借が期間満了前であれば、AはEに対して甲建物の明渡しを求めることはできない。",
+          "answerBoolean": false,
+          "explanationText": "賃借人の債務不履行により賃貸借が解除された場合、その解除を転借人に対抗することができる（最判昭36.12.21）。したがって、賃貸人Aは、転借人Eに対して甲建物の明渡しを求めることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "774",
+          "sourcePageAnswer": "775"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aはその所有する建物をBに賃貸し、BはAの承諾を得てその建物をCに転貸している。Bの債務不履行によってA・B間の賃貸借契約が解除された場合には、AはあらかじめCに催告をしなくてもCに対抗することができる。",
+          "answerBoolean": true,
+          "explanationText": "賃借人の債務不履行によって賃貸人・賃借人間の賃貸借契約が解除された場合、賃貸人は、転借人への催告がなくても転借人に対抗することができる（最判昭37.3.29、最判平6.7.18）。したがって、AはあらかじめCに催告をしなくても、Bの債務不履行による賃貸借契約の解除をCに対抗することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "774",
+          "sourcePageAnswer": "775"
+        }
+      ]
+    },
+    {
+      "sourcePage": "339",
+      "originalProblemId": "KB2025-p339-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aはその所有する建物をBに賃貸し、BはAの承諾を得てその建物をCに転貸している。Bが賃借権を放棄した場合に は、AはそれをCに対抗することができない。",
+          "answerBoolean": true,
+          "explanationText": "賃借人が賃借権を放棄した場合、賃貸人は賃借人に対抗することができないと解されている。したがって、Aは、Bの賃借権の放棄をCに対抗することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "776",
+          "sourcePageAnswer": "777"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "無断転貸であっても、賃貸人と転借人間においては転貸借 は有効であるので、原賃貸借を解除しなければ、賃貸人は、転借人に対して所有権に基づく建物の明渡しを請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "賃借権の譲渡または転貸を承諾しない家屋の賃貸人は、賃貸契約を解除しなくても、譲受人または転借人に対しその明渡しを求めることができる（最判昭26.5.31）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "776",
+          "sourcePageAnswer": "777"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "無断転貸において、賃貸人が転借人に建物の明渡しを請求 したときは、転借人は建物を使用収益できなくなるおそれが あるので、賃貸人が転借人に相当の担保を提供していない限 り、転借人は、賃貸人に対して転貸借の賃料の支払を拒絶で きる。",
+          "answerBoolean": true,
+          "explanationText": "土地または建物の賃借人は、賃借物に対する権利に基づき自己に対して明渡しを請求することができる第三者からその明渡しを求められた場合、それ以後、賃料の支払を拒絶できる（最判昭50.4.25）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "776",
+          "sourcePageAnswer": "777"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "宅地や建物の賃貸借の賃料は、翌月分を毎月末までに賃借 人は賃貸人に対して支払わなければならない。",
+          "answerBoolean": false,
+          "explanationText": "宅地や建物の賃貸借の賃料は、後払いが原則とされ、毎月末にその月の分の賃料を支払わなければならない（民法614条本文）。したがって、翌月分を毎月末までに支払わなければならないとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "776",
+          "sourcePageAnswer": "777"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "当事者が賃貸借の期間を定めないときは、各当事者はいつ でも解約の申入れをすることができ、申入れの意思表示が相 手方に到達した時に賃貸借は終了する。",
+          "answerBoolean": false,
+          "explanationText": "当事者が賃貸借の期間を定めなかったときは、各当事者は、いつでも解約の申入れをすることができ、この場合においては、賃貸借は、解約の申入れから一定期間を経過することによって終了するのであり（民法617条1項）、解約申入れの意思表示が相手方に到達した時に終了するのではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "776",
+          "sourcePageAnswer": "777"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "賃貸借を解除した場合は、将来に向かってのみその効力を 生じるが、これに対する損害賠償の請求をすることができ る。",
+          "answerBoolean": true,
+          "explanationText": "継続的契約たる賃貸借契約においては解除に伴う清算手続が複雑となるので、解除の効果を契約当初にさかのぼらせることはできず、将来に向かってのみ効力を生ずる（民法620条前段）。この場合においては、一方が相手方に対して負う損害賠償責任は、解除によっても免れない（620条後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "776",
+          "sourcePageAnswer": "777"
+        }
+      ]
+    },
+    {
+      "sourcePage": "340",
+      "originalProblemId": "KB2025-p340-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "賃貸借が終了し、賃貸人が敷金返還請求権を有する場合には、賃貸人が敷金を提供するまで、賃借人は、家屋の明渡しを拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "賃貸人は、敷金を受け取っている場合、賃貸物の「返還を受けたとき」は、賃貸人に対し、その受け取った敷金の額から賃貸借に基づいて生じた賃借人の賃貸人に対する金銭の給付を目的とする債務の額を控除した残額を返還しなければならない（民法622条の2第1項1号）。敷金返還債務は、賃貸物の返還を受けた時に発生するため、賃貸物の返還義務と敷金返還債務とは同時履行の関係にはなく、賃貸物の返還が先行となる。したがって、賃貸人が敷金を提供するまで、賃借人は家屋の明渡しを拒むことはできるわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "778",
+          "sourcePageAnswer": "779"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A所有の甲土地をBに対して建物所有の目的で賃貸する旨の賃貸借契約が締結され、Bが甲土地上に乙建物を建築して建物所有権保存登記をした後、AがCに甲土地を売却した。BがAに対して敷金を交付していた場合、本件賃貸借契約が期間満了によって終了したときは、Bは、甲土地を明渡した後に、Cに対して敷金の返還を求めることができる。",
+          "answerBoolean": true,
+          "explanationText": "賃貸人たる地位が譲受人またはその承継人に移転したときは、敷金返還債務は、譲受人またはその承継人が承継する（民法622条の2第1項、605条の2第4項）。したがって、賃貸借契約が終了したときは、Bは、甲土地を明渡した後に、Cに対して、敷金の返還を求めることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "778",
+          "sourcePageAnswer": "779"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは自己所有の甲建物をBに賃貸し、その際、BがAに対して敷金を交付した。BがAの承諾を得て本件賃貸借に基づCに賃借権を譲渡した場合、特段の事情がない限り、AはBに対して本件敷金を返還しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "賃借権が賃貸人の承諾を得て旧賃借人から新賃借人に移転された場合であっても、敷金に関する敷金交付者の権利義務関係は、敷金交付者において賃貸人との間で敷金をもって新賃借人の債務の担保とすることを約しまたは新賃借人に対して敷金返還請求権を譲渡するなど特段の事情のない限り、賃貸人には承継されない（民法622条の2第1項2号）。したがって、賃貸人Aは、特段の事情のない限り、旧賃借人Bに敷金を返還しなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "778",
+          "sourcePageAnswer": "779"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A所有の甲土地をBに対して建物所有の目的で賃貸する旨の賃貸借契約が締結され、Bが甲土地上に乙建物を建築して建物所有権保存登記をした後、AがCに甲土地を売却した。Bが賃貸人の負担に属する必要費を支出した後、AからCに賃貸人の地位が移転したときは、Bは、Cに対して、直ちにその償還を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "賃貸人たる地位が譲受人またはその承継人に移転したときは、費用償還に係る債務は、譲受人またはその承継人が承継する（民法608条、605条の2第4項）。したがって、Bは、Cに対して、直ちに必要費償還請求をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "778",
+          "sourcePageAnswer": "779"
+        }
+      ]
+    },
+    {
+      "sourcePage": "341",
+      "originalProblemId": "KB2025-p341-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "請負は、雇用と同じく当事者双方の合意によって成立する諾成契約である。",
+          "answerBoolean": true,
+          "explanationText": "請負も雇用も当事者双方の合意のみで成立する諾成契約である（請負につき民法632条、雇用につき623条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4 役務提供型契約 1) 請負",
+          "sourcePageQuestion": "780",
+          "sourcePageAnswer": "781"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "最高裁判例によれば、仕事完成までの間に注文者が請負代金の大部分を支払っていた場合でも、請負人が材料全部を供給したときは、完成した仕事の目的物である建物の所有権は請負人に帰属する。",
+          "answerBoolean": false,
+          "explanationText": "請負人が材料を提供しても、特約があれば竣工と同時に注文者の所有物となる（大判大5.12.13）。そして注文者が代金の全部または大部分を支払っている場合には、特約の存在が推認され、特段の事情のない限り、建物所有権は完成と同時に原始的に注文者に帰属する（最判昭44.9.12）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4 役務提供型契約 1) 請負",
+          "sourcePageQuestion": "780",
+          "sourcePageAnswer": "781"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "建物新築の請負契約に当たり、注文者が材料の全部を供給した場合には、特約の有無にかかわらず、注文者に所有権が帰属する。",
+          "answerBoolean": false,
+          "explanationText": "注文者が材料の全部または主要部分を供給する場合は、特約のない限り、建物の所有権は原始的に注文者に帰属するのであり（大判昭7.5.9）、特約の有無にかかわらないというわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4 役務提供型契約 1) 請負",
+          "sourcePageQuestion": "780",
+          "sourcePageAnswer": "781"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "請負契約においては仕事完成義務と報酬支払義務とが同時履行の関係に立つため、物の引渡しを要する場合であっても、特約がない限り、仕事を完成させた請負人は、目的物の引渡しに先立って報酬の支払を求めることができ、注文者はこれを拒むことができない。",
+          "answerBoolean": false,
+          "explanationText": "報酬は、物の引渡しを要するときは仕事の目的物の引渡しと同時に、支払わなければならないため（民法633条本文）、請負人の目的物引渡義務と報酬支払義務は同時履行の関係にある。しかし、仕事完成義務と報酬支払義務は同時履行の関係ではなく、仕事完成義務が先履行である。したがって、特約がない限り、仕事を完成させた請負人は、目的物の引渡しに先立って報酬の支払を求めることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4 役務提供型契約 1) 請負",
+          "sourcePageQuestion": "780",
+          "sourcePageAnswer": "781"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "請負の報酬は、仕事の目的物の引渡しを要する場合でも、仕事の目的物の完成時に注文者が請負人に対して支払わなければならない。",
+          "answerBoolean": false,
+          "explanationText": "請負の報酬は、仕事の目的物の引渡しを要する場合には、仕事の「目的物の完成時」ではなく、仕事の「目的物の引渡し」と同時に支払わなければならない（民法633条本文）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4 役務提供型契約 1) 請負",
+          "sourcePageQuestion": "780",
+          "sourcePageAnswer": "781"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "仕事の完成が注文者の責めに帰することができない事由によって不能となった場合、請負人が既にした仕事の結果のうち、可分な部分の給付によって注文者が利益を受けるときは、請負人は、注文者が受ける利益の割合に応じて報酬を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "仕事の完成が注文者の責めに帰することができない事由によって不能となった場合、請負人が既にした仕事の結果のうち、可分な部分の給付によって注文者が利益を受けるときは、その部分を仕事の完成とみなされる結果（民法634条前段1号）、請負人は、注文者が受ける利益の割合に応じて報酬を請求することができる（634条後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "4 役務提供型契約 1) 請負",
+          "sourcePageQuestion": "780",
+          "sourcePageAnswer": "781"
+        }
+      ]
+    },
+    {
+      "sourcePage": "342",
+      "originalProblemId": "KB2025-p342-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "建物の工事請負契約において、工事全体が未完成の間に注文者が請負人の債務不履行を理由に契約を解除する場合には、工事内容が可分であり、しかも当事者が既施工部分の給付に関し利益を有するときは、既施工部分については契約を解除することができず、未施工部分について契約の一部解除をすることができるにすぎない。",
+          "answerBoolean": true,
+          "explanationText": "注文者の責めに帰することができない事由によって仕事の完成が不能となった場合、または、請負が仕事の完成前に解除された場合、請負人が既にした仕事の結果のうち、可分な部分の給付によって注文者が利益を受けるときは、その部分を仕事の完成とみなされる結果（民法634条前段1号）、本肢所定の場合には、既施工部分は解除できず、未施工部分について一部解除できるにすぎない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "782",
+          "sourcePageAnswer": "783"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBに倉庫の建築を依頼したが、その土台部分に不備があったため一部に傾きが生じていた。一部の傾きが重要でなく、かつ、修補に過大な費用を要する場合であっても、Aは、Bに対して修補等の追完請求をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "売買に関する規定は請負契約を含む有償契約に準用されるため（民法559条）、請負目的物の品質等に契約不適合があった場合、注文者は、請負人に対して補修等の追完請求をすることができる（562条）。もっとも、契約不適合が重要でなく、かつ、修補に過大な費用を要する場合には、取引上の社会通念に照らし履行不能となり（412条の2第1項）、注文者は、補補等の追完請求をすることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "782",
+          "sourcePageAnswer": "783"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "完成した仕事の目的物である建物に契約不適合があった場合、注文者は修補か、損害賠償のいずれかを選択して請負人に請求することができるが、両方同時に請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "注文者は、修補等の追完請求に代えて、またはその追完とともに損害賠償請求をすることができる（民法559条、562条、564条、415条）。なお、追完に代えて損害賠償請求をするには、原則として、追完請求をする必要がある（415条2項参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "782",
+          "sourcePageAnswer": "783"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bに建物の建築を注文し引渡しを受けたが、床に傾きが生じていたため居住できる状態になかった。AB間の請負契約は居住用建物の建築であったため、Aが契約の目的を達成することができないとしても、Aは、請負契約を解除することはできない。",
+          "answerBoolean": false,
+          "explanationText": "注文者は、契約解除の規定に従い、請負契約を解除でき（民法559条、564条）、仕事の目的物が建物その他土地の工作物であっても契約を解除できる。契約の解除は、催告による解除の場合は追完の催告から相当期間が経過し、かつ不適合の程度が軽微でないことが要件となり（541条）、無催告解除の場合は契約目的を達することができないことが要件となる（542条1項3号～5号）。したがって、契約の目的を達成できない場合には無催告解除事由として、Aは、請負契約を解除できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "782",
+          "sourcePageAnswer": "783"
+        }
+      ]
+    },
+    {
+      "sourcePage": "343",
+      "originalProblemId": "KB2025-p343-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBに建物の増築を依頼し引渡しを受けたが、Aの供した建築建材の強度が不足していたため増築部分の床に傾きが生じていた。BがAの供した材料またはAの与えた指図が不適当であることを知りながら告げなかった場合でない限り、Aは、Aの供した材料の性質またはAの与えた指図によって生じた不適合を理由として、追完請求、報酬減額請求、損害賠償請求および契約の解除をすることができない。",
+          "answerBoolean": true,
+          "explanationText": "仕事の目的物の種類・品質に関する契約不適合が注文者の供した材料の性質または注文者の指図によって生じた場合、注文者は、原則として、契約不適合を理由として、追完請求、報酬減額請求、損害賠償請求および契約の解除をすることはできないが、請負人が注文者の供した材料または注文者の与えた指図が不適当であることを知りながら告げなかった場合には、権利行使をすることができる（民法636条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "784",
+          "sourcePageAnswer": "785"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "注文者は、仕事完成までの間は、損害賠償をすれば、何らの理由なくして契約を解除することができる。",
+          "answerBoolean": true,
+          "explanationText": "本来、当事者の一方は、理由なく契約を解除することは許されないが、請負契約は注文者の利益のために仕事の完成を目的としたものであるから、請負人が仕事を完成しない間は、注文者は、いつでも損害を賠償して、請負人の過失、債務不履行を前提とせずに何らの理由なく契約を解除することができる（民法641条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "784",
+          "sourcePageAnswer": "785"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに製作を注文したタンスの引渡しを受けたが、ドアの開閉に支障が生じていた。開閉の支障につきBが悪意重過失でない場合には、Aは、修補等の追完請求をするには、タンスの引渡しから1年以内にBに通知しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "注文者（A）が不適合を知った時から1年以内に請負人（B）に通知しない場合には、注文者（A）は、原則として、その不適合を理由として、追完請求、報酬減額請求、損害賠償請求および契約の解除をすることができないが（民法637条1項）、目的物を引渡し時（引渡しを要しない場合には仕事終了時）に、請負人（B）が不適合につき悪意重過失であるときは、不適合の通知を1年以内にしなくても権利行使できる（637条2項）。Bが悪意重過失でない本肢では、原則に従い、Aは、「不適合を知った時」から1年以内にBに通知する必要があるため、「タンスの引渡しから」とする点が誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "784",
+          "sourcePageAnswer": "785"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "請負契約において、注文者が破産手続開始の決定を受けた場合は、仕事を完成しない間、請負人は契約を解除することができる。",
+          "answerBoolean": true,
+          "explanationText": "注文者が破産手続開始の決定を受けたときは、請負人は、仕事を完成した後でない限り、契約の解除をすることができる（民法642条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "784",
+          "sourcePageAnswer": "785"
+        }
+      ]
+    },
+    {
+      "sourcePage": "344",
+      "originalProblemId": "KB2025-p344-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "出張先の大阪で交通事故に遭い負傷したAは、東京在住の友人の弁護士Bに加害者Cと示談契約を締結してくれるよう依頼した。AがBに通常の報酬を約束した場合には、Bは、Aの承諾を得なければ、自己の信頼する他の弁護士に自己に代わってCとの示談契約の締結を委任することができない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約は、当事者の信頼関係を基礎とする契約であるから、受任者は、委任者の許諾を得たとき、またはやむを得ない事由があるときでなければ、復受任者を選任することができない（民法644条の2第1項）。したがって、Bは、Aの承諾はなくとも、やむを得ない事由があれば、他の弁護士にCとの示談契約の締結を委任できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 委任",
+          "sourcePageQuestion": "786",
+          "sourcePageAnswer": "787"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "出張先の大阪で交通事故に遭い負傷したAは、東京在住の友人の弁護士Bに加害者Cと示談契約を締結してくれるよう依頼した。AがBに通常の報酬を約束した場合には、Bは、善良なる管理者の注意をもって示談契約交渉にあたる義務を負うが、Bが無報酬または通常より低廉な報酬で仕事を引き受けた場合には、自己の財産におけると同一の注意義務を負うことになる。",
+          "answerBoolean": false,
+          "explanationText": "受任者は、善管注意義務を負うが（民法644条）、この義務は、報酬の有無や額などにより軽減されることはない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 委任",
+          "sourcePageQuestion": "786",
+          "sourcePageAnswer": "787"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "受任者は委任者の請求があるときは、いつでも委任事務の処理状況を報告する義務を負う。",
+          "answerBoolean": true,
+          "explanationText": "受任者は、委任者の請求があるときは、いつでも委任事務の処理の状況を報告し、委任が終了した後は、遅滞なくその経過および結果を報告する義務を負う（報告義務：民法645条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 委任",
+          "sourcePageQuestion": "786",
+          "sourcePageAnswer": "787"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "受任者は、委任事務を処理するにあたり受け取った金銭その他の物につき、委任者に引き渡さなければならない。ただし、果実については、引き渡す必要がない。",
+          "answerBoolean": false,
+          "explanationText": "受任者は、委任事務を処理するに当たって受け取った金銭その他の物を委任者に引き渡さなければならず、その収取した果実についても同様に引き渡さなければならない（民法646条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 委任",
+          "sourcePageQuestion": "786",
+          "sourcePageAnswer": "787"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aが不在の間に台風が襲来し、A所有の甲建物の窓ガラスが破損したため、Aから甲の管理を頼まれていたBがこれを交換した。この場合、AB間において特約がない限り、Bは、Aに対して報酬を請求することができない。",
+          "answerBoolean": true,
+          "explanationText": "委任契約においては、受任者は、特約がなければ、委任者に対して報酬を請求することができないのであり、無償が原則である（民法648条1項）。高度な技術や知識を必要とすることの多い委任事務の処理について、報酬という形で評価できないことがあるからである。しかし、特約等により有償とされる場合が多いのが現実である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "2) 委任",
+          "sourcePageQuestion": "786",
+          "sourcePageAnswer": "787"
+        }
+      ]
+    },
+    {
+      "sourcePage": "345",
+      "originalProblemId": "KB2025-p345-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "出張先の大阪で交通事故に遭い負傷したAは、東京在住の友人の弁護士Bに加害者Cと示談契約を締結してくれるよう依頼した。AB間で報酬を支払う旨の約束があった場合でも、加害者Cが自己の責任を認めず示談交渉が決裂したときは、BはAに報酬を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約において、受任者は、特約により、報酬を請求することができるようになり（民法648条1項）、委任者の責めに帰することができない事由によって委任事務の履行をすることができなくなったときは、受任者は、既ににした履行の割合に応じて報酬を請求することができる（648条3項1号）。本肢では、（委任者）Aの責めに帰することができない事由によって委任事務の履行をすることができなくなったといえるから、BはAに履行の割合に応じて報酬を請求できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "788",
+          "sourcePageAnswer": "789"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "報酬の合意がある場合には、委任の報酬は、受任者の請求があれば委任者がその前払をしなければならない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約において報酬の合意がある場合、受任者は、特約のない限り、委任事務を履行した後でなければ報酬を請求することができない（民法648条2項本文）。したがって、受任者の請求があっても、委任者は、報酬を前払しなければならないわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "788",
+          "sourcePageAnswer": "789"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "委任は、無償の契約であり、受任者が委任事務を処理するため必要と認むべき費用を出した場合でも、受任者は、委任者に対してその費用の償還を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約は、無償が原則とされる（民法648条1項）。しかし、受任者は、委任事務を処理するのに必要と認められる費用を支出したときは、委任者に対し、その費用の償還を請求することができる（650条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "788",
+          "sourcePageAnswer": "789"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが不在の間に台風が襲来し、A所有の甲建物の窓ガラスが破損したため、Aからの管理を頼まれていたBがこれを交換した場合、AB間において特約がなければ、窓ガラスを取り換えるに当たって、Bは、Aに対して事前にその費用の支払を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "委任事務を処理するについて費用を要するときは、委任者（A）は、受任者（B）の請求により、その前払をしなければならない（民法649条）。したがって、AB間において特約がなくても、窓ガラスを取り換えるに当たって、Bは、Aに対して事前にその費用の支払を請求することはできる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "788",
+          "sourcePageAnswer": "789"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "出張先の大阪で交通事故に遭い負傷したAは、東京在住の友人の弁護士Bに加害者Cと示談契約を締結してくれるよう依頼した。Bは、Cとの示談契約を成立させるまでは、Cとの示談交渉にのぞむために東京から大阪に出張するための交通費等の諸経費をAに請求することができない。",
+          "answerBoolean": false,
+          "explanationText": "交通費等の諸経費は、委任事務を処理するのに必要と認められる費用として、受任者は、委任者に対し、請求することができる（民法650条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "788",
+          "sourcePageAnswer": "789"
+        }
+      ]
+    },
+    {
+      "sourcePage": "346",
+      "originalProblemId": "KB2025-p346-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの隣人であるBは、Aから不在中における甲建物の管理を頼まれていたため、Aの不在の間に台風によって損傷した甲建物の屋根の修繕を行ったが、屋根から下りる際にBの不注意により足を滑らせて転倒し負傷した。この場合に、Bは、Aに対して損害賠償を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "AB間の甲建物管理に関する契約は、（準）委任契約にあたる。委任契約において、受任者は、委任事務を処理するため自己に過失なく損害を受けたときは、委任者に対し、その賠償を請求することができる（民法650条3項）。したがって、Bの不注意により受傷した本肢では、Bは、Aに対して損害賠償を請求することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "790",
+          "sourcePageAnswer": "791"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "受任者が委任事務を処理するにあたり、自己に過失なくして被った損害といえども、委任者は自己の責めに帰すべきものでない場合においては、その損害を賠償する義務を負わない。",
+          "answerBoolean": false,
+          "explanationText": "受任者は、委任事務を処理するために自己に過失なく損害を受けたときは、委任者に対し、その賠償を請求することができ（民法650条3項）、この委任者の損害賠償責任は、委任者に過失がなくても負う無過失責任である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "790",
+          "sourcePageAnswer": "791"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "委任契約は、委任者、受任者の双方からいつでも解除することができるが、相手方に不利な時期である場合は解除することができない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約は、委任者、受任者相互に、いつでも解除できる（民法651条1項）。そして、その解除が相手方に不利な時期になされたときは、やむを得ない事由があるときでない限り、相手方の損害を賠償しなければならないのであり（651条2項1号・2項ただし書）、相手方に不利な時期に解除できないわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "790",
+          "sourcePageAnswer": "791"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "委任契約は、受任者が後見開始の審判を受けることによって、終了する。",
+          "answerBoolean": true,
+          "explanationText": "委任の終了事由としては、委任者または受任者の死亡、破産手続開始の決定を受けたことのほか、受任者が後見開始の審判を受けたことが掲げられている（民法653条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "790",
+          "sourcePageAnswer": "791"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "寄託が無償で行われた場合、受寄者は他人の物を管理するにあたり、善良なる管理者の注意をもって寄託物を保管しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "無報酬の受寄者は、自己の財産に対するのと同一の注意をもって、寄託物を保管する義務を負う（民法659条）。有償寄託の場合には、原則どおり、受寄者は善管注意義務を負う（400条参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "790",
+          "sourcePageAnswer": "791"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "寄託契約において、当事者が寄託物の返還の時期を定めていないときは、受寄者は、いつでも寄託物を返還することができる。",
+          "answerBoolean": true,
+          "explanationText": "寄託とは、当事者の一方（寄託者）がある物を保管することを相手方（受寄者）に委託し、相手方（受寄者）がこれを承諾することによって（諾成契約）、その効力を生ずる（民法657条）。そして、当事者が寄託物の返還の時期を定めなかったときは、受寄者は、いつでもその返還をすることができる（663条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "790",
+          "sourcePageAnswer": "791"
+        }
+      ]
+    },
+    {
+      "sourcePage": "347",
+      "originalProblemId": "KB2025-p347-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A、B、C、D、Eの5人が、各自で出資をして共同の事業を営むことを約して組合を設立した。この場合、組合契約でA、B、Cの3人を業務執行者とした場合には、組合の業務の執行は、A、B、C全員の合意で決しなければならず、AとBだけの合意では決することはできない。",
+          "answerBoolean": false,
+          "explanationText": "組合の業務の決定および執行は、組合契約の定めるところにより、第三者に委任することができ (民法670条2項)、その委任を受けた者 (業務執行者) が数人あるときは、組合の業務は、業務執行者の過半数をもって決定し、各業務執行者がこれを執行する (670条3項後段)。したがって、ABCの業務執行者がいる本肢では、組合の業務執行は、ABの合意で決することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "組合契約",
+          "sourcePageQuestion": "792",
+          "sourcePageAnswer": "793"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A、B、C、D、Eの5人が、各自で出資をして共同の事業を営むことを約して組合を設立した。この場合、Aは、組合の常務について単独で行うことはできず、総組合員の過半数の賛成が必要であるから、Aのほか2人以上の組合員の賛成を得た上で行わなければならない。",
+          "answerBoolean": false,
+          "explanationText": "組合の業務執行は、組合員の過半数でするのが原則である (民法670条1項)。しかし、組合の常務については、その完了前に他の組合員または業務執行者が異議を述べたときでない限り、各組合員または各業務執行者が単独で行うことができる (670条5項)。したがって、Aは、組合の常務について単独で行うことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "組合契約",
+          "sourcePageQuestion": "792",
+          "sourcePageAnswer": "793"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bと寄託契約に基づき受寄物を保管していたが、保管事務を処理するのに必要と認められる費用を支出したときは、Bに対し、その費用および支出の日以後におけるその利息の償還を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "受寄者 (A) は、寄託物の保管に必要と認められる費用を支出したときは、寄託者 (B) に対し、その費用および支出の日以後におけるその利息の償還を請求することができる (民法665条、650条1項)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権",
+          "sourcePageQuestion": "792",
+          "sourcePageAnswer": "793"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "寄託者は、受寄者が寄託物を受け取るまで、契約の解除をすることができ、この場合において、受寄者は、その契約の解除によって損害を受けたときは、寄託者に対し、その賠償を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "寄託者は、受寄者が寄託物を受け取るまで、契約の解除をすることができ、この場合において、受寄者は、その契約の解除によって損害を受けたときは、寄託者に対し、その賠償を請求することができる (民法657条の2第1項)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権",
+          "sourcePageQuestion": "792",
+          "sourcePageAnswer": "793"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "書面によらない寄託契約において、無報酬の受寄者は、寄託物を受け取るまで、契約の解除をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "書面によらない寄託契約において、無報酬の受寄者は、寄託物を受け取るまで、契約の解除をすることができる (民法657条の2第2項)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権",
+          "sourcePageQuestion": "792",
+          "sourcePageAnswer": "793"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "寄託契約においては、寄託物を受け取るべき時期を経過しても寄託者が受寄物に引き渡さない場合には、書面による寄託でも無報酬の受寄者は、直ちに契約の解除をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "受寄者 (無報酬で寄託を受けた場合にあっては、書面による寄託の受寄者に限る。) は、寄託物を受け取るべき時期を経過したにもかかわらず、寄託者が寄託物を引き渡さない場合において、相当の期間を定めてその引渡しの催告をし、その期間内に引渡しがないときは、契約の解除をすることができる (民法657条の2第3項)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権",
+          "sourcePageQuestion": "792",
+          "sourcePageAnswer": "793"
+        }
+      ]
+    },
+    {
+      "sourcePage": "348",
+      "originalProblemId": "KB2025-p348-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aが組合Bの業務を執行する組合員である場合に、組合契約によりAの業務執行権限を制限しても、組合Bは、善意無過失の第三者には対抗できない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭38.5.31）は、民法上の組合において組合規約等で業務執行者の代理権限を制限しても、その制限は善意無過失の第三者に対抗できないとしている。したがって、Aの業務執行権限を制限しても、組合Bは善意無過失の第三者には対抗できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aが組合Bの業務を執行する組合員である場合は、Aは、組合財産から当然に報酬を得ることができる。",
+          "answerBoolean": false,
+          "explanationText": "業務執行組合員は、特約がなければ、組合に対して報酬を請求することができない（民法671条、648条1項準用）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "民法上の組合の取引上の債務は、Xの組合財産がその債務のための責任財産になるとともに、組合員であるA、B、CおよびDも、各自が損失分担の割合に応じて責任を負う。",
+          "answerBoolean": true,
+          "explanationText": "組合の取引上の債務は、組合財産がその債務のための責任財産になる。そして、当事者が損益分配の割合を定めなかったときは、その割合は、各組合員の出資の価額に応じて定める（民法674条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "組合員Aは、組合Bに対して、いつでも組合財産についてAの共有持分に応じた分割を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "組合員は、清算前に組合財産の分割を求めることができない（民法676条3項）。したがって、Aは、Bに対して、いつでも組合財産の分割を請求できるとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aほか5人が存続期間の定めのない組合を設立した場合、Aは、やむを得ない事由があっても、組合に不利な時期に脱退することはできない。",
+          "answerBoolean": false,
+          "explanationText": "組合契約で組合の存続期間を定めなかったときは、各組合員は、原則として、いつでも脱退することができるが、組合に不利な時期である場合には、やむを得ない事由があるときを除き脱退することができない（民法678条1項）。本肢では、Aにやむを得ない事由があるため、組合に不利な時期であっても脱退できるから、本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "組合契約において、組合員はやむを得ない事由があっても任意に脱退することができない旨の約定が存在する場合であっても、組合員の脱退に関する民法の規定は強行法規ではないから、かかる約定の効力が否定されるものではない。",
+          "answerBoolean": false,
+          "explanationText": "組合の脱退に関する民法678条は強行法規であるため、やむを得ない事由があっても任意の脱退を許さない旨の組合契約は無効である（最判平11.2.23）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "和解は、その内容が、公序良俗に反する場合は無効であるが、強行規定に違反する場合は有効である。",
+          "answerBoolean": false,
+          "explanationText": "和解とは、当事者が互いに譲歩をなして、その間に存する争いを止めることを目的とする契約であるところ（民法695条）、その内容が公序良俗（90条）や強行規定に違反する場合は無効である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "和解",
+          "sourcePageQuestion": "794",
+          "sourcePageAnswer": "795"
+        }
+      ]
+    },
+    {
+      "sourcePage": "349",
+      "originalProblemId": "KB2025-p349-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBのために行った事務処理が事務管理として行われた場合、Aは、当該事務処理が委任に基づく場合と異なり、事務管理を終了しても、Bの請求がない限り、事務処理の結果を報告する義務を負わない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約の場合、受任者は、委任が終了した後は、遅滞なくその経過および結果を報告しなければならない（民法645条）。この規定は事務管理にも準用されている（701条）。したがって、Aは、Bの請求がなくても事務処理の結果を報告する義務を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "事務管理",
+          "sourcePageQuestion": "796",
+          "sourcePageAnswer": "797"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBのために行った事務処理が事務管理として行われた場合、Aは、当該事務処理が委任に基づく場合と異なり、事務を処理するにあたって受け取った金銭をBに引き渡すべき義務を負わない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約の場合、受任者は委任事務を処理するに当たって受け取った金銭を委任者に引き渡さなければならない（民法646条1項前段）。この規定は事務管理にも準用されている（701条）。したがって、Aは、事務を処理するにあたって受け取った金銭をBに引き渡すべき義務を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "事務管理",
+          "sourcePageQuestion": "796",
+          "sourcePageAnswer": "797"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがBのために行った事務処理が事務管理として行われた場合、Aは、当該事務処理が委任に基づく場合と異なり、Bに対し事務の管理により生じる費用の前払いを請求することができない。",
+          "answerBoolean": true,
+          "explanationText": "委任契約の場合、受任者による費用の前払請求が認められているが（民法649条）、この規定は事務管理に準用されていない（701条）。したがって、委任に基づく場合と異なり、事務管理者AはBに費用の前払いを請求することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "事務管理",
+          "sourcePageQuestion": "796",
+          "sourcePageAnswer": "797"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが不在の間に台風が襲来し、A所有の甲建物の窓ガラスが破損したため、Aから甲の管理を頼まれていなかったBが窓ガラスを取り換えた場合、Bは、Aに対して窓ガラスを取り換えるために支出した費用を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "管理者（B）は、本人（A）のために有益な費用を支出したときは、本人（A）に対し、その償還を請求することができる（民法702条1項）。したがって、事務管理者Bは、本人Aに対して窓ガラスを取り換えるために支出した費用を請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "事務管理",
+          "sourcePageQuestion": "796",
+          "sourcePageAnswer": "797"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AがBのために行った事務処理が事務管理として行われた場合、Aは、当該事務処理が委任に基づく場合と異なり、Bのために有益であった費用についてのみBに対し償還請求をすることができるにすぎない。",
+          "answerBoolean": true,
+          "explanationText": "委任契約の場合、受任者が委任事務を処理するのに必要と認めた費用等について償還請求することができるが（民法650条1項）、事務管理の場合、事後的に本人のために有益とされた費用についてのみ償還請求することができるにすぎない（702条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "事務管理",
+          "sourcePageQuestion": "796",
+          "sourcePageAnswer": "797"
+        }
+      ]
+    },
+    {
+      "sourcePage": "350",
+      "originalProblemId": "KB2025-p350-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの隣人であるBは、Aの不在の間に台風によってA所有の甲建物の屋根が損傷したため修繕を行った。Bは、Aからあらかじめ甲の管理を頼まれていなかったにもかかわらず、工務店Cに修繕を請け負わせたが、実はAがCによる修繕を望んでいないことが後になって判明した。このような場合、甲にとって必要不可欠な修繕であっても、Bは、Aに対してその費用の支払いを請求することができない。",
+          "answerBoolean": false,
+          "explanationText": "管理者は、本人のために有益な費用を支出したときは、本人に対し、その償還を請求することができ（民法702条1項）、管理者が本人の意思に反して事務管理をしたときは、本人が現に利益を受けている限度においてのみ償還請求することができる（702条3項）。したがって、AがCによる修繕を望んでいないことが後になって判明したとしても、甲にとって必要不可欠な修繕であるため、Bは、Aが現存利益を受けている限度で費用の支払いを請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "798",
+          "sourcePageAnswer": "799"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBのために行った事務処理が事務管理として行われた場合、Aは、当該事務処理が委任に基づく場合と異なり、Bを代理する権限は法律上当然には認められない。",
+          "answerBoolean": false,
+          "explanationText": "委任契約の場合、受任者に委任者を代理する権限は法律上当然には認められない（民法111条2項参照）。また、事務管理の場合も管理者に本人を代理する権限は法律上当然には認められない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "798",
+          "sourcePageAnswer": "799"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aが不在の間に台風が襲来し、A所有の甲建物の窓ガラスが破損したため、Aから甲の管理を頼まれていなかったBがAの名において窓ガラスの取換えを業者Dに発注したとしても、Aの追認がない限り、Dは、Aに対してその請負契約に基づく代金の支払いを請求することはできない。",
+          "answerBoolean": true,
+          "explanationText": "事務管理者が本人の名でした法律行為の効果は、当然には本人に及ぶものではなく、そのような効果が発生するためには代理その他個別の法律関係を伴うことが必要である（最判昭36.11.30）。したがって、Dは、Aに対して工事代金の支払いを直接に請求できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "798",
+          "sourcePageAnswer": "799"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aの隣人であるBは、Aの不在の間に台風によってA所有の甲建物の屋根が損傷していたため、Aから甲建物の管理を頼まれていなかったにもかかわらず、Aのために修繕を行ったが、それがAにとって有益であるときは、Bは、Aに対し報酬を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "事務管理者の報酬請求権を認めることは相互扶助の理念を損なうことから、認められないと解されている。したがって、Bは、Aに対して報酬を請求できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "798",
+          "sourcePageAnswer": "799"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aが不在の間に台風が襲来し、A所有の甲建物の窓ガラスが破損したため、Aから甲の管理を頼まれていなかったBが自己の名において窓ガラスの取換えを業者Cに発注したときは、Bは、Aに対して自己に代わって代金をCに支払うことを請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "事務管理者は、本人のために有益な債務を負担したときは、本人に対し、自己に代わってその弁済をすることを請求することができる（民法702条2項、650条2項前段準用）。したがって、事務管理者Bは、本人Aに対して自己に代わって代金をCに支払うことを請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "798",
+          "sourcePageAnswer": "799"
+        }
+      ]
     }
   ]
 }
