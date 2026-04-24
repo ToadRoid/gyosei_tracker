@@ -29041,6 +29041,2238 @@
         }
       ],
       "parseError": null
+    },
+    {
+      "sourcePage": "411",
+      "originalProblemId": "KB2025-p411-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "招集権者による株主総会の招集の手続を欠く場合であっても、株主全員がその開催に同意して出席したいわゆる全員出席総会において、株主総会の権限に属する事項について決議をしたときには、この決議は株主総会の決議として有効に成立する。",
+          "answerBoolean": true,
+          "explanationText": "株主総会の招集手続は、株主に株主総会に出席する機会と議決権行使の準備の期間を与えるためのものであり、招集権者による株主総会の招集の手続を欠く場合であっても、株主全員がその開催に同意して出席した場合（全員出席総会）、議決権行使について不利益は生じないから、株主総会の決議として有効に成立する（会社法300条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "920",
+          "sourcePageAnswer": "921"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "公開会社において、総株主の議決権の100分の1以上の議決権または300個以上の議決権を6か月前から引き続き有する株主は、取締役に対し、株主総会の日の8週間前までに、一定の事項を株主総会の目的とすることを請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "公開会社において、総株主の議決権の100分の1以上の議決権または300個以上の議決権を6か月前から引き続き有する株主は、取締役に対し、株主総会の日の8週間前までに、一定の事項を株主総会の目的とすることを請求することができる（会社法303条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "920",
+          "sourcePageAnswer": "921"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "公開会社において、株主は、株主総会において、当該株主総会の目的である事項につき議案を提出することができる。ただし、当該議案が法令もしくは定款に違反する場合または実質的に同一の議案につき株主総会において総株主の議決権の10分の1以上の賛成を得られなかった日から3年を経過していない場合は、この限りでない。",
+          "answerBoolean": true,
+          "explanationText": "公開会社において、株主は、株主総会において、当該株主総会の目的である事項につき議案を提出することができる。ただし、当該議案が法令もしくは定款に違反する場合または実質的に同一の議案につき株主総会において総株主の議決権の10分の1以上の賛成を得られなかった日から3年を経過していない場合は、この限りでない（会社法304条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "920",
+          "sourcePageAnswer": "921"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公開会社において、総株主の議決権の100分の1以上の議決権を6か月前から引き続き有する株主は、株主総会に係る招集の手続および決議の方法を調査させるため、当該株主総会に先立ち、取締役に対し、検査役を選任すべきことを請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "株主総会の検査役の選任は、「取締役」ではなく、「裁判所」に対する申立てにより行う（会社法306条1項・2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "920",
+          "sourcePageAnswer": "921"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "合名会社と合資会社の持分は、定款の定めにより1持分につき複数の議決権を与えることができるが、株式会社でも、1株に複数の議決権を有する種類株式を発行する旨を定款に定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "株式会社においては、株主は1株につき1個の議決権を有するのが原則であり（会社法308条1項本文）、1株に複数の議決権を有する種類株式を発行する旨を定款で定めることはできないから（108条1項参照）、後段は誤っている。なお、合名会社と合資会社の社員の議決権は、1人1議決権の頭数主義が原則であるが、定款で異なる定めを置くこともできるから、前段は正しい。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "920",
+          "sourcePageAnswer": "921"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "412",
+      "originalProblemId": "KB2025-p412-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "株主は、株主総会ごとに代理権を授与した代理人によってその議決権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "議決権の代理行使が認められている（会社法310条1項）。ただし、その代理権の授与は、株主総会ごとにしなければならない（310条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "922",
+          "sourcePageAnswer": "923"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "株主総会において議決権を行使する代理人を株主に限る旨の定款の規定は、株主総会が第三者により攪乱されることを防止して、会社の利益を保護する趣旨にでた合理的理由による相当程度の制限であって、有効である。",
+          "answerBoolean": true,
+          "explanationText": "議決権が株主の意思を会社の経営に反映させる重要な手段であり、その行使の機会を保障する必要があることから、代理人によって議決権を行使することが認められる（会社法310条1項前段）。もっとも、株主総会が第三者により攪乱されることを防止して、会社の利益を保護する趣旨にでた合理的理由による相当程度の制限として、代理人を株主に限定する旨の定款の規定も有効である（最判昭43.11.1）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "922",
+          "sourcePageAnswer": "923"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "株主は、2個以上の議決権を有するときは、これを統一的に行使しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "議決権を不統一に行使することも認められている（会社法313条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "922",
+          "sourcePageAnswer": "923"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "会社は、自己の株式を所有している場合は、株主総会においてその株式について議決権を有しない。",
+          "answerBoolean": true,
+          "explanationText": "各株主は1株につき1個の議決権を有するのが原則であるが（会社法308条1項本文）、会社はその有する自己株式については、議決権を有しない（308条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "922",
+          "sourcePageAnswer": "923"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "会社は、自己の総株主の議決権の4分の1を超える議決権を他の会社に保有させている場合には、その会社の株式を有していても、その有する株式についての議決権を行使できない。",
+          "answerBoolean": true,
+          "explanationText": "株主は、株主総会において、その有する株式1個につき1個の議決権を有するが、株式会社がその総株主の議決権の4分の1以上を有することその他の事由を通じて株式会社がその経営を実質的に支配するものとして法務省令で定める株主は、株主総会において、議決権を行使できない（会社法308条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "922",
+          "sourcePageAnswer": "923"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "株式会社は、基準日を定めて、当該基準日において株主名簿に記載または記録されている株主（基準日株主）を株主総会において議決権を行使することができる者と定めることができる。",
+          "answerBoolean": true,
+          "explanationText": "株式会社は、一定の日（基準日）を定めて、基準日において株主名簿に記載され、または記録されている株主（基準日株主）をその権利を行使することができる者と定めることができる（会社法124条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "922",
+          "sourcePageAnswer": "923"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "413",
+      "originalProblemId": "KB2025-p413-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "株式会社は、基準日株主の権利を害することがない範囲であれば、当該基準日後に株式を取得した者の全部または一部を株主総会における議決権を行使することができる者と定めることができる。",
+          "answerBoolean": true,
+          "explanationText": "基準日株主が行使することができる権利が株主総会における議決権である場合には、株式会社は、当該株式の基準日株主の権利を害しない範囲であれば、当該基準日後に株式を取得した者の全部または一部を当該権利を行使することができる者と定めることができる（会社法124条4項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "924",
+          "sourcePageAnswer": "925"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "株主総会の議事については、議事録を作らなければならない。",
+          "answerBoolean": true,
+          "explanationText": "株主総会の議事については、法務省令で定めるところにより、議事録を作成しなければならない（会社法318条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "924",
+          "sourcePageAnswer": "925"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "株主総会の決議につき特別の利害関係を有する株主は、その決議に参加することができない。",
+          "answerBoolean": false,
+          "explanationText": "特別の利害関係を有する株主も、株主総会の決議に参加できる。ただし、その結果著しく不当な決議がなされたときは、株主等は、訴えをもって総会の決議の取消しを請求することができる（会社法831条1項3号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "924",
+          "sourcePageAnswer": "925"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公開会社において、取締役、会計参与、監査役および執行役は、株主総会において、株主から特定の事項について説明を求められた場合には、当該事項について必要な説明をしなければならない。ただし、当該事項が株主総会の目的である事項に関しないものである場合、その説明をすることにより株主の共同の利益を著しく害する場合その他正当な理由があるとして法務省令で定める場合は、この限りでない。",
+          "answerBoolean": true,
+          "explanationText": "公開会社において、取締役、会計参与、監査役および執行役は、株主総会において、株主から特定の事項について説明を求められた場合には、当該事項について必要な説明をしなければならない。ただし、当該事項が株主総会の目的である事項に関しないものである場合、その説明をすることにより株主の共同の利益を著しく害する場合その他正当な理由があるとして法務省令で定める場合は、この限りでない（会社法314条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "924",
+          "sourcePageAnswer": "925"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "株主総会の決議事項に関して取締役または株主から提案がなされ、当該決議事項について議決権を行使することができる株主の全員が書面または電磁的記録によりその提案内容に同意した場合は、実際に会議を開催しなくても、その提案を可決する株主総会の決議があったものとみなされる。",
+          "answerBoolean": true,
+          "explanationText": "取締役または株主が株主総会の目的である事項について提案をした場合において、当該提案につき当該事項について議決権を行使することができる株主の全員が書面または電磁的記録により同意の意思表示をしたときは、当該提案を可決する旨の株主総会の決議があったものとみなす（会社法319条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "924",
+          "sourcePageAnswer": "925"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "株主は、自己に対する株主総会の招集手続に瑕疵がなくとも、他の株主に対する招集手続に瑕疵がある場合には、株主総会の決議取消しの訴えを提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "決議取消しの訴え（会社法831条）は、株主総会の公正確保の観点から認められたものであり、他の株主に対する株主総会の招集手続の瑕疵であっても決議の公正が害される危険はあることから、この場合でも株主は決議取消しの訴えを提起することができる（最判昭42.9.28）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "924",
+          "sourcePageAnswer": "925"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "414",
+      "originalProblemId": "KB2025-p414-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "株主総会の決議取消しの訴えを提起した場合においては、その提訴期間が経過した後であっても、新たな取消事由を追加して主張することができる。",
+          "answerBoolean": false,
+          "explanationText": "瑕疵ある株主総会決議を早期に確定する必要があることから、決議取消しの訴えは決議の日より3か月以内に提起しなければならず（会社法831条1項）、提訴期間経過後に新たな取消事由を追加して主張することはできない（最判昭51.12.24）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "926",
+          "sourcePageAnswer": "927"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "株主総会の決議の内容が法令に違反するときは、当該株主総会決議の日から3か月以内に、訴えをもってのみ当該決議の取消しを請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "株主総会等の決議については、決議の内容が法令に違反することを理由として、決議が「無効であることの確認」を、訴えをもって請求することができる（会社法830条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "926",
+          "sourcePageAnswer": "927"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "取締役は、株主総会において選任することとされているが、定款に規定することにより取締役会において選任することもできる。",
+          "answerBoolean": false,
+          "explanationText": "取締役の選任は株主総会の専属事項であり、定款で特則を定めることはできない（会社法329条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "3) 取締役および取締役会",
+          "sourcePageQuestion": "926",
+          "sourcePageAnswer": "927"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "すべての株式会社は、定款において、取締役の資格として当該株式会社の株主である旨を定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "公開会社では、取締役の資格を当該会社の株主に限定することは、定款の定めをもってしても許されないが（会社法331条2項本文）、公開会社ではない株式会社においては、定款で取締役の資格を株主に限定することができる（331条2項ただし書）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "3) 取締役および取締役会",
+          "sourcePageQuestion": "926",
+          "sourcePageAnswer": "927"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "取締役会設置会社における取締役の員数については、監査等委員会設置会社を除き、別に定めはないが最低でも2人以上置かなければならない。",
+          "answerBoolean": false,
+          "explanationText": "取締役会設置会社における取締役の員数は、会社法の規定により、「2人」ではなく、「3人」以上でなければならない（会社法331条5項）。なお、監査等委員会設置会社では監査等委員である取締役は代表取締役になることができないため（331条3項、399条の13第3項かっこ書）、監査等委員の取締役3人と代表取締役となる取締役1人の合計4人以上が必要となる。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "3) 取締役および取締役会",
+          "sourcePageQuestion": "926",
+          "sourcePageAnswer": "927"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "監査等委員会設置会社においては、3人以上の監査等委員である取締役を置き、その過半数は、社外取締役でなければならない。",
+          "answerBoolean": true,
+          "explanationText": "監査等委員会設置会社の監査等委員である取締役は、3人以上で、その過半数は、社外取締役でなければならない（会社法331条6項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "3) 取締役および取締役会",
+          "sourcePageQuestion": "926",
+          "sourcePageAnswer": "927"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "415",
+      "originalProblemId": "KB2025-p415-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取締役の任期は、いかなる場合でも2年を超えることができない。",
+          "answerBoolean": false,
+          "explanationText": "取締役の任期は2年を超えることができないのが原則である。しかし、公開会社ではない株式会社（監査等委員会設置会社および指名委員会等設置会社を除く。）では、定款により任期を選任後10年以内に終了する事業年度に関する定時株主総会の終結の時まで伸長することができる（会社法332条1項・2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "928",
+          "sourcePageAnswer": "929"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "株主総会は、正当の事由がなければ、任期満了前に取締役を解任することはできない。",
+          "answerBoolean": false,
+          "explanationText": "株主総会は、その決議によって、取締役をいつでも、かつ事由のいかんを問わず、任期満了前に解任することができる（会社法339条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "928",
+          "sourcePageAnswer": "929"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "取締役は、株主総会における出席株主の議決権の3分の2以上の賛成による決議でいつでも解任される。",
+          "answerBoolean": false,
+          "explanationText": "取締役の解任は、累積投票により選任された場合を除き（会社法309条2項7号、342条3項・4項・5項）、出席株主の議決権の3分の2以上の賛成（特別決議）ではなく、過半数の賛成（普通決議）をもってすれば足りる（339条1項、309条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "928",
+          "sourcePageAnswer": "929"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "法律または定款に定める取締役の員数を欠くに至った場合において、任期の満了または辞任により退任した取締役は、新たに選任された取締役が就職するまで、取締役の権利義務を有する。",
+          "answerBoolean": true,
+          "explanationText": "本肢は、会社法346条1項のとおりであり、任期満了または辞任によって退任する取締役は、新取締役が就職するまで取締役として権利義務を有する。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "928",
+          "sourcePageAnswer": "929"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "取締役の解任によって欠員が生じた場合、必要があるときは、利害関係人の申立てにより、裁判所は一時取締役の職務を行うべき者を選任することができる。",
+          "answerBoolean": true,
+          "explanationText": "取締役の解任等によって、法律または定款に定めた取締役の員数を欠くことになった場合、裁判所は必要があると認めるときには、利害関係人の申立てにより、一時取締役の職務を行うべき者を選任することができる（会社法346条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "928",
+          "sourcePageAnswer": "929"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "監査役または監査委員が設置されている株式会社の株主であって一定の数の株式を保有する株主は、当該会社の業務の執行に関し、不正の行為または法令・定款に違反する重大な事実があることを疑うに足りる事由があるときには、当該会社の業務および財産の状況を調査させるために、検査役の選任を監査役または監査委員に請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "株式会社の業務の執行に関し、不正の行為または法令・定款に違反する重大な事実があることを疑うに足りる事由があるときは、一定の株主は、当該会社の業務および財産の状況を調査させるため、検査役の選任の申立てをすることができる（会社法358条1項）。選任の申立ては裁判所に対して行うとされ（358条1項）、監査役または監査委員に選任請求できるわけではない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "928",
+          "sourcePageAnswer": "929"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "416",
+      "originalProblemId": "KB2025-p416-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "公開会社であって取締役会設置会社において、取締役の職務の執行が法令および定款に適合するための体制（いわゆる内部統制システム）の整備については、代表取締役が決定する。",
+          "answerBoolean": false,
+          "explanationText": "取締役会は、取締役の職務の執行が法令および定款に適合することを確保するための体制（内部統制システム）の整備を取締役に委任することができないとされているから（会社法362条4項6号）、内部統制システムの整備については、代表取締役が決定することはできない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "930",
+          "sourcePageAnswer": "931"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "公開会社であって取締役会設置会社において、取締役会は3ヶ月に1回以上招集しなければならないが、その招集権者を代表取締役とすることができる。",
+          "answerBoolean": true,
+          "explanationText": "代表取締役は、3か月に1回以上、自己の職務の執行の状況を取締役会に報告しなければならないとされているから（会社法363条2項）、必然的に取締役会は3か月に1回以上招集しなければならないことになる。また、取締役会は、各取締役が招集するのが原則であるが、取締役会を招集する取締役を定款または取締役会で定めたときは、その取締役が招集することとなるから（366条1項）、取締役会の招集権者を代表取締役とすることもできる。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "930",
+          "sourcePageAnswer": "931"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "取締役会を招集する場合には、開催日の少なくとも1週間前までに通知を発しなければならず、この期間については、定款で短縮することはできない。",
+          "answerBoolean": false,
+          "explanationText": "取締役会の招集にあたっては、原則として、開催日の1週間前までに通知を発しなければならないとされているから、前段は正しい。もっとも、その期間については、定款で短縮することができるから（会社法368条1項かっこ書）、後段は誤っている。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "930",
+          "sourcePageAnswer": "931"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "取締役会設置会社における取締役会は、会社の業務執行を決定するとともに、取締役の職務の執行を監督する。",
+          "answerBoolean": true,
+          "explanationText": "取締役会設置会社の業務執行の決定、取締役の職務執行の監督は、取締役会においてなされる（会社法362条2項1号・2号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "930",
+          "sourcePageAnswer": "931"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "公開会社であり、かつ、大会社である監査役会設置会社であって金融商品取引法所定の規定によりその発行する株式について有価証券報告書を内閣総理大臣に提出しなければならないものであっても、社外取締役を設置する必要はないが、当該事業年度に関する定時株主総会において、社外取締役を置くことが相当でない理由を説明しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "公開会社であり、かつ、大会社である監査役会設置会社であって、金融商品取引法所定の規定によりその発行する株式について有価証券報告書を内閣総理大臣に提出しなければならないものは、社外取締役を設置しなければならない（会社法327条の2）。かつては、社外取締役の設置義務はない代わりに、定時株主総会において、社外取締役を置くことが相当でない理由を説明しなければならないとされていたが、コンプライアンス強化のため、社外取締役の設置が義務付けられた。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "930",
+          "sourcePageAnswer": "931"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "417",
+      "originalProblemId": "KB2025-p417-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取締役会は、取締役が相互の協議や意見交換を通じて意思決定を行う場であるため、本来は現実の会議を開くことが必要であるが、定款の定めにより、取締役の全員が書面により提案に同意した場合には、これに異議を唱える者は他にありえないため、当該提案を可決する旨の取締役会の決議があったものとみなすことができる。",
+          "answerBoolean": false,
+          "explanationText": "取締役会設置会社において、取締役が取締役会決議の目的事項について提案をした場合、当該提案につき取締役（当該事項について議決に加わることができるものに限る。）の全員が書面等により同意の意思表示をしたときは、当該提案を可決する旨の取締役会の決議があったものとみなす旨を定款で定めることができる。しかし、監査役設置会社にあっては、監査役が当該提案について異議を述べたときは、取締役会決議を省略することはできない（会社法370条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "932",
+          "sourcePageAnswer": "933"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "株主および会社の債権者は、会社の営業時間内ならいつでも取締役会議事録を閲覧または謄写することを請求できる。",
+          "answerBoolean": false,
+          "explanationText": "取締役会設置会社において、株主は、その権利を行使するため必要があるときに（監査役設置会社、監査等委員会設置会社または指名委員会等設置会社では、さらに裁判所の許可を得て）、会社の債権者については取締役または監査役の責任を追及するため必要ある場合に、裁判所の許可を得て議事録の閲覧または謄写の請求をすることができる（会社法371条2項・3項・4項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "932",
+          "sourcePageAnswer": "933"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "監査役または監査委員が設置されている株式会社の株主は、取締役の任務懈怠を理由とする責任追及を行うために、当該会社に対して、営業時間内であれば、いつでも取締役会議事録の閲覧および謄写を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "監査役設置会社、監査等委員会設置会社または指名委員会等設置会社の株主がその権利を行使するため必要があるときに、取締役会の議事録の閲覧・謄写請求をするには、裁判所の許可を得なければならない（会社法371条3項・2項）。営業時間内にいつでも閲覧・謄写請求できるわけではない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "932",
+          "sourcePageAnswer": "933"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "取締役会設置会社において、取締役が自己または第三者のために会社の事業の部類に属する取引を行う場合には、取締役会において当該取引に関する重要な事実を開示して、その承認を受けなければならない。",
+          "answerBoolean": true,
+          "explanationText": "取締役会設置会社においては、取締役が自己または第三者のために会社の事業の部類に属する取引を行うには、取締役会において当該取引に関する重要な事実を開示して、その承認を受けなければならない（会社法356条1項1号、365条1項・2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "932",
+          "sourcePageAnswer": "933"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "取締役または執行役が競業取引の制限に関する規定に違反して取引をしたときは、当該取引によって取締役、執行役または第三者が得た利益の額は、賠償責任を負う損害の額と推定する。",
+          "answerBoolean": true,
+          "explanationText": "取締役または執行役が競業取引の制限に関する規定に違反して取引をしたときは、当該取引によって取締役、執行役または第三者が得た利益の額は、賠償責任を負う損害の額と推定する（会社法423条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "932",
+          "sourcePageAnswer": "933"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "418",
+      "originalProblemId": "KB2025-p418-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取締役会設置会社の代表取締役Aが、取締役会の承認を得て会社から金銭の貸付けを受けた場合であっても、Aは、事後的にその貸付けに関する重要な事実を取締役会に報告しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "本肢のように取締役が会社から金銭の貸付けを受けるなど利益相反取引を行う場合、取締役会設置会社においては、重要な事実を開示して取締役会の承認を得なければならず（会社法365条1項）、取引後遅滞なく取引についての重要な事実を取締役会に報告しなければならない（365条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "取締役会設置会社の代表取締役Aが、取締役会の承認を得て、自ら会社を代表してA自身を借主とする契約を締結することは、自己契約に当たるため、他の取締役が会社を代表しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "取締役会の承認を得ているため、代表取締役A自身が会社を代表することができる（会社法356条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "取締役会設置会社において、取締役が、取締役会の承認を受けて会社を代表して他の取締役に金銭を貸し付けた場合であっても、その取締役はまだ弁済のない額について弁済する責任を負う。",
+          "answerBoolean": true,
+          "explanationText": "取締役が会社を代表して他の取締役に対し金銭の貸付けをすることは、利益相反取引といえ（会社法356条1項2号、365条）、会社を代表した取締役は、まだ弁済がない額につき弁済しなければならない（423条1項・3項2号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "利益相反取引によって株式会社に損害が生じた場合には、株主総会または取締役会の承認の有無にかかわらず、株式会社と利益が相反する取引をした取締役または執行役は任務を怠ったものと推定する。",
+          "answerBoolean": true,
+          "explanationText": "利益相反取引によって株式会社に損害が生じた場合には、株主総会または取締役会の承認の有無にかかわらず、株式会社と利益が相反する取引をした取締役または執行役は任務を怠ったものと推定する（会社法423条3項1号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "取締役会の招集は、代表取締役がこれを招集しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "取締役会は、原則として各取締役が招集し（会社法366条1項本文）、代表取締役が招集しなければならないわけではない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "取締役会を招集する場合には、取締役会の日の1週間前までに、各取締役（監査役設置会社にあっては、各取締役および各監査役）に対して、取締役会の目的である事項および議案を示して、招集の通知を発しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "取締役会の招集通知には、株主総会の場合と異なり（会社法298条4項・1項2号参照）、目的である事項および議案を示す必要はない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "取締役会の決議は、議決に加わることができる取締役の過半数が出席し、その過半数をもって行う。",
+          "answerBoolean": true,
+          "explanationText": "取締役会の決議は、議決に加わることができる取締役の過半数が出席し、その過半数をもって行う（会社法369条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        },
+        {
+          "seqNo": 8,
+          "questionText": "取締役会の決議について特別の利害関係を有する取締役は、議決に加わることができない。",
+          "answerBoolean": true,
+          "explanationText": "取締役会の決議について特別の利害関係を有する取締役は、議決に加わることができない（会社法369条2項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "934",
+          "sourcePageAnswer": "935"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "419",
+      "originalProblemId": "KB2025-p419-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取締役会の決議に参加した取締役であって、取締役会の議事録に異議をとどめないものは、その決議に賛成したものと推定する。",
+          "answerBoolean": true,
+          "explanationText": "取締役会決議に参加した取締役が取締役会議事録に異議をとどめなければ、その決議に賛成したものと推定される（会社法369条5項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "取締役会設置会社の代表取締役Aが、取締役会の承認を得て、会社から金銭の貸付けを受けた場合、Aの損害賠償責任は、株主総会の特別決議によっても一部免除することができない。",
+          "answerBoolean": true,
+          "explanationText": "Aの損害賠償責任は、一部免除をすることができず（会社法428条2項）、総株主の同意がなければ免除することができない（424条参照）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "取締役会設置会社の代表取締役Aが、取締役会の承認を得て、会社から金銭の貸付けを受けたが、Aが金銭の返済を怠った場合には、取締役会で金銭の貸付けを承認した他の取締役は、Aと連帯して会社に対して損害賠償責任を負う。",
+          "answerBoolean": true,
+          "explanationText": "利益相反取引によって会社に損害が生じたときは、その承認に関する取締役会決議に賛成した取締役は、その任務を怠ったと推定され（会社法423条3項3号）、その責任に関して連帯責任を負う（430条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公開会社において、取締役が法令または定款に違反する行為をするおそれがある場合において、当該行為によって当該株式会社に回復することができない損害が生ずるおそれがあるときは、6か月前から引き続き株式を有する株主は、会社のために取締役に対しその行為の差止めを請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "公開会社は、監査役設置会社、監査等委員会設置会社または指名委員会等設置会社のいずれかとなる（会社法327条2項本文）。監査役設置会社、監査等委員会設置会社または指名委員会等設置会社においては、本肢の要件の下、取締役の違法行為に対する差止請求が認められている（360条1項・3項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "株主総会の招集の決定など、法律により取締役会が決定すべきものとされている事項についても、定款の定めによって代表取締役に決定権限を委譲することができる。",
+          "answerBoolean": false,
+          "explanationText": "法律上、取締役会において決定すべきものとされている事項は、取締役会自身において決定することを要し、定款をもってしても、その決定を代表取締役に委ねることはできない（会社法362条4項参照）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "公開会社であって取締役会設置会社において、取締役会は、法定事項や重要な業務執行について決定権限を有するが、それ以外については、代表取締役に、業務執行の決定を委任することができる。",
+          "answerBoolean": true,
+          "explanationText": "取締役会は、法定事項や重要な業務執行について決定権限を有するが（会社法362条4項）、それ以外については、代表取締役に、業務執行の決定を委任することができる。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "指名委員会等設置会社を除く取締役会設置会社において、取締役が6名以上で、1名以上の社外取締役がいる場合には、特別取締役を取締役会決議で選定することができる。",
+          "answerBoolean": true,
+          "explanationText": "本肢は、会社法373条1項のとおりであり、取締役会決議事項のうち日常業務性の濃い重要な財産の処分・譲受けおよび多額の借財の決定を特別取締役に委ねることとしたのである。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会社法",
+          "sourcePageQuestion": "936",
+          "sourcePageAnswer": "937"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "420",
+      "originalProblemId": "KB2025-p420-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取締役が法令または定款に違反する行為により株式会社に損害を与えた場合には、当該会社に対して損害の賠償をしなければならないが、総株主の同意があれば、当該会社はこの責任を免除することができる。",
+          "answerBoolean": true,
+          "explanationText": "取締役、会計参与、監査役、執行役または会計監査人（役員等）は、その任務を怠ったときは、株式会社に対し、これによって生じた損害を賠償する責任を負うが（会社法423条1項）、総株主の同意があれば免除することができる（424条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "938",
+          "sourcePageAnswer": "939"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "非業務執行取締役等は、定款の定めに基づき、職務を行うにつき善意でかつ重大な過失がないときは、定款で定めた額の範囲内であらかじめ株式会社が定めた額と最低責任限度額とのいずれか高い額を限度として責任を負うとする契約を株式会社と締結することができる。",
+          "answerBoolean": true,
+          "explanationText": "非業務執行取締役等は、定款の定めにに基づき、職務を行うにつき善意でかつ重大な過失がないときは、定款で定めた額の範囲内であらかじめ株式会社が定めた額と最低責任限度額とのいずれか高い額を限度として責任を負うとする契約を株式会社と締結することができる（会社法427条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "938",
+          "sourcePageAnswer": "939"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "自己のために株式会社と取引をした取締役または執行役は、任務を怠ったことが当該取締役または執行役の責めに帰することができない事由によるものであることをもって損害賠償責任を免れることはできない。",
+          "answerBoolean": true,
+          "explanationText": "自己のために株式会社と取引をした取締役または執行役は、任務を怠ったことが当該取締役または執行役の責めに帰することができない事由によるものであることをもって損害賠償責任を免れることはできない（会社法428条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "938",
+          "sourcePageAnswer": "939"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公開会社においては、6箇月前から継続して株式を保有する株主は、取締役会に対し書面その他の法務省令で定める方法により取締役の責任を追及する訴えの提起を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "公開会社において6か月（下回る期間を定款で定めたときは、その期間）前より引き続き株式を保有する株主は、書面その他の法務省令で定める方法により取締役の責任を追及する訴えの提起を、「取締役会」に対してではなく、「株式会社」に対して請求することができる（会社法847条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "938",
+          "sourcePageAnswer": "939"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "監査役および監査委員が設置されていない株式会社の株主は、取締役の行為に法令に違反する重大な事実があるときには、当該会社を代表して、直ちに責任追及の訴えを提起することができる。",
+          "answerBoolean": false,
+          "explanationText": "監査役設置会社または指名委員会等設置会社以外の株式会社においても、株主がその会社を代表して、直ちに責任追及の訴えを提起するには、その訴え提起を請求した後60日以内に会社が責任追及の訴えを提起しないこと（会社法847条1項本文・3項）、または60日の期間の経過により株式会社に回復することができない損害が生ずるおそれがあること（同条5項）が必要である。これらの事情なく、会社を代表して直ちに責任追及の訴えを提起することはできない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "938",
+          "sourcePageAnswer": "939"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "421",
+      "originalProblemId": "KB2025-p421-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "監査役および監査委員が設置されていない株式会社の株主であって一定の株式を保有する株主は、取締役が法令違反行為を継続して行っているときには、直ちに当該取締役を解任する訴えを提起することができる。",
+          "answerBoolean": false,
+          "explanationText": "監査役設置会社または指名委員会等設置会社以外の株式会社においても、株主が取締役を解任する訴えを提起するには、取締役の職務の執行に関し不正の行為または法令もしくは定款に違反する重大な事実があったにもかかわらず、当該役員を解任する旨の議案が株主総会において否決されたこと等が必要であり（会社法854条1項・2項）、直ちに取締役解任の訴えを提起することはできない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "監査役",
+          "sourcePageQuestion": "940",
+          "sourcePageAnswer": "941"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "会計参与は、株主総会の決議によって選任する。",
+          "answerBoolean": true,
+          "explanationText": "会計参与は、株主総会の決議によって選任する（会社法329条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会計参与",
+          "sourcePageQuestion": "940",
+          "sourcePageAnswer": "941"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "会計参与は、公認会計士もしくは監査法人または税理士もしくは税理士法人でなければならない。",
+          "answerBoolean": true,
+          "explanationText": "会計参与は、公認会計士もしくは監査法人または税理士もしくは税理士法人でなければならない（会社法333条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会計参与",
+          "sourcePageQuestion": "940",
+          "sourcePageAnswer": "941"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "会計参与は、会計監査人とは異なる会社役員であり、取締役と共同して計算書類等を作成する。",
+          "answerBoolean": true,
+          "explanationText": "会計参与は、取締役と共同して、計算書類その附属明細書（会社法435条2項）、臨時計算書類（441条1項）、連結計算書類（444条1項）を作成する（374条1項、329条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "会計参与",
+          "sourcePageQuestion": "940",
+          "sourcePageAnswer": "941"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "監査役を選任し、又は解任する株主総会の決議は、議決権を行使することができる株主の議決権の過半数を有する株主が出席し、出席した当該株主の議決権の過半数をもって行う。",
+          "answerBoolean": false,
+          "explanationText": "監査役の選任は株主総会の普通決議（議決権を行使することができる株主の議決権の過半数を有する株主が出席し、出席した当該株主の議決権の過半数による議決）による（会社法329条1項、341条）。もっとも、監査役の解任決議は特別決議（当該株主総会において議決権を行使することができる株主の議決権の過半数を有する株主が出席し、出席した当該株主の議決権の3分の2以上に当たる多数による議決）による（339条1項、309条2項7号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "監査役",
+          "sourcePageQuestion": "940",
+          "sourcePageAnswer": "941"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "422",
+      "originalProblemId": "KB2025-p422-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "取締役会設置会社は監査役を選任しなければならないが、公開会社でない取締役会設置会社の場合には、会計監査人設置会社であっても、定款で、監査役の監査権限を会計監査に限定することができる。",
+          "answerBoolean": false,
+          "explanationText": "公開会社でない会社の場合では、定款で、監査役の監査権限を会計監査に限定できるのが原則であるが、当該株式会社が会計監査人設置会社であるときは、会計監査に限定することはできず（会社法398条1項）、業務監査権限にまで及ぶことになる。会計監査人設置会社では、会計監査の専門家である会計監査人がすでに存在し、重ねて会計監査のみを担当する監査役を設置する必要はないからである。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "指名委員会等設置会社の業務を執行し代表権を有する執行役は、指名委員会が指名する候補者の中から株主総会で選任される。",
+          "answerBoolean": false,
+          "explanationText": "代表執行役は、執行役の中から取締役会の決議により選定される（会社法420条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "指名委員会等設置会社",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "会社が指名委員会等設置会社である場合には、取締役会決議により、多額の借入れの決定権限を執行役に委任することができる。",
+          "answerBoolean": true,
+          "explanationText": "指名委員会等設置会社においては、多額の借財の決定権限を執行役に委任することができる（会社法416条4項ただし書において多額の借財の決定に関する362条4項2号を明示していない）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "指名委員会等設置会社",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "監査等委員会設置会社または指名委員会等設置会社は、いずれも取締役会設置会社である。",
+          "answerBoolean": true,
+          "explanationText": "監査等委員会設置会社および指名委員会等設置会社は、取締役会を置かなければならない（会社法327条1項3・4号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "監査等委員会設置会社",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "監査等委員会設置会社または指名委員会等設置会社は、いずれも監査役を設置することができない。",
+          "answerBoolean": true,
+          "explanationText": "監査等委員会設置会社および指名委員会等設置会社は、監査役を置いてはならない（会社法327条4項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "監査等委員会設置会社",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "監査等委員会設置会社または指名委員会等設置会社は、いずれも会計監査人を設置しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "監査等委員会設置会社および指名委員会等設置会社は、会計監査人を置かなければならない（会社法327条5項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "監査等委員会設置会社",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "監査等委員会設置会社は、定款で定めた場合には、指名委員会または報酬委員会のいずれかまたは双方を設置しないことができる。",
+          "answerBoolean": false,
+          "explanationText": "指名委員会等設置会社（指名委員会、監査委員会および報酬委員会を置く株式会社）は、監査等委員会を置いてはならない（会社法327条6項）。また、監査等委員会設置会社においては、指名委員会等（指名委員会、監査委員会および報酬委員会）も置かれない。したがって、監査等委員会設置会社において指名委員会および報酬委員会が存在することを前提とする本肢は誤っている。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "監査等委員会設置会社",
+          "sourcePageQuestion": "942",
+          "sourcePageAnswer": "943"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "423",
+      "originalProblemId": "KB2025-p423-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "監査等委員会設置会社の監査等委員である各取締役の報酬等について定款の定め又は株主総会の決議がないときは、当該報酬等は、株主総会で決議された取締役の報酬等の範囲内において、監査等委員である取締役の多数決によって定める。",
+          "answerBoolean": false,
+          "explanationText": "監査等委員である各取締役の報酬等について定款の定めまたは株主総会の決議がないときは、当該報酬等は、株主総会で決議された取締役の報酬等の範囲内において、監査等委員である取締役の「協議」によって定める（会社法361条3項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "監査等委員会設置会社を代表する機関は代表取締役であるが、指名委員会等設置会社を代表する機関は代表執行役である。",
+          "answerBoolean": true,
+          "explanationText": "監査等委員会設置会社を代表する機関は代表取締役であり、取締役の中から取締役会で選定されるが（会社法362条3項）、指名委員会等設置会社を代表する機関は代表執行役であり、執行役の中から取締役会で選定される（420条1項前段）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "株式の払込額の2分の1を超えない額については、資本金として計上しないことができ、計上しないこととした額は資本準備金としなければならない。",
+          "answerBoolean": true,
+          "explanationText": "会社の資本金の額は、設立または株式の発行に際して株主となる者が当該株式会社に対して払込みまたは給付をした財産の額とするのが原則である（会社法445条1項）。しかし、その2分の1を超えない額について、資本金として計上しないことができ、計上しないこととした額は資本準備金としなければならない（445条2項・3項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "5 計算",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "会社が自己株式を有する場合には、株主とともに当該会社も剰余金の配当を受けることができるが、配当財産の額は利益準備金に計上しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "株式会社は、その株主（当該株式会社を除く）に対し、剰余金の配当をすることができる（会社法453条）。したがって、会社が自己株式を有する場合には、当該会社は剰余金の配当を受けることができない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "5 計算",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "株式会社は、配当財産として、金銭以外に当該株式会社の株式、社債または新株予約権を株主に交付できない。",
+          "answerBoolean": true,
+          "explanationText": "株式会社は、配当財産として金銭以外に当該株式会社の株式、社債または新株予約権を株主に交付できない（会社法454条1項1号かっこ書参照）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "5 計算",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "取締役会設置会社は、1事業年度の途中において1回に限り、取締役会決議により剰余金の配当（中間配当）をすることができる旨を定款で定めることができる。",
+          "answerBoolean": true,
+          "explanationText": "取締役会設置会社は、1事業年度の途中において1回に限り、取締役会決議により剰余金の配当（中間配当）をすることができる旨を定款で定めることができる（会社法454条5項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "5 計算",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "純資産の額が300万円を下回る場合には、剰余金の配当をすることができない。",
+          "answerBoolean": true,
+          "explanationText": "純資産の額が300万円を下回る場合には、剰余金の配当をすることができない（会社法458条、453条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "5 計算",
+          "sourcePageQuestion": "944",
+          "sourcePageAnswer": "945"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "424",
+      "originalProblemId": "KB2025-p424-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "剰余金の配当により株主に交付される金銭等の帳簿価額の総額は、剰余金の配当が効力を生ずる日における分配可能額を超えてはならない。",
+          "answerBoolean": true,
+          "explanationText": "剰余金の配当により株主に交付される金銭等の帳簿価額の総額は、剰余金の配当が効力を生ずる日における分配可能額を超えてはならない（会社法461条1項8号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "946",
+          "sourcePageAnswer": "947"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "株式会社より分配可能額を超える金銭の交付を受けた株主がその事実につき善意である場合には、当該株主は、当該株式会社に対し、交付を受けた金銭を支払う義務を負わない。",
+          "answerBoolean": false,
+          "explanationText": "株式会社より分配可能額を超える金銭の交付を受けた株主は当該会社に対して交付を受けた金銭を支払う義務を負う（会社法462条1項）。この場合、株主の善意かどうかと関係なく金銭支払義務を負う。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "946",
+          "sourcePageAnswer": "947"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "定款を変更するためには、株主総会における出席株主の議決権の4分の3以上の賛成による決議が必要である。",
+          "answerBoolean": false,
+          "explanationText": "定款を変更するには、原則として、株主総会において、出席株主の議決権の4分の3以上ではなく、3分の2以上の賛成が必要である（会社法466条、309条2項11号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "定款の変更",
+          "sourcePageQuestion": "946",
+          "sourcePageAnswer": "947"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "会社の合併により、消滅会社の全財産が包括的に存続会社に移転するため、財産の一部を除外することは許されないが、消滅会社の債務については、消滅会社の債権者の承諾が得られれば、存続会社は消滅会社の債務を引き継がないとすることも可能である。",
+          "answerBoolean": false,
+          "explanationText": "合併の効果として、存続会社は消滅会社の権利義務を包括的に承継するから（会社法750条）、存続会社は消滅会社の債務を引き継がないとすることは、合併の本質に反し無効となる（大判大6.9.26）、許されない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "組織再編",
+          "sourcePageQuestion": "946",
+          "sourcePageAnswer": "947"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "会社が合併するには、各当事会社の株主総会の特別決議による承認を要するが、存続会社に比べて消滅会社の規模が著しく小さい場合には、各当事会社は株主総会決議を省略することができる。",
+          "answerBoolean": false,
+          "explanationText": "会社が合併するには、原則として、各当事会社の株主総会の特別決議による承認が必要である（存続会社につき783条1項、309条2項12号）。もっとも、存続会社が消滅会社の特別支配会社であるときを除き（いわゆる「略式合併」であり、各当事会社の株主総会決議は不要となることについて、存続会社につき784条1項本文および消滅会社につき784条1項本文）、合併対価の額が存続会社の純資産額の20%以下の場合には（「簡易合併」）、存続会社は株主総会決議を省略することができるが（796条3項）、消滅会社は株主総会決議を省略することはできない。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "組織再編",
+          "sourcePageQuestion": "946",
+          "sourcePageAnswer": "947"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "425",
+      "originalProblemId": "KB2025-p425-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "合併決議前に反対の意思表示をし、かつ合併承認決議に反対した株主は、合併承認決議が成立した場合には、株式買取請求権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "株主保護の見地から、合併決議前に反対の意思表示をし、かつ合併承認決議に反対した株主は、合併承認決議が成立した場合には、株式買取請求権を行使することができる（吸収合併の消滅会社につき会社法785条2項、存続会社につき797条、新設合併の消滅会社につき806条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "948",
+          "sourcePageAnswer": "949"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "合併の各当事会社は、会社債権者に対して、合併に異議があれば一定の期間内に述べるように官報に公告し、かつ電子公告をした場合であっても、知れている債権者には個別催告をする必要がある。",
+          "answerBoolean": false,
+          "explanationText": "会社債権者保護の見地から、合併の各当事会社は、会社債権者に対して、合併に異議があれば一定の期間内に述べるように官報に公告し、かつ、知れている債権者には、各別にこれを催告しなければならないのが原則である（会社法789条2項本文、799条2項本文、810条2項本文）。もっとも、催告手続の簡略化を図るため、官報に公告した場合のほか、日刊新聞紙による公告または電子公告を行った場合には、債権者への個別催告は省略することができる（789条3項、799条3項、810条3項、939条1項2号・3号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "948",
+          "sourcePageAnswer": "949"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "会社の合併が違法である場合に、各当事会社の株主、取締役等、または合併を承認しなかった債権者は、その無効を合併無効の訴えによってのみ主張することができ、合併無効の判決が確定した場合には、将来に向かってその合併は無効となる。",
+          "answerBoolean": true,
+          "explanationText": "会社の合併が違法である場合、各当事会社の株主、取締役等、または合併を承認しなかった債権者は、その無効を合併無効の訴えによってのみ主張することができ（会社法828条1項7号・8号・2項7号・8号）、合併無効の判決が確定したときは、将来に向かってその合併は無効となる（834条7号・8号、839条）。合併をめぐる法律関係の安定確保の観点から、主張権者および主張方法を限定し、遡及効も否定されている。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "948",
+          "sourcePageAnswer": "949"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "株式交換完全親会社は、株式会社でなければならない。",
+          "answerBoolean": false,
+          "explanationText": "株式会社は、株式交換をすることができ、当該株式会社の発行済株式の全部を取得する株式交換完全親会社は、株式会社または合同会社に限られる（会社法767条）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "948",
+          "sourcePageAnswer": "949"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "株式交換とは、株式会社がその発行済株式の一部のみを取得することとなる株式交換を行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "株式交換とは、株式会社がその発行済株式の「全部」を他の株式会社または合同会社に取得させることである（会社法2条31号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "株式会社",
+          "sourcePageQuestion": "948",
+          "sourcePageAnswer": "949"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "426",
+      "originalProblemId": "KB2025-p426-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "持分会社の無限責任社員は、株式会社の株主とは異なり、金銭出資や現物出資にかぎらず、労務出資や信用出資の方法が認められている。",
+          "answerBoolean": true,
+          "explanationText": "株式会社の場合、株主の出資の方法は金銭出資または現物出資に限られるが（会社法34条1項、63条1項、208条1項・2項参照）、持分会社の無限責任社員の場合、金銭出資や現物出資に限られず、労務出資や信用出資の方法が認められている（576条1項6号参照）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "950",
+          "sourcePageAnswer": "951"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "合名会社の無限責任社員は、各社員が会社債務全額につき連帯責任を負うが、会社債権者に対して、まず会社資産から弁済を受けるように求めることができる。",
+          "answerBoolean": true,
+          "explanationText": "合名会社の無限責任社員は、各社員が会社債務全額につき連帯責任を負うが、これは会社の財産をもって債務を完済することができない場合の二次的な責任であり、会社債権者に対して、まず会社資産から弁済を受けるように求めることができる（会社法580条1項1号）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "950",
+          "sourcePageAnswer": "951"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "合資会社の有限責任社員は、定款記載の出資額までしか責任を負わないため、有限責任社員となる時点で出資金額の履行が要求されている。",
+          "answerBoolean": false,
+          "explanationText": "合資会社においても、会社の財産をもって債務を完済することができない場合には、社員が会社債務全額につき連帯責任を負い（会社法580条1項1号）、会社債権者の引当となる財産を確保する必要性は低いことから、有限責任社員となる時点で出資金額の履行は要求されていない（580条2項参照）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "950",
+          "sourcePageAnswer": "951"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "合名会社の社員は、原則として、会社の業務執行権および代表権を有する。",
+          "answerBoolean": true,
+          "explanationText": "合名会社では社員自らが業務執行にあたるのが原則であり、業務執行権を有する社員は原則として代表権を有する（会社法590条1項、599条1項本文）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "950",
+          "sourcePageAnswer": "951"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "合資会社では、無限責任社員から業務執行権と会社代表権を有する代表社員を選任することを要し、株式会社における取締役会設置会社では、取締役から業務執行権と会社代表権を有する代表取締役を選任する。",
+          "answerBoolean": false,
+          "explanationText": "持分会社において、社員は責任が有限であるかを問わず業務執行権と会社代表権を有することから（会社法590条1項、599条1項）、代表社員を無限責任社員から選任することを要するわけではないから、前段は誤っている。なお、株式会社においては、取締役会設置会社である場合には、取締役の中から業務執行権と会社代表権を有する代表取締役を選任することを要するから（362条3項）、後段は正しい。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.95,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "950",
+          "sourcePageAnswer": "951"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "427",
+      "originalProblemId": "KB2025-p427-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "持分会社は、会社法上の公開会社である株式会社とは異なり、原則として、社員各自が当該会社の業務を執行し、当該会社を代表する。",
+          "answerBoolean": true,
+          "explanationText": "会社法上の公開会社である株式会社においては、原則として取締役会が業務執行を決定し、代表取締役がこれを行う（会社法362条2項1号、363条1項）。これに対し、持分会社においては、原則として、社員は持分会社の業務を執行し（590条1項）、持分会社を代表する（599条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.98,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "952",
+          "sourcePageAnswer": "953"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "持分会社の社員は、株式会社の株主とは異なり、退社による持分の払戻しが認められているが、当該社員の責任を明確にするために、登記によって退社の効力が生じる。",
+          "answerBoolean": false,
+          "explanationText": "株式会社においては、退社制度は認められていない。持分会社においては社員の投下資本回収のために退社による持分払戻し制度が設けられている（会社法611条1項）。退社の効力は、当該社員の意思表示（606条）や総社員の同意等法定事由の発生（607条）により生じ、登記によって生じるわけではない（612条1項参照）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.98,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "952",
+          "sourcePageAnswer": "953"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "合資会社の有限責任社員は、会社の業務を執行し、および会社を代表することができない。",
+          "answerBoolean": false,
+          "explanationText": "持分会社の社員は、その責任が無限・有限を問わず、定款に別段の定めがある場合を除き、会社の業務執行権を有し（会社法590条1項）、代表社員・代表者を定めた場合を除き、代表権を有する（599条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.98,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "952",
+          "sourcePageAnswer": "953"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "合名会社または合資会社の社員が社員たる資格を失ったときには、退社の登記の有無にかかわらず資格を失った後は、会社の債務につき責任を負う必要はない。",
+          "answerBoolean": false,
+          "explanationText": "合名会社または合資会社の社員が社員たる資格を失ったときには、退社の登記前に生じた持分会社の債務について、従前の責任の範囲内で弁済責任を負う（会社法612条1項）。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.98,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "952",
+          "sourcePageAnswer": "953"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "持分会社が会社成立後に定款を変更するには、株式会社の場合とは異なり、原則として、総社員の同意を必要とする。",
+          "answerBoolean": true,
+          "explanationText": "持分会社は、定款に別段の定めがある場合を除き、総社員の同意によって、定款の変更をすることができる（会社法637条）。会社の根本規則である定款の変更に利害関係を有する全社員の同意を要求することで、社員の利益確保を図ったものである。",
+          "subjectCandidate": "shoho",
+          "chapterCandidate": "shoho-kaisha",
+          "confidence": 0.98,
+          "sectionTitle": "持分会社",
+          "sourcePageQuestion": "952",
+          "sourcePageAnswer": "953"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "429",
+      "originalProblemId": "KB2025-p429-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "刑法や民法は実体法に属し、戸籍法や不動産登記法は手続法に属する。",
+          "answerBoolean": true,
+          "explanationText": "法の種類・区分としては、権利義務の発生、消滅等、法律関係の内容を規定する実体法と、権利義務の行使、保全等、法律関係の実現を規定する手続法とに分けることができる。そして、刑法や民法は前者に、戸籍法や不動産登記法は後者に属することになる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "現行法は、法規の条文のみから成るが、法規の形式にはいろいろなものがある。",
+          "answerBoolean": false,
+          "explanationText": "現行法は、憲法、法律、命令、規則等の条文による成文法のみでなく、慣習法等の不文法からも成る。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "現行法を成す成文法（法規）と不文法（条文でない法）とは、全く対等であるという考え方が今日では普通である。",
+          "answerBoolean": false,
+          "explanationText": "成文法は、制度上の法源としてみても強い拘束力を持っている。それは成文法主義を採っている国だけでなく、判例等の不文法を重視する国においても成文法は不文法に優越している。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "司法裁判所の判例は、確定的な現行法である。",
+          "answerBoolean": false,
+          "explanationText": "司法裁判所の判例は、個々の事件に関して下すものであり、その事件限りで効力をもつにすぎず、当該事件を超えた一般的な拘束力をもつものではなく、確定的な法となることはない。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "日本社会は、法によって秩序づけられているが、そこでは成文法主義が採用されている。",
+          "answerBoolean": true,
+          "explanationText": "日本は、法治国家であり、成文法主義が採られている。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "国際法は国家間の合意に基づいて成立するが、その合意には明示のものと黙示のものとがあり、前者は条約であり、後者は国際慣習法であって、この両者が国際法の法源となる。",
+          "answerBoolean": true,
+          "explanationText": "条約と国際慣習法に関する記述としてそのとおりである。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "犯罪と刑罰の内容は、あらかじめ法律によって規定されたものでなければならないから、慣習法は刑法の直接の法源とはなりえない。",
+          "answerBoolean": true,
+          "explanationText": "慣習の内容は不明確であるから、慣習による処罰を認めると、刑罰の専断を招くおそれがある。そのため、本肢のように、罪刑法定主義は慣習刑法を排除している。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.9,
+          "sectionTitle": "法とは何か",
+          "sourcePageQuestion": "956",
+          "sourcePageAnswer": "957"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "430",
+      "originalProblemId": "KB2025-p430-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "我が国の法制は、属地主義が原則であり、外国の外交使節等の治外法権や刑法における日本国民の国外犯の規定等がその例外に当たる。",
+          "answerBoolean": true,
+          "explanationText": "属地主義とは、国籍のいかんを問わず、その人が現に居住している国家の法の適用を受けることをいい、我が国は属地主義を原則とし（刑法1条等参照）、本肢に示された例はその例外にあたる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "外国人が日本国外において犯罪を行った場合には、日本の刑法が適用されることはない。",
+          "answerBoolean": false,
+          "explanationText": "刑法2条は、「この法律は、日本国外において次に掲げる罪を犯したすべての者に適用する。」と規定するため、外国人が日本国外で一定の犯罪を行った場合にも、日本の刑法が適用されることがある。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "施行期日の定めがない場合は、公布の日より起算して、法律においては20日を経過した日から、条例においては10日を経過した日から施行するものとされている。",
+          "answerBoolean": true,
+          "explanationText": "法律は、公布の日から起算して、20日を経過した日から施行する。ただし、法律をもってこれと異なる施行期日を定めたときは、その定めによる（法の適用に関する通則法2条）。条例に特別の定めがあるものを除く外、公布の日から起算して10日を経過した日から、これを施行する（地方自治法16条3項）。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "法令は、将来に向かって適用するのが原則であるが、遡及適用が一切認められないわけではなく、公務員の給与関係法令の改正は、遡及効の認められる例である。",
+          "answerBoolean": true,
+          "explanationText": "不遡及の原則は、刑事における事後法の禁止として、特に有名であるが、他の分野でも既得権尊重や法的安定の要請から認められている。しかし、この原則には、本肢のような例外もある。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "ある事項について一般的に規定した法令がある場合に、同じ事項について、そのうちの特定の場合を限ってまたは特定の人のもしくは地域を限って適用されるところの、この法令と異なる内容を定めた法令があるときは、後者が前者に優先して働く。",
+          "answerBoolean": true,
+          "explanationText": "本肢は、「特別法は一般法を破る」の原則（特別法優位の原則）から、そのとおりである。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "形式的効力を等しくする二つ以上の法令の内容が相互に矛盾している場合は、そのうち時間的に後から制定されたものが、前に制定されたものに対して優越する効力をもつ。",
+          "answerBoolean": true,
+          "explanationText": "ある事項について一般的に規定した法律がある場合に、同じ事項について、この法令と異なる内容を定めた法令があるときは、後者が前者に優先してはたらく（新法は旧法に優先する）。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "法律または条例に規定された罰則が、施行期日前の事実につき行為者に不利に適用されることはない。",
+          "answerBoolean": true,
+          "explanationText": "行為時に犯罪でなかった行為は、その後の法律で、同種類の行為が犯罪とされても、さかのぼって処罰されることはない（刑罰不遡及の原則）。それゆえ、法律または条例に規定された罰則が、施行期日前の事実につき行為者に不利に適用されることはない。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法の効力",
+          "sourcePageQuestion": "958",
+          "sourcePageAnswer": "959"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "431",
+      "originalProblemId": "KB2025-p431-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "民法第754条の「夫婦間でした契約は、婚姻中、いつでも、夫婦の一方からこれを取り消すことができる。」との規定にいう「婚姻中」とは、単に形式的に婚姻が継続しているというだけでなく、実質的にもそれが継続していることをいうものとする解釈は縮小解釈である。",
+          "answerBoolean": true,
+          "explanationText": "用語の範囲内で通常より狭く解釈する場合を「縮小解釈」というが、「婚姻中」を狭く解して単に形式的に婚姻が継続しているというだけでなく、実質的にもそれが継続していることをいうものとする解釈は「縮小解釈」である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.98,
+          "sectionTitle": "法の解釈",
+          "sourcePageQuestion": "960",
+          "sourcePageAnswer": "961"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "刑法第38条第3項の「法律を知らなかったとしても、そのことによって、罪を犯す意思がなかったとすることはできない。ただし、情状により、その罪を軽減することができる。」との規定にいう「法律」とは、法律のほか、政令、省令、条例、規則など一切の法令を含むとする解釈は拡大解釈である。",
+          "answerBoolean": true,
+          "explanationText": "用語の範囲内で通常より広く解する場合を「拡大解釈（拡張解釈）」というが、「法律」を通常より広く解して「政令等」も合めるのはこの「拡大解釈（拡張解釈）」である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.98,
+          "sectionTitle": "法の解釈",
+          "sourcePageQuestion": "960",
+          "sourcePageAnswer": "961"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "債務不履行による損害賠償について、賠償すべき損害の範囲を定めた民法416条の規定は不法行為による損害賠償についても適用されるとする解釈は類推解釈である。",
+          "answerBoolean": true,
+          "explanationText": "ことばが示していることと異なるが、重要な点で似ているものにも適用する場合を「類推解釈」という。不法行為は債務不履行に含まれないが、「損害の賠償」という重要な点で似ているので、賠償すべき損害の範囲について債務不履行についての民法416条を適用するというの は「類推解釈」である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.98,
+          "sectionTitle": "法の解釈",
+          "sourcePageQuestion": "960",
+          "sourcePageAnswer": "961"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "公園の入口にある「自転車の乗り入れを禁止する。」という看板を「その自転車と自転車に乗った人」のことであるとする解釈は、もちろん解釈である。",
+          "answerBoolean": true,
+          "explanationText": "もちろん解釈とは、法文の文言により当然に考えられる事項を、法律の規定にあてはめて適用する解釈をいう。公園への自転車の乗り入れは無人の自転車によってなされるわけではないから、本肢のように解釈することは、もちろん解釈である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.98,
+          "sectionTitle": "法の解釈",
+          "sourcePageQuestion": "960",
+          "sourcePageAnswer": "961"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "施行とは、成立した法令を広く一般国民に周知させる目的で公示する行為をいい、官報に掲載して行われるのが通例である。",
+          "answerBoolean": false,
+          "explanationText": "「施行」とは、法令の効力を実際に発生させることであり、広く一般国民に周知させるものではない。本肢は「公布」についてのもの である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.98,
+          "sectionTitle": "法律用語",
+          "sourcePageQuestion": "960",
+          "sourcePageAnswer": "961"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "硬性憲法とは、通常の法律の改正手続と同じ改正手続で改正できる成文憲法をいい、我が国の憲法は、硬性憲法である。",
+          "answerBoolean": false,
+          "explanationText": "硬性憲法とは、憲法改正の手続が通常の立法手続よりも「困難な手続」が定められている憲法である。通常の法律の改正手続と同じ手続 で改正できるのは、硬性憲法に対し、軟性憲法という。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.98,
+          "sectionTitle": "法律用語",
+          "sourcePageQuestion": "960",
+          "sourcePageAnswer": "961"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "432",
+      "originalProblemId": "KB2025-p432-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "自力救済とは、私人が司法手続をとらずに、自ら自己の権利を実現することであり、自力救済は、原則として禁止されている。",
+          "answerBoolean": true,
+          "explanationText": "自力救済は、本肢のような意味のものとして、古代社会では原則として認められたが、現在の文明社会では、司法手続によるいとまのない急迫の場合にだけ例外的に認められるにすぎない。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "慰謝料とは、身体的損害の賠償として支払われる金銭のことである。",
+          "answerBoolean": false,
+          "explanationText": "慰謝料は、「精神的」損害の賠償のことであり、民法上の不法行為では、財産的損害(民法709条)とともに明文で認められている(710条)。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "「不当」とは、その行為又は状態が実質的に妥当性を欠くことをいい、必ずしも違法であることを要しない。",
+          "answerBoolean": true,
+          "explanationText": "「不当」とは、厳密には本肢のような意味であり、たとえば、裁量権のある者が権限の枠内で不適切な裁量をした場合には、違法ではないが不当であるなどという。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "「権限」とは、ある法律行為又は事実行為をすることを正当であるとする法律上の原因をいう。",
+          "answerBoolean": false,
+          "explanationText": "「権限」とは、公的にその人や組織が実行しうる範囲のことである。本肢は、「権原」についての説明である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "法令に「適用する」とある場合は、その規定が本来の目的としている対象に対して当該規定を適用することを意味し、「準用する」とある場合は、他の事象に関する規定を、それに類似する事象について必要な修正を加えて適用することを意味する。なお、解釈により準用と同じことを行う場合、それは「類推適用」と言われる。",
+          "answerBoolean": true,
+          "explanationText": "法令に「適用する」とある場合は、その規定が本来の目的としている対象に対して当該規定をそのまま適用することである。これに対して、「準用する」とは、他の事象について規定している法令の規定を、それに類似する事象について必要な修正を加えて適用することである。「類推適用」は、明文規定がない場合にその規定と同じ趣旨の規定が他方にもあるものと考えて解釈することであり、解釈により準用と同じことを行う場合である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "「みなす」とは、本来Aと性質を異にするBについて、一に限り、Aと同一視することであり、「Aでない」という反証を許さない点において、「推定する」とは異なる。",
+          "answerBoolean": true,
+          "explanationText": "「みなす」は、一定の法律関係につき、ある事物と他の事物とを同視して、そのある事物について生ずる法律効果をその他の事物についても生じさせることである点で、「推定する」と共通するが、本肢の示すとおり、反証を許さない点で「推定する」と異なる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "「A及びB並びにC」という法律の文言においては、「A」と「B並びにC」が大きな接続詞である「及び」で結ばれ、「B」と「C」が小さな接続詞である「並びに」で結ばれている。",
+          "answerBoolean": false,
+          "explanationText": "本肢は、「及び」と「並びに」の使い方が逆である。「及び」と「並びに」は2つ以上の語句を併合的に連結する接続詞である点で類似する。しかし、「並びに」が大きな意味の併合的連結に使われるのに対し、「及び」が小さな意味の併合的連結に用いられる点で異なる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "基礎法学",
+          "sourcePageQuestion": "962",
+          "sourcePageAnswer": "963"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "433",
+      "originalProblemId": "KB2025-p433-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "「A若しくはB又はC」という法律の文言においては、「A」と「B又はC」が大きな接続詞である「若しくは」で結ばれ、「B」と「C」が小さな接続詞である「又は」で結ばれている。",
+          "answerBoolean": false,
+          "explanationText": "本肢は、「又は」と「若しくは」の使い方が逆である。「又は」と「若しくは」は、2つ以上の語句を選択的に連結する接続詞である点では類似するが、「又は」が大きな意味の選択的連結に用いられるのに対し、「若しくは」は小さな意味の選択的連結に用いられる点で異なる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法学概論",
+          "sourcePageQuestion": "964",
+          "sourcePageAnswer": "965"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "法令に「A、Bその他のX」とある場合には、AとBは、Xの例示としてXに包含され、「C、Dその他Y」とある場合は、C、Dは、並列の関係にある。",
+          "answerBoolean": true,
+          "explanationText": "「A、Bその他のX」では、通常は、AとBはXの例示として包含されている関係にある。「C、Dその他Y」では、CとDはYに包含されず、CとDとYは並列の関係にある。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法学概論",
+          "sourcePageQuestion": "964",
+          "sourcePageAnswer": "965"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "「1万円を超える」とは、その基準となっている1万円を含んでそれより多い金額をいう。",
+          "answerBoolean": false,
+          "explanationText": "本肢は、「以上」についての説明である。「超える」は、「以上」と同じく数量を限定するときに用いられる。しかし、その基準となっている数量を含まない点で、「以上」とは異なる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法学概論",
+          "sourcePageQuestion": "964",
+          "sourcePageAnswer": "965"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "「遅滞なく」、「直ちに」、「速やかに」のうち、時間的即時性が最も強いのは「直ちに」であり、その次が「遅滞なく」である。これらのうち、時間的即時性が最も弱いのは「速やかに」である。",
+          "answerBoolean": false,
+          "explanationText": "「直ちに」、「遅滞なく」、「速やかに」は、いずれも時間的遅延を許さない趣旨の用語であるが、「速やかに」は、「直ちに」（一切の遅延が許されない）よりは時間的な緊急度が低く、「遅滞なく」（正当または合理的な理由に基づく遅延は許容される）よりは時間的な緊急度が高い。したがって、「直ちに」、「遅滞なく」、「速やかに」のうち、時間的即時性が最も強いものは「直ちに」であるが、その次が「速やかに」であり、時間的即時性が最も弱いのは「遅滞なく」である。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法学概論",
+          "sourcePageQuestion": "964",
+          "sourcePageAnswer": "965"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "「期限」と「期間」とは、共にある時間的な長さをもつ概念であるが、「期限」は、その始期と終期の間の一定の時間的長さであるのに対し、「期間」は、始期以後又は終期以前における不特定の時間的広がりをもつ点で差異がある。",
+          "answerBoolean": false,
+          "explanationText": "本肢は、「期限」と「期間」の記述が逆になっている。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-gairon",
+          "confidence": 0.95,
+          "sectionTitle": "法学概論",
+          "sourcePageQuestion": "964",
+          "sourcePageAnswer": "965"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "434",
+      "originalProblemId": "KB2025-p434-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "損害賠償請求事件では、最高裁判所は加害行為があったかどうかの事実認定につき必ず判断しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "民事訴訟では、第一審と控訴審が事実問題と法律問題を併せて審理する事実審であり、最高裁判所たる上告審は法令違反の有無だけを審理する法律審である。それゆえ、民事訴訟である損害賠償請求事件では、最高裁判所は加害行為があったかどうかの事実認定につき必ず判断しなければならないわけではない。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "紛争解決制度 裁判制度",
+          "sourcePageQuestion": "966",
+          "sourcePageAnswer": "967"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "殺人事件では、最高裁判所は被告人が殺人を犯したかどうかの事実認定につき判断することは一切できない。",
+          "answerBoolean": false,
+          "explanationText": "刑事訴訟では、上告審は法律審であるが、判決に影響を及ぼすべき重大な事実誤認があるときは、事実認定について判断することができる（刑事訴訟法411条3号）。それゆえ、刑事訴訟である殺人事件では、最高裁判所は被告人が殺人を犯したかどうかの事実認定につき判断することは一切できないわけではない。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "紛争解決制度 裁判制度",
+          "sourcePageQuestion": "966",
+          "sourcePageAnswer": "967"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "裁判所は、法令適用の前提となる事実の存否が確定できない場合であっても、裁判を拒否することはできない。",
+          "answerBoolean": true,
+          "explanationText": "裁判所は、法令適用の前提となる事実の存否が確定できない場合であっても、裁判を拒否することはできず、その事実の存否または不存在を擬制して裁判をすることになる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "紛争解決制度 裁判制度",
+          "sourcePageQuestion": "966",
+          "sourcePageAnswer": "967"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "最高裁判所は、憲法その他法令の解釈適用に関して、意見が前に最高裁判所のした裁判または大審院のした裁判と異なるときには、大法廷で裁判を行わなければならない。",
+          "answerBoolean": false,
+          "explanationText": "最高裁判所は、憲法その他の法令の解釈適用について、意見が前に最高裁判所のした裁判に反するときは、小法廷では裁判をすることができない（裁判所法10条但書3号）。これに対して、法令の解釈適用について、意見が大審院のした判決に反するときは、小法廷で裁判をすることができる（最高裁判所裁判事務処理規則9条6項）。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "紛争解決制度 裁判制度",
+          "sourcePageQuestion": "966",
+          "sourcePageAnswer": "967"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "ある事件について刑事裁判と民事裁判が行われる場合には、それぞれの裁判において当該事件に関して異なる事実認定がなされることがある。",
+          "answerBoolean": true,
+          "explanationText": "民事訴訟法、刑事訴訟法それぞれについて、自由心証主義が採用されているから（民事訴訟法247条、刑事訴訟法318条）、同一事件に関して異なる事実認定がなされることがある。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "紛争解決制度 裁判制度",
+          "sourcePageQuestion": "966",
+          "sourcePageAnswer": "967"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "435",
+      "originalProblemId": "KB2025-p435-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "契約上の紛争で訴訟開始前に簡易裁判所に和解の申立てを行い、話し合って合意した内容が調書に記載されると、その記載は確定判決と同じ効力を生ずる。",
+          "answerBoolean": true,
+          "explanationText": "和解が成立すればこれを調書に記載することになるが（民事訴訟規則169条）、調書の記載は、確定判決と同一の効力を有する（民事訴訟法267条）。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "裁判外紛争解決手続",
+          "sourcePageQuestion": "968",
+          "sourcePageAnswer": "969"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "紛争当事者は、話し合いにより互いに譲り合って紛争を解決することができる。しかし当事者間で話し合いがつかないときは、権威のある第三者に入ってもらって、紛争を解決するほかない。国家はそのために、正式な裁判のほかにも種々の制度を用意しているが、その一つが裁判上の和解である。",
+          "answerBoolean": true,
+          "explanationText": "正式な裁判の他にある紛争解決制度の一つとして、裁判上の和解がある。この裁判上の和解とは、裁判所が関与する和解のことである。そして、裁判上の和解が成立した場合、その和解調書の記載内容は、確定判決と同一の効力を有する（民事訴訟法267条）。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "裁判外紛争解決手続",
+          "sourcePageQuestion": "968",
+          "sourcePageAnswer": "969"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "「当事者の互譲により、条理にかなう実情に即した解決を図ることを目的とする」紛争解決方法として、わが国では調停が発達し、争いの性質によっては訴訟よりも活用されてきた。たとえば家事事件手続法によれば、調停を行うことのできる事件についてはいきなり訴訟を提起することはできず、まずは調停の申立てをしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "調停とは、私人間の紛争解決のため、第三者が仲介し、当事者の間に解決の合意をさせる手続である。この調停は、当事者の互譲により、条理にかなう実情に即した解決を図ることを目的としている特色がある。そして、我が国では、調停を行うことができる事件について訴えを提起しようとする者は、まず家庭裁判所に家事調停の申立てをしなければならないものとされ（家事事件手続法257条1項）、調停前置主義が採られている。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "裁判外紛争解決手続",
+          "sourcePageQuestion": "968",
+          "sourcePageAnswer": "969"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "裁判は法を基準として行われるが、調停などの裁判以外の紛争解決方法においては、法の基準によらずに紛争の解決を行うことができる。",
+          "answerBoolean": true,
+          "explanationText": "民事調停法は、「民事に関する紛争につき、当事者の互譲により、条理にかなう実情に即した解決を図ることを目的とする」ものであり（民事調停法1条）、法の基準によらずに紛争の解決を行うことができる。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "裁判外紛争解決手続",
+          "sourcePageQuestion": "968",
+          "sourcePageAnswer": "969"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "裁判によらない紛争解決の方法としては、さらに仲裁がある。これは紛争当事者が争いの解決のために第三者を選び、その判断に服することを約束することによって争いを解決する手段であり、特に商人間の紛争解決手法として古くから発達してきた。近時は、このような裁判外紛争処理方法をADRとして捉えて、その機能を強化することへの期待が高まっており、関係する制度の整備が行われている。",
+          "answerBoolean": true,
+          "explanationText": "仲裁とは、現に起きている紛争、または将来生じうる可能性がある紛争の解決を図るため、第三者である仲裁人（仲裁契約）の判断に従う旨の合意をすることをいう。仲裁の特色としては、第三者が示した解決に当事者が拘束される点が挙げられる。そして、仲裁、調停、あっせんなどの裁判によらない紛争解決方法（Alternative Dispute Resolution）と呼ばれる。そして、このADRの機能を充実させ、紛争当事者が解決を図るのにふさわしい手続を選択することを容易にし、国民の権利利益の適切な実現に資することを目的とする「裁判外紛争解決手続の利用の促進に関する法律」が、平成16年12月1日に公布されるなど、関係する制度の整備が行われている。",
+          "subjectCandidate": "kiso-hogaku",
+          "chapterCandidate": "kiso-hogaku-funso",
+          "confidence": 0.95,
+          "sectionTitle": "裁判外紛争解決手続",
+          "sourcePageQuestion": "968",
+          "sourcePageAnswer": "969"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "437",
+      "originalProblemId": "KB2025-p437-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士は、他人の依頼を受け報酬を得て、官公署に提出する書類のみ独占業務として作成することができる。",
+          "answerBoolean": false,
+          "explanationText": "行政書士の業務には、行政書士・行政書士法人でない者が業として行うと罰せられる独占業務（行政書士法1条の2第1項、19条1項本文、21条2号）、他の士業との共同法定業務のほか、非独占業務（1条の3）がある。独占業務には、①官公署に提出する書類（例：各種申請書）の作成のほか、②権利義務に関する書類の作成、③事実証明に関する書類（実地調査に基づく図面類を含む。）の作成がある。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の業務",
+          "sourcePageQuestion": "972",
+          "sourcePageAnswer": "973"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士は、他人の依頼を受け報酬を得て、遺産分割協議書を業として作成することができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、他人の依頼を受け報酬を得て、権利義務に関する書類を作成することを業とする（行政書士法1条の2第1項）。遺産分割協議書は、権利義務に関する書類であり、行政書士は、遺産分割協議書を行政書士の独占業務として作成することができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の業務",
+          "sourcePageQuestion": "972",
+          "sourcePageAnswer": "973"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士は、事実証明に関する書類を独占業務として作成することができ、これには実地調査に基づく図面類も含まれる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、事実証明に関する書類（例：各種証明書）を独占業務として作成することができ、事実証明に関する書類には実地調査に基づく図面類も含まれる（行政書士法1条の2第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の業務",
+          "sourcePageQuestion": "972",
+          "sourcePageAnswer": "973"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士は、業として、不動産登記申請書を作成することができる。",
+          "answerBoolean": false,
+          "explanationText": "行政書士は、官公署提出書類、権利義務、事実証明書類の作成であっても、その業務を行うことが他の法律において制限されているものについては、業務を行うことができない（行政書士法1条の2第2項）。不動産登記申請書の作成は、司法書士、弁護士ができる業務であり、行政書士は不動産登記申請書の作成をすることはできない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の業務",
+          "sourcePageQuestion": "972",
+          "sourcePageAnswer": "973"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "帰化許可申請書は、行政書士のほか、司法書士も業として作成することができる。",
+          "answerBoolean": true,
+          "explanationText": "帰化許可申請書の作成は、行政書士のほか司法書士もすることができる共同法定業務である（司法書士法73条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の業務",
+          "sourcePageQuestion": "972",
+          "sourcePageAnswer": "973"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士は、他人の依頼を受け報酬を得て、法人税の申告書を業とすることとができる。",
+          "answerBoolean": false,
+          "explanationText": "法人税の申告書の作成は、税理士の独占業務であり（税理士法52条、2条1項2号、59条1項4号）、行政書士は業として作成することはできない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の業務",
+          "sourcePageQuestion": "972",
+          "sourcePageAnswer": "973"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "438",
+      "originalProblemId": "KB2025-p438-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士は、軽自動車税、ゴルフ場利用税、自動車税および不動産取得税の税務書類の作成をすることはできない。",
+          "answerBoolean": false,
+          "explanationText": "軽自動車税、ゴルフ場利用税、自動車税および不動産取得税の税務書類は、税理士のほか、行政書士も作成することができる共同法定業務である（税理士法51条の2、税理士法施行令14条の2）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士は、業として、特許、実用新案、意匠もしくは商標出願に関する書類の作成をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "特許等の出願に関する書類の作成は、弁理士の独占業務であり（弁理士法75条）、行政書士は、業として当該書類の作成をすることができない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士は、官公署に提出する書類を官公署に提出する手続について代理することができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、官公署に提出する書類を官公署に提出する手続について代理することができる（行政書士法1条の3第1項1号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士は、弁護士法所定の法律事件に関する法律事務を除き、官公署に提出する書類に係る許認可等に関して行われる聴聞または弁明の機会の付与の手続その他の意見陳述のためにおいて当該官公署に対してする行為について代理することができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、弁護士法72条の法律事件に関する法律事務を除き、官公署に提出する書類に係る許認可等に関して行われる聴聞または弁明の機会の付与の手続その他の意見陳述のためにおいて当該官公署に対してする行為について代理することができる（行政書士法1条の3第1項1号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士のうち、日本行政書士会連合会がその会則で定めるところにより実施する研修の課程を修了した特定行政書士は、行政書士が作成した官公署に提出する書類に係る許認可等に関する審査請求、再調査の請求、再審査請求等行政庁に対する不服申立ての手続について代理し、およびその手続について官公署に提出する書類を作成することができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、行政書士が作成した官公署に提出する書類に係る許認可等に関する審査請求、再調査の請求、再審査請求等行政庁に対する不服申立ての手続について代理し、およびその手続について官公署に提出する書類を作成することができるが（行政書士法1条の3第1項2号）、その業務は、当該業務について日本行政書士会連合会がその会則で定めるところにより実施する研修の課程を修了した行政書士（特定行政書士）に限り行うことができる（1条の3第2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士は、行政書士が作成することができる契約その他に関する書類を代理人として作成することができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、行政書士が作成することができる契約その他に関する書類を代理人として作成することができる（行政書士法1条の3第1項3号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政書士は、行政書士が作成することができる書類の作成について相談に応ずることができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、行政書士が作成することができる書類の作成について相談に応ずることができる（行政書士法1条の3第1項4号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "974",
+          "sourcePageAnswer": "975"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "439",
+      "originalProblemId": "KB2025-p439-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士試験に合格した者が行政書士となるには、行政書士名簿に、日本行政書士会連合会の会則で定める事項の登録を受けなければならないが、弁護士となる資格を有する者、弁理士となる資格を有する者、公認会計士となる資格を有する者、税理士となる資格を有する者は、登録を受けなくても行政書士となることができる。",
+          "answerBoolean": false,
+          "explanationText": "行政書士試験合格者、弁護士となる資格を有する者、弁理士となる資格を有する者、公認会計士となる資格を有する者、税理士となる資格を有する者は、行政書士となる資格を有するが（行政書士法2条1号～6号）、行政書士となるには、登録を受けなければならない（6条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "資格・欠格",
+          "sourcePageQuestion": "976",
+          "sourcePageAnswer": "977"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "未成年者、破産手続開始の決定を受けて復権を得ない者、禁錮以上の刑に処せられ、その執行を終わり、または執行を受けることがなくなってから3年を経過しない者は、行政書士となる資格を有しない。",
+          "answerBoolean": false,
+          "explanationText": "未成年者、破産手続開始の決定を受けて復権を得ない者、禁錮以上の刑に処せられ、その執行を終わり、または執行を受けることがなくなってから3年を経過しない者は欠格事由に該当し行政書士となる資格を有しないが（行政書士法2条の2第1号～3号）、行政書士の信用または品位を害するおそれがある者は、登録拒否事由である（6条の2第2項2号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "資格・欠格",
+          "sourcePageQuestion": "976",
+          "sourcePageAnswer": "977"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士は、都道府県の区域ごとに、会則を定めて、一箇の行政書士会を設立しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、都道府県の区域ごとに、会則を定めて、一箇の行政書士会を設立しなければならない（行政書士法15条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "行政書士会と日本行政書士会連合会",
+          "sourcePageQuestion": "976",
+          "sourcePageAnswer": "977"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "日本行政書士会連合会は、会員に対して会員証を交付しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士会は、会員に対して会員証を交付しなければならない（行政書士法施行規則13条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "行政書士会と日本行政書士会連合会",
+          "sourcePageQuestion": "976",
+          "sourcePageAnswer": "977"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士会は、役員の選任および解任、会員の入会および退会、会議の次第その他重要な会務に関する事項を記録するとともに、会計帳簿を備えて経理を明らかにしておかなければならないが、会員は、行政書士会に対して、当該記録および帳簿の閲覧を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士会は、役員の選任および解任、会員の入会および退会、会議の次第その他重要な会務に関する事項を記録するとともに、会計帳簿を備えて経理を明らかにしておかなければならない（行政書士法施行規則14条1項）。そして、行政書士会は、会員から請求があったときは、当該記録および帳簿を閲覧させなければならない（14条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "行政書士会と日本行政書士会連合会",
+          "sourcePageQuestion": "976",
+          "sourcePageAnswer": "977"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士会は、法人であり、政令で定めるところにより、登記をしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士会は、法人であり（行政書士法15条3項）、政令で定めるところにより、登記をしなければならない（16条の3第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "行政書士会と日本行政書士会連合会",
+          "sourcePageQuestion": "976",
+          "sourcePageAnswer": "977"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "440",
+      "originalProblemId": "KB2025-p440-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士は、登録後、その後の入会手続を経て、その事務所の所在地に属する都道府県の区域に設立されている行政書士会の会員となる。",
+          "answerBoolean": false,
+          "explanationText": "行政書士は、登録を受けた時に、当然（入会手続を必要とせず自動入会）、その事務所の所在地に属する都道府県の区域に設立されている行政書士会の会員となる（行政書士法16条の5第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "978",
+          "sourcePageAnswer": "979"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士は、他の都道府県の区域内に事務所を移転したときは、その移転があったときに、当然、従前の行政書士会を退会し、当該都道府県の区域に設立されている行政書士会の会員となる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、他の都道府県の区域内に事務所を移転したときは、その移転があったときに、当然、従前の行政書士会を退会し、当該都道府県の区域に設立されている行政書士会の会員となる（行政書士法16条の5第2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "978",
+          "sourcePageAnswer": "979"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士会は、毎年1回、会員に関し総務省令で定める事項を日本行政書士会連合会に報告しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士会は、毎年1回、会員に関し総務省令で定める事項を都道府県知事に報告しなければならない（行政書士法17条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "978",
+          "sourcePageAnswer": "979"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士会は、会員が、行政書士法またはこれに基づく命令、規則その他都道府県知事の処分に違反したと認めるときは、その旨を都道府県知事に報告しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士会は、会員が、行政書士法またはこれに基づく命令、規則その他都道府県知事の処分に違反したと認めるときは、その旨を都道府県知事に報告しなければならない（行政書士法17条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "978",
+          "sourcePageAnswer": "979"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士法人とは、その成立の時に、主たる事務所の所在地の行政書士会の会員となる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人は、その成立の時に、主たる事務所の所在地の行政書士会の会員となる（行政書士法16条の6第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "978",
+          "sourcePageAnswer": "979"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士法人は、その事務所の所在地に属する都道府県の区域外に事務所を設け、または移転したときは、事務所の新所在地においてその旨の登記をした時に、当該事務所の所在地に属する都道府県の区域に設立されている行政書士会の会員となるとともに、新たに行政書士会の会員となったときから2週間以内に、登記事項証明書および定款の写しを添えて、その旨を、当該行政書士会を経由して、日本行政書士会連合会に届け出なければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人は、その事務所の所在地に属する都道府県の区域外に事務所を設け、または移転したときは、事務所の新所在地（従たる事務所を設けた、または移転したときにあっては、当該事務所（従たる事務所）の所在地）においてその旨の登記をした時に、当該事務所の所在地に属する都道府県の区域に設立されている行政書士会の会員となり、新たに行政書士会の会員となったときは、会員となった日から2週間以内に、登記事項証明書及び定款の写しを添えて、その旨を、当該行政書士会を経由して、日本行政書士会連合会に届け出なければならない（16条の6第4項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "978",
+          "sourcePageAnswer": "979"
+        }
+      ],
+      "parseError": null
     }
   ]
 }
