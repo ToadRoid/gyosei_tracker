@@ -31273,6 +31273,1845 @@
         }
       ],
       "parseError": null
+    },
+    {
+      "sourcePage": "441",
+      "originalProblemId": "KB2025-p441-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士法人は、その事務所の移転または廃止により、当該事務所の所在地に属する都道府県の区域内に事務所を有しないこととなったときは、旧所在地においてその旨の登記をした時に、当該都道府県の区域に設立されている行政書士会を退会し、これにより行政書士会を退会したときは、退会の日から2週間以内に、その旨を、当該行政書士会を経由して、日本行政書士会連合会に届け出なければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人は、その事務所の移転または廃止により、当該事務所の所在地に属する都道府県の区域内に事務所を有しないこととなったときは、旧所在地においてその旨の登記をし、当該都道府県の区域に設立されている行政書士会を退会し（行政書士法16条の6第3項）、これにより行政書士会を退会したときは、退会の日から2週間以内に、その旨を、当該行政書士会を経由して、日本行政書士会連合会に届け出なければならない（16条の6第5項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "980",
+          "sourcePageAnswer": "981"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "資格審査会は、日本行政書士会連合会に置かれ、日本行政書士会連合会の請求により、登録の拒否、登録の取消しまたは登録の抹消について必要な審査を行う。",
+          "answerBoolean": true,
+          "explanationText": "日本行政書士会連合会に、資格審査会を置き（行政書士法18条の4第1項）、資格審査会は、日本行政書士会連合会の請求により、登録の拒否（6条の2第2項）、登録の取消し（6条の5第1項）または登録の抹消（7条2項）について必要な審査を行う（18条の4第2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "980",
+          "sourcePageAnswer": "981"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士となる資格を有する者が、行政書士となるには、行政書士名簿に、住所、氏名、生年月日、事務所の名称および所在地その他日本行政書士会連合会の会則で定める事項の登録を受けなければならず、行政書士名簿の登録は、都道府県の行政書士会が行う。",
+          "answerBoolean": false,
+          "explanationText": "行政書士となる資格を有する者が、行政書士となるには、行政書士名簿に、住所、氏名、生年月日、事務所の名称および所在地その他日本行政書士会連合会の会則で定める事項の登録を受けなければならず（行政書士法6条1項）、行政書士名簿の登録は、日本行政書士会連合会が行う（6条3項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "登録",
+          "sourcePageQuestion": "980",
+          "sourcePageAnswer": "981"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士名簿は、日本行政書士会連合会に備える。",
+          "answerBoolean": true,
+          "explanationText": "行政書士名簿は、日本行政書士会連合会に備える（行政書士法6条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "登録",
+          "sourcePageQuestion": "980",
+          "sourcePageAnswer": "981"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士名簿への登録を受けようとする者は、行政書士となる資格を有することを証する書類を添えて、その事務所の所在地に属する都道府県の区域に設立されている行政書士会に対し、日本行政書士会連合会を経由して、登録の申請をしなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士名簿への登録を受けようとする者は、行政書士となる資格を有することを証する書類を添えて、日本行政書士会連合会に対し、その事務所の所在地に属する都道府県の区域に設立されている行政書士会を経由して、登録の申請をしなければならない（行政書士法6条の2第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "登録",
+          "sourcePageQuestion": "980",
+          "sourcePageAnswer": "981"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "442",
+      "originalProblemId": "KB2025-p442-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "日本行政書士会連合会は、心身の故障により行政書士の業務を行うことができない者、行政書士の信用または品位を害するおそれがある者その他行政書士の職責に照らし行政書士としての適格性を欠く者であると認めたときは、資格審査会の議決に基づき登録を拒否しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "日本行政書士会連合会は、登録の申請を受けた場合において、心身の故障により行政書士の業務を行うことができない者、行政書士の信用または品位を害するおそれがある者その他行政書士の職責に照らし行政書士としての適格性を欠く者であると認めたときは、資格審査会の議決に基づき、登録を拒否しなければならない（行政書士法6条の2第2項前段）。登録を拒否しようとするときは、資格審査会の議決に基づかなければならない（6条の2第2項後段、18条の4）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "982",
+          "sourcePageAnswer": "983"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "日本行政書士会連合会は、登録の申請を受けた場合において、登録拒否事由に該当する者であると認めることにより登録を拒否しようとするときは、あらかじめ、当該申請者にその旨を通知して、相当の期間内に自らまたはその代理人を通じて弁明する機会を与えなければならない。",
+          "answerBoolean": true,
+          "explanationText": "日本行政書士会連合会は、登録の申請を受けた場合において、登録拒否事由に該当する者であると認めたときは登録を拒否しなければならない（行政書士法6条の2第2項）。そして、日本行政書士会連合会は、登録を拒否しようとするときは、あらかじめ、当該申請者にその旨を通知して、相当の期間内に自らまたはその代理人を通じて弁明する機会を与えなければならない（行政書士法6条の2第3項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "982",
+          "sourcePageAnswer": "983"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "登録を拒否された者は、当該処分に不服があるときは、総務大臣に対して審査請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "登録を拒否された者は、当該処分に不服があるときは、総務大臣に対して審査請求をすることができる（行政書士法6条の3第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "982",
+          "sourcePageAnswer": "983"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "登録の申請をした者は、当該申請をした日から3月を経過しても当該申請に対して何らの処分がされない場合には、当該登録を拒否されたものとして、総務大臣に対して審査請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "登録の申請をした者は、当該申請をした日から3月を経過しても当該申請に対して何らの処分がされない場合には、当該登録を拒否されたものとして、総務大臣に対して審査請求をすることができる（行政書士法6条の3第2項前段）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "982",
+          "sourcePageAnswer": "983"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士は、登録を受けた事項に変更を生じたときは、遅滞なく、日本行政書士会連合会を経由して、所属する行政書士会に変更の登録を申請しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士は、登録を受けた事項に変更を生じたときは、遅滞なく、所属する行政書士会を経由して、日本行政書士会連合会に変更の登録を申請しなければならない（行政書士法6条の4）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "982",
+          "sourcePageAnswer": "983"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "443",
+      "originalProblemId": "KB2025-p443-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "日本行政書士会連合会は、行政書士の登録を受けた者が、偽りその他不正の手段により当該登録を受けたことが判明したときは、資格審査会の議決に基づき当該登録を取り消さなければならない。",
+          "answerBoolean": true,
+          "explanationText": "日本行政書士会連合会は、行政書士の登録を受けた者が、偽りその他不正の手段により当該登録を受けたことが判明したときは、当該登録を取り消さなければならない（行政書士法6条の5第1項）。そして、資格審査会の議決（6条の2第2項後段）、総務大臣に対する審査請求（6条の3第1項）の規定は、登録の取消しに準用されるため（6条の5第3項前段）、登録の取消しは資格審査会の議決に基づきなされる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "984",
+          "sourcePageAnswer": "985"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "日本行政書士会連合会は、行政書士の登録を受けた者が、その業を廃止しようとする旨の届出があったとき、死亡したとき、登録の取消しの処分を受けたときのほか所定の事由があるときは、その登録を抹消しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "日本行政書士会連合会は、行政書士の登録を受けた者が、その業を廃止しようとする旨の届出があったとき、死亡したとき、登録の取消しの処分を受けたときは、登録を抹消しなければならない（義務的抹消：行政書士法7条1項）。未成年者および登録の取消処分を受け3年を経過しない者を除く欠格事由に該当するに至ったときも義務的抹消事由である（7条1項1号、2条の2第2号～4号・6号～8号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "984",
+          "sourcePageAnswer": "985"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "日本行政書士会連合会は、行政書士の登録を受けた者が引き続き2年以上行政書士の業務を行わないとき、心身の故障により行政書士の業務を行うことができないとき、登録の取消しの処分を受けたときは、その登録を抹消することができる。",
+          "answerBoolean": false,
+          "explanationText": "日本行政書士会連合会は、行政書士の登録を受けた者が引き続き2年以上行政書士の業務を行わないとき、心身の故障により行政書士の業務を行うことができないときは登録を抹消することができる（登録の任意的抹消：行政書士法7条2項）。登録の取消しの処分を受けたときは、登録を抹消しなければならない義務的抹消事由である（7条1項4号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "984",
+          "sourcePageAnswer": "985"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "日本行政書士会連合会は、登録の抹消をすることができるときは、資格審査会の議決に基づくことが必要となり、これに不服のある者は総務大臣に対する審査請求をすることができるのに対して、登録を抹消しなければならないときは、資格審査会の議決に基づくことを必要とせず、抹消に不服があっても総務大臣に対する審査請求をすることはできない。",
+          "answerBoolean": true,
+          "explanationText": "資格審査会の議決（行政書士法6条の2第2項後段）、総務大臣に対する審査請求（6条の3第1項）の規定は、登録の任意的抹消について準用され（7条3項）、登録の義務的抹消について準用されていないため、登録の任意的抹消の場合に限り、日本行政書士会連合会は資格審査会の議決に基づくことが必要となり、これに不服のある者は総務大臣に対する審査請求をすることができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "984",
+          "sourcePageAnswer": "985"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士法に定めるもののほか、行政書士の登録に関し必要な事項は、行政書士会の会則で定める。",
+          "answerBoolean": false,
+          "explanationText": "行政書士法に定めるもののほか、行政書士の登録に関し必要な事項は、日本行政書士会連合会の会則で定める（行政書士法7条の4）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "984",
+          "sourcePageAnswer": "985"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "444",
+      "originalProblemId": "KB2025-p444-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士は、その業務を行うための事務所を2以上設けてはならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、その業務を行うための事務所を設けなければならず（行政書士法8条1項）、事務所を2以上設けてはならない（8条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士は、その業務に関する帳簿を備え、これに事件の名称、年月日、受けた報酬の額、依頼者の住所氏名その他都道府県知事の定める事項を記載しなければならず、当該帳簿をその関係書類とともに、帳簿閉鎖の時から2年間保存しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、その業務に関する帳簿を備え、これに事件の名称、年月日、受けた報酬の額、依頼者の住所氏名その他都道府県知事の定める事項を記載しなければならず（行政書士法9条1項）、当該帳簿をその関係書類とともに、帳簿閉鎖の時から2年間保存しなければならない（9条2項前段）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士は、その事務所の見やすい場所に、その業務に関し受ける報酬の額を掲示しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、その事務所の見やすい場所に、その業務に関し受ける報酬の額を掲示しなければならない（行政書士法10条の2第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士会および日本行政書士会連合会は、依頼者の選択および行政書士の業務の利便に資するため、行政書士がその業務に関し受ける報酬の額について、統計を作成し、これを公表するよう努めなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士会および日本行政書士会連合会は、依頼者の選択および行政書士の業務の利便に資するため、行政書士がその業務に関し受ける報酬の額について、統計を作成し、これを公表するよう努めなければならない（行政書士法10条の2第2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士は、正当な事由がある場合でなければ、依頼を拒むことができない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、正当な事由がある場合でなければ、依頼を拒むことができない（行政書士法11条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士および行政書士でなくなった者は、正当な理由がなく、その業務上取り扱った事項について知り得た秘密を漏らしてはならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、正当な理由がなく、その業務上取り扱った事項について知り得た秘密を漏らしてはならず（行政書士法12条前段）、行政書士でなくなった後も、また同様とする（12条後段）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政書士は、その所属する行政書士会および日本行政書士会連合会の会則を守らなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、その所属する行政書士会および日本行政書士会連合会の会則を守らなければならない（行政書士法13条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士の義務",
+          "sourcePageQuestion": "986",
+          "sourcePageAnswer": "987"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "445",
+      "originalProblemId": "KB2025-p445-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士は、その事務所に行政書士の事務所であることを明らかにした表札を掲示しなければならないが、業務の停止の処分を受けたときは、その停止期間中は、表札を撤去しておかなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、その事務所に行政書士の事務所であることを明らかにした表札を掲示しなければならない（行政書士法施行規則2条の14第1項）。もっとも、行政書士は、業務の停止の処分を受けたときは（行政書士法14条）、その停止期間中は、表札を撤去しておかなければならない（行政書士法施行規則2条の14第2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士は、業務を他人に行わせてはならないが、その従業者である行政書士に行わせる場合または依頼人の同意を得て、他の行政書士もしくは行政書士法人に行わせることができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、業務を他人に行わせてはならないが（行政書士法施行規則4条本文）、その使用人その他の従業者である行政書士に行わせる場合または依頼人の同意を得て、他の行政書士もしくは行政書士法人に行わせることができる（4条ただし書）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士は、その事務に関して補助者を置くことができるが、補助者を置いたとき、補助者に異動があったときのほか、補助者を置かなくなったときも、遅滞なく、その者の住所および氏名を行政書士会に届け出なければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、その事務に関して補助者を置くことができる（行政書士法施行規則5条1項）。そして、行政書士は、補助者を置いたときまたは補助者に異動があったときは、遅滞なく、その者の住所および氏名を行政書士会に届け出なければならず（5条2項前段）、補助者を置かなくなったときも、また同様である（5条2項後段）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士は、正当な事由がない限り、依頼の順序に従って、すみやかにその業務を処理しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、正当な事由がない限り、依頼の順序に従って、すみやかにその業務を処理しなければならない（行政書士法施行規則7条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士は、正当な事由がある場合において依頼を拒むときは、その事由を説明しなければならず、この場合において依頼人から請求があるときは、その事由を対面で説明しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士は、正当な事由がある場合において依頼を拒むときは、その事由を説明しなければならず（行政書士法施行規則8条前段）、この場合において依頼人から請求があるときは、その事由を記載した文書を交付しなければならない（8条後段）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士は、作成した書類に記名して職印を押さなければならないが、法令または依頼の趣旨に反する書類を作成してはならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、法令または依頼の趣旨に反する書類を作成してはならない（行政書士法施行規則9条1項）。そして、行政書士は、作成した書類に記名して職印を押さなければならない（9条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政書士は、依頼人から報酬を受けたときは、日本行政書士会連合会の定める様式により正副2通の領収証を作成し、正本は、これに記名し職印を押して当該依頼人に交付し、副本は、作成の日から5年間保存しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、依頼人から報酬を受けたときは、日本行政書士会連合会の定める様式により正副2通の領収証を作成し、これに記名し職印を押して当該依頼人に交付し、副本は作成の日から5年間保存しなければならない（行政書士法施行規則10条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "988",
+          "sourcePageAnswer": "989"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "446",
+      "originalProblemId": "KB2025-p446-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士は、行政書士法人を設立することができ、行政書士法人は、その名称中に行政書士法人という文字を使用しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士は、行政書士法人を設立することができる（行政書士法13条の3）。行政書士法人は、その名称中に行政書士法人という文字を使用しなければならない（13条の4）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士法人の社員は、行政書士でなければならないが、業務の停止の処分を受け、当該業務の停止の期間を経過しない者は、社員となることができない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人の社員は、行政書士でなければならないが（行政書士法13条の5第1項）、業務の停止の処分を受け、当該業務の停止の期間を経過しない者は、社員となることができない（13条の5第2項1号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士法人を設立するには、その社員となろうとする行政書士が、定款を定めなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人を設立するには、その社員となろうとする行政書士が、定款を定めなければならない（行政書士法13条の8第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士法人は、その社員となろうとする行政書士が定款を定めることによって成立する。",
+          "answerBoolean": false,
+          "explanationText": "行政書士法人は、その主たる事務所の所在地において設立の登記をすることによって成立する（行政書士法13条の9）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政書士法人は、成立したときは、成立の日から2週間以内に、登記事項証明書および定款の写しを添えて、その旨を、日本行政書士会連合会を経由して、主たる事務所の所在地の行政書士会に届け出なければならない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士法人は、成立したときは、成立の日から2週間以内に、登記事項証明書および定款の写しを添えて、その旨を、その主たる事務所の所在地の属する都道府県の区域に設立されている行政書士会（主たる事務所の所在地の行政書士会）を経由して、日本行政書士会連合会に届け出なければならない（行政書士法13条の10第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政書士法人の社員は、行政書士法所定の脱退理由によって脱退するほか、6か月前までに退社の予告をすることによって、事業年度の終了の時に退社をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人の社員は、行政書士法所定の脱退理由によって脱退するほか（法定脱退：行政書士法13条の18）、6か月前までに退社の予告をすることによって、事業年度の終了の時に退社をすることができる（行政書士法13条の21第1項、会社法606条1項準用）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "行政書士法人は、総社員の同意があるときは、他の行政書士法人と合併することができ、その主たる事務所の所在地において登記することによって効力を生ずる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人は、総社員の同意があるときは、他の行政書士法人と合併することができる（行政書士法13条の20第1項）。合併は、合併後存続する行政書士法人または合併により設立する行政書士法人が、その主たる事務所の所在地において登記することによって効力を生ずる（13条の20第2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "行政書士法人",
+          "sourcePageQuestion": "990",
+          "sourcePageAnswer": "991"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "447",
+      "originalProblemId": "KB2025-p447-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "都道府県知事は、必要があると認めるときは、日曜日および祝日、日没から日出までの時間を除き、当該職員に行政書士または行政書士法人の事務所に立ち入り、その業務に関する帳簿および関係書類を検査させることができる。",
+          "answerBoolean": false,
+          "explanationText": "都道府県知事は、必要があると認めるときは、日没から日出までの時間を除き、当該職員に行政書士または行政書士法人の事務所に立ち入り、その業務に関する帳簿および関係書類（電磁的記録を含む。）を検査させることができる（行政書士法13条の22第1項）。日曜日および祝日は除外されていないため、立入検査は日曜日および祝日でもすることができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "監督",
+          "sourcePageQuestion": "992",
+          "sourcePageAnswer": "993"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政書士が、行政書士法もしくはこれに基づく命令、規則その他都道府県知事の処分に違反したときまたは行政書士たるにふさわしくない重大な非行があったときは、行政書士会は、当該行政書士に対し、戒告、2年以内の業務の停止、業務の禁止の処分をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "行政書士が、行政書士法もしくはこれに基づく命令、規則その他都道府県知事の処分に違反したときまたは行政書士たるにふさわしくない重大な非行があったときは、都道府県知事は、当該行政書士に対し、戒告、2年以内の業務の停止、業務の禁止の処分をすることができる（行政書士法14条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "監督",
+          "sourcePageQuestion": "992",
+          "sourcePageAnswer": "993"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政書士法人が、行政書士法またはこの法律に基づく命令、規則その他都道府県知事の処分に違反したときまたは運営が著しく不当と認められるときは、その主たる事務所の所在地を管轄する都道府県知事は、当該行政書士法人に対し、戒告、2年以内の業務の全部または一部の停止、解散の処分をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "行政書士法人が、行政書士法またはこの法律に基づく命令、規則その他都道府県知事の処分に違反したときまたは運営が著しく不当と認められるときは、その主たる事務所の所在地を管轄する都道府県知事は、当該行政書士法人に対し、戒告、2年以内の業務の全部または一部の停止、解散の処分をすることができる（行政書士法14条の2第1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "監督",
+          "sourcePageQuestion": "992",
+          "sourcePageAnswer": "993"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政書士法人に対して懲戒処分をする場合には、当該行政書士法人の社員につき行政書士法もしくはこれに基づく命令、規則その他都道府県知事の処分に違反したとき等の事実があるときは、その社員である行政書士に対し、懲戒処分を併せて行うことはできない。",
+          "answerBoolean": false,
+          "explanationText": "行政書士法人に対して懲戒処分をする場合において、当該行政書士法人の社員につき行政書士法もしくはこれに基づく命令、規則その他都道府県知事の処分に違反したとき等の事実があるときは、その社員である行政書士に対し、懲戒処分を併せて行うことができると解すべきであり、併せて行うことはできないとしてはならない（行政書士法14条の2第5項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "監督",
+          "sourcePageQuestion": "992",
+          "sourcePageAnswer": "993"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "都道府県知事は、行政書士または行政書士法人もしくは都道府県の区域内にある当該行政書士法人の事務所に対して、2年以内の業務の停止の処分をしようとするときは、行政手続法所定の意見陳述のための手続の区分にかかわらず、公開による聴聞を行わなければならない。",
+          "answerBoolean": true,
+          "explanationText": "都道府県知事は、行政書士または行政書士法人もしくは都道府県の区域内にある当該行政書士法人の事務所に対して、2年以内の業務の停止の処分をしようとするときは、行政手続法所定の意見陳述のための手続の区分にかかわらず、聴聞を行わなければならない（行政書士法14条の3第3項）。聴聞の期日における審理は、公開により行わなければならない（14条の3第5項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "監督",
+          "sourcePageQuestion": "992",
+          "sourcePageAnswer": "993"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "448",
+      "originalProblemId": "KB2025-p448-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "戸籍法の規定により市町村長が処理することとされている戸籍に関する事務は、地方自治法に規定する第1号法定受託事務である。",
+          "answerBoolean": true,
+          "explanationText": "戸籍法の規定により市町村長が処理することとされている戸籍に関する事務は、地方自治法に規定する第1号法定受託事務である（戸籍法1条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "戸籍は、市町村の区域内に本籍を定める一の夫婦およびこれと氏を同じくする子ごとに編製するが、日本人でない者（外国人）と婚姻をした者または配偶者がいない者について新たに戸籍を編製するときは、その者およびこれと氏を同じくする子ごとに編製する。",
+          "answerBoolean": true,
+          "explanationText": "戸籍は、市町村の区域内に本籍を定める一の夫婦およびこれと氏を同じくする子ごとに編製するが（戸籍法6条本文）、日本人でない者（外国人）と婚姻をした者または配偶者がいない者について新たに戸籍を編製するときは、その者およびこれと氏を同じくする子ごとに編製する（6条ただし書）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "戸籍は、正本と副本を設けることとし、正本および副本は市役所または町村役場が保存する。",
+          "answerBoolean": false,
+          "explanationText": "戸籍は、正本と副本を設け（戸籍法8条1項）、正本は市役所または町村役場に備え、副本は管轄法務局もしくは地方法務局またはその支局が保存する（8条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "戸籍は、その筆頭に記載した者の氏名及び本籍で表示する。",
+          "answerBoolean": true,
+          "explanationText": "戸籍は、その筆頭に記載した者の氏名および本籍でこれを表示する（戸籍法9条前段）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "戸籍に氏名を記載するには、「夫婦が、夫の氏を称するときは夫、妻の氏を称するときは妻」、「配偶者」、「子」の順序による。",
+          "answerBoolean": true,
+          "explanationText": "戸籍に氏名を記載するには、「夫婦が、夫の氏を称するときは夫、妻の氏を称するときは妻」、「配偶者」、「子」の順序による（戸籍法14条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "日本人との婚姻の届出があったときは、夫婦について新戸籍を編製するが、夫婦が、夫の氏を称する場合に夫が戸籍の筆頭に記載した者であるときは、夫の氏を称する妻は夫の戸籍に入り、妻の氏を称する場合に妻が戸籍の筆頭に記載した者であるときは、妻の氏を称する夫は妻の戸籍に入る。",
+          "answerBoolean": true,
+          "explanationText": "婚姻の届出があったときは、夫婦について新戸籍を編製するが（戸籍法16条1項本文）、夫婦が、夫の氏を称する場合に夫が戸籍の筆頭に記載した者であるときは、夫の氏を称する妻は夫の戸籍に入り、妻の氏を称する場合には妻が戸籍の筆頭に記載した者であるときは、妻の氏を称する夫は妻の戸籍に入る（16条1項ただし書、2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "戸籍の筆頭に記載した者およびその配偶者以外の者がこれと同一の氏を称する子または養子を有するに至ったときは、その者について新戸籍を編製する。",
+          "answerBoolean": true,
+          "explanationText": "戸籍の筆頭に記載した者およびその配偶者以外の者がこれと同一の氏を称する子または養子を有するに至ったときは、その者について新戸籍を編製する（戸籍法17条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.9,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "994",
+          "sourcePageAnswer": "995"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "449",
+      "originalProblemId": "KB2025-p449-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "成年に達した者は、戸籍の筆頭に記載した者およびその配偶者を除き、分籍をすることができ、分籍の届出があったときは、新戸籍を編製する。",
+          "answerBoolean": true,
+          "explanationText": "成年に達した者は、戸籍の筆頭に記載した者およびその配偶者を除き、分籍をすることができる（戸籍法21条1項）。分籍の届出があったときは、新戸籍を編製する（21条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "戸籍法上の届出は、書面または口頭ですることができる。",
+          "answerBoolean": true,
+          "explanationText": "戸籍法上の届出は、書面または口頭ですることができる（戸籍法27条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "届出をすべき者が未成年者または成年被後見人であるときは、届出義務者は、親権を行う者または後見人である者が、未成年者または成年被後見人が届出をすることもできる。",
+          "answerBoolean": true,
+          "explanationText": "届出をすべき者が未成年者または成年被後見人であるときは、親権を行う者または後見人を届出義務者とするが、未成年者または成年被後見人が届出をすることを妨げない（戸籍法31条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "未成年者または成年被後見人がその法定代理人の同意を得ないですることができる行為については、親権を行う者または後見人が届け出なければならない。",
+          "answerBoolean": false,
+          "explanationText": "未成年者または成年被後見人がその法定代理人の同意を得ないですることができる行為については、未成年者または成年被後見人が届け出なければならない（戸籍法32条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "戸籍法における届出期間は、届出事件発生の日の翌日から起算する。",
+          "answerBoolean": false,
+          "explanationText": "戸籍法上の届出期間は、届出事件発生の日から起算し（戸籍法43条）、初日不算入の原則は適用されない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "出生の届出は、14日以内（国外で出生があったときは、3か月以内）にしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "出生の届出は、14日以内（国外で出生があったときは、3か月以内）にしなければならない（戸籍法49条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "出生の届出は、出生地ですることができる。",
+          "answerBoolean": true,
+          "explanationText": "出生の届出は、出生地ですることができる（戸籍法51条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        },
+        {
+          "seqNo": 8,
+          "questionText": "嫡出子出生の届出は、原則として、父または母がこれをし、子の出生前に父母が離婚をした場合には、母がこれをしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "嫡出子出生の届出は、原則として、父または母がこれをし、子の出生前に父母が離婚をした場合には、母がこれをしなければならない（戸籍法52条1項）。なお、届出をすべき者が届出をすることができない場合には、「同居者」、「出産に立ち会った医師、助産師またはその他の者」は、その順序に従って、届出をしなければならない（52条3項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "戸籍法",
+          "sourcePageQuestion": "996",
+          "sourcePageAnswer": "997"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "450",
+      "originalProblemId": "KB2025-p450-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "嫡出でない子の出生の届出は、原則として、母がこれをしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "嫡出でない子の出生の届出は、原則として、母がこれをしなければならない（戸籍法52条2項）。なお、届出をすべき者が届出をすることができない場合には、「同居者」、「出産に立ち会った医師、助産師またはその他の者」は、その順序に従って、届出をしなければならない（52条3項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "998",
+          "sourcePageAnswer": "999"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "死亡の届出は、届出義務者が、死亡の日から7日以内、国外で死亡があったときは、その死亡の日から3か月以内にしなければならない。",
+          "answerBoolean": false,
+          "explanationText": "死亡の届出は、届出義務者が、死亡の事実を知った日から7日以内（国外で死亡があったときは、その事実を知った日から3か月以内）にしなければならない（戸籍法86条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "998",
+          "sourcePageAnswer": "999"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "やむを得ない事由によって氏を変更しようとするときは、戸籍の筆頭に記載した者およびその配偶者は、家庭裁判所の許可を得て、その旨を届け出なければならない。",
+          "answerBoolean": true,
+          "explanationText": "やむを得ない事由によって「氏」を変更しようとするときは、戸籍の筆頭に記載した者およびその配偶者は、家庭裁判所の許可を得て、その旨を届け出なければならない（戸籍法107条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "998",
+          "sourcePageAnswer": "999"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "正当な事由によって名を変更しようとするときは、戸籍の筆頭に記載した者およびその配偶者は、家庭裁判所の許可を得て、その旨を届け出なければならない。",
+          "answerBoolean": false,
+          "explanationText": "正当な事由によって「名」を変更しようとするときは、家庭裁判所の許可を得て、その旨を届け出なければならない（戸籍法107条の2）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "998",
+          "sourcePageAnswer": "999"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "戸籍の記載に錯誤もしくは遺漏があることを発見した場合には、利害関係人は、市町村長の許可を得て、戸籍の訂正を申請することができる。",
+          "answerBoolean": false,
+          "explanationText": "戸籍の記載に錯誤もしくは遺漏があることを発見した場合には、利害関係人は、家庭裁判所の許可を得て、戸籍の訂正を申請することができる（戸籍法113条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.98,
+          "sectionTitle": "業務関連諸法令",
+          "sourcePageQuestion": "998",
+          "sourcePageAnswer": "999"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "451",
+      "originalProblemId": "KB2025-p451-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "市町村長は、原則として、個人を単位とする住民票を世帯ごとに作成して、住民基本台帳を編成しなければならないが、適当であると認めるときは、住民票の全部または一部につき世帯を単位とすることができる。",
+          "answerBoolean": false,
+          "explanationText": "市町村長は、個人を単位とする住民票を世帯ごとに「編成」して、住民基本台帳を「作成」しなければならないが（住民基本台帳法6条1項）、適当であると認めるときは、住民票の全部または一部につき世帯を単位とすることができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1000",
+          "sourcePageAnswer": "1001"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "世帯主についてはその旨、世帯主でない者については世帯主の氏名及び世帯主との続柄は、住民基本台帳法に明示されている住民票の記載事項である。",
+          "answerBoolean": true,
+          "explanationText": "世帯主についてはその旨、世帯主でない者については世帯主の氏名および世帯主との続柄は、住民基本台帳法に明示されている住民票の記載事項である（住民基本台帳法7条4号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1000",
+          "sourcePageAnswer": "1001"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "住民票の記載、消除または記載の修正は、住民基本台帳法所定の届出に基づき、または職権で行うものとする。",
+          "answerBoolean": true,
+          "explanationText": "住民票の記載、消除または記載の修正は、住民基本台帳法所定による届出に基づき、または職権で行うものとする（住民基本台帳法8条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1000",
+          "sourcePageAnswer": "1001"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "市町村が備える住民基本台帳に記録されている者は、当該市町村の市町村長に対し、自己または自己と同一の世帯に属する者に係る住民票の写しまたは住民票に記載をした事項に関する証明書（住民票記載事項証明書）の交付を請求することができるが、市町村長は、その請求が不当な目的によることが明らかとなるときは、これを拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "市町村が備える住民基本台帳に記録されている者は、当該市町村の市町村長に対し、自己または自己と同一の世帯に属する者に係る住民票の写しまたは住民票に記載をした事項に関する証明書（住民票記載事項証明書）の交付を請求することができるが（住民基本台帳法12条1項）、市町村長は、その請求が不当な目的によることが明らかとなるときは、これを拒むことができる（12条6項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1000",
+          "sourcePageAnswer": "1001"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "選挙人名簿の登録は、住民基本台帳の記録に基づいて行うものとする。",
+          "answerBoolean": true,
+          "explanationText": "選挙人名簿の登録は、住民基本台帳に記録されている者または公職選挙法に規定する住民基本台帳に記録されていた者で選挙権を有するものについて行うものとする（住民基本台帳法15条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1000",
+          "sourcePageAnswer": "1001"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "市町村長は、その市町村の区域内に本籍を有する者につき、その戸籍を単位として、戸籍の附票を作成しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "市町村長は、その市町村の区域内に本籍を有する者につき、その戸籍を単位として、戸籍の附票を作成しなければならない（住民基本台帳法16条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1000",
+          "sourcePageAnswer": "1001"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "452",
+      "originalProblemId": "KB2025-p452-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "戸籍の附票には、戸籍の表示、氏名および住所のみ記載（磁気ディスクをもって調製する戸籍の附票にあっては記録）をする。",
+          "answerBoolean": false,
+          "explanationText": "戸籍の附票には、戸籍の表示、氏名、住所、住所を定めた年月日、出生の年月日、男女の別、住民票に記載された住民票コードについて記載（磁気ディスクをもって調製する戸籍の附票にあっては記録）をする（住民基本台帳法17条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "戸籍の附票の記載、消除または記載の修正は、住民基本台帳法所定の届出または職権で行うものとする。",
+          "answerBoolean": false,
+          "explanationText": "戸籍の附票の記載、消除または記載の修正は、職権で行うとされ（住民基本台帳法18条）、住民基本台帳法所定の届出では行われない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "転入をした者は、転入をした日から14日以内に、住民基本台帳法所定の事項を市町村長に届け出なければならない。",
+          "answerBoolean": true,
+          "explanationText": "転入（新たに市町村の区域内に住所を定めることをいい、出生による場合を除く）をした者は、転入をした日から14日以内に、住民基本台帳法所定の事項を市町村長に届け出なければならない（住民基本台帳法22条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "転居をした者は、転居をした日から14日以内に、住民基本台帳法所定の事項を市町村長に届け出なければならない。",
+          "answerBoolean": true,
+          "explanationText": "転居（一の市町村の区域内において住所を変更すること）をした者は、転居をした日から14日以内に、住民基本台帳法所定の事項を市町村長に届け出なければならない（住民基本台帳法23条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "転出をする者は、転出をした日から14日以内に、その氏名、転出先を市町村長に届け出なければならない。",
+          "answerBoolean": false,
+          "explanationText": "転出をする者は、あらかじめ、その氏名、転出先および転出の予定年月日を市町村長に届け出なければならない（住民基本台帳法24条）。転入届（22条）、転居届（23条）、世帯変更届（25条）は14日以内にするのに対して、転出届は、あらかじめしなければならない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "世帯主は、世帯員に代わって、住民基本台帳法所定の届出をすることができるが、世帯員が届出をすることができないときは、世帯主が世帯員に代わって、その届出をしなければならない。",
+          "answerBoolean": true,
+          "explanationText": "世帯主は、世帯員に代わって、住民基本台帳法所定の届出をすることができるが（住民基本台帳法26条1項）、世帯員が届出をすることができないときは、世帯主が世帯員に代わって、その届出をしなければならない（26条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "住民基本台帳法所定の届出は、政令で定めるところにより、届出義務を負う者が口頭または書面でしなければならない。",
+          "answerBoolean": false,
+          "explanationText": "住民基本台帳法所定の届出は、政令で定めるところにより、書面でしなければならない（住民基本台帳法27条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        },
+        {
+          "seqNo": 8,
+          "questionText": "住民基本台帳法における主務大臣は、総務大臣であるが、住民票の記載等のための市町村長間の通知および戸籍の附票に関する事項については、総務大臣および法務大臣である。",
+          "answerBoolean": true,
+          "explanationText": "住民基本台帳法における主務大臣は、総務大臣であるが、住民票の記載等のための市町村長間の通知および戸籍の附票に関する事項については、総務大臣および法務大臣である（住民基本台帳法40条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-gyomu",
+          "confidence": 0.95,
+          "sectionTitle": "住民基本台帳法",
+          "sourcePageQuestion": "1002",
+          "sourcePageAnswer": "1003"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "454",
+      "originalProblemId": "KB2025-p454-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "電子署名法に基づき、認証事業者は、自然人および法人の本人性の確認をするサービスを行うことができる。",
+          "answerBoolean": false,
+          "explanationText": "電子署名法2条における電子署名の要件とは、当該情報が当該措置を行った者の作成に係るものであることを示すためのものであること（電子署名法2条1号）、当該情報について改変が行われていないかどうかを確認することができるものであること（2条2号）である。1号に関しては「本人性の確認」であり、2号に関しては「非改ざん性の確認」を示す。また電子署名法の電子署名の対象は自然人であって法人は対象としていない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信 (情報通信関連法)",
+          "sourcePageQuestion": "1006",
+          "sourcePageAnswer": "1007"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "「電子署名等に係る地方公共団体情報システム機構の認証業務に関する法律」（いわゆる公的個人認証法）に基づいて、地方公共団体の住民である外国人に対しても認証業務の提供をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "住民基本台帳法に記録されている者について、署名用電子証明書を申請することができる（公的個人認証法3条1項）。外国人も住民基本台帳に記録されるため（住民基本台帳法改正平成24年7月施行）、外国人に対して、認証業務を提供することができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信 (情報通信関連法)",
+          "sourcePageQuestion": "1006",
+          "sourcePageAnswer": "1007"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "455",
+      "originalProblemId": "KB2025-p455-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "個人情報保護法は、デジタル社会の進展に伴い個人情報の利用が著しく拡大していることに鑑み制定されている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報保護法は、デジタル社会の進展に伴い個人情報の利用が著しく拡大していることに鑑み制定されている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "個人情報保護法は、「プライバシーの権利」という言葉を明文で目的規定に掲げ、高度情報通信社会におけるこの権利の重要性を説いている。",
+          "answerBoolean": false,
+          "explanationText": "個人情報保護法は、個人情報の有用性に配慮しつつ、個人の権利利益を保護することを目的とすると規定しており、「プライバシーの権利」という言葉を用いていない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "個人情報保護法は、個人情報の有用性に配慮しつつ、個人の権利利益を保護することを目的とする旨を明文で定めている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報保護法は、「個人情報の有用性に配慮しつつ、個人の権利利益を保護することを目的とする」（個人情報保護法1条）と規定している。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "国の行政機関や地方公共団体の機関にも、個人情報保護法の規定は適用される。",
+          "answerBoolean": true,
+          "explanationText": "国の行政機関や地方公共団体の機関（議会を除く）にも、個人情報保護法の規定は適用される（個人情報保護法2条11項1号、2号、60条以下）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "死者の個人情報は、原則として「個人情報の保護に関する法律」による規律の対象とならない。",
+          "answerBoolean": true,
+          "explanationText": "個人情報とは、生存する個人に関する情報であることが必要であるところ（個人情報保護法2条1項）、死者の個人情報は、生存する個人に関する情報ではないから、原則として個人情報保護法の規律の対象とならない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "個人情報保護法は、原則として生存者の個人情報を守るものであるが、死者の情報であっても、それが、同時にその遺族の個人情報でもある場合には、個人情報に含まれるものと解している。",
+          "answerBoolean": true,
+          "explanationText": "個人情報保護法は、死者の情報であっても、それが同時にその遺族の個人情報でもある場合には、生存する個人に関する情報として（個人情報保護法2条1項）、個人情報に含まれると解している。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "個人情報保護法では、氏名のような基本的な情報は、一般に流通することが予定されているため、個人情報には含まれないと解されている。",
+          "answerBoolean": false,
+          "explanationText": "個人情報の規律対象は、氏名、生年月日その他の記述等により特定の個人を識別することができるものである（個人情報保護法2条1項1号）。したがって、個人情報保護法では、氏名のような基本的な情報が個人情報に含まれないと解されているわけではない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "1 個人情報保護法 (総論)",
+          "sourcePageQuestion": "1008",
+          "sourcePageAnswer": "1009"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "456",
+      "originalProblemId": "KB2025-p456-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "法人の有する顧客情報や従業者情報は、原則として「個人情報の保護に関する法律」による規律の対象とならない。",
+          "answerBoolean": false,
+          "explanationText": "個人情報とは、特定の個人を識別することができるものであるところ（個人情報保護法2条1項1号）、法人の有する顧客情報や従業者情報は、特定の個人を識別することができるから、個人情報保護法の規律対象となる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1010",
+          "sourcePageAnswer": "1011"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "法人等の団体そのものに関する情報も、法人等の役員の情報も「法人」の情報であって、個人情報保護法にいう「個人情報」ではない。",
+          "answerBoolean": false,
+          "explanationText": "法人等の団体それ自体に関する情報は、生存する個人に関する情報ではないから、個人情報に含まれないが、法人等の団体の役員に関する情報は、個人に関する情報であるから、個人情報に含まれる（個人情報保護法2条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1010",
+          "sourcePageAnswer": "1011"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "個人情報保護法にいう「個人情報」は、生存する個人に関する情報であれば、日本国民のみならず外国人の個人情報も含む。",
+          "answerBoolean": true,
+          "explanationText": "外国人の個人情報も、生存する個人に関する情報であるから（個人情報保護法2条1項）、個人情報に含まれる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1010",
+          "sourcePageAnswer": "1011"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "個人情報保護法の個人情報とは、情報そのもので個人が識別されるものでなければならず、他の情報と容易に照合することによって、特定個人を識別できる情報を含まない。",
+          "answerBoolean": false,
+          "explanationText": "個人情報には、情報そのもので個人が識別されるものでなければならないわけではなく、他の情報と容易に照合することができ、それにより特定個人を識別できる情報も含まれる（モザイク・アプローチ：個人情報保護法2条1項1号かっこ書）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1010",
+          "sourcePageAnswer": "1011"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "個人情報保護法では、思想や病歴などに関する個人情報は、いわゆるセンシティブ情報として、その取扱いに特に配慮を要する規定をおいている。",
+          "answerBoolean": true,
+          "explanationText": "「要配慮個人情報」とは、本人の人種、信条、社会的身分、病歴、犯罪の経歴、犯罪により害を被った事実その他本人に対する不当な差別、偏見その他の不利益が生じないようにその取扱いに特に配慮を要するものとして政令で定める記述等が含まれる個人情報をいい（個人情報保護法2条3項）、差別・偏見を生じさせるおそれのある個人情報を類型化している。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1010",
+          "sourcePageAnswer": "1011"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "個人情報保護法（個人情報の保護に関する法律）は、電子計算機により処理された個人情報についてもっぱら適用され、手書きの個人情報について適用されることはない。",
+          "answerBoolean": false,
+          "explanationText": "「個人情報データベース等」には、個人情報を含む情報の集合物であって、特定の個人情報を電子計算機を用いて検索することができるように体系的に構成したものその他に、特定の個人情報を容易に検索することができるように体系的に構成したものとして政令で定めるもの（マニュアル処理（手書き）情報）を含むから（個人情報保護法16条1項）、電子計算機により処理された個人情報でなくとも、個人情報保護法は適用される。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1010",
+          "sourcePageAnswer": "1011"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "457",
+      "originalProblemId": "KB2025-p457-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政書士会、税理士会などの士業の団体は、営利事業を営むものではないので、個人情報保護法にいう「個人情報取扱事業者」に該当することはない。",
+          "answerBoolean": false,
+          "explanationText": "個人情報取扱事業者とは、国の機関等を除く、個人情報データベース等を事業の用に供している者をいい（個人情報保護法16条2項）、営利・非営利を問わない。営利活動をしていない法人その他の団体も個人情報取扱事業者に当たる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "個人情報保護",
+          "sourcePageQuestion": "1012",
+          "sourcePageAnswer": "1013"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "外部に情報提供する目的で個人情報データベース等を作成・管理しているだけのデータベース事業者は、「個人情報取扱事業者」に該当しない。",
+          "answerBoolean": false,
+          "explanationText": "個人情報取扱事業者とは、国の機関等を除く、個人情報データベース等を事業の用に供している者である（個人情報保護法16条2項）。外部に情報提供する目的で個人情報データベース等を作成し、管理することは、データベース事業者等にとって、「事業の用に供している」といえることから、当該データベース事業者等は、個人情報取扱事業者に当たる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "個人情報保護",
+          "sourcePageQuestion": "1012",
+          "sourcePageAnswer": "1013"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "個人情報保護法は、個人の人格尊重の理念の下に個人情報を慎重に取り扱うべき旨を明文で定めている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報保護法は、その基本理念として「個人情報は、個人の人格尊重の理念の下に慎重に取り扱われるべきものであることに鑑み、その適正な取扱いが図られなければならない」（個人情報保護法3条）と明文で定めている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "個人情報保護",
+          "sourcePageQuestion": "1012",
+          "sourcePageAnswer": "1013"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "個人情報保護法は、国及び地方公共団体の責務のほかに、個人情報取扱事業者及び個人関連情報取扱事業者の義務を明文で定めている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報保護法は、その目的規定において国および地方公共団体の責務等を明らかにし、個人情報を取り扱う事業者の遵守すべき義務等を定める（個人情報保護法1条）と規定し、国の責務（4条）および地方公共団体の責務（5条）のほかに、個人情報取扱事業者および個人関連情報取扱事業者の義務（17条以降：第4章第2節）をそれぞれ明文で定めている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "個人情報保護",
+          "sourcePageQuestion": "1012",
+          "sourcePageAnswer": "1013"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "個人情報取扱事業者は、違法または不当な行為を助長し、または誘発するおそれがある方法により個人情報を利用してはならない。",
+          "answerBoolean": true,
+          "explanationText": "個人情報取扱事業者は、違法または不当な行為を助長し、または誘発するおそれがある方法により個人情報を利用してはならない（個人情報保護法19条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "個人情報保護",
+          "sourcePageQuestion": "1012",
+          "sourcePageAnswer": "1013"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "個人情報取扱事業者は、個人データの取扱いの安全管理を図る措置をとった上で、個人データの取扱いについて、その一部を委託することは可能であるが、全部を委託することは禁止されている。",
+          "answerBoolean": false,
+          "explanationText": "個人情報取扱事業者は、個人データの取扱いの全部または一部を委託する場合は、その取扱いを委託された個人データの安全管理が図られるよう、委託を受けた者に対する必要かつ適切な監督を行わなければならない（個人情報保護法25条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "個人情報保護",
+          "sourcePageQuestion": "1012",
+          "sourcePageAnswer": "1013"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "458",
+      "originalProblemId": "KB2025-p458-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "弁護士会からの照会に応じて個人データを個人情報取扱事業者が提供する場合には、あらかじめ本人の同意を得る必要がある。",
+          "answerBoolean": false,
+          "explanationText": "個人情報取扱事業者が個人データを第三者に提供するには、あらかじめ本人の同意を得なければならないのが原則である。しかし、「法令に基づく場合」には、本人の同意なく個人データを第三者に提供することができる（個人情報保護法27条1項1号）。弁護士会による照会は、弁護士法に基づくものであるため、本人の同意は不要となる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1014",
+          "sourcePageAnswer": "1015"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "個人情報取扱事業者は、交通事故によって意識不明の者の個人情報を病院に伝える場合には、あらかじめ本人の同意を得る必要がある。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合には、人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるときに該当し、本人の同意は不要である（個人情報保護法27条1項2号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1014",
+          "sourcePageAnswer": "1015"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "個人情報取扱事業者は、児童虐待を受けたと思われる児童に関する情報を福祉事務所等に連絡する場合には、あらかじめ本人の同意を得る必要がある。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合には、「児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき」に該当し、本人の同意は不要である（個人情報保護法27条1項3号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1014",
+          "sourcePageAnswer": "1015"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "個人情報取扱事業者は、公衆衛生の向上のため特に必要がある場合には、個人情報によって識別される特定の個人である本人の同意を得ることが困難でない場合でも、個人データを当該本人から取得することができ、当該情報の第三者提供にあたっても、あらためて当該本人の同意を得る必要はない。",
+          "answerBoolean": false,
+          "explanationText": "本人の同意を得ずに第三者に提供するには、「公衆衛生の向上のため特に必要がある場合であって、本人の同意を得ることが困難である」ことが必要である（個人情報保護法27条1項3号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1014",
+          "sourcePageAnswer": "1015"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "個人情報取扱事業者は、地方公共団体が法令の定める事務を遂行することに対して協力する必要がある場合でも、個人情報によって識別される特定の個人である本人の同意を得た場合に限り、個人データを当該地方公共団体に提供することができる。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合には、国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるときに該当すれば、本人の同意は不要である（個人情報保護法27条1項4号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1014",
+          "sourcePageAnswer": "1015"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "個人情報取扱事業者は、合併その他の事由による事業の承継に伴って個人データの提供を受ける者が生じる場合には、個人情報によって識別される特定の個人である本人の同意を得なければならない。",
+          "answerBoolean": false,
+          "explanationText": "合併その他の事由による事業の承継に伴って個人データが提供されるときは、本人の同意を得ずに第三者に提供することができる（個人情報保護法27条5項2号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1014",
+          "sourcePageAnswer": "1015"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "459",
+      "originalProblemId": "KB2025-p459-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "個人情報取扱事業者による保有個人データの取扱いに対し、自己に関する情報の開示や訂正、利用停止等を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "本人は、自己情報に関するコントロールの発現として、保有個人データの開示（個人情報保護法33条）、訂正（34条）、利用停止（35条）等を請求することができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1016",
+          "sourcePageAnswer": "1017"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "「個人情報の保護に関する法律」は、認定個人情報保護団体という制度を用意して、苦情処理などを事業者団体が処理することを期待している。",
+          "answerBoolean": true,
+          "explanationText": "本人等から苦情の申出を受けて、その相談に応じたり、必要な助言をして、調査をするとともに、個人情報取扱事業者等に対して苦情の内容を通知して解決を促すために、個人情報保護法は、認定個人情報保護団体による苦情処理を認めている（個人情報保護法47条1項1号、53条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1016",
+          "sourcePageAnswer": "1017"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "個人情報の保護に関する法律は、報道機関については、第4章（個人情報取扱事業者等の義務等）の規定を適用除外としている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報取扱事業者および個人関連情報取扱事業者のうち放送機関、新聞社、通信社その他の報道機関（報道を業として行う個人を含む）は、報道の用に供する目的であるときは、第4章（個人情報取扱事業者等の義務等）の規定は適用されない（個人情報保護法57条1項1号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1016",
+          "sourcePageAnswer": "1017"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "著述を業として行う者が、著述の用に供する目的で、個人情報を取扱う場合、個人情報取扱事業者の義務規定の適用は除外される。",
+          "answerBoolean": true,
+          "explanationText": "個人情報取扱事業者および個人関連情報取扱事業者のうち著述を業として行う者は著述の用に供する目的であるときは、個人情報取扱事業者の義務規定の適用は除外される（個人情報保護法57条1項2号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1016",
+          "sourcePageAnswer": "1017"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "学術研究機関が学術研究目的で個人情報を取り扱う場合には、個人情報取扱事業者の義務に関する規定は適用されない。",
+          "answerBoolean": false,
+          "explanationText": "学術研究機関等は、個人情報取扱事業者等の義務等の規定の適用が除外される者とされておらず（個人情報保護法57条1項各号参照）、個人情報取扱事業者である学術研究機関等は学術研究目的で個人情報の取扱いについて、第4章（個人情報取扱事業者等の義務等）の規定を遵守する（59条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1016",
+          "sourcePageAnswer": "1017"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "個人情報の保護に関する法律は、宗教団体については、第4章（個人情報取扱事業者等の義務等）の規定を適用除外としている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報取扱事業者および個人関連情報取扱事業者のうち宗教団体は宗教活動（付随する活動を含む）の用に供する目的であるときは、第4章（個人情報取扱事業者等の義務等）の規定は適用されない（個人情報保護法57条1項3号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1016",
+          "sourcePageAnswer": "1017"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "460",
+      "originalProblemId": "KB2025-p460-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "個人情報の保護に関する法律は、政治団体については、第4章（個人情報取扱事業者等の義務等）の規定を適用除外としている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報取扱事業者のうち政治団体は政治活動（付随する活動を含む）の用に供するときは、第4章（個人情報取扱事業者等の義務等）の規定は適用されない（個人情報保護法57条1項4号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1018",
+          "sourcePageAnswer": "1019"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "個人情報の保護に関する法律は、弁護士会については、第4章（個人情報取扱事業者等の義務等）の規定を適用除外としている。",
+          "answerBoolean": false,
+          "explanationText": "個人情報保護法57条1項の適用除外に弁護士会は規定されていない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1018",
+          "sourcePageAnswer": "1019"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "「個人情報の保護に関する法律」は、個人情報取扱事業者の従業者が保有個人データを自己もしくは第三者の不正な利益を図る目的で盗用した場合について、懲役刑または罰金刑で臨んでいる。",
+          "answerBoolean": true,
+          "explanationText": "個人情報取扱事業者もしくはその従業者またはこれらであった者が、その業務に関して取り扱った個人情報データベース等を自己もしくは第三者の不正な利益を図る目的で提供または盗用したときは、1年以下の懲役または50万円以下の罰金に処する（個人情報保護法179条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1018",
+          "sourcePageAnswer": "1019"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "個人情報保護法における「行政機関」とは、個人情報データベース等を行政運営に用いる国の行政機関であって、独立行政法人等を省いたものをいう。",
+          "answerBoolean": false,
+          "explanationText": "個人情報保護法における「行政機関」は、2条8項各号所定の機関である（個人情報保護法2条8項）。独立行政法人等を除く、個人情報データベース等を事業の用に供している者とは、「個人情報取扱事業者」である（16条2項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1018",
+          "sourcePageAnswer": "1019"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "個人情報保護法は、保有個人情報について目的外利用や第三者提供の制限に関する規律が存在する一方、保有個人情報を対象として、開示・訂正・利用停止の請求権を行使することができるという仕組みになっている。",
+          "answerBoolean": true,
+          "explanationText": "個人情報保護法は、保有個人情報について、利用目的以外の目的での利用制限および第三者提供の制限に関する規律（69条1項）が存在するとともに、保有個人情報を対象として開示（76条）、訂正（90条）、利用停止（98条）の請求をすることができる。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1018",
+          "sourcePageAnswer": "1019"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "「保有個人情報ファイル」とは、保有個人情報を含む情報の集合物であって、特定の保有個人情報を電子計算機を用いて体系性、検索性のあるもののほか、氏名等により特定の保有個人情報を容易に検索できるよう体系的に構成したもののことをいい、これは個人情報取扱事業者等の義務に関する「保有個人データ」という概念にほぼ等しい。",
+          "answerBoolean": false,
+          "explanationText": "「保有個人情報ファイル」とは、保有個人情報を含む情報の集合物であって、特定の保有個人情報を電子計算機を用いて検索することができるように体系的に構成したものであるから（個人情報保護法60条2項）、前段は正しい。しかし、個人情報保護法において、「保有個人情報ファイル」にほぼ等しい概念は、「個人情報データベース等」であり（16条1項）、「保有個人データ」（16条4項）ではないから、後段は誤っている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1018",
+          "sourcePageAnswer": "1019"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "461",
+      "originalProblemId": "KB2025-p461-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政機関等は、個人情報を保有するにあたっては、利用の目的をできる限り特定しなければならず、また最初に個人情報を保有した目的を変更してはならない。",
+          "answerBoolean": false,
+          "explanationText": "行政機関等は、個人情報を保有するにあたっては利用目的をできる限り特定しなければならず（個人情報保護法61条1項）、利用目的を変更する場合には、変更前の利用目的と相当の関連性を有すると合理的に認められる範囲を超えて行ってはならない（61条3項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1020",
+          "sourcePageAnswer": "1021"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政機関等は、本人から直接書面に記録された当該本人の個人情報を取得するときには、取得の状況からみて利用目的が明らかであっても、利用目的を明示しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "個人情報が取得される状況からみて利用目的が明らかである場合は、本人が利用目的を確認するための措置をあえて講ずる必要が認められないから利用目的を明示する必要がない（個人情報保護法62条4号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1020",
+          "sourcePageAnswer": "1021"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政機関の長等は、利用目的の達成に必要な範囲内で、保有個人情報が過去または現在の事実と合致するよう努めなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長等は、利用目的の達成に必要な範囲内で、保有個人情報が過去または現在の事実と合致するよう努めなければならない（個人情報保護法65条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1020",
+          "sourcePageAnswer": "1021"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政機関等の保有する保有個人情報については、法人が個人と同様に自己を本人とする保有個人情報の開示・訂正等を請求することはできないが、個人情報取扱事業者に対する保有個人データの開示・訂正等の請求では、これが認められている。",
+          "answerBoolean": false,
+          "explanationText": "行政機関等の保有する保有個人情報の開示・訂正等の請求主体は、「何人も」であり（個人情報保護法76条1項、90条1項、98条1項）、すべての自然人であるが、法人は含まれない。また、個人情報取扱事業者に対する保有個人データの開示・訂正等請求の主体は、「本人」（33条1項、34条1項、35条1項）、つまり、個人情報によって識別される特定の個人であり（2条4項）、法人による開示等請求は予定されていないと解される。したがって、法人による開示等請求が個人情報取扱事業者に対する保有個人データでは認められているとする本肢後段は誤っている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1020",
+          "sourcePageAnswer": "1021"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "保有個人情報の開示請求は、行政機関の長等に対し、開示請求者の氏名および住所等の所定事項を記載した開示請求書を提出して行わなければならない。",
+          "answerBoolean": true,
+          "explanationText": "開示請求は、個人情報保護法77条1項各号所定の事項を記載した書面（開示請求書）を行政機関の長等に提出してしなければならない（77条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1020",
+          "sourcePageAnswer": "1021"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政機関の長等に対する開示請求に係る保有個人情報はすべて開示請求者本人に開示されるが、当該本人以外の個人情報等一定の不開示情報は原則として開示されない。",
+          "answerBoolean": false,
+          "explanationText": "自己を本人とする保有個人情報に係る開示請求であっても、本人の生命、健康、生活または財産を害するおそれがある情報の開示は、必ずしも本人の利益にならない場合もあり得ることから、不開示情報として開示しないことができる（個人情報保護法78条1項1号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1020",
+          "sourcePageAnswer": "1021"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "462",
+      "originalProblemId": "KB2025-p462-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "行政機関の長等は、行政機関の長又は地方公共団体の機関（都道府県の機関に限る）が開示決定等をする場合において、開示請求に係る保有個人情報を開示することにより、公共の安全と秩序の維持に支障を及ぼすおそれがあると行政機関の長又は地方公共団体の機関が認めることにつき相当の理由がある情報は、開示する必要はない。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長等は、開示請求があったときは、開示請求者に対し、当該保有個人情報を開示しなければならないのが原則であるが、行政機関の長または地方公共団体の機関（都道府県の機関に限る）が開示決定等をする場合において、開示することにより、犯罪の予防、鎮圧または捜査、公訴の維持、刑の執行その他の公共の安全と秩序の維持に支障を及ぼすおそれがあると行政機関の長または地方公共団体の機関が認めることにつき相当の理由がある情報は、不開示情報として開示しないことができる（個人情報保護法78条1項5号）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1022",
+          "sourcePageAnswer": "1023"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政機関の長等は、開示請求に係る保有個人情報に不開示情報が含まれている場合には、開示請求者に対し、原則として当該保有個人情報を開示してはならない。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長等は、不開示情報が含まれている場合には（個人情報保護法78条参照）、当該保有個人情報を開示してはならないのが原則であるが、裁量的開示をすることができる（80条）。80条は、不開示情報につき78条で開示が禁止されていることを前提として、例外的に裁量的開示を認めたのである。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1022",
+          "sourcePageAnswer": "1023"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政機関の長等は、開示請求に係る保有個人情報については、必ず当該保有個人情報の存否を明らかにしたうえで、開示または非開示を決定しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "開示請求に対し、当該開示請求に係る保有個人情報が存在しているか否かを答えるだけで、不開示情報を開示することとなるときは、行政機関の長等は、当該保有個人情報の存否を明らかにしないで、当該開示請求を拒否することができる（個人情報保護法81条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1022",
+          "sourcePageAnswer": "1023"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "個人情報保護法では、行政機関の長に対し開示請求をする者が納めなければならない手数料は、請求の対象となっているのが自己の情報であることにかんがみて、無料となっている。この点は、政府保有情報に対する開示請求であっても、開示請求にかかる手数料を徴収していない情報公開法と同じである。",
+          "answerBoolean": false,
+          "explanationText": "行政機関の長に対し開示請求をする者は手数料を納めなければならない（個人情報保護法89条1項）から、前段は妥当でない。また、行政機関情報公開法においても、開示請求をする者は、実費の範囲内において開示請求にかかる手数料を納めなければならない（行政機関情報公開法16条1項）から、後段も妥当でない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1022",
+          "sourcePageAnswer": "1023"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "保有個人情報を保有する行政機関の長等に対する当該保有個人情報の訂正請求は、その前に開示請求を行わなければならないが、本人が識別される保有個人データを保有する個人情報取扱事業者に対する当該保有個人データの訂正の求めの場合には、開示の求めを前置することは要件ではない。",
+          "answerBoolean": true,
+          "explanationText": "保有個人情報を保有する行政機関の長等に対する当該保有個人情報の訂正請求については、本人が識別される保有個人データを保有する個人情報取扱事業者に対する当該保有個人データの訂正の求めと異なり、保有個人情報として開示を受ける範囲を限定する開示請求前置主義が採用されている（個人情報保護法90条1項・3項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1022",
+          "sourcePageAnswer": "1023"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "463",
+      "originalProblemId": "KB2025-p463-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "自己を本人とする保有個人情報の訂正は、保有個人情報の内容が事実でない場合のみならず、評価・判断の内容が不当な場合にも行われる。",
+          "answerBoolean": false,
+          "explanationText": "自己を本人とする保有個人情報の訂正は、保有個人情報の内容が事実でない場合に行われ（個人情報保護法90条1項）、評価・判断に及ばない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1024",
+          "sourcePageAnswer": "1025"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "何人も、行政機関の長等に対し、当該行政機関の長等の属する行政機関の保有する自己を本人とする保有個人情報の開示を請求することができるが、訂正を求めることはできない。",
+          "answerBoolean": false,
+          "explanationText": "何人も、行政機関の長等に対し、当該行政機関の長等の属する行政機関の保有する自己を本人とする保有個人情報の開示および訂正を請求することができる（個人情報保護法76条、90条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1024",
+          "sourcePageAnswer": "1025"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "「開示請求をする者の氏名または名称および住所または居所ならびに法人その他の団体にあっては代表者の氏名」は、（「行政機関の保有する情報の公開に関する法律」）第4条の開示請求書の記載事項である。",
+          "answerBoolean": true,
+          "explanationText": "本肢事項は、情報公開法4条1項1号に、開示請求書の記載事項として要求されている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1024",
+          "sourcePageAnswer": "1025"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "「行政文書の名称その他開示請求に係る行政文書を特定するに足りる事項」は、情報公開法（「行政機関の保有する情報の公開に関する法律」）第4条の開示請求書の記載事項である。",
+          "answerBoolean": true,
+          "explanationText": "本肢事項は、情報公開法4条1項2号に、開示請求書の記載事項として要求されている。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1024",
+          "sourcePageAnswer": "1025"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "行政機関情報公開法では、特定の個人を識別することができなくとも、公にすることにより当該個人の権利利益を侵害するおそれがあるような情報が載っている行政文書は不開示となりうる。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長は、開示請求があったとき、開示請求者に対して当該行政文書を開示しなければならないのが原則である（行政機関情報公開法5条）。しかし、「特定の個人を識別することはできないが、公にすることにより、なお個人の権利利益を害するおそれがあるもの」については、5条1号ただし書イ～ハの事由に該当しない限り不開示情報となる（5条1号本文）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1024",
+          "sourcePageAnswer": "1025"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "行政機関情報公開法は、地方公共団体は、同法の趣旨にのっとり、その保有する情報の公開に関し必要な施策を策定し、これを実施するよう努めなければならないと定めている。",
+          "answerBoolean": true,
+          "explanationText": "地方公共団体は、情報公開法の趣旨にのっとり、その保有する情報の公開に関し必要な施策を策定し、およびこれを実施するよう努めなければならない（情報公開法25条）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.98,
+          "sectionTitle": "情報通信・個人情報保護",
+          "sourcePageQuestion": "1024",
+          "sourcePageAnswer": "1025"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "464",
+      "originalProblemId": "KB2025-p464-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "公文書管理法に定める「行政文書」とは、同法の定める例外を除き、行政機関の職員が職務上作成しまたは取得した文書で、当該行政機関の職員が組織的に用いるものとして当該行政機関が保有しているものであるとされる。",
+          "answerBoolean": true,
+          "explanationText": "公文書管理法の「行政文書」とは、特定歴史公文書等の例外を除き、行政機関の職員が職務上作成し、または取得した文書であって、当該行政機関の職員が組織的に用いるものとして、当該行政機関が保有しているものである（公文書管理法2条4項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "公文書管理法",
+          "sourcePageQuestion": "1026",
+          "sourcePageAnswer": "1027"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "行政機関の職員が行政文書を作成・取得したときには、当該行政機関の長は、政令で定めるところにより、当該行政文書について分類し、名称を付するとともに、保存期間および保存期間の満了する日を設定しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長は、行政文書を作成または取得したときは、当該行政機関の長は、政令で定めるところにより、当該行政文書について分類し、名称を付するとともに、保存期間および保存期間の満了する日を設定しなければならない（公文書管理法5条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "公文書管理法",
+          "sourcePageQuestion": "1026",
+          "sourcePageAnswer": "1027"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "行政機関の長は、行政文書ファイル管理簿の記載状況その他の行政文書の管理の状況について、毎年度、内閣総理大臣に報告しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長は、行政文書ファイル管理簿の記載状況その他の行政文書の管理の状況について、毎年度、内閣総理大臣に報告しなければならない（公文書管理法9条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "公文書管理法",
+          "sourcePageQuestion": "1026",
+          "sourcePageAnswer": "1027"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "行政機関の長は、行政文書の管理が公文書管理法の規定に基づき適正に行われることを確保するため、行政文書の管理に関する定め（行政文書管理規則）を設けなければならない。",
+          "answerBoolean": true,
+          "explanationText": "行政機関の長は、行政文書の管理が所定の規定に基づき適正に行われることを確保するため、行政文書の管理に関する定め（行政文書管理規則）を設けなければならない（公文書管理法10条1項）。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "公文書管理法",
+          "sourcePageQuestion": "1026",
+          "sourcePageAnswer": "1027"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "公文書管理法は、行政機関の職員に対し、処理に係る事案が軽微なものである場合を除き文書を作成しなければならないという文書作成義務を定め、違反した職員に対する罰則を定めている。",
+          "answerBoolean": false,
+          "explanationText": "公文書管理法の目的は、公文書等の管理に関する基本的事項を定めることにより、行政文書等の適正な管理、歴史公文書等の適切な保存および利用等を図り、もって行政が適正かつ効率的に運営されるようにするとともに、国および独立行政法人等の有するその諸活動を現在および将来の国民に説明する責務が全うされるようにすることにあり（公文書管理法1条）、違反した職員に対する罰則は定められていない。",
+          "subjectCandidate": "kiso-chishiki",
+          "chapterCandidate": "kiso-chishiki-joho",
+          "confidence": 0.95,
+          "sectionTitle": "公文書管理法",
+          "sourcePageQuestion": "1026",
+          "sourcePageAnswer": "1027"
+        }
+      ],
+      "parseError": null
     }
   ]
 }
