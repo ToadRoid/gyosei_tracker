@@ -1,10 +1,10 @@
 # current_status — 現在の作業状況
 
-最終更新: 2026-04-24 (v105 = 後半 L2 バッチ 5 import = p322-p350 = 29 ページ / 152 肢追加、Claude 自律運用 fifth cycle、batch size 30 枚維持)
+最終更新: 2026-04-24 (v105 = 後半 L2 バッチ 5 import = PR #78 squash merged、Claude 自律運用 fifth cycle 完走、batch size 30 枚維持)
 
-## 現在地 (confirmed, 2026-04-24 post-v105-batch5-import)
+## 現在地 (confirmed, 2026-04-24 post-v105-merge)
 
-- **latest data merge (in-flight)**: v105 = 本 PR = batch 5 = 29 ページ / 152 肢（全て minpo-saiken 契約各論・債権以外の債権発生原因、book 742/743-798/799、章境界なし）
+- **latest data merge**: v105 = PR #78 squash `2c75251d3d834d0a427af65f28cbb4c1e0abe38f`（batch 5 = p322-p350 = 29 ページ / 152 肢、minpo-saiken 契約各論、book 742/743-798/799、章境界なし）
 - **前回 data merge**: v104 = PR #76 squash `3e25fb9b83e1cd1b391b92fd81835eb2bbb6e703`（batch 4 = p255 + p293-p320 = 29 ページ / 155 肢）
 - **前々回 data merge**: v103 = PR #75 squash `19af812c55dcf045db21a072345e4eaff7299639`（batch 3 = p271-p290 = 20 ページ / 95 肢）
 - **PR #77 (v104 SHA backfill handoff-only)**: merged = `2b9e81c1e9a11471cf3fea3bf74eb912eba83cef`
