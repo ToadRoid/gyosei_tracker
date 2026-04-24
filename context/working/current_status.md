@@ -1,12 +1,13 @@
 # current_status — 現在の作業状況
 
-最終更新: 2026-04-24 (v104 = 後半 L2 バッチ 4 import = p255 + p293-p320 = 29 ページ / 155 肢追加、Claude 自律運用 fourth cycle、batch size 20 → 30 ladder bump)
+最終更新: 2026-04-24 (post-v104-merge SHA backfill handoff-only、PR #76 squash = `3e25fb9`、PR #74 close 確定)
 
-## 現在地 (confirmed, 2026-04-24 post-v104-batch4-import)
+## 現在地 (confirmed, 2026-04-24 post-v104-merge SHA backfill)
 
-- **latest data merge (in-flight)**: v104 = 本 PR = batch 4 = 29 ページ / 155 肢（p255 = minpo-bukken 占有権 612/613 + p293-p320 = minpo-saiken 債権 684/685-738/739）
+- **latest data merge**: v104 = PR #76 squash = **`3e25fb9b83e1cd1b391b92fd81835eb2bbb6e703`**（batch 4 = 29 ページ / 155 肢、p255 = minpo-bukken 占有権 612/613 + p293-p320 = minpo-saiken 債権 684/685-738/739）
 - **前回 data merge**: v103 = PR #75 squash `19af812c55dcf045db21a072345e4eaff7299639`（batch 3 = p271-p290 = 20 ページ / 95 肢）
 - **前々回 data merge**: v102 = PR #73 squash `6695b7be671075eec9ebc5dced143a686e4f94c1`（batch 2 = p250 + p251-p270 excl. p255 = 20 ページ / 104 肢）
+- **PR #74**: **close 済**（v102 SHA backfill handoff-only、v104 本文に吸収済 = mergeしない判定で obsolete）
 - **DATA_VERSION**: `2026-04-24-audit-v104-batch4-L2-p255-p293-320-import`
 - **総ページ**: 280 → 309 (+29) / **総肢**: 1516 → 1671 (+155)
 - **L1 本線**: ✅ 実質完了維持
