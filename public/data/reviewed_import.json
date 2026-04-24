@@ -24640,6 +24640,2100 @@
           "sourcePageAnswer": "799"
         }
       ]
+    },
+    {
+      "sourcePage": "351",
+      "originalProblemId": "KB2025-p351-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの隣人であるBは、Aの不在の間に台風によってA所有の甲建物の屋根が損傷したため修繕を行った。Bは、Aからあらかじめ甲の管理を頼まれていなかったにもかかわらず、Aのために修繕を行ったが、強風に煽られて屋根から落下してしまい、負傷した。この場合に、Bは、Aに対して損害賠償を請求することができない。",
+          "answerBoolean": true,
+          "explanationText": "事務管理においては、委任の場合とは異なり、損害賠償請求を認める規定はない（民法701条は650条3項を準用していない）。したがって、Bは、Aに対して損害賠償を請求できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "800",
+          "sourcePageAnswer": "801"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "不当利得による善意の受益者は、その利益の存する限度において、返還する義務を負う。",
+          "answerBoolean": true,
+          "explanationText": "不当利得とは、法律上の原因なく他人の財産または労務によって利益を受け、そのために他人に損害を及ぼした場合であり、法律上の原因がないことを知らずに利益を受けた善意の受益者は、その利益の存する限度において、これを返還する義務を負う（民法703条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "800",
+          "sourcePageAnswer": "801"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Cは、BからB所有の家屋を賃借した際に、CがBに対して権利金を支払わない代わりに、Cが当該家屋の修繕義務を負うこととする旨を合意したため、後日、当該家屋の修繕工事が必要となった際、CはAに対してこれを依頼し、Aが同工事を完了したが、CはAに修繕代金を支払う前に無資力となってしまった。この場合に、Aは、Bに対し、不当利得として修繕代金相当額の返還を請求することはできない。",
+          "answerBoolean": true,
+          "explanationText": "建物所有者Bが法律上の原因なくして修繕工事に要した財産および労務の提供に相当する利益を受けたと評価することができるのは、BC間の賃貸借契約を全体としてみて、Bが対価関係なしに右利益を受けたときに限られる（最判平7.9.19）。BC間の建物賃貸借契約においては、CがBに対して権利金を支払わない代わりに、Cが家屋の修繕義務を負うこととされており、BC間の賃貸借契約を全体としてみて、Bが対価関係なしに右利益を受けとったとはいえない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "800",
+          "sourcePageAnswer": "801"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Bは、Cから強迫を受け、同人の言うままに、Aと金銭消費貸借契約を締結し、Aに指示してBとは何らの法律上または事実上の関係のないDに貸付金を交付させたところ、Bが強迫を理由にAとの当該金銭消費貸借契約を取り消した。この場合に、Aは、Bに対し、不当利得として貸付金相当額の返還を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "不当利得返還請求が認められるためには他人の財産または労務によって利益を受けていることが必要である。Bは、Cから強迫され、同人の言うままに、Aと金銭消費貸借契約を締結し、Aに指示してBとは何らの法律上または事実上の関係のないDに貸付金を交付させており、Dへの貸付金交付により利益を受けていない（最判平10.5.26）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "800",
+          "sourcePageAnswer": "801"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "甲が乙から騙取または横領した金銭により自己の債権者丙に対する債務を弁済した場合において、弁済の受領につき丙に悪意または重大な過失があるときは、丙の右金銭の取得は、乙に対する関係においては不当利得となる。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判昭49.9.26）は、甲が乙から騙取または横領した金銭により自己の債権者丙に対する債務を弁済した場合において、弁済の受領につき丙に悪意または重大な過失があるときは、丙の右金銭の取得は、乙に対する関係においては法律上の原因を欠き、不当利得となるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "800",
+          "sourcePageAnswer": "801"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "352",
+      "originalProblemId": "KB2025-p352-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "不当利得による悪意の受益者は、受けた利益の全部を返還すれば足りる。",
+          "answerBoolean": false,
+          "explanationText": "不当利得による悪意の受益者、つまり法律上の原因がないことを知りながら利益を受けた受益者は、その受けた利益に利息を付して返還しなければならない。この場合において、なお損害があるときは、その賠償の責任を負う（民法704条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "802",
+          "sourcePageAnswer": "803"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債務のないことを知りながら、その弁済として給付をなした者は、その返還を請求することができない。",
+          "answerBoolean": true,
+          "explanationText": "債務の弁済として給付をした者は、その時において債務の存在しないことを知っていたときは、その給付したものの返還を請求することができない（民法705条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "802",
+          "sourcePageAnswer": "803"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに対する未払い賃料はないことを知りつつ、Bから賃料不払い等を理由とした賃貸建物明渡請求訴訟を提起された場合における防禦方法として支払いをなすものであることを特に表示したうえで、Bに弁済を行った。この場合に、Aは、Bに対し、不当利得として給付した弁済額の返還を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "居住家屋の賃料の支払義務のない者（A）が、当該家屋の所有者（B）から賃料支払の催告を受けたため、これを支払うべき筋合いはないが賃料不払等とこじつけて家屋明渡訴訟を提起された場合の防禦方法として支払いをなすものであることを特に表示したうえ、請求額を支払った等判示事実関係のように、債務の不存在を知って弁済したこととも無理からぬような客観的事情がある場合には、民法705条の適用はない（最判昭35.5.6）。給付は任意の弁済であることと要するからである。したがって、Aは、不当利得の本則に従い（703条）、弁済額の返還を請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "802",
+          "sourcePageAnswer": "803"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "債務者でない者が、錯誤によって、債務の弁済をした場合において、債権者が善意で消滅時効の完成によって債権を失ったときは、弁済者は返済の請求ができない。",
+          "answerBoolean": true,
+          "explanationText": "債務者でない者が錯誤によって債務の弁済をした場合において、債権者が善意で時効によってその債権を失ったときは、その弁済をした者は、返還の請求をすることができない（民法707条1項）。このような弁済は、有効な第三者弁済（474条）ではないから、債権者に対して不当利得の返還請求をなしうるはずであるが、それでは、その弁済を有効と信じた債権者が不測の損害を被るおそれがあるため、弁済者に返還請求権を認めないこととしたのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "802",
+          "sourcePageAnswer": "803"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "不法原因給付における不法原因が、受益者についてのみ存する場合には、給付者は返還の請求ができる。",
+          "answerBoolean": true,
+          "explanationText": "不法な原因のために給付をした者は、その給付したものの返還を請求することができない（民法708条本文）。このような返還請求を認めると法が不法に助力することになるからである。ただし、不法な原因が受益者についてのみ存したときは、給付者に反社会性があるとはいえないから、給付者は、不当利得の返還請求をすることができる（708条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "802",
+          "sourcePageAnswer": "803"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "353",
+      "originalProblemId": "KB2025-p353-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bとの愛人関係を維持するために、自己の有する未登録建物をBに贈与し、これを引き渡した。この場合に、Aは、Bに対し、不当利得としてこの建物の返還を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "愛人関係を維持することを目的とするAとB間の贈与は公序良俗に反し無効であり（民法90条）、未登録建物の引渡しは「不法の原因」（708条本文）に基づくものといえる。「給付」が不法原因給付にあたるには、受益者に終局的利益を与えるものでなければならないところ、未登録建物の引渡しが「給付」に当たる（最大判昭45.10.21）。したがって、708条により、Aは、Bに対し、建物の返還を請求できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "804",
+          "sourcePageAnswer": "805"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、配偶者がいるにもかかわらず、配偶者以外のBと不倫関係にあり、その関係を維持する目的で、A所有の甲建物をBに贈与した。A名義の登記がなされた甲建物がBに引き渡されたときには、Aは、Bからの甲建物についての移転登記請求を拒むことはできない。",
+          "answerBoolean": false,
+          "explanationText": "不法の原因により既登記建物を贈与した場合、民法708条にいう給付があったとはいえるためには、その引渡しをしただけでは足らず、移転登記も必要である（最判昭46.10.28）。したがって、B名義の移転登記がされていない本肢では、708条の適用はなく、建物所有権はBに移転していないことから（最大判昭45.10.21）、Aは、Bからの甲建物についての移転登記請求を拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "804",
+          "sourcePageAnswer": "805"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、賭博に負けたことによる債務の弁済として、Bに高価な骨董品を引き渡したが、その後、A・B間でBがこの骨董品をAに返還する旨の契約をした。この場合に、Aは、Bに対し、この骨董品の返還を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "賭博等の不法な原因のために給付をした者は、その給付したものの返還を請求することができないが（民法708条本文）、不法原因契約を合意の上解除してその給付を返還する特約をすることは、708条の禁ずるところでない（最判昭28.1.22）。したがって、Aは、この特約に基づいて、Bに対し骨董品の返還を請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "804",
+          "sourcePageAnswer": "805"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、配偶者がいるにもかかわらず、配偶者以外のBと不倫関係にあり、その関係を維持する目的で、A所有の甲建物をBに贈与した。甲建物が未登録建物である場合において、Aが甲建物をBに引き渡した後に同建物についてA名義の保存登記をしたときには、Aは、Bに対して甲建物の返還を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "建物の所有者のした贈与に基づく履行行為が不法原因給付にあたる場合には、贈与者において給付した物の返還を請求できないことの反射的効果として、建物の所有権は、受贈者に帰属する（最大判昭45.10.21）。したがって、Aが未登記の甲建物をBに引き渡した本肢においては、建物所有権はBに移転しているから、A名義の保存登記は無効な登記であり、Aは、Bに対して甲建物の返還を請求することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "804",
+          "sourcePageAnswer": "805"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "354",
+      "originalProblemId": "KB2025-p354-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、配偶者がいるにもかかわらず、配偶者以外のBと不倫関係にあり、その関係を維持する目的で、A所有の甲建物をBに贈与した。贈与契約のいきさつにおいて、Aの不法性がBの不法性に比してきわめて微弱なものであっても、Aが未登記建物である甲建物をBに引き渡したときには、Aは、Bに対して甲建物の返還を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "不法な原因が受益者についてのみ存したときは、不法な原因のために給付をしたとしても、給付者は、その給付したものの返還を請求することができる（民法708条ただし書）。契約成立のいきさつにおいて、給付者の側に多少の不法があったとしても、給付者の不法性が受益者の不法性に比してきわめて微弱なものに過ぎない場合には、708条ただし書の適用により、給付者は給付したものの返還を請求することができる（最判昭29.8.31）。したがって、給付者Aの不法性が受益者Bの不法性に比してきわめて微弱な本肢では、Aは、Bに対して甲建物の返還を請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.98,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "806",
+          "sourcePageAnswer": "807"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは不動産会社Bと、BがC工務店に注文して建築させた建売住宅を購入する契約を締結した。この建売住宅にCの手抜き工事による欠陥があって、漏水のためAの大切にしていた絵画が損害を受けた場合、AはCに対して不法行為に基づく損害賠償請求ができる。",
+          "answerBoolean": true,
+          "explanationText": "不法行為に基づく損害賠償請求は、他人から損害を加えられた場合に、たとえ契約関係がなくても、一定の要件のもとで金銭賠償を請求する債権が発生することを認めた規定である（民法709条）。本肢は、直接の契約関係がないCの手抜き工事という過失行為による欠陥によってAに損害が生じていることから不法行為の問題となる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.99,
+          "sectionTitle": "不法行為 1) 一般不法行為",
+          "sourcePageQuestion": "806",
+          "sourcePageAnswer": "807"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "鍵が掛けられていた、他人の自転車を盗んだ者が、その自転車を運転している最中に不注意な運転により第三者に怪我を負わせてしまった場合、自転車の所有者は、第三者に対して不法行為責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "怪我をさせたのは窃盗犯人であるほか、自転車の所有者は鍵をかけていたことから、自転車の所有者に故意または過失（民法709条）があるとはいえない。したがって、自転車の所有者は、第三者に対して不法行為責任を負わない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.99,
+          "sectionTitle": "不法行為 1) 一般不法行為",
+          "sourcePageQuestion": "806",
+          "sourcePageAnswer": "807"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "法人が名誉毀損を受けた場合、法人には感情がないので、財産的損害を除き、非財産的損害の賠償は認められない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭39.1.28）は、法人の名誉権が侵害され、無形の損害が生じた場合でも、損害の金銭評価が可能である限り、民法710条に基づく非財産的損害の賠償は認められるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.99,
+          "sectionTitle": "不法行為 1) 一般不法行為",
+          "sourcePageQuestion": "806",
+          "sourcePageAnswer": "807"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "精神上の障害により自己の行為の責任を弁識する能力を欠く状態にある間に他人に損害を加えた者は、過失によって一時的にその状態を招いたとしても、損害賠償の責任を負わない。",
+          "answerBoolean": false,
+          "explanationText": "精神上の障害により自己の行為の責任を弁識する能力を欠く状態にある間に他人に損害を加えた者は、その賠償の責任を負わないのが原則である（民法713条本文）。しかし、故意または過失によって一時的にその状態を招いたときは、損害賠償をさせるのが公平であることから、そのような場合には賠償責任を負う（713条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.99,
+          "sectionTitle": "不法行為 1) 一般不法行為",
+          "sourcePageQuestion": "806",
+          "sourcePageAnswer": "807"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "355",
+      "originalProblemId": "KB2025-p355-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "未成年者が他人に損害を加えた場合において、その行為の責任を弁識するに足りる知能を備えていなかったときは、その監督責任者は常に賠償の責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "未成年者は、他人に損害を加えた場合において、自己の行為の責任を弁識するに足りる知能を備えていなかったときは、賠償の責任を負わない（民法712条）。この場合、その者を監督する法定義務者が損害賠償責任を負うのが原則である（714条1項本文）。ただし、監督義務者がその義務を怠らなかったとき、またはその義務を怠らなくても損害が生ずべきであったときは、監督義務者は責任を負わないのであり（714条1項ただし書）、常に責任を負うわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "808",
+          "sourcePageAnswer": "809"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "責任能力を有する未成年者が不法行為をなした場合、親権者の未成年者に対して及ぼしうる影響力が限定的で、かつ親権者において未成年者が不法行為をなすことを予測し得る事情がないときには、親権者は、被害者に対して不法行為責任を負わない。",
+          "answerBoolean": true,
+          "explanationText": "本肢所定の場合、親権者は不法行為責任を負わないから、正しい。すなわち、民法714条（監督義務者の責任）は、「責任無能力者（712条、713条）がその責任を負わない場合」に適用され、「責任能力を有する」場合には適用されない。しかし、監督義務者の義務違反と当該未成年者の不法行為によって生じた結果との間に相当因果関係があるときは、監督義務者につき「民法709条に基づく不法行為責任」が成立する（最判昭49.3.22）。ただ、そうであっても、親権者の未成年者に対して及ぼしうる影響力が限定的で、かつ親権者において未成年者が不法行為をなすことが予測し得る事情がないときは、親権者は不法行為責任を負わないのである（最判平18.2.24）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "808",
+          "sourcePageAnswer": "809"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは自動車を運転中に、急ハンドルの操作をしたため、自動車を歩行者Bに接触させ、同人を転倒させた。Aが急ハンドルをしたのは、崖崩れにより付近の住宅が倒壊してきたため、それを避けるためにやむを得ずにしたものであった。この場合、Aの行為は緊急避難にあたり、違法性は認められないことになる。",
+          "answerBoolean": false,
+          "explanationText": "他人の物から生じた急迫の危難を避けるためにその物を損傷した場合、違法性が阻却され、不法行為は成立しない（民法720条2項：緊急避難）。緊急避難が成立するためには、「急迫の危難」が「他人の物」から生じ、加害行為が当該「物」に対する損傷でなければならない。したがって、崖崩れにより付近の住宅が倒壊してきたため、それを避けるために、歩行者Bを負傷させた場合は、加害行為が当該「物」に対するものではなく、緊急避難は成立せず、違法性は認められる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "808",
+          "sourcePageAnswer": "809"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "356",
+      "originalProblemId": "KB2025-p356-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "事業の執行につき被用者が第三者に損害を与えた場合には、当該被用者が損害賠償責任を負うが、当該被用者に支払能力がないときには、使用者が損害賠償責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "事業の執行につき被用者が第三者に損害を与えた場合には、当該被用者の支払能力の有無にかかわらず、原則として使用者も損害賠償責任を負う（民法715条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "810",
+          "sourcePageAnswer": "811"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "飲食店店員が出前に自動車で行く途中で他の自動車の運転手と口論となり、ついには同人に暴力行為を働いてしまった場合には、事業の執行につき加えた損害に該当せず、店員の使用者は使用者責任を負わない。",
+          "answerBoolean": false,
+          "explanationText": "本肢のように事業の執行を契機とし、これに密接に関連する行為も「事業の執行」といえるから（民法715条1項本文、最判昭46.6.22）、本肢の場合、店員の使用者は使用者責任を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "810",
+          "sourcePageAnswer": "811"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "使用者は、事業の執行につき、第三者に損害を加えても、使用者は被用者の選任および事業の監督につき相当の注意をなしている場合は、責任を負う必要はない。",
+          "answerBoolean": true,
+          "explanationText": "使用者は、被用者が事業の執行について第三者に損害を加えた場合、賠償責任を負うのが原則である（報償責任：民法715条1項本文）。ただし、使用者が被用者の選任およびその事業の監督について相当の注意をしたときは、使用者は責任を免れる（715条1項ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "810",
+          "sourcePageAnswer": "811"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "357",
+      "originalProblemId": "KB2025-p357-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aに雇われているBの運転する車が、Aの事業の執行中に、Cの車と衝突して歩行者Dを負傷させた場合、AがDに対して損害を全額賠償したときは、Aは、Bに故意または重大な過失があったときに限ってBに対して求償することができる。",
+          "answerBoolean": false,
+          "explanationText": "使用者等の責任が成立する場合、使用者または監督者は被用者に求償権を行使することができ（民法715条3項）、被用者の故意重過失がある場合に限られない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "812",
+          "sourcePageAnswer": "813"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "使用者Aが、その事業の執行につき行った被用者Bの加害行為について、Cに対して使用者責任に基づき損害賠償金の全額を支払った場合には、AはBに対してその全額を求償することができる。",
+          "answerBoolean": false,
+          "explanationText": "使用者または監督者は、被用者に対して求償することができる（民法715条3項）。もっとも、使用者は被用者を通じて利益を獲得しているため、損失も公平に分担すべきとの要請は、諸般の事情に照らし、信義則上相当と認められる限度に制限される（最判昭51.7.8）。したがって、AがBに対してできる求償は、Cに賠償した全額ではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "812",
+          "sourcePageAnswer": "813"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "請負人がその仕事について第三者に損害を与えてしまった場合、注文者と請負人の間には使用関係が認められるので、注文者は、原則として第三者に対して使用者責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "請負作業は請負人自身の事業の執行であり、注文者と請負人との間には使用関係はないことから、注文者は、請負人が第三者に加えた損害の賠償責任を負わないのが原則である（民法716条本文）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "812",
+          "sourcePageAnswer": "813"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "注文者または指図について過失がなくても、注文者は常に、請負人がその仕事について第三者に加えた損害の賠償責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "注文者は、請負人がその仕事について第三者に加えた損害を賠償する責任を負わないのが原則である（民法716条本文）。ただし、注文または指図についてその注文者に過失があったときは、注文者は責任を負うのであり（716条ただし書）、過失がなくても、常に責任を負うわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "812",
+          "sourcePageAnswer": "813"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aの運転する自動車が、見通しが悪く遮断機のない踏切を通過中にB鉄道会社の運行する列車と接触し、Aが負傷して損害が生じた。この場合、線路は土地工作物にはあたらないから、AがB鉄道会社に対して土地工作物責任に基づく損害賠償を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "土地の工作物の設置または保存に瑕疵があることによって他人に損害を生じたときは、その工作物の占有者、被害者に対してその損害を賠償する責任を負う（民法717条1項本文）。踏切道の軌道施設は土地の工作物にあたる（最判昭46.4.23）。したがって、Aは、B鉄道会社に対して土地工作物責任に基づく損害賠償を請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "812",
+          "sourcePageAnswer": "813"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "358",
+      "originalProblemId": "KB2025-p358-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "借家が倒れて通行人が怪我をした場合、塀の占有者である借家人は通行人に対して無過失責任を負うが、塀を直接占有していない所有者が責任を負うことはない。",
+          "answerBoolean": false,
+          "explanationText": "土地工作物責任は、第1次的には占有者が、占有者が免責された場合に所有者が免責されることのない絶対的責任（無過失責任）を負うから、本肢は誤っている。すなわち、土地の工作物の設置・保存の瑕疵により他人に損害を与えた場合、占有者は被害者に損害賠償責任を負うが、占有者が損害の発生を防止するのに必要な注意をしたときは、所有者が損害賠償責任を負う（民法717条1項）。したがって、塀の占有者である借家人が損害の発生を防止するのに必要な注意をすれば、借家人は通行人に責任を負わず、所有者が責任を負うことになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "814",
+          "sourcePageAnswer": "815"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aがその所有する庭に植栽した樹木が倒れて通行人Cに怪我を負わせる事故が生じた場合において、AがCに損害を賠償したときは、植栽工事を担当した請負業者Bの作業に瑕疵があったことが明らかな場合には、AはBに対して求償することができる。",
+          "answerBoolean": true,
+          "explanationText": "竹木の栽植または支持に瑕疵があることによって他人に損害を生じたときは、その竹木の占有者は、原則として被害者に対してその損害を賠償する責任を負うが（民法717条2項）、損害の原因について他に責任を負う者があるときは、占有者または所有者は、その者に対して求償権を行使することができる（717条3項）。したがって、AがCに損害を賠償したときは、Bの作業に瑕疵があったことが明らかな場合には、AはBに対して求償することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "814",
+          "sourcePageAnswer": "815"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Dの飼育する猛犬がE社製の飼育檻から逃げ出して通行人Fに噛みつき怪我を負わせる事故が生じた場合において、Dが猛犬を相当の注意をもって管理をしたことを証明できなかったとしても、犬が逃げ出した原因がE社製の飼育檻の強度不足にあったことを証明したときは、Dは、Fに対する損害賠償の責任を免れることができる。",
+          "answerBoolean": false,
+          "explanationText": "動物の占有者は、原則として、その動物が他人に加えた損害を賠償する責任を負うが、動物の種類および性質に従い相当の注意をもってその管理をしたときは、動物の占有者等の責任は負わない（民法718条1項）。したがって、Dが猛犬を相当の注意をもって管理をしたことを証明できなかった場合、犬が逃げ出した原因がE社製の飼育檻の強度不足にあったとしても、Dは損害賠償の責任を免れない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "814",
+          "sourcePageAnswer": "815"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "359",
+      "originalProblemId": "KB2025-p359-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "犬の飼主がその雇人に犬の散歩をさせていたところ、当該犬が幼児に噛みついて負傷させた場合には、雇人が占有補助者であるときでも、当該雇人は、現実に犬の散歩を行っていた以上、動物占有者の責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "判例（大判大10.12.15）は、占有補助者は、固有の利益を有する占有者ではないため、占有者または占有者に代わって動物を管理する者に当たらないとしている。したがって、本肢所定の場合、当該雇人は、現実に犬の散歩を行っていたとしても、動物占有者の責任を負わない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "816",
+          "sourcePageAnswer": "817"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "共同不法行為における教唆者は、共同行為者とみなされない。",
+          "answerBoolean": false,
+          "explanationText": "教唆者、つまり他人をそそのかして不法行為をさせた者も、共同行為者として扱われる（民法719条2項）。教唆者も直接の不法行為実行者と主観的ないし客観的な結びつきがあるからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "816",
+          "sourcePageAnswer": "817"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "不法行為による損害賠償の方法として、民法は、金銭賠償によるべきものとし、他の方法は認めていない。",
+          "answerBoolean": false,
+          "explanationText": "不法行為による損害賠償の方法は、金銭賠償を原則とするが、別段の意思表示があれば、金銭賠償の方法によらないことができる（民法722条1項、417条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "816",
+          "sourcePageAnswer": "817"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "胎児は、不法行為に基づく損害賠償の請求権については、すでに生まれたものとみなされる。",
+          "answerBoolean": true,
+          "explanationText": "権利能力者でなければ損害賠償請求の主体たりえないから、胎児は、損害賠償を本来なしえない（民法3条1項）。しかし、それでは胎児の保護に欠けるため、損害賠償の請求権については、既に生まれたものとみなされている（721条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "816",
+          "sourcePageAnswer": "817"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "他人の不法行為により夫が即死した場合には、その妻は、相続によって夫の逸失利益について損害賠償請求権を行使することはできない。",
+          "answerBoolean": false,
+          "explanationText": "被害者が即死した場合でも、被害者に財産的損害賠償請求権が帰属し、これが相続される（大判大15.2.16）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "816",
+          "sourcePageAnswer": "817"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "他人の不法行為により夫が死亡した場合には、その妻は、相続によって夫本人の慰謝料請求権を行使できるので、妻には固有の慰謝料請求権は認められていない。",
+          "answerBoolean": false,
+          "explanationText": "被害者が死亡した場合、被害者の父母・配偶者・子は、加害者に対し固有の慰謝料を請求することができる（民法711条、大判大15.2.16）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "816",
+          "sourcePageAnswer": "817"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "360",
+      "originalProblemId": "KB2025-p360-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "他人の不法行為により、夫が慰謝料請求権を行使する意思を表示しないまま死亡した場合には、その妻は、相続によって夫の慰謝料請求権を行使することはできない。",
+          "answerBoolean": false,
+          "explanationText": "不法行為による慰謝料請求権は、被害者が生前に請求の意思を表明しなくても、相続の対象となる（最大判昭42.11.1）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "818",
+          "sourcePageAnswer": "819"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "他人の不法行為により死亡した被害者の父母、配偶者、子以外の者であっても、被害者との間にそれらの親族と実質的に同視し得る身分関係が存在するため被害者の死亡により甚大な精神的苦痛を受けた場合には、その者は、加害者に対し直接固有の慰謝料請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "被害者との間に民法711条所定の者と実質的に同視できる身分関係が存在し、被害者の死亡により甚大な精神的苦痛を受けた者は、711条の類推適用により慰謝料請求権が認められる（最判昭49.12.17）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "818",
+          "sourcePageAnswer": "819"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "他人の不法行為により子が重い傷害を受けたために、当該子が死亡したときにも比肩しうべき精神上の苦痛をその両親が受けた場合でも、被害者本人は生存しており本人に慰謝料請求権が認められるので、両親には固有の慰謝料請求権は認められない。",
+          "answerBoolean": false,
+          "explanationText": "不法行為により身体に傷害を受けた者の父母が、そのために被害者の生命侵害の場合にも比肩しうべき精神上の苦痛を受けたときは、民法709条、710条に基づいて自己の権利として慰謝料を請求しうる（最判昭33.8.5）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "818",
+          "sourcePageAnswer": "819"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aの運転する自動車がAの前方不注意によりBの運転する自動車と衝突して、Bの自動車の助手席に乗っていたBの妻Cを負傷させ損害を生じさせた。CがAに対して損害賠償請求をする場合には、原則としてBの過失も考慮される。",
+          "answerBoolean": true,
+          "explanationText": "被害者に過失があったときは、裁判所は、これを考慮して、損害賠償の額を定めることができる（過失相殺：民法722条2項）。この場合の「被害者の過失」とは、被害者だけでなく、被害者と身分上ないしは生活関係上一体をなすとみられるような関係にある者の過失も含まれる（最判昭51.3.25）。したがって、Bの妻CがAに損害賠償請求をする場合には、原則として夫Bの過失も考慮される。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "818",
+          "sourcePageAnswer": "819"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "A保育園の園児Bが保育士Cの手が離された際に、車道に飛び出し、Dの運転する自動車に接触し負傷した場合、BがDに対し不法行為に基づく損害賠償を請求したときは、裁判所は、Cの過失を考慮して損害賠償額を定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "裁判所は、被害者の過失を考慮して損害賠償の額を定めることができる（民法722条2項）。判例（最判昭42.6.27）は、被害者の過失には、被害者本人の過失のほか、被害者側の過失をも含むとし、被害者側の過失とは、被害者の父母のように、被害者と身分上ないしは生活関係上一体をなすとみられるような関係にある者の過失であるとした上で、幼児の監護を委託された者の被用者のような被害者と一体をなすとみられない者の過失は含まれないとしている。したがって、裁判所は、保育士Cの過失を考慮して損害賠償額を定めることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "818",
+          "sourcePageAnswer": "819"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "361",
+      "originalProblemId": "KB2025-p361-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A（3歳）が母親Bの目を離した際に道路へ飛び出してCの運転するスピード違反の自動車に轢かれて死亡した場合、CがAに対して負うべき損害賠償額を定めるにあたって、A自身の過失を考慮して過失相殺するには、Aに責任能力があることが必要であるので、本件ではAの過失を斟酌することはできない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭39.6.24）は、民法722条2項により被害者の過失を斟酌するには、被害者である未成年者が事理を弁識する知能を具えていれば足り、自己の行為の責任を弁識する知能を具えていることを要しないとしている。したがって、本肢は、A自身の過失を考慮して過失相殺するには、Aに責任能力があることが必要であるとする部分は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "820",
+          "sourcePageAnswer": "821"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A（3歳）が母親Bの目を離した際に道路へ飛び出してCの運転するスピード違反の自動車に轢かれて死亡した場合、CがAに対して負うべき損害賠償額を定めるにあたって、A自身の過失を考慮して過失相殺するには、Aに事理弁識能力があることは必要でなく、それゆえ、本件ではAの過失を斟酌することができる。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭39.6.24）は、民法722条2項により被害者の過失を斟酌するには、被害者である未成年者が事理を弁識する知能を具えていれば足り、自己の行為の責任を弁識する知能を具えていることを要しないとしている。したがって、A自身の過失を考慮して過失相殺するには、Aに事理弁識能力があることが必要であるため、本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "820",
+          "sourcePageAnswer": "821"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A（3歳）が母親Bの目を離した際に道路へ飛び出してCの運転するスピード違反の自動車に轢かれて死亡した場合、CがAに対して負うべき損害賠償額を定めるにあたって、Aが罹患していた疾患も一因となって死亡したときは、疾患は過失とはいえないので、当該疾患の態様、程度のいかんにかかわらずAの疾患を斟酌することはできない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判平4.6.25）は、被害者に対する加害行為と加害行為前から存在した被害者の疾患とがともに原因となって損害が発生した場合において、当該疾患の態様、程度などに照らし、加害者に損害の全部を賠償させるのが公平を失するときは、裁判所は、損害賠償の額を定めるに当たり、被害者の疾患を斟酌できるとしている（民法722条2項類推適用）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "820",
+          "sourcePageAnswer": "821"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "損害賠償の額を定めるにあたり、被害者が平均的な体格ないし通常の体質と異なる身体的特徴を有していたとしても、身体的特徴が疾患に当たらない場合には、特段の事情の存しない限り、被害者の身体的特徴を斟酌することはできない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最判平8.10.29）は、不法行為により傷害を被った被害者が平均的な体格ないし通常の体質と異なる身体的特徴を有しており、これが、加害行為と競合して傷害を発生させ、または損害の拡大に寄与したとしても、身体的特徴が疾患に当たらないときは、特段の事情がない限り、これを損害賠償の額を定めるに当たり斟酌することはできないとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "820",
+          "sourcePageAnswer": "821"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "362",
+      "originalProblemId": "KB2025-p362-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの運転する自動車がAの前方不注意によりBの運転する自動車に追突してBを負傷させ損害を生じさせた。BのAに対する損害賠償請求権は、Bの負傷の程度にかかわりなく、また、症状について現実に認識できなくても、事故により直ちに発生し、5年で消滅時効にかかる。",
+          "answerBoolean": false,
+          "explanationText": "人の生命・身体の侵害を理由とする不法行為による損害賠償請求権は、被害者またはその法定代理人が損害および加害者を知った時から5年間行使しないときは、時効によって消滅する（民法724条の2）。ここに「被害者が損害を知った時」とは、被害者が損害の発生を現実に認識した時をいう（最判平14.1.29）。したがって、症状について現実に認識できない本肢では、BのAに対する損害賠償請求権は、事故から5年が経過しても、時効消滅しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "822",
+          "sourcePageAnswer": "823"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "人の生命・身体の侵害を理由としない不法行為による損害賠償請求権は、不法行為の時から10年で時効により消滅する。",
+          "answerBoolean": false,
+          "explanationText": "人の生命・身体の侵害を理由としない不法行為による損害賠償請求権は、被害者またはその法定代理人が損害および加害者を知った時から3年経過すると、時効により消滅する（民法724条1号）。また、不法行為の時から、10年ではなく、20年たてば、損害賠償請求権を行使することができない（724条2号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "822",
+          "sourcePageAnswer": "823"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "人の生命又は身体を害する不法行為による損害賠償請求権は、被害者又はその法定代理人が損害及び加害者を知った時から3年間行使しないときは、時効によって消滅する。",
+          "answerBoolean": false,
+          "explanationText": "人の生命または身体を害する不法行為による損害賠償請求権は、被害者またはその法定代理人が損害および加害者を知った時から5年間行使しないときは、時効によって消滅する（民法724条の2）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約以外の債権発生原因",
+          "sourcePageQuestion": "822",
+          "sourcePageAnswer": "823"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "363",
+      "originalProblemId": "KB2025-p363-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "事実上の夫婦共同生活関係にある者が婚姻意思を有し、その意思に基づいて婚姻の届書を作成したときは、届書の受理された当時意識を失っていたとしても、その受理以前に翻意したなど特段の事情のない限り、届書の受理により婚姻は有効に成立する。",
+          "answerBoolean": true,
+          "explanationText": "婚姻意思の存在は、婚姻の実質的成立要件であり（民法742条1号参照）、届出時において必要であるから（739条参照、通説）、届出時に意識を失っていた場合には無効となりそうである。しかし、本肢のように婚姻の実体ないしそれに準ずる事実的関係が存在している場合については、意思の継続が強く推定されるため、受理以前に翻意する等婚姻の意思を失うとみられる特段の事情のないかぎり、届出の受理によって婚姻は有効に成立する（最判昭44.4.3）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "婚姻",
+          "sourcePageQuestion": "824",
+          "sourcePageAnswer": "825"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "婚姻の届出が単に子に嫡出子としての地位を得させるための便法として仮託されたものにすぎないときでも、婚姻の届出自体については当事者間に意思の合致があれば、婚姻は効力を生じ得る。",
+          "answerBoolean": false,
+          "explanationText": "生まれた子に嫡出子としての地位を与えるために、直ちに離婚する条件で婚姻届を出した仮装身分行為については、相手方が離婚の手続に応じない事案で、判例は、本件婚姻届が便法にすぎ、社会通念上夫婦であると認められる関係の設定を欲する効果意思がないから、婚姻は効力を生じないとした（最判昭44.10.31）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "婚姻",
+          "sourcePageQuestion": "824",
+          "sourcePageAnswer": "825"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "婚姻をしている者が、他の者と内縁関係を結ぶ場合には、重婚となる。",
+          "answerBoolean": false,
+          "explanationText": "民法732条の「配偶者のある者」は、法律上の配偶者のある者をいうので、法律上の婚姻関係にある者が内縁を結んでも重婚ではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "婚姻",
+          "sourcePageQuestion": "824",
+          "sourcePageAnswer": "825"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "離婚をした場合には、配偶者の親族との間にあった親族関係は当然に終了するが、夫婦の一方が死亡した場合には、生存配偶者と死亡した配偶者の親族との間にあった親族関係は、当然には終了しない。",
+          "answerBoolean": true,
+          "explanationText": "姻族関係は、「離婚」によって当然に終了する（民法728条1項）。また、「夫婦の一方が死亡した場合」には、生存配偶者が姻族関係を終了させる意思を表示することによって終了し（728条2項）、死亡によって当然には終了しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "婚姻",
+          "sourcePageQuestion": "824",
+          "sourcePageAnswer": "825"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "未成年者は、父母の同意があったときは、婚姻をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "婚姻は、18歳にならなければすることができない（民法731条）。したがって、未成年者（年齢18歳未満の者）は、父母の同意があったとしても婚姻をすることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "婚姻",
+          "sourcePageQuestion": "824",
+          "sourcePageAnswer": "825"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "364",
+      "originalProblemId": "KB2025-p364-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "直系姻族の間では、婚姻をすることができず、また、離婚により姻族関係が終了した後も婚姻をすることができない。",
+          "answerBoolean": true,
+          "explanationText": "直系姻族の間では、婚姻をすることができないし（民法735条前段）、離婚により姻族関係が終了した後も婚姻をすることができない（735条後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "養親子関係にあった者どうしが婚姻をしようとする場合、離縁により養子縁組を解消することによって、婚姻をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "養子もしくはその配偶者または養子の直系卑属もしくはその配偶者と養親またはその直系尊属との間では、親族関係が終了した後でも婚姻をすることができない（民法736条）。したがって、養親子関係にあった者どうしが婚姻をすることは、離縁により養子縁組を解消することによってもすることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "成年被後見人が婚姻するには、その後見人の同意が必要である。",
+          "answerBoolean": false,
+          "explanationText": "婚姻は当事者の自由な意思に基づくものでなければならないから、成年被後見人も、意思能力がある限り、単独で婚姻をすることができ、その後見人の同意を要しない（民法738条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "婚姻は、戸籍法の定めるところによりこれを届け出たうえで、戸籍簿に記載されて初めて効力を生ずる。",
+          "answerBoolean": false,
+          "explanationText": "婚姻は、戸籍法の定めるところにより、これを届け出ることによって、その効力を生ずる（民法739条1項）。ここにいう届出とは、届出の受理があれば足り、戸籍簿への記載を要しない（大判昭16.7.29）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "婚姻の届出は戸籍吏に受理されれば完了し、戸籍簿に記入されなくても婚姻は成立する。",
+          "answerBoolean": true,
+          "explanationText": "婚姻届が戸籍吏に受理された以上は、戸籍簿に記入されなくても、婚姻は有効に成立する（大判昭16.7.29）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "夫婦としての実質的な関係が存在していても、本人の知らない間に、親が代わって婚姻の届出をした場合は、追認により有効となることはない。",
+          "answerBoolean": false,
+          "explanationText": "婚姻の届出は、当事者双方および成年者の証人2人以上がしなければならないが（民法739条2項）、内縁関係にある当事者の一方が婚姻届を提出した場合に、判例が「追認により有効となる」としたケースがあり（最判昭47.7.25）、本肢でも追認により有効となる余地がある。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "甲山太郎と乙川花子が婚姻届に署名捺印した場合において、慣れ親しんだ呼称として婚姻後もそれぞれ甲山、乙川の氏を引き続き称したいと考え、婚姻後の氏を定めずに婚姻届を提出したときは、この婚姻届は受理されない。",
+          "answerBoolean": true,
+          "explanationText": "婚姻の届出は、その婚姻が法令の規定に違反しないことを認めた後でなければ受理することができない（民法740条）。婚姻後の氏を定めずに婚姻届を提出することは戸籍法に違反するため、この婚姻届は受理されない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "826",
+          "sourcePageAnswer": "827"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "365",
+      "originalProblemId": "KB2025-p365-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "内縁が不当に破棄された者は、相手方に対して、婚姻予約の不履行を理由に損害賠償を請求することができるとともに、不法行為を理由に損害賠償を請求することもできる。",
+          "answerBoolean": true,
+          "explanationText": "内縁の不当破棄が婚姻予約の不履行として契約責任を生ぜしめ（大連判大4.1.26）、それとともに、内縁を婚姻に準ずる関係と認めることによって（準婚姻理論）、不法行為責任（慰謝料の損害賠償責任）が発生する（最判昭33.4.11）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "婚姻の取消しは、一般の取消しと異なり、必ず裁判所に請求しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "婚姻の取消しは、裁判外でも行使できる財産法上の形成権としての取消権とは異なり、一定の者だけが裁判所に対する訴えの方法によってのみなしうる（民法744条、747条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "配偶者のある者が重ねて婚姻をしたときは、重婚関係を生ずるが、後婚は当然には無効となるものではなく、取り消し得るものとなるにすぎない。",
+          "answerBoolean": true,
+          "explanationText": "重婚（民法732条）となった後婚につき取り消しうる婚姻となる（744条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "婚姻が取り消されたときは、最初から婚姻をしなかったものとして扱われる。",
+          "answerBoolean": false,
+          "explanationText": "婚姻の取消しは将来に向かってのみその効力を生じる（民法748条1項）。なぜなら、事実として存在した婚姻関係を消し去ることはできないからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "甲山太郎を夫とする妻甲山花子は、夫が死亡した場合において、戸籍法の定めるところにより届け出ることによって婚姻前の氏である乙川を称することができる。",
+          "answerBoolean": true,
+          "explanationText": "夫婦は、婚姻の際に定めるところに従い、夫または妻の氏を称する（民法750条）。しかし、夫婦の一方（夫の甲山太郎）が死亡したときは、生存配偶者（妻甲山花子）は、婚姻前の氏（乙川）に復することができる（751条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aは、自己が所有する甲建物に居住していたところ、Bと婚姻においても、同建物にA・Bで同居することになった。A・Bの婚姻後にAが甲建物を第三者Cに譲渡したときは、Bは、そのA・C間の売買契約を取り消すことができる。",
+          "answerBoolean": false,
+          "explanationText": "夫婦間でした契約は、婚姻中、いつでも、夫婦の一方からこれを取り消すことができる（民法754条本文）。もっとも、本肢における甲建物の売買契約は、夫婦間（A・B間）の契約ではなく、A・C間の契約であるから、754条本文の適用はなく、Bは、甲建物の売買契約を取り消すことはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "夫婦間でした契約は、婚姻中、いつでも、夫婦の一方からこれを取り消すことができるが、婚姻が実質的に破綻している場合には、その夫婦間の契約を取り消すことはできない。",
+          "answerBoolean": true,
+          "explanationText": "夫婦間でした契約は、婚姻中、いつでも、夫婦の一方からこれを取り消すことができる（民法754条本文）。しかし、婚姻が実質的に破綻しているとしても、それが形式的に継続しているとして、同条の規定により、夫婦間の契約を取り消すことはできない（最判昭42.2.2）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "828",
+          "sourcePageAnswer": "829"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "366",
+      "originalProblemId": "KB2025-p366-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、自己が所有する甲建物に居住していたところ、Bと婚姻後においても、同建物にA・Bで同居することになった。A・Bの婚姻後に甲建物について必要な修繕をしたときは、その修繕に要した費用は、A・Bで分担する。",
+          "answerBoolean": true,
+          "explanationText": "夫婦は、婚姻から生ずる費用を分担する（民法760条）。そして、この「婚姻から生ずる費用」は、夫婦が通常の社会生活を維持するのに必要な生計費をいい、衣食住の費用等が含まれる。したがって、A Bが居住する甲建物の必要な修繕に要した費用もこの「婚姻から生ずる費用」にあたると考えられるため、A Bで分担することになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "830",
+          "sourcePageAnswer": "831"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "夫婦の一方が第三者に対して日常の家事に関する債務を負った場合、他の一方が連帯の責任を負わないことを第三者に予告したときでも、連帯して責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "夫婦の一方が日常の家事に関して第三者と法律行為をし、債務を負担したときは、他の一方は連帯してその責任に任ずる（民法761条）。ただし、第三者に対し責めに任じない旨を予告したときは連帯責任は生じない（761条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "830",
+          "sourcePageAnswer": "831"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、自己が所有する甲建物に居住していたところ、Bと婚姻後においても、同建物にA・Bで同居することになった。A・Bが甲建物に関して婚姻の届出前に別段の契約をしなかったときは、甲建物は、A・Bの共有に属するものと推定される。",
+          "answerBoolean": false,
+          "explanationText": "別段の契約がない場合には、夫婦の一方が婚姻前から有する財産は、その特有財産（夫婦の一方が単独で有する財産）となる（民法762条1項）。したがって、Aが婚姻前から有していた甲建物は、Aの特有財産であるから、A Bの共有に属するものと推定されるとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "830",
+          "sourcePageAnswer": "831"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、自己が所有する甲建物に居住していたところ、Bと婚姻後においても、同建物にA・Bで同居することになった。A・Bの婚姻後に甲建物内に存するに至った動産は、A・Bの共有に属するものとみなされる。",
+          "answerBoolean": false,
+          "explanationText": "夫婦の一方が婚姻中自己の名で得た財産はその特有財産とされる（民法762条1項）が、夫婦のいずれに属するか明らかでない財産は、その共有に属するものと推定される（762条2項）。そして、本肢のA B婚姻後に甲建物内に存するに至った動産というのは、A Bいずれの名で得た財産か明らかでなく、A Bいずれに属するか不明であるため、A Bの共有に属するものと「推定される」ことになる。もっとも、本肢のように、A Bの共有に属するものと「みなされる」わけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "830",
+          "sourcePageAnswer": "831"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "夫婦である乙川太郎と乙川花子が離婚届を提出し受理されたが、太郎が慣れ親しんだ呼称として、離婚後も婚姻前の氏である甲山でなく乙川の氏を引き続き称したいと考えたとしても、離婚により復氏が確定し、離婚前の氏を称することができない。",
+          "answerBoolean": false,
+          "explanationText": "婚姻によって氏を改めた夫または妻は、協議上の離婚によって婚姻前の氏に復する（民法767条1項）。もっとも、協議上の離婚によって婚姻前の氏に復した夫または妻は、離婚の日から3月以内に届け出ることによって離婚の際に称していた氏（乙川）を称することができる（767条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "830",
+          "sourcePageAnswer": "831"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "367",
+      "originalProblemId": "KB2025-p367-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "協議離婚をしようとする夫婦に未成年の子がある場合においては、協議の上、家庭裁判所の許可を得て、第三者を親権者とすることを定めることができる。",
+          "answerBoolean": false,
+          "explanationText": "父母が協議上の離婚をするときは、家庭裁判所の許可ではなく、「父母の協議」で、「その一方」を親権者と定めなければならない（民法819条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "832",
+          "sourcePageAnswer": "833"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "父母が協議上の離婚をするときは、子の監護について必要な事項は、原則として、その協議で定めるが、協議が調わないときまたは協議をすることができないときは、家庭裁判所が子の監護について必要な事項を定める。",
+          "answerBoolean": true,
+          "explanationText": "父母が協議上の離婚をするときは、子の監護について必要な事項は、原則として、その協議で定めるが（民法766条1項前段）、その協議が調わないときまたは協議をすることができないときは、家庭裁判所が子の監護について必要な事項を定める（766条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "832",
+          "sourcePageAnswer": "833"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "離婚における財産分与は、離婚に伴う精神的苦痛に対する損害の賠償も当然に含む趣旨であるから、離婚に際し財産分与があった場合においては、別途、離婚を理由とする慰謝料の請求をすることは許されない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭46.7.23）は、財産分与がなされても、それが損害賠償の要素を含めた趣旨とは解せられないか、その額および方法において請求者の精神的苦痛を慰謝するには足りないと認められるものであるときには、個別に不法行為を理由として離婚による慰謝料を請求することができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "832",
+          "sourcePageAnswer": "833"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "夫婦の別居が両当事者の年齢および同居期間との対比において相当の長期間に及び、その夫婦の間に未成熟の子が存在しない場合には、相手方配偶者が離婚により極めて苛酷な状態に置かれる等著しく社会的正義に反するといえるような特段の事情の認められない限り、有責配偶者からの離婚請求であるとの一事をもって離婚が許されないとすることはできない。",
+          "answerBoolean": true,
+          "explanationText": "判例（最大判昭62.9.2）は、有責配偶者からされた離婚請求であっても、夫婦の別居が両当事者の年齢および同居期間との対比において相当の長期間に及び、その間に未成熟の子が存在しない場合には、相手方配偶者が離婚により精神的・社会的・経済的に極めて苛酷な状態におかれる等離婚請求を認容することが著しく社会正義に反するといえるような特段の事情の認められない限り認めることができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "832",
+          "sourcePageAnswer": "833"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "妻が婚姻中に懐胎した子は、当該婚姻における夫の子と推定される。",
+          "answerBoolean": true,
+          "explanationText": "妻が婚姻中に懐胎した子は、当該婚姻における夫の子と推定される（民法772条1項前段）。妻が婚姻中に懐胎すれば、その子は夫の子であるとみるのが社会常識に合致するからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親子",
+          "sourcePageQuestion": "832",
+          "sourcePageAnswer": "833"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "夫が子の出生後その嫡出性を承認した場合には、夫は、嫡出否認の訴えを提起することはできなくなる。",
+          "answerBoolean": true,
+          "explanationText": "夫は、子の出生後において、その嫡出であることを承認したときは、その否認権を失うため（民法776条）、嫡出否認の訴えを提起することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親子",
+          "sourcePageQuestion": "832",
+          "sourcePageAnswer": "833"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "368",
+      "originalProblemId": "KB2025-p368-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "父の否認権にかかる嫡出否認の訴えは、父が子の出生を知った時から3年以内に提起しなければならない。",
+          "answerBoolean": true,
+          "explanationText": "父の否認権にかかる嫡出否認の訴えの出訴期間は、父が子の出生を知った時から、3年以内である（民法777条1号）。父子関係を可及的速やかに確定して、子を保護するためである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Bは、Aとの内縁関係の継続中に懐胎し、その後、Aと適法に婚姻をした後Cを出産した場合において、AがCとの間に父子関係が存在しないことを争うには、嫡出否認の訴えではなく、親子関係不存在確認の訴えによらなければならない。",
+          "answerBoolean": false,
+          "explanationText": "女が婚姻前に懐胎した子であって、婚姻が成立した後に生まれたものは、当該婚姻における夫の子と推定される（民法772条1項後段）。この場合、父子関係が存在しないことを争おうとする者は、嫡出推定が及ぶため、嫡出否認の訴えによらなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "妻が婚姻成立の日から200日後に出産した子は嫡出子と推定されるから、たとえ夫による懐胎が不可能な場合であっても、嫡出否認の訴えによらなければ、夫は親子関係を否定することはできない。",
+          "answerBoolean": false,
+          "explanationText": "夫による懐胎が不可能な場合には、民法772条による嫡出の推定を受けないので（最判昭44.5.29）、推定の及ばない子として、嫡出否認の訴えによらなくても、夫は親子関係不存在確認訴訟により父子関係を否定できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "制限行為能力者である父が認知する場合には、法定代理人の同意を必要とする。",
+          "answerBoolean": false,
+          "explanationText": "認知は一種の身分行為であるから、認知能力があれば足り、制限行為能力者である未成年者や成年被後見人も、法定代理人の同意なしに単独で認知できる（民法780条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AとBの内縁関係の継続中にBがCを出産し、AによってCを嫡出子とする出生届がなされた場合において、誤ってこれが受理されたときは、この届出により認知としての効力が生ずる。",
+          "answerBoolean": true,
+          "explanationText": "嫡出でない子について、父から、これを嫡出子とする出生届がされた場合において、その出生届が戸籍事務管掌者によって受理されたときは、その出生届は認知届としての効力を有する（最判昭53.2.24）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "遺言によって認知をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "認知は、遺言によっても、することができる（民法781条2項）。生前はばかられる認知も死後ならできるであろうからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "成年に達した子を認知するには、その者の承諾を得なくてはならない。",
+          "answerBoolean": true,
+          "explanationText": "認知は、原則として認知される者の同意を要しないが、成年の子を認知するにはその者の承諾を要する（民法782条）。扶養義務を尽くさないでにおいて、成年に達して一人前になったら認知して親としての権利を主張しようとする手前勝手を防ぐ趣旨である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.98,
+          "sectionTitle": "",
+          "sourcePageQuestion": "834",
+          "sourcePageAnswer": "835"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "369",
+      "originalProblemId": "KB2025-p369-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "父は胎児でも認知することができるが、この場合には、母の承諾を得なければならない。",
+          "answerBoolean": true,
+          "explanationText": "父は、胎児でも認知することができるが、胎児の認知は母の名誉および利益に重大な影響があり、また、認知の真実性を確保する必要性から、母の承諾を得なければならない（民法783条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "認知の効果は、子の出生時にさかのぼって生じるが、第三者が既に取得した権利を害することはできない。",
+          "answerBoolean": true,
+          "explanationText": "認知により父と嫡出でない子との間に法律上の親子関係が生じ、その効力は出生の時にさかのぼる（民法784条本文）。しかし、そうであっても、第三者が既に取得していた権利を害することはできない（784条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "非嫡出子が認知請求権を放棄する契約をしたときは、父に対して認知の訴えを提起することはできなくなる。",
+          "answerBoolean": false,
+          "explanationText": "強制認知とは、訴訟という手段を用いて強制的に父子関係を確定する制度であるが、民法787条本文は、子、その直系卑属またはこれらの者の法定代理人は、認知の訴えを提起することができると定めている。そしてこの認知請求権の放棄契約は、非嫡出子の保護がそこなわれるから無効とされている（最判昭37.4.10）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "夫婦である甲山花子と甲山太郎の間に生出した子である一郎は、両親が離婚をして、母花子が復氏により婚姻前の氏である乙川を称するようになった場合には、届け出ることで母と同じ乙川の氏を称することができる。",
+          "answerBoolean": false,
+          "explanationText": "子が父または母と氏を異にする場合には、子は、家庭裁判所の許可を得て、戸籍法の定めるところにより届け出ることによって、父または母の氏を称することができる（民法791条1項）。子である一郎は、両親が離婚をして、母花子が復氏により婚姻前の氏である乙川を称するようになった場合には、家庭裁判所の許可を得なければ、母と同じ乙川の氏を称することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "20歳に達した者でも婚姻をしていなければ、養親となることはできない。",
+          "answerBoolean": false,
+          "explanationText": "養親となる者は、20歳に達した者であれば足り（民法792条）、婚姻をしている必要はない。なお、特別養子縁組においては、原則として、養親となる者は、配偶者のある者で、かつ、夫婦がともに養親とならなければならない（817条の3第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "尊属を養子とすることは原則としてできないが、尊属が未成年の場合には、養子とすることができる。",
+          "answerBoolean": false,
+          "explanationText": "倫理的な理由から、尊属または年長者を養子とすることができず（民法793条）、尊属が未成年の場合であっても、養子にできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "後見人が被後見人を養子にするには、家庭裁判所の許可を得る必要がある。",
+          "answerBoolean": true,
+          "explanationText": "後見人自身の利益のために被後見人の利益を害することを避けるため、家庭裁判所の許可を要求している（民法794条前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "836",
+          "sourcePageAnswer": "837"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "370",
+      "originalProblemId": "KB2025-p370-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "配偶者のある者が未成年者を養子とする場合には、原則として配偶者と共に縁組をしなければならないが、配偶者の嫡出子である子を養子とする場合には、単独で縁組をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "配偶者のある者が未成年者を養子とするには、配偶者とともに養子縁組しなければならないのが原則である（民法795条本文）。未成年者の養育は、夫婦が共同して行うからである。しかし、配偶者の嫡出子である子を養子とする場合は、その配偶者にとっては、既に親子であるから、夫婦の一方のみで縁組ができる（795条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "838",
+          "sourcePageAnswer": "839"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "配偶者のある者が成年者を養子とする場合には、原則として配偶者の同意を得なければならないが、配偶者がその意思を表示することができない場合には、その同意を得ないで縁組をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "配偶者のある者が縁組をするには、その配偶者の同意を得なければならないのが原則である（民法796条本文）。もっとも、配偶者がその意思を表示することができない場合は、配偶者の同意を得る必要はない（796条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "838",
+          "sourcePageAnswer": "839"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "配偶者の直系卑属を養子とする場合、養子となる者が未成年者であれば、家庭裁判所の許可を得なければならない。",
+          "answerBoolean": false,
+          "explanationText": "未成年者を養子とするには、家庭裁判所の許可が必要である（民法798条本文）。未成年者の福祉に反する縁組を防止するためである。ただし、自己または配偶者の直系卑属を養子とする場合、子の福祉が害される心配はなく、家庭裁判所の許可は不要である（798条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "838",
+          "sourcePageAnswer": "839"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "夫と他の女性との間に生まれた子を夫婦の嫡出子として出生の届出をした場合、この届出は、嫡出子出生届としては無効であるが、特別養子縁組としての効力を有する。",
+          "answerBoolean": false,
+          "explanationText": "虚偽の嫡出子出生届にも、認知と同様、父が戸籍事務管掌者に対し、子の出生のほかに、出生した子が自己の子であることを父として承認しその旨申告する意思の表示が含まれているので、認知届としての効力を有する（最判昭53.2.24）。しかし、養子縁組は要式行為であるから、右届出に縁組届としての効力は認められない（最判昭50.4.8）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "838",
+          "sourcePageAnswer": "839"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "真実の親子関係がない親から嫡出である子として出生の届出がされている場合には、その出生の届出は無効であるが、その子が成年に達した後はその出生の届出を養子縁組の届出とみなすことができる。",
+          "answerBoolean": false,
+          "explanationText": "真実の親子関係がない親から嫡出である子として出生の届出がされている場合、その子が成年に達した後であってもその出生の届出を養子縁組の届出とみなすことはできない（最判昭25.12.28）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "838",
+          "sourcePageAnswer": "839"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "真実の親子関係がない戸籍上の親が15歳未満の子について代諾による養子縁組をした場合には、その代諾による縁組は一種の無権代理によるものであるから、その子は、15歳に達した後はその縁組を追認することができる。",
+          "answerBoolean": true,
+          "explanationText": "真実の親子関係がない戸籍上の親が15歳未満の子について代諾による養子縁組をした場合には、その代諾による縁組は一種の無権代理によるものであるから、その子は、15歳に達した後はその縁組を追認することができる（最判昭27.10.3）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 1,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "838",
+          "sourcePageAnswer": "839"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "371",
+      "originalProblemId": "KB2025-p371-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "養子縁組によって、養親と養子の血族との間には、血族間におけると同一の親族関係が発生する。",
+          "answerBoolean": false,
+          "explanationText": "養子縁組により、血族間におけるのと同一の親族関係を生ずるのは、「養子」と「養親およびその（養親）血族」との間においてであり（民法727条）、「実親」と「養子の血族」との間には生じない。したがって、いわゆる連れ子は、養親およびその血族と親族関係は生じない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "840",
+          "sourcePageAnswer": "841"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "甲山花子と、婚姻により改氏した甲山太郎の夫婦において、太郎が縁組により丙谷二郎の養子となったときは、太郎および花子は養親の氏である丙谷を称する。",
+          "answerBoolean": false,
+          "explanationText": "養子は、養親の氏を称することになるが、婚姻によって氏を改めた者は、婚姻の際に定めた氏を称すべき間は養親の氏を称する必要はない（民法810条）。婚姻により改氏した甲山太郎の夫婦において、太郎が縁組により丙谷二郎の養子となったときは、太郎および花子は養親の氏である丙谷を称する必要はなく、婚姻の際に定めた甲山の氏を称する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "840",
+          "sourcePageAnswer": "841"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "特別養子縁組は、実親と養親との双方の請求により、家庭裁判所の審判によって、審判の確定時に成立する。",
+          "answerBoolean": false,
+          "explanationText": "養子と実方の血族との親族関係が当然に消滅しない普通養子縁組とは異なり、子の福祉の見地から、実方との身分関係を解消し養親子の身分関係だけを認める制度である特別養子縁組においては、「実親と養親となる者の双方」ではなく、養親となる者の請求により、家庭裁判所が審判によって成立させることができる（民法817条の2第1項）。子の福祉の見地から専門機関の国家的後見的判断を成立要件としたのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "840",
+          "sourcePageAnswer": "841"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "特別養子縁組は、実父母と養父母の間の合意を家庭裁判所に届け出ることによって成立する。",
+          "answerBoolean": false,
+          "explanationText": "特別養子縁組は、民法所定の要件（817条の3～817条の7）があるときは、養親となる者の請求により、家庭裁判所の審判によって成立し（817条の2第1項）、実父母と養父母の間の合意を家庭裁判所に届け出ることは必要ではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "840",
+          "sourcePageAnswer": "841"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "特別養子縁組においては、養親となる者には配偶者がいなければならず、かつ、原則として夫婦がともに養親とならなければならない。",
+          "answerBoolean": true,
+          "explanationText": "特別養子縁組においては、子の健全な育成および福祉のため、養親となる者は、配偶者のある者でなくてはならず（民法817条の3第1項）、かつ、夫婦の一方が他の一方の嫡出子を特別養子とする場合を除き、夫婦は共同で縁組ををしなくてはならない（817条の3第2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "840",
+          "sourcePageAnswer": "841"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "372",
+      "originalProblemId": "KB2025-p372-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "特別養子縁組において養親となる者は、配偶者のある者であって、夫婦いずれもが20歳以上であり、かつ、そのいずれかは25歳以上でなければならない。",
+          "answerBoolean": true,
+          "explanationText": "特別養子縁組において、養親となる者は配偶者のあることが必要である（民法817条の3第1項）。また、25歳に達しない者は原則として養親となることができないが、養親となる夫婦の一方が25歳に達していない場合においても、その者が20歳に達しているときは養親となることができる（817条の4）。つまり夫婦いずれもが20歳以上であり、かつ、そのいずれかは25歳以上でなければならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "842",
+          "sourcePageAnswer": "843"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "特別養子制度において、養子となる者は、15歳に達していない者に限られる。",
+          "answerBoolean": false,
+          "explanationText": "特別養子縁組においては、養子となる者は縁組の審判の申立ての時に15歳に達していない者でなければならないのが原則である（民法817条の5第1項前段）。ただし、15歳に達する前から引き続き養親となる者に監護され、やむを得ない事由により15歳に達するまでに申立てができなかった場合には、15歳以上の者でも養子となることができるため（817条の5第2項）、必ず15歳に達していない者に限られるわけではない（審判時に15歳に達している場合にはその者の同意が必要なことにつき817条の5第3項参照）。なお、特別養子縁組が成立するまでに18歳に達した者については縁組をすることはできない（817条の5第1項後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "842",
+          "sourcePageAnswer": "843"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "すべての特別養子縁組の成立には、特別養子となる者の同意が要件であり、同意のない特別養子縁組は認められない。",
+          "answerBoolean": false,
+          "explanationText": "養子となる者が15歳に達している場合には、その者の同意がなければ特別養子縁組は成立しない（民法817条の5第3項）。特別養子となる者の同意は、養子となる者が15歳に達している場合に必要であり、すべての特別養子縁組の成立要件ではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "842",
+          "sourcePageAnswer": "843"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "特別養子縁組の成立には、原則として養子となる者の父母の同意がなければならないが、父母がその意思を表示することができない場合または父母による虐待、悪意の遺棄その他養子となる者の利益を著しく害する事由がある場合は、同意は必要ない。",
+          "answerBoolean": true,
+          "explanationText": "特別養子縁組においては、実父母との親族関係が断絶するため、実父母の同意が必要であるのが原則である。ただし、実父母が意思表示をすることができない場合や、実父母による虐待または悪意の遺棄その他養子となる者の利益を著しく害する事由がある場合は、同意を要しない（民法817条の6）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "842",
+          "sourcePageAnswer": "843"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "特別養子縁組が成立した場合、実父母及びその血族との親族関係は原則として終了し、特別養子は実父母の相続人となる資格を失う。",
+          "answerBoolean": true,
+          "explanationText": "「養子」と「実方の父母およびその血族」との親族関係は、原則として、特別養子縁組によって終了するため（民法817条の9本文）、特別養子は実父母の相続人となる資格を失う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "842",
+          "sourcePageAnswer": "843"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "373",
+      "originalProblemId": "KB2025-p373-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "特別養子縁組の解消は原則として認められないが、養親による虐待、悪意の遺棄その他養子の利益を著しく害する事由がある場合、または、実父母が相当の監護をすることができない場合には、家庭裁判所が離縁の審判を下すことができる。",
+          "answerBoolean": false,
+          "explanationText": "家庭裁判所は、養親による虐待、悪意の遺棄その他養子の利益を著しく害する事由があること、「かつ」、実父母が相当の監護をすることができることの「いずれにも該当する場合」において、養子の利益のため特に必要があると認めるときは、養子、実父母または検察官の請求により、特別養子縁組の当事者を離縁させることができる（民法817条の10第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "844",
+          "sourcePageAnswer": "845"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "特別養子縁組は、養父母と離縁しても、実父母との親族関係を回復することはない。",
+          "answerBoolean": false,
+          "explanationText": "特別養子縁組は、実親子同様の強固な親子関係を形成するものであるから、離縁は、民法817条の10第1項の場合に限り許され（817条の10第2項）、この場合においては、養子と実父母およびその血族との間において離縁の日から、特別養子縁組によって終了した親族関係と同一の親族関係が復活する（817条の11）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "844",
+          "sourcePageAnswer": "845"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "未成年後見については、未成年者に対し親権を行う者がいないとき、または親権を行う者が管理権を有しないときに後見が開始し、成年後見については、後見開始の審判があったときに後見が開始する。",
+          "answerBoolean": true,
+          "explanationText": "未成年後見については、未成年者に対し親権を行う者がいないとき、または親権を行う者が管理権を有しないときに後見が開始し（民法838条1号）、成年後見については、後見開始の審判があったときに後見が開始する（838条2号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "後見・扶養",
+          "sourcePageQuestion": "844",
+          "sourcePageAnswer": "845"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "未成年後見人が選任されている場合においても、家庭裁判所は、必要があると認めるときは、職権で、さらに別の未成年後見人を選任することができる。",
+          "answerBoolean": true,
+          "explanationText": "家庭裁判所は、必要があると認めるときは、民法840条1項所定の者（未成年被後見人またはその親族その他の利害関係人）もしくは未成年後見人の請求によりまたは職権で、更に未成年後見人を選任することができる（840条2項）。平成23年改正により未成年後見人は1人でなければならないとする規定は削除された。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "後見・扶養",
+          "sourcePageQuestion": "844",
+          "sourcePageAnswer": "845"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "自然人ばかりでなく法人も、成年後見人になることができるが、株式会社等の営利法人は、成年後見人になることはできない。",
+          "answerBoolean": false,
+          "explanationText": "法人も、成年後見人になることができるが（民法843条4項）、その法人の資格について、法は特別な制限をしていない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "後見・扶養",
+          "sourcePageQuestion": "844",
+          "sourcePageAnswer": "845"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "374",
+      "originalProblemId": "KB2025-p374-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "成年後見人は、正当な事由があるときは、成年被後見人の許諾を得て、その任務を辞することができるが、正当な事由がないときでも、家庭裁判所の許可を得て、その任務を辞することができる。",
+          "answerBoolean": false,
+          "explanationText": "後見人は、正当な事由があるときは、家庭裁判所の許可を得て、その任務を辞することができる（民法844条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "846",
+          "sourcePageAnswer": "847"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "後見人の配偶者、直系血族および兄弟姉妹は、後見監督人となることができない。",
+          "answerBoolean": true,
+          "explanationText": "後見人の配偶者、直系血族および兄弟姉妹は、後見監督人となることができる（民法850条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "846",
+          "sourcePageAnswer": "847"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "成年後見人は、成年被後見人の生活、療養看護および財産の管理に関する事務を行う義務のほか、成年被後見人が他人に損害を加えた場合において当然に法定の監督義務者として責任を負う。",
+          "answerBoolean": false,
+          "explanationText": "成年後見人は、成年被後見人の生活、療養看護および財産の管理に関する事務を行うことができるため、前段は正しい（民法858条）。しかし、成年後見人の身上配慮義務は、成年後見が契約等の法律行為を行う際に求めるものであって、成年被後見人の介護行動の監督を求めるものではないため、成年後見人は当然に法定の監督義務者に該当し責任を負うわけではない（最判平28.3.1）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "846",
+          "sourcePageAnswer": "847"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "後見人と被後見人との利益が相反する行為については、後見監督人がいる場合でも、後見人は、被後見人のために特別代理人を選任することを家庭裁判所に請求しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "後見人と被後見人との利益が相反する行為は、後見監督人がいない場合には、後見人は、被後見人のために特別代理人の選任を家庭裁判所に請求しなければならない（民法860条、826条）。これに対して、後見監督人がいる場合には、後見監督人は、後見人等と被後見人との利益が相反する行為について被後見人を代表する（851条4号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族",
+          "sourcePageQuestion": "846",
+          "sourcePageAnswer": "847"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "保佐人は、民法が定める被保佐人の一定の行為について同意権を有するほか、家庭裁判所が保佐人に代理権を付与する旨の審判をしたときには特定の法律行為の代理権も有する。",
+          "answerBoolean": true,
+          "explanationText": "被保佐人が民法13条1項所定の行為をするには、原則として、保佐人の同意を得なければならない（民法13条1項本文）。また、家庭裁判所は、876条の4第1項所定の請求によって、被保佐人のために特定の法律行為について保佐人に代理権を付与する旨の審判をすることができる（876条の4第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族 2) 保佐および補助",
+          "sourcePageQuestion": "846",
+          "sourcePageAnswer": "847"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "補助人が選任されている場合においても、家庭裁判所は、必要があると認めるときは、さらに補助人を選任することができる。",
+          "answerBoolean": true,
+          "explanationText": "民法876条の7第2項は、843条3項を準用しており、補助人が選任されている場合においても、家庭裁判所は、必要があると認めるときは、更に補助人を選任することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "親族 2) 保佐および補助",
+          "sourcePageQuestion": "846",
+          "sourcePageAnswer": "847"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "375",
+      "originalProblemId": "KB2025-p375-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "家庭裁判所は、被補助人の特定の法律行為につき補助人の同意を要する旨の審判、および補助人に代理権を付与する旨の審判をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "家庭裁判所は、民法所定の者の請求により、被補助人が特定の法律行為をするには補助人の同意を得なければならない旨の審判（民法17条1項）および被補助人のために特定の法律行為について補助人に代理権を付与する旨の審判をすることができる（876条の9第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "848",
+          "sourcePageAnswer": "849"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "夫婦、直系血族および兄弟姉妹は、お互いに扶養する義務があるが、親族間においては、家庭裁判所は、特別の事情がある場合でも、扶養の義務を負わせることはできない。",
+          "answerBoolean": false,
+          "explanationText": "夫婦、直系血族および兄弟姉妹は、お互いに扶養義務があるから（夫婦に民法752条、直系血族および兄弟姉妹に877条1項）、前段は正しい。しかし、家庭裁判所は、特別の事情があるときは、3親等内の親族間にも扶養義務を負わせることができるから（877条2項、親族に3親等内の姻族が含まれることは725条3号）、後段は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "扶養",
+          "sourcePageQuestion": "848",
+          "sourcePageAnswer": "849"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "扶養をする義務のある者が数人ある場合において、扶養をすべき者の順序については、配偶者を先にし、配偶者がいないとき等の親等の異なる血族間では、親等の近い者を先にする。",
+          "answerBoolean": false,
+          "explanationText": "扶養をする義務のある者が数人ある場合において、扶養をすべき者の順序について、当事者間に協議が調わないとき、または協議をすることができないときは、家庭裁判所が、これを定める（民法878条前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-shinzoku",
+          "confidence": 0.95,
+          "sectionTitle": "扶養",
+          "sourcePageQuestion": "848",
+          "sourcePageAnswer": "849"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "376",
+      "originalProblemId": "KB2025-p376-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "相続回復請求権を行使することができるのは、遺産の占有を失っている真正相続人、相続分の譲受人であるとするのが判例の立場であるが、この請求権は、相続開始の時から5年で時効によって消滅する。",
+          "answerBoolean": false,
+          "explanationText": "相続回復請求権は、相続権を侵害された事実を知ったときから5年間これを行わないとき、または、相続開始の時から20年を経過したときに時効によって消滅するのであり（民法884条）、相続開始の時から5年で時効消滅するのではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.98,
+          "sectionTitle": "総則",
+          "sourcePageQuestion": "850",
+          "sourcePageAnswer": "851"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "甲と先妻との間には子A・Bがおり、Aには子X、Bには子Yがいた。また甲には死亡した妹がおり、妹には子Cがいた。さらに、甲には内縁の妻乙がいた。Aが死亡した後に甲が死亡した場合、XとBが相続を放棄したときは、乙が甲の唯一の相続人である。",
+          "answerBoolean": false,
+          "explanationText": "配偶者は常に相続人となるが（民法890条）、ここに「配偶者」とは、法律上の配偶者のみをいい、内縁の妻は含まれない。したがって、内縁の妻には、相続権がないので、BおよびXが相続放棄すれば、Cが唯一の相続人になる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.98,
+          "sectionTitle": "相続人",
+          "sourcePageQuestion": "850",
+          "sourcePageAnswer": "851"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aには、配偶者B、Bとの間の子CおよびAの母Dがいる。Aが死亡した時点でCがまだ胎児であった場合には、Aを相続するのはBおよびDであるが、その後にCが生まれてきたならば、CもBおよびDとともにAを相続する。",
+          "answerBoolean": false,
+          "explanationText": "胎児は、相続については、既に生まれたものとみなされるから（民法886条1項）、CがAの死亡時に胎児であったとしても、Aの相続人は、BとCであり、Dは相続人とはならない（889条1項1号）。したがって、CがAの死亡時に胎児であった場合、Aの相続人はBとDとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.98,
+          "sectionTitle": "相続人",
+          "sourcePageQuestion": "850",
+          "sourcePageAnswer": "851"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "相続欠格においては、その対象者となりうるのは全ての推定相続人であるが、相続人の廃除においては、その対象者となるのは遺留分を有する推定相続人に限られる。",
+          "answerBoolean": true,
+          "explanationText": "相続欠格は、民法891条所定の事由に該当する相続人に対して、法律上当然にその相続人資格を剥奪するものであり、その対象者は全ての推定相続人である（891条）。相続人の廃除は、892条所定の事由がある場合に、被相続人の請求により相続人資格を奪うものであり、その対象者は遺留分を有する推定相続人である（892条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.98,
+          "sectionTitle": "相続人",
+          "sourcePageQuestion": "850",
+          "sourcePageAnswer": "851"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "相続欠格においては、その効果は一定の欠格事由があれば法律上当然に生ずるが、相続人の廃除においては、その効果は被相続人からの廃除請求による家庭裁判所の審判の確定によって生ずる。",
+          "answerBoolean": true,
+          "explanationText": "相続欠格の効果は、民法891条所定の欠格事由があれば法律上当然に発生する。これに対して、相続人の廃除の効果は、被相続人の廃除請求に基づき家庭裁判所の審判の確定によって発生する（892条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.98,
+          "sectionTitle": "相続人",
+          "sourcePageQuestion": "850",
+          "sourcePageAnswer": "851"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "377",
+      "originalProblemId": "KB2025-p377-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "相続欠格においては、被相続人の子が欠格者となった場合には、欠格者の子は代襲相続人となることができないが、相続人の廃除においては、被相続人の子について廃除が確定した場合でも、被廃除者の子は代襲相続人となることができる。",
+          "answerBoolean": false,
+          "explanationText": "欠格者および被廃除者の直系卑属は代襲相続することができるから、本肢前段は誤っている。相続欠格および相続人の廃除の効果は一身専属的であり（その本人に限られる）、被相続人の子が相続人の欠格事由に該当しもしくは廃除によって、その相続権を失ったときは、その者の子がこれを代襲して相続人となる（民法887条2項本文）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.9,
+          "sectionTitle": "相続",
+          "sourcePageQuestion": "852",
+          "sourcePageAnswer": "853"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "相続欠格においては、その効果としてすべての相続にかかわる相続能力が否定されるが、相続人の廃除においては、その効果として廃除を請求した被相続人に対する相続権のみが否定される。",
+          "answerBoolean": false,
+          "explanationText": "相続欠格は、被相続人との関係でのみ生じ、すべての相続にかかわる相続能力が否定されるわけではないから、本肢後段は誤っている。なお、相続人の廃除の効果は、廃除を請求した被相続人に対する相続権のみが否定されるから、本肢後段は正しい。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.9,
+          "sectionTitle": "相続",
+          "sourcePageQuestion": "852",
+          "sourcePageAnswer": "853"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "相続欠格においては、被相続人および同順位相続人は欠格の宥恕をすることができるが、相続人の廃除においては、被相続人は審判確定後は家庭裁判所にその取消しを請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "相続欠格は、法律上当然に効果が発生するから、被相続人の意思で欠格者の相続人の資格を回復させる欠格の宥恕の制度は存在しない。これに対して、相続人の廃除においては、被相続人の意思に基づく制度であるから、被相続人は審判確定後、家庭裁判所にその取消しを請求することができる（民法894条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.9,
+          "sectionTitle": "相続",
+          "sourcePageQuestion": "852",
+          "sourcePageAnswer": "853"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aには、配偶者B、Bとの間の子CおよびAの母Dのほか、養子Eがいる。Aが死亡した場合、Aを相続するのはB、CおよびEであり、Eの相続分はCの相続分に等しい。",
+          "answerBoolean": true,
+          "explanationText": "養子と実子の相続分は同一であるから（民法809条、900条4号本文）、EとCの相続分は等しい。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.9,
+          "sectionTitle": "相続",
+          "sourcePageQuestion": "852",
+          "sourcePageAnswer": "853"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aには、配偶者B、Bとの間の子CおよびAの母Dがいる。Aが自己に対する虐待を理由に家庭裁判所にCの廃除を請求して、家庭裁判所がこれを認めた後、Aが死亡した場合、たとえCに子Fがいたとしても、FはCを代襲してAの相続人となることはできず、Aを相続するのはBおよびDである。",
+          "answerBoolean": false,
+          "explanationText": "廃除は代襲相続原因であるから（民法887条2項本文）、本肢においてAを相続するのはBとFであり（887条1項、890条前段）、よって、BとDを相続人とする本肢は誤っている。すなわち、推定相続人の廃除は、被相続人がその意思により、非行を行った者の相続権を剥奪する制度であり（892条）、その効果は、被相続人と廃除された者との関係でのみ生じるから、この廃除が認められたとしても、Cの子Fは代襲相続することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.9,
+          "sectionTitle": "相続",
+          "sourcePageQuestion": "852",
+          "sourcePageAnswer": "853"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "甲と先妻との間に子Bがおり、Bに子Yがいた場合、甲とBが同時に死亡したときは、Yは代襲相続できない。",
+          "answerBoolean": false,
+          "explanationText": "同時死亡した相続人の子は代襲相続することができる。民法887条2項には「以前」とあるので、「同時」死亡の場合も含まれるのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.9,
+          "sectionTitle": "相続",
+          "sourcePageQuestion": "852",
+          "sourcePageAnswer": "853"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "378",
+      "originalProblemId": "KB2025-p378-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aには、配偶者B、Bとの間の子CおよびAの母Dがいる。Aの死亡と近接した時にCも死亡したが、CがAの死亡後もなお生存していたことが明らかでない場合には、反対の証明がなされない限り、Aを相続するのはBおよびDである。",
+          "answerBoolean": true,
+          "explanationText": "数人の者が死亡し、そのうちの1人が他の者の死亡後もなお生存していたことが明らかでない場合には、これらの者は、同時に死亡したものと推定されることになるから（民法32条の2）、その推定が覆されなければ、一方の死亡時に他方も生存していなかったことになる。そして、相続人は、相続開始時（被相続人の死亡時）に生存していなければならないから（同時存在の原則）、数人の者が同時に死亡したと推定される場合には、その相互間では相続は開始しないことになる。そのため、本肢所定の場合には、反証がない限り、AとC間では相続は開始しないことになり、BとDがAを相続することになる（889条1項1号、890条前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の効力",
+          "sourcePageQuestion": "854",
+          "sourcePageAnswer": "855"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "甲と先妻との間には子A・Bがおり、死亡したAには子Xがいた。そして、甲には死亡した妹がおり、妹には子Cがいる。この場合甲が死亡した後XとBが相続を放棄したとしても、Cが甲を代襲相続することはできない。",
+          "answerBoolean": false,
+          "explanationText": "直系卑属であるXとBが相続を放棄した場合には、第3順位として甲の妹が相続人となる（民法889条1項）。ただ、本件ではその妹は死亡しているのであるから、その子Cが代襲して相続することになる（889条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の効力",
+          "sourcePageQuestion": "854",
+          "sourcePageAnswer": "855"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、配偶者B、Bとの間の子CおよびAの母Dを残し、死亡した。Cが相続の放棄をした場合において、Cに子Fがいるときには、Aを相続するのはBだけでなく、FもCを代襲してAの相続人となる。",
+          "answerBoolean": false,
+          "explanationText": "相続放棄した者は、最初から相続人でなかったことになるから（民法939条）、放棄した相続人の子は代襲相続することができない。つまり、相続放棄は代襲相続原因ではないから（887条2項本文）、FはAの相続人とはならない。したがって、FもCを代襲してAの相続人となるとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の効力",
+          "sourcePageQuestion": "854",
+          "sourcePageAnswer": "855"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "系譜、祭具及び墳墓の所有権は、被相続人の指定に従って祖先の祭祀を主宰すべき者があるときを除き、慣習に従って祖先の祭祀を主宰すべき者が承継する。",
+          "answerBoolean": true,
+          "explanationText": "系譜、祭具および墳墓の所有権は、慣習に従って祖先の祭祀を主宰すべき者が承継するが（民法897条1項本文）、被相続人の指定に従って祖先の祭祀を主宰すべき者があるときは、その者が承継する（同項ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の対象",
+          "sourcePageQuestion": "854",
+          "sourcePageAnswer": "855"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "379",
+      "originalProblemId": "KB2025-p379-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "共同相続人の1人が、遺産分割前にEが自己の相続分を第三者Iに譲渡した場合、他の共同相続人は、1か月以内であれば、他の共同相続人は、Iにその相続分の譲渡受けに要した費用を償還して、その相続分を取り戻すことができる。",
+          "answerBoolean": true,
+          "explanationText": "共同相続人の1人は、遺産分割前に相続分を譲渡することができるが、そうすると、遺産分割の際、相続人ではない者の介入によりトラブルのもとになるおそれがある。そこで、この場合、他の共同相続人に相続分取戻権が認められた（民法905条1項）。ただ、この権利は1か月以内に行使しなければならない（905条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺産分割",
+          "sourcePageQuestion": "856",
+          "sourcePageAnswer": "857"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "共同相続人は、相続の開始後3か月を経過した場合、いつでもその協議で遺産の全部または一部の分割をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "共同相続人は、被相続人が遺言で禁止した場合または分割をしない旨の契約をした場合を除き、いつでも、その協議で、遺産の全部または一部の分割をすることができる（民法907条1項）。遺産分割は、相続の開始後3か月を経過した場合ではなく、いつでもできる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺産分割",
+          "sourcePageQuestion": "856",
+          "sourcePageAnswer": "857"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "被相続人は、遺言で、遺産の全部又は一部について、相続開始の時から5年を超えない期間で分割を禁止することができる。",
+          "answerBoolean": true,
+          "explanationText": "被相続人は、遺産の分割を望まない場合、その意思を尊重するため、遺言により、相続開始の時から5年を超えない期間を定めて、遺産の分割を禁止することができる（民法908条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺産分割",
+          "sourcePageQuestion": "856",
+          "sourcePageAnswer": "857"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "共同相続人は、5年以内の期間を定めて、遺産の全部または一部について、その分割をしない旨の契約をすることができるが、その期間の終期は、相続開始の時から10年を超えることができない。",
+          "answerBoolean": true,
+          "explanationText": "共同相続人は、5年以内の期間を定めて、遺産の全部または一部について、その分割をしない旨の契約をすることができるが、その期間の終期は、相続開始の時から10年を超えることができない（民法908条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺産分割",
+          "sourcePageQuestion": "856",
+          "sourcePageAnswer": "857"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "共同相続人が5年以内の期間を定めて、遺産の全部または一部について、その分割をしない旨の契約をすることができるが、その期間の終期は、相続開始の時から10年を超えることができない。",
+          "answerBoolean": true,
+          "explanationText": "共同相続人が5年以内の期間を定めて、遺産の全部または一部について、その分割をしない旨の契約をすることができるが、この契約は、5年以内の期間を定めて更新することができるが、その期間の終期は、相続開始の時から10年を超えることができない（民法908条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺産分割",
+          "sourcePageQuestion": "856",
+          "sourcePageAnswer": "857"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "遺産分割前に共同相続人の一人Dから相続財産に属する不動産について共有持分を譲り受けた第三者Hは、登記がなくても他の共同相続人B・C・Eに共有持分の取得を対抗することができる。",
+          "answerBoolean": false,
+          "explanationText": "遺産分割には遡及効があるが、遺産分割前に共同相続人の1人からその持分を譲り受けた第三者を害することはできない（民法909条）。ただ、この場合、第三者が権利を主張するためには対抗要件を備えていなければならないから（177条参照）、登記を具備しないHは、B・C・Eに持分の取得を対抗できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺産分割",
+          "sourcePageQuestion": "856",
+          "sourcePageAnswer": "857"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "380",
+      "originalProblemId": "KB2025-p380-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "相続財産中の預貯金債権は、分割債権であるから、相続開始時に共同相続人に対してその相続分に応じて当然に帰属し、遺産分割の対象とはならない。",
+          "answerBoolean": false,
+          "explanationText": "各共同相続人は、遺産に属する預貯金債権のうち相続開始の時の債権額の3分の1に共同相続人の相続分を乗じた額については、単独で権利行使でき（民法909条の2前段）、権利行使をした預貯金債権は、（遺産分割の対象に含まれることを前提に）当該共同相続人が遺産の一部の分割により取得したものとみなされる（909条の2後段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "858",
+          "sourcePageAnswer": "859"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "相続の開始前における相続の放棄は、家庭裁判所の許可を受けた時に限り、その効力を生ずる。",
+          "answerBoolean": false,
+          "explanationText": "相続の開始前における相続の放棄はできず、これをなしても無効である。これを許すと、放棄の強要がなされるおそれがあり、弊害が大きいからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の承認・放棄",
+          "sourcePageQuestion": "858",
+          "sourcePageAnswer": "859"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "相続人が放棄をした後に相続財産の一部を私的に消費した場合には、当該相続人は、常に単純承認したものとみなされる。",
+          "answerBoolean": false,
+          "explanationText": "相続人が、相続を放棄した後に、相続財産の一部を私的に消費したときは、原則として、その相続人は単純承認したものとみなされる（民法921条3号本文）。ただし、当該相続人が相続の放棄をしたことによって相続人となった者が相続の承認をした後は、その者に相続させるべきであり、単純承認したものとみなされない（921条3号ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の承認・放棄",
+          "sourcePageQuestion": "858",
+          "sourcePageAnswer": "859"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "共同相続の場合における限定承認は、相続を放棄した者を除き、共同相続人全員が共同してこれを行わなければならない。",
+          "answerBoolean": true,
+          "explanationText": "相続人が数人あるときは、共同相続人の全員が共同でしなければ限定承認をすることはできない（民法923条）。ただ、一部の者が相続を放棄した場合は、その者ははじめから相続人とならなかったものとみなされるので（939条）、残りの者で限定承認することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "相続の承認・放棄",
+          "sourcePageQuestion": "858",
+          "sourcePageAnswer": "859"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "15歳に達した未成年者は、単独で遺言をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "未成年者でも、15歳に達すれば遺言をすることができる（民法961条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺言",
+          "sourcePageQuestion": "858",
+          "sourcePageAnswer": "859"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "未成年者が遺言をするには、法定代理人の同意が必要である。",
+          "answerBoolean": false,
+          "explanationText": "遺言には制限行為能力者の制度の適用はない（民法962条）。それゆえ、未成年者が遺言をする場合には、法定代理人の同意は必要ではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-sozoku",
+          "confidence": 0.95,
+          "sectionTitle": "遺言",
+          "sourcePageQuestion": "858",
+          "sourcePageAnswer": "859"
+        }
+      ],
+      "parseError": null
     }
   ]
 }
