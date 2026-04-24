@@ -18087,6 +18087,99 @@
       ]
     },
     {
+      "sourcePage": "255",
+      "originalProblemId": "KB2025-p255-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-pro",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "甲が土地を10年間占有した後、その土地を乙に売却して、乙がさらに10年間占有した場合、乙はその占有期間を20年間であると主張することはできない。",
+          "answerBoolean": false,
+          "explanationText": "占有を承継した者は、前の占有者の占有を自己の占有に併せて主張することができるから（民法187条1項）、乙は、自己と甲の占有を併せた20年間の占有期間を主張できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "占有者が占有物の上に行使する権利は、適法なものであるとみなされる。",
+          "answerBoolean": false,
+          "explanationText": "占有者が占有物について行使する権利は、適法に有するものと「推定」されるのであり（民法188条）、「みなされる」のではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "占有者がその占有を妨害されたときは、占有保持の訴えにより、妨害の停止または損害の賠償を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "占有者がその占有を妨害されたときは、占有保持の訴えにより、その妨害の停止および損害の賠償を請求することができる（民法198条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "占有者がその占有を妨害されるおそれがあるときは、占有保全の訴えにより、妨害の予防および損害賠償の担保を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "占有者がその占有を妨害されるおそれがあるときは、占有保全の訴えにより、その妨害の予防または損害賠償の担保を請求することができる（民法199条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "占有者がその占有を奪われたときは、占有回収の訴えにより、その物の返還を請求することはできるが、損害の賠償を請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "占有者がその占有を奪われたときは、占有回収の訴えにより、その物の返還および損害の賠償を請求することができる（民法200条1項）。したがって、占有回収の訴えにより、損害の賠償を請求することはできないとする本肢は誤っている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "だまされて任意に自己所有の動産を他人に引き渡した者は、占有回収の訴えを提起してその動産を取り戻すことができる。",
+          "answerBoolean": false,
+          "explanationText": "占有回収の訴えは、「占有者がその占有を奪われたとき」に提起できるが（民法200条1項）、この「奪われたとき」とは、占有者の意思に反して所持が奪われることを意味し詐取された場合や遺失したものを他人が拾ったという場合は含まれない（大判大11.11.27）。したがって、だまされて任意に動産を引き渡した者は、占有回収の訴えを提起できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "占有回収の訴えは、占有を侵奪した者の特定承継人に対して提起することができないが、その承継人が侵奪の事実を知っていたときは占有回収の訴えを提起することができる。",
+          "answerBoolean": true,
+          "explanationText": "占有回収の訴えは、占有を侵奪した者の特定承継人に対して提起することができないが（民法200条2項本文）、その承継人が侵奪の事実を知っていたときは占有回収の訴えを提起することができる（200条2項ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-bukken",
+          "confidence": 0.99,
+          "sectionTitle": "物権総論",
+          "sourcePageQuestion": "612",
+          "sourcePageAnswer": "613"
+        }
+      ],
+      "parseError": null
+    },
+    {
       "sourcePage": "256",
       "originalProblemId": "KB2025-p256-q01",
       "bookId": "KB2025",
@@ -20458,6 +20551,2036 @@
           "sectionTitle": "債権総論",
           "sourcePageQuestion": "682",
           "sourcePageAnswer": "683"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "293",
+      "originalProblemId": "KB2025-p293-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、中古自動車をBに売却し、納車のためB宅に赴いたが、Bは、その受領を拒んだ。中古自動車がAの保管上の過失で焼失し、引渡しができなくなった場合、Bは、Aに対して履行不能による損害賠償を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "特定物（例：中古自動車）の引渡債務を負う債務者（売主A）は、債権者（買主B）が債務の履行を受けることを拒み、または受けることができない場合（受領遅滞）、債務者（A）の注意義務（民法400条）は軽減され、自己の財産に対するのと同一の注意をもって、その物を保存すれば足りる（413条1項）。したがって、Aの保管上の過失で焼失したとしても、債務者Aの責めに帰すことができない事由による履行不能となるため（415条1項ただし書）、Bは、Aに対して債務不履行による損害賠償請求をすることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "受領遅滞",
+          "sourcePageQuestion": "686",
+          "sourcePageAnswer": "687"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、中古自動車をBに売却し、納車のためB宅に赴いたが、Bは、その受領を拒んだ。中古自動車が保管場所の隣家の失火による延焼で焼失し、引渡しができなくなった場合、Bは、Aからの代金支払請求を拒むことができない。",
+          "answerBoolean": true,
+          "explanationText": "債権者（引渡請求権を有するB）が債務の履行を受けることを拒み、または受けることができない場合（受領遅滞）、履行の提供後に当事者双方の責めに帰することができない事由により債務（売主Aの引渡債務）の履行が不能となったときは、その履行不能は、債権者（B）の責めに帰すべき事由によるものとみなされる結果（民法413条の2第2項）、債権者（B）は、反対給付の履行（物の引渡しと対価関係にあるAの代金請求）を拒むことができない（536条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "受領遅滞",
+          "sourcePageQuestion": "686",
+          "sourcePageAnswer": "687"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、中古自動車をBに売却し、納車のためB宅に赴いたが、Bは、その受領を拒んだ。中古自動車が保管場所の隣家の失火による延焼で中古車の右側面の塗装が変色した場合、Bは、その損傷を理由として、追完請求、代金減額請求、損害賠償請求および契約の解除をすることができない。",
+          "answerBoolean": true,
+          "explanationText": "債権者が債務の履行を受けることを拒み、または受けることができない場合（受領遅滞）、その履行の提供後に当事者双方の責めに帰することができない事由によって目的物が滅失または損傷したときは、買主は、その滅失または損傷を理由として、追完請求、代金減額請求、損害賠償請求および契約の解除をすることができない（民法567条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "受領遅滞",
+          "sourcePageQuestion": "686",
+          "sourcePageAnswer": "687"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "294",
+      "originalProblemId": "KB2025-p294-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債権者は、自己の債権を保全するためであれば、債務者の一身に専属する権利についても債権者代位権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "債権者代位権とは、債権者が、自己の債権を保全するため必要があるときは、債務者に代わって債務者の権利を行使する権利である。しかし、債務者の一身に専属する権利は、特定の者だけが享受できる権利であり、たとえ債権者といえども介入することはできないから、代位行使できない（民法423条1項ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "責任財産の保全 債権者代位権",
+          "sourcePageQuestion": "688",
+          "sourcePageAnswer": "689"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aに名誉を侵害されたBがAに対して慰謝料の支払いを求める交渉中において、Bの債権者CがBに代位してAに対して慰謝料の支払いを請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "名誉侵害を理由とする慰謝料請求権は、加害者が被害者に対し一定額の慰謝料を支払うことを内容とする合意が成立するなど、具体的な金額の慰謝料請求権が当事者間において客観的に確定したときは、一身専属性を喪失し、債権者代位の目的となる（最判昭58.10.6）。したがって、慰謝料の支払いの交渉中においては、Cは、Bに代位してAに対して慰謝料の支払いを請求することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "責任財産の保全 債権者代位権",
+          "sourcePageQuestion": "688",
+          "sourcePageAnswer": "689"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "法定相続人Aの債権者Bは、遺留分権利者Aが権利行使の確定的意思を有することを外部に表明したと認められる特段の事情がある場合を除き、被相続人の遺言ですべての遺産を相続した法定相続人Cに対して、遺留分侵害額請求権をAに代位して行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "遺留分侵害額請求権は、遺留分権利者が、これを第三者に譲渡するなど、権利行使の確定的意思を有することを外部に表明したと認められる特段の事情がある場合を除き、債権者代位の目的とはならない（最判平13.11.22）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "責任財産の保全 債権者代位権",
+          "sourcePageQuestion": "688",
+          "sourcePageAnswer": "689"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AとBが離婚し、AからBに対して財産分与として1000万円を支払う旨の協議が調っていたが、Bが支払いを求めていない場合、Bの債権者Cは、Bに代位してAに対して1000万円を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "離婚に伴う財産分与請求権は、協議または審判によって具体的内容が形成されるまでは、その範囲および内容が不確定・不明確であるから、財産分与請求権を保全するために債権者代位権を行使することはできない（最判昭55.7.11）。したがって、具体的内容が確定している本肢では、Cは、Bに代位してAに対して請求することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "責任財産の保全 債権者代位権",
+          "sourcePageQuestion": "688",
+          "sourcePageAnswer": "689"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "295",
+      "originalProblemId": "KB2025-p295-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "著名な陶芸家の真作とされた陶器がA→B→Cと順次売却されたが、後にこれが贋作と判明し、無資力であるBの意思表示に錯誤があるときは、Cは、Bに対する売買代金返還請求権を保全するために、Bの意思表示の錯誤による取消しを主張して、BのAに対する売買代金返還請求権を代位行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "錯誤による意思表示は取り消すことができる（民法95条1項）。第三者は、表意者の取消権を行使することはできないが、取消権は債権者代位権の対象となるため、Cは、Bに対する代金返還債権を保全する必要があるときは、Bの意思表示の錯誤による取消しを主張して、BのAに対する代金返還請求権を代位行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "690",
+          "sourcePageAnswer": "691"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBに対する30万円の金銭債権を保全するため、BがCに対して有する50万円の金銭債権を代位行使する場合、Aは、自己のBに対する30万円の範囲においてのみ、BのCに対する金銭債権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "債権者（A）は、債務者（B）に属する権利（被代位権利）を行使する場合、被代位権利の目的が可分の権利であるときは、自己の債権の額の限度のみ被代位権利を行使することができる（民法423条の2）。よって、Aが代位行使できるのは30万円の範囲のみである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "690",
+          "sourcePageAnswer": "691"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "債権者Aは、Bに対する金銭債権を保全するためにBのCに対する動産の引渡請求権を代位行使するにあたり、Cに対して、その動産をBに引き渡すことを請求することはできるが、直接自己に引き渡すことを請求することはできない。",
+          "answerBoolean": false,
+          "explanationText": "給付が動産の引渡しの場合には、せっかく訴訟で勝訴しても、債務者が受け取りを拒否すると実効性がなくなるので、債権者は、動産の引渡請求権を代位行使する場合、直接自己に引き渡すことを請求できる（民法423条の3前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "690",
+          "sourcePageAnswer": "691"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AはBから同人の所有する建物を賃貸する契約を締結したが、その建物の引渡しが行われていない状態のもとでそれをCが権原なく占有してしまった場合において、Aが、自己の賃借権を保全するためにBに代位して、Cに対して建物の明渡しを請求するときは、Aは、建物を直接自己へ引き渡すことを請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "建物の賃借人が、賃貸人たる建物所有者（B）に代位して、不法占拠者（C）に対し建物の明渡しを請求する場合には、自己に直接その明渡しをなすべき旨を請求できる（最判昭29.9.24）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "690",
+          "sourcePageAnswer": "691"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "不動産がA→B→Cと順次売却された場合において、それらの所有権移転登記が未了の間に、Dが原因証書等を偽造して、同一不動産につきA→Dの所有権移転登記を経由してしまったときは、Cは、Bの債権者として、BがAに代位してDに行使することができる所有権移転登記の抹消請求権を代位行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "代位される権利は、一身専属の権利でないことが必要であるが（民法423条1項ただし書）、債権者代位権の代位も認められるので（最判昭39.4.17）、Cは、BがDに行使することができる債権者代位権をさらに代位して、Dに対する所有権移転登記の抹消請求をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "690",
+          "sourcePageAnswer": "691"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "296",
+      "originalProblemId": "KB2025-p296-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債権者が債権の期限到来前には、保存行為の場合を除き、債権者代位権を行使することはできない。",
+          "answerBoolean": true,
+          "explanationText": "債権者が、債権者代位権を行使をするためには、原則として、被保全債権が履行期にあることが必要である。しかし、例外として、債務者の財産の現状を維持する保存行為をする場合には、債権者代位権の行使が可能となる（民法423条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "692",
+          "sourcePageAnswer": "693"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債務者が既にみずから権利を行使している場合であっても、その行使の方法又は結果によっては、債権者は、債権者代位権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "債権者は、債務者自身が権利を行使している以上、行使方法の良否にかかわらず、債権者代位権を行使することはできない（最判昭28.12.14）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "692",
+          "sourcePageAnswer": "693"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "債権者は、債務者に属する権利を、債権者自身の権利として行使するのではなく、債務者の代理人として行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "債権者は、自己の名をもって債務者の権利を行使するものであり、債務者の代理人として、債務者の権利を行使するものではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "692",
+          "sourcePageAnswer": "693"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "債権者Aが債務者Bに代位して、BがCに対して有する売買契約に基づく代金債権を行使した場合、Cは、Aに対して、Bに対する同時履行の抗弁権を主張して、目的物の引渡しがあるまで代金の支払を拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "債権者（A）が債務者（B）に属する権利を行使したときは、第三債務者（C）は、債務者（B）に対して主張することができる抗弁をもって、債権者（A）に対抗することができる（民法423条の4）。したがって、Cは、Aに対して、Bに対する同時履行の抗弁権を主張して、目的物の引渡しがあるまで代金の支払を拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "692",
+          "sourcePageAnswer": "693"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AはBに対して代金債権を有し、BはCに対して貸金債権を有している。AがBの貸金債権を代位行使した場合であっても、Bは、Cに対して資金の返還を請求することができるほか、CもBに対して資金を返還することができる。",
+          "answerBoolean": true,
+          "explanationText": "債権者（A）が被代位権利（BのCに対する債権）を行使した場合であっても、債務者（B）は、被代位権利について、自ら取立てその他の処分をすることができ、この場合、相手方（C）も、被代位権利について、債務者（B）に対して履行をすることができる（民法423条の5）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "692",
+          "sourcePageAnswer": "693"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "自動車事故の被害者Aは、加害者Bに対する損害賠償債権を保全するために、Bの資力がその債務を弁済するに十分であるか否かにかかわらず、Bが保険会社との間で締結していた自動車対人賠償責任保険契約に基づく保険金請求権を代位行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "自動車事故の被害者が損害賠償請求権を保全するため、加害者が保険会社に対して有する任意保険の保険金請求権を代位行使する場合には、債務者が無資力でなければならない（最判昭49.11.29）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 1,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "692",
+          "sourcePageAnswer": "693"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "297",
+      "originalProblemId": "KB2025-p297-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aの父親がその所有する不動産をBに売却した後に死亡し、Aは、弟Cとともに共同相続をした。その後、Aは、Bに対し、売買代金の支払を請求したが、Cが移転登記に応じないことを理由にこれを拒絶された。この場合、Bが債務超過状態にないときは、Aは、BのCに対する移転登記請求権を代位行使することはできない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判昭50.3.6）は、買主（B）に対する土地所有権移転登記手続義務を相続した共同相続人の一部の者（C）が当該義務の履行を拒絶しているため、買主（B）が相続人全員による登記手続義務の履行の提供があるまで代金全額について弁済を拒絶する旨の同時履行の抗弁権を行使している場合には、他の相続人（A）は、自己の相続した代金債権を保全するため、買主（B）が無資力でなくても、これに代位して、登記手続義務の履行を拒絶している相続人（C）に対し買主の所有権移転登記手続請求権を行使することができるとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "694",
+          "sourcePageAnswer": "695"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債権者が、特定物に関する債権を保全するため債権者代位権を行使する場合でも、債務者が無資力であることが必要である。",
+          "answerBoolean": false,
+          "explanationText": "債権者代位権を行使するためには、債務者の財産管理の自由を不当に制限することがないように、原則として、債務者が無資力であることが必要である。しかし、特定物に関する債権を保全するための代位権の行使は、債務者の金銭的資力とは無関係であるため、無資力要件は不要である（大判明43.7.6）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "694",
+          "sourcePageAnswer": "695"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがB所有の土地を賃借している場合、Aは、Bが無資力でなければ、その土地の不法占拠者Cに対して、土地所有権に基づく妨害排除請求権をBに代位して行使することができない。",
+          "answerBoolean": false,
+          "explanationText": "土地の賃借人は、賃貸人である土地の所有者が無資力でなくても、賃貸借権を保全するため、土地の不法占拠者に対して、所有権に基づく妨害排除請求権を賃貸人に代位して行使することができる（転用事例：大判明4.12.16）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "694",
+          "sourcePageAnswer": "695"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "債権者は、債務者の財産から満足を得られない場合には、債権取得前に債務者が行った贈与契約を詐害行為として取り消して財産を取り戻すことができる。",
+          "answerBoolean": false,
+          "explanationText": "債権者は、債務者が債権者を害することを知ってした詐害行為の前の原因に基づいて生じたものである場合に限り、詐害行為取消請求をすることができる（民法424条3項）。したがって、債権取得前に債務者が行った贈与行為を詐害行為として取り消すことはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "694",
+          "sourcePageAnswer": "695"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "甲不動産がAからB、AからCに二重に譲渡され、Cが先に登記を備えた場合には、AからCへの甲不動産の譲渡によりAが無資力になったときでも、Bは、AからCへの譲渡を詐害行為として取り消すことはできない。",
+          "answerBoolean": false,
+          "explanationText": "判例（最大判昭36.7.19）は、特定物引渡請求権を有する者も、その目的物を債務者が処分することにより無資力となった場合には、処分行為を詐害行為として取り消すことができるとしている。したがって、Bは、AからCへの譲渡を詐害行為として取り消すことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "694",
+          "sourcePageAnswer": "695"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "298",
+      "originalProblemId": "KB2025-p298-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債務者が、一部の債権者に債務の本旨に従った弁済をなすことは、原則として詐害行為とならない。",
+          "answerBoolean": true,
+          "explanationText": "債務者が、一部の債権者に弁済をすることは、原則として詐害行為にならないが、支払不能下において、一部の債権者たる受益者と通謀して他の債権者を害する意図をもって弁済した場合には詐害行為になる（民法424条の3第1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "696",
+          "sourcePageAnswer": "697"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "離婚における財産分与は、身分行為にともなうものではあるが、財産権を目的とする法律行為であるから、財産分与が配偶者の生活維持のためやむをえないと認められるなど特段の事情がない限り、詐害行為取消権の対象となる。",
+          "answerBoolean": false,
+          "explanationText": "離婚に伴う財産分与は、民法768条3項の規定の趣旨に反して不相当に過大であり、財産分与に仮託してなされた財産処分であると認めるに足るような特段の事情がない限り、詐害行為の対象とはならない（民法424条2項、最判昭58.12.19）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "696",
+          "sourcePageAnswer": "697"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "相続放棄は、責任財産を積極的に減少させる行為ではなく、消極的にその増加を妨げる行為にすぎず、また、相続放棄は、身分行為であるから、他人の意思によって強制されるべきではないので、詐害行為取消権行使の対象とならない。",
+          "answerBoolean": true,
+          "explanationText": "債権者を害する行為（詐害行為）は、財産権を目的とする行為でなければならない。相続放棄のような身分行為については、本人の意思が尊重されるべきであるから、詐害行為取消権の対象とならない（民法424条2項、最判昭49.9.20）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "696",
+          "sourcePageAnswer": "697"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AがBに対して金銭を貸し付けた後、Bの父Cが死亡し、BがDとともにCを相続した場合において、無資力となっているBがDとともにAを害することを知りつつ、相続財産のすべてをDに相続させる旨の遺産分割協議をしたときは、Aは、BD間の遺産分割協議を取り消すことができる。",
+          "answerBoolean": true,
+          "explanationText": "遺産分割協議は、相続の開始によって共同相続人の共有となった相続財産の帰属を確定させるものであり、その性質上、財産権を目的とする法律行為ということができるから、詐害行為取消権の対象となる（最判平11.6.11）。したがって、Aは、BD間の遺産分割協議を取り消すことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "696",
+          "sourcePageAnswer": "697"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "債務超過に陥っているAは、Bに対し金銭債務を負っている。Aは、Cに対して有する貸金債権をBに対する金銭債務を負う前にDに債権譲渡をした。Aは、Bに対する金銭債務を負った後に、確定日付のある証書によって通知をなした。この場合、DがAの債務超過状態について悪意であったときには、Bは、その債権譲渡の通知を詐害行為として取り消すことができる。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判平10.6.12）は、債務者（A）が自己の第三者（C）に対する債権を譲渡した場合、債権譲渡自体が詐害行為とならないときは、債務者（A）がこれについてした確定日付のある債権譲渡の通知は、詐害行為取消権行使の対象とならないとしている。したがって、DがAの債務超過状態について悪意であったときでも、Bは、債権譲渡の通知を詐害行為として取り消すことはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "696",
+          "sourcePageAnswer": "697"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "詐害行為取消請求は、債権者が債務者の代理人として行うものではなく、自己の名において裁判上するものである。",
+          "answerBoolean": true,
+          "explanationText": "詐害行為取消請求は、債権者が債務者という資格において、つまり、債権者が自己の名において裁判上すべきものである（民法424条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "696",
+          "sourcePageAnswer": "697"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "299",
+      "originalProblemId": "KB2025-p299-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債務者が第三者に金銭を贈与したことにより、自己の債権の満足が得られなくなっただけではなく、他の債権者の債権も害されるようになった場合には、取消債権者は自己の債権額を超えても贈与された金銭の全部につき詐害行為として取り消すことができる。",
+          "answerBoolean": false,
+          "explanationText": "債権者は、詐害行為取消請求をする場合において、債務者がした行為の目的が可分であるときは、自己の債権の額の限度においてのみ、その行為の取消しを請求することができる（民法424条の8第1項）。したがって、金銭債権の場合、取消債権者が取消権を行使できるのは、自己の債権額の範囲に限られる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "698",
+          "sourcePageAnswer": "699"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "詐害行為取消権は、総ての債権者の利益のために債務者の責任財産を保全する目的において行使されるべき権利であるから、取消しに基づいて返還すべき財産が金銭である場合には、取消債権者は受益者に対して直接自己への引渡しを求めることはできない。",
+          "answerBoolean": false,
+          "explanationText": "詐害行為取消訴訟における取消債権者は、受益者に対し（民法424条の7第1項1号）、直接にその受けた財産の引渡しを求める請求権を有し、返還すべき財産が金銭の場合には、自己に支払うよう請求することができる（424条の9第1項前段・2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "698",
+          "sourcePageAnswer": "699"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "債権者は自己の債権について、詐害行為として取り消し、受益者から取り戻した財産から他の債権者に優先して弁済を受けることができる。",
+          "answerBoolean": false,
+          "explanationText": "詐害行為の取消しの効力は、債務者及びすべての債権者に対しても効力が生じ（民法425条）、詐害行為取消権を行使した債権者のみ効力が生ずるものではない。したがって、受益者から取り戻した財産は、総債権者のための引当財産となり、取消債権者が優先弁済を受けることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "698",
+          "sourcePageAnswer": "699"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "取消しの効果は、訴訟当事者である債権者および受益者または転得者だけでなく、訴訟に関与しない債務者についても及ぶ。",
+          "answerBoolean": true,
+          "explanationText": "詐害行為取消請求を認容する確定判決は、訴訟当事者（債権者および受益者または転得者）のほか、債務者およびその全ての債権者に対してもその効力を有する（民法425条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "698",
+          "sourcePageAnswer": "699"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AがBに1000万円の貸金債権を有していたところ、Bが唯一の所有財産である1000万円相当の土地をCに200万円で売却したため、AがCに対してBC間の売買契約の取消しを求める詐害行為取消請求を行い、Aの請求を認容する確定判決を得た。CがBに対して土地を返還したときは、CはBに支払った土地の代金200万円の返還を請求できる。",
+          "answerBoolean": true,
+          "explanationText": "詐害行為の取消しは、債務者（B）ではなく、受益者（C）または転得者を相手とするが（民法424条の7第1項）、詐害行為（債務の消滅に関する行為を除く）が取り消されたときは、その効力は債務者（B）にも及ぶため（425条参照）、受益者（C）は、債務者（B）に対し、その財産を取得するためにした反対給付の返還を請求することができる（425条の2前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "698",
+          "sourcePageAnswer": "699"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "詐害行為取消請求に係る訴えは、債務者が債権者を害することを知って行為をしたことを債権者が知った時から2年、行為の時から10年を経過したときは、提起できない。",
+          "answerBoolean": true,
+          "explanationText": "詐害行為取消請求に係る訴えは、債務者が債権者を害することを知って行為をしたことを債権者が知った時から2年、行為の時から10年を経過したときは、提起することができない（民法426条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "698",
+          "sourcePageAnswer": "699"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "300",
+      "originalProblemId": "KB2025-p300-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A、B、C三人がDから自動車1台を購入する契約をし、その売買代金として300万円の債務を負っている場合、Aは、Dに対して、ABC三人のために自動車の引渡しを請求することができるが、Dは、ABC三人のためであるとしても、Aに対してだけ自動車の引渡しをすることはできない。",
+          "answerBoolean": false,
+          "explanationText": "ABCのDに対する自動車の引渡請求権は、共有物の引渡請求権であり、性質上の不可分債権である。そして、不可分債権の場合、各債権者は全ての債権者のために履行を請求し、債務者は全ての債権者のために各債権者に対して履行をすることができるから（民法428条、432条）、Aは、Dに対して、ABC三人のために自動車の引渡しを請求することができ、Dは、ABC三人のために、Aに対してだけ自動車の引渡しをすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "多数当事者の債権・債務",
+          "sourcePageQuestion": "700",
+          "sourcePageAnswer": "701"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A、B、C三人がDから自動車1台を購入する契約をし、その売買代金として300万円の債務を負っている場合、この売買代金債務は金銭債務であるので不可分債務となることはない。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務（可分の場合）と不可分債務の峻別の観点から、不可分債務の成立は「債務の目的がその性質上不可分である場合に」限定されるため（民法430条）、売買代金債務のような可分債務は不可分債務とならない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "多数当事者の債権・債務",
+          "sourcePageQuestion": "700",
+          "sourcePageAnswer": "701"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "ABはCに自動車を売却し代金200万円の連帯債権を有している場合（持分は平等）に、AがCとの間で免除をしたとしても、BはCに対して200万円を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "連帯債権者の1人について生じた事由は、弁済、請求のほか、更改、免除、相殺、混同を除き、原則として他の連帯債権者に影響を及ぼさない（相対的効力の原則：民法435条の2）。連帯債権者の1人（A）と債務者（C）との間に更改または免除があったときは、その連帯債権者がその権利を失わなければ分与されるべき利益に係る部分（Aの持分100万円）については、他の連帯債権者（B）は、履行を請求できないため（433条）、Bは100万円のみ請求できるにすぎない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "多数当事者の債権・債務",
+          "sourcePageQuestion": "700",
+          "sourcePageAnswer": "701"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "ABはCに自動車を売却し代金200万円の連帯債権を有している場合（持分は平等）に、CがAに対して100万円の債権で相殺をしたときは、連帯債権の額は100万円となる。",
+          "answerBoolean": true,
+          "explanationText": "債務者（C）が連帯債権者（AB）の1人（A）に対して債権を有する場合、その債務者が相殺を援用したときは、その相殺は、他の連帯債権者（B）に対しても効力を生ずるため（民法434条）、連帯債権の額は100万円となる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "多数当事者の債権・債務",
+          "sourcePageQuestion": "700",
+          "sourcePageAnswer": "701"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "301",
+      "originalProblemId": "KB2025-p301-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "ABはCに自動車を売却し代金200万円の連帯債権を有している場合（持分は平等）、Aが死亡し、Cが単独でAを相続したとしても、代金200万円の連帯債権は消滅しない。",
+          "answerBoolean": false,
+          "explanationText": "連帯債権者の一人（A）と債務者（C）との間に混同があったときは、債務者（C）は、弁済をしたものとみなされるため（民法435条）、連帯債権は消滅する（CはBの持分に相当する100万円をBに支払うこととなる）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "702",
+          "sourcePageAnswer": "703"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "連帯債務は、債務者の数に応じた数個の債務であるが、債権者は、連帯債務者の1人に対する債権を分離して譲渡することができない。",
+          "answerBoolean": false,
+          "explanationText": "連帯債務は、債務者の数に応じた数個の独立の債務であるから、債権者は、債務者の1人に対する債権を分離して譲渡することができる（大判昭13.12.22参照）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "702",
+          "sourcePageAnswer": "703"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "債権者は、連帯債務者の1人に対して、全部または一部の履行の請求をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "数人が連帯債務を負担するときは、債権者は、連帯債務者の1人に対し、全部または一部の履行を請求をすることができる（民法436条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "702",
+          "sourcePageAnswer": "703"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A、B、C三人がDから自動車1台を購入する契約をし、その売買代金として300万円の連帯債務を負っている場合、Aについては制限行為能力を理由に契約の取消しが認められるときには、Aの負担部分については、BおよびCも、その債務を免れる。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合、Aの負担部分につき、BおよびCは、その債務を免れることはできないから、誤っている。すなわち、連帯債務は、債務者ごとの独立した債務であるので、連帯債務者の1人について法律行為の無効または取消しの原因があっても、他の連帯債務者の債務は、その効力を妨げられない（民法437条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "702",
+          "sourcePageAnswer": "703"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "連帯債務者の1人に対する債権譲渡の通知は、他の債務者について効力を生じない。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人について生じた事由は、弁済、供託、代物弁済の絶対効が当然に生ずべきもののほか、更改（民法438条）、相殺（439条1項）、混同（440条）を除き、他の連帯債務者にその効力を生じないのが原則であるところ（相対的効力の原則：441条）、債権譲渡の通知は例外事由にあたらないから（438条～440条）、原則どおり、他の連帯債務者に影響を及ぼさない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "702",
+          "sourcePageAnswer": "703"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "連帯債務者の1人に対する履行の請求による時効の更新は、他の債務者についても効力を生じない。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人に対する履行の請求は、絶対的効力を生じる例外事由にはあたらないから、その効力は、他の連帯債務者には及ばない（民法441条）。したがって、履行の請求による時効の更新の効力は、他の連帯債務者に対して生じない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "702",
+          "sourcePageAnswer": "703"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "302",
+      "originalProblemId": "KB2025-p302-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "連帯債務者の1人と債権者との間で更改がなされたときは、他の債務者は、債権者に対して債務を免れる。",
+          "answerBoolean": true,
+          "explanationText": "更改は、絶対的効力を生じる例外事由の1つであり、他の連帯債務者にも影響する（絶対効：民法438条）。連帯債務者の1人と債権者との間で更改があった場合、債権は、すべての連帯債務者の利益のために消滅する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "ABCがDに対して300万円の連帯債務（負担部分は平等）を負っている場合において、Dに対して200万円の貸金債権を有するAが相殺を援用したときは、BCも200万円について債務を免れる。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人が債権者に対して債権を有する場合において、その連帯債務者が相殺を援用したときは、全ての連帯債務者の利益のために消滅する（民法439条1項）。したがって、Aが相殺を援用したときは、BCも200万円について債務を免れる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "ABCがDに対して300万円の連帯債務（負担部分は平等）を負っている場合において、Dに対して200万円の貸金債権を有するAが相殺を援用しない間は、Bは、Dに対して、200万円について債務の履行を拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "連帯債務者の1人が債権者に対して債権を有する場合において、その連帯債務者が相殺を援用しない間は、その連帯債務者の負担部分についてのみ他の連帯債務者は、債権者に対して債務の履行を拒むことができる（民法439条2項）。したがって、Bが債務の履行を拒むことのできる債務の額は、Aの負担部分100万円である。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "連帯債務者の1人が時効の利益を放棄しても、他の債務者に対して何ら影響を与えることはない。",
+          "answerBoolean": true,
+          "explanationText": "時効の利益の放棄は、絶対的効力を生じる例外事由にはあたらないから、相対的効力の原則により、他の連帯債務者に影響を及ぼさない（民法441条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "ABがCに対して200万円の連帯債務（負担部分は平等）を負っている場合において、10年が経過し、BがCに債務の承認をした後、AがCに消滅時効を援用した場合、Aは、100万円について債務を免れる。",
+          "answerBoolean": false,
+          "explanationText": "Bによる債務の承認（時効の利益の放棄）について、絶対効は生じないから、債務の承認によるBの時効援用権の喪失は、Aに影響しない（相対効の原則：民法441条）。したがって、Aは、消滅時効を援用すれば、200万円全額について債務を免れることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "A、B、C三人がDに対して60万円の連帯債務を負っている。DがAに対して60万円の債務を免除した場合に、A、B、C三人の負担部分が平等であるときは、B、Cは、40万円ずつの連帯債務を負うことになる。",
+          "answerBoolean": false,
+          "explanationText": "債務の免除は、絶対的効力を生じる事由ではないから、他の連帯債務者に影響を与えない（民法441条）。連帯債務者の1人（A）に対してした債務の免除は、他の連帯債務者（B C）のために効力が生じない結果、B Cは、60万円ずつの連帯債務を負うことになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "ABCがDに対して30万円の連帯債務を負っている場合（負担部分は平等）、DがAに30万円の債務を免除した。BがDからの請求に応じて30万円を支払った場合、Bは、Aに対して求償権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人（A）に対して債務の免除がされた場合においても、他の連帯債務者は、その1人の連帯債務者（A）に対し求償権を行使することができる（民法445条）。なお、AがBの求償に応じたとしても、AはDに不当利得返還請求できないと解されている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "704",
+          "sourcePageAnswer": "705"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "303",
+      "originalProblemId": "KB2025-p303-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "A、B、C三人がDに対して60万円の連帯債務を負っている。DがAに対して連帯の免除をした場合に、A、B、C三人の負担部分が平等であったときは、Aは、20万円の分割債務を負い、B、Cは、40万円ずつの連帯債務を負うこととなる。",
+          "answerBoolean": false,
+          "explanationText": "本肢所定の場合、Aは20万円の分割債務、B Cは60万円の連帯債務を負うから、誤っている。すなわち、連帯の免除とは、債権者が債務者に対してその債務額を負担部分に制限することをいい、1人または数人の債務者についてのみ連帯の免除をなす場合（相対的連帯免除）、これによって免除を受けた債務者だけが分割債務を負担し、他の債務者は、なお全部給付義務を負う。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "706",
+          "sourcePageAnswer": "707"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "連帯債務者の1人が、その債権を譲り受けた場合は、その債務者は弁済したものとみなされる。",
+          "answerBoolean": true,
+          "explanationText": "債務者が債権を譲り受ける等、債権と債務とが同一人に帰することを混同という。混同があったときは、その連帯債務者は、弁済をしたものとみなされ（絶対効：民法440条）、したがって、他の連帯債務者も影響を受ける。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "706",
+          "sourcePageAnswer": "707"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A BがCに対して200万円の連帯債務（負担部分は平等）を負っている場合、Aが消滅時効の完成前に債務の承認を更新したため、Bにのみ消滅時効が完成したときは、Aは、100万円の限度でその債務を免れることができる。",
+          "answerBoolean": false,
+          "explanationText": "時効は、絶対的効力を生じる事由ではないから、連帯債務者の1人（B）のために時効が完成したとしても、他の連帯債務者（A）は、その義務を免れないため、200万円の連帯債務を負う（民法441条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "706",
+          "sourcePageAnswer": "707"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A B CがDに対して300万円の連帯債務（負担部分は平等）を負っている場合、Bについてのみ時効が完成した。Aが時効完成後にDからの請求に応じて300万円を支払った場合、Aは、Bに対しても求償権を行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人（B）のために時効が完成した場合においても、他の連帯債務者（A）は、その1人の連帯債務者（B）に対し求償権を行使できる（民法445条）。Bにつき時効が完成したとしても、時効の完成は相対的効力を有するにとどまるため、A Cは300万円の連帯債務を負うところ、AがBの時効完成後に300万円をDに支払った場合には、Bに対しても求償権を行使することができる。なお、BがAの求償に応じても、BはDに不当利得返還請求できないと解されている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "706",
+          "sourcePageAnswer": "707"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "連帯債務者の1人が債務を弁済しても、その債務者は、他の債務者に対してそれぞれの負担部分に応じた求償をすることはできない。",
+          "answerBoolean": false,
+          "explanationText": "連帯債務者の1人が弁済し、その他自己の財産をもって共同の免責を得たときは、その連帯債務者は、その免責を得た額が自己の負担部分を超えるかどうかにかかわらず、他の連帯債務者に対し、その免責を得るために支出した財産の額のうち各自の負担部分に応じた額の求償権を有する（民法442条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "706",
+          "sourcePageAnswer": "707"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "304",
+      "originalProblemId": "KB2025-p304-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AとBは、Cに対し連帯して1,000万円の貸金債務を負担し（負担部分は2分の1）、Cから履行を求められたAが、Bがあることを知りながら、あらかじめその旨をBに通知することなくCに弁済した。BはCに対して500万円の金銭債権を有しており、既にその弁済期が到来していた場合、BはAから500万円を求償されたとしても相殺をもって対抗することができる。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人（A）が債権者（C）から履行の請求を受けたことを他の連帯債務者（B）に通知しないで弁済をし、その他自己の財産をもって共同の免責を得た場合、他の連帯債務者（B）は、債権者（C）に対抗することができる事由を有していたときは、その負担部分について、その事由をもってその免責を得た連帯債務者（A）に対抗することができる（民法443条1項前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "708",
+          "sourcePageAnswer": "709"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AとBは、Cに対し連帯して1,000万円の貸金債務を負担し（負担部分は2分の1）、AがCに弁済した後にBに対しその旨を通知しなかったため、Bは、これを知らずに、Aに対して事前に弁済する旨の通知をして、Cに弁済した。この場合に、Bは、Aの求償を拒み、自己がAに対して500万円を求償することができる。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の1人（A）が弁済をし、その他自己の財産をもって共同の免責を得たことを他の連帯債務者（B）があることを知りながら、他の連帯債務者（B）に通知することを怠ったため、他の連帯債務者（B）が善意で弁済をし、その他有効の行為をもって免責を得たときは、その免責を得た連帯債務者（B）は、自己の弁済その他免責のためにした行為を有効であったものとみなすことができる（民法443条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "708",
+          "sourcePageAnswer": "709"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "A、B、C三人がDに対して60万円の連帯債務を負っている。AがDに60万円を弁済した場合には、A、B、C三人の負担部分が平等であるときは、Aは、B、Cに20万円ずつ求償できるが、Cが無資力のときは、Cから償還を受けることができないことにつきAに過失がないときに限り、Bに対して30万円の求償をすることができる。",
+          "answerBoolean": true,
+          "explanationText": "連帯債務者の中に償還をする資力のない者があるときは、償還できない部分は、求償者に過失がない限り、求償者および他の資力のある者の間で、各自の負担部分に応じて分割して負担する（民法444条1項・3項）。本肢所定の場合、AはBに20万円ずつ求償できるはずであるが、資力のないCに償還できない20万円については、AとBで10万円ずつ分担する結果、AはBに30万円の求償をすることができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "708",
+          "sourcePageAnswer": "709"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "A、B、C三人がDに対して60万円の連帯債務を負っている。A、B、C三人の負担部分が平等である事情の下で、DがAに対して連帯の免除をした場合に、Bが債務全額を弁済したとしても、もしCが無資力であったとすると、Cが弁済することができない部分のうちAが負担すべき10万円はDが負担する。",
+          "answerBoolean": false,
+          "explanationText": "連帯債務者の1人（A）が連帯の免除を得た場合、その1人の債務額は負担部分に限定され（Aの債務額は20万円）、それ以上は請求されないのに対して、他の連帯債務者は従前の連帯債務を負う（BとCは60万円の連帯債務を負う）。この場合に、連帯債務者（BとC）の中に弁済をする資力のない者（C）があるときは、Aは、Bと、AとBの負担部分に応じてCの無資力を自ら負担するため、Cの負担部分20万円のうち10万円をAが負担する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "708",
+          "sourcePageAnswer": "709"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "305",
+      "originalProblemId": "KB2025-p305-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBから金銭を借り入れるに当たり、CがAからの委託を受けてBと連帯保証契約を締結することとした。この保証契約は、書面でしなければ効力が生じない。",
+          "answerBoolean": true,
+          "explanationText": "保証契約は、債権者と保証人間での契約であり、単純保証か連帯保証かを問わず、書面でなければ効力が生じない（民法446条2項）。保証契約の締結を慎重にさせるために要式契約としたものである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "保証債務は、主たる債務に関する損害賠償には及ばない。",
+          "answerBoolean": false,
+          "explanationText": "保証債務は、主たる債務に関する利息、違約金、損害賠償その他その債務に従たるすべてのものを含む（民法447条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "主たる債務について違約金の定めがない場合でも、保証債務についてのみ違約金の定めをすることができる。",
+          "answerBoolean": true,
+          "explanationText": "保証人は、その保証債務についてのみ、違約金または損害賠償の額を約定することができる（民法447条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "主たる債務の弁済期が延長された場合、その効力は、保証債務にも及び、弁済期は延長される。",
+          "answerBoolean": true,
+          "explanationText": "保証人の負担が債務の目的または態様において主たる債務より重いときは、これを主たる債務の限度に減縮する（民法448条1項）。主たる債務の弁済期が延長された場合、その効力は保証債務にも及ぶ（大判判明37.12.13）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "主たる債務の目的または態様が保証契約の締結後に加重されたときであっても、保証人の負担は加重されない。",
+          "answerBoolean": true,
+          "explanationText": "主たる債務の目的または態様が保証契約の締結後に加重されたときであっても、保証人の負担は加重されない（民法448条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "保証人は、行為能力者であることが必要である。",
+          "answerBoolean": false,
+          "explanationText": "保証人の資格についてはなんら制限がないから、当事者間の契約で制限行為能力者でも保証人になることができる。ただし、債務者が保証人を立てる義務を負う場合には、行為能力者でなければならない（民法450条1項1号）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "連帯保証人は、催告の抗弁権および検索の抗弁権をもつ。",
+          "answerBoolean": false,
+          "explanationText": "連帯保証は、主たる債務者の債務につき保証人が主たる債務者と連帯して保証債務を負担するものであるから、保証債務の補充性〔催告の抗弁権・検索の抗弁権（民法452条、453条）〕はない（454条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        },
+        {
+          "seqNo": 8,
+          "questionText": "AはBから1000万円借り受け、Aの依頼によってCおよびDがこの債務について連帯保証人となった。この債務の弁済期到来後、Bが、主債務者Aに請求しないでいきなりCに1000万円弁済せよと請求してきた場合、CはBに対してまずAに請求せよと抗弁することができる。",
+          "answerBoolean": false,
+          "explanationText": "連帯保証人には催告の抗弁権（まず、主たる債務者に催告せよと主張できる権利）はないので（民法454条）、CはBに対してまずAに請求せよと抗弁することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.9,
+          "sectionTitle": "保証債務",
+          "sourcePageQuestion": "710",
+          "sourcePageAnswer": "711"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "306",
+      "originalProblemId": "KB2025-p306-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは知人BがCより100万円の融資を受けるにあたり、保証（単純保証）する旨を約した。弁済期後、CはいきなりAに対して保証債務の履行を求めてきたので、Aはまずは主たる債務者に催告するよう請求した。ところがCがBに催告したときにはBの資産状況が悪化しており、CはBから全額の弁済を受けることができなかった。この場合、AはCが直ちにBに催告していれば弁済を受けられた限度で保証債務の履行を免れることができる。",
+          "answerBoolean": true,
+          "explanationText": "本肢は、民法455条のとおりであり、催告を怠たり弁済を受けることができなくなった債権者よりも保証人を保護するために、保証人は、債権者が直ちに催告・執行をすれば弁済を得ることができた限度で義務を免れる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "712",
+          "sourcePageAnswer": "713"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AはBから1000万円借り受け、Aの依頼によってCおよびDがこの債務について連帯保証人となった。この債務の弁済期到来後、Bが、Cに1000万円弁済せよと請求してきた場合、Cは500万円しか弁済する義務はない。",
+          "answerBoolean": false,
+          "explanationText": "連帯保証人には分別の利益（主たる債務者がその債務を負担する利益）（民法456条）はないので、Cは1000万円を弁済する義務がある。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "712",
+          "sourcePageAnswer": "713"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bから金銭を借り受け、Cが、Aの同貸金債務を保証した場合に、BのAに対する履行の請求その他の事由による時効の完成猶予及び更新は、Cに対しても、その効力を生ずる。",
+          "answerBoolean": true,
+          "explanationText": "主たる債務者（A）に対する履行の請求その他の事由による時効の完成猶予および更新は、保証人（C）に対しても、その効力を生ずる（民法457条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "712",
+          "sourcePageAnswer": "713"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "保証人は、主たる債務者が債権者に対して相殺権を有するときであっても、債権者に対して債務の履行を拒むことができない。",
+          "answerBoolean": false,
+          "explanationText": "主たる債務者が債権者に対して相殺権、取消権または解除権を有するときは、これらの権利の行使によって主たる債務者がその債務を免れるべき限度において、保証人は、債権者に対して債務の履行を拒むことができる（民法457条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "712",
+          "sourcePageAnswer": "713"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AはBから1000万円借り受け、Aの依頼によってCおよびDがこの債務について連帯保証人となった。この債務の弁済期到来後、BがCに対して弁済請求訴訟を提起して勝訴した場合、Aに対しても時効更新の効力が生じる。",
+          "answerBoolean": false,
+          "explanationText": "連帯保証人に対する請求は、主たる債務者に対しては効力が及ばないため（民法458条）、BがCに対して弁済請求訴訟を提起して勝訴した場合、Aに対しては時効更新の効力が生じない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "712",
+          "sourcePageAnswer": "713"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "Aは、Bの委託を受けて、BがCに対して負う債務を担保するため、自己所有の土地に抵当権を設定した。Aは、CのBに対する債権の弁済期が到来した場合、Bに対してあらかじめ求償権を行使することができる。",
+          "answerBoolean": false,
+          "explanationText": "物上保証人は、被担保債権の弁済期が到来したとしても、債務者に対し、あらかじめ求償権を行使することはできない（最判平2.12.18）。したがって、Aは、Bの委託を受けたとしても、被担保債権の弁済期が到来したときに、Bに対してあらかじめ求償権を行使できない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "712",
+          "sourcePageAnswer": "713"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "307",
+      "originalProblemId": "KB2025-p307-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AはBから1000万円を借り受け、Aの依頼によってCおよびDがこの債務について連帯保証人となった。この債務の弁済期到来後、CがBに1000万円全額を支払った場合、CはAには求償できるが、Dに対しては求償することができない。",
+          "answerBoolean": false,
+          "explanationText": "債務者の無資力のリスクを公平に負担すべきく、共同保証人間には負担部分があるため、他の連帯保証人に求償するには、弁済額が自己の負担部分を超えていることが必要となる。負担部分につき特約がない本肢では、連帯保証人Cは、自己の負担部分（500万円）を超えて弁済しているから、主たる債務者Aだけでなく、他の連帯保証人Dに対しても求償することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "714",
+          "sourcePageAnswer": "715"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBに対して有する貸金債権をCに譲渡した。AB間で譲渡禁止の特約がされていた場合、Cが重大な過失によって特約の存在を知らなかったときは、Bは、Cに対して債務の弁済を拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "当事者が譲渡制限の意思表示をしたときであっても、債権の譲渡は、有効である（民法466条2項）。しかし、譲渡制限の意思表示の存在につき悪意または重過失の譲受人その他の第三者に対しては、取引の安全を保護する必要はないため、債務者は、その債務の履行を拒むことができ、かつ、譲渡人に対する弁済その他の債務を消滅させる事由をもってその第三者に対抗することができる（466条3項）。したがって、Bは、特約につき重過失のCに対して債務の弁済を拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "714",
+          "sourcePageAnswer": "715"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "譲渡制限が付されているAのBに対する債権がその存在につき悪意重過失のCに譲渡された。Bが債務の履行をしない場合には、Cは、Bに対して相当の期間を定めてAへの履行を催告し、その期間内に履行がないときは、Bに債務の履行を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "債務者（B）が債務を履行しない場合に、債権の譲受人その他の第三者（C）が債務者（B）に対して相当の期間を定めて譲渡人（A）への履行の催告をし、その期間内に履行がないときは、遅滞の債務者（B）は、民法466条3項所定の履行拒絶等の抗弁を主張できない（466条4項）。その結果、第三者は債務者に債務の履行を請求できることになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "714",
+          "sourcePageAnswer": "715"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "譲渡制限が付されているAのBに対する債権について強制執行がされ、Cが差し押さえた場合、Cは、譲渡制限の存在につき悪意重過失があっても、Bに対して債務の履行を請求することができる。",
+          "answerBoolean": true,
+          "explanationText": "強制執行を回避できる財産を私人の意思で作り出すことはできないため、債務者は、譲渡制限の意思表示がされた債権に対する強制執行をした差押債権者に対して譲渡制限の事実を対抗できない（民法466条の4第1項）。したがって、差押債権者Cは、譲渡制限の存在につき悪意重過失があっても、Bに対して債務の履行を請求できる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "714",
+          "sourcePageAnswer": "715"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "308",
+      "originalProblemId": "KB2025-p308-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "譲渡制限が付されているAのBに対する債権がその存在につき悪意重過失のCに譲渡された。Cの債権者Dが当該債権に対する強制執行をした場合、Bは、Dに対して債務の履行を拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "債務者は、譲渡制限付き債権の差押債権者に対して対抗できないのが原則であるが（民法466条の4第1項）、譲渡制限の存在を悪意重過失の譲受人（C）に対抗できる場合には、譲受人（C）の債権者（D）が当該債権に対する強制執行をしたとしても、差押債権者との関係でも債務者を保護すべく、債務者（B）は、その債務の履行を拒むことができ、かつ、譲渡人に対する弁済その他の債務を消滅させる事由をもって差押債権者に対抗することができる（466条の4第2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "716",
+          "sourcePageAnswer": "717"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AはBに対して、自己がCに対して有していた300万円の貸金債権を譲渡した。この場合、債権譲渡の合意自体はA・B間で自由に行うことができるが、債権譲渡の合意に基づいて直ちに譲受人Bが債務者Cに対して支払いを求めることはできない。「なぜならば、民法の規定によれば、指名債権の譲渡は、」に続けて、その理由を記述しなさい。",
+          "answerBoolean": true,
+          "explanationText": "AがCに通知をし、またはCが承諾をしなければ、Cに対抗することができないからである。（42字）債務者に対する対抗要件として、民法467条1項は、指名債権の譲渡は、譲渡人が債務者に通知をし、または債務者が承諾をしなければ、債務者その他の第三者に対抗することができない旨規定する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.8,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "716",
+          "sourcePageAnswer": "717"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに対する債権をCに譲渡した後、Dにも二重に譲渡し、Cの譲渡につき確定日付の証書のない単なる通知、Dの譲渡につき確定日付のある証書による通知をBにした場合、Bは、Cに対して債務の弁済を拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "債権譲渡の通知または承諾は、確定日付のある証書によらなければ、債務者以外の第三者に対抗できないから（民法467条2項）、Cは債権の取得をDに対抗できず、Dが債権者となる。したがって、本肢の場合、BはCに対して債務の弁済を拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "716",
+          "sourcePageAnswer": "717"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bに対する債権をCとDに二重に譲渡した。この場合、AがDへの譲渡について確定日付のある証書による通知をBに送付した後、その到着前にBがAからCへの譲渡につき確定日付のある承諾書をCに手渡したときは、通知記載が承諾書記載の確定日付より先であっても、Cが債権者となる。",
+          "answerBoolean": true,
+          "explanationText": "確定日付のある通知・承諾を共に備えた譲受人相互間の優劣は、債務者の二重払いを防止するため、確定日付のある通知が債務者に到達した日時または確定日付ある債務者の承諾の確定日付の先後により決せられる（最判昭49.3.7）。したがって、本件通知の到着前に、Bが本件承諾書をCに交付した本肢においては、Cが債権の取得をDに対抗することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "716",
+          "sourcePageAnswer": "717"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "Aは、Bに対する債権をCとDに二重譲渡し、共に確定日付のある証書による通知がBに同時に到達したが、確定日付権譲渡の通知の方が早かった場合、Bは、Dからの弁済請求を拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "確定日付のある譲渡通知が同時に債務者（B）に到達した場合、譲受人相互の優劣を決定することができず、各譲受人（CおよびD）は、債務者（B）に対しそれぞれの譲渡債権全額の弁済を請求することができ、譲受人の一人から弁済の請求を受けた債務者（B）は、他の譲受人に対する弁済その他の債務消滅事由が存在しない限り、弁済をしなければならない（最判昭55.1.11）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "716",
+          "sourcePageAnswer": "717"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "309",
+      "originalProblemId": "KB2025-p309-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bに対する甲債権をCに譲渡した後、甲債権は、Dに差し押さえられた。その後、Cに対する譲渡についてのAからの確定日付のある通知とDの差押えの通知が同時期にBに到達したが、正確な先後は不明であったため、Bは弁済金を供託した。Dの差押債権とCの譲受債権との合計額が供託金額を超過するときは、Cは、供託金全額について供託金の還付を請求することができる。",
+          "answerBoolean": false,
+          "explanationText": "判例（最判平5.3.30）は、同一の債権（甲債権）について、（Dの）差押通知と確定日付のある譲渡通知との先後関係が不明であるため、第三債務者（B）が債権額に相当する金員を供託した場合において、被差押債権額と譲受債権額との合計額が供託金額を超過するときは、差押債権者（D）と債権受人（C）は、被差押債権額と譲受債権額に応じて供託金額を案分した額の供託金還付請求権をそれぞれ分割取得するとしている。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "718",
+          "sourcePageAnswer": "719"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBに対して有する甲債権をCに譲渡し、その旨の通知をBにしたが、その通知以前に甲債権の消滅時効が完成していた。この場合、Cが甲債権を自動債権、BのCに対する乙債権を受動債権として相殺の意思表示をした後においても、Bは、甲債権の消滅時効を援用することができる。",
+          "answerBoolean": true,
+          "explanationText": "債権譲渡によって債務者の地位が害されるのを防止するため、債務者（B）は、対抗要件具備時までに譲渡人（A）に対して生じた事由をもって譲受人（C）に対抗することができる（民法468条1項）。したがって、Bは、甲債権の消滅時効を援用することができる（甲債権は時効消滅（相殺の効力は否定）、乙債権は存続する）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "718",
+          "sourcePageAnswer": "719"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、Bに対する貸金債権をCに譲渡した。Bは、Aに債務の弁済をした後、Cへの債権譲渡を承諾した場合、Cに対して弁済しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "債務者は、対抗要件具備時までに譲渡人に対して生じた事由をもって譲受人に対抗できる（民法468条1項）。譲渡の承諾をしたとしても、譲渡人に対して生じた事由を譲受人に主張するか否かの判断は債務者に委ねられる。したがって、Bは、債権譲渡の承諾（467条1項参照）までにAに弁済したときは、Aへの弁済した事実を放棄する意思表示をしない限り、Cへの弁済を拒むことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "718",
+          "sourcePageAnswer": "719"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "併存的債務引受は、債務者（原債務者）の意思に反しても、債権者と引受人のみの契約でなすことができる。",
+          "answerBoolean": true,
+          "explanationText": "併存的債務引受とは、引受人が債務者とともに同一内容の債務を負う契約のことであり、債権者・債務者・引受人の三面契約で成立させることができる。その他にも、併存的債務引受は、その成立においては保証と同様に考えることができることから、債務者の意思に反して債権者と引受人の契約によってなすこともできる（民法470条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "718",
+          "sourcePageAnswer": "719"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "併存的債務引受があった場合、別段の意思表示がないときは、債務者（原債務者）と引受人は、債権者に対し、それぞれ等しい割合で分割債務を負う。",
+          "answerBoolean": false,
+          "explanationText": "併存的債務引受によって、債務者の債務はそのままするするとともに、引受人は、債務者と同一内容の債務を負担することになる。そして、両債務の関係は連帯債務となる（民法470条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "718",
+          "sourcePageAnswer": "719"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "310",
+      "originalProblemId": "KB2025-p310-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "AがBに対して負担する金銭債務について、AとCとの契約によって併存的債務引受をすることができ、この場合は、BがCに対して承諾をした時に、その効力が生ずる。",
+          "answerBoolean": true,
+          "explanationText": "併存的債務引受は、債務者（A）と引受人となる者（C）との契約によってもすることができ、この場合は、債権者（B）が引受人となる者（C）に対して承諾をした時に効力を生ずる（民法470条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "720",
+          "sourcePageAnswer": "721"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "AがBに対して負担する金銭債務について、BとCとの契約によって免責的債務引受をすることができ、この場合は、BがAに対してその契約をした旨を通知した時に、その効力が生ずる。",
+          "answerBoolean": true,
+          "explanationText": "免責的債務引受は、債権者（B）と引受人となる者（C）との契約によってすることもでき（債務者（A）は債務を免れる）、この場合は、債権者（B）が債務者（A）に対して契約をした旨を通知した時に効力を生ずる（民法472条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "720",
+          "sourcePageAnswer": "721"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "AがBに対して負担する金銭債務について、AとCが契約をし、BがCに対して承諾することによって、免責的債務引受とすることができる。",
+          "answerBoolean": true,
+          "explanationText": "免責的債務引受は、債務者（A）と引受人となる者（C）が契約をし、債権者（B）が引受人となる者（C）に対して承諾をすることによってもすることができる（民法472条3項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "720",
+          "sourcePageAnswer": "721"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AがBに対して金銭債務を負っていたが、Cが免責的債務引受をした場合、Cは、Aに対して当然に求償権を取得する。",
+          "answerBoolean": false,
+          "explanationText": "免責的債務引受の引受人（C）は、自己の債務として弁済することになるため（債務者（A）は免責）、債務者（A）に対して求償権を「取得しない」（民法472条の3）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "720",
+          "sourcePageAnswer": "721"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "売主の地位や買主の地位の譲渡は、当該売買契約の相手方の承諾がないときは、その相手方に対して効力を生じない。",
+          "answerBoolean": true,
+          "explanationText": "売主の地位や買主の地位などの契約上の地位の移転とは、契約当事者としての地位を承継することを目的とする契約のことである。譲渡人と譲受人の契約によってなす場合、原則として他方当事者の承諾が必要であるが（民法539条の2）、その例外として、賃貸中の目的物の所有権が移転した場合に、新所有者が賃貸人としての権利義務を承継するには、特段の事情のある場合を除き、（605条の2第1項、605条の3）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約上の地位の移転",
+          "sourcePageQuestion": "720",
+          "sourcePageAnswer": "721"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "賃貸借の目的となっている不動産の所有者がその所有権とともに賃貸人の地位を他に譲渡することは、賃貸人の義務の移転を伴うから、賃借人の承諾を必要とし、新旧所有者間の契約ですることはできない。",
+          "answerBoolean": false,
+          "explanationText": "譲渡人と譲受人の契約によって契約上の地位の移転をなす場合、原則として他方当事者の承諾が必要であるが（民法539条の2）、その例外として、賃貸中の目的物の所有権が移転した場合に、新所有者が賃貸人としての権利義務を承継するには、特段の事情のある場合を除き、賃借人の承諾は不要である（605条の2第1項、605条の3）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約上の地位の移転",
+          "sourcePageQuestion": "720",
+          "sourcePageAnswer": "721"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "311",
+      "originalProblemId": "KB2025-p311-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "弁済をするについて正当な利益を有しない第三者であっても、原則として債務者の意思に反して弁済をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "弁済をするについて正当な利益を有する第三者でない第三者は、原則として債務者の意思に反して弁済をすることができないが、債務者の意思に反することを債権者が知らなかったときは弁済をすることができる (民法474条2項)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の消滅 弁済",
+          "sourcePageQuestion": "722",
+          "sourcePageAnswer": "723"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、B所有の甲土地上に乙建物を建てて保存登記をし、乙建物をCが使用している。Aが、Bとの間の土地賃貸借契約に基づいて乙建物を建て、Cとの間の建物賃貸借契約に基づいてCに乙建物を使用させている場合、Cは、Aに無断で甲土地の賃料をBに対して支払うことはできない。",
+          "answerBoolean": false,
+          "explanationText": "債務の弁済は原則として第三者もすることができるが (民法474条1項)、弁済をするについて正当な利益を有しない第三者は、原則として債務者の意思に反して弁済をすることができない (474条2項)。借地上の建物の賃借人Cは、法律上の正当な利益を有する (最判昭63.7.1)。したがって、乙建物の賃借人Cは、甲土地の賃料を土地賃貸人Aの意思に反していても支払うことができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の消滅 弁済",
+          "sourcePageQuestion": "722",
+          "sourcePageAnswer": "723"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "弁済者が他人の物を引き渡した場合には、相手方が善意・無過失であるときは、弁済者は、その物を取り戻すことができず、損失を被った他人に対して賠償する責任が生じる。",
+          "answerBoolean": false,
+          "explanationText": "他人の物を弁済として引き渡した場合、その弁済は無効であるが、債権者の利益を保護するため、その弁済をした者は、更に有効な弁済をしなければ、その物を取り戻すことはできない (民法475条)。しかし、この場合、相手方の善意・無過失は問題とされていない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の消滅 弁済",
+          "sourcePageQuestion": "722",
+          "sourcePageAnswer": "723"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "受領権者としての外観を有する者に対する弁済は、当該受領権者としての外観を有するものが善意である場合に限り、その効力を生じる。",
+          "answerBoolean": false,
+          "explanationText": "受領権者としての外観を有する者に対してした弁済は、当該受領権者としての外観を有するものではなく、「その弁済をした者」が善意であり、「かつ、過失がなかった (無過失) ときに限り」、有効となる (民法478条)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の消滅 弁済",
+          "sourcePageQuestion": "722",
+          "sourcePageAnswer": "723"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "弁済者が債権者と合意して、債権者に対し本来の債務の弁済に代えて自己が所有する土地を譲渡した場合、土地所有権の移転の効果は、原則として代物弁済契約の意思表示によって生じる。",
+          "answerBoolean": true,
+          "explanationText": "弁済をすることができる者 (弁済者) が、債権者との間で、債務者の負担した給付に代えて他の給付をすることにより債務を消滅させる旨の契約をした場合において、その弁済者が当該他の給付をしたときは、その給付は、弁済と同一の効力を有する (代物弁済: 民法482条)。不動産の所有権移転の効果は、代物弁済契約の意思表示がされたときに生じる (最判昭57.6.4)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権の消滅 弁済",
+          "sourcePageQuestion": "722",
+          "sourcePageAnswer": "723"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "312",
+      "originalProblemId": "KB2025-p312-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "債務者が債権者と合意して、債権者に対し本来の債務の弁済に代えて自己が所有する土地を譲渡した場合、債務消滅の効果は、原則として移転登記の完了時に生じる。",
+          "answerBoolean": true,
+          "explanationText": "不動産所有権の譲渡をもって代物弁済をする場合の債務消滅の効力は、原則として、単に所有権移転の意思表示をなすのみでは足らず、所有権移転登記手続の完了によって生じる（最判昭40.4.30）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "724",
+          "sourcePageAnswer": "725"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債権の目的が特定物の引渡しである場合、弁済は、引き渡すべき時の現状ではなく、債権発生時の状態で引き渡すことを要する。",
+          "answerBoolean": false,
+          "explanationText": "債権の目的が特定物の引渡しであるときは、契約その他の債権の発生原因および取引上の社会通念に照らしてその引渡しをすべき時の品質を定めることができないときは、弁済者は、債権発生時の状態ではなく、その引渡しをすべき時の現状で、その物を引き渡さなければならない（民法483条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "724",
+          "sourcePageAnswer": "725"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "弁済は、特約のない限り、特定物の引渡しにあっては債権発生時にその物が存在した場所において、その他の弁済にあっては債務者の住所において行うことを要する。",
+          "answerBoolean": false,
+          "explanationText": "弁済をなすべき場所について、当事者間の合意がないときは、特定物の引き渡しは、債権発生の時にその物の存在した場所において、その他の弁済は、債務者ではなく、「債権者」の現在の住所においてしなければならない（民法484条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "724",
+          "sourcePageAnswer": "725"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aが「もち米」を50キロ買う契約をB米店との間で行い、Bによる引渡しの準備がまだ終わっていない。引渡し場所についてA・B間で決めていなかった場合に、BはAが取りに来るまで待っていればよい。",
+          "answerBoolean": false,
+          "explanationText": "本肢における引渡しは、BがAの住所に持参しなければならないか（持参債務）、BはAが取りに来るまで待っていればよい（取立債務）とする本肢は誤っている。すなわち、本件売買は、「もち米」という種類のみで指定しているから（民法401条参照）、不特定物売買であり、BがAに負担するもち米の引渡債務は、種類債務である。そして、不特定物の引渡しは、別段の意思表示がないときは、債権者（本肢では、もち米の引渡権を有する買主A）の現在の住所においてしなければならない（484条1項：持参債務）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "724",
+          "sourcePageAnswer": "725"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "弁済の費用は、債権者がその費用を増加した場合を除き、特約のない限り、当事者双方が平分して負担する。",
+          "answerBoolean": false,
+          "explanationText": "特約のない限り、弁済の費用は債務者が負担し（民法485条本文）、当事者双方が平分して負担するのではない。なお、債権者の住所の移転等の行為により費用が増加した場合には、その増加分につき債権者が負担する（485条ただし書）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "724",
+          "sourcePageAnswer": "725"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "債務者が同一の債権者に対して同種の給付を目的とする数個の債務を負担する場合において、弁済として提供した給付が全ての債務を消滅させるのに足りないときは、当事者の合意による充当がある場合を除き、弁済をする者は、給付の時に、その弁済を充当すべき債務を指定することができる。",
+          "answerBoolean": true,
+          "explanationText": "本肢は民法488条1項（指定による充当のうち「弁済者」の指定充当）のとおりであり、弁済の充当は、当事者の合意による充当（契約による充当）がない場合の指定による充当（488条1項・2項）、指定による充当がない場合に法定充当（488条4項）の順でなされる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "724",
+          "sourcePageAnswer": "725"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "313",
+      "originalProblemId": "KB2025-p313-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "同一の債権者に対して数個の金銭債務を負担する債務者が、弁済として給付した金銭の額が全ての債務を消滅させるのに足りない場合であって、債務者が充当の指定をしないときは、債権者が弁済を受領する時に充当の指定をすることができるが、債務者がその充当に対し直ちに異議を述べたときは、この限りでない。",
+          "answerBoolean": true,
+          "explanationText": "本肢は民法488条2項のとおりであり、指定による充当のうち、「弁済者」の指定（488条1項）がない場合の「弁済受領者」による指定である。弁済受領者による指定に対して、弁済者は異議を述べることができる（488条2項ただし書）。この場合には弁済者および弁済受領者の指定による充当がないものとして、法定充当（488条4項）に移行する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "726",
+          "sourcePageAnswer": "727"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債務者が元本のほか利息および費用を支払うべき場合において、弁済として給付した金銭の額がその債務の全部を消滅させるのに足りないときは、債務者による充当の指定がない限り、これを順次に費用、利息および元本に充当しなければならない。",
+          "answerBoolean": false,
+          "explanationText": "債務者が元本のほか利息および費用を支払うべき場合、弁済をする者がその債務の全部を消滅させるのに足りない給付をしたときは、順次に費用、利息および元本に充当しなければならない（民法489条1項）。この順序は、契約による充当の場合には変更することができるが、一方当事者の指定で変更することはできない（大判大6.3.31）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "726",
+          "sourcePageAnswer": "727"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "弁済は、原則として現実の提供をなすことを要するが、債権者があらかじめ受領を拒んでいるとき又は債権者の行為を要するときは、弁済の準備をしたことを債権者に通知し、受領を催告すれば、弁済の提供となる。",
+          "answerBoolean": true,
+          "explanationText": "弁済は、原則として現実の提供をしなければならないが、債権者があらかじめ受領を拒んでいるときまたは債務の履行について債権者の行為を要するときは、口頭の提供すなわち、弁済の準備をしたことを通知してその受領の催告をすれば足りる（民法493条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "726",
+          "sourcePageAnswer": "727"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "債権者があらかじめ弁済の受領を拒んでいる場合、債務者は、口頭の提供をすれば債務不履行責任を免れるが、債権者において契約そのものの存在を否定する等弁済を受領しない意思が明確と認められるときは、口頭の提供をしなくても同責任を免れる。",
+          "answerBoolean": true,
+          "explanationText": "債権者が契約の存在を否定する等弁済を受領しない意思が明確であるときは、債務者は口頭の提供をしなくても債務不履行の責を免れる（最大判昭32.6.5）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "726",
+          "sourcePageAnswer": "727"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "債権者があらかじめ金銭債務の弁済の受領を拒んでいる場合、債務者は、口頭の提供をした上で弁済の目的物を供託することにより、債務を消滅させることができる。",
+          "answerBoolean": true,
+          "explanationText": "弁済の提供をした場合において、債権者が弁済を拒み、またはこれを受領することができないときは、弁済者は、債権者のために弁済の目的物を供託してその債務を免れることができる（民法494条1項）。債権者があらかじめ弁済の受領を拒んでも、口頭の提供をしても債権者が受領しないことが明白でない限り、債務者は口頭の提供をしてからでなければ供託することができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "726",
+          "sourcePageAnswer": "727"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "314",
+      "originalProblemId": "KB2025-p314-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "売主が品物を引き渡すのに対して買主が代金を支払うべき場合に、買主がこの代金を供託したときは、売主は、買主に品物を給付しなければ供託された代金を受け取ることはできない。",
+          "answerBoolean": true,
+          "explanationText": "債務者が債権者の給付に対して弁済をすべき場合には、債権者は、その給付をしなければ、供託物を受け取ることはできないから（民法498条2項）、代金債権の債権者である売主は、買主に品物を給付しなければ、供託された代金を受け取ることはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "728",
+          "sourcePageAnswer": "729"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "債務者のために弁済を行った者は、債権者の承諾を得なければ、債権者に代位することができない。",
+          "answerBoolean": false,
+          "explanationText": "任意代位（弁済をするについて正当な利益を有しない者による代位）と法定代位（弁済をするについて正当な利益を有する者による代位）とを問わず、債務者のために弁済をした者は、債権者の承諾を得ずに、債権者に代位する（民法499条）。なお、任意代位については、債務者・第三者に代位の事実を対抗するには、債権譲渡に関する対抗要件の具備が必要である（500条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "728",
+          "sourcePageAnswer": "729"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aに対して債務を負うBは、Aのために、自己が所有する土地に抵当権を設定した。第三者Cが、BのAに対する債務の全額を弁済した場合には、CはAに代位することができるが、抵当権は、確定的に消滅する。",
+          "answerBoolean": false,
+          "explanationText": "債権者に代位した者（C）は、債権の効力および担保としてその債権者（A）が有していた一切の権利（抵当権等）を行使することができることになるから（民法501条1項）、代位によって抵当権が確定的に消滅するわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "728",
+          "sourcePageAnswer": "729"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "債権の一部について代位弁済があった場合で、残りの債務について債務不履行があるときは、債権者及び代位者は、契約を解除することができる。",
+          "answerBoolean": false,
+          "explanationText": "債権の一部について代位弁済があった場合において、残部に関する債務の不履行による契約の解除は、債権者のみがすることができ（民法502条4項前段）、代位者がすることはできない。これは、弁済による代位は、契約当事者の地位の移転ではないので、その地位に付属する解除権は代位の対象にならないからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "728",
+          "sourcePageAnswer": "729"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "AがBに対して平成20年5月5日を弁済期とする300万円の売掛代金債権を有し、BがAに対して平成20年7月1日を弁済期とする400万円の貸金債権を有している。この場合、平成20年5月10日にAがBに対してする相殺は効力を生じる。",
+          "answerBoolean": true,
+          "explanationText": "相殺適状にあるためには、自動債権の弁済期が到来していなければならないが（民法505条1項本文）、受働債権については、債務者は期限の利益を放棄できない事由のない限り、直ちに相殺することができ（大判昭8.5.30）。本肢では、受働債権たる貸金債権の弁済期は到来していないが、自動債権たる売掛代金債権の弁済期が到来しているから、AがBに対してする相殺の効力は生じる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "728",
+          "sourcePageAnswer": "729"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "315",
+      "originalProblemId": "KB2025-p315-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "同時履行の抗弁権が付着する債権であっても、これを自動債権として相殺をすることができる。",
+          "answerBoolean": false,
+          "explanationText": "同時履行の抗弁権の付着する債権は、これを自動債権として相殺をすることはできない（大判昭13.3.1）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "相殺禁止の特約が付いているときは、そのことに善意無過失でその債権を譲り受けた場合でも、その債権をもって相殺することはできない。",
+          "answerBoolean": false,
+          "explanationText": "相殺は、当事者間の特約で禁止することができる（民法505条2項）。しかし、善意無過失の第三者には対抗することができない（505条2項）。したがって、第三者が善意無過失である場合、その債権を自動債権として相殺することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "相殺は当事者の一方から相手方に対する意思表示によって効力を生じ、相手方の承諾を必要としない。",
+          "answerBoolean": true,
+          "explanationText": "相殺は、単独行為であり、当事者の一方から相手方に対する意思表示によって効力を生じ（民法506条1項前段）、相手方の承諾を必要としない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "相殺の意思表示には、条件又は期限を付けることができない。",
+          "answerBoolean": true,
+          "explanationText": "相殺の意思表示には、条件または期限を付することはできない（民法506条1項後段）。相殺の意思表示に条件や期限をつけると、相手方が不安定な立場に立たされることになるからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "相殺の意思表示は、相殺適状に達した時にさかのぼって効力を生じる。",
+          "answerBoolean": true,
+          "explanationText": "相殺の意思表示は、相殺適状に達した時、すなわち、双方の債務が互いに相殺に適するようになった時にさかのぼって効力が生じる（民法506条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "相殺は、双方の債務の履行地が異なるときも、することができる。",
+          "answerBoolean": true,
+          "explanationText": "相殺は、双方の債務の履行地が異なるときであっても、することができる（民法507条前段）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "時効によって消滅した債権が、その消滅以前に相殺適状にあった場合には、その債権者は、当該債権を自動債権として相殺することができる。",
+          "answerBoolean": true,
+          "explanationText": "時効によって消滅した債権がその消滅以前に相殺に適するようになっていた場合、その債権者は相殺することができる（民法508条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        },
+        {
+          "seqNo": 8,
+          "questionText": "AがBに対して平成18年5月5日を弁済期とする300万円の貸金債権を有していたところ、平成18年7月1日にAがBに対して暴力行為をはたらき、平成20年7月5日に、Aに対してこの暴力行為でBが被った損害300万円の賠償を命ずる判決がなされた。この場合に、平成20年7月5日にAがBに対してする相殺は効力を生じる。",
+          "answerBoolean": false,
+          "explanationText": "債務が悪意による不法行為によって生じたときは、その債務者は、相殺をもって債権者に対抗することができない（民法509条1号）。したがって、暴力行為という不法行為による損害賠償債権の債務者AがBに対してする相殺の効力は生じない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "730",
+          "sourcePageAnswer": "731"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "316",
+      "originalProblemId": "KB2025-p316-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "過失によって人の生命又は身体に損害を与えた場合、その加害者は、その被害者に対して有する貸金債権を自動債権として、被害者に対する損害賠償債務と相殺することができる。",
+          "answerBoolean": false,
+          "explanationText": "人の生命または身体の侵害による損害賠償の債務（悪意による不法行為に基づく損害賠償の債務を除く。）の債務者は、相殺をもって債権者に対抗することができない（民法509条2号）。したがって、過失によって人の生命または身体に損害を与えたため、被害者に対する損害賠償債務を負う債務者である加害者は、被害者に対して有する貸金債権を自動債権、当該被害者が当該加害者に対して有する損害賠償請求権を受働債権として相殺することはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "732",
+          "sourcePageAnswer": "733"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A銀行がBに対して平成29年7月30日に期間1年の約定で貸し付けた400万円の貸金債権を有し、他方、BがA銀行に対して平成30年7月25日を満期とする400万円の定期預金債権を有していたところ、Bの債権者CがBのA銀行に対する当該定期預金債権を差し押さえた。この場合、平成30年8月1日にA銀行がBに対してする相殺は効力を生じる。",
+          "answerBoolean": true,
+          "explanationText": "差押えを受けた債権（BのAに対する預金債権）の第三債務者（A）は、差押え後に取得した債権による相殺をもって差押債権者（C）に対抗することはできないが、差押え前に取得した債権（AのBに対する貸金債権）による相殺をもって対抗することができる（民法511条1項）。差押え前に取得した債権であれば、AB間で相殺できるとのAの期待を保護するものである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "732",
+          "sourcePageAnswer": "733"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "差押えを受けた債権の第三債務者は、差押え後に取得した債権が差押え前の原因に基づいて生じたものであれば、その第三債務者は、差押え後に他人の債権を取得したときでなければ、その債権による相殺をもって差押債権者に対抗することができる。",
+          "answerBoolean": true,
+          "explanationText": "差押えを受けた債権の第三債務者は、差押え後に取得した債権が差押え前の原因に基づいて生じたものであるときは、その第三債務者は、差押え後に他人の債権を取得したときでなければ、その債権による相殺をもって差押債権者に対抗することができる（民法511条2項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "732",
+          "sourcePageAnswer": "733"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "AがBに対して有する貸金債権をCに譲渡し、その旨をBに通知した。BがAに対する売買代金債権を債権譲渡の通知を受ける前から取得していた場合、Bは、代金債権を自動債権とした相殺を主張し、Cからの貸金債権の返還請求を拒むことができる。",
+          "answerBoolean": true,
+          "explanationText": "債務者（B）は、対抗要件具備時より前に取得した譲渡人（A）に対する債権による相殺をもって譲受人（C）に対抗することができる（民法469条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "債権総論",
+          "sourcePageQuestion": "732",
+          "sourcePageAnswer": "733"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "317",
+      "originalProblemId": "KB2025-p317-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "承諾の期間を定めて申込みをしたときは、承諾の通知を受けるまでは申込みを撤回することができる。",
+          "answerBoolean": false,
+          "explanationText": "承諾の期間を定めてした申込みは、承諾期間内は撤回することができない（民法523条1項）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約総論 1) 契約の成立",
+          "sourcePageQuestion": "734",
+          "sourcePageAnswer": "735"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "Aは、Bから中古車を購入する交渉を進めていたところ、Bに対して、承諾の意思表示について「8月末日まで」と期間を定めて、書面を郵送して購入の申込みの意思表示を行ったが、申込みの書面を発送した直後に気が変わり、今は別の車を買いたいと思っている場合、Bが承諾の意思表示をする前にAが申込みを撤回すれば、契約は成立しなかったということになる。",
+          "answerBoolean": false,
+          "explanationText": "承諾の期間を定めてした申込みは、承諾期間内は撤回することができないから、本肢は誤っている。すなわち、Aは、Bに「承諾の期間を定めてした申込み」を行っており、その申込みは、B保護の見地からも、Bの承諾の意思表示をする前であっても撤回することはできない（民法523条1項）。本肢において、Aが撤回しても、その撤回は有効ではないから、Bの承諾の意思表示が期間内にAに到着すれば（97条1項）、契約は成立する。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約総論 1) 契約の成立",
+          "sourcePageQuestion": "734",
+          "sourcePageAnswer": "735"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "承諾の期間を定めて、隔地者に対して申込みをした場合において、その期間内に承諾の通知が発せられたときは、到達がその期間の経過後であっても、契約は成立する。",
+          "answerBoolean": false,
+          "explanationText": "承諾の期間を定めてした申込みに対して、申込者が承諾の期間内に承諾の通知を受けなかったときは、承諾延着のリスクは承諾者が負うべきであるため、その申込みは効力を失うから（民法523条2項）、承諾の通知の到達が承諾の期間の経過後であれば、契約は成立しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約総論 1) 契約の成立",
+          "sourcePageQuestion": "734",
+          "sourcePageAnswer": "735"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bから中古車を購入する交渉を進めていたところ、Bに対して、承諾の意思表示について「8月末日まで」と期間を定めて、書面を郵送して購入の申込みの意思表示を行った場合、Bから8月末を過ぎても何の通知もなかったとしても、期間を過ぎた以上、契約は成立する。",
+          "answerBoolean": false,
+          "explanationText": "申込者が承諾の期間を定めて申込みをしたにもかかわらず、期間内に承諾の通知を受けなかったときは、その申込みの効力は失われるところ（民法523条2項）、Aは、Bから承諾期間内である8月末日を過ぎても承諾の通知を受けていないから、Aの申込みは効力を失い、したがって、契約は成立しないことになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約総論 1) 契約の成立",
+          "sourcePageQuestion": "734",
+          "sourcePageAnswer": "735"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "承諾を遅延した承諾は、申込者において新たな申込みとみなすことができる。",
+          "answerBoolean": true,
+          "explanationText": "申込者は、遅延した承諾を新たな申込みとみなすことができる（民法524条）。承諾期間の定めがある場合に承諾が遅延した以上、契約は原則として成立しない。しかし、承諾は、申込みと同様、契約締結への意思表示であるから、申込者の側で新たな申込みとみなしうるとするのが合理的だからである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約総論 1) 契約の成立",
+          "sourcePageQuestion": "734",
+          "sourcePageAnswer": "735"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "318",
+      "originalProblemId": "KB2025-p318-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bから中古車を購入する交渉を進めていたところ、Bに対して、承諾の意思表示について「8月末日までに返事をいただきたい」と期間を定めて、書面を郵送して購入の申込みの意思表示を行ったが、Bは、承諾の意思表示の内容とする書面を9月1日に発送し、Aに到着したのは9月2日だった場合、Aは、これをBから新たな申込みがされたものとみなして承諾し、これがBの下に到達したときは、契約は成立する。",
+          "answerBoolean": true,
+          "explanationText": "本肢では、①「Aの承諾期間を定めた申込み」→②「遅延したBの承諾の意思表示」→③「Aの承諾」がなされている。「申込者が…期間内に承諾の通知を受けなかったときは、その申込みは、その効力を失う」(民法523条2項)ところ、②は承諾期間経過後の9月2日にAに到着しているから、①の申込みは効力を失うことになり、よって、①と②により契約は成立しない。もっとも、「申込者は、遅延した承諾を新たな申込みとみなすことができる」(524条)から、Aにおいて、②の承諾をBからなされた新たな申込みとみなすことができ、これに対する承諾として③の承諾をAがし、これがBの下に到達すれば、②と③により契約は成立することになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "736",
+          "sourcePageAnswer": "737",
+          "needsSourceCheck": true,
+          "sourceCheckReason": "OCR abbreviation: \"...\" replaces \"前項の\" in 民法523条2項 citation; not statute ellipsis convention"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "隔地者間において、承諾の期間を定めないでした申込みをしたときは、いつでも申込みを撤回することができる。",
+          "answerBoolean": false,
+          "explanationText": "承諾の期間を定めないでした申込みは、申込者が承諾の通知を受けるのに相当な期間を経過するまでは、原則として撤回することはできず(民法525条1項)、いつでも申込みを撤回できるわけではない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "736",
+          "sourcePageAnswer": "737"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "承諾者が申込みに条件をつけ、またはその他の変更を加えて承諾したときは、その申込みを拒絶したことにはならない。",
+          "answerBoolean": false,
+          "explanationText": "承諾者が、申込みに条件をつけたり、変更を加えて承諾をしたときは、その申込みを拒絶したものとみなされる(民法528条)。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "736",
+          "sourcePageAnswer": "737"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "Aは、Bから中古車を購入する交渉を進めていたところ、Bに対して、承諾の意思表示について「8月末日まで」と期間を定めて、「分割払いで購入する」旨の申込みの意思表示を書面で郵送した。Bは、「売ってもよいが、代金は車の引渡しと同時に一括して支払ってほしい」と8月末日までにいってきた場合、Bが売るといった以上、契約は成立するが、代金一括払いの契約が成立したということになる。",
+          "answerBoolean": false,
+          "explanationText": "Bからなされた「一括払いの売却」の承諾に対し、Aが応諾しなければ、代金一括払いの契約は成立しないから、本肢は誤っている。すなわち、承諾者が申込みに条件を付し、その他変更を加えて承諾をしたときは、その申込みの拒絶とともに新たな申込みをしたものとみなされる(民法528条)。申込みを受けた者が条件を付したり変更した承諾を無効とするよりも、先の申込みに対する拒絶と新たな申込みと解したほうが取引の実情に合致するためである。本肢では、Aの「分割払いの購入」の申込みに対して、Bは「一括払いの売却」の承諾をしているところ、Bの承諾は、Aの申込みに対する拒絶と、Aへの新たな申込みとみなされるから、その新たな申込みに対して、Aが承諾しなければ、一括払いの売買契約は成立しないのである。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "736",
+          "sourcePageAnswer": "737"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "319",
+      "originalProblemId": "KB2025-p319-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "Aは、Bから中古車を購入する交渉を進め、Bに対して、承諾の意思表示について「8月末日まで」と期間を定めて、書面を郵送して購入の申込みの意思表示を行ったところ、Bの承諾の通知は8月28日に郵送され、8月末日までにAの住居に到達したが、Aが不在であったことから、Aの配偶者がそれを受け取り引きだしにしてしまい込み、そのことをAに告げてのを忘れてしまった。Aがその通知に気がついたのは9月20日だった場合、Aは、Bが車を売ってくれないものと思って落胆し、すでに別の車を購入したとしても、Bとの売買契約は成立する。",
+          "answerBoolean": true,
+          "explanationText": "承諾の通知を記載した書面が同居の親族に渡された場合でも、意思表示の到達の効力は妨げられない。すなわち、隔地者に対する意思表示は、相手方に到達した時から効力を生じるのが原則であり（民法97条1項）、Aが不在で直接Bの承諾の意思表示を受け取らなくても、同居の親族が受け取っている場合には、社会通念上知りうべき客観的状態が生じているから（大判明45.3.13、最判昭43.12.17）、承諾の意思表示は効力を有していることになる。それゆえ、申込みと承諾の合致がある以上、契約は成立することになる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "738",
+          "sourcePageAnswer": "739"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "A・B間で建物の売買契約が成立し、Aは、Bから建物の引渡しを受け、また、移転登記も得て、近く同建物に引越しをしようと思っていたところ、同建物は、第三者Cの放火によって焼失してしまった。BからAに対して同建物についての売買代金の支払請求があった場合に、Aは、Bに対して同時履行の抗弁権を主張して代金の支払いを拒むことができ る。",
+          "answerBoolean": false,
+          "explanationText": "双務契約の当事者の一方は、相手方がその債務の履行を提供するまでは、同時履行の抗弁権を主張して、自己の債務の履行を拒むことができる（民法533条本文）。本肢では、Bは、建物の引渡しおよび登記の移転が完了し、既に自己の債務の履行を提供しているから、Aは、Bに対して同時履行の抗弁権を主張して代金の支払いを拒むことはできない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "738",
+          "sourcePageAnswer": "739"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "Aは、自己所有の事務機器甲をBに売却する旨の売買契約を締結し、甲をまだBに引き渡していない。Bから甲を買い受けたCがAに対して所有権に基づいてその引渡しを求めた場合、Aは、Bから売買代金の支払いを受けるまで同時履行の抗弁権を行使して甲の引渡しを拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "同時履行の抗弁権は、双務契約の効力の一種である点において、担保物権である留置権と異なるから、双務契約の当事者間で主張できるだけであり、何人に対しても対抗できるわけではない。したがって、Aは、売買契約の当事者ではないCに対して、同時履行の抗弁権を主張し、甲の引渡しを拒むことができない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "738",
+          "sourcePageAnswer": "739"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "同時履行の抗弁権は、公平の観点から認められ、間接的に相手方の債務の履行を促す機能を果たす。",
+          "answerBoolean": true,
+          "explanationText": "同時履行の抗弁権は、当事者間の公平を考慮して、相手方が債務の履行の提供をするまで自己の債務の履行を拒絶できる制度であり、相手方の履行を求めようとする当事者は自らの債務を履行しなければならないから、間接的に債務の履行を促す機能を果たす。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "",
+          "sourcePageQuestion": "738",
+          "sourcePageAnswer": "739"
+        }
+      ],
+      "parseError": null
+    },
+    {
+      "sourcePage": "320",
+      "originalProblemId": "KB2025-p320-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "branches": [
+        {
+          "seqNo": 1,
+          "questionText": "双務契約の債務の内容が、債務者の責めに帰すべき事由により履行が不能となり、損害賠償債務に転化した場合は、同時履行の抗弁権は消滅する。",
+          "answerBoolean": false,
+          "explanationText": "履行不能による損害賠償債務は、本来の債務と同一性を失わないから、同時履行の抗弁権は消滅しない。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
+        },
+        {
+          "seqNo": 2,
+          "questionText": "同時履行の抗弁権は、双方の債務が弁済期にあれば、弁済期の先後を問わず、これを行使することができる。",
+          "answerBoolean": true,
+          "explanationText": "同時履行の抗弁権の要件として、相手方の債務が弁済期にあることが必要である（民法533条ただし書）。そして、双方の債務の弁済期が到来していれば、弁済期の先後を問わず、これを行使することができる。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
+        },
+        {
+          "seqNo": 3,
+          "questionText": "同時履行の抗弁権は、双務契約上の債務の履行について行使することができるが、契約の解除による原状回復義務の履行債務については行使することができない。",
+          "answerBoolean": false,
+          "explanationText": "契約の解除による原状回復義務は、双務契約における債務ではないが、公平の観点から、同時履行の抗弁権が認められている（民法546条、533条）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
+        },
+        {
+          "seqNo": 4,
+          "questionText": "双務契約が一方当事者の詐欺を理由として取り消された場合においては、詐欺を行った当事者は、当事者双方の原状回復義務の履行につき、同時履行の抗弁権を行使することができない。",
+          "answerBoolean": false,
+          "explanationText": "売買契約が詐欺を理由として取り消された場合における当事者双方の原状回復義務は、民法533条の類推適用により同時履行の関係にある（最判昭47.9.7）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
+        },
+        {
+          "seqNo": 5,
+          "questionText": "売買契約の買主は、売主から履行の提供があっても、その提供が継続されない限り、同時履行の抗弁権を失わない。",
+          "answerBoolean": true,
+          "explanationText": "相手方（例：売主）が履行の提供をした後に転売した場合や無資力になった場合に、当事者の一方（例：買主）に無条件に債務を履行させるのは不公平であるため、双務契約の当事者の一方は、相手方の履行の提供があっても、その提供が継続されない限り、同時履行の抗弁権を失わない（最判昭34.5.14）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
+        },
+        {
+          "seqNo": 6,
+          "questionText": "家屋の賃貸借が終了し、賃借人が造作買取請求権を有する場台においては、賃借人が造作代金を提供するまで、賃借人は、家屋の明渡しを拒むことができる。",
+          "answerBoolean": false,
+          "explanationText": "造作代金支払義務と家屋明渡義務とは同時履行の関係にないため、造作の買収を請求した家屋の賃借人は代金の提供がないことを理由として家屋の明渡しを拒むことはできない（最判昭29.7.22）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
+        },
+        {
+          "seqNo": 7,
+          "questionText": "借地人が建物の買取請求権を行使した場合は、建物だけでなくその敷地の引渡しについても、同時履行の抗弁権が及ぶ。",
+          "answerBoolean": true,
+          "explanationText": "建物買取請求権を行使した場合（借地借家法13条参照）、建物買取代金を受けるまでは、建物の引渡しを拒むことができるのはもちろん、建物だけ引渡しを拒みうるとしても意味がないから、その反射的効力として敷地についても引渡しを拒むことができる（最判昭35.9.20）。",
+          "subjectCandidate": "minpo",
+          "chapterCandidate": "minpo-saiken",
+          "confidence": 0.95,
+          "sectionTitle": "契約",
+          "sourcePageQuestion": "740",
+          "sourcePageAnswer": "741"
         }
       ],
       "parseError": null
