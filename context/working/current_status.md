@@ -1,16 +1,18 @@
 # current_status — 現在の作業状況
 
-最終更新: 2026-04-25 (v109 = 🎯 **後半 L2 バッチ 9 = 最終 batch = book end 到達** = p441-p470 = 23 ページ / 136 肢追加（legit blank 7 ページ除外 = p453 VII章扉 + p465-p470 book end）、Claude 自律運用 ninth cycle、章 context-based override 14 ページ 86 肢 = 過去最大 override)
+最終更新: 2026-04-25 (post-v109-merge SHA backfill = handoff-only PR、PR #83 squash = `9618259c5ecf56080ad0141590b72fc663b5df4c`、🎯 **後半 L2 完走確定 = A レーン完走**、data 変更なし / DATA_VERSION v109 維持)
 
-## 現在地 (confirmed, 2026-04-25 post-v109-batch9-import = 🎯 後半 L2 完走)
+## 現在地 (confirmed, 2026-04-25 post-v109-merge = 🎯 後半 L2 完走確定)
 
-- **latest data merge (in-flight)**: v109 = 本 PR = batch 9 = 最終 batch = 23 ページ / 136 肢（kiso-chishiki-gyomu 76 p441-p452 + kiso-chishiki-joho 60 p454-p464、book 980/981-1022/1023、chapter 境界 p454、legit blank 7 ページ = book end 到達）
+- **latest data merge**: v109 = PR #83 squash `9618259c5ecf56080ad0141590b72fc663b5df4c`（batch 9 = 最終 batch = 23 ページ / 136 肢、kiso-chishiki-gyomu 76 p441-p452 + kiso-chishiki-joho 60 p454-p464、book 980/981-1022/1023、chapter 境界 p454、legit blank 7 ページ = book end 到達、remote branch delete 済）
 - **前回 data merge**: v108 = PR #82 squash `07a066950927eb05523dd5e08993553a5b6bc49b`（batch 8 = p411-p440 = 28 ページ / 165 肢、subject 境界 2 つ）
 - **前々回 data merge**: v107 = PR #81 squash `3513703d0031d02fe5664fe52de150e17ba48e43`（batch 7 = p381-p410 = 27 ページ / 172 肢）
+- **latest main HEAD at handoff edit time**: `9618259c5ecf56080ad0141590b72fc663b5df4c`（PR #83 merge commit）
 - **DATA_VERSION**: `2026-04-25-audit-v109-batch9-L2-p441-470-import-finalbatch`
 - **🎯 最終総ページ**: 423 → **446** (+23) / **🎯 最終総肢**: 2312 → **2448** (+136)
 - **L1 本線**: ✅ 実質完了維持
-- **L2 本線**: 🎯 **完走確定**（batch 1-9 累計 9 cycle、本 PR = 最終 batch、book 末尾 Location 1022/1023 = 問題末尾、p465-p470 = 奥付 + Kindle end UI）
+- **L2 本線**: 🎯 **完走確定**（batch 1-9 累計 9 cycle、PR #83 merge 完了、book 末尾 Location 1022/1023 = 問題末尾、p465-p470 = 奥付 + Kindle end UI、後続 batch なし）
+- **A レーン = 主取込レーン**: 🎯 **完走**
 
 ## batch 9 結果サマリ（最終 batch）
 
@@ -47,10 +49,11 @@
   - **P2 = p050 duplicate 判定**（継続、p051 優先 / p050 preserve / merge の 3 択、user 判断待ち）
   - **P3 = p318 seq1 needsSourceCheck**（継続、現物 `images/0318.png` で verbatim 確認必要）
   - follow-up 3 本（P1-1 integration test / P1-2 PreservedAttrs 拡張 / P1-3 CLAUDE.md stale update）並行 open 対象
-- **任意 follow-up**:
-  - (a) **override ロジックのルール化**（任意、sectionTitle-first rule の script 実装、batch 10 以降の新書に備え）
-  - (b) P2/P3 進行
-  - (c) 副レーン B1/B4 再開
+- **任意 follow-up 優先順（user directive 2026-04-25 post-v109-merge）**:
+  1. **P2 = p050 duplicate 判定**（最優先、未解決の実データ論点）
+  2. **P3 = p318 seq1 needsSourceCheck**（現物 `images/0318.png` で verbatim 照合）
+  3. **p006 B1/B4**（副レーン、高解像度 recrop 待ち）
+  4. **override ロジックのルール化**（任意、sectionTitle-first rule の script 実装、batch 10+ 新書投入時の備え）
 
 ## Source of truth
 
@@ -60,4 +63,4 @@
 
 ## 次セッションへの持ち越し
 
-→ `handoff.md` の「次アクション」および `context/stable/ingestion_flow.md` §11 を参照。**本 batch で後半 L2 完走のため、次バッチは新書投入時まで不要**。
+→ `handoff.md` の「次アクション」および `context/stable/ingestion_flow.md` §11 を参照。**後半 L2 完走確定のため次バッチは新書投入時まで不要**。直近 open task は P2 p050 duplicate 判定（user 判断待ち = p051 優先 / p050 preserve / merge の 3 択）。
