@@ -1,6 +1,18 @@
 # handoff — 次セッション引き継ぎ
 
-最終更新: 2026-04-25 (**post-v109-merge SHA backfill = handoff-only PR**, data 変更なし / DATA_VERSION v109 維持 / Q/E/ans 無変更): PR #83 (v109 batch 9 import = 🎯 最終 batch) **squash merge 完了 = `9618259c5ecf56080ad0141590b72fc663b5df4c`**（remote branch `claude/v109-batch9-import` delete 済、main HEAD 一致 = clean squash）。本 PR scope = `context/working/handoff.md` + `context/working/current_status.md` の SHA backfill のみ（`data/` / `public/data/` / `src/` / DATA_VERSION は一切触らない、PR #53 で確立した new policy 準拠、PR #79 v105 backfill と同パターン）。**🎯 後半 L2 完走確定**: batch 1-9 累計 9 cycle = 後続 batch なし、book 末尾 Location 1022/1023 到達、総ページ 446 / 総肢 2448 final state。**A レーン = 完走**、B レーン残件 = p006 B1/B4（高解像度 recrop 待ち）は P2 backlog 維持。**次アクション優先順（user directive 2026-04-25）**: (1) P2 = p050 duplicate 判定（user 判断待ち = p051 優先 / p050 preserve / merge の 3 択）→ (2) P3 = p318 seq1 needsSourceCheck 現物照合 → (3) p006 B1/B4 副レーン → (4) override ルールの script 化（任意、batch 10+ 新書投入時の備え）。p050/p318 は未解決の実データ論点のため script 化より先に片付ける方針。
+最終更新: 2026-04-25 (**P2/P3 close 束ね = handoff-only PR**, data 変更なし / DATA_VERSION v109 維持 / Q/E/ans/needsSourceCheck flag 無変更): A レーン完走後の任意 follow-up 優先順（user directive 2026-04-25 post-v109-merge）に従い P2 (p050 duplicate 判定) + P3 (p318 seq1 needsSourceCheck 現物照合) を束ねて close 記録。本 PR scope = `context/working/handoff.md` + `context/working/current_status.md` の close 記録のみ（`data/` / `public/data/` / `src/` / DATA_VERSION は一切触らない、PR #79/#84 と同パターン）。
+
+**P2 = p050 duplicate 判定**: ✅ **resolved = `p051 優先 / 現状維持`**。根拠 (i) `data/reviewed_import.json` に p050 entry 不在（既に drop 済 = batch 1 auto-scan の判断は正しかった）、(ii) `data/reviewed_import.json` に p051 存在（5 肢 = srcQ=204 / srcA=205 / sectionTitle=行政契約）、(iii) 画像視認 `~/Desktop/kindle_shots/0050.png` と `0051.png` は **同一書籍 spread = 書籍 p.204-205 行政契約 5 肢** を撮影しており内容 100% 一致、md5 異なるのは別 session 撮影による Kindle rendering / JPEG 再圧縮 variance のみ（撮影 timestamp 0050 = Mar 29 01:55 / 0051 = Mar 29 11:18 = 約 10h 差 = 別 session restart の二重 capture 確定）、(iv) book 流 = p049 (p.202-203 行政立法) → **p050 (二重 capture / drop 済)** → p051 (p.204-205 行政契約) → p052 (別 section) で連続性整合。**追加修正不要**。
+
+**P3 = p318 seq1 needsSourceCheck 現物照合**: ✅ **resolved = `書籍原文 verbatim 確認 / OCR 正確 / E 本文修正不要`**。根拠 (i) `~/Desktop/kindle_shots/0318.png` 右列 row 6 = seq1 解説 を高解像 crop（Python PIL crop + 2x LANCZOS resize）で確認、(ii) 書籍そのものが「申込者が**…**期間内に承諾の通知を受けなかったときは、その申込みは、その効力を失う」(民法523条2項) と印字 = **書籍著者による意図的な略**（民法523条2項の「前項の」4 文字を `…` に圧縮、肢別過去問集の標準書式）、(iii) 旧 handoff 記述「OCR abbreviation = `…` が `前項の` を省略している」は **誤り**（実態は OCR ではなく書籍書式）。**訂正**: 旧 v104 batch 4 entry の「p318 seq1 = OCR abbreviation」表現は撤回、正しくは「書籍 verbatim = `…` literal、民法523条2項『前項の』を書籍が意図的省略」と読み替え。**E 本文無変更**。**needsSourceCheck flag = informational として維持**（user directive 2026-04-25 = handoff-only 1 本に閉じる優先）、**次の data 変更 PR が出る時に clear 候補として fold**（DATA_VERSION bump 単発理由としては優先度低、後続 data PR と同梱が efficient）。
+
+**任意 follow-up 残件（更新後）**:
+1. ~~P2 = p050 duplicate 判定~~ ✅ **closed**（本 PR）
+2. ~~P3 = p318 seq1 needsSourceCheck~~ ✅ **closed**（本 PR、flag は次 data PR で clear 候補）
+3. **p006 B1/B4 副レーン**（高解像度 recrop 待ち、頻度低）
+4. **override ロジックのルール化**（任意、sectionTitle-first rule の script 実装、batch 10+ 新書投入時の備え）
+
+旧: 2026-04-25 (**post-v109-merge SHA backfill = handoff-only PR**, data 変更なし / DATA_VERSION v109 維持 / Q/E/ans 無変更): PR #83 (v109 batch 9 import = 🎯 最終 batch) **squash merge 完了 = `9618259c5ecf56080ad0141590b72fc663b5df4c`**（remote branch `claude/v109-batch9-import` delete 済、main HEAD 一致 = clean squash）。本 PR scope = `context/working/handoff.md` + `context/working/current_status.md` の SHA backfill のみ（`data/` / `public/data/` / `src/` / DATA_VERSION は一切触らない、PR #53 で確立した new policy 準拠、PR #79 v105 backfill と同パターン）。**🎯 後半 L2 完走確定**: batch 1-9 累計 9 cycle = 後続 batch なし、book 末尾 Location 1022/1023 到達、総ページ 446 / 総肢 2448 final state。**A レーン = 完走**、B レーン残件 = p006 B1/B4（高解像度 recrop 待ち）は P2 backlog 維持。**次アクション優先順（user directive 2026-04-25）**: (1) P2 = p050 duplicate 判定（user 判断待ち = p051 優先 / p050 preserve / merge の 3 択）→ (2) P3 = p318 seq1 needsSourceCheck 現物照合 → (3) p006 B1/B4 副レーン → (4) override ルールの script 化（任意、batch 10+ 新書投入時の備え）。p050/p318 は未解決の実データ論点のため script 化より先に片付ける方針。
 
 旧: 2026-04-25 (**v109 = 後半 L2 バッチ 9 import = p441-p470 = 23 ページ / 136 肢追加（legit blank 7 ページ除外 = book end 到達）= 🎯 後半 L2 完走 最終 batch**, data 変更あり / DATA_VERSION v108 → v109 bump / Claude 自律運用 ninth cycle / batch size 30 枚維持 / **chapter 境界 1 つ = p454 kiso-chishiki-gyomu → kiso-chishiki-joho / 章 context-based override 14 ページ 86 肢 = 過去最大 override**）: PR #82 (v108 batch 8 import) **squash merge 完了 = `07a066950927eb05523dd5e08993553a5b6bc49b`**。既 capture 済み 0441-0470 = 最終 batch 30 枚、Claude 自律 ninth cycle 即時開始。**capture 診断**: capture dup なし、capture miss なし。**OCR 成功**: main run (flash) = 27/30 OK, 3 失敗 (p446/p460/p462 = 503) → flash retry 1 で p446/p460 解消、p462 は 45 秒 sleep + retry 2 で解消、pro fallback 不要。**legit blank 7 ページ判定**（原本画像目視確認）: (i) p453 = 「VII. 情報通信・個人情報保護」主章扉 / (ii) p465 = 書籍末尾「書籍の正誤に関するご確認とお問合せについて」/ (iii) p466 = 監修者・執筆者プロフィール + copyright / (iv) p467 = 電子書籍版 奥付（ISBN: 978-4-8471-5211-5）/ (v) p468-p470 = Kindle「End of Book」UI ratings/follow screen 3 枚重複 = **book 末尾到達確定**。auto scan 結果: (i) **legitimate new content = 23 ページ / 136 肢**（kiso-chishiki-gyomu 76 肢 p441-p452 = 行政書士法・戸籍法・住民基本台帳法 + kiso-chishiki-joho 60 肢 p454-p464 = 個人情報保護法・情報通信・公文書管理法、book 980/981-1022/1023）→ **本 PR で import**。(ii) **chapter 境界 #1 = p454**: kiso-chishiki-gyomu → kiso-chishiki-joho（p453 VII章扉 直後）。(iii) **章 context-based override = 14 ページ 86 肢**: Gemini が 行政書士法/戸籍法/個人情報保護法 content を大半 `gyosei/gyosei-ippan` or `minpo/minpo-shinzoku` に誤分類 → p436/p453 主章扉 context に基づき VI章 (p441-p452) = kiso-chishiki-gyomu / VII章 (p454-p464) = kiso-chishiki-joho に systematic override。Gemini 自身が sectionTitle を「業務関連諸法令」「戸籍法」「住民基本台帳法」「個人情報保護法」「公文書管理法」と正しく認識していたため override 根拠極めて強い（sectionTitle-first rule: 章 context に反する subject/chapter は override 候補と判断）。batch 8 p437 で確立した override pattern の拡大適用。(iv) **cross-batch dup 0 件**。(v) **within-batch dup 0 件**。(vi) **polarity suspect 41 件**: 全偽陽性（Q 否定形 + ans=True pattern、spot-check 5/41 で整合確認 = 公文書管理法10条1項 / 行政書士法8条2項事務所 / 行書法6条の2第2項登録拒否 / 施行規則9条2項職印 / 5条2項補助者届出）。**成果**: 実質 import +23 ページ / +136 肢（legit blank 7 除外）。**🎯 最終総ページ 423 → 446 / 🎯 最終総肢 2312 → 2448 = 後半 L2 L1+L2 完走確定**。mirror byte-identical 確認済、DATA_VERSION v108 → `2026-04-25-audit-v109-batch9-L2-p441-470-import-finalbatch`。**v3 flow §12 成功条件**: 対象 30 明示（23 import + 7 legit blank）/ mirror byte-identical / DATA_VERSION bump / 欠損率 0/30 = 0%（blank 7 は「欠損」ではなく「legit」扱い = book end 到達）/ polarity gate 全通過 = **5/5 通過 = batch 9 成功 = 後半 L2 取込完走**。**次バッチ**: **なし（book 末尾到達）**。後続作業は (a) override ロジックのルール化（任意、sectionTitle-first rule の条件ハードコード化）、(b) P2 = p050 duplicate 判定、(c) P3 = p318 seq1 needsSourceCheck 現物照合、(d) 副レーン B1/B4 再開。
 
@@ -162,14 +174,16 @@ Gemini main run で多数のページを以下の誤分類:
 4. **欠損率 0/30 = 0% ≤ 10%**（blank 7 は「欠損」ではなく「legit」扱い = book end 到達）
 5. **polarity gate 全通過**: spot-check 5/41 全偽陽性
 
-### 🎯 後半 L2 完走後の次アクション
+### 🎯 後半 L2 完走後の次アクション（2026-04-25 P2/P3 close 後 更新）
 
 - **A レーン 後続 batch**: **なし**（book 末尾到達）
-- **任意 follow-up**:
-  - (a) override ロジックのルール化（sectionTitle-first rule の script 実装、batch 10 以降の新書に備え）
-  - (b) P2 = p050 duplicate 判定（user 判断待ち、p051 優先 / p050 preserve / merge の 3 択）
-  - (c) P3 = p318 seq1 needsSourceCheck 現物照合
-  - (d) 副レーン B1/B4 再開（p006 残 seq、高解像度 recrop 待ち）
+- **closed**:
+  - ~~P2 = p050 duplicate 判定~~ ✅ **resolved = `p051 優先 / 現状維持`**（同 spread 二重 capture 確認、batch 1 auto-scan 判断は正しかった）
+  - ~~P3 = p318 seq1 needsSourceCheck 現物照合~~ ✅ **resolved = `書籍 verbatim / OCR 正確 / E 本文修正不要`**（書籍そのものが `…` 印字 = 「前項の」を著者が意図的省略、旧 OCR abbreviation 説は誤り）
+- **残件**:
+  - **p318 seq1 needsSourceCheck flag**: informational として維持、次 data 変更 PR で fold して clear 候補
+  - **p006 B1/B4 副レーン**（残 seq、高解像度 recrop 待ち、頻度低）
+  - **override ロジックのルール化**（任意、sectionTitle-first rule の script 実装、batch 10+ 新書投入時の備え）
 
 ## 後半 L2 取込 batch 8 実行ログ（2026-04-25, Claude 自律 eighth cycle, 既 capture 済み運用 2 回目）
 

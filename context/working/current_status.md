@@ -1,6 +1,6 @@
 # current_status — 現在の作業状況
 
-最終更新: 2026-04-25 (post-v109-merge SHA backfill = handoff-only PR、PR #83 squash = `9618259c5ecf56080ad0141590b72fc663b5df4c`、🎯 **後半 L2 完走確定 = A レーン完走**、data 変更なし / DATA_VERSION v109 維持)
+最終更新: 2026-04-25 (P2/P3 close 束ね = handoff-only PR、🎯 **後半 L2 完走確定 = A レーン完走**、P2 = p050 duplicate / P3 = p318 needsSourceCheck 両方 close、data 変更なし / DATA_VERSION v109 維持 / needsSourceCheck flag 維持)
 
 ## 現在地 (confirmed, 2026-04-25 post-v109-merge = 🎯 後半 L2 完走確定)
 
@@ -46,13 +46,13 @@
 - **B 修正 = 副レーン**: open 上限 = 5。p006 B 群は B2/B3/B5/B6 closed、残 B1/B4 は P2 backlog（高解像度 recrop 待ち）
 - **C queue**:
   - **P1 = p255 OCR retry**: ✅ v104 で解消済（pro fallback pattern 確立）
-  - **P2 = p050 duplicate 判定**（継続、p051 優先 / p050 preserve / merge の 3 択、user 判断待ち）
-  - **P3 = p318 seq1 needsSourceCheck**（継続、現物 `images/0318.png` で verbatim 確認必要）
+  - **P2 = p050 duplicate 判定**: ✅ **closed（本 PR）= `p051 優先 / 現状維持`**（同 spread 二重 capture 確認、batch 1 auto-scan の判断は正しかった）
+  - **P3 = p318 seq1 needsSourceCheck**: ✅ **closed（本 PR）= `書籍 verbatim / OCR 正確 / E 本文修正不要`**（書籍そのものが `…` 印字 = 「前項の」を著者が意図的省略、旧「OCR abbreviation」説は誤り）。flag は informational として維持、次 data 変更 PR で fold して clear 候補
   - follow-up 3 本（P1-1 integration test / P1-2 PreservedAttrs 拡張 / P1-3 CLAUDE.md stale update）並行 open 対象
-- **任意 follow-up 優先順（user directive 2026-04-25 post-v109-merge）**:
-  1. **P2 = p050 duplicate 判定**（最優先、未解決の実データ論点）
-  2. **P3 = p318 seq1 needsSourceCheck**（現物 `images/0318.png` で verbatim 照合）
-  3. **p006 B1/B4**（副レーン、高解像度 recrop 待ち）
+- **残 follow-up 優先順（P2/P3 close 後 更新）**:
+  1. ~~P2 = p050 duplicate 判定~~ ✅ closed
+  2. ~~P3 = p318 seq1 needsSourceCheck~~ ✅ closed（flag は次 data PR で clear 候補）
+  3. **p006 B1/B4**（副レーン、高解像度 recrop 待ち、頻度低）
   4. **override ロジックのルール化**（任意、sectionTitle-first rule の script 実装、batch 10+ 新書投入時の備え）
 
 ## Source of truth
@@ -63,4 +63,4 @@
 
 ## 次セッションへの持ち越し
 
-→ `handoff.md` の「次アクション」および `context/stable/ingestion_flow.md` §11 を参照。**後半 L2 完走確定のため次バッチは新書投入時まで不要**。直近 open task は P2 p050 duplicate 判定（user 判断待ち = p051 優先 / p050 preserve / merge の 3 択）。
+→ `handoff.md` の「次アクション」および `context/stable/ingestion_flow.md` §11 を参照。**後半 L2 完走確定のため次バッチは新書投入時まで不要**。**P2/P3 とも本 PR で close 済**。残件は (3) p006 B1/B4 副レーン（高解像度 recrop 待ち）/ (4) override ロジックの script 化（任意）のみ。次の data 変更 PR が出るタイミングで p318 seq1 needsSourceCheck flag clear を fold するのが推奨運用。
