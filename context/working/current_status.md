@@ -1,13 +1,16 @@
 # current_status — 現在の作業状況
 
-最終更新: 2026-04-25 (P2/P3 close 束ね = handoff-only PR、🎯 **後半 L2 完走確定 = A レーン完走**、P2 = p050 duplicate / P3 = p318 needsSourceCheck 両方 close、data 変更なし / DATA_VERSION v109 維持 / needsSourceCheck flag 維持)
+最終更新: 2026-04-26 (SHA backfill + override script 使い方 5 行メモ = handoff-only PR、🎯 **後半 L2 完走 + override cycle 完了 = 真の pause 状態**、data 変更なし / DATA_VERSION v109 維持)
 
-## 現在地 (confirmed, 2026-04-25 post-v109-merge = 🎯 後半 L2 完走確定)
+## 現在地 (confirmed, 2026-04-26 post-PR-87-merge = 🎯 真の pause 状態)
 
-- **latest data merge**: v109 = PR #83 squash `9618259c5ecf56080ad0141590b72fc663b5df4c`（batch 9 = 最終 batch = 23 ページ / 136 肢、kiso-chishiki-gyomu 76 p441-p452 + kiso-chishiki-joho 60 p454-p464、book 980/981-1022/1023、chapter 境界 p454、legit blank 7 ページ = book end 到達、remote branch delete 済）
-- **前回 data merge**: v108 = PR #82 squash `07a066950927eb05523dd5e08993553a5b6bc49b`（batch 8 = p411-p440 = 28 ページ / 165 肢、subject 境界 2 つ）
-- **前々回 data merge**: v107 = PR #81 squash `3513703d0031d02fe5664fe52de150e17ba48e43`（batch 7 = p381-p410 = 27 ページ / 172 肢）
-- **latest main HEAD at handoff edit time**: `9618259c5ecf56080ad0141590b72fc663b5df4c`（PR #83 merge commit）
+- **latest data merge**: v109 = PR #83 squash `9618259c5ecf56080ad0141590b72fc663b5df4c`（batch 9 = 最終 batch = 23 ページ / 136 肢、book end 到達）
+- **後続 handoff-only / docs / scripts PR (post-v109)**:
+  - PR #84 = `f01b1de` v109 SHA backfill
+  - PR #85 = `5c29bf8` P2/P3 close
+  - PR #86 = `f44565c` override 設計メモ (`docs/override_rule_design.md`)
+  - PR #87 = `c6a525f` override proposal tool 実装 (`scripts/check_classification.py` + `_test.py`、self-test 18/18 PASS)
+- **latest main HEAD at handoff edit time**: `c6a525f1789ed1f82c8328ddddb5a4a6f10243a3`（PR #87 merge commit）
 - **DATA_VERSION**: `2026-04-25-audit-v109-batch9-L2-p441-470-import-finalbatch`
 - **🎯 最終総ページ**: 423 → **446** (+23) / **🎯 最終総肢**: 2312 → **2448** (+136)
 - **L1 本線**: ✅ 実質完了維持
@@ -49,11 +52,12 @@
   - **P2 = p050 duplicate 判定**: ✅ **closed（本 PR）= `p051 優先 / 現状維持`**（同 spread 二重 capture 確認、batch 1 auto-scan の判断は正しかった）
   - **P3 = p318 seq1 needsSourceCheck**: ✅ **closed（本 PR）= `書籍 verbatim / OCR 正確 / E 本文修正不要`**（書籍そのものが `…` 印字 = 「前項の」を著者が意図的省略、旧「OCR abbreviation」説は誤り）。flag は informational として維持、次 data 変更 PR で fold して clear 候補
   - follow-up 3 本（P1-1 integration test / P1-2 PreservedAttrs 拡張 / P1-3 CLAUDE.md stale update）並行 open 対象
-- **残 follow-up 優先順（P2/P3 close 後 更新）**:
-  1. ~~P2 = p050 duplicate 判定~~ ✅ closed
-  2. ~~P3 = p318 seq1 needsSourceCheck~~ ✅ closed（flag は次 data PR で clear 候補）
-  3. **p006 B1/B4**（副レーン、高解像度 recrop 待ち、頻度低）
-  4. **override ロジックのルール化**（任意、sectionTitle-first rule の script 実装、batch 10+ 新書投入時の備え）
+- **残 follow-up（PR #85/#86/#87 完了後 更新 = 真の pause 状態）**:
+  1. ~~P2 = p050 duplicate 判定~~ ✅ closed (PR #85)
+  2. ~~P3 = p318 seq1 needsSourceCheck~~ ✅ closed (PR #85、flag は次 data PR で clear 候補)
+  3. ~~override ロジックの script 化~~ ✅ closed (PR #86 設計メモ + PR #87 実装、self-test 18/18 PASS)
+  4. **p006 B1/B4**（副レーン、高解像度 recrop 到着まで待機、頻度低）
+  5. **`context/stable/ingestion_flow.md` v3 → v4 bump**（実運用 1 回後に後ろ倒し、user directive 2026-04-26）
 
 ## Source of truth
 
@@ -63,4 +67,13 @@
 
 ## 次セッションへの持ち越し
 
-→ `handoff.md` の「次アクション」および `context/stable/ingestion_flow.md` §11 を参照。**後半 L2 完走確定のため次バッチは新書投入時まで不要**。**P2/P3 とも本 PR で close 済**。残件は (3) p006 B1/B4 副レーン（高解像度 recrop 待ち）/ (4) override ロジックの script 化（任意）のみ。次の data 変更 PR が出るタイミングで p318 seq1 needsSourceCheck flag clear を fold するのが推奨運用。
+→ `handoff.md` の「override script 使い方」5 行メモ + `docs/override_rule_design.md` を参照。**🎯 真の pause 状態**: A レーン完走 + C queue 全 close + override 設計/実装 cycle 完了 = 次 trigger まで実作業なし。**次の trigger**: (a) 新書投入 (= 次バッチ取込開始) / (b) p006 高解像度 recrop 到着 (= B1/B4 再開) のどちらか。
+
+新書投入時の運用 (5 ステップ):
+1. Gemini OCR → `data/parsed_gemini_<ts>.json`
+2. `python3 scripts/check_classification.py <input>` で proposal を確認
+3. auto_apply は `parsed_gemini_<ts>_final.json` 作成時に適用
+4. review_queue は個別判定
+5. importParsedBatch で `reviewed_import.json` に取り込み
+
+実運用 1 回後に `context/stable/ingestion_flow.md` を v4 へ正式 bump 予定。
