@@ -5,6 +5,15 @@
 > **lock**: `data/` / `public/data/` / `src/` / `DATA_VERSION` / `context/stable/` / `handoff.md` / `current_status.md` は本 queue では触らない。
 > **修正方針**: 原文未確認のまま data 修正禁止。**source 確認後に別 PR で判断**。
 
+## 現在の queue status (2026-04-27 更新)
+
+| problemId | status | close 種別 | 関連 PR |
+|---|---|---|---|
+| KB2025-p203-q03 | ✅ **closed** | no data change（修正不要） | [#93](https://github.com/ToadRoid/gyosei_tracker/pull/93) |
+| KB2025-p203-q04 | ✅ **closed** | data restored（v110） | [#93](https://github.com/ToadRoid/gyosei_tracker/pull/93), [#94](https://github.com/ToadRoid/gyosei_tracker/pull/94) |
+
+新規 2 件の queue は両方 close 済。詳細は §1-1 / §1-2 の close 結果サブセクション参照。
+
 ---
 
 ## 0. 既知（今回は対象外）
@@ -21,7 +30,7 @@
 
 ## 1. 新規 queue（未確認案件）
 
-### 1-1. KB2025-p203-q03
+### 1-1. KB2025-p203-q03 ✅ closed (no data change)
 
 | 項目 | 内容 |
 |---|---|
@@ -31,6 +40,20 @@
 | **subject / chapter** | gyosei / gyosei-chiho |
 | **sectionTitle (raw)** | 公の施設 |
 | **answerBoolean (現 data)** | True |
+| **status** | ✅ **closed (no data change)** |
+| **close 日** | 2026-04-27 |
+| **close 種別** | source 照合済 / book 原文と substantively 一致 / 送り仮名差のみ / **data 修正不要** |
+| **関連 PR** | [#93](https://github.com/ToadRoid/gyosei_tracker/pull/93)（source 照合保全 = `3563827c`） |
+
+**close 結果**:
+
+- source 照合: `images_preprocessed/0203.png` 左列 Q2 + 右列 A2 を verbatim 確認（PR #93 の `context/working/p203_source_check.md` §3 参照）
+- 差分: 「差別的取扱**い**」 vs 「差別的取扱」 = **送り仮名 1 文字（い）**の有無のみ。Q + E 両方で同パターン
+- 法律論の論理整合: ✓ 完全（条文 244 条 2 項・3 項 一致）
+- polarity: ✓ 正しい（True / image row marker = ○）
+- **data 修正は不要**（送り仮名差は data 修正対象にしない、user directive 2026-04-27）
+
+**以下は audit trail として残置（close 前の暫定判定）**:
 
 **現在の data 状態（read-only 抽出 / data/reviewed_import.json）**:
 
@@ -54,7 +77,7 @@
 
 ---
 
-### 1-2. KB2025-p203-q04
+### 1-2. KB2025-p203-q04 ✅ closed (data restored)
 
 | 項目 | 内容 |
 |---|---|
@@ -63,7 +86,25 @@
 | **報告種別** | その他 |
 | **subject / chapter** | gyosei / gyosei-chiho |
 | **sectionTitle (raw)** | 公の施設 |
-| **answerBoolean (現 data)** | False |
+| **answerBoolean (close 後 data)** | **True**（PR #94 で False → True restore 済） |
+| **status** | ✅ **closed (data restored)** |
+| **close 日** | 2026-04-27 |
+| **close 種別** | source 照合 + Q + E + ans 三層 restore 完了 |
+| **関連 PR** | [#93](https://github.com/ToadRoid/gyosei_tracker/pull/93)（source 照合保全 = `3563827c`）、[#94](https://github.com/ToadRoid/gyosei_tracker/pull/94)（v110 三層 restore = `7a1d486b`） |
+| **DATA_VERSION** | `2026-04-27-audit-v110-p203-q04-restore` |
+
+**close 結果**:
+
+- source 照合: `images_preprocessed/0203.png` 左列 Q3 + 右列 A3 を verbatim 確認（PR #93 の `context/working/p203_source_check.md` §4 参照）
+- 修正実施（PR #94）:
+  - **Q 完全置換**: 「不当でない合理的な理由 → 拒める」→ 「不当な差別的取扱禁止 + 住民に準ずる地位にある者にも適用」
+  - **E 完全置換**: 判例 citation `東判平成9.9.17` → **`最判平8.7.14`**、末尾結論 `拒むことができないとされる場合がある` → **`244 条 3 項は適用されるとしている`**
+  - **ans flip**: False → True
+- v3 §5 polarity gate triangulation: **3/3 経路一致**（image row marker ○ / E 末尾論理 / 判例特定 = 最判平8.7.14）
+- DATA_VERSION bump: v109 → v110
+- mirror byte-identical 確認済（data/ + public/data/）
+
+**以下は audit trail として残置（close 前の暫定判定）**:
 
 **現在の data 状態（read-only 抽出）**:
 
@@ -122,8 +163,15 @@
 
 ---
 
-## 5. user 判断ポイント
+## 5. user 判断履歴 / 残件
 
-1. **本 queue の保全方針**: docs-only PR 化するか untracked のまま置くか
-2. **source 照合タスクの優先順**: 既知 3 件 (P3-1〜P3-3) と新規 2 件 (p203-q03, p203-q04) を一括で原本照合するか、新規優先か
-3. **照合作業のタイミング**: Trigger A / Trigger B 待ちの pause を維持し source 照合は別レーン化するか、queue 化のみで pause 継続か
+**判断履歴（resolved）**:
+
+1. ~~本 queue の保全方針~~ ✅ resolved (PR #91 = `8cb96783` で docs-only PR 化済)
+2. ~~p203-q03 / q04 の source 照合タスク~~ ✅ resolved (PR #93 で照合 / PR #94 で q04 restore)
+3. ~~照合作業のタイミング~~ ✅ resolved (新規優先で完走、既知 3 件は別レーン化)
+
+**残件（次の意思決定 trigger 待ち）**:
+
+- 既知 3 件（p194-q06 / p197-q01 / p198-q05）の source 照合: ingestion_flow.md §10 P3 を正本として参照、本 queue では取り扱わない。別レーン化候補（user 明示 GO 必須）
+- 新規エラー報告が UI から追加された場合の追記方針: 本 §1 に新サブセクションとして追記する（追加 trigger 時のみ）
