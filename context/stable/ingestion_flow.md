@@ -139,9 +139,11 @@ ans flip を伴う修正は **triangulation gate** を通す：
 - P2-2: p006 B4 = `p006-q01 seq4` Q/E restore（在宅投票事件, row 15）
 
 **現在の P3 queue**:
-- P3-1: エラー報告 #1 = KB2025-p194-q06 正誤の誤り
-- P3-2: エラー報告 #2 = KB2025-p197-q01 その他
-- P3-3: エラー報告 #3 = KB2025-p198-q05 その他
+- ~~P3-1: エラー報告 #1 = KB2025-p194-q06 正誤の誤り~~ ✅ **closed (no data change, 2026-04-27)** = source 照合済（PR #100 = `e5e6f218`）。Q/E/ans すべて book 原文と verbatim 完全一致、自治法 13 条の 2 主体 = 市町村のみ、ans=False は正しい。**user 報告は誤認の可能性大**、data 修正不要
+- ~~P3-2: エラー報告 #2 = KB2025-p197-q01 その他~~ ✅ **closed (Q + E 二層 restored, 2026-04-27)** = source 照合（PR #100）+ data restore（PR #101 = `799636cc` / DATA_VERSION v111）。Q「ある」→「あらゆる」軽微 + E に substantive corruption（条文 citation `74条1項・6号`→`74条1項かっこ書` / 結論文「ある多くの…本質が認められている」→「あらゆる…本肢は誤っている」/ 「地方」→「地方税」）を book 原文へ verbatim restore。ans=False 維持（**flip 不要**）
+- ~~P3-3: エラー報告 #3 = KB2025-p198-q05 その他~~ ✅ **closed (Q 一層 restored, 2026-04-27)** = source 照合（PR #100）+ data restore（PR #101 = `799636cc` / DATA_VERSION v111）。Q 主語句「およびその選挙を行う者は、原則として」→「および長の選挙権を有する者は」を book 原文へ verbatim restore。E 完全一致、ans=True 維持（**flip 不要**）
+
+→ **既知 P3 3 件すべて close**。`context/working/p3_source_check.md`（PR #100 merged）が照合証跡、PR #101 が data restore PR。三層 restore（p203-q04 / v110 型）案件は本 3 件には不在。
 
 ---
 
