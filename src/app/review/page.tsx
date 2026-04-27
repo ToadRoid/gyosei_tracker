@@ -446,7 +446,7 @@ function TopicCard({
 
 // ── ReviewPage ─────────────────────────────────────────────────────────────
 
-const INITIAL_SHOW_COUNT = 5;
+const INITIAL_SHOW_COUNT = 10;
 
 export default function ReviewPage() {
   const [data, setData] = useState<ReviewPackInput | null>(null);
@@ -541,7 +541,7 @@ export default function ReviewPage() {
         return (
           <>
             <p className="text-xs text-slate-400">
-              正答率が低いセクション（{showingCount}/{total}件）
+              正答率が低いセクション（上位{showingCount}件表示 / 全{total}件）
             </p>
             {visibleTopics.map((topic, idx) => (
               <TopicCard
