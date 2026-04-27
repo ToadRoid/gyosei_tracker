@@ -1,11 +1,22 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 import { buildReviewPackInput } from '@/lib/review-pack-builder';
 import { getOverallStats } from '@/lib/stats';
 import { db } from '@/lib/db';
 import type { ReviewPackInput, WeakTopicInput, QuestionExample } from '@/types/review-pack';
+
+// 復習セッション (B 実装) sessionStorage payload schema
+// PR #97 設計に基づく。section key (raw / display) は **一切渡さない**。
+interface ReviewSessionPayload {
+  problemIds: string[];
+  topicLabel: string;     // 表示用のみ（exercise/session UI で使う場合の補助）
+  subjectName: string;    // 表示用のみ
+  chapterName: string;    // 表示用のみ
+  createdAt: number;      // ms timestamp
+}
 
 // ── AI Deep Dive ──────────────────────────────────────────────────────────
 
@@ -270,6 +281,44 @@ function AccuracyBadge({ accuracy }: { accuracy: number }) {
   return <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${cls}`}>{pct}%</span>;
 }
 
+// ── Review Session Start Button ───────────────────────────────────────────
+// PR #97 設計（context/working/review_to_exercise_design_audit.md）に基づく実装。
+//
+// 重要な設計判断:
+// - **section key (raw / display) を URL に含めない** = 分類崩壊再発を構造的に回避
+// - candidateProblemIds は stable identifier (KB2025-pNNN-qMM) のため DATA_VERSION refresh をまたいで安全
+// - sessionStorage はタブ単位でタブ閉じで自動破棄 = 一時用途として適切
+// - exercise/session 側で getReadyProblemsByIds() が再 filter（status/excluded/needsSourceCheck/discard/answerBoolean）
+function ReviewSessionStartButton({ topic }: { topic: WeakTopicInput }) {
+  const router = useRouter();
+  const handleStart = () => {
+    if (typeof window === 'undefined') return; // SSR ガード
+    const token = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const payload: ReviewSessionPayload = {
+      problemIds: topic.candidateProblemIds,
+      topicLabel: topic.sectionTitle,
+      subjectName: topic.subjectName,
+      chapterName: topic.chapterName,
+      createdAt: Date.now(),
+    };
+    try {
+      sessionStorage.setItem(`review-session-${token}`, JSON.stringify(payload));
+    } catch (e) {
+      console.warn('[review-session] sessionStorage write failed:', e);
+      return;
+    }
+    router.push(`/exercise/session?reviewSession=${encodeURIComponent(token)}`);
+  };
+  return (
+    <button
+      onClick={handleStart}
+      className="w-full rounded-xl bg-indigo-600 py-2.5 text-sm font-bold text-white hover:bg-indigo-700 transition-colors"
+    >
+      ✏️ このセクションを演習で復習（{topic.candidateProblemIds.length}問）
+    </button>
+  );
+}
+
 // ── Question Row ──────────────────────────────────────────────────────────
 
 function QuestionRow({ q }: { q: QuestionExample }) {
@@ -374,6 +423,11 @@ function TopicCard({
             )}
             {topic.pageRefAnswer && <span>📖 解説 p.{topic.pageRefAnswer}</span>}
           </div>
+
+          {/* 演習で復習（B 実装 = candidateProblemIds + sessionStorage token、PR #97 設計） */}
+          {topic.candidateProblemIds.length > 0 && (
+            <ReviewSessionStartButton topic={topic} />
+          )}
 
           {/* AIで深掘り */}
           <AiDeepDiveButtons
