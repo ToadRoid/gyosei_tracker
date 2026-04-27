@@ -1019,7 +1019,7 @@ export async function runOneTimeCleanup(): Promise<void> {
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-04-25-audit-v109-batch9-L2-p441-470-import-finalbatch';
+const DATA_VERSION = '2026-04-27-audit-v110-p203-q04-restore';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
