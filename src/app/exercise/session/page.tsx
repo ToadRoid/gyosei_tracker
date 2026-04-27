@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useReducer, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { db, getReadyProblems, upsertAttempt } from '@/lib/db';
+import { db, getReadyProblems, getReadyProblemsByIds, upsertAttempt } from '@/lib/db';
 import { subjects, chapters } from '@/data/master';
 import type { ProblemForExercise, ExerciseResult, ExercisePhase } from '@/types';
 import { useAuth } from '@/components/AuthProvider';
@@ -111,6 +111,8 @@ function SessionContent() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [loading, setLoading] = useState(true);
   const [saveError, setSaveError] = useState(false);
+  // reviewSession (B 実装 = candidateProblemIds + sessionStorage token handoff) 用 empty state
+  const [reviewSessionError, setReviewSessionError] = useState<string | null>(null);
   const lapNoRef = useRef(1);
   const isAnsweringRef = useRef(false);
 
@@ -167,15 +169,59 @@ function SessionContent() {
 
   useEffect(() => {
     setLoading(true);
+    setReviewSessionError(null);
     isAnsweringRef.current = false;
     (async () => {
-      const subjectId = searchParams.get('subject') || undefined;
-      const chapterId = searchParams.get('chapter') || undefined;
-      const sectionTitle = searchParams.get('section') || undefined;
+      const reviewSessionToken = searchParams.get('reviewSession') || undefined;
       const lapNo = Number(searchParams.get('lap') || '1');
-
-      let problems = await getReadyProblems(subjectId, chapterId, sectionTitle);
       const isRandom = searchParams.get('random') === '1';
+
+      let problems: ProblemForExercise[];
+
+      // 復習導線分岐: candidateProblemIds + sessionStorage token (PR #97 設計に基づく)
+      // section key を URL に渡さず、problemIds 直接指定で出題する
+      if (reviewSessionToken) {
+        if (typeof window === 'undefined') {
+          // SSR ガード（実際は 'use client' なので通常通らない）
+          setReviewSessionError('復習セッションを読み込めませんでした');
+          setLoading(false);
+          return;
+        }
+        const raw = sessionStorage.getItem(`review-session-${reviewSessionToken}`);
+        if (!raw) {
+          setReviewSessionError('復習セッションの有効期限が切れました（タブを閉じた等の理由で失効）。弱点ダッシュボードに戻ってもう一度お試しください。');
+          setLoading(false);
+          return;
+        }
+        let payload: { problemIds?: unknown };
+        try {
+          payload = JSON.parse(raw);
+        } catch {
+          setReviewSessionError('復習セッションのデータが破損しています。');
+          setLoading(false);
+          return;
+        }
+        const ids = Array.isArray(payload.problemIds)
+          ? payload.problemIds.filter((x: unknown): x is string => typeof x === 'string')
+          : [];
+        if (ids.length === 0) {
+          setReviewSessionError('復習対象の問題が指定されていません。');
+          setLoading(false);
+          return;
+        }
+        problems = await getReadyProblemsByIds(ids);
+        if (problems.length === 0) {
+          setReviewSessionError('復習対象の問題が見つかりません（除外フラグ等で全件フィルタされた可能性があります）。');
+          setLoading(false);
+          return;
+        }
+      } else {
+        // 既存導線: subject / chapter / section（display label）/ lap / random
+        const subjectId = searchParams.get('subject') || undefined;
+        const chapterId = searchParams.get('chapter') || undefined;
+        const sectionTitle = searchParams.get('section') || undefined;
+        problems = await getReadyProblems(subjectId, chapterId, sectionTitle);
+      }
 
       // 今の周で既に回答済みの problemId を除外（途中再開は未回答のみ出題）
       const answeredInLap = await db.attempts
@@ -246,6 +292,31 @@ function SessionContent() {
     return (
       <div className="flex items-center justify-center min-h-dvh">
         <p className="text-slate-400">読み込み中...</p>
+      </div>
+    );
+  }
+
+  // 復習セッションの empty state（PR #97 設計の §1-9 ケース）
+  if (reviewSessionError) {
+    return (
+      <div className="px-4 pt-6 text-center space-y-4 max-w-md mx-auto">
+        <p className="text-5xl">🔍</p>
+        <p className="text-slate-700 font-bold">復習対象の問題が見つかりません</p>
+        <p className="text-sm text-slate-500">{reviewSessionError}</p>
+        <div className="flex gap-3 justify-center pt-2">
+          <button
+            onClick={() => router.push('/review')}
+            className="rounded-xl bg-indigo-600 px-6 py-2 text-white font-bold hover:bg-indigo-700"
+          >
+            弱点ダッシュボードに戻る
+          </button>
+          <button
+            onClick={() => router.push('/exercise')}
+            className="rounded-xl bg-slate-100 px-6 py-2 font-bold text-slate-700 hover:bg-slate-200"
+          >
+            演習設定に戻る
+          </button>
+        </div>
       </div>
     );
   }

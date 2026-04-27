@@ -192,6 +192,72 @@ async function syncAttemptToSupabase(data: Omit<Attempt, 'id'>): Promise<void> {
 }
 
 /**
+ * 復習導線用: problemId 直接指定で ready な Problem + ProblemAttr を取り出す（ID 指定専用）
+ *
+ * candidateProblemIds（review-pack-builder で生成されたスナップショット）で出題するための helper。
+ * weak topic 生成後に isExcluded / needsSourceCheck / discard 化された問題が混入する可能性があるため、
+ * 取得後に最低限 5 件の filter を **必ず再適用**する：
+ *
+ *   1. status === 'ready'
+ *   2. isExcluded !== true
+ *   3. needsSourceCheck !== true
+ *   4. aiTriageStatus !== 'discard'  ← buildReviewPackInput と整合（既存 getReadyProblems には無いが必須）
+ *   5. answerBoolean !== null / undefined
+ *
+ * **section key 比較は行わない**（problemIds 直接指定が key 不一致 = 分類崩壊リスクを bypass する設計）。
+ *
+ * 設計根拠: PR #97 (`94874a0a`) `context/working/review_to_exercise_design_audit.md` §5-2-1
+ */
+export async function getReadyProblemsByIds(
+  problemIds: string[],
+): Promise<ProblemForExercise[]> {
+  if (problemIds.length === 0) return [];
+
+  const idSet = new Set(problemIds);
+  const [problems, attrs] = await Promise.all([
+    db.problems.where('problemId').anyOf(problemIds).toArray(),
+    db.problemAttrs.where('problemId').anyOf(problemIds).toArray(),
+  ]);
+  const attrMap = new Map(attrs.map((a) => [a.problemId, a]));
+
+  return problems
+    .filter((p) => p.status === 'ready' && idSet.has(p.problemId))
+    .map((p) => {
+      const attr = attrMap.get(p.problemId);
+      if (!attr) return null;
+      if (attr.answerBoolean === null || attr.answerBoolean === undefined) return null;
+      if (attr.isExcluded === true) return null;
+      if (attr.needsSourceCheck === true) return null;
+      if (attr.aiTriageStatus === 'discard') return null;
+
+      const effectiveDisplay =
+        attr.displaySectionTitle ||
+        resolveDisplaySectionTitle(
+          attr.chapterId,
+          attr.sectionTitle ?? '',
+          attr.sourcePageQuestion ?? '',
+          p.problemId,
+        );
+      return {
+        ...p,
+        answerBoolean: attr.answerBoolean as boolean,
+        explanationText: (() => {
+          const t = p.rawExplanationText ?? '';
+          return t.startsWith('[解説読取困難') ? '' : t;
+        })(),
+        subjectId: attr.subjectId,
+        chapterId: attr.chapterId,
+        sectionTitle: attr.sectionTitle ?? undefined,
+        displaySectionTitle: effectiveDisplay || undefined,
+        sourcePageQuestion: attr.sourcePageQuestion ?? undefined,
+        sourcePageAnswer: attr.sourcePageAnswer ?? undefined,
+        questionType: attr.questionType ?? undefined,
+      } as ProblemForExercise;
+    })
+    .filter((p): p is ProblemForExercise => p !== null);
+}
+
+/**
  * 演習用: ready な Problem + ProblemAttr を結合して返す
  */
 export async function getReadyProblems(
