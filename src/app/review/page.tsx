@@ -449,6 +449,42 @@ function TopicCard({
 
 const INITIAL_SHOW_COUNT = 10;
 
+type SyllabusFilterId =
+  | 'all'
+  | 'kenpo'
+  | 'kenpo-jinken'
+  | 'kenpo-tochi'
+  | 'gyosei'
+  | 'minpo-sosoku'
+  | 'minpo-bukken'
+  | 'minpo-saiken'
+  | 'minpo-family';
+
+const SYLLABUS_FILTERS: {
+  id: SyllabusFilterId;
+  label: string;
+  subjectId?: string;
+  chapterIds?: string[];
+}[] = [
+  { id: 'all', label: 'すべて' },
+  { id: 'kenpo', label: '憲法', subjectId: 'kenpo' },
+  { id: 'kenpo-jinken', label: '憲法・人権', subjectId: 'kenpo', chapterIds: ['kenpo-jinken'] },
+  { id: 'kenpo-tochi', label: '憲法・統治', subjectId: 'kenpo', chapterIds: ['kenpo-tochi'] },
+  { id: 'gyosei', label: '行政法', subjectId: 'gyosei' },
+  { id: 'minpo-sosoku', label: '民法・総則', subjectId: 'minpo', chapterIds: ['minpo-sosoku'] },
+  { id: 'minpo-bukken', label: '民法・物権', subjectId: 'minpo', chapterIds: ['minpo-bukken'] },
+  { id: 'minpo-saiken', label: '民法・債権', subjectId: 'minpo', chapterIds: ['minpo-saiken'] },
+  { id: 'minpo-family', label: '民法・親族・相続', subjectId: 'minpo', chapterIds: ['minpo-shinzoku', 'minpo-sozoku'] },
+];
+
+function matchesSyllabusFilter(topic: WeakTopicInput, filterId: SyllabusFilterId): boolean {
+  const filter = SYLLABUS_FILTERS.find((item) => item.id === filterId);
+  if (!filter || filter.id === 'all') return true;
+  if (filter.subjectId && topic.subjectId !== filter.subjectId) return false;
+  if (filter.chapterIds && !filter.chapterIds.includes(topic.chapterId ?? '')) return false;
+  return true;
+}
+
 export default function ReviewPage() {
   const [data, setData] = useState<ReviewPackInput | null>(null);
   const [overallStats, setOverallStats] = useState<{ totalAttempts: number; accuracy: number; currentLap: number } | null>(null);
@@ -459,6 +495,7 @@ export default function ReviewPage() {
   const [showAllTopics, setShowAllTopics] = useState(false);
   const [reviewTab, setReviewTab] = useState<'weak' | 'syllabus'>('weak');
   const [syllabusTopics, setSyllabusTopics] = useState<WeakTopicInput[]>([]);
+  const [syllabusFilter, setSyllabusFilter] = useState<SyllabusFilterId>('all');
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -482,10 +519,19 @@ export default function ReviewPage() {
     loadData();
   }, [loadData]);
 
-  const activeTopics = data ? (reviewTab === 'weak' ? data.weakTopics : syllabusTopics) : [];
+  const filteredSyllabusTopics = syllabusTopics.filter((topic) =>
+    matchesSyllabusFilter(topic, syllabusFilter),
+  );
+  const activeTopics = data ? (reviewTab === 'weak' ? data.weakTopics : filteredSyllabusTopics) : [];
 
   const handleTabChange = (nextTab: 'weak' | 'syllabus') => {
     setReviewTab(nextTab);
+    setExpandedTopic(null);
+    setShowAllTopics(false);
+  };
+
+  const handleSyllabusFilterChange = (filterId: SyllabusFilterId) => {
+    setSyllabusFilter(filterId);
     setExpandedTopic(null);
     setShowAllTopics(false);
   };
@@ -500,7 +546,6 @@ export default function ReviewPage() {
 
   const hasAnyReviewTopics =
     data && (data.weakTopics.length > 0 || syllabusTopics.length > 0);
-  const hasData = data && activeTopics.length > 0;
 
   return (
     <div className="px-4 pt-6 pb-24 space-y-6 max-w-md mx-auto">
@@ -538,7 +583,7 @@ export default function ReviewPage() {
       </button>
 
       {/* Empty state */}
-      {!hasData && !loading && (
+      {!hasAnyReviewTopics && !loading && (
         <div className="text-center py-12 text-slate-400">
           <div className="text-4xl mb-3">📊</div>
           <p>弱点データがまだありません</p>
@@ -586,6 +631,28 @@ export default function ReviewPage() {
               <span className="ml-1 text-xs">({syllabusTopics.length})</span>
             </button>
           </div>
+
+          {reviewTab === 'syllabus' && (
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              {SYLLABUS_FILTERS.map((filter) => {
+                const selected = syllabusFilter === filter.id;
+                return (
+                  <button
+                    key={filter.id}
+                    type="button"
+                    onClick={() => handleSyllabusFilterChange(filter.id)}
+                    className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-bold transition-colors ${
+                      selected
+                        ? 'border-indigo-600 bg-indigo-600 text-white'
+                        : 'border-slate-200 bg-white text-slate-500 hover:border-indigo-200 hover:text-indigo-600'
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           {visibleTopics.length === 0 && (
             <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-500">
