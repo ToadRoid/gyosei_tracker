@@ -32,10 +32,42 @@ interface GroupData {
   }[];
 }
 
+interface SectionOrderData {
+  pageRefOrder: number;
+  sourcePageOrder: number;
+  seqOrder: number;
+}
+
+const UNKNOWN_ORDER = 999999;
+
 function timeOf(value: Date | number | string | undefined): number {
   if (value instanceof Date) return value.getTime();
   if (typeof value === 'number') return value;
   if (typeof value === 'string') return new Date(value).getTime();
+  return 0;
+}
+
+function parseOrderNumber(value: string | number | undefined | null): number | null {
+  if (typeof value === 'number') {
+    return Number.isFinite(value) ? value : null;
+  }
+  const trimmed = value?.trim();
+  if (!trimmed || !/^\d+$/.test(trimmed)) return null;
+  return Number(trimmed);
+}
+
+function parseSeqOrder(problemId: string): number | null {
+  return parseOrderNumber(problemId.match(/-q(\d+)$/)?.[1]);
+}
+
+function sectionKey(subjectId: string, chapterId: string, sectionTitle: string): GroupKey {
+  return `${subjectId}||${chapterId}||${sectionTitle}`;
+}
+
+function compareSectionOrder(a: SectionOrderData, b: SectionOrderData): number {
+  if (a.pageRefOrder !== b.pageRefOrder) return a.pageRefOrder - b.pageRefOrder;
+  if (a.sourcePageOrder !== b.sourcePageOrder) return a.sourcePageOrder - b.sourcePageOrder;
+  if (a.seqOrder !== b.seqOrder) return a.seqOrder - b.seqOrder;
   return 0;
 }
 
@@ -44,7 +76,7 @@ function timeOf(value: Date | number | string | undefined): number {
  *
  * 既存 review-pack-builder.ts は弱点順専用のため変更しない。
  * ここでは attempts >= 1 の section を対象にし、master.ts の subject/chapter order と
- * sectionTitle の安定ソートで教材順に並べる。
+ * sourcePageQuestion/sourcePage/problemId q-number の最小値で教材掲載順に近い順序へ並べる。
  */
 export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
   const { db } = await import('@/lib/db');
@@ -55,6 +87,27 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
 
   const attrMap = new Map(allAttrs.map((a) => [a.problemId, a]));
   const problemMap = new Map(allProblems.map((p) => [p.problemId, p]));
+
+  const sectionOrderMap = new Map<GroupKey, SectionOrderData>();
+  for (const attr of allAttrs) {
+    if (attr.isExcluded === true || attr.needsSourceCheck === true || attr.aiTriageStatus === 'discard') continue;
+
+    const sectionTitle = attr.sectionTitle ?? '';
+    if (!sectionTitle) continue;
+
+    const key = sectionKey(attr.subjectId ?? '', attr.chapterId ?? '', sectionTitle);
+    const existing = sectionOrderMap.get(key);
+    const problem = problemMap.get(attr.problemId);
+    const candidate = {
+      pageRefOrder: parseOrderNumber(attr.sourcePageQuestion) ?? UNKNOWN_ORDER,
+      sourcePageOrder: parseOrderNumber(problem?.sourcePage) ?? UNKNOWN_ORDER,
+      seqOrder: parseSeqOrder(attr.problemId) ?? UNKNOWN_ORDER,
+    };
+
+    if (!existing || compareSectionOrder(candidate, existing) < 0) {
+      sectionOrderMap.set(key, candidate);
+    }
+  }
 
   const groups = new Map<GroupKey, GroupData>();
 
@@ -69,7 +122,7 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
 
     if (!sectionTitle) continue;
 
-    const key: GroupKey = `${subjectId}||${chapterId}||${sectionTitle}`;
+    const key = sectionKey(subjectId, chapterId, sectionTitle);
 
     if (!groups.has(key)) {
       groups.set(key, {
@@ -127,6 +180,9 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
   const rankedTopics: {
     subjectOrder: number;
     chapterOrder: number;
+    pageRefOrder: number;
+    sourcePageOrder: number;
+    seqOrder: number;
     sectionTitle: string;
     topic: WeakTopicInput;
   }[] = [];
@@ -201,9 +257,16 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
         };
       });
 
+    const orderData = sectionOrderMap.get(
+      sectionKey(group.subjectId, group.chapterId, group.sectionTitle),
+    );
+
     rankedTopics.push({
       subjectOrder: subjectOrderMap.get(group.subjectId) ?? 9999,
       chapterOrder: chapterOrderMap.get(group.chapterId) ?? 9999,
+      pageRefOrder: orderData?.pageRefOrder ?? UNKNOWN_ORDER,
+      sourcePageOrder: orderData?.sourcePageOrder ?? UNKNOWN_ORDER,
+      seqOrder: orderData?.seqOrder ?? UNKNOWN_ORDER,
       sectionTitle: group.sectionTitle,
       topic: {
         subjectName,
@@ -227,6 +290,9 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
     .sort((a, b) => {
       if (a.subjectOrder !== b.subjectOrder) return a.subjectOrder - b.subjectOrder;
       if (a.chapterOrder !== b.chapterOrder) return a.chapterOrder - b.chapterOrder;
+      if (a.pageRefOrder !== b.pageRefOrder) return a.pageRefOrder - b.pageRefOrder;
+      if (a.sourcePageOrder !== b.sourcePageOrder) return a.sourcePageOrder - b.sourcePageOrder;
+      if (a.seqOrder !== b.seqOrder) return a.seqOrder - b.seqOrder;
       return a.sectionTitle.localeCompare(b.sectionTitle, 'ja');
     })
     .map((r) => r.topic);
