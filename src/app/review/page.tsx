@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 import { buildReviewPackInput } from '@/lib/review-pack-builder';
+import { buildSyllabusReviewTopics } from '@/lib/review-syllabus-builder';
 import { getOverallStats } from '@/lib/stats';
 import { db } from '@/lib/db';
 import type { ReviewPackInput, WeakTopicInput, QuestionExample } from '@/types/review-pack';
@@ -456,15 +457,19 @@ export default function ReviewPage() {
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
   const [fallbackPrompt, setFallbackPrompt] = useState<{ idx: number; text: string } | null>(null);
   const [showAllTopics, setShowAllTopics] = useState(false);
+  const [reviewTab, setReviewTab] = useState<'weak' | 'syllabus'>('weak');
+  const [syllabusTopics, setSyllabusTopics] = useState<WeakTopicInput[]>([]);
 
   const loadData = useCallback(async () => {
     setLoading(true);
     try {
-      const [input, stats] = await Promise.all([
+      const [input, syllabusInput, stats] = await Promise.all([
         buildReviewPackInput(),
+        buildSyllabusReviewTopics(),
         getOverallStats(),
       ]);
       setData(input);
+      setSyllabusTopics(syllabusInput);
       setOverallStats(stats);
     } catch (err) {
       console.error('Failed to load review data:', err);
@@ -477,6 +482,14 @@ export default function ReviewPage() {
     loadData();
   }, [loadData]);
 
+  const activeTopics = data ? (reviewTab === 'weak' ? data.weakTopics : syllabusTopics) : [];
+
+  const handleTabChange = (nextTab: 'weak' | 'syllabus') => {
+    setReviewTab(nextTab);
+    setExpandedTopic(null);
+    setShowAllTopics(false);
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-dvh">
@@ -485,7 +498,9 @@ export default function ReviewPage() {
     );
   }
 
-  const hasData = data && data.weakTopics.length > 0;
+  const hasAnyReviewTopics =
+    data && (data.weakTopics.length > 0 || syllabusTopics.length > 0);
+  const hasData = data && activeTopics.length > 0;
 
   return (
     <div className="px-4 pt-6 pb-24 space-y-6 max-w-md mx-auto">
@@ -532,20 +547,55 @@ export default function ReviewPage() {
       )}
 
       {/* Weak topics */}
-      {hasData && (() => {
-        const total = data.weakTopics.length;
+      {hasAnyReviewTopics && (() => {
+        const total = activeTopics.length;
         const visibleTopics = showAllTopics
-          ? data.weakTopics
-          : data.weakTopics.slice(0, INITIAL_SHOW_COUNT);
+          ? activeTopics
+          : activeTopics.slice(0, INITIAL_SHOW_COUNT);
         const showingCount = visibleTopics.length;
         return (
           <>
             <p className="text-xs text-slate-400">
-              正答率が低いセクション（上位{showingCount}件表示 / 全{total}件）
+              {reviewTab === 'weak'
+                ? `正答率が低いセクション（上位${showingCount}件表示 / 全${total}件）`
+                : `教材順の回答済みセクション（上位${showingCount}件表示 / 全${total}件）`}
             </p>
-            {visibleTopics.map((topic, idx) => (
+            <div className="grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1">
+            <button
+              type="button"
+              onClick={() => handleTabChange('weak')}
+              className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${
+                reviewTab === 'weak'
+                  ? 'bg-white text-indigo-700 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              弱点順
+              <span className="ml-1 text-xs">({data?.weakTopics.length ?? 0})</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleTabChange('syllabus')}
+              className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${
+                reviewTab === 'syllabus'
+                  ? 'bg-white text-indigo-700 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              教材順
+              <span className="ml-1 text-xs">({syllabusTopics.length})</span>
+            </button>
+          </div>
+
+          {visibleTopics.length === 0 && (
+            <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-500">
+              このタブに表示対象のセクションはありません。
+            </div>
+          )}
+
+          {visibleTopics.map((topic, idx) => (
               <TopicCard
-                key={`${topic.subjectName}-${topic.sectionTitle}`}
+                key={`${topic.subjectName}-${topic.chapterName}-${topic.sectionTitle}`}
                 topic={topic}
                 idx={idx}
                 expanded={expandedTopic === idx}
