@@ -269,6 +269,8 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
       seqOrder: orderData?.seqOrder ?? UNKNOWN_ORDER,
       sectionTitle: group.sectionTitle,
       topic: {
+        subjectId: group.subjectId,
+        chapterId: group.chapterId,
         subjectName,
         chapterName,
         sectionTitle: group.sectionTitle,

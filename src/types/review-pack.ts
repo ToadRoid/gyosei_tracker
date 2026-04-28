@@ -63,6 +63,8 @@ export interface QuestionExample {
 }
 
 export interface WeakTopicInput {
+  subjectId?: string;
+  chapterId?: string;
   subjectName: string;
   chapterName: string;
   sectionTitle: string;
