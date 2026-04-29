@@ -20,9 +20,20 @@
 9. `<省略>` 終わりの意図的省略表記が Tier 1.5 から除外されているか
 10. `違憲および` の reason が推定修正表現を含まない文言になっているか
 
+## Commit
+
+- SHA: 98892ae
+- message: chore: add imported data correction audit packet
+- branch: chore/imported-data-correction-audit
+- base: origin/main 3bc517f
+- state: branch is ahead 1 of origin/main
+- push: not executed
+- PR: not created
+- merge: not executed
+
 ## Evidence
 
-### Changed files
+### Committed files (5 files only)
 
 - `scripts/build_correction_review_packet.mjs` (new)
 - `context/working/sessions/imported-data-correction-audit/correction_review_packet.json` (new)
@@ -32,10 +43,13 @@
 
 ### Unchanged files (confirmed)
 
-- `data/reviewed_import.json` — 未変更
-- `public/data/reviewed_import.json` — 未変更
-- その他すべての tracked files — 未変更
-- 既存 untracked: `data/` 配下のJSON群 / `.claude/worktrees/` / `gyosei_tracker-cursor-trial/` / `scripts/audit_reviewed_import.py` — 未変更
+- `data/reviewed_import.json` — unchanged
+- `public/data/reviewed_import.json` — unchanged
+- all other tracked files — unchanged
+- existing untracked `data/` JSON group — untouched
+- `.claude/worktrees/` — untouched
+- `gyosei_tracker-cursor-trial/` — untouched
+- `scripts/audit_reviewed_import.py` — untouched
 
 ### Script run result
 
@@ -78,11 +92,12 @@ Tier 1.5 suppressed by cap: 0
 packet json ok
 ```
 
-### git status -sb --untracked-files=no
+### git status -sb --untracked-files=no (commit 後)
 
 ```
-## chore/imported-data-correction-audit...origin/main
-(tracked modified: 今回作成の5ファイルのみ / data/reviewed_import.json 未変更)
+## chore/imported-data-correction-audit...origin/main [ahead 1]
+tracked dirty: 0 / staged: 0
+untracked files: existing unrelated untracked files remain, but were not touched
 ```
 
 ## Do Not Assume

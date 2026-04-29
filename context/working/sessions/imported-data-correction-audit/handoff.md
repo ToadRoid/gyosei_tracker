@@ -36,26 +36,45 @@
 - 重複文字 regex 全件抽出は除外
 - polarity / answerBoolean の自動変更は未実施
 
+## Commit
+
+- SHA: 98892ae
+- message: chore: add imported data correction audit packet
+- branch: chore/imported-data-correction-audit
+- base: origin/main 3bc517f
+- state: branch is ahead 1 of origin/main
+- push: not executed
+- PR: not created
+- merge: not executed
+
+## Committed files
+
+- `scripts/build_correction_review_packet.mjs`
+- `context/working/sessions/imported-data-correction-audit/correction_review_packet.json`
+- `context/working/sessions/imported-data-correction-audit/correction_review_summary.md`
+- `context/working/sessions/imported-data-correction-audit/handoff.md`
+- `context/working/sessions/imported-data-correction-audit/review_request.md`
+
 ## Verification (実行結果)
 
 ```
-node scripts/build_correction_review_packet.mjs
+node scripts/build_correction_review_packet.mjs  (commit 前・最終実行)
 → Tier 1 candidates: 8
 → Tier 1.5 candidates: 2 / 2 (cap 未達)
 
-git diff -- data/reviewed_import.json
-→ (空 = 変更なし)
+git diff --cached --check  (commit 前)
+→ passed (空 = 問題なし)
 
-git diff --check
-→ (空 = 問題なし)
+git diff -- data/reviewed_import.json  (commit 前)
+→ 空 = 変更なし
 
-JSON.parse check
+JSON.parse check  (commit 前)
 → packet json ok
 
-git status -sb --untracked-files=no
-→ ## chore/imported-data-correction-audit...origin/main
-→ tracked modified: script + session docs/output 5ファイルのみ
-→ tracked dirty なし（data/reviewed_import.json 未変更）
+git status -sb --untracked-files=no  (commit 後)
+→ ## chore/imported-data-correction-audit...origin/main [ahead 1]
+→ tracked dirty: 0 / staged: 0
+→ ※ untracked files は既存の無関係ファイル群が引き続き存在するが、今回のタスクでは一切触っていない
 ```
 
 ## ファイル変更範囲
@@ -71,11 +90,16 @@ git status -sb --untracked-files=no
 
 ## Non-actions
 
-- `data/reviewed_import.json` 変更なし
-- DATA_VERSION 変更なし
-- OCR / polarity / candidateProblemIds 変更なし
-- untracked files cleanup なし
-- commit / push / PR / merge なし（ユーザー承認待ち）
+- `data/reviewed_import.json`: unchanged
+- DATA_VERSION: unchanged
+- OCR / polarity / candidateProblemIds: unchanged
+- existing untracked `data/`: untouched
+- `.claude/worktrees/`: untouched
+- `gyosei_tracker-cursor-trial/`: untouched
+- `scripts/audit_reviewed_import.py`: untouched
+- push: not executed
+- PR: not created
+- merge: not executed
 
 ## Packet summary
 
