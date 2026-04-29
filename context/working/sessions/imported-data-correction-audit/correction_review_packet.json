@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "inputPath": "data/reviewed_import.json",
+    "totalPages": 446,
+    "totalBranches": 2448
+  },
+  "policy": {
+    "suggestedActionOnly": true,
+    "sourceCheckRequiredBeforePatch": true,
+    "proposedReplacementAlwaysNull": true,
+    "excludedBroadPatterns": [
+      "ellipsis_all",
+      "duplicate_character_regex_all"
+    ],
+    "dataMutation": false
+  },
+  "summary": {
+    "tier1Count": 8,
+    "tier15Count": 2,
+    "tier15TotalBeforeCap": 2,
+    "tier15SuppressedCount": 0,
+    "tier1ByKind": {
+      "known_suspicious_ocr_string": 7,
+      "existing_source_check_flag": 1
+    },
+    "tier15ByKind": {
+      "possible_truncated_text": 2
+    }
+  },
+  "tier1": [
+    {
+      "sourcePage": "001",
+      "originalProblemId": "KB2025-p001-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 4,
+      "field": "explanationText",
+      "currentValueSnippet": "内閣は、違憲および法律の規定を実施するために、政令を制定する（73条6号）。したがって、内閣は、実質的にみて、立法権を行使することがあるといえる。",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "違憲および",
+      "reason": "「違憲および」は法律文脈上不自然な接続表現であり、OCR破損の可能性があるため source check 対象。修正値は推定しない。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "002",
+      "originalProblemId": "KB2025-p002-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 4,
+      "field": "explanationText",
+      "currentValueSnippet": "内閣総理大臣は、「内閣の首長」たる地位を有し（憲法66条1項）、他の国務大臣と平等の関係にはない。また、内閣総理大臣は、慣習ではなく、法定職務として内閣を代表する（72条）。よって本肢は、前後を反と戻として誤っている。",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "反と戻",
+      "reason": "日本語として不自然なOCR破損疑い。source確認対象。修正値は推定しない。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "003",
+      "originalProblemId": "KB2025-p003-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 7,
+      "field": "explanationText",
+      "currentValueSnippet": "判例（最大判平7.2.22：フジチヤ事件札孔ート）は、内閣総理大臣の強力な監督権から、本肢のように判断する。内閣総理大臣は、国務大臣の任免権を有し、内閣を代表して行政各部を指揮監督する広範な権能（憲法72条）を有するなど、内閣の権威を剥奪す…",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "札孔ート",
+      "reason": "OCR破損の疑いが強い固定文字列。判例名・固有名詞等のsource確認対象。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "003",
+      "originalProblemId": "KB2025-p003-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 7,
+      "field": "explanationText",
+      "currentValueSnippet": "判例（最大判平7.2.22：フジチヤ事件札孔ート）は、内閣総理大臣の強力な監督権から、本肢のように判断する。内閣総理大臣は、国務大臣の任免権を有し、内閣を代表して行政各部を指揮監督する広範な権能（憲法72条）を有するなど、内閣の権威を剥奪す…",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "フジチヤ",
+      "reason": "カタカナ固有名詞のOCR破損疑い。source確認対象。修正値は推定しない。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "085",
+      "originalProblemId": "KB2025-p085-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 5,
+      "field": "explanationText",
+      "currentValueSnippet": "弁明事例の場合には、行手続法24条1項に基づいて特に該当していないから（行手続法第24条）、主客管に準備書面の作成を義務づけた聴聞手続の事情を記録する義務がある。調書の作成義務はない。",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "主客管",
+      "reason": "日本語として不自然なOCR破損疑い。source確認対象。修正値は推定しない。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "085",
+      "originalProblemId": "KB2025-p085-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 5,
+      "field": "questionText",
+      "currentValueSnippet": "聴聞の主客管は、弁明または聴聞の筆着の準備を調査した場合を作成しなければならない",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "主客管",
+      "reason": "日本語として不自然なOCR破損疑い。source確認対象。修正値は推定しない。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "085",
+      "originalProblemId": "KB2025-p085-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 5,
+      "field": "questionText",
+      "currentValueSnippet": "聴聞の主客管は、弁明または聴聞の筆着の準備を調査した場合を作成しなければならない",
+      "tier": "tier1",
+      "kind": "known_suspicious_ocr_string",
+      "matchedPattern": "筆着の準備",
+      "reason": "日本語として不自然なOCR破損疑い。source確認対象。修正値は推定しない。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "318",
+      "originalProblemId": "KB2025-p318-q01",
+      "bookId": "KB2025",
+      "batchId": "gemini-gemini-2.5-flash",
+      "seqNo": 1,
+      "field": "branch",
+      "currentValueSnippet": "OCR abbreviation: \"...\" replaces \"前項の\" in 民法523条2項 citation; not statute ellipsis convention",
+      "tier": "tier1",
+      "kind": "existing_source_check_flag",
+      "matchedPattern": "needsSourceCheck/sourceCheckReason",
+      "reason": "OCR abbreviation: \"...\" replaces \"前項の\" in 民法523条2項 citation; not statute ellipsis convention",
+      "sourceCheckReason": "OCR abbreviation: \"...\" replaces \"前項の\" in 民法523条2項 citation; not statute ellipsis convention",
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    }
+  ],
+  "tier1_5": [
+    {
+      "sourcePage": "043",
+      "originalProblemId": "KB2025-p043-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 6,
+      "field": "explanationText",
+      "currentValueSnippet": "附款は行政庁の裁量の行使の一環であるので、附款についても、目的の正当性・平等原則・比例原則という",
+      "tier": "tier1_5",
+      "kind": "possible_truncated_text",
+      "matchedPattern": "missing_natural_terminal_punctuation",
+      "reason": "文末が自然な句読点・括弧閉じで終わっていない。正常ケースもあり得るため Tier 1.5 としてsource確認候補に留める。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    },
+    {
+      "sourcePage": "085",
+      "originalProblemId": "KB2025-p085-q01",
+      "bookId": "KB2025",
+      "batchId": "reviewed-import",
+      "seqNo": 5,
+      "field": "questionText",
+      "currentValueSnippet": "聴聞の主客管は、弁明または聴聞の筆着の準備を調査した場合を作成しなければならない",
+      "tier": "tier1_5",
+      "kind": "possible_truncated_text",
+      "matchedPattern": "missing_natural_terminal_punctuation",
+      "reason": "文末が自然な句読点・括弧閉じで終わっていない。正常ケースもあり得るため Tier 1.5 としてsource確認候補に留める。",
+      "sourceCheckReason": null,
+      "suggestedAction": "source_check",
+      "proposedReplacement": null
+    }
+  ]
+}
