@@ -141,3 +141,82 @@ git status -sb --untracked-files=no  (commit 後)
 2. 各 Tier 1 候補について原本画像（`images_preprocessed/<page>.png`）で verbatim 照合
 3. 照合後、修正が必要な場合のみ別 PR（1 problemId / 1 PR 原則）で patch を起票
 4. p043 seq6 の文末切れは source 照合で確認
+
+---
+
+## Tier 1 source-check follow-up status（2026-04-29追記）
+
+- PR #112 audit basis task は merge 済み・closed。本セクションはその後続 source-check 結果の記録。
+- 対象 records: p001 / p002 / p003 / p085 / p318
+- p001 / p002 / p003 / p085 は source image / crop review により本文修正候補 HIGH confirmed。
+- p318 は本文修正不要 confirmed（書籍 verbatim `…` = 著者省略、E 本文は書籍と一致）。needsSourceCheck flag clear は次 data patch で別途検討。
+- p001 seqNo 3 incidental finding は今回 patch scope 外。別候補・別判断として記録のみ維持する。
+- data patch は未適用。
+- `data/reviewed_import.json` 未編集。
+- `public/data/` 未編集。
+- stage / commit / push / PR / merge は本 follow-up step では未実行。
+- next step は patch 実行ではなく、p085 questionText patch boundary 確認 → patch plan 作成。
+
+---
+
+## p085 boundary recheck および patch plan 作成（2026-04-29追記）
+
+- p085 questionText の boundary を画像 crop 再確認済み。
+- `弁明または聴聞の` は書籍に明記されており、source confirmed。修正後テキストに含めなければならない。
+- 初回 source_check_tier1_log.md での p085 confirmed text からの `弁明または聴聞の` 欠落は修正済み（同 log 2026-04-29 修正）。
+- `patch_plan_tier1_source_confirmed.md` を plan only として作成済み（patch 未実行）。
+- `data/reviewed_import.json` 未変更。
+- `public/data/` 未変更。
+- patch / stage / commit / push / PR / merge は未実行。
+- next step: GPT による patch plan レビュー。
+
+---
+
+## p085 explanationText full source confirmation（2026-04-29追記）
+
+- p085 seqNo5 explanationText の full-field source-confirmed text を `images_preprocessed/0085.png` 右ページ thumbnail + crop (y:2350-2950, 3x) により確認済み。
+- source-confirmed full explanationText: `弁明手続の場合には、行政手続法24条1項は準用されていないから（行政手続法31条）、主宰者に聴聞調書の作成を義務づけた聴聞手続の場合とは異なり（24条1項）、調書の作成義務はない。`
+- 全差分 source_confirmed。partial correction (`主客管`→`主宰者` のみ) では不十分であることを確認。patch_plan の explanationText セクションを full-field replacement に更新済み。
+- p001 source evidence の book item 番号表記を一貫修正済み（`book item 4 左列` → `book item 5 左列`）。
+- source_check_tier1_log.md p085 explanationText セクションを full confirmed text で更新済み。
+- `data/reviewed_import.json` 未変更。
+- `public/data/` 未変更。
+- patch / stage / commit / push / PR / merge は未実行。
+- next step: GPT による updated patch plan レビュー。
+
+---
+
+## Tier 1 source-confirmed data patch applied（2026-04-30追記）
+
+- `data/reviewed_import.json` に Tier 1 source-confirmed corrections を適用済み。
+- 更新対象は以下の5フィールドのみ。
+  1. p001 seqNo 4 explanationText
+  2. p002 seqNo 4 explanationText
+  3. p003 seqNo 7 explanationText
+  4. p085 seqNo 5 questionText
+  5. p085 seqNo 5 explanationText
+- Patch method:
+  - JSON round-trip ではなく、exact-match 文字列置換で適用。
+  - 一度 JSON round-trip による `confidence: 1.0 -> 1` 副作用を検知したため restore 後に文字列置換で再適用。
+- Verification:
+  - JSON parse OK。
+  - 5 target fields equal proposed values。
+  - diff is 10 lines, 5 before/after pairs only。
+  - p318 unchanged。
+  - p001 seqNo 3 incidental finding unchanged。
+  - `public/data/reviewed_import.json` unchanged。
+  - correction packet JSON unchanged。
+- Non-actions:
+  - stage not executed。
+  - commit not executed。
+  - push not executed。
+  - PR not created。
+  - merge not executed。
+- Next step:
+  - GPT final review of the five-file commit set.
+  - If approved by user, stage exactly the following 5 files and commit:
+    - `data/reviewed_import.json`
+    - `context/working/sessions/imported-data-correction-audit/source_check_tier1_log.md`
+    - `context/working/sessions/imported-data-correction-audit/patch_plan_tier1_source_confirmed.md`
+    - `context/working/sessions/imported-data-correction-audit/handoff.md`
+    - `context/working/sessions/imported-data-correction-audit/review_request.md`
