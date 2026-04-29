@@ -254,3 +254,47 @@ Exactly these 5 files should be included in the next commit:
 - Do not assume p318 flag clear was performed.
 - Do not assume p001 seqNo 3 incidental finding was fixed.
 - Do not assume commit/push/PR authorization.
+
+---
+
+## GPT review request: PR #113 post-merge closeout（2026-04-30追記）
+
+### Task status
+
+PR #113 has been merged.
+
+- PR: https://github.com/ToadRoid/gyosei_tracker/pull/113
+- Merge commit: `f3d88eac8a5401cf1c0072f5f656a9a05bdfa6d3`
+- `origin/main`: `f3d88ea`
+- Remote branch deleted: yes
+
+### Closed scope
+
+The Tier 1 source-confirmed data patch is complete.
+
+Merged correction fields:
+
+1. p001 seqNo 4 explanationText
+2. p002 seqNo 4 explanationText
+3. p003 seqNo 7 explanationText
+4. p085 seqNo 5 questionText
+5. p085 seqNo 5 explanationText
+
+### Not included
+
+- `public/data/reviewed_import.json` propagation
+- p318 `needsSourceCheck` flag clear
+- p001 seqNo 3 incidental finding
+- broad OCR cleanup
+- non-Tier-1 corrections
+
+### GPT review requested
+
+Confirm that this session can be treated as closed, with only the listed separate follow-up tasks remaining.
+
+### Do not assume
+
+- Do not assume public/data was updated.
+- Do not assume p318 flag clear was performed.
+- Do not assume p001 seqNo 3 was corrected.
+- Do not assume local stale branch/worktree cleanup was performed.
