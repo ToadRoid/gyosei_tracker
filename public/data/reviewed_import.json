@@ -22393,8 +22393,8 @@
           "sectionTitle": "契約",
           "sourcePageQuestion": "736",
           "sourcePageAnswer": "737",
-          "needsSourceCheck": true,
-          "sourceCheckReason": "OCR abbreviation: \"...\" replaces \"前項の\" in 民法523条2項 citation; not statute ellipsis convention"
+          "needsSourceCheck": false,
+          "sourceCheckReason": "source-checked: book-verbatim ellipsis in 民法523条2項 citation; author's intentional omission, not OCR damage"
         },
         {
           "seqNo": 2,
