@@ -220,3 +220,52 @@ git status -sb --untracked-files=no  (commit 後)
     - `context/working/sessions/imported-data-correction-audit/patch_plan_tier1_source_confirmed.md`
     - `context/working/sessions/imported-data-correction-audit/handoff.md`
     - `context/working/sessions/imported-data-correction-audit/review_request.md`
+
+---
+
+## PR #113 post-merge closeout（2026-04-30追記）
+
+### Final status
+
+- PR #113 was squash-merged to `main`.
+- Merge commit: `f3d88eac8a5401cf1c0072f5f656a9a05bdfa6d3`
+- `origin/main`: `f3d88ea`
+- Remote branch `claude/lucid-swirles-dd70d3` was deleted.
+- Local branch may remain as `[gone]`; this is local cleanup residue only.
+
+### Completed scope
+
+The Tier 1 source-confirmed data patch is closed.
+
+Merged changes:
+
+1. `data/reviewed_import.json`
+   - p001 seqNo 4 explanationText
+   - p002 seqNo 4 explanationText
+   - p003 seqNo 7 explanationText
+   - p085 seqNo 5 questionText
+   - p085 seqNo 5 explanationText
+
+2. Source-check / review docs
+   - `source_check_tier1_log.md`
+   - `patch_plan_tier1_source_confirmed.md`
+   - `handoff.md`
+   - `review_request.md`
+
+### Explicit non-actions / remaining scope
+
+- `public/data/reviewed_import.json` was not updated.
+- p318 was not changed.
+- p318 `needsSourceCheck` flag clear was not performed.
+- p001 seqNo 3 incidental finding was not changed.
+- No broad OCR cleanup was performed.
+- No non-Tier-1 records were changed.
+
+### Remaining separate tasks
+
+If needed, handle these as separate tasks:
+
+1. Decide whether and how to propagate `data/reviewed_import.json` to `public/data/reviewed_import.json`.
+2. Decide whether to clear p318 `needsSourceCheck`.
+3. Decide whether to promote p001 seqNo 3 incidental finding into a separate correction task.
+4. Local stale branch/worktree cleanup.
