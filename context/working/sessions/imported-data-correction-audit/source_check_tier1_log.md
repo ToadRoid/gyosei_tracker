@@ -58,7 +58,7 @@
 |---|---|---|
 | 1 | 2 | seqNo1 Q =「内閣は条約を締結する場合には…」= image item 2 左列 content と一致 |
 | 2 | 3 | 順次対応 |
-| 3 | 4 | seqNo3 Q =「内閣は、違憲及び法律の規定を実施するために、政令及び省令を制定する。」= image item 4 左列「内閣は、憲法及び法律の規定を実施するために、政令を制定する。」と topic 一致（OCR corruption を除けば同一） |
+| 3 | 4 | seqNo3 Q =「内閣は、違憲及び法律の規定を実施するために、政令及び省令を制定する。」= image item 4 左列「内閣は、憲法及び法律の規定を実施するために、政令及び省令を制定する。」と一致（`違憲及び法律` のみ OCR 破損。`省令` は書籍 verbatim） |
 | **4** | **5** | seqNo4 Q =「内閣は、実質的にみて、立法権を行使することがある。」= image item 5 内容と対応 |
 
 **seqNo ≠ book item number**: seqNo 4 = book item 5（item 1 が prior page のため 1 ずれ）
@@ -81,8 +81,8 @@
 
 seqNo 3 の questionText にも同系統の OCR 破損あり:
 - current: `内閣は、違憲及び法律の規定を実施するために、政令及び省令を制定する。`
-- image item 4 左列: `内閣は、憲法及び法律の規定を実施するために、政令を制定する。`
-- confirmed: `憲法及び法律` / `政令を制定する`（`省令` の挿入も OCR 破損）
+- image item 4 左列: `内閣は、憲法及び法律の規定を実施するために、政令及び省令を制定する。`
+- confirmed: `憲法及び法律`（`違憲及び法律` のみ OCR 破損。`省令` は書籍 verbatim — 「省令も OCR 挿入」という旧記録は誤り。`answerBoolean=false` は原本と整合、`explanationText` も原本と一致）
 - **Tier 1 packet 未登録**（pattern `違憲および` で検出せず = `違憲及び` は別形式）
 - 本 log に incidental として記録のみ。**今回 patch 対象外 — 別候補・別判断とする。**
 
@@ -217,7 +217,7 @@ seqNo 3 の questionText にも同系統の OCR 破損あり:
 
 | page | seqNo | field | current (OCR) | confirmed (book) | source image | confidence |
 |---|---|---|---|---|---|---|
-| p001 | 3 | questionText | `違憲及び法律` / `政令及び省令` | `憲法及び法律` / `政令` | kindle_shots/0001.png | HIGH |
+| p001 | 3 | questionText | `違憲及び法律` のみ OCR 破損（`省令` は書籍 verbatim） | `憲法及び法律` / `政令及び省令` | kindle_shots/0001.png | HIGH (confirmed 2026-04-30) |
 
 ---
 
