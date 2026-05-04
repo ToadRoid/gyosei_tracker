@@ -8,6 +8,7 @@
 
 import { db, generateProblemId } from './db';
 import { runGapCheck, type GapCheckResult } from './gap-check';
+import { UNCLASSIFIED_SUBJECT_ID, UNCLASSIFIED_CHAPTER_ID } from '@/data/master';
 
 export interface ManifestItem {
   baseName: string;
@@ -91,8 +92,8 @@ export async function importBatch(
         //    subjectId / chapterId / answerBoolean は AI精査・手動編集で後から埋める
         await db.problemAttrs.add({
           problemId,
-          subjectId: '',
-          chapterId: '',
+          subjectId: UNCLASSIFIED_SUBJECT_ID,
+          chapterId: UNCLASSIFIED_CHAPTER_ID,
           answerBoolean: null,
         });
 

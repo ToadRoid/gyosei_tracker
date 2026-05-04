@@ -1,4 +1,4 @@
-import { subjects, chapters } from '@/data/master';
+import { subjects, chapters, UNCLASSIFIED_SUBJECT_ID, UNCLASSIFIED_CHAPTER_ID } from '@/data/master';
 import type {
   WeakTopicInput,
   WrongExample,
@@ -116,8 +116,8 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
     if (!attr) continue;
     if (attr.isExcluded === true || attr.needsSourceCheck === true || attr.aiTriageStatus === 'discard') continue;
 
-    const subjectId = attr.subjectId ?? '';
-    const chapterId = attr.chapterId ?? '';
+    const subjectId = attr.subjectId || UNCLASSIFIED_SUBJECT_ID;
+    const chapterId = attr.chapterId || UNCLASSIFIED_CHAPTER_ID;
     const sectionTitle = attr.sectionTitle ?? '';
 
     if (!sectionTitle) continue;

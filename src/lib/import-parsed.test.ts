@@ -14,50 +14,51 @@
 
 import { describe, it, expect } from 'vitest';
 import { inheritClassificationField } from './import-parsed';
+import { UNCLASSIFIED_SUBJECT_ID } from '@/data/master';
 
 describe('inheritClassificationField — re-import 時の分類継承', () => {
   // ── Priority 1: 新しく確定した値 ────────────────────────────────────────
 
   it('新しい値があれば新しい値を使う', () => {
-    expect(inheritClassificationField('gyosei-tetsuduki', 'minpou-sousoku')).toBe(
+    expect(inheritClassificationField('gyosei-tetsuduki', 'minpou-sousoku', UNCLASSIFIED_SUBJECT_ID)).toBe(
       'gyosei-tetsuduki',
     );
   });
 
   it('新しい値があり既存が undefined でも新しい値を使う', () => {
-    expect(inheritClassificationField('gyosei-tetsuduki', undefined)).toBe('gyosei-tetsuduki');
+    expect(inheritClassificationField('gyosei-tetsuduki', undefined, UNCLASSIFIED_SUBJECT_ID)).toBe('gyosei-tetsuduki');
   });
 
   it('新しい値があり既存が空文字でも新しい値を使う', () => {
-    expect(inheritClassificationField('gyosei-tetsuduki', '')).toBe('gyosei-tetsuduki');
+    expect(inheritClassificationField('gyosei-tetsuduki', '', UNCLASSIFIED_SUBJECT_ID)).toBe('gyosei-tetsuduki');
   });
 
   // ── Priority 2: 既存 existingAttr ───────────────────────────────────────
 
   it('新しい値が undefined なら既存値を継承する', () => {
-    expect(inheritClassificationField(undefined, 'minpou-sousoku')).toBe('minpou-sousoku');
+    expect(inheritClassificationField(undefined, 'minpou-sousoku', UNCLASSIFIED_SUBJECT_ID)).toBe('minpou-sousoku');
   });
 
   it('新しい値が null なら既存値を継承する', () => {
-    expect(inheritClassificationField(null, 'minpou-sousoku')).toBe('minpou-sousoku');
+    expect(inheritClassificationField(null, 'minpou-sousoku', UNCLASSIFIED_SUBJECT_ID)).toBe('minpou-sousoku');
   });
 
   it('新しい値が空文字なら既存値を継承する（空文字 = 値なし扱い）', () => {
-    expect(inheritClassificationField('', 'minpou-sousoku')).toBe('minpou-sousoku');
+    expect(inheritClassificationField('', 'minpou-sousoku', UNCLASSIFIED_SUBJECT_ID)).toBe('minpou-sousoku');
   });
 
   // ── Priority 3: フォールバック ──────────────────────────────────────────
 
-  it('新しい値も既存値も空なら既定フォールバック `` を返す', () => {
-    expect(inheritClassificationField('', '')).toBe('');
+  it('新しい値も既存値も空なら指定 sentinel を返す', () => {
+    expect(inheritClassificationField('', '', UNCLASSIFIED_SUBJECT_ID)).toBe(UNCLASSIFIED_SUBJECT_ID);
   });
 
-  it('新しい値も既存値も undefined なら既定フォールバック `` を返す', () => {
-    expect(inheritClassificationField(undefined, undefined)).toBe('');
+  it('新しい値も既存値も undefined なら指定 sentinel を返す', () => {
+    expect(inheritClassificationField(undefined, undefined, UNCLASSIFIED_SUBJECT_ID)).toBe(UNCLASSIFIED_SUBJECT_ID);
   });
 
-  it('新しい値も既存値も null なら既定フォールバック `` を返す', () => {
-    expect(inheritClassificationField(null, null)).toBe('');
+  it('新しい値も既存値も null なら指定 sentinel を返す', () => {
+    expect(inheritClassificationField(null, null, UNCLASSIFIED_SUBJECT_ID)).toBe(UNCLASSIFIED_SUBJECT_ID);
   });
 
   it('fallback を明示指定できる', () => {
@@ -70,7 +71,7 @@ describe('inheritClassificationField — re-import 時の分類継承', () => {
     // branch.chapterCandidate が undefined で入ってくるケース
     const newOcrValue: string | undefined = undefined;
     const existingChapterId = '05_行政手続法/申請と届出';
-    expect(inheritClassificationField(newOcrValue, existingChapterId)).toBe(
+    expect(inheritClassificationField(newOcrValue, existingChapterId, UNCLASSIFIED_SUBJECT_ID)).toBe(
       '05_行政手続法/申請と届出',
     );
   });
@@ -78,6 +79,6 @@ describe('inheritClassificationField — re-import 時の分類継承', () => {
   it('subjectId の再 import シナリオ: OCR 候補が先に確定していれば既存上書き', () => {
     const newOcrValue = 'gyosei-fufuku';
     const existingSubjectId = 'gyosei-sosho'; // 以前の誤分類
-    expect(inheritClassificationField(newOcrValue, existingSubjectId)).toBe('gyosei-fufuku');
+    expect(inheritClassificationField(newOcrValue, existingSubjectId, UNCLASSIFIED_SUBJECT_ID)).toBe('gyosei-fufuku');
   });
 });
