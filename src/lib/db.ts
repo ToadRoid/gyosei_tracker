@@ -1092,16 +1092,20 @@ async function removeOrphanProblemsForBook(
   const { bookId, pages } = payload;
 
   const validProblemIds = new Set<string>();
+  const sweepSourcePages = new Set<string>();
+
   for (const page of pages) {
     if (page.parseError) continue;
     const pageNum = parseInt(page.sourcePage, 10) || 0;
+    const pageKey = String(pageNum).padStart(3, '0');
+    sweepSourcePages.add(pageKey);
     for (const branch of page.branches) {
       validProblemIds.add(generateProblemId(bookId, pageNum, branch.seqNo));
     }
   }
 
-  if (validProblemIds.size === 0) {
-    console.warn('[data-refresh] Skipped orphan sweep because JSON contained no valid problem IDs');
+  if (validProblemIds.size === 0 || sweepSourcePages.size === 0) {
+    console.warn('[data-refresh] Skipped orphan sweep because JSON contained no valid importable pages');
     return { problems: 0, attrs: 0 };
   }
 
@@ -1115,6 +1119,10 @@ async function removeOrphanProblemsForBook(
   const survivingIds = new Set<string>();
 
   for (const p of allProblems) {
+    if (!sweepSourcePages.has(String(p.sourcePage))) {
+      survivingIds.add(p.problemId);
+      continue;
+    }
     if (validProblemIds.has(p.problemId)) {
       survivingIds.add(p.problemId);
       continue;
@@ -1126,10 +1134,18 @@ async function removeOrphanProblemsForBook(
     removedProblems++;
   }
 
+  // problemId format: "{bookId}-p{pageNo:03d}-q{seqNo:02d}"
+  const pageFromId = (id: string): string | null => {
+    const m = id.match(/-p(\d{3})-q\d{2}$/);
+    return m ? m[1] : null;
+  };
+
   const allAttrs = await db.problemAttrs.toArray();
   for (const attr of allAttrs) {
     if (!attr.problemId.startsWith(`${bookId}-`)) continue;
     if (survivingIds.has(attr.problemId)) continue;
+    const page = pageFromId(attr.problemId);
+    if (!page || !sweepSourcePages.has(page)) continue;
     if (attr.id !== undefined) {
       await db.problemAttrs.delete(attr.id);
       removedAttrs++;
