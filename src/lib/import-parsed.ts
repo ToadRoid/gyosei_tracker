@@ -22,6 +22,7 @@
 import { db, generateProblemId } from './db';
 import type { ParsedImport, ParsedPage, ParsedBranch } from '@/types';
 import { resolveDisplaySectionTitle } from '@/data/sectionNormalization';
+import { UNCLASSIFIED_SUBJECT_ID, UNCLASSIFIED_CHAPTER_ID } from '@/data/master';
 
 /** このconfidence以上ならreadyに昇格 */
 const CONFIDENCE_THRESHOLD = 0.75;
@@ -53,7 +54,7 @@ interface PreservedAttrs {
  * 優先順:
  *   1. 新しく確定した値（非空文字）
  *   2. 既存 problemAttrs の値（非空文字）
- *   3. fallback（既定は ''）
+ *   3. fallback（呼び出し元が sentinel を指定）
  *
  * 空文字 '' は「値なし」扱い。`null` / `undefined` も同様。
  * 純関数ゆえテスト容易、import-parsed.test.ts で回帰防止する。
@@ -61,7 +62,7 @@ interface PreservedAttrs {
 export function inheritClassificationField(
   newValue: string | null | undefined,
   existingValue: string | null | undefined,
-  fallback: string = '',
+  fallback: string,
 ): string {
   if (newValue) return newValue;
   if (existingValue) return existingValue;
@@ -165,8 +166,8 @@ export async function importParsedBatch(
         //   isExcluded / needsSourceCheck: 手動設定ゆえ常に既存値を復元
         const preserved = preservedAttrs.get(problemId);
         const rawSectionTitle = branch.sectionTitle ?? '';
-        const chapterId = inheritClassificationField(branch.chapterCandidate, preserved?.chapterId);
-        const subjectId = inheritClassificationField(branch.subjectCandidate, preserved?.subjectId);
+        const chapterId = inheritClassificationField(branch.chapterCandidate, preserved?.chapterId, UNCLASSIFIED_CHAPTER_ID);
+        const subjectId = inheritClassificationField(branch.subjectCandidate, preserved?.subjectId, UNCLASSIFIED_SUBJECT_ID);
         const sourcePageQuestion = branch.sourcePageQuestion ?? '';
         await db.problemAttrs.add({
           problemId,

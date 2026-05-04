@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { Problem, ProblemAttr, Attempt, ProblemForExercise, ParsedImport } from '@/types';
+import { UNCLASSIFIED_SUBJECT_ID, UNCLASSIFIED_CHAPTER_ID } from '@/data/master';
 import { supabase } from './supabase';
 import { resolveDisplaySectionTitle } from '@/data/sectionNormalization';
 
@@ -77,8 +78,8 @@ export async function upsertProblemAttr(
   } else {
     await db.problemAttrs.add({
       problemId,
-      subjectId: '',
-      chapterId: '',
+      subjectId: UNCLASSIFIED_SUBJECT_ID,
+      chapterId: UNCLASSIFIED_CHAPTER_ID,
       answerBoolean: null,
       ...changes,
     });
@@ -1161,7 +1162,7 @@ async function removeOrphanProblemsForBook(
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-05-04-idb-orphan-sweep';
+const DATA_VERSION = '2026-05-04-classification-sentinel';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {

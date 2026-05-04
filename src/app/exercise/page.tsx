@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 import { db, getReadyProblems } from '@/lib/db';
-import { subjects, chapters } from '@/data/master';
+import { subjects, chapters, UNCLASSIFIED_SUBJECT_ID, UNCLASSIFIED_CHAPTER_ID } from '@/data/master';
 
 // ── 学習スケジュール（ノルマ計算用） ────────────────────────────────────────────
 
@@ -115,8 +115,8 @@ async function loadCurriculumData(): Promise<SubjectInfo[]> {
   const subjectMap = new Map<string, Map<string, Map<string, string[]>>>();
 
   for (const p of allProblems) {
-    const sid = p.subjectId ?? 'unknown';
-    const cid = p.chapterId ?? 'unknown';
+    const sid = p.subjectId || UNCLASSIFIED_SUBJECT_ID;
+    const cid = p.chapterId || UNCLASSIFIED_CHAPTER_ID;
     const rawSec = p.displaySectionTitle ?? p.sectionTitle ?? '';
     const sec = rawSec.trim() || 'その他';
 

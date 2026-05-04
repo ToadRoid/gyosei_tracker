@@ -1,5 +1,8 @@
 import type { Subject, Chapter } from '@/types';
 
+export const UNCLASSIFIED_SUBJECT_ID = '__unclassified_subject__';
+export const UNCLASSIFIED_CHAPTER_ID = '__unclassified_chapter__';
+
 export const subjects: Subject[] = [
   { id: 'kenpo', name: '憲法', order: 1 },
   { id: 'gyosei', name: '行政法', order: 2 },
@@ -7,6 +10,7 @@ export const subjects: Subject[] = [
   { id: 'shoho', name: '商法', order: 4 },
   { id: 'kiso-hogaku', name: '基礎法学', order: 5 },
   { id: 'kiso-chishiki', name: '基礎知識', order: 6 },
+  { id: UNCLASSIFIED_SUBJECT_ID, name: '未分類', order: 9999 },
 ];
 
 export const chapters: Chapter[] = [
@@ -43,4 +47,7 @@ export const chapters: Chapter[] = [
   { id: 'kiso-chishiki-gyomu', subjectId: 'kiso-chishiki', name: '業務関連諸法令', order: 2 },
   { id: 'kiso-chishiki-joho', subjectId: 'kiso-chishiki', name: '情報通信・個人情報保護', order: 3 },
   { id: 'kiso-chishiki-bunsho', subjectId: 'kiso-chishiki', name: '文章理解', order: 4 },
+
+  // 未分類
+  { id: UNCLASSIFIED_CHAPTER_ID, subjectId: UNCLASSIFIED_SUBJECT_ID, name: '未分類', order: 9999 },
 ];
