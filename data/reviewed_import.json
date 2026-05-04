@@ -15623,7 +15623,7 @@
         {
           "seqNo": 1,
           "questionText": "Aが自己の所有する甲土地をBと通謀してBに売却（仮装売買）したところ、Bが甲土地につきAに無断でEのために抵当権を設定した場合、Aは、善意のEに対して、A・B間の売買の無効を対抗することができない。",
-          "answerBoolean": false,
+          "answerBoolean": true,
           "explanationText": "虚偽表示は、無効であるが（民法94条1項）、この無効は、善意の第三者に対抗することができない（94条2項、本肢所定の場合、Aは、善意の第三者EにA・B間の売買の無効を対抗できない。",
           "subjectCandidate": "minpo",
           "chapterCandidate": "minpo-sosoku",
