@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie';
-import type { Problem, ProblemAttr, Attempt, ProblemForExercise } from '@/types';
+import type { Problem, ProblemAttr, Attempt, ProblemForExercise, ParsedImport } from '@/types';
 import { supabase } from './supabase';
 import { resolveDisplaySectionTitle } from '@/data/sectionNormalization';
 
@@ -1080,12 +1080,88 @@ export async function runOneTimeCleanup(): Promise<void> {
 
 
 /**
+ * JSON に存在しない IDB レコードを削除する。
+ * importParsedBatch はページ単位で delete-reinsert するため、
+ * JSON からページごと削除された問題が IDB に残り続ける。
+ * この関数は book 全体の valid ID セットを構築し、
+ * それに含まれないレコードを problems / problemAttrs から除去する。
+ */
+async function removeOrphanProblemsForBook(
+  payload: ParsedImport,
+): Promise<{ problems: number; attrs: number }> {
+  const { bookId, pages } = payload;
+
+  const validProblemIds = new Set<string>();
+  const sweepSourcePages = new Set<string>();
+
+  for (const page of pages) {
+    if (page.parseError) continue;
+    const pageNum = parseInt(page.sourcePage, 10) || 0;
+    const pageKey = String(pageNum).padStart(3, '0');
+    sweepSourcePages.add(pageKey);
+    for (const branch of page.branches) {
+      validProblemIds.add(generateProblemId(bookId, pageNum, branch.seqNo));
+    }
+  }
+
+  if (validProblemIds.size === 0 || sweepSourcePages.size === 0) {
+    console.warn('[data-refresh] Skipped orphan sweep because JSON contained no valid importable pages');
+    return { problems: 0, attrs: 0 };
+  }
+
+  const allProblems = await db.problems
+    .where('sourceBook')
+    .equals(bookId)
+    .toArray();
+
+  let removedProblems = 0;
+  let removedAttrs = 0;
+  const survivingIds = new Set<string>();
+
+  for (const p of allProblems) {
+    if (!sweepSourcePages.has(String(p.sourcePage))) {
+      survivingIds.add(p.problemId);
+      continue;
+    }
+    if (validProblemIds.has(p.problemId)) {
+      survivingIds.add(p.problemId);
+      continue;
+    }
+    if (p.id !== undefined) {
+      await db.problems.delete(p.id);
+    }
+    removedAttrs += await db.problemAttrs.where('problemId').equals(p.problemId).delete();
+    removedProblems++;
+  }
+
+  // problemId format: "{bookId}-p{pageNo:03d}-q{seqNo:02d}"
+  const pageFromId = (id: string): string | null => {
+    const m = id.match(/-p(\d{3})-q\d{2}$/);
+    return m ? m[1] : null;
+  };
+
+  const allAttrs = await db.problemAttrs.toArray();
+  for (const attr of allAttrs) {
+    if (!attr.problemId.startsWith(`${bookId}-`)) continue;
+    if (survivingIds.has(attr.problemId)) continue;
+    const page = pageFromId(attr.problemId);
+    if (!page || !sweepSourcePages.has(page)) continue;
+    if (attr.id !== undefined) {
+      await db.problemAttrs.delete(attr.id);
+      removedAttrs++;
+    }
+  }
+
+  return { problems: removedProblems, attrs: removedAttrs };
+}
+
+/**
  * 問題データの強制リフレッシュ
  * reviewed_import.json から最新データを取り込み直す。
  * attempt（回答履歴）は保持し、問題文・解説・正解のみ更新する。
  * バージョン管理: DATA_VERSION が上がったときのみ実行。
  */
-const DATA_VERSION = '2026-05-04-source-confirmed-questiontext-ocr';
+const DATA_VERSION = '2026-05-04-idb-orphan-sweep';
 const DATA_VERSION_KEY = 'gyosei_data_version';
 
 export async function refreshProblemDataIfNeeded(): Promise<void> {
@@ -1103,6 +1179,13 @@ export async function refreshProblemDataIfNeeded(): Promise<void> {
 
     const { importParsedBatch } = await import('@/lib/import-parsed');
     await importParsedBatch(json);
+
+    const orphansRemoved = await removeOrphanProblemsForBook(json as ParsedImport);
+    if (orphansRemoved.problems > 0 || orphansRemoved.attrs > 0) {
+      console.log(
+        `[data-refresh] Removed ${orphansRemoved.problems} orphan problem(s) and ${orphansRemoved.attrs} orphan attr(s) not present in JSON`,
+      );
+    }
 
     localStorage.setItem(DATA_VERSION_KEY, DATA_VERSION);
     console.log('[data-refresh] Problem data updated successfully');
