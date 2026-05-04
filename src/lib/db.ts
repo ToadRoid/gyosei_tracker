@@ -1100,12 +1100,18 @@ async function removeOrphanProblemsForBook(
     }
   }
 
+  if (validProblemIds.size === 0) {
+    console.warn('[data-refresh] Skipped orphan sweep because JSON contained no valid problem IDs');
+    return { problems: 0, attrs: 0 };
+  }
+
   const allProblems = await db.problems
     .where('sourceBook')
     .equals(bookId)
     .toArray();
 
   let removedProblems = 0;
+  let removedAttrs = 0;
   const survivingIds = new Set<string>();
 
   for (const p of allProblems) {
@@ -1116,11 +1122,10 @@ async function removeOrphanProblemsForBook(
     if (p.id !== undefined) {
       await db.problems.delete(p.id);
     }
-    await db.problemAttrs.where('problemId').equals(p.problemId).delete();
+    removedAttrs += await db.problemAttrs.where('problemId').equals(p.problemId).delete();
     removedProblems++;
   }
 
-  let removedAttrs = 0;
   const allAttrs = await db.problemAttrs.toArray();
   for (const attr of allAttrs) {
     if (!attr.problemId.startsWith(`${bookId}-`)) continue;
