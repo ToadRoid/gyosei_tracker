@@ -128,7 +128,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
 
   for (const group of groups.values()) {
     // Filter: >= 3 attempts
-    if (group.totalAttempts < 3) continue;
+    if (group.totalAttempts < 1) continue;
 
     const accuracy =
       group.totalAttempts > 0 ? group.correctCount / group.totalAttempts : 0;
@@ -191,7 +191,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
       return b.responseTimeSec - a.responseTimeSec;
     });
     const questionExamples: QuestionExample[] = sortedAll
-      .slice(0, 10)
+      .slice(0, 30)
       .map((a) => {
         const attr = attrMap.get(a.problemId);
         const problem = problemMap.get(a.problemId);
