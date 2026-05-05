@@ -323,15 +323,40 @@ function ReviewSessionStartButton({ topic }: { topic: WeakTopicInput }) {
 // ── Question Row ──────────────────────────────────────────────────────────
 
 function QuestionRow({ q }: { q: QuestionExample }) {
+  const [open, setOpen] = useState(false);
   const icon = q.isCorrect ? '✓' : '✗';
   const iconCls = q.isCorrect ? 'text-green-500' : 'text-red-500';
   const text = q.questionText.length > 60 ? q.questionText.slice(0, 60) + '…' : q.questionText;
 
   return (
-    <div className="flex items-start gap-2 py-1.5">
-      <span className={`text-sm font-bold shrink-0 ${iconCls}`}>{icon}</span>
-      <p className="text-xs text-slate-600 flex-1 leading-relaxed">{text}</p>
-      <span className="text-xs text-slate-400 shrink-0">{q.responseTimeSec}秒</span>
+    <div className="py-1.5">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-start gap-2 w-full text-left"
+      >
+        <span className={`text-sm font-bold shrink-0 ${iconCls}`}>{icon}</span>
+        <p className="text-xs text-slate-600 flex-1 leading-relaxed">{text}</p>
+        <span className="text-xs text-slate-400 shrink-0">{q.responseTimeSec}秒</span>
+      </button>
+      {open && (
+        <div className="mt-2 ml-5 space-y-2 border-l-2 border-slate-100 pl-3">
+          <p className="text-xs text-slate-700 leading-relaxed whitespace-pre-wrap">{q.questionText}</p>
+          <div className="flex gap-3 text-xs">
+            <span className="text-slate-500">正解: <span className="font-semibold">{q.correctAnswer ? '○' : '✗'}</span></span>
+            <span className="text-slate-500">あなた: <span className={`font-semibold ${q.isCorrect ? 'text-green-600' : 'text-red-600'}`}>{q.userAnswer ? '○' : '✗'}</span></span>
+          </div>
+          {q.explanationText && (
+            <p className="text-xs text-slate-600 leading-relaxed whitespace-pre-wrap bg-slate-50 rounded p-2">{q.explanationText}</p>
+          )}
+          {(q.pageRefQuestion || q.pageRefAnswer) && (
+            <p className="text-[10px] text-slate-400">
+              {q.pageRefQuestion && <>Q: p.{q.pageRefQuestion}</>}
+              {q.pageRefQuestion && q.pageRefAnswer && ' / '}
+              {q.pageRefAnswer && <>A: p.{q.pageRefAnswer}</>}
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
