@@ -235,7 +235,7 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
 
     const questionExamples: QuestionExample[] = Array.from(latestByProblem.values())
       .sort((a, b) => timeOf(b.answeredAt) - timeOf(a.answeredAt))
-      .slice(0, 10)
+      .slice(0, 30)
       .map((a) => {
         const attr = attrMap.get(a.problemId);
         const problem = problemMap.get(a.problemId);

@@ -472,7 +472,7 @@ function TopicCard({
 
 // ── ReviewPage ─────────────────────────────────────────────────────────────
 
-const INITIAL_SHOW_COUNT = 10;
+const INITIAL_SHOW_COUNT = 50;
 
 type SyllabusFilterId =
   | 'all'
