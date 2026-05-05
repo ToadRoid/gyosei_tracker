@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T15:22:02.710Z",
+  "source": {
+    "inputPath": "data/reviewed_import.json",
+    "totalPages": 446,
+    "totalBranches": 2448
+  },
+  "policy": {
+    "dataMutation": false,
+    "autoAnswerChange": false,
+    "proposedAnswerBooleanAlwaysNull": true,
+    "proposedReplacementAlwaysNull": true
+  },
+  "summary": {
+    "candidateCount": 5,
+    "byKind": {
+      "explanation_denies_but_answer_true": 5
+    },
+    "bySeverity": {
+      "medium": 5
+    }
+  },
+  "regressionGuards": [
+    {
+      "sourcePage": "222",
+      "originalProblemId": "KB2025-p222-q01",
+      "seqNo": 1,
+      "answerBoolean": true,
+      "status": "ok"
+    },
+    {
+      "sourcePage": "224",
+      "originalProblemId": "KB2025-p224-q01",
+      "seqNo": 1,
+      "answerBoolean": true,
+      "status": "ok"
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "AC-0001",
+      "kind": "explanation_denies_but_answer_true",
+      "severity": "medium",
+      "sourcePage": "275",
+      "originalProblemId": "KB2025-p275-q01",
+      "seqNo": 3,
+      "answerBoolean": true,
+      "field": "explanationText",
+      "matchedPhrase": "したがって、本所定の場合、Aは、Cに対して、損害賠償を請求することはできない。",
+      "contextSnippet": "…場合には、「損害」があったとはいえない（大判昭3.8.1）。したがって、本所定の場合、Aは、Cに対して、損害賠償を請求することはできない。",
+      "reason": "explanationText concludes negatively (\"したがって、本所定の場合、Aは、Cに対して、損害賠償を請求することはできない。\") while answerBoolean is true.",
+      "suggestedAction": "source_check",
+      "proposedAnswerBoolean": null,
+      "proposedReplacement": null
+    },
+    {
+      "candidateId": "AC-0002",
+      "kind": "explanation_denies_but_answer_true",
+      "severity": "medium",
+      "sourcePage": "337",
+      "originalProblemId": "KB2025-p337-q01",
+      "seqNo": 5,
+      "answerBoolean": true,
+      "field": "explanationText",
+      "matchedPhrase": "したがって、Bは、土地の賃貸借契約を解除できない。",
+      "contextSnippet": "…に足りない特段の事情があるといえる（最判昭39.6.30）。したがって、Bは、土地の賃貸借契約を解除できない。",
+      "reason": "explanationText concludes negatively (\"したがって、Bは、土地の賃貸借契約を解除できない。\") while answerBoolean is true.",
+      "suggestedAction": "source_check",
+      "proposedAnswerBoolean": null,
+      "proposedReplacement": null
+    },
+    {
+      "candidateId": "AC-0003",
+      "kind": "explanation_denies_but_answer_true",
+      "severity": "medium",
+      "sourcePage": "339",
+      "originalProblemId": "KB2025-p339-q01",
+      "seqNo": 1,
+      "answerBoolean": true,
+      "field": "explanationText",
+      "matchedPhrase": "したがって、Aは、Bの賃借権の放棄をCに対抗することができない。",
+      "contextSnippet": "…場合、賃貸人は賃借人に対抗することができないと解されている。したがって、Aは、Bの賃借権の放棄をCに対抗することができない。",
+      "reason": "explanationText concludes negatively (\"したがって、Aは、Bの賃借権の放棄をCに対抗することができない。\") while answerBoolean is true.",
+      "suggestedAction": "source_check",
+      "proposedAnswerBoolean": null,
+      "proposedReplacement": null
+    },
+    {
+      "candidateId": "AC-0004",
+      "kind": "explanation_denies_but_answer_true",
+      "severity": "medium",
+      "sourcePage": "350",
+      "originalProblemId": "KB2025-p350-q01",
+      "seqNo": 3,
+      "answerBoolean": true,
+      "field": "explanationText",
+      "matchedPhrase": "したがって、Dは、Aに対して工事代金の支払いを直接に請求できない。",
+      "contextSnippet": "…の法律関係を伴うことが必要である（最判昭36.11.30）。したがって、Dは、Aに対して工事代金の支払いを直接に請求できない。",
+      "reason": "explanationText concludes negatively (\"したがって、Dは、Aに対して工事代金の支払いを直接に請求できない。\") while answerBoolean is true.",
+      "suggestedAction": "source_check",
+      "proposedAnswerBoolean": null,
+      "proposedReplacement": null
+    },
+    {
+      "candidateId": "AC-0005",
+      "kind": "explanation_denies_but_answer_true",
+      "severity": "medium",
+      "sourcePage": "351",
+      "originalProblemId": "KB2025-p351-q01",
+      "seqNo": 1,
+      "answerBoolean": true,
+      "field": "explanationText",
+      "matchedPhrase": "したがって、Bは、Aに対して損害賠償を請求できない。",
+      "contextSnippet": "…る規定はない（民法701条は650条3項を準用していない）。したがって、Bは、Aに対して損害賠償を請求できない。",
+      "reason": "explanationText concludes negatively (\"したがって、Bは、Aに対して損害賠償を請求できない。\") while answerBoolean is true.",
+      "suggestedAction": "source_check",
+      "proposedAnswerBoolean": null,
+      "proposedReplacement": null
+    }
+  ]
+}
