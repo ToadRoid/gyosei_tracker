@@ -3,7 +3,6 @@ import type {
   WeakTopicInput,
   WrongExample,
   QuestionExample,
-  SectionSummary,
 } from '@/types/review-pack';
 
 const subjectMap = new Map(subjects.map((s) => [s.id, s.name]));
@@ -13,14 +12,10 @@ const chapterOrderMap = new Map(chapters.map((c) => [c.id, c.order ?? 9999]));
 
 type GroupKey = string;
 
-interface SectionStats {
-  totalAttempts: number;
-  correctCount: number;
-}
-
 interface GroupData {
   subjectId: string;
   chapterId: string;
+  sectionTitle: string;
   problemIds: Set<string>;
   totalAttempts: number;
   correctCount: number;
@@ -35,7 +30,6 @@ interface GroupData {
     answeredAt: Date;
     responseTimeSec: number;
   }[];
-  sectionStats: Map<string, SectionStats>;
 }
 
 interface SectionOrderData {
@@ -126,12 +120,15 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
     const chapterId = attr.chapterId || UNCLASSIFIED_CHAPTER_ID;
     const sectionTitle = attr.sectionTitle ?? '';
 
-    const key: GroupKey = `${subjectId}||${chapterId}`;
+    if (!sectionTitle) continue;
+
+    const key = sectionKey(subjectId, chapterId, sectionTitle);
 
     if (!groups.has(key)) {
       groups.set(key, {
         subjectId,
         chapterId,
+        sectionTitle,
         problemIds: new Set(),
         totalAttempts: 0,
         correctCount: 0,
@@ -140,7 +137,6 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
         byLap: new Map(),
         recentWrong: [],
         allAttempts: [],
-        sectionStats: new Map(),
       });
     }
 
@@ -148,15 +144,6 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
     group.problemIds.add(attempt.problemId);
     group.totalAttempts += 1;
     if (attempt.isCorrect) group.correctCount += 1;
-
-    if (sectionTitle) {
-      if (!group.sectionStats.has(sectionTitle)) {
-        group.sectionStats.set(sectionTitle, { totalAttempts: 0, correctCount: 0 });
-      }
-      const ss = group.sectionStats.get(sectionTitle)!;
-      ss.totalAttempts += 1;
-      if (attempt.isCorrect) ss.correctCount += 1;
-    }
 
     if (!group.pageRefQuestion && attr.sourcePageQuestion) {
       group.pageRefQuestion = attr.sourcePageQuestion;
@@ -270,35 +257,23 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
         };
       });
 
-    let bestOrder: SectionOrderData = { pageRefOrder: UNKNOWN_ORDER, sourcePageOrder: UNKNOWN_ORDER, seqOrder: UNKNOWN_ORDER };
-    for (const secTitle of group.sectionStats.keys()) {
-      const od = sectionOrderMap.get(sectionKey(group.subjectId, group.chapterId, secTitle));
-      if (od && compareSectionOrder(od, bestOrder) < 0) {
-        bestOrder = od;
-      }
-    }
-
-    const sections: SectionSummary[] = Array.from(group.sectionStats.entries())
-      .map(([title, ss]) => ({
-        sectionTitle: title,
-        accuracy: ss.totalAttempts > 0 ? ss.correctCount / ss.totalAttempts : 0,
-        totalAttempts: ss.totalAttempts,
-        correctCount: ss.correctCount,
-      }));
+    const orderData = sectionOrderMap.get(
+      sectionKey(group.subjectId, group.chapterId, group.sectionTitle),
+    );
 
     rankedTopics.push({
       subjectOrder: subjectOrderMap.get(group.subjectId) ?? 9999,
       chapterOrder: chapterOrderMap.get(group.chapterId) ?? 9999,
-      pageRefOrder: bestOrder.pageRefOrder,
-      sourcePageOrder: bestOrder.sourcePageOrder,
-      seqOrder: bestOrder.seqOrder,
-      sectionTitle: chapterName,
+      pageRefOrder: orderData?.pageRefOrder ?? UNKNOWN_ORDER,
+      sourcePageOrder: orderData?.sourcePageOrder ?? UNKNOWN_ORDER,
+      seqOrder: orderData?.seqOrder ?? UNKNOWN_ORDER,
+      sectionTitle: group.sectionTitle,
       topic: {
         subjectId: group.subjectId,
         chapterId: group.chapterId,
         subjectName,
         chapterName,
-        sectionTitle: chapterName,
+        sectionTitle: group.sectionTitle,
         accuracy,
         totalAttempts: group.totalAttempts,
         correctCount: group.correctCount,
@@ -309,7 +284,6 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
         candidateProblemIds,
         wrongExamples,
         questionExamples,
-        sections,
       },
     });
   }
