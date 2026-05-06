@@ -62,6 +62,13 @@ export interface QuestionExample {
   pageRefAnswer: string;
 }
 
+export interface SectionSummary {
+  sectionTitle: string;
+  accuracy: number;
+  totalAttempts: number;
+  correctCount: number;
+}
+
 export interface WeakTopicInput {
   subjectId?: string;
   chapterId?: string;
@@ -78,6 +85,7 @@ export interface WeakTopicInput {
   candidateProblemIds: string[];
   wrongExamples: WrongExample[];
   questionExamples: QuestionExample[];
+  sections?: SectionSummary[];
 }
 
 export interface ReviewPackInput {

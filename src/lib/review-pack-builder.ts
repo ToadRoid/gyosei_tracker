@@ -4,6 +4,7 @@ import type {
   WeakTopicInput,
   WrongExample,
   QuestionExample,
+  SectionSummary,
 } from '@/types/review-pack';
 
 // Build subject/chapter name lookup maps (safe for both client and server)
@@ -27,12 +28,15 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
   const attrMap = new Map(allAttrs.map((a) => [a.problemId, a]));
   const problemMap = new Map(allProblems.map((p) => [p.problemId, p]));
 
-  // Group attempts by (subjectId, chapterId, sectionTitle)
+  // Group attempts by (subjectId, chapterId) — chapter-level cards
   type GroupKey = string;
+  interface SectionStats {
+    totalAttempts: number;
+    correctCount: number;
+  }
   interface GroupData {
     subjectId: string;
     chapterId: string;
-    sectionTitle: string;
     problemIds: Set<string>;
     totalAttempts: number;
     correctCount: number;
@@ -41,6 +45,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
     byLap: Map<number, { attempts: number; correct: number }>;
     recentWrong: { problemId: string; userAnswer: boolean; answeredAt: Date }[];
     allAttempts: { problemId: string; userAnswer: boolean; isCorrect: boolean; answeredAt: Date; responseTimeSec: number }[];
+    sectionStats: Map<string, SectionStats>;
   }
 
   const groups = new Map<GroupKey, GroupData>();
@@ -54,16 +59,12 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
     const chapterId = attr.chapterId || UNCLASSIFIED_CHAPTER_ID;
     const sectionTitle = attr.sectionTitle ?? '';
 
-    // Skip groups without sectionTitle
-    if (!sectionTitle) continue;
-
-    const key: GroupKey = `${subjectId}||${chapterId}||${sectionTitle}`;
+    const key: GroupKey = `${subjectId}||${chapterId}`;
 
     if (!groups.has(key)) {
       groups.set(key, {
         subjectId,
         chapterId,
-        sectionTitle,
         problemIds: new Set(),
         totalAttempts: 0,
         correctCount: 0,
@@ -72,6 +73,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
         byLap: new Map(),
         recentWrong: [],
         allAttempts: [],
+        sectionStats: new Map(),
       });
     }
 
@@ -79,6 +81,16 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
     group.problemIds.add(attempt.problemId);
     group.totalAttempts += 1;
     if (attempt.isCorrect) group.correctCount += 1;
+
+    // Section-level stats
+    if (sectionTitle) {
+      if (!group.sectionStats.has(sectionTitle)) {
+        group.sectionStats.set(sectionTitle, { totalAttempts: 0, correctCount: 0 });
+      }
+      const ss = group.sectionStats.get(sectionTitle)!;
+      ss.totalAttempts += 1;
+      if (attempt.isCorrect) ss.correctCount += 1;
+    }
 
     // Keep first non-empty page refs
     if (!group.pageRefQuestion && attr.sourcePageQuestion) {
@@ -212,10 +224,19 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
         };
       });
 
+    const sections: SectionSummary[] = Array.from(group.sectionStats.entries())
+      .map(([title, ss]) => ({
+        sectionTitle: title,
+        accuracy: ss.totalAttempts > 0 ? ss.correctCount / ss.totalAttempts : 0,
+        totalAttempts: ss.totalAttempts,
+        correctCount: ss.correctCount,
+      }))
+      .sort((a, b) => a.accuracy - b.accuracy);
+
     weakTopics.push({
       subjectName,
       chapterName,
-      sectionTitle: group.sectionTitle,
+      sectionTitle: chapterName,
       accuracy,
       totalAttempts: group.totalAttempts,
       correctCount: group.correctCount,
@@ -226,6 +247,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
       candidateProblemIds,
       wrongExamples,
       questionExamples,
+      sections,
     });
   }
 
