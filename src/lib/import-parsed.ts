@@ -197,6 +197,7 @@ export async function importParsedBatch(
           excludedBy: preserved?.excludedBy,
           needsSourceCheck: preserved?.needsSourceCheck,
           sourceCheckNote: preserved?.sourceCheckNote,
+          questionType: branch.questionType,
         });
 
         branchesSaved++;
