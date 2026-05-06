@@ -183,6 +183,7 @@ export interface ParsedBranch {
   sectionTitle?: string;
   sourcePageQuestion?: string;
   sourcePageAnswer?: string;
+  questionType?: 'descriptive';
 }
 
 export interface ParsedPage {
