@@ -10,6 +10,13 @@ import type {
 const subjectMap = new Map(subjects.map((s) => [s.id, s.name]));
 const chapterMap = new Map(chapters.map((c) => [c.id, c.name]));
 
+const UNCLASSIFIED_SECTION_TITLE = '未分類';
+
+function normalizeSectionTitle(sectionTitle: string | undefined | null): string {
+  const trimmed = (sectionTitle ?? '').trim();
+  return trimmed || UNCLASSIFIED_SECTION_TITLE;
+}
+
 /**
  * Aggregates Dexie data into ReviewPackInput.
  * IMPORTANT: This function is browser-only (uses Dexie/IndexedDB).
@@ -52,9 +59,7 @@ export async function buildReviewPackInput(): Promise<ReviewPackInput> {
 
     const subjectId = attr.subjectId || UNCLASSIFIED_SUBJECT_ID;
     const chapterId = attr.chapterId || UNCLASSIFIED_CHAPTER_ID;
-    const sectionTitle = attr.sectionTitle ?? '';
-
-    if (!sectionTitle) continue;
+    const sectionTitle = normalizeSectionTitle(attr.sectionTitle);
 
     const key: GroupKey = `${subjectId}||${chapterId}||${sectionTitle}`;
 
