@@ -10,6 +10,13 @@ const chapterMap = new Map(chapters.map((c) => [c.id, c.name]));
 const subjectOrderMap = new Map(subjects.map((s) => [s.id, s.order ?? 9999]));
 const chapterOrderMap = new Map(chapters.map((c) => [c.id, c.order ?? 9999]));
 
+const UNCLASSIFIED_SECTION_TITLE = '未分類';
+
+function normalizeSectionTitle(sectionTitle: string | undefined | null): string {
+  const trimmed = (sectionTitle ?? '').trim();
+  return trimmed || UNCLASSIFIED_SECTION_TITLE;
+}
+
 type GroupKey = string;
 
 interface GroupData {
@@ -92,8 +99,7 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
   for (const attr of allAttrs) {
     if (attr.isExcluded === true || attr.needsSourceCheck === true || attr.aiTriageStatus === 'discard') continue;
 
-    const sectionTitle = attr.sectionTitle ?? '';
-    if (!sectionTitle) continue;
+    const sectionTitle = normalizeSectionTitle(attr.sectionTitle);
 
     const key = sectionKey(attr.subjectId ?? '', attr.chapterId ?? '', sectionTitle);
     const existing = sectionOrderMap.get(key);
@@ -118,9 +124,7 @@ export async function buildSyllabusReviewTopics(): Promise<WeakTopicInput[]> {
 
     const subjectId = attr.subjectId || UNCLASSIFIED_SUBJECT_ID;
     const chapterId = attr.chapterId || UNCLASSIFIED_CHAPTER_ID;
-    const sectionTitle = attr.sectionTitle ?? '';
-
-    if (!sectionTitle) continue;
+    const sectionTitle = normalizeSectionTitle(attr.sectionTitle);
 
     const key = sectionKey(subjectId, chapterId, sectionTitle);
 
