@@ -79,7 +79,7 @@ async function buildDeepDivePrompt(topic: WeakTopicInput): Promise<string> {
 
 【テーマ】${topic.sectionTitle}
 【科目】${topic.subjectName} > ${topic.chapterName}
-【正答率】${accPct}%（${topic.totalAttempts}問回答、不正解${wrongCount}問）
+【正答率】${accPct}%（${topic.totalAttempts}回回答、不正解${wrongCount}問）
 
 【この分野で私が解いた問題と結果】
 ${problemLines}
@@ -398,7 +398,7 @@ function TopicCard({
           {topic.subjectName} &gt; {topic.chapterName}
         </p>
         <div className="flex items-center gap-3 text-xs text-slate-500">
-          <span>{topic.totalAttempts}問回答</span>
+          <span>{topic.totalAttempts}回回答</span>
           <span className="text-red-400">✗ {wrongCount}</span>
           <span className="text-green-400">✓ {correctCount}</span>
           {topic.improvement !== null && (
@@ -630,7 +630,7 @@ export default function ReviewPage() {
           <>
             <p className="text-xs text-slate-400">
               {reviewTab === 'weak'
-                ? `正答率が低いセクション（上位${showingCount}件表示 / 全${total}件）`
+                ? `正答率が低い回答済みセクション（上位${showingCount}件表示 / 全${total}件）`
                 : `教材順の回答済みセクション（上位${showingCount}件表示 / 全${total}件）`}
             </p>
             <div className="grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1">
