@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>物権的請求権 OCR source-check</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;max-width:1000px;margin:2em auto;padding:0 1em;line-height:1.6;color:#1f2937}h1,h2,h3{color:#1e293b;margin-top:1.5em}h1{border-bottom:2px solid #cbd5e1;padding-bottom:.3em}h2{border-bottom:1px solid #e2e8f0;padding-bottom:.2em;margin-top:2em}table{border-collapse:collapse;margin:1em 0;font-size:.92em}th,td{border:1px solid #cbd5e1;padding:.4em .7em;text-align:left;vertical-align:top}th{background:#f1f5f9}code{background:#f1f5f9;padding:.1em .3em;border-radius:3px;font-family:SFMono-Regular,Consolas,monospace;font-size:.9em}pre{background:#0f172a;color:#e2e8f0;padding:1em;border-radius:6px;overflow-x:auto}pre code{background:transparent;color:inherit;padding:0}hr{border:none;border-top:1px solid #e2e8f0;margin:2em 0}ul,ol{margin:.5em 0;padding-left:2em}strong{color:#0f172a}blockquote{border-left:3px solid #cbd5e1;margin:.8em 0;padding:.4em 1em;background:#f8fafc;color:#334155}</style>
+</head><body><h1>物権的請求権 OCR source-check batch</h1>
+<p>date: 2026-05-18<br>base: origin/main <code>eb21024</code>（PR #168 merged）<br>scope: 民法 &gt; 物権 &gt; 物権的請求権 セクション配下 3 problems の OCR崩れ疑いを書籍原本画像と照合する。docs-only。data patch はまだ行わない。</p>
+<p>source image basis:</p>
+<ul>
+<li><code>images/0245.png</code>（raw, 3.1MB、書籍 p.592-593）</li>
+</ul>
+<hr>
+<h2>1. 背景</h2>
+<p>user 側で /exercise 物権的請求権の問題群を見ていた際に以下の崩れ疑いが報告された:</p>
+<ul>
+<li>問題1: 「いまだに登記が残っている」に「A名義の」が脱落している疑い</li>
+<li>問題2: 「AはCに対してのみ乙建物の収去を求めることができる」が「Bに対してのみ」のはずではないか</li>
+<li>問題2 解説末尾: 「Bに対しては求めていない」が「Bに対して求めることはできない」のはずではないか</li>
+<li>問題3 解説: 判例日付「最判昭56.2.8」が「最判平6.2.8」のはずではないか</li>
+<li>問題3 解説全体: 多重 OCR/parser 崩れ</li>
+</ul>
+<p>本タスクでは raw image による source 照合で各疑いを exact-confirmed / inferred / caveated / blocked / no patch に分類する。<strong>推定・法的補完による replacement は禁止</strong>。</p>
+<hr>
+<h2>2. 対象一覧</h2>
+<table>
+<tr><td>audit ref</td><td>problemId</td><td>seqNo</td><td>sourcePage</td><td>sourcePageQuestion</td><td>answerBoolean</td></tr>
+<tr><td>問題1</td><td>KB2025-p245-q01</td><td>1</td><td>245</td><td>592</td><td>false</td></tr>
+<tr><td>問題2</td><td>KB2025-p245-q01</td><td>2</td><td>245</td><td>592</td><td>false</td></tr>
+<tr><td>問題3</td><td>KB2025-p245-q01</td><td>3</td><td>245</td><td>592</td><td>true</td></tr>
+</table>
+<p>すべて section <code>物権的請求権</code>、book page 592（Q）/ 593（E）。</p>
+<hr>
+<h2>3. data/public sync 確認</h2>
+<p>全 3 件で data と public が <code>questionText</code>/<code>explanationText</code>/<code>answerBoolean</code> 完全一致。</p>
+<hr>
+<h2>4. 個別 source 確認</h2>
+<h3>4.1 問題1 / KB2025-p245-q01 seq=1（書籍 #1）</h3>
+<ul>
+<li>書籍 ab記号: × ✓ data ab=false 一致</li>
+</ul>
+<p><strong>Current Q</strong>:</p>
+<blockquote>Aの所有する甲土地につきAがBに対して売却した後、Bが甲土地をCに売却したが、いまだに登記が残っている場合に、Bは、甲土地に対する所有権を喪失しているので、Aに対して移転登記を請求することはできない。</blockquote>
+<p><strong>書籍 Q</strong>（image <code>images/0245.png</code> 左 p.592 #1）:</p>
+<blockquote>Aの所有する甲土地につきAがBに対して売却した後、Bが甲土地をCに売却したが、いまだに登記が残っている場合に、Bは、甲土地に対する所有権を喪失しているので、Aに対して移転登記を請求することはできない。</blockquote>
+<p>→ <strong>完全一致</strong>。user の「A名義の」脱落疑いは <strong>書籍原文にも存在せず</strong>、no patch。</p>
+<p><strong>Current E</strong>:</p>
+<blockquote>Bは、物権変動的な登記請求権として、Aに対して移転登記請求をすることができる（大判大5.4.1）。</blockquote>
+<p><strong>書籍 E</strong>（image 右 p.593 #1）:</p>
+<blockquote>× Bは、物権変動的登記請求権として、Aに対して移転登記請求をすることができる（大判大5.4.1）。</blockquote>
+<p>差分: data 「物権変動的<strong>な</strong>登記請求権」← 助詞「な」が data に追加。書籍は「物権変動的登記請求権」（一語）。</p>
+<p>→ 軽微 P3 patch 候補（書籍原文への揃え）。</p>
+<p><strong>分類</strong>: <strong>no patch (Q) / P3 micro-patch (E、軽微「な」削除)</strong>。<br><strong>answerBoolean 疑い</strong>: なし。</p>
+<hr>
+<h3>4.2 問題2 / KB2025-p245-q01 seq=2（書籍 #2）</h3>
+<ul>
+<li>書籍 ab記号: × ✓ data ab=false 一致</li>
+</ul>
+<p><strong>Current Q</strong>:</p>
+<blockquote>Aが所有する甲土地の上に、Bが無権原なく乙建物を建設してこれをCに譲渡した場合、無権原で乙建物を建設することによってAの土地所有権を侵害したのはBであるから、AはCに対してのみ乙建物の収去を求めることができる。</blockquote>
+<p><strong>書籍 Q</strong>（image 左 p.592 #2）（image 解像度に基づく読み取り）:</p>
+<blockquote>A所有の甲土地の上に、Bが無権原なく乙建物を建設してこれをCに譲渡した場合、Bが現実に乙建物の所有権を保有することによってAの土地所有権を侵害しているとは認められないので、AはBに対してのみ乙建物の収去を求めることができる。</blockquote>
+<p>⚠️ <strong>重要な caveat</strong>: Q 末尾の「<strong>Bに対してのみ</strong>」vs「<strong>Cに対してのみ</strong>」の判別が image 上で完全には確定できない。ただし以下の論理整合性が <strong>Bに対してのみ</strong> を強く示唆:</p>
+<ol>
+<li>書籍 E が「AはCを相手方として…Bに対して求めることはできない」と明記 → 法的に正しい target は C</li>
+<li>もし肢が「Cに対してのみ求めることができる」なら、答えは ○（肢の主張は法的に正しい）</li>
+<li>しかし書籍 ab=× である</li>
+<li>ab=× が成立するためには、肢が「Bに対してのみ求めることができる」（誤った主張）でなければならない</li>
+<li>→ 書籍 Q は <strong>「AはBに対してのみ」</strong> で確定的</li>
+</ol>
+<p><strong>Current E</strong>:</p>
+<blockquote>判例（最判昭35.6.17）は、土地の所有権に基づく建物収去土地明渡請求をする場合、現実に家屋を所有することによって現実にその土地を占拠して土地の所有権を侵害している者を相手としなければならないとしている。したがって、AはCを相手方として建物収去土地明渡請求をしなければならず、Bに対しては求めていない。</blockquote>
+<p><strong>書籍 E</strong>（image 右 p.593 #2）:</p>
+<blockquote>× 判例（最判昭35.6.17）は、土地の所有権に基づく建物収去土地明渡請求をする場合、現実に家屋を所有することによって現実にその土地を占拠して土地所有権を侵害している者を相手としなければならないとしている。したがって、AはCを相手方として建物収去土地明渡請求をしなければならず、Bに対して求めることはできない。</blockquote>
+<p>差分:</p>
+<ul>
+<li>「土地の所有権」/「土地所有権」（軽微）</li>
+<li>「Bに対しては求めていない」→ 「Bに対して求めることはできない」（<strong>末尾の意味変化</strong>）</li>
+</ul>
+<p>→ E 末尾は <strong>exact source-confirmed</strong>。</p>
+<p><strong>Q 中央部の追加差分</strong>:</p>
+<ul>
+<li>data: 「無権原で乙建物を建設することによってAの土地所有権を侵害したのはBであるから」</li>
+<li>書籍（推定）: 「Bが現実に乙建物の所有権を保有することによってAの土地所有権を侵害しているとは認められないので」</li>
+</ul>
+<p>意味反転を含む大幅な構造差分。image 上で書籍テキストは読めるが中央部の正確な助詞・句読点は確認の余地あり。</p>
+<p><strong>分類</strong>:</p>
+<ul>
+<li><strong>Q</strong>: 「Bに対してのみ」vs「Cに対してのみ」: <strong>inferred-strong</strong>（answer logic + ab consistency による論理的確定だが、image character 自体は完全 exact-confirmed ではない）→ user 物理確認推奨</li>
+<li><strong>Q 中央部</strong>: <strong>caveated</strong>（image 読み取りに微小不確実性）</li>
+<li><strong>E 末尾</strong>: <strong>exact source-confirmed</strong>（「求めていない」→「求めることはできない」）</li>
+<li><strong>answerBoolean</strong>: false で <strong>正しい</strong>（書籍 × と一致）</li>
+</ul>
+<p><strong>answerBoolean 疑い</strong>: なし（書籍 × と data false 一致）。ただし <strong>Q が現状の「Cに対してのみ」のままだと、肢の主張と ab の論理矛盾が data に残る</strong>。Q patch が必須となる構造。</p>
+<hr>
+<h3>4.3 問題3 / KB2025-p245-q01 seq=3（書籍 #3）</h3>
+<ul>
+<li>書籍 ab記号: ○ ✓ data ab=true 一致</li>
+</ul>
+<p><strong>Current Q</strong>:</p>
+<blockquote>Aが所有する甲土地の上に、Bが無権原なく乙建物を建設し、自己所有名義で建物保存登記を行った。そしてそれをCに譲渡したが、建物所有権登記がB名義のままとなっていた場合、Aは登記名義人であるBに対して乙建物の収去を求めることができる。</blockquote>
+<p><strong>書籍 Q</strong>（image 左 p.592 #3）:</p>
+<blockquote>A所有の甲土地の上に、Bが無権原なく乙建物を建設し、自己名義で建物保存登記をした。その後、Bは乙建物をCに譲渡したが、建物所有権登記がB名義のままとなっていた場合、Aは登記名義人であるBに対して乙建物の収去を求めることができる。</blockquote>
+<p>差分:</p>
+<ul>
+<li>「Aが所有する」→「A所有の」（軽微）</li>
+<li>「自己所有名義」→「自己名義」（軽微）</li>
+<li>「建物保存登記を行った。そしてそれをCに譲渡した」→「建物保存登記をした。その後、Bは乙建物をCに譲渡した」（中程度、構造差分）</li>
+</ul>
+<p>→ data Q と書籍 Q の差分は意味を変えない軽微〜中程度の wording 差分。</p>
+<p><strong>Current E</strong>:</p>
+<blockquote>判例（最判昭56.2.8）は、177条未登記を遡及しないことから、他人の土地上の建物の所有権を取得した者からの意思に基づいて所有権取得の義務を負担した場合に、たとえ登記を他に譲渡したとしても、登記名義を保存する限り、土地所有者がこれ対して、譲渡による建物所有者の喪失を承認して建物収去・土地明渡しの義務を免れることはできないとしている。</blockquote>
+<p><strong>書籍 E</strong>（image 右 p.593 #3、判読困難領域あり）:</p>
+<blockquote>○ 判例（<strong>最判平6.2.8</strong>）は、177条の登記なくして第三者に対抗できないなどの規定により、他人の土地上の建物の所有権を取得した者は、自己の意思に基づいて所有権を取得した以上、その後たとえ建物を他に譲渡したとしても、登記名義を保有する限り、土地所有者に対して、譲渡による所有権の喪失を主張して建物収去・土地明渡しの義務を免れることはできないとしている。</blockquote>
+<p>⚠️ <strong>caveat</strong>: 書籍 E の中央部は image 解像度で部分的に読みにくい。判例日付と全体構造は exact-confirmed だが、個別の助詞・接続詞レベルでは推定読みが含まれる。</p>
+<p>差分（exact-confirmed 部分）:</p>
+<ul>
+<li><strong>「最判昭56.2.8」→「最判平6.2.8」</strong>（user 指摘どおり、判例日付完全変更）</li>
+<li>「177条未登記を遡及しないことから」→「177条の登記なくして第三者に対抗できないなどの規定により」（中央部構造崩壊）</li>
+<li>「取得した者からの意思に基づいて所有権取得の義務を負担した場合に」→「取得した者は、自己の意思に基づいて所有権を取得した以上、その後」（主体・条件構造崩壊）</li>
+<li>「登記名義を保存する限り」→「登記名義を保有する限り」（「保存」→「保有」、軽微）</li>
+<li>「土地所有者がこれ対して」→「土地所有者に対して」（助詞「が」削除）</li>
+<li>「譲渡による建物所有者の喪失を承認して」→「譲渡による所有権の喪失を主張して」（意味反転：「承認」→「主張」、「建物所有者」→「所有権」）</li>
+</ul>
+<p><strong>分類</strong>:</p>
+<ul>
+<li><strong>Q</strong>: <strong>軽微 P3 patch 候補</strong>（書籍 wording に揃える）</li>
+<li><strong>E 判例日付</strong>: <strong>exact source-confirmed</strong>（「最判昭56.2.8」→「最判平6.2.8」）</li>
+<li><strong>E 全文</strong>: <strong>caveated</strong>（中央部の image 読み取りに不確実性）。判例日付以外の全文置換は推定要素を含むため、image 再撮影 / 物理書籍確認後に exact transcription を確定したい</li>
+<li><strong>answerBoolean</strong>: true で正しい</li>
+</ul>
+<p><strong>answerBoolean 疑い</strong>: なし。</p>
+<hr>
+<h2>5. 分類サマリー</h2>
+<table>
+<tr><td>audit ref</td><td>Q</td><td>E</td><td>answerBoolean</td></tr>
+<tr><td>問題1 (seq=1)</td><td><strong>no patch</strong>（書籍と一致、user の「A名義の」脱落疑いは reject）</td><td><strong>P3 micro-patch</strong>（「な」削除）</td><td>true 不変</td></tr>
+<tr><td><strong>問題2 (seq=2)</strong></td><td><strong>inferred-strong + caveated</strong>（Q末「B/C」は logic 確定だが image ambiguous、中央部 caveated）</td><td><strong>exact source-confirmed</strong>（末尾「求めていない」→「求めることはできない」）</td><td>false 不変</td></tr>
+<tr><td>問題3 (seq=3)</td><td>軽微 wording 差分（P3 micro-patch 候補）</td><td><strong>exact source-confirmed (判例日付)</strong> + <strong>caveated (E 全文)</strong></td><td>true 不変</td></tr>
+</table>
+<h3>件数</h3>
+<table>
+<tr><td>区分</td><td>件数</td></tr>
+<tr><td>exact source-confirmed (patch 可能)</td><td>2（問題2 E末尾、問題3 E判例日付）</td></tr>
+<tr><td>inferred-strong（物理確認推奨）</td><td>1（問題2 Q末 B/C）</td></tr>
+<tr><td>caveated（image 読み取り不確実）</td><td>2（問題2 Q中央部、問題3 E全文）</td></tr>
+<tr><td>blocked / unreadable</td><td>0</td></tr>
+<tr><td>no patch</td><td>1（問題1 Q）</td></tr>
+<tr><td>P3 micro-patch候補</td><td>2（問題1 E軽微、問題3 Q軽微）</td></tr>
+</table>
+<hr>
+<h2>6. answerBoolean 疑いの有無</h2>
+<p><strong>3 件すべてで answerBoolean 疑いなし</strong>:</p>
+<ul>
+<li>問題1: 書籍 × / data false ✓</li>
+<li>問題2: 書籍 × / data false ✓</li>
+<li>問題3: 書籍 ○ / data true ✓</li>
+</ul>
+<p>ただし <strong>問題2 は Q を patch しないと「肢の主張と ab=false の論理矛盾」が data に残る</strong>。Q を「Cに対してのみ」のままにすると、論理的には ab=true（肢の主張が法的に正しい）にしなければならず、本来の書籍 ab=× と乖離する。<strong>Q patch が必須</strong>。</p>
+<hr>
+<h2>7. Q/E patch 候補（次タスク用）</h2>
+<h3>Phase 1: exact source-confirmed のみ data patch（推奨）</h3>
+<ol>
+<li><strong>問題2 E 末尾</strong>: 「Bに対しては求めていない」→「Bに対して求めることはできない」</li>
+<li><strong>問題3 E 判例日付</strong>: 「最判昭56.2.8」→「最判平6.2.8」</li>
+</ol>
+<p>これらは exact-confirmed で安全に patch 可能。</p>
+<h3>Phase 2: inferred-strong（user 物理確認後）</h3>
+<ol>
+<li><strong>問題2 Q末</strong>: 「Cに対してのみ」→「Bに対してのみ」</li>
+<p>   - 論理的には確定（answer logic + ab consistency）<br>   - image 上で character ambiguous のため物理確認推奨<br>   - patch すれば Q と ab=false の論理整合性が回復</p>
+</ol>
+<h3>Phase 3: caveated（image 再撮影 / 物理書籍確認後）</h3>
+<ol>
+<li><strong>問題2 Q 中央部</strong>: 「無権原で乙建物を建設することによって…」→「Bが現実に乙建物の所有権を保有することによって…」</li>
+<li><strong>問題3 E 全文</strong>: 多重 OCR崩れの整形（判例日付以外）</li>
+</ol>
+<p>これらは patch すれば学習被害が大きく解消するが、image 再撮影または物理書籍での exact transcription 確定が前提。</p>
+<h3>Phase 4: P3 micro</h3>
+<ol>
+<li><strong>問題1 E</strong>: 「物権変動的な登記請求権」→「物権変動的登記請求権」</li>
+<li><strong>問題3 Q</strong>: 「Aが所有する」→「A所有の」、「自己所有名義」→「自己名義」、「行った。そしてそれを」→「をした。その後、Bは乙建物を」</li>
+</ol>
+<p>これらは学習被害が小さい軽微差分。低優先 backlog。</p>
+<hr>
+<h2>8. 次の patch design に進める対象</h2>
+<p><strong>最も安全な Phase 1（exact-confirmed のみ）から開始</strong> を推奨:</p>
+<ul>
+<li>対象: 問題2 E末尾 + 問題3 E判例日付</li>
+<li>DATA_VERSION bump 必要</li>
+<li>answerBoolean 変更なし</li>
+<li>2 件の小さな patch を 1 PR にまとめるのが自然</li>
+</ul>
+<p>Phase 2 (問題2 Q末「B/C」) は user 物理確認後に追加 PR。</p>
+<hr>
+<h2>9. patch 禁止対象と理由</h2>
+<table>
+<tr><td>対象</td><td>禁止理由</td></tr>
+<tr><td>問題2 Q末「B/C」推定 patch</td><td>image character ambiguous。論理整合性は強いが、推定で書籍と異なる文字を data に焼くリスク。物理確認待ち</td></tr>
+<tr><td>問題2 Q 中央部の全文置換</td><td>image 読み取りに caveat あり、推定要素含む</td></tr>
+<tr><td>問題3 E 全文置換（判例日付以外）</td><td>image 中央部 caveat。法的に整えた文を replacement に焼くのは過去のセッション方針違反</td></tr>
+</table>
+<hr>
+<h2>10. 変更しなかったもの</h2>
+<ul>
+<li>data/reviewed_import.json</li>
+<li>public/data/reviewed_import.json</li>
+<li>src/lib/db.ts（DATA_VERSION 含む）</li>
+<li>src/ 全般</li>
+<li>他 chapter / 他 problem</li>
+<li>Q / E / answerBoolean / sourcePage / questionType</li>
+<li>stash@{0}</li>
+</ul>
+<hr>
+<h2>11. stash@{0} 残存確認</h2>
+<pre><code>
+stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+</code></pre>
+<p>本タスク前後で touch せず、apply/drop なし。</p>
+<hr>
+<h2>12. 検証結果</h2>
+<table>
+<tr><td>項目</td><td>結果</td></tr>
+<tr><td>対象 3 件 同定</td><td>OK</td></tr>
+<tr><td>data/public sync</td><td>OK（全 3 件）</td></tr>
+<tr><td>物権的請求権 section 内のみ照合</td><td>OK</td></tr>
+<tr><td><code>git diff --check</code></td><td>clean（docs 追加のみ）</td></tr>
+<tr><td><code>tsc --noEmit</code></td><td>該当変更なしのため未実施</td></tr>
+<tr><td>stash@{0}</td><td>残存、未変更</td></tr>
+</table>
+<hr>
+<h2>13. 次のステップ（提案）</h2>
+<ol>
+<li><strong>本 source-check log を docs-only で commit / PR / merge</strong>（足場固定）</li>
+<li><strong>Phase 1 patch design + 実装</strong>（2 件 exact-confirmed のみ）:</li>
+<p>   - 問題2 E 末尾<br>   - 問題3 E 判例日付</p>
+<li><strong>Phase 2 user 確認依頼</strong>: 問題2 Q末の「B」or「C」を物理書籍で確認</li>
+<li><strong>Phase 3 image 再撮影 / 物理確認</strong>: 問題2 Q中央部、問題3 E全文</li>
+<li><strong>Phase 4 軽微 backlog</strong>: 問題1 E、問題3 Q</li>
+</ol>
+<hr>
+<h2>注意事項</h2>
+<p>本 doc は MD を source of truth とする。HTML 版は閲覧用 snapshot であり、直接編集してはならない。</p></body></html>
