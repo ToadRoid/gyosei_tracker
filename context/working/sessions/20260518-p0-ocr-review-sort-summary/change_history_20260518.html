@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Session change history summary — PR #152〜#162</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; max-width: 1000px; margin: 2em auto; padding: 0 1em; line-height: 1.6; color: #1f2937; }
+h1, h2, h3 { color: #1e293b; margin-top: 1.5em; }
+h1 { border-bottom: 2px solid #cbd5e1; padding-bottom: 0.3em; }
+h2 { border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2em; margin-top: 2em; }
+h3 { color: #334155; }
+table { border-collapse: collapse; margin: 1em 0; font-size: 0.92em; }
+th, td { border: 1px solid #cbd5e1; padding: 0.4em 0.7em; text-align: left; vertical-align: top; }
+th { background: #f1f5f9; }
+code { background: #f1f5f9; padding: 0.1em 0.3em; border-radius: 3px; font-family: SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+pre { background: #0f172a; color: #e2e8f0; padding: 1em; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; padding: 0; }
+hr { border: none; border-top: 1px solid #e2e8f0; margin: 2em 0; }
+ul, ol { margin: 0.5em 0; padding-left: 2em; }
+strong { color: #0f172a; }
+</style>
+</head>
+<body>
+<h1>Session change history summary — PR #152〜#162</h1>
+<p>date: 2026-05-18<br>base: origin/main <code>ba1e26b</code>（PR #162 merged）<br>期間: 2026-05-15 〜 2026-05-18</p>
+<hr>
+<h2>1. 背景</h2>
+<p>本セッションは、<code>gyosei_tracker</code> リポジトリにおける以下 4 系統の作業を一連で実施した記録である。</p>
+<ul>
+<li><strong>OCR / source-confirmed 系</strong>: AI Deep Dive が指摘した OCR / 解説品質 / answerBoolean 矛盾候補を、書籍原本画像と照合して修正</li>
+<li><strong>data patch 系</strong>: source-confirmed な textual replacement と answerBoolean 修正を data/reviewed_import.json / public/data/reviewed_import.json に反映</li>
+<li><strong>UI 修正系（参考書順 sort）</strong>: /exercise のセクション一覧が sectionTitle 文字列順で並び、参考書順とずれていた問題を修正</li>
+<li><strong>UI 修正系（/review padding density）</strong>: セッション初期から保留していた stash@{0} の余白調整を専用 PR で再現</li>
+</ul>
+<p>期間中の PR は <strong>#152 〜 #162 の 11 件</strong>。すべて squash merge で main へ取り込み済み。</p>
+<hr>
+<h2>2. 期間・対象PR</h2>
+<table>
+<tr><td>PR</td><td>merge commit</td><td>title</td><td>merged at</td></tr>
+<tr><td>#152</td><td><code>883a6fd</code></td><td>docs: record p0 source check for proxy ocr findings</td><td>2026-05-15 15:15Z</td></tr>
+<tr><td>#153</td><td><code>0e2c34e</code></td><td>docs: map cancellation ocr findings</td><td>2026-05-15 15:20Z</td></tr>
+<tr><td>#154</td><td><code>916b6cc</code></td><td>docs: record p0 source check for cancellation ocr findings</td><td>2026-05-16 07:45Z</td></tr>
+<tr><td>#155</td><td><code>643f0f1</code></td><td>docs: map prescription ocr findings</td><td>2026-05-17 14:42Z</td></tr>
+<tr><td>#156</td><td><code>1d62f69</code></td><td>docs: record p0 source check for prescription findings</td><td>2026-05-17 14:55Z</td></tr>
+<tr><td>#157</td><td><code>aa51799</code></td><td>docs: design p0 textual patch batch</td><td>2026-05-17 15:21Z</td></tr>
+<tr><td>#158</td><td><code>a1439b9</code></td><td>fix: restore p0 source-confirmed text</td><td>2026-05-18 10:52Z</td></tr>
+<tr><td>#159</td><td><code>ec2e009</code></td><td>fix: correct p0 prescription answer</td><td>2026-05-18 11:34Z</td></tr>
+<tr><td>#160</td><td><code>80fe916</code></td><td>fix: restore source-confirmed prescription text</td><td>2026-05-18 11:43Z</td></tr>
+<tr><td>#161</td><td><code>b29a8f4</code></td><td>fix: sort sections by reference order</td><td>2026-05-18 13:59Z</td></tr>
+<tr><td>#162</td><td><code>ba1e26b</code></td><td>fix: tighten review spacing</td><td>2026-05-18 14:26Z</td></tr>
+</table>
+<hr>
+<h2>3. 全体サマリー</h2>
+<table>
+<tr><td>観点</td><td>内容</td></tr>
+<tr><td>docs PR 数</td><td>7 件（#152, #153, #154, #155, #156, #157, #162 の docs 部）</td></tr>
+<tr><td>data patch PR 数</td><td>3 件（#158, #159, #160）</td></tr>
+<tr><td>UI fix PR 数</td><td>2 件（#161, #162）</td></tr>
+<tr><td>answerBoolean 修正</td><td>1 件（時効 #17, false → true）</td></tr>
+<tr><td>source-confirmed Q/E patch 対象</td><td>6 problems（A1 5 件 + 時効 #5）</td></tr>
+<tr><td>DATA_VERSION bump 回数</td><td>3 回</td></tr>
+<tr><td>触ったセクション</td><td>民法・総則 <code>03_代理</code> / <code>04_無効・取消し・条件・期限</code> / <code>06_時効</code></td></tr>
+<tr><td>/exercise 全章 sort 改善</td><td>19 chapters すべて</td></tr>
+<tr><td>stash@{0}</td><td>引き続き残存（履歴として保管）</td></tr>
+</table>
+<hr>
+<h2>4. PR 別変更履歴テーブル</h2>
+<table>
+<tr><td>PR</td><td>種別</td><td>変更ファイル</td><td>主な内容</td></tr>
+<tr><td>#152</td><td>docs</td><td><code>p0_source_check_03_dairi_ai_deep_dive.md</code></td><td>03_代理 #15 / #30 の書籍原本照合ログ</td></tr>
+<tr><td>#153</td><td>docs</td><td><code>ai_deep_dive_muko_torikeshi_problem_mapping_audit.md</code></td><td>無効・取消し 8 問の AI Deep Dive 指摘 mapping audit</td></tr>
+<tr><td>#154</td><td>docs</td><td><code>p0_source_check_muko_torikeshi_ai_deep_dive.md</code></td><td>無効・取消し #2 / #8 の書籍原本照合ログ</td></tr>
+<tr><td>#155</td><td>docs</td><td><code>ai_deep_dive_jikou_problem_mapping_audit.md</code></td><td>時効 25 問の AI Deep Dive 指摘 mapping audit</td></tr>
+<tr><td>#156</td><td>docs</td><td><code>p0_source_check_jikou_ai_deep_dive.md</code></td><td>時効 #5 / #17 / #21 の書籍原本照合ログ（#17 で answerBoolean 矛盾 confirmed）</td></tr>
+<tr><td>#157</td><td>docs</td><td><code>p0_textual_patch_design_6_problems.md</code></td><td>A1 5 件 batch / A2 時効 #5 caveat / #17 単独 PR の patch design</td></tr>
+<tr><td>#158</td><td>data</td><td><code>data/reviewed_import.json</code>, <code>public/data/reviewed_import.json</code>, <code>src/lib/db.ts</code></td><td>A1 5 件 textual-only patch + DATA_VERSION bump</td></tr>
+<tr><td>#159</td><td>data</td><td>同上</td><td>時効 #17 answerBoolean <code>false → true</code> + Q/E text + DATA_VERSION bump</td></tr>
+<tr><td>#160</td><td>data + docs</td><td>上記 + <code>p0_source_recheck_jikou_05.md</code></td><td>時効 #5 caveat 解消 + Q/E text + DATA_VERSION bump</td></tr>
+<tr><td>#161</td><td>UI</td><td><code>src/app/exercise/page.tsx</code></td><td>/exercise セクション sort を sourcePageQuestion/sourcePage/seqNo ベースに変更</td></tr>
+<tr><td>#162</td><td>UI + docs</td><td><code>src/app/review/page.tsx</code>, <code>review-padding-density/change_history_20260518.{md,html}</code></td><td>/review padding density fix + 変更履歴 MD/HTML</td></tr>
+</table>
+<hr>
+<h2>5. OCR / source-confirmed 系の流れ</h2>
+<h3>サブセッション 1: 03_代理（民法・総則・代理）</h3>
+<ul>
+<li>audit doc は前セッション PR #151（範囲外）で merge 済み</li>
+<li>本セッション開始時に source-check doc を <strong>PR #152</strong> で固定</li>
+<li>対象 problemId:</li>
+<p>  - <code>KB2025-p230-q01</code> seq=6（書籍 p.586 #21、ab=×）<br>  - <code>KB2025-p233-q01</code> seq=3（書籍 p.568 #15、ab=○）</p>
+<li>source 確認方法: <code>images_preprocessed/0230.png</code>, <code>0233.png</code> 高解像度読込</li>
+<li>結論: answerBoolean は両者とも書籍と一致して正しい。Q（と #15 の E）のみ OCR/parser hallucination 起因の崩れを書籍原文で置換する</li>
+</ul>
+<h3>サブセッション 2: 無効・取消し・条件・期限</h3>
+<ul>
+<li>AI Deep Dive 指摘 8 問の mapping audit を <strong>PR #153</strong> で固定</li>
+<li>対象 P0 problemId:</li>
+<p>  - <code>KB2025-p236-q01</code> seq=1（書籍 p.574 #8、ab=×、E 整形）<br>  - <code>KB2025-p237-q01</code> seq=1（書籍 p.576 #14、ab=○、「畏怖の状態が続いたので」など）</p>
+<li>source-check doc を <strong>PR #154</strong> で固定</li>
+<li>audit 段階で「#2 の E は法的に誤説明」と推定したが、書籍 E 自体が同じ記述だったため OCR崩れ部分のみ修正する方針に補正</li>
+</ul>
+<h3>サブセッション 3: 時効</h3>
+<ul>
+<li>AI Deep Dive 指摘 25 問の mapping audit を <strong>PR #155</strong> で固定</li>
+<li>対象 P0 problemId:</li>
+<p>  - <code>KB2025-p242-q01</code> seq=4（書籍 p.586 #4、<strong>ab=○ ← 現状 false と矛盾</strong>）<br>  - <code>KB2025-p240-q01</code> seq=5（書籍 p.582 #9、ab=×、Q+E parser hallucination + 判例主体逆転）<br>  - <code>KB2025-p244-q01</code> seq=2（書籍 p.590 #3、ab=×、Q+E 全文崩壊）</p>
+<li>source-check doc を <strong>PR #156</strong> で固定</li>
+<li><strong>#17 は本セッション初の confirmed answerBoolean 修正案件</strong>（民法152条2項の被保佐人承認）</li>
+<li>#5 は当初 caveated だったが、本セッション後半で <code>images/0240.png</code>（raw）を高解像度で再読込し caveat 解消</li>
+</ul>
+<hr>
+<h2>6. data patch 系の流れ</h2>
+<p>A: textual-only patch のグループ → 1 つの batch にまとめ<br>B: answerBoolean 変更を含むもの → 単独 PR</p>
+<h3>#157: 統合 patch design</h3>
+<ul>
+<li>A1（exact source-confirmed 5 件）: <code>KB2025-p230-q01/6</code>, <code>KB2025-p233-q01/3</code>, <code>KB2025-p236-q01/1</code>, <code>KB2025-p237-q01/1</code>, <code>KB2025-p244-q01/2</code></li>
+<li>A2（caveated）: 時効 #5（後の追加 source 確認で解消）</li>
+<li>B（answerBoolean 変更あり）: 時効 #17</li>
+</ul>
+<h3>#158: A1 batch 実装</h3>
+<ul>
+<li>5 件すべて Q/E のみ修正、answerBoolean は不変</li>
+<li>DATA_VERSION: <code>2026-05-06-question-type-descriptive</code> → <code>2026-05-18-p0-textual-fix-a1</code></li>
+<li>全体 answerBoolean count 不変（true: 1134 / false: 1314）</li>
+</ul>
+<h3>#159: 時効 #17 単独 PR</h3>
+<ul>
+<li><code>KB2025-p242-q01</code> seq=4 の answerBoolean を <code>false → true</code> に修正、Q/E も書籍原文に置換</li>
+<li>DATA_VERSION: <code>2026-05-18-p0-textual-fix-a1</code> → <code>2026-05-18-p0-answer-fix-b1</code></li>
+<li>全体 answerBoolean count: true <code>1134 → 1135</code> / false <code>1314 → 1313</code>（+1 / -1）</li>
+</ul>
+<h3>#160: 時効 #5 caveat 解消 + patch</h3>
+<ul>
+<li>当初 caveated として A1 batch から除外していたが、本セッション内で <code>images/0240.png</code> 高解像度版で再読込</li>
+<li>Q「これを建物賃借人Cに賃貸している場合に」/ E「直接利益を受けるのは『建物の所有者』」を exact confirmed</li>
+<li>answerBoolean は不変（false）、Q/E のみ書籍原文に置換</li>
+<li>DATA_VERSION: <code>2026-05-18-p0-answer-fix-b1</code> → <code>2026-05-18-p0-textual-fix-a2</code></li>
+</ul>
+<hr>
+<h2>7. DATA_VERSION 変遷</h2>
+<table>
+<tr><td>時点</td><td>DATA_VERSION</td><td>bump 理由</td></tr>
+<tr><td>セッション開始時</td><td><code>2026-05-06-question-type-descriptive</code></td><td>—</td></tr>
+<tr><td>#158 merge 後</td><td><code>2026-05-18-p0-textual-fix-a1</code></td><td>A1 batch（5 件 Q/E）反映のため既存ユーザー再 import</td></tr>
+<tr><td>#159 merge 後</td><td><code>2026-05-18-p0-answer-fix-b1</code></td><td>時効 #17 answerBoolean 修正反映のため</td></tr>
+<tr><td>#160 merge 後</td><td><code>2026-05-18-p0-textual-fix-a2</code></td><td>時効 #5 Q/E 反映のため</td></tr>
+<tr><td>#161 merge 後</td><td>（変更なし）</td><td>UI sort 修正のみ、データ更新なし</td></tr>
+<tr><td>#162 merge 後</td><td>（変更なし）</td><td>UI padding 修正のみ、データ更新なし</td></tr>
+</table>
+<p>→ 既存ユーザーが次回ログインすると <code>refreshProblemDataIfNeeded</code> が走り、<code>a2</code> までの全更新が一括取り込まれる。</p>
+<hr>
+<h2>8. answerBoolean 変更の有無</h2>
+<table>
+<tr><td>PR</td><td>answerBoolean 変更</td><td>件数</td></tr>
+<tr><td>#152〜#157</td><td>なし</td><td>0</td></tr>
+<tr><td>#158</td><td>なし</td><td>0（A1 5 件すべて ab 不変）</td></tr>
+<tr><td><strong>#159</strong></td><td><strong>あり</strong></td><td><strong>1（時効 #17、false → true）</strong></td></tr>
+<tr><td>#160</td><td>なし</td><td>0（時効 #5 ab 不変）</td></tr>
+<tr><td>#161, #162</td><td>なし</td><td>0（UI 修正のみ）</td></tr>
+</table>
+<p><strong>本セッション中の answerBoolean 修正は #159 の 1 件のみ</strong>。全体カウント: <code>true: 1134 → 1135</code>, <code>false: 1314 → 1313</code>。</p>
+<hr>
+<h2>9. UI 修正系の流れ</h2>
+<h3>#161: /exercise 参考書順 section sort</h3>
+<ul>
+<li>問題: <code>src/app/exercise/page.tsx</code> の <code>loadCurriculumData</code> で section sort が <code>sectionTitle.localeCompare('ja-JP')</code> を主キーにしており、参考書順と一致しない</li>
+<li>例: 民法・物権で <code>02_物権変動と登記</code> が最初、<code>不動産物権変動</code> が末尾近くに来てしまう</li>
+<li>修正: <code>sourcePageQuestion → sourcePage → seqNo → sectionTitle</code> の優先順位で sort</li>
+<li>全 19 chapters で pageRef 単調増加を確認</li>
+</ul>
+<h3>#162: /review padding density</h3>
+<ul>
+<li>問題: セッション初期に user が「間かくなりすぎ」と指摘した余白</li>
+<li>当時 stash で保留していた変更を本セッション末で再現</li>
+<li>変更箇所: 8 種類 / 15 ヶ所（root container, stats card, refresh button, tab button, TopicCard header）</li>
+<li>stash@{0} は read-only で内容確認のみ、apply/drop は実行せず</li>
+</ul>
+<hr>
+<h2>10. 参考書順ソート修正の内容（#161 詳細）</h2>
+<table>
+<tr><td>sort 優先度</td><td>内容</td><td>fallback</td></tr>
+<tr><td>1</td><td>min sourcePageQuestion（参考書ページ番号）</td><td><code>UNKNOWN_ORDER = 999999</code></td></tr>
+<tr><td>2</td><td>min sourcePage（Kindle キャプチャ番号）</td><td>同上</td></tr>
+<tr><td>3</td><td>min seqNo（problemId の <code>-qNN</code> から抽出）</td><td>同上</td></tr>
+<tr><td>4</td><td>sectionTitle.localeCompare('ja-JP')</td><td>tiebreaker</td></tr>
+</table>
+<p><strong>before / after 例（民法・物権 top 5）:</strong></p>
+<p>Before（sectionTitle 文字列順）:</p>
+<ol>
+<li><code>02_物権変動と登記</code>（pageRef 596）</li>
+<li><code>3 所有権 1) 所有権の限界 (相隣関係)</code>（pageRef 614）</li>
+<li><code>4 用益物権</code>（pageRef 626）</li>
+<li><code>その他</code>（pageRef 626）</li>
+<li><code>一括競売</code>（pageRef 660）</li>
+</ol>
+<p>After（参考書順）:</p>
+<ol>
+<li><code>不動産物権変動</code>（pageRef 592）</li>
+<li><code>物権的請求権</code>（pageRef 592）</li>
+<li><code>物権総論</code>（pageRef 594）</li>
+<li><code>02_物権変動と登記</code>（pageRef 596）</li>
+<li><code>登記を対抗要件とする物権変動</code>（pageRef 598）</li>
+</ol>
+<hr>
+<h2>11. /review padding density fix の内容（#162 詳細）</h2>
+<p>stash@{0}（base <code>9c3793d</code>）を read-only で確認し、内容を current main <code>b29a8f4</code> に手動再現。</p>
+<table>
+<tr><td>対象</td><td>before</td><td>after</td></tr>
+<tr><td>TopicCard header</td><td><code>p-4 space-y-1.5</code></td><td><code>px-3 py-2.5 space-y-1</code></td></tr>
+<tr><td>ページ root</td><td><code>pt-6 space-y-6</code></td><td><code>pt-4 space-y-3</code></td></tr>
+<tr><td>Stats grid</td><td><code>grid grid-cols-3 gap-3</code></td><td><code>grid grid-cols-3 gap-2</code></td></tr>
+<tr><td>Stats card × 3</td><td><code>rounded-xl ... p-3</code></td><td><code>rounded-lg ... px-2 py-1.5</code></td></tr>
+<tr><td>Stats 数値 × 3</td><td><code>text-2xl</code></td><td><code>text-xl</code></td></tr>
+<tr><td>Stats ラベル × 3</td><td><code>text-xs text-slate-400</code></td><td><code>text-[10px] text-slate-400</code></td></tr>
+<tr><td>Refresh button</td><td><code>rounded-xl py-3</code></td><td><code>rounded-lg py-2 text-sm</code></td></tr>
+<tr><td>Tab × 2</td><td><code>py-2</code></td><td><code>py-1.5</code></td></tr>
+</table>
+<p>Diff stat: <strong>15 insertions / 15 deletions</strong>（stash@{0} と完全一致）。</p>
+<hr>
+<h2>12. 変更したファイル分類</h2>
+<table>
+<tr><td>分類</td><td>ファイル</td><td>PR</td></tr>
+<tr><td>data（書籍原本由来の textual fix + ab fix）</td><td><code>data/reviewed_import.json</code></td><td>#158, #159, #160</td></tr>
+<tr><td>public data（同上、同期）</td><td><code>public/data/reviewed_import.json</code></td><td>#158, #159, #160</td></tr>
+<tr><td>DATA_VERSION 管理</td><td><code>src/lib/db.ts</code></td><td>#158, #159, #160</td></tr>
+<tr><td>UI sort logic</td><td><code>src/app/exercise/page.tsx</code></td><td>#161</td></tr>
+<tr><td>UI padding</td><td><code>src/app/review/page.tsx</code></td><td>#162</td></tr>
+<tr><td>audit / source-check docs</td><td><code>context/working/sessions/ocr-text-quality-source-check/*.md</code></td><td>#152〜#157, #160</td></tr>
+<tr><td>UI change history docs</td><td><code>context/working/sessions/review-padding-density/*.{md,html}</code></td><td>#162</td></tr>
+</table>
+<hr>
+<h2>13. 変更しなかったもの</h2>
+<ul>
+<li><strong>builder / type / 他ライブラリ</strong>: <code>src/lib/review-pack-builder.ts</code>, <code>src/lib/review-syllabus-builder.ts</code>, <code>src/types/**</code> — 本セッションで一切触らず</li>
+<li><strong>taxonomy 系</strong>: subjectCandidate / chapterCandidate / sectionTitle / questionType — 全 patch で不変</li>
+<li><strong>sourcePage 系</strong>: sourcePage / sourcePageQuestion / sourcePageAnswer — 全 patch で不変</li>
+<li><strong>他 problem の Q/E/ab</strong>: A1 5 件 + #17 + #5 以外は一切触らず</li>
+<li><strong>stash@{0}</strong>: 履歴として残存。apply/drop なし</li>
+<li><strong>他 PR の OPEN 状態</strong>: セッション中常に OPEN PR = 0（merge 完了まで次の PR を作らない）</li>
+</ul>
+<hr>
+<h2>14. 検証結果サマリー</h2>
+<p>各 patch PR で確認した代表的検証項目:</p>
+<table>
+<tr><td>検証</td><td>#158</td><td>#159</td><td>#160</td><td>#161</td><td>#162</td></tr>
+<tr><td>JSON parse</td><td>OK</td><td>OK</td><td>OK</td><td>—</td><td>—</td></tr>
+<tr><td>data/public sync</td><td>OK</td><td>OK</td><td>OK</td><td>—</td><td>—</td></tr>
+<tr><td>branch count = 2448</td><td>OK</td><td>OK</td><td>OK</td><td>—</td><td>—</td></tr>
+<tr><td>answerBoolean total 期待値</td><td>OK</td><td>OK</td><td>OK</td><td>—</td><td>—</td></tr>
+<tr><td>対象外 ab 不変</td><td>OK</td><td>OK</td><td>OK</td><td>—</td><td>—</td></tr>
+<tr><td>src diff = DATA_VERSION 線 のみ</td><td>OK</td><td>OK</td><td>OK</td><td>—</td><td>—</td></tr>
+<tr><td><code>git diff --check</code></td><td>clean</td><td>clean</td><td>clean</td><td>clean</td><td>clean</td></tr>
+<tr><td><code>tsc --noEmit</code></td><td>pass</td><td>pass</td><td>pass</td><td>pass</td><td>pass</td></tr>
+<tr><td><code>npm run build</code></td><td>pass</td><td>pass</td><td>pass</td><td>pass</td><td>pass</td></tr>
+<tr><td>stash@{0} 残存</td><td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>OK</td></tr>
+</table>
+<hr>
+<h2>15. 残タスク</h2>
+<h3>短期（実機 user 確認）</h3>
+<ul>
+<li>ログイン済みブラウザで <code>/exercise</code> を開き、民法 &gt; 物権の先頭が <code>不動産物権変動</code> / <code>物権的請求権</code> / <code>物権総論</code> から始まることを確認</li>
+<li>ログイン済みブラウザで <code>/review</code> を開き、密度が改善されたことを確認</li>
+<li>ログイン済みブラウザで P0 5 件（#15, #30, #2, #8, #21）+ #17 + #5 の演習画面で Q/E と正誤判定が新テキスト・新 ab で出ることを確認</li>
+</ul>
+<h3>中期（mapping audit から派生）</h3>
+<ul>
+<li>03_代理 audit で P1 とした #17(audit番号), #23, #24, #29, #31 の source-check / patch</li>
+<li>無効・取消し audit で P1 とした #5(audit番号), #7 の source-check / patch</li>
+<li>時効 audit で P1 とした #1, #2(audit番号), #8, #19 の source-check / patch</li>
+<li>時効 audit で P3 とした <code>「しないとは」→「しないときは」</code> 系統的 OCR 崩れの一括 patch（#22-#25）</li>
+</ul>
+<h3>長期</h3>
+<ul>
+<li>parser / OCR 改善: 「漢字 → 英単語 hallucination」「E と ab の論理矛盾」検知ルール追加</li>
+<li>民法 &gt; 物権以外の chapter での参考書順 sort の user 実機確認</li>
+<li>stash@{0} の最終処分（履歴として保管継続 or drop）</li>
+</ul>
+<hr>
+<h2>16. stash@{0} の扱い</h2>
+<pre><code>
+stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+</code></pre>
+<ul>
+<li>セッション中、すべての作業前後で残存を確認</li>
+<li>#162 で stash 内容を read-only で参照し手動再現したが、stash 本体は touch せず</li>
+<li>引き続き履歴として保管。今後の処理方針:</li>
+</ul>
+<p>  - <strong>継続保管（現方針）</strong>: 派生 PR の origin として参照可能性を残す<br>  - drop: PR #162 と内容一致のため必要なら drop 可能、ただし急がない</p>
+<hr>
+<h2>17. 今後の運用ルール</h2>
+<ul>
+<li><strong>PR 作成までは一気に進めてよい</strong></li>
+<p>  - 実装 → tsc/build → diff 検証 → branch → commit → push → PR 作成 を 1 タスクで実行</p>
+<li><strong>エラー・検証 NG・想定外差分が出たら即停止</strong></li>
+<p>  - 自己判断で修正して続行しない<br>  - retry しない（read-only 確認コマンドは可）<br>  - 停止時は: どの step / 実行コマンド / エラー内容 / git status / staged/unstaged/untracked / HEAD/origin/main / stash 状態 / 触ったファイルを報告</p>
+<li><strong>merge は必ず承認待ち</strong></li>
+</ul>
+<p>  - pre-merge verification（mergeable / mergeStateStatus / Vercel SUCCESS）を確認した後、user の明示 merge 指示を待つ<br>  - merge 後は origin/main fast-forward と OPEN PR = 0 を再確認</p>
+<hr>
+<h2>注意事項</h2>
+<p>本 doc は MD を source of truth とする。HTML 版は閲覧用 snapshot であり、直接編集してはならない。</p>
+</body>
+</html>
