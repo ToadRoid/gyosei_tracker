@@ -114,6 +114,26 @@ async function loadCurriculumData(): Promise<SubjectInfo[]> {
   // displaySectionTitle (UI用正規化ラベル) を優先し、なければ sectionTitle (raw) にフォールバック
   const subjectMap = new Map<string, Map<string, Map<string, string[]>>>();
 
+  // セクション表示順は sectionTitle 文字列ではなく、参考書順（sourcePageQuestion → sourcePage → seqNo）で並べる。
+  // 各セクション内の最小値を保持し、章内 section を昇順ソートするためのキーにする。
+  const UNKNOWN_ORDER = 999999;
+  type SectionOrderData = { pageRefOrder: number; sourcePageOrder: number; seqOrder: number };
+  const parseOrderNumber = (value: string | undefined | null): number | null => {
+    const trimmed = value?.trim();
+    if (!trimmed || !/^\d+$/.test(trimmed)) return null;
+    return Number(trimmed);
+  };
+  const parseSeqOrder = (problemId: string): number | null =>
+    parseOrderNumber(problemId.match(/-q(\d+)$/)?.[1]);
+  const compareSectionOrder = (a: SectionOrderData, b: SectionOrderData): number => {
+    if (a.pageRefOrder !== b.pageRefOrder) return a.pageRefOrder - b.pageRefOrder;
+    if (a.sourcePageOrder !== b.sourcePageOrder) return a.sourcePageOrder - b.sourcePageOrder;
+    if (a.seqOrder !== b.seqOrder) return a.seqOrder - b.seqOrder;
+    return 0;
+  };
+  // key: "subjectId||chapterId||sectionLabel"
+  const sectionOrderMap = new Map<string, SectionOrderData>();
+
   for (const p of allProblems) {
     const sid = p.subjectId || UNCLASSIFIED_SUBJECT_ID;
     const cid = p.chapterId || UNCLASSIFIED_CHAPTER_ID;
@@ -126,6 +146,18 @@ async function loadCurriculumData(): Promise<SubjectInfo[]> {
     const secMap = chapMap.get(cid)!;
     if (!secMap.has(sec)) secMap.set(sec, []);
     secMap.get(sec)!.push(p.problemId);
+
+    // 参考書順 ソートキー: 同一セクション内の最小値を保持
+    const orderKey = `${sid}||${cid}||${sec}`;
+    const candidate: SectionOrderData = {
+      pageRefOrder: parseOrderNumber(p.sourcePageQuestion) ?? UNKNOWN_ORDER,
+      sourcePageOrder: parseOrderNumber(p.sourcePage) ?? UNKNOWN_ORDER,
+      seqOrder: parseSeqOrder(p.problemId) ?? UNKNOWN_ORDER,
+    };
+    const existing = sectionOrderMap.get(orderKey);
+    if (!existing || compareSectionOrder(candidate, existing) < 0) {
+      sectionOrderMap.set(orderKey, candidate);
+    }
   }
 
   // 4. Build SubjectInfo[] following master order
@@ -145,7 +177,15 @@ async function loadCurriculumData(): Promise<SubjectInfo[]> {
       if (!secMap) continue;
 
       const sectionInfos: SectionInfo[] = [];
-      for (const [sectionTitle, problemIds] of [...secMap.entries()].sort((a, b) => a[0].localeCompare(b[0], 'ja-JP'))) {
+      const fallbackOrder: SectionOrderData = { pageRefOrder: UNKNOWN_ORDER, sourcePageOrder: UNKNOWN_ORDER, seqOrder: UNKNOWN_ORDER };
+      const sortedSecEntries = [...secMap.entries()].sort((a, b) => {
+        const orderA = sectionOrderMap.get(`${subject.id}||${chapter.id}||${a[0]}`) ?? fallbackOrder;
+        const orderB = sectionOrderMap.get(`${subject.id}||${chapter.id}||${b[0]}`) ?? fallbackOrder;
+        const cmp = compareSectionOrder(orderA, orderB);
+        if (cmp !== 0) return cmp;
+        return a[0].localeCompare(b[0], 'ja-JP');
+      });
+      for (const [sectionTitle, problemIds] of sortedSecEntries) {
         const currentLap = computeCurrentLap(problemIds);
         const answeredInCurrentLap = problemIds.filter((id) =>
           answeredSet.has(`${id}::${currentLap}`),
