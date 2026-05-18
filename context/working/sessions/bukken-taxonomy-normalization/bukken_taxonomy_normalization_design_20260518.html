@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>民法&gt;物権 taxonomy normalization (Gate B)</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;max-width:1000px;margin:2em auto;padding:0 1em;line-height:1.6;color:#1f2937}h1,h2,h3{color:#1e293b;margin-top:1.5em}h1{border-bottom:2px solid #cbd5e1;padding-bottom:.3em}h2{border-bottom:1px solid #e2e8f0;padding-bottom:.2em;margin-top:2em}table{border-collapse:collapse;margin:1em 0;font-size:.92em}th,td{border:1px solid #cbd5e1;padding:.4em .7em;text-align:left;vertical-align:top}th{background:#f1f5f9}code{background:#f1f5f9;padding:.1em .3em;border-radius:3px;font-family:SFMono-Regular,Consolas,monospace;font-size:.9em}pre{background:#0f172a;color:#e2e8f0;padding:1em;border-radius:6px;overflow-x:auto}pre code{background:transparent;color:inherit;padding:0}hr{border:none;border-top:1px solid #e2e8f0;margin:2em 0}ul,ol{margin:.5em 0;padding-left:2em}strong{color:#0f172a}</style>
+</head><body><h1>民法 &gt; 物権 taxonomy / sectionTitle 正規化 — 設計（Gate B: blocked）</h1>
+<p>date: 2026-05-18<br>base: origin/main <code>54ab4ab</code><br>scope: data/reviewed_import.json と public/data/reviewed_import.json における <code>subjectCandidate=minpo / chapterCandidate=minpo-bukken</code> 配下の sectionTitle 粒度を、参考書の階層構造に寄せる正規化の設計</p>
+<p><strong>判定: Gate B（blocked）— 必要な source image が不足しているため、data patch には進めない。本 PR は design doc のみ</strong>。</p>
+<hr>
+<h2>1. 背景</h2>
+<ul>
+<li>PR #161 で <code>/exercise</code> のセクション sort は <code>sourcePageQuestion / sourcePage / seqNo</code> 順に修正済み</li>
+<li>ただし sort では「並び」しか直せない。「分類粒度」の問題は残ったまま</li>
+<li>民法 &gt; 物権 では、参考書上の <strong>親見出し（例: 物権総論 / 担保物権）と子見出し（例: 不動産物権変動 / 抵当権の効力）と OCR 由来の細目見出しが同一階層に混在</strong> している</li>
+<li>結果として <code>/exercise</code> で物権を開くと、24 個の section が異なる粒度で並んでしまう</li>
+</ul>
+<hr>
+<h2>2. 現在の問題</h2>
+<h3>民法 &gt; 物権 sectionTitle inventory（sourcePageQuestion 昇順）</h3>
+<table>
+<tr><td>count</td><td>unique problemIds</td><td>min sourcePageQuestion</td><td>min sourcePage</td><td>sectionTitle</td></tr>
+<tr><td>3</td><td>1</td><td>592</td><td>245</td><td>物権的請求権</td></tr>
+<tr><td>1</td><td>1</td><td>592</td><td>245</td><td>不動産物権変動</td></tr>
+<tr><td><strong>63</strong></td><td><strong>12</strong></td><td><strong>594</strong></td><td><strong>246</strong></td><td><strong>物権総論</strong> ← 親レベルの大規模カテゴリ</td></tr>
+<tr><td>8</td><td>2</td><td>596</td><td>247</td><td>02_物権変動と登記</td></tr>
+<tr><td>4</td><td>1</td><td>598</td><td>248</td><td>登記を対抗要件とする物権変動</td></tr>
+<tr><td>2</td><td>1</td><td>605</td><td>251</td><td>動産物権変動 1 対抗要件</td></tr>
+<tr><td>3</td><td>1</td><td>605</td><td>251</td><td>動産物権変動 2 即時取得</td></tr>
+<tr><td>10</td><td>2</td><td>608</td><td>252</td><td>物権</td></tr>
+<tr><td>5</td><td>1</td><td>614</td><td>256</td><td>3 所有権 1) 所有権の限界 (相隣関係)</td></tr>
+<tr><td>5</td><td>1</td><td>620</td><td>259</td><td>共有</td></tr>
+<tr><td>4</td><td>1</td><td>626</td><td>262</td><td>(EMPTY)</td></tr>
+<tr><td>1</td><td>1</td><td>626</td><td>262</td><td>4 用益物権</td></tr>
+<tr><td><strong>64</strong></td><td><strong>14</strong></td><td><strong>632</strong></td><td><strong>265</strong></td><td><strong>担保物権</strong> ← 親レベルの大規模カテゴリ</td></tr>
+<tr><td>4</td><td>1</td><td>636</td><td>267</td><td>先取特権</td></tr>
+<tr><td>7</td><td>1</td><td>646</td><td>272</td><td>抵当権の効力及び目的物の範囲</td></tr>
+<tr><td>4</td><td>1</td><td>654</td><td>276</td><td>法定地上権</td></tr>
+<tr><td>1</td><td>1</td><td>660</td><td>279</td><td>一括競売</td></tr>
+<tr><td>3</td><td>1</td><td>660</td><td>279</td><td>抵当権者に対抗できない賃借人の地位</td></tr>
+<tr><td>2</td><td>1</td><td>662</td><td>280</td><td>抵当不動産の第三取得者の保護</td></tr>
+<tr><td>2</td><td>1</td><td>664</td><td>281</td><td>抵当権の処分</td></tr>
+<tr><td>2</td><td>1</td><td>664</td><td>281</td><td>共同抵当</td></tr>
+<tr><td>1</td><td>1</td><td>664</td><td>281</td><td>抵当権の消滅</td></tr>
+<tr><td>5</td><td>1</td><td>666</td><td>282</td><td>根抵当権</td></tr>
+<tr><td>1</td><td>1</td><td>670</td><td>284</td><td>譲渡担保</td></tr>
+</table>
+<p><strong>合計</strong>: 24 sections / 205 branches</p>
+<h3>主要な所見</h3>
+<ol>
+<li><strong>物権総論（63 問、page 246-264）と 担保物権（64 問、page 265-285）が大規模</strong> → 親見出しレベルで OCR/parser が問題を集約してしまい、子見出しごとに分けられていない疑い</li>
+<li><strong>これら 2 親カテゴリ + 22 個の細目 sections が同一階層</strong> に並んでいる</li>
+<li><strong>(EMPTY) 4 問</strong> が page 262 にあり、おそらく <code>4 用益物権</code> の前後に属する section が空欄になっている</li>
+<li>「<strong>動産物権変動 1 対抗要件</strong>」「<strong>動産物権変動 2 即時取得</strong>」「<strong>3 所有権 1) 所有権の限界 (相隣関係)</strong>」は番号 + 名称形式で書かれている。参考書の見出し形式が漏れた可能性</li>
+</ol>
+<hr>
+<h2>3. 参考書階層（user 共有情報による推定）</h2>
+<pre><code>
+物権
+├── 物権総論
+│   ├── 1) 物権的請求権
+│   └── 2) 不動産物権変動
+│       └── 177条の「第三者」
+├── 物権変動と登記
+│   └── 登記を対抗要件とする物権変動
+├── 動産物権変動
+│   ├── 1) 対抗要件
+│   └── 2) 即時取得
+├── 所有権
+│   ├── 1) 所有権の限界（相隣関係）
+│   ├── 2) 共有
+│   └── ...
+├── 用益物権
+└── 担保物権
+    ├── 先取特権
+    ├── 抵当権の効力及び目的物の範囲
+    ├── 法定地上権
+    ├── 一括競売
+    ├── 抵当権者に対抗できない賃借人の地位
+    ├── 抵当不動産の第三取得者の保護
+    ├── 抵当権の処分
+    ├── 共同抵当
+    ├── 抵当権の消滅
+    ├── 根抵当権
+    └── 譲渡担保
+</code></pre>
+<p>→ <strong>物権総論 / 担保物権 は親見出し</strong>、それ以下の細目見出しが siblings として併存しているのが現在の data の問題。</p>
+<hr>
+<h2>4. Source image 確認結果（critical）</h2>
+<pre><code>
+ls images/*.png | sort -n | tail -1
+→ 0250.png
+</code></pre>
+<ul>
+<li><code>images/</code> には <strong>0001.png 〜 0250.png</strong> までしか存在しない</li>
+<li>民法 &gt; 物権 は Kindle pages <strong>245〜285</strong> に分布</li>
+<li>→ <strong>pages 251〜285 は source image 不在</strong></li>
+</ul>
+<h3>Image 有無別 branch カウント</h3>
+<table>
+<tr><td>範囲</td><td>branch 数</td><td>比率</td></tr>
+<tr><td><strong>image 有（sourcePage ≤ 250）</strong></td><td>28</td><td>14%</td></tr>
+<tr><td><strong>image 無（sourcePage &gt; 250）</strong></td><td><strong>177</strong></td><td><strong>86%</strong></td></tr>
+</table>
+<h3>Image 無し branches を sectionTitle 別に集計</h3>
+<table>
+<tr><td>件数</td><td>sectionTitle</td></tr>
+<tr><td>64</td><td>担保物権（全件 image 無し）</td></tr>
+<tr><td>51</td><td>物権総論（page 251-264 部分）</td></tr>
+<tr><td>10</td><td>物権（page 252, 284）</td></tr>
+<tr><td>7</td><td>抵当権の効力及び目的物の範囲</td></tr>
+<tr><td>5</td><td>3 所有権 / 共有 / 根抵当権</td></tr>
+<tr><td>4</td><td>(EMPTY) / 先取特権 / 法定地上権</td></tr>
+<tr><td>3</td><td>動産物権変動 2 即時取得 / 抵当権者に対抗できない賃借人の地位</td></tr>
+<tr><td>2</td><td>動産物権変動 1 対抗要件 / 抵当不動産の第三取得者の保護 / 抵当権の処分 / 共同抵当</td></tr>
+<tr><td>1</td><td>4 用益物権 / 一括競売 / 抵当権の消滅 / 譲渡担保</td></tr>
+</table>
+<p>→ 圧倒的多数で source image が不在。<strong>exact source-confirmed な分類正規化が不可能</strong>。</p>
+<hr>
+<h2>5. 正規化 mapping table（参考設計、未実装）</h2>
+<p>仮に source image が揃った場合の正規化方針（<strong>Gate A になったら採用する設計</strong>）:</p>
+<table>
+<tr><td>現在 sectionTitle</td><td>提案 normalized sectionTitle</td><td>確度</td></tr>
+<tr><td>物権的請求権</td><td><code>物権総論 / 物権的請求権</code></td><td>inferred</td></tr>
+<tr><td>不動産物権変動</td><td><code>物権総論 / 不動産物権変動</code></td><td>inferred</td></tr>
+<tr><td>物権総論（63 件）</td><td>個別に再分類が必要（page 別 source 確認）</td><td><strong>blocked</strong></td></tr>
+<tr><td>02_物権変動と登記</td><td><code>物権変動と登記</code> または <code>物権総論 / 物権変動と登記</code></td><td>inferred</td></tr>
+<tr><td>登記を対抗要件とする物権変動</td><td><code>物権変動と登記 / 登記を対抗要件とする物権変動</code></td><td>inferred</td></tr>
+<tr><td>動産物権変動 1 対抗要件</td><td><code>動産物権変動 / 対抗要件</code></td><td>inferred</td></tr>
+<tr><td>動産物権変動 2 即時取得</td><td><code>動産物権変動 / 即時取得</code></td><td>inferred</td></tr>
+<tr><td>物権（10 件）</td><td>個別に再分類が必要（特に page 252, 284）</td><td><strong>blocked</strong></td></tr>
+<tr><td>3 所有権 1) 所有権の限界 (相隣関係)</td><td><code>所有権 / 所有権の限界（相隣関係）</code></td><td>inferred</td></tr>
+<tr><td>共有</td><td><code>所有権 / 共有</code></td><td>inferred</td></tr>
+<tr><td>(EMPTY) 4 件 page 262</td><td><code>用益物権 / ?</code>（page 262 source 確認必須）</td><td><strong>blocked</strong></td></tr>
+<tr><td>4 用益物権</td><td><code>用益物権</code></td><td>inferred</td></tr>
+<tr><td>担保物権（64 件）</td><td>個別に再分類が必要</td><td><strong>blocked</strong></td></tr>
+<tr><td>先取特権 〜 譲渡担保（13 個の sub-sections）</td><td><code>担保物権 / &lt;name&gt;</code> パターンで再分類</td><td>inferred / 一部 blocked</td></tr>
+</table>
+<p><strong>確度の凡例</strong>:</p>
+<ul>
+<li>inferred: 法律体系・参考書通例から推定可能だが、書籍の section header が一致する保証はない</li>
+<li>blocked: source image 不在のため exact 確認不可</li>
+</ul>
+<hr>
+<h2>6. exact confirmed / inferred / blocked 区分</h2>
+<table>
+<tr><td>区分</td><td>件数</td><td>内訳</td></tr>
+<tr><td>exact source-confirmed</td><td>0</td><td>—</td></tr>
+<tr><td>inferred（法律体系/参考書通例から推定）</td><td>~10 sections</td><td>動産物権変動, 所有権 配下など</td></tr>
+<tr><td><strong>blocked（source image 不在）</strong></td><td><strong>2 大親 + 数件 = 大部分</strong></td><td>物権総論 63件, 担保物権 64件, 物権 10件, (EMPTY) 4件 など</td></tr>
+</table>
+<p>→ exact source-confirmed が <strong>0</strong> のため、Gate A 不可。</p>
+<hr>
+<h2>7. data patch 対象</h2>
+<p><strong>本 PR では data patch を行わない</strong>。</p>
+<p>理由:</p>
+<ol>
+<li>86% の branches が image 不在で exact 確認不能</li>
+<li>「inferred」だけで正規化を強行すると、参考書と異なる分類体系を data に焼き付けるリスク</li>
+<li>親見出しの「物権総論」「担保物権」を分解するには、各 problemId がどの sub-section に属するか書籍で確認しなければならない（127 件の確認作業）</li>
+</ol>
+<hr>
+<h2>8. data patch 対象外</h2>
+<ul>
+<li>全 24 sections / 205 branches すべて、本 PR では未変更</li>
+<li>Q / E / answerBoolean / sourcePage 系 / questionType も未変更</li>
+</ul>
+<hr>
+<h2>9. DATA_VERSION bump 要否</h2>
+<ul>
+<li>本 PR は data 未変更のため、<strong>DATA_VERSION bump 不要</strong></li>
+<li>現状: <code>2026-05-18-p0-textual-fix-a2</code> のまま</li>
+</ul>
+<hr>
+<h2>10. 検証方針（実装時、Gate A になった場合の参考）</h2>
+<p>将来の Gate A patch では以下が必須:</p>
+<table>
+<tr><td>検証項目</td><td>期待</td></tr>
+<tr><td>JSON parse</td><td>OK</td></tr>
+<tr><td>data/public sync</td><td>完全一致</td></tr>
+<tr><td>物権以外の branch 変更</td><td>0</td></tr>
+<tr><td>Q / E / answerBoolean / sourcePage / questionType 差分</td><td>0</td></tr>
+<tr><td>branch count</td><td>205 不変</td></tr>
+<tr><td>answerBoolean count</td><td>不変</td></tr>
+<tr><td>DATA_VERSION bump</td><td>必須</td></tr>
+<tr><td>src diff</td><td>DATA_VERSION line のみ</td></tr>
+<tr><td>/exercise 物権 表示</td><td>親→子の階層が見える</td></tr>
+<tr><td>tsc / build</td><td>pass</td></tr>
+<tr><td>git diff --check</td><td>clean</td></tr>
+</table>
+<hr>
+<h2>11. 変更しなかったもの</h2>
+<ul>
+<li>data/reviewed_import.json</li>
+<li>public/data/reviewed_import.json</li>
+<li>src/lib/db.ts（DATA_VERSION 含む）</li>
+<li>src/ 全般</li>
+<li>他 chapter の taxonomy</li>
+<li>Q / E / answerBoolean</li>
+<li>sourcePage / sourcePageQuestion / sourcePageAnswer</li>
+<li>questionType</li>
+<li>stash@{0}</li>
+</ul>
+<hr>
+<h2>12. stash@{0} 残存確認</h2>
+<pre><code>
+stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+</code></pre>
+<p>本タスク前後で touch せず、apply/drop なし。</p>
+<hr>
+<h2>13. Gate 判定根拠</h2>
+<table>
+<tr><td>判定条件</td><td>結果</td></tr>
+<tr><td>exact source-confirmed mapping が十分にあるか</td><td><strong>NO</strong>（image 不足、0/24 sections）</td></tr>
+<tr><td>推定が多いか</td><td><strong>YES</strong>（10/24 sections は inferred、それ以外は blocked）</td></tr>
+<tr><td>reference book pages が足りないか</td><td><strong>YES</strong>（pages 251-285 = 35 pages 不在）</td></tr>
+</table>
+<p>→ <strong>Gate B（blocked）確定</strong>。data patch 禁止、本 PR は design doc のみ。</p>
+<hr>
+<h2>14. 次のステップ（提案）</h2>
+<h3>Phase 1: Source image extension（最優先）</h3>
+<p><code>images/</code> に <strong>pages 0251〜0285</strong> を追加捕捉する。これがなければ正規化は推定で進めるしかない。</p>
+<ul>
+<li>kindle_capture.sh の sourcePage 範囲を拡張</li>
+<li>既存 OCR/import pipeline は触らない（reviewed_import.json は既に branch を持っている）</li>
+<li>純粋に画像追加のみ</li>
+</ul>
+<h3>Phase 2: 親見出し分解 audit</h3>
+<p>「物権総論」63 件と「担保物権」64 件を、page 別 + 問題内容別に再分類する audit を作成。各 branch の正しい sub-section を source image で確定する。</p>
+<h3>Phase 3: 細目見出し正規化</h3>
+<p><code>02_</code> 番号付き、<code> 1) </code> 番号付き、<code>(EMPTY)</code> などを参考書見出しに揃える。</p>
+<h3>Phase 4: data patch</h3>
+<p>Phase 2 / 3 の exact mapping が揃った段階で、本 design doc を Gate A に格上げして patch 実装。</p>
+<hr>
+<h2>15. 残タスク</h2>
+<ul>
+<li>同じ問題は <strong>民法 &gt; 債権</strong> や <strong>行政法</strong> など他 chapter でも発生している可能性。同様の inventory を取って優先度を判断</li>
+<li>「(EMPTY) sectionTitle」 4 件（page 262）は image 範囲外。OCR text-quality バックログに統合検討</li>
+</ul>
+<hr>
+<h2>注意事項</h2>
+<p>本 doc は MD を source of truth とする。HTML 版は閲覧用 snapshot であり、直接編集してはならない。</p></body></html>
