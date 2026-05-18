@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>時効 caveated recheck 20260518</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;max-width:1000px;margin:2em auto;padding:0 1em;line-height:1.6;color:#1f2937}h1,h2,h3{color:#1e293b;margin-top:1.5em}h1{border-bottom:2px solid #cbd5e1;padding-bottom:.3em}h2{border-bottom:1px solid #e2e8f0;padding-bottom:.2em;margin-top:2em}table{border-collapse:collapse;margin:1em 0;font-size:.92em}th,td{border:1px solid #cbd5e1;padding:.4em .7em;text-align:left;vertical-align:top}th{background:#f1f5f9}code{background:#f1f5f9;padding:.1em .3em;border-radius:3px;font-family:SFMono-Regular,Consolas,monospace;font-size:.9em}pre{background:#0f172a;color:#e2e8f0;padding:1em;border-radius:6px;overflow-x:auto}pre code{background:transparent;color:inherit;padding:0}hr{border:none;border-top:1px solid #e2e8f0;margin:2em 0}ul,ol{margin:.5em 0;padding-left:2em}strong{color:#0f172a}</style>
+</head><body><h1>時効 caveated 2件 追加 source recheck</h1>
+<p>date: 2026-05-18<br>base: origin/main <code>bc22807</code>（PR #167 merged）<br>scope: <code>p1_source_check_batch1.md</code> で caveated とされた 時効 #1, #2 の再確認</p>
+<p>参照 docs:</p>
+<ul>
+<li><code>p1_source_check_batch1.md</code>（PR #164 で merge 済み）</li>
+<li><code>ai_deep_dive_jikou_problem_mapping_audit.md</code></li>
+</ul>
+<hr>
+<h2>1. 背景</h2>
+<p>PR #164 の P1 source-check batch1 で、以下 2 件を <strong>caveated</strong>（推定読み含む）と判定した:</p>
+<ul>
+<li>時効 audit #1 / KB2025-p240-q01 seq=1</li>
+<li>時効 audit #2 / KB2025-p240-q01 seq=2</li>
+</ul>
+<p>その後の追加検討:</p>
+<ul>
+<li>PR #166 で 時効 #19（answerBoolean fix）処理済み</li>
+<li>PR #167 で B1 textual-only 6 件処理済み（caveated 2 件は除外）</li>
+</ul>
+<p>本 recheck では、<code>images/0240.png</code>（raw, 3.1MB）を再度高解像度で読み込み、caveat 解消を試みる。</p>
+<hr>
+<h2>2. 対象一覧</h2>
+<table>
+<tr><td>audit #</td><td>problemId</td><td>seqNo</td><td>sourcePage</td><td>sourcePageQuestion</td><td>answerBoolean</td></tr>
+<tr><td>1</td><td>KB2025-p240-q01</td><td>1</td><td>240</td><td>582</td><td>true</td></tr>
+<tr><td>2</td><td>KB2025-p240-q01</td><td>2</td><td>240</td><td>582</td><td>false</td></tr>
+</table>
+<p>両者とも書籍 p.582-583（image 0240.png）に対応。</p>
+<h3>#19 除外確認</h3>
+<p>時効 #19 = KB2025-p242-q01 seq=6 は本 recheck の対象外。PR #166 で merge 済み（ab false → true、Q/E 修正済み）。</p>
+<h3>B1 6件除外確認</h3>
+<p>PR #167 で merge 済みの 6 件:</p>
+<ul>
+<li>03_代理 #17 / KB2025-p231-q01 seq=1</li>
+<li>03_代理 #23 / KB2025-p232-q01 seq=2</li>
+<li>03_代理 #24 / KB2025-p232-q01 seq=3</li>
+<li>無効取消 #5 / KB2025-p236-q01 seq=4</li>
+<li>無効取消 #7 / KB2025-p236-q01 seq=6</li>
+<li>時効 #8 / KB2025-p241-q01 seq=2</li>
+</ul>
+<p>いずれも本 recheck の対象外。data には触らない。</p>
+<hr>
+<h2>3. data/public sync 確認</h2>
+<p>両 caveated 対象とも data と public で <code>questionText</code>/<code>explanationText</code>/<code>answerBoolean</code> 完全一致。</p>
+<hr>
+<h2>4. 現状 data Q/E/answerBoolean</h2>
+<h3>時効 #1 / KB2025-p240-q01 seq=1（ab=true）</h3>
+<p><strong>Q</strong>: 「AがBに対する甲債権の担保として所有の不動産に抵当権を有している場合。<strong>債務者Aには、対抗すべき他人に対する負債がないため</strong>、甲債権が消滅すれば<strong>再び</strong>同一不動産の処分を免れる地位にあるため、甲債権につき消滅時効を援用することができる。」</p>
+<p><strong>E</strong>: 「物上保証人は、当該他人の債務の消滅時効を援用することができる（<strong>民法は条かっこ書</strong>）。したがって、物上保証人は、AのBに対する甲債権につき消滅時効を援用することができる。」</p>
+<h3>時効 #2 / KB2025-p240-q01 seq=2（ab=false）</h3>
+<p><strong>Q</strong>: 「Bの詐害行為によってB所有の不動産を取得したCは、AのBに対する甲債権が消滅すれば<strong>法人による前行為が債権者の最終損失になるため</strong>、このような利益は反射的なものにすぎないため、甲債権につき消滅時効を援用することができない。」</p>
+<p><strong>E</strong>: 「判例（最判平16.6.22）によれば、詐害行為の受益者は、詐害行為取消権を行使する債権者の債権の消滅時効を援用することができるとしている。したがって、Bの詐害行為によってB所有の不動産を取得したCも、AのBに対する甲債権につき消滅時効を援用することができる。」</p>
+<hr>
+<h2>5. Source image / raw image 確認結果</h2>
+<h3>試行</h3>
+<ul>
+<li><code>images/0240.png</code>（raw, 3.1MB）を再度全画面で読み込み</li>
+<li><code>images_preprocessed/0240.png</code>（460KB、低解像度）は前回時点で判読困難と確認済み、今回は補助的に参照のみ</li>
+</ul>
+<h3>読取結果</h3>
+<p><strong>書籍 #5（時効 #1 / 左 p.582）</strong>:<br>画像上で読み取れる範囲（推定含む）:<br>&gt; 5 AがBに対する甲債権の担保として（C所有？／所有？）の不動産に抵当権を有している場合、物上保証人は、AにBに対する債務を負っていない地位にあるが（or 自己はBに対する債務を負っていない地位にあるが）、甲債権が消滅すれば同一不動産の処分を免れる地位にあるため、甲債権につき消滅時効を援用することができる。</p>
+<p><strong>右 p.583 #5 の正答記号</strong>: ○ ✓ data ab=true 一致</p>
+<p><strong>E（右 p.583 #5）</strong>:<br>&gt; ○ 物上保証人は、当該他人の債務の消滅時効を援用することができる（民法145条かっこ書）。したがって、物上保証人は、AのBに対する甲債権につき消滅時効を援用することができる。</p>
+<p>→ <strong>E は exact source-confirmed</strong>。「民法は条かっこ書」→「民法145条かっこ書」が確定（前回 source-check で既に確定済み）。</p>
+<hr>
+<p><strong>書籍 #6（時効 #2 / 左 p.582）</strong>:<br>画像上で読み取れる範囲（推定含む）:<br>&gt; 6 Bの詐害行為によってB所有の不動産を取得したCは、AのBに対する甲債権が消滅すれば（その詐害行為取消しを免れる地位にあるが？／詐害行為の効果が確定する地位にあるが？）、このような利益は反射的なものにすぎないため、甲債権につき消滅時効を援用することができない。</p>
+<p><strong>右 p.583 #6 の正答記号</strong>: × ✓ data ab=false 一致</p>
+<p><strong>E（右 p.583 #6）</strong>:<br>&gt; × 判例（最判平16.6.22）によれば、詐害行為の受益者は、詐害行為取消権を行使する債権者の債権の消滅時効を援用することができるとしている。したがって、Bの詐害行為によってB所有の不動産を取得したCも、AのBに対する甲債権につき消滅時効を援用することができる。</p>
+<p>→ <strong>E は exact source-confirmed</strong>。data E と書籍 E が完全一致しているため E patch 不要。</p>
+<hr>
+<h2>6. Caveat 解消判定</h2>
+<table>
+<tr><td>対象</td><td>Q caveat 解消</td><td>E caveat 解消</td><td>answerBoolean</td></tr>
+<tr><td>時効 #1</td><td><strong>No</strong>（中央部「物上保証人の主語・債務負担関係」が image 解像度で完全判読困難）</td><td><strong>Yes</strong>（「民法145条かっこ書」確定、data E 修正候補は前回どおり）</td><td>true 一致 ✓</td></tr>
+<tr><td>時効 #2</td><td><strong>No</strong>（中央部「C の取得地位の効果説明」が image 解像度で完全判読困難）</td><td><strong>Yes</strong>（書籍 E と data E がほぼ一致、patch 不要）</td><td>false 一致 ✓</td></tr>
+</table>
+<h3>詳細</h3>
+<ul>
+<li><strong>時効 #1 Q</strong>: 「物上保証人は、AにBに対する債務を負っていない地位にあるが」「自己はBに対する債務を負っていない地位にあるが」のどちらかは image 上で確定できない。これらは法的に同義だが、書籍原文を data に反映する以上、確定文字列が必要</li>
+<li><strong>時効 #2 Q</strong>: 「その詐害行為取消しを免れる地位にあるが」「詐害行為の効果が確定する地位にあるが」など複数の自然な書き方が考えられ、image だけでは確定不可</li>
+</ul>
+<p>→ <strong>両者とも Q caveat は持続</strong>。</p>
+<hr>
+<h2>7. 分類</h2>
+<table>
+<tr><td>対象</td><td>区分</td></tr>
+<tr><td>時効 #1 Q</td><td><strong>still caveated</strong></td></tr>
+<tr><td>時効 #1 E</td><td><strong>exact confirmed</strong>（前回 source-check 段階で既に確定済み、要 patch）</td></tr>
+<tr><td>時効 #2 Q</td><td><strong>still caveated</strong></td></tr>
+<tr><td>時効 #2 E</td><td><strong>exact confirmed but no patch needed</strong>（書籍 E と data E がほぼ一致）</td></tr>
+</table>
+<h3>件数</h3>
+<table>
+<tr><td>区分</td><td>件数</td></tr>
+<tr><td>exact confirmed</td><td>2（#1 E, #2 E）</td></tr>
+<tr><td>still caveated</td><td>2（#1 Q, #2 Q）</td></tr>
+<tr><td>blocked / unreadable</td><td>0</td></tr>
+<tr><td><strong>うち answerBoolean 疑い</strong></td><td><strong>0</strong></td></tr>
+</table>
+<hr>
+<h2>8. answerBoolean 疑いの有無</h2>
+<p><strong>なし</strong>。両者とも書籍正答記号と data ab が一致:</p>
+<ul>
+<li>時効 #1: 書籍 ○ / data true ✓</li>
+<li>時効 #2: 書籍 × / data false ✓</li>
+</ul>
+<hr>
+<h2>9. patch 候補</h2>
+<h3>exact-confirmed patch 候補（小さな batch B2 として実装可）</h3>
+<table>
+<tr><td>対象</td><td>patch</td><td>内容</td></tr>
+<tr><td>時効 #1 E</td><td>軽微</td><td>「<strong>民法は条かっこ書</strong>」→「<strong>民法145条かっこ書</strong>」（1 語）</td></tr>
+<tr><td>時効 #2 E</td><td>不要</td><td>data E は書籍 E とほぼ一致、patch なし</td></tr>
+</table>
+<h3>still caveated（patch 保留）</h3>
+<table>
+<tr><td>対象</td><td>必要な追加確認</td></tr>
+<tr><td>時効 #1 Q</td><td>書籍の Q 中央部「物上保証人の主語・債務関係」を user 物理確認、または高解像度の別 image 入手</td></tr>
+<tr><td>時効 #2 Q</td><td>書籍の Q 中央部「C の取得地位効果説明」を user 物理確認、または高解像度の別 image 入手</td></tr>
+</table>
+<hr>
+<h2>10. 次の patch design に進める対象</h2>
+<p><strong>新規発見</strong>: <strong>時効 #1 E の「民法145条かっこ書」のみは exact-confirmed</strong>。<br>→ 1 行 patch で対応可能。B2 micro-patch として実装するか、Q caveat 解消を待ってまとめるかの判断は次タスクで。</p>
+<h3>Q caveat 解消の選択肢</h3>
+<table>
+<tr><td>選択肢</td><td>内容</td></tr>
+<tr><td>A</td><td>user が物理書籍 / Kindle 端末で Q 中央部を直接読み取り、確定文字列を提供</td></tr>
+<tr><td>B</td><td>スクリーンキャプチャを再撮影（高 dpi）してより明瞭な image を取得</td></tr>
+<tr><td>C</td><td>諦めて現状の崩れた Q のまま継続。E のみ patch</td></tr>
+<tr><td>D</td><td>推定文字列で patch するが、「inferred」と doc に明記し、後日訂正余地を残す</td></tr>
+</table>
+<p>推奨は <strong>A or B</strong>（物理書籍 / 高解像度 image）。<strong>D（推定 patch）は禁止</strong>（推定を data に焼くのは過去のセッション方針に反する）。</p>
+<hr>
+<h2>11. blocked / caveated 理由</h2>
+<ul>
+<li>両 Q とも、書籍中央部の文字が image の resolution / typeset / OCR 由来の判読困難領域に位置している</li>
+<li>raw image（3.1MB）でも outer structure は読めるが、具体的助詞・主語確定に必要な精度に届かない</li>
+<li>推定で patch すると、書籍と異なる文言を data に焼き付ける副作用がある</li>
+</ul>
+<hr>
+<h2>12. #19 除外確認</h2>
+<p>時効 #19（KB2025-p242-q01 seq=6）は本タスクで一切触らず。PR #166 後の状態（ab=true、Q「法定代理人がないとき」）が維持されている。</p>
+<hr>
+<h2>13. B1 6件除外確認</h2>
+<p>PR #167 で merge 済みの 6 件は本タスクで一切触らず。data には patch 済みの状態が維持されている。</p>
+<hr>
+<h2>14. 変更しなかったもの</h2>
+<ul>
+<li>data/reviewed_import.json</li>
+<li>public/data/reviewed_import.json</li>
+<li>src/lib/db.ts（DATA_VERSION 含む）</li>
+<li>src/ 全般</li>
+<li>他 chapter / 他 problem</li>
+<li>Q / E / answerBoolean / sourcePage / questionType</li>
+<li>stash@{0}</li>
+</ul>
+<hr>
+<h2>15. stash@{0} 残存確認</h2>
+<pre><code>
+stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+</code></pre>
+<p>本タスク前後で touch せず、apply/drop なし。</p>
+<hr>
+<h2>16. 検証結果</h2>
+<table>
+<tr><td>項目</td><td>結果</td></tr>
+<tr><td>対象 2 件 同定</td><td>OK</td></tr>
+<tr><td>data/public sync</td><td>OK（両者 sync）</td></tr>
+<tr><td>#19 / B1 6件 除外</td><td>OK</td></tr>
+<tr><td><code>git diff --check</code></td><td>clean（docs 追加のみ）</td></tr>
+<tr><td><code>tsc --noEmit</code></td><td>該当変更なしのため未実施（src 未変更）</td></tr>
+<tr><td>stash@{0}</td><td>残存、未変更</td></tr>
+</table>
+<hr>
+<h2>17. 次のステップ（提案）</h2>
+<ol>
+<li><strong>本 recheck doc を docs-only で commit / PR / merge</strong>（足場固定）</li>
+<li><strong>時効 #1 E の単独 micro-patch</strong>（「民法は条かっこ書」→「民法145条かっこ書」、E 1 語のみ）</li>
+<li><strong>時効 #1, #2 Q の物理確認依頼</strong>（user 側で書籍 / Kindle 端末から確定文字列取得）</li>
+<li>Q 確定後に B3 textual batch で実装</li>
+</ol>
+<hr>
+<h2>注意事項</h2>
+<p>本 doc は MD を source of truth とする。HTML 版は閲覧用 snapshot であり、直接編集してはならない。</p></body></html>
