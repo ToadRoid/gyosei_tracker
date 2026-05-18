@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>/review padding density fix — change history</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; max-width: 900px; margin: 2em auto; padding: 0 1em; line-height: 1.6; color: #1f2937; }
+h1, h2, h3 { color: #1e293b; margin-top: 1.5em; }
+h1 { border-bottom: 2px solid #cbd5e1; padding-bottom: 0.3em; }
+h2 { border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2em; }
+table { border-collapse: collapse; margin: 1em 0; }
+th, td { border: 1px solid #cbd5e1; padding: 0.4em 0.7em; text-align: left; }
+th { background: #f1f5f9; }
+code { background: #f1f5f9; padding: 0.1em 0.3em; border-radius: 3px; font-family: SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+pre { background: #0f172a; color: #e2e8f0; padding: 1em; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; padding: 0; }
+hr { border: none; border-top: 1px solid #e2e8f0; margin: 2em 0; }
+ul { margin: 0.5em 0; }
+strong { color: #0f172a; }
+</style>
+</head>
+<body>
+<h1>/review padding density fix — change history</h1>
+<p>date: 2026-05-18<br>base: origin/main <code>b29a8f4</code>（PR #161 merged）</p>
+<hr>
+<h2>1. 背景</h2>
+<ul>
+<li>セッション初期に user が <code>/review</code> の余白を「間かくなりすぎ」と指摘</li>
+<li>当時着手しかけた padding 調整は、より本質的な grouping 問題（chapter-level vs section-level）の解決を優先するため <code>git stash</code> で保留</li>
+<li>stash は <code>stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)</code> として保存</li>
+<li>以降の作業（chapter grouping 修正、section cards 復元、taxonomy alignment、OCR/source-confirmed patch、参考書順ソート修正など）が完了し、本タスクで padding 調整を改めて適用する</li>
+</ul>
+<h2>2. 目的</h2>
+<p><code>/review</code> の縦密度を上げて、1 画面で見渡せるカード数を増やす。情報量は削らず、padding / spacing のみ調整する。</p>
+<h2>3. stash@{0} の read-only 確認結果</h2>
+<pre><code>
+git stash list
+→ stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+
+git stash show --name-only stash@{0}
+→ src/app/review/page.tsx
+
+git stash show --stat stash@{0}
+→ src/app/review/page.tsx | 30 +++++++++++++++---------------
+→ 1 file changed, 15 insertions(+), 15 deletions(-)
+</code></pre>
+<p>stash は <strong><code>src/app/review/page.tsx</code> 単独・15+/15-</strong> の小さな padding 調整 patch。stash を apply / drop はせず read-only で内容のみ確認。</p>
+<h2>4. 実装した padding / spacing 変更</h2>
+<p>stash 内容を current main（<code>b29a8f4</code>）に手動再現した。stash 適用後の行番号と current の行番号は intervening PR（taxonomy filter chips 追加、section breakdown 削除など）の影響でずれているが、変更対象の class 文字列は完全一致のため手動再現に支障なし。</p>
+<table>
+<tr><td>#</td><td>対象</td><td>before</td><td>after</td></tr>
+<tr><td>1</td><td>TopicCard header（折りたたみボタン）</td><td><code>p-4 space-y-1.5</code></td><td><code>px-3 py-2.5 space-y-1</code></td></tr>
+<tr><td>2</td><td>ページ root container</td><td><code>pt-6 pb-24 space-y-6</code></td><td><code>pt-4 pb-24 space-y-3</code></td></tr>
+<tr><td>3</td><td>Overall stats grid</td><td><code>grid grid-cols-3 gap-3</code></td><td><code>grid grid-cols-3 gap-2</code></td></tr>
+<tr><td>4</td><td>Overall stats card × 3</td><td><code>rounded-xl ... p-3 text-center</code></td><td><code>rounded-lg ... px-2 py-1.5 text-center</code></td></tr>
+<tr><td>5</td><td>Overall stats 数値 × 3</td><td><code>text-2xl font-bold</code></td><td><code>text-xl font-bold</code></td></tr>
+<tr><td>6</td><td>Overall stats ラベル × 3</td><td><code>text-xs text-slate-400</code></td><td><code>text-[10px] text-slate-400</code></td></tr>
+<tr><td>7</td><td>Refresh button</td><td><code>rounded-xl py-3 font-bold</code></td><td><code>rounded-lg py-2 text-sm font-bold</code></td></tr>
+<tr><td>8</td><td>弱点順 / 教材順 タブ × 2</td><td><code>rounded-lg px-3 py-2 text-sm font-bold transition-colors</code></td><td><code>rounded-lg px-3 py-1.5 text-sm font-bold transition-colors</code></td></tr>
+</table>
+<p>合計 15 ヶ所の class 文字列置換。</p>
+<h2>5. 変更したファイル</h2>
+<ul>
+<li><code>src/app/review/page.tsx</code>（UI のみ）</li>
+<li><code>context/working/sessions/review-padding-density/change_history_20260518.md</code>（本 doc）</li>
+<li><code>context/working/sessions/review-padding-density/change_history_20260518.html</code>（本 doc の HTML スナップショット）</li>
+</ul>
+<h2>6. 変更しなかったもの</h2>
+<ul>
+<li>data/reviewed_import.json</li>
+<li>public/data/reviewed_import.json</li>
+<li>src/lib/db.ts（DATA_VERSION 含む）</li>
+<li>他の src ファイル（builder / types / 他 page など）</li>
+<li>情報量（テキスト・カード数・項目数すべて維持）</li>
+<li>カラー・タイポグラフィの基本ルール</li>
+<li>アクセシビリティ関連属性</li>
+</ul>
+<h2>7. data/public 変更なし</h2>
+<p><code>git diff -- data/reviewed_import.json public/data/reviewed_import.json</code> は空。</p>
+<h2>8. DATA_VERSION 変更なし</h2>
+<p><code>src/lib/db.ts</code> 未変更。DATA_VERSION は <code>2026-05-18-p0-textual-fix-a2</code> のまま。</p>
+<h2>9. answerBoolean / Q / E 変更なし</h2>
+<p>問題データには一切触れていない。本変更は CSS class（Tailwind utility）のみ。</p>
+<h2>10. 検証結果</h2>
+<table>
+<tr><td>項目</td><td>結果</td></tr>
+<tr><td><code>git diff --check</code></td><td>clean</td></tr>
+<tr><td><code>git diff --stat</code></td><td>`src/app/review/page.tsx \</td><td>30 +++++++++++++++---------------`</td></tr>
+<tr><td><code>git diff -- data/ public/ src/lib/db.ts</code></td><td>空</td></tr>
+<tr><td><code>npx tsc --noEmit</code></td><td>pass（出力なし）</td></tr>
+<tr><td><code>npm run build</code></td><td>pass（全 route 正常 build）</td></tr>
+<tr><td>stash@{0} 残存</td><td>OK（apply/drop なし）</td></tr>
+</table>
+<h2>11. stash@{0} を apply/drop していないこと</h2>
+<pre><code>
+git stash list
+→ stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+</code></pre>
+<p>patch 適用前後で stash list は完全に同一。<strong>stash は履歴として残存</strong>。</p>
+<h2>12. 残タスク</h2>
+<ul>
+<li>ユーザーがログイン済みブラウザで <code>/review</code> を実機確認し、密度改善が意図どおりかを最終評価</li>
+<li>評価後、stash@{0} の処理方針を決定（drop or 保管継続）</li>
+<li>必要なら追加の density / typography 調整を別 PR で</li>
+</ul>
+<hr>
+<h2>注意事項</h2>
+<p>本 doc は MD を source of truth とする。HTML 版は閲覧用 snapshot であり、直接編集してはならない。</p>
+</body>
+</html>

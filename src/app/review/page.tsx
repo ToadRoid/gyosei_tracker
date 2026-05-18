@@ -389,7 +389,7 @@ function TopicCard({
   return (
     <div className="rounded-xl border border-slate-100 bg-white shadow-sm overflow-hidden">
       {/* Header */}
-      <button onClick={onToggle} className="w-full text-left p-4 space-y-1.5">
+      <button onClick={onToggle} className="w-full text-left px-3 py-2.5 space-y-1">
         <div className="flex items-center gap-2 flex-wrap">
           <AccuracyBadge accuracy={topic.accuracy} />
           <span className="font-bold text-slate-800 text-sm">{topic.sectionTitle}</span>
@@ -576,7 +576,7 @@ export default function ReviewPage() {
     data && (data.weakTopics.length > 0 || syllabusTopics.length > 0);
 
   return (
-    <div className="px-4 pt-6 pb-24 space-y-6 max-w-md mx-auto">
+    <div className="px-4 pt-4 pb-24 space-y-3 max-w-md mx-auto">
       {/* Header */}
       <div>
         <h1 className="text-xl font-bold text-slate-800">弱点ダッシュボード</h1>
@@ -585,18 +585,18 @@ export default function ReviewPage() {
 
       {/* Overall Stats */}
       {overallStats && overallStats.totalAttempts > 0 && (
-        <div className="grid grid-cols-3 gap-3">
-          <div className="rounded-xl bg-white border border-slate-100 p-3 text-center shadow-sm">
-            <p className="text-2xl font-bold text-slate-800">{Math.round(overallStats.accuracy * 100)}%</p>
-            <p className="text-xs text-slate-400">正答率</p>
+        <div className="grid grid-cols-3 gap-2">
+          <div className="rounded-lg bg-white border border-slate-100 px-2 py-1.5 text-center shadow-sm">
+            <p className="text-xl font-bold text-slate-800">{Math.round(overallStats.accuracy * 100)}%</p>
+            <p className="text-[10px] text-slate-400">正答率</p>
           </div>
-          <div className="rounded-xl bg-white border border-slate-100 p-3 text-center shadow-sm">
-            <p className="text-2xl font-bold text-slate-800">{overallStats.totalAttempts}</p>
-            <p className="text-xs text-slate-400">回答数</p>
+          <div className="rounded-lg bg-white border border-slate-100 px-2 py-1.5 text-center shadow-sm">
+            <p className="text-xl font-bold text-slate-800">{overallStats.totalAttempts}</p>
+            <p className="text-[10px] text-slate-400">回答数</p>
           </div>
-          <div className="rounded-xl bg-white border border-slate-100 p-3 text-center shadow-sm">
-            <p className="text-2xl font-bold text-slate-800">{overallStats.currentLap}</p>
-            <p className="text-xs text-slate-400">周回</p>
+          <div className="rounded-lg bg-white border border-slate-100 px-2 py-1.5 text-center shadow-sm">
+            <p className="text-xl font-bold text-slate-800">{overallStats.currentLap}</p>
+            <p className="text-[10px] text-slate-400">周回</p>
           </div>
         </div>
       )}
@@ -605,7 +605,7 @@ export default function ReviewPage() {
       <button
         onClick={loadData}
         disabled={loading}
-        className="w-full bg-indigo-600 text-white rounded-xl py-3 font-bold disabled:opacity-40"
+        className="w-full bg-indigo-600 text-white rounded-lg py-2 text-sm font-bold disabled:opacity-40"
       >
         {loading ? '読み込み中...' : 'データを更新'}
       </button>
@@ -637,7 +637,7 @@ export default function ReviewPage() {
             <button
               type="button"
               onClick={() => handleTabChange('weak')}
-              className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${
+              className={`rounded-lg px-3 py-1.5 text-sm font-bold transition-colors ${
                 reviewTab === 'weak'
                   ? 'bg-white text-indigo-700 shadow-sm'
                   : 'text-slate-500 hover:text-slate-700'
@@ -649,7 +649,7 @@ export default function ReviewPage() {
             <button
               type="button"
               onClick={() => handleTabChange('syllabus')}
-              className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${
+              className={`rounded-lg px-3 py-1.5 text-sm font-bold transition-colors ${
                 reviewTab === 'syllabus'
                   ? 'bg-white text-indigo-700 shadow-sm'
                   : 'text-slate-500 hover:text-slate-700'
