@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>P1 OCR source-check batch 1</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;max-width:1000px;margin:2em auto;padding:0 1em;line-height:1.6;color:#1f2937}h1,h2,h3{color:#1e293b;margin-top:1.5em}h1{border-bottom:2px solid #cbd5e1;padding-bottom:.3em}h2{border-bottom:1px solid #e2e8f0;padding-bottom:.2em;margin-top:2em}h3{color:#334155}table{border-collapse:collapse;margin:1em 0;font-size:.92em}th,td{border:1px solid #cbd5e1;padding:.4em .7em;text-align:left;vertical-align:top}th{background:#f1f5f9}code{background:#f1f5f9;padding:.1em .3em;border-radius:3px;font-family:SFMono-Regular,Consolas,monospace;font-size:.9em}pre{background:#0f172a;color:#e2e8f0;padding:1em;border-radius:6px;overflow-x:auto}pre code{background:transparent;color:inherit;padding:0}hr{border:none;border-top:1px solid #e2e8f0;margin:2em 0}ul,ol{margin:.5em 0;padding-left:2em}strong{color:#0f172a}blockquote{border-left:3px solid #cbd5e1;margin:.8em 0;padding:.4em 1em;background:#f8fafc;color:#334155}</style>
+</head><body><h1>P1 OCR source-check batch 1</h1>
+<p>date: 2026-05-18<br>base: origin/main <code>54ab4ab</code>（PR #163 merged）</p>
+<p>scope: 既存 audit doc で P1 とされた OCR・文意崩れ候補を、書籍原本画像と照合する。<br><strong>docs-only source-check log。data patch はまだ行わない。</strong></p>
+<p>参照 audit docs:</p>
+<ul>
+<li><code>ai_deep_dive_problem_mapping_audit.md</code>（03_代理）</li>
+<li><code>ai_deep_dive_muko_torikeshi_problem_mapping_audit.md</code>（無効・取消し）</li>
+<li><code>ai_deep_dive_jikou_problem_mapping_audit.md</code>（時効）</li>
+</ul>
+<p>参照 P0 source-check docs:</p>
+<ul>
+<li><code>p0_source_check_03_dairi_ai_deep_dive.md</code></li>
+<li><code>p0_source_check_muko_torikeshi_ai_deep_dive.md</code></li>
+<li><code>p0_source_check_jikou_ai_deep_dive.md</code></li>
+<li><code>p0_source_recheck_jikou_05.md</code></li>
+</ul>
+<hr>
+<h2>1. 背景</h2>
+<p>P0 系（PR #152〜#163）が一通り完了し、DATA_VERSION は <code>2026-05-18-p0-textual-fix-a2</code> に上昇済み。<br>本タスクでは、各 audit doc で <strong>P1</strong> に分類された OCR/文意崩れ候補を書籍原本画像と照合して source-confirmed な状態にする。<br>今回は <strong>source-check log のみ</strong>。data patch は後続タスクで対応する。</p>
+<hr>
+<h2>2. 対象一覧</h2>
+<h3>A. 03_代理 P1（audit doc 上の P1）</h3>
+<table>
+<tr><td>audit #</td><td>problemId</td><td>seqNo</td><td>sourcePage</td></tr>
+<tr><td>17</td><td>KB2025-p231-q01</td><td>1</td><td>p.231</td></tr>
+<tr><td>23</td><td>KB2025-p232-q01</td><td>2</td><td>p.232</td></tr>
+<tr><td>24</td><td>KB2025-p232-q01</td><td>3</td><td>p.232</td></tr>
+</table>
+<h3>B. 04_無効・取消し P1</h3>
+<table>
+<tr><td>audit #</td><td>problemId</td><td>seqNo</td><td>sourcePage</td></tr>
+<tr><td>5</td><td>KB2025-p236-q01</td><td>4</td><td>p.236</td></tr>
+<tr><td>7</td><td>KB2025-p236-q01</td><td>6</td><td>p.236</td></tr>
+</table>
+<h3>C. 06_時効 P1</h3>
+<table>
+<tr><td>audit #</td><td>problemId</td><td>seqNo</td><td>sourcePage</td></tr>
+<tr><td>1</td><td>KB2025-p240-q01</td><td>1</td><td>p.240</td></tr>
+<tr><td>2</td><td>KB2025-p240-q01</td><td>2</td><td>p.240</td></tr>
+<tr><td>8</td><td>KB2025-p241-q01</td><td>2</td><td>p.241</td></tr>
+<tr><td>19</td><td>KB2025-p242-q01</td><td>6</td><td>p.242</td></tr>
+</table>
+<p><strong>合計 9 件</strong>。</p>
+<hr>
+<h2>3. P0 既対応との重複なし確認</h2>
+<table>
+<tr><td>P0 既対応</td><td>本 P1 batch</td></tr>
+<tr><td>KB2025-p230-q01 seq=6（03_代理 #15 audit）</td><td>重複なし（P1 対象は seq=1, 2, 3, 4, 6 / 別 problemId）</td></tr>
+<tr><td>KB2025-p233-q01 seq=3（03_代理 #30 audit）</td><td>重複なし</td></tr>
+<tr><td>KB2025-p236-q01 seq=1（無効取消 #2 audit）</td><td>重複なし（P1 対象は seq=4, 6）</td></tr>
+<tr><td>KB2025-p237-q01 seq=1（無効取消 #8 audit）</td><td>重複なし</td></tr>
+<tr><td>KB2025-p240-q01 seq=5（時効 #5 audit）</td><td>重複なし（P1 対象は seq=1, 2）</td></tr>
+<tr><td>KB2025-p242-q01 seq=4（時効 #17 audit）</td><td>重複なし（P1 対象は seq=6）</td></tr>
+<tr><td>KB2025-p244-q01 seq=2（時効 #21 audit）</td><td>重複なし</td></tr>
+</table>
+<p>→ P0 既対応 7 件と本 P1 batch 9 件は <strong>完全に独立</strong>。同一 branch の二重修正なし。</p>
+<hr>
+<h2>4. data/public sync 確認</h2>
+<p>全 9 件で <code>questionText</code>/<code>explanationText</code>/<code>answerBoolean</code> が data と public で完全一致を確認済み。</p>
+<hr>
+<h2>5. 個別 source 確認</h2>
+<h3>5.A.1 — 03_代理 audit #17 / KB2025-p231-q01 seq=1（書籍 #2 = p.564）</h3>
+<ul>
+<li>書籍正答記号: <strong>○</strong> ✓ data ab=true 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0231.png</code> 左 p.564 #2、高解像度読込）:</p>
+<blockquote>Aは、A所有の土地の売却に関する代理権をBに授与していないのに、CにBに代理権を授与した旨を表示していたところ、Bは、Aに無断でAの代理人として当該土地を目的とした売買契約をCと締結した。Cは、Bに土地売却の代理権があると信ずべき正当な理由があるときは、Aに対して土地の引渡しを請求することができる。</blockquote>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>Ａは、Ａ所有する地の売主権設定に関する代理権をＢに授与していないのに、ＣにＢに代理権を授与した旨を表示していたところ、Ｂは、Ａに無断でＡの代理人として当該土地を目的とした売買契約をＣと締結した。Ｃは、Ｂに土地売却の代理権があると信ずべき正当な理由があるときは、Ａに対して土地の引渡しを請求することができる。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「Ａ所有する地の売主権設定」→「A所有の土地の売却」（OCR/parser hallucination）</li>
+<li>全角 Ａ/Ｂ/Ｃ → 半角 A/B/C（書籍原本は半角）</li>
+</ul>
+<p><strong>E</strong>: 軽微（条文番号「10条2項」→「109条2項」だが、これは別 audit で P2 として記録済み）</p>
+<p><strong>判定</strong>: <strong>exact source-confirmed</strong>。Q patch 必須。E patch は本 batch では不要（P2 として別管理）。</p>
+<hr>
+<h3>5.A.2 — 03_代理 audit #23 / KB2025-p232-q01 seq=2（書籍 #8 = p.566）</h3>
+<ul>
+<li>書籍正答記号: <strong>×</strong> ✓ data ab=false 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0232.png</code> 左 p.566 #8、高解像度読込）:</p>
+<blockquote>無権代理人と契約をした場合において、相手方は、代理権のないことを知り、又は知ることができるときは、相手方に対して催告することができる。</blockquote>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>無権代理人が契約をした場合において、相手方が、代理権のないことを知るかことができるときは、相手方に対して催告することができる。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「無権代理人<strong>が</strong>契約」→「無権代理人<strong>と</strong>契約」</li>
+<li>「相手方<strong>が</strong>」→「相手方<strong>は</strong>」</li>
+<li>「<strong>知るかことができる</strong>」→「<strong>知り、又は知ることができる</strong>」（OCR崩れ、肢の主張部分）</li>
+<li>「相手方に対して催告」: <strong>書籍原本と data が一致</strong>。これは引っかけポイント（114条では本人に対して催告が正解）</li>
+</ul>
+<p><strong>E</strong>: 書籍原本とほぼ一致、修正不要。</p>
+<p><strong>判定</strong>: <strong>exact source-confirmed</strong>。Q patch 必須（3 箇所の軽微〜中程度の OCR 崩れ）。</p>
+<hr>
+<h3>5.A.3 — 03_代理 audit #24 / KB2025-p232-q01 seq=3（書籍 #9 = p.566）</h3>
+<ul>
+<li>書籍正答記号: <strong>×</strong> ✓ data ab=false 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0232.png</code> 左 p.566 #9）:</p>
+<blockquote>Aの子Bが、Aに無断でAの代理人としてA所有の土地をCに売却する契約を締結したところ、Cが、相当の期間を定めて、この売買契約を追認するかどうかをAに対して確答するよう催告したが、Aからは期間中に確答がなかった場合、Aは追認を拒絶したものと推定される。</blockquote>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>Aの子Bが、Aに無断でCへの代理人としてA所有の土地をCに売却する契約を締結したところ、この判当の期間を経ると、この売買契約を追認するかどうかをAに対して回答するよう催告したが、Aからは期間中に回答がなかった場合、Aは追認を拒絶したものと推定される。</blockquote>
+<p><strong>差分（4 箇所）</strong>:</p>
+<ul>
+<li>「Cへの代理人」→「<strong>Aの代理人</strong>」</li>
+<li>「この判当の期間を経ると」→「<strong>Cが、相当の期間を定めて</strong>」</li>
+<li>「Aに対して回答するよう」→「Aに対して<strong>確答</strong>するよう」</li>
+<li>「期間中に回答がなかった」→「期間中に<strong>確答</strong>がなかった」</li>
+</ul>
+<p><strong>E</strong>: 書籍原本と概ね一致、修正不要。</p>
+<p><strong>判定</strong>: <strong>exact source-confirmed</strong>。Q patch 必須（4 箇所の重度 OCR 崩れ）。</p>
+<hr>
+<h3>5.B.1 — 04_無効・取消し audit #5 / KB2025-p236-q01 seq=4（書籍 #11 = p.574）</h3>
+<ul>
+<li>書籍正答記号: <strong>×</strong> ✓ data ab=false 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0236.png</code> 左 p.574 #11）:</p>
+<blockquote>BがAに騙されてAから絵画を購入し、これをCに転売した場合、その後にBがAの詐欺に気がついたとしても、BはAとの売買契約を取り消すことはできない。</blockquote>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>BがAに騙されてAから絵画を購入し、これまでCに転売した場合、その後にBがAの詐欺に気がついたとしても、BはAとの売買契約を取り消すことはできない。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「これまでCに転売」→「<strong>これを</strong>Cに転売」（OCR 崩れ）</li>
+</ul>
+<p><strong>書籍 E</strong>（image 右 p.575 #11）:</p>
+<blockquote>× 取消権は、追認をすることができる時以後に民法125条所載の事実があったときとされる追認の擬制（法定追認）、取消権を行使することができなくなる代わりに有効に確定する（124条1項、消滅の効果に、詐欺に気付いた後のことを云う。本肢では、Cへの転売は（125条5号参照）、Bが詐欺に気付く以前になされていたため、法定追認は成立せず、BはAとの契約を取り消すことができる（96条1項）。</blockquote>
+<p><strong>Current data E</strong>:</p>
+<blockquote>取消権者は、追認をすることができる時以後に民法125条所載の事実があったとき、または追認したことがなきも、（法定追認）、取消権者行使できる。追認をすることができる時以降とは、取消し原因の状況が消滅した後のことであり（124条1項、消除の効果に、詐欺に気付いた後のことを云う。未成年では、Cへの転売は（125条5号参照）、B が詐欺に気付く以前に為されていたため、法律認識成立せず、BはAとの契約を取り消すことができる（96条1項）。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>第1文の構造崩壊（「または追認したことがなきも」「取消権者行使できる」が hallucination）</li>
+<li>「<strong>未成年では</strong>」→「<strong>本肢では</strong>」（典型 hallucination）</li>
+<li>「<strong>法律認識成立せず</strong>」→「<strong>法定追認は成立せず</strong>」</li>
+</ul>
+<p><strong>判定</strong>: <strong>exact source-confirmed</strong>。Q 軽微 + E 全文置換（書籍 E と整合させる）必須。</p>
+<hr>
+<h3>5.B.2 — 04_無効・取消し audit #7 / KB2025-p236-q01 seq=6（書籍 #13 = p.574）</h3>
+<ul>
+<li>書籍正答記号: <strong>×</strong> ✓ data ab=false 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0236.png</code> 左 p.574 #13）:</p>
+<blockquote>Aが17歳の時に、その法定代理人Bの同意を得ずにCにAの所有する不動産を売却した場合に、AおよびCは、Aが成年に達したときには、AとC間の売買契約を取り消すことはできない。</blockquote>
+<p><strong>Current data Q</strong>: 書籍 Q と一致。</p>
+<p><strong>書籍 E</strong>（image 右 p.575 #13）:</p>
+<blockquote>× AC間の売買契約は、Aの法定代理人Bの同意を得ないでなされているが、取り消すことができる（民法5条2項、120条1項）。しかし、その取消権は、Aが成年に達した時、すなわち、「追認をすることができる時」である成年に達した時から5年、行為の時から20年行使しないことにより消滅する（126条）。</blockquote>
+<p><strong>Current data E</strong>:</p>
+<blockquote>AとC間の売買契約は、Aの法定代理人Bの同意を得ないでなされているが、取り消すことができる（民法5条2項修正表現、2項）。しかし、その取消権は、Aが成年に達したときにおける、および、「追認をすることができる時である配偶年満ち始めから5年、行為のときから20年行使しないことでより消滅する（126条）。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「民法5条<strong>2項修正表現、2項</strong>」→「民法<strong>5条2項、120条1項</strong>」（条文番号崩れ）</li>
+<li>「成年に達したときにおける、および、『追認をすることができる時である<strong>配偶年満ち始め</strong>から」→「成年に達した時、すなわち、『追認をすることができる時』である<strong>成年に達した時</strong>から」</li>
+<li>「行使しないこと<strong>で</strong>より消滅する」→「行使しないこと<strong>に</strong>より消滅する」</li>
+</ul>
+<p><strong>判定</strong>: <strong>exact source-confirmed</strong>。Q 不要、E 全文置換必須。</p>
+<hr>
+<h3>5.C.1 — 06_時効 audit #1 / KB2025-p240-q01 seq=1（書籍 #5 = p.582）</h3>
+<ul>
+<li>書籍正答記号: <strong>○</strong> ✓ data ab=true 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0240.png</code> 左 p.582 #5、高解像度再確認）:</p>
+<blockquote>AがBに対する甲債権の担保として所有の不動産に抵当権を有している場合。物上保証人は、自己はBに対して債務を負っていない地位にあるため、甲債権が消滅すれば再び同一不動産の処分を免れる地位にあるため、甲債権につき消滅時効を援用することができる。</blockquote>
+<p>⚠️ Q 中央部「物上保証人は、自己はBに対して債務を負っていない地位にあるため」は image 読み取り推定。書籍原本の正確な文言は同程度の解像度の再確認推奨。</p>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>AがBに対する甲債権の担保として所有の不動産に抵当権を有している場合。<strong>債務者Aには、対抗すべき他人に対する負債がないため</strong>、甲債権が消滅すれば再び同一不動産の処分を免れる地位にあるため、甲債権につき消滅時効を援用することができる。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「債務者Aには、対抗すべき他人に対する負債がないため」→「物上保証人は、自己はBに対して債務を負っていない地位にあるため」（parser hallucination）</li>
+</ul>
+<p><strong>書籍 E</strong>（image 右 p.583 #5）:</p>
+<blockquote>○ 物上保証人は、当該他人の債務の消滅時効を援用することができる（民法145条かっこ書）。したがって、物上保証人は、AのBに対する甲債権につき消滅時効を援用することができる。</blockquote>
+<p><strong>Current data E</strong>:</p>
+<blockquote>物上保証人は、当該他人の債務の消滅時効を援用することができる（<strong>民法は条かっこ書</strong>）。したがって、物上保証人は、AのBに対する甲債権につき消滅時効を援用することができる。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「民法は条かっこ書」→「民法<strong>145条</strong>かっこ書」（条文番号崩れ）</li>
+</ul>
+<p><strong>判定</strong>: <strong>caveated</strong>。</p>
+<ul>
+<li>Q は parser hallucination 領域があり、image 上の読み取りに微小な不確実性</li>
+<li>E は exact source-confirmed</li>
+<li>→ <strong>本 batch では caveated 扱い</strong>として記録、Q は追加 source 確認推奨。E 単独 patch も可能だが、Q+E まとめて確認後実施が望ましい</li>
+</ul>
+<hr>
+<h3>5.C.2 — 06_時効 audit #2 / KB2025-p240-q01 seq=2（書籍 #6 = p.582）</h3>
+<ul>
+<li>書籍正答記号: <strong>×</strong> ✓ data ab=false 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0240.png</code> 左 p.582 #6）:</p>
+<blockquote>Bの詐害行為によってB所有の不動産を取得したCは、AのBに対する甲債権が消滅すれば、その詐害行為取消しを免れる地位にあるが、このような利益は反射的なものにすぎないため、甲債権につき消滅時効を援用することができない。</blockquote>
+<p>⚠️ Q 中央部「その詐害行為取消しを免れる地位にあるが」は image 読み取り推定。</p>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>Bの詐害行為によってB所有の不動産を取得したCは、AのBに対する甲債権が消滅すれば<strong>法人による前行為が債権者の最終損失になるため</strong>、このような利益は反射的なものにすぎないため、甲債権につき消滅時効を援用することができない。</blockquote>
+<p><strong>差分</strong>: 「法人による前行為が債権者の最終損失になるため」（明白な parser hallucination）→ 書籍の本来表現に置換。</p>
+<p><strong>E</strong>: 書籍と概ね一致、修正不要。</p>
+<p><strong>判定</strong>: <strong>caveated</strong>。Q hallucination 領域の書籍原文を image でより詳しく確認後、replacement 確定推奨。</p>
+<hr>
+<h3>5.C.3 — 06_時効 audit #8 / KB2025-p241-q01 seq=2（書籍 #12 = p.584）</h3>
+<ul>
+<li>書籍正答記号: <strong>○</strong> ✓ data ab=true 一致</li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0241.png</code> 左 p.584 #12）:</p>
+<blockquote>被相続人の<strong>占有</strong>により取得時効が完成していた場合に、その共同相続人の一人は、自己の相続分の限度においてのみ取得時効を援用することができる。</blockquote>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>被相続人の<strong>右承</strong>により取得時効完成していた場合に、その共同相続人の一人は、自己の相続分の限度においてのみ取得時効を援用することができる。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「右承」→「<strong>占有</strong>」（OCR 崩れ：字形が遠いため parser/AI 系の hallucination）</li>
+<li>「取得時効完成していた」→「取得時効<strong>が</strong>完成していた」（軽微）</li>
+</ul>
+<p><strong>書籍 E</strong>（image 右 p.585 #12）:</p>
+<blockquote>○ 判例（最判昭37.3.10）は、時効援用権は時効の利益を受けるか拒否するかを意思表示するための制度であるから、被相続人の占有により取得時効が完成していた場合、その共同相続人は自己の相続分の限度においてのみ取得時効を援用することができるとしている。</blockquote>
+<p><strong>Current data E</strong>:</p>
+<blockquote>判例（最判昭37.3.10）は、時効援用権は時効の利益を<strong>受ける、受けない</strong>を意思表示するための制度であるから、被相続人の<strong>右承</strong>により取得時効が完成していた場合、その共同相続人<strong>の一人</strong>は自己の相続分の限度においてのみ取得時効を援用することができるとしている。</blockquote>
+<p><strong>差分</strong>:</p>
+<ul>
+<li>「右承」→「<strong>占有</strong>」（同上）</li>
+<li>「受ける、受けないを」→「受ける<strong>か拒否するか</strong>を」（軽微）</li>
+<li>「共同相続人の一人」→「共同相続人」（軽微）</li>
+</ul>
+<p><strong>判定</strong>: <strong>exact source-confirmed</strong>。Q+E ともに「右承」→「占有」置換が core。Q+E patch 必須。</p>
+<hr>
+<h3>5.C.4 — 06_時効 audit #19 / KB2025-p242-q01 seq=6（書籍 #6 = p.586）</h3>
+<p>⚠️ <strong>本 batch 唯一の answerBoolean 疑い案件。P0 級に格上げ提案。</strong></p>
+<ul>
+<li>書籍正答記号: <strong>○</strong></li>
+<li>現在 data ab: <strong>false</strong> ← <strong>不一致</strong></li>
+</ul>
+<p><strong>書籍 Q</strong>（image <code>images/0242.png</code> 左 p.586 #6）:</p>
+<blockquote>時効の期間の満了前6か月以内の間に成年被後見人に<strong>法定代理人がない</strong>ときは、<strong>行為能力者となった時</strong>または法定代理人が就職した時から6か月を経過するまでの間は、その成年被後見人に対して、時効は完成しない。</blockquote>
+<p><strong>Current data Q</strong>:</p>
+<blockquote>時効の期間の満了前6か月以内の間に成年被後見人に<strong>法定代理人が選任された</strong>ときは、その成年被後見人が<strong>制限行為能力者となった時</strong>から6か月を経過するまでの間は、その成年被後見人に対して、時効は完成しない。</blockquote>
+<p><strong>差分（条件の論理反転）</strong>:</p>
+<ul>
+<li>「法定代理人<strong>がない</strong>とき」→「法定代理人が<strong>選任された</strong>とき」（条件反転）</li>
+<li>「<strong>行為能力者</strong>となった時または法定代理人が就職した時から」→「<strong>制限行為能力者</strong>となった時から」（逆語化 + 「法定代理人が就職した時」OR 条件の欠落）</li>
+</ul>
+<p><strong>書籍 E</strong>（image 右 p.587 #6）:</p>
+<blockquote>○ 時効の期間の満了前6か月以内の間に未成年者又は成年被後見人に法定代理人がないときは、その未成年者若しくは成年被後見人が行為能力者となった時または法定代理人が就職した時から6か月を経過するまでは、その未成年者又は成年被後見人に対し、時効は完成しない（民法158条1項）。</blockquote>
+<p><strong>Current data E</strong>:</p>
+<blockquote>時効の期間の満了前6か月以内の間に<strong>成年後見人または法定代理人が選任された</strong>ときは、その成年被後見人が<strong>制限行為能力者となった時</strong>または法定代理人が就職した時から6か月を経過するまでは、<strong>成年後見人に対し</strong>、時効は完成しない（民法158条1項）。</blockquote>
+<p><strong>E 差分</strong>:</p>
+<ul>
+<li>「未成年者又は成年被後見人に法定代理人がない」→「成年後見人または法定代理人が選任された」（主体・条件反転）</li>
+<li>「行為能力者」→「制限行為能力者」（逆語化）</li>
+<li>「未成年者又は成年被後見人に対し」→「成年後見人に対し」（主体ズレ）</li>
+</ul>
+<p><strong>重大判定</strong>:</p>
+<ul>
+<li>書籍 Q は民法158条1項の素直な記述 → 書籍 ab = <strong>○</strong></li>
+<li>現在 data Q は条件を反転して破綻 → data ab = false（破綻した肢を × と判定）</li>
+<li><strong>Q を書籍原文に復元すると、ab は false → true に変更必要</strong></li>
+<li>→ <strong>これは P0 級 answerBoolean 修正案件</strong></li>
+</ul>
+<p><strong>判定</strong>: <strong>exact source-confirmed、ただし answerBoolean 変更必須</strong>。</p>
+<ul>
+<li>本 batch では textual patch design に含めない</li>
+<li>06_時効 #17（PR #159）と同様、<strong>単独 PR</strong> で扱う</li>
+</ul>
+<hr>
+<h2>6. 分類サマリー</h2>
+<table>
+<tr><td>audit ref</td><td>problemId seq</td><td>判定</td><td>Q patch</td><td>E patch</td><td>answerBoolean</td></tr>
+<tr><td>03_代理 #17</td><td>KB2025-p231-q01 / 1</td><td>exact-confirmed</td><td>必須</td><td>不要（P2 別管理）</td><td>true 不変</td></tr>
+<tr><td>03_代理 #23</td><td>KB2025-p232-q01 / 2</td><td>exact-confirmed</td><td>必須</td><td>不要</td><td>false 不変</td></tr>
+<tr><td>03_代理 #24</td><td>KB2025-p232-q01 / 3</td><td>exact-confirmed</td><td>必須</td><td>不要</td><td>false 不変</td></tr>
+<tr><td>無効取消 #5</td><td>KB2025-p236-q01 / 4</td><td>exact-confirmed</td><td>軽微</td><td>必須</td><td>false 不変</td></tr>
+<tr><td>無効取消 #7</td><td>KB2025-p236-q01 / 6</td><td>exact-confirmed</td><td>不要</td><td>必須</td><td>false 不変</td></tr>
+<tr><td>時効 #1</td><td>KB2025-p240-q01 / 1</td><td><strong>caveated</strong></td><td>必須（要再確認）</td><td>必須（条文番号）</td><td>true 不変</td></tr>
+<tr><td>時効 #2</td><td>KB2025-p240-q01 / 2</td><td><strong>caveated</strong></td><td>必須（要再確認）</td><td>不要</td><td>false 不変</td></tr>
+<tr><td>時効 #8</td><td>KB2025-p241-q01 / 2</td><td>exact-confirmed</td><td>必須（占有）</td><td>必須（占有）</td><td>true 不変</td></tr>
+<tr><td><strong>時効 #19</strong></td><td><strong>KB2025-p242-q01 / 6</strong></td><td><strong>exact-confirmed (P0級)</strong></td><td><strong>必須</strong></td><td><strong>必須</strong></td><td><strong>false → true（要変更）</strong></td></tr>
+</table>
+<h3>件数</h3>
+<table>
+<tr><td>分類</td><td>件数</td></tr>
+<tr><td>exact source-confirmed</td><td>7</td></tr>
+<tr><td>caveated（要 image 再確認）</td><td>2</td></tr>
+<tr><td>blocked / unreadable</td><td>0</td></tr>
+<tr><td>no patch</td><td>0</td></tr>
+<tr><td><strong>うち answerBoolean 疑い</strong></td><td><strong>1（時効 #19）</strong></td></tr>
+</table>
+<hr>
+<h2>7. answerBoolean 疑いの有無</h2>
+<p><strong>1 件あり</strong>: 06_時効 audit #19 / KB2025-p242-q01 seq=6</p>
+<ul>
+<li>書籍 ab=○、data ab=false</li>
+<li>Q を書籍原文に戻すと意味反転して肢が真になる → ab=true が正解</li>
+<li>過去の時効 #17（PR #159）と同様の単独 PR で対応すべき</li>
+</ul>
+<hr>
+<h2>8. Q/E patch 候補</h2>
+<p><strong>P1 textual-only batch 候補（exact-confirmed、6 件）</strong>:</p>
+<ul>
+<li>03_代理 #17（Q のみ）</li>
+<li>03_代理 #23（Q のみ）</li>
+<li>03_代理 #24（Q のみ）</li>
+<li>無効取消 #5（Q 軽微 + E 全文）</li>
+<li>無効取消 #7（E のみ）</li>
+<li>時効 #8（Q+E ともに「右承」→「占有」）</li>
+</ul>
+<p><strong>caveated（追加 source 確認後 patch、2 件）</strong>:</p>
+<ul>
+<li>時効 #1</li>
+<li>時効 #2</li>
+</ul>
+<p><strong>P0 級単独 PR 候補（answerBoolean 変更、1 件）</strong>:</p>
+<ul>
+<li>時効 #19</li>
+</ul>
+<hr>
+<h2>9. 次の patch design に進める対象</h2>
+<table>
+<tr><td>グループ</td><td>対象</td><td>patch 種別</td></tr>
+<tr><td><strong>P1 batch B1</strong></td><td>上記 6 件 exact-confirmed</td><td>textual-only batch、DATA_VERSION bump</td></tr>
+<tr><td><strong>caveated 再確認</strong></td><td>時効 #1, #2</td><td>別 source-recheck doc を作成して exact-confirmed に格上げ後、別 batch</td></tr>
+<tr><td><strong>answerBoolean 単独 PR</strong></td><td>時効 #19</td><td>PR #159 と同様の単独 PR、DATA_VERSION bump</td></tr>
+</table>
+<hr>
+<h2>10. blocked 理由</h2>
+<p>なし。全 9 件で書籍 image が読み取り可能、書籍正答記号も読み取り済み。<br><strong>caveated 2 件は「読めるが微妙な不確実性」、blocked ではない</strong>。</p>
+<hr>
+<h2>11. 既対応 P0 との重複なし確認</h2>
+<p>→ 上記 §3 参照。<strong>完全に独立</strong>、二重修正リスクなし。</p>
+<hr>
+<h2>12. 変更しなかったもの</h2>
+<ul>
+<li>src/ 全般</li>
+<li>data/reviewed_import.json</li>
+<li>public/data/reviewed_import.json</li>
+<li>src/lib/db.ts（DATA_VERSION 含む）</li>
+<li>answerBoolean / questionText / explanationText（全 9 件で本セッション中変更なし）</li>
+<li>stash@{0}</li>
+</ul>
+<hr>
+<h2>13. stash@{0} 残存確認</h2>
+<pre><code>
+stash@{0}: WIP on main: 9c3793d docs: record descriptive ui re-qa (#141)
+</code></pre>
+<p>本タスク前後で touch せず、apply/drop なし。</p>
+<hr>
+<h2>14. 検証結果</h2>
+<table>
+<tr><td>項目</td><td>結果</td></tr>
+<tr><td>同定件数</td><td>9/9</td></tr>
+<tr><td>data/public sync</td><td>全 9 件 OK</td></tr>
+<tr><td>P0 既対応との重複</td><td>なし</td></tr>
+<tr><td><code>git diff --check</code></td><td>clean（src/data/public 変更なし）</td></tr>
+<tr><td><code>tsc --noEmit</code></td><td>該当変更なしのため未実施（src 未変更）</td></tr>
+<tr><td>stash@{0}</td><td>残存、未変更</td></tr>
+</table>
+<hr>
+<h2>15. 次のステップ（提案、要承認）</h2>
+<ol>
+<li><strong>本 source-check log を docs-only で commit / PR / merge</strong>（足場固定）</li>
+<li><strong>P1 textual-only batch B1 patch design</strong>（exact-confirmed 6 件）</li>
+<li><strong>時効 #19 単独 PR</strong>（answerBoolean 変更）</li>
+<li><strong>時効 #1, #2 の追加 source recheck</strong>（caveat 解消後に B1 続編 batch）</li>
+</ol>
+<hr>
+<h2>注意事項</h2>
+<p>本 doc は MD を source of truth とする。HTML 版は閲覧用 snapshot であり、直接編集してはならない。</p></body></html>
