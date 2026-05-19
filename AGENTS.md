@@ -71,6 +71,15 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - 大規模リネームや大量ファイル移動を、事前合意なしに行わない
 - `importParsedBatch` の分類 / フラグ消失は既知バグ（`context/working/known_issues.md` §1）。再 import 時は継承を必ず意識する
 
+## PR 作成後・merge 前の確認粒度
+
+PR 作成済み、CI / Vercel が pass、想定差分のみであることが確認済みの場合は、原則として **merge 承認待ち** と扱う。
+
+- `mergeable` / `mergeStateStatus` の polling だけを理由に追加停止しない。
+- 明示的な merge 承認後は、通常どおり squash merge を実行してよい。
+- merge 実行時に conflict / status check failure / branch protection / API error が出た場合だけ停止し、原因確認を報告する。
+- data / answerBoolean / DATA_VERSION を含む PR でも、検証完了後に同じ粒度で扱う。ただし merge 自体は必ず user の明示承認後に限る。
+
 ## コミット規約 (inferred, from git log)
 
 - `vNN: <page>-q<num> <field> を<手段>で<処理>`
